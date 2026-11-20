@@ -95,7 +95,10 @@ function entrance(): void {
     const flaps = [...document.querySelectorAll<HTMLElement>('.board .flap[data-ch]')].filter((f) => f.dataset.ch !== ' ');
     const left = flaps.map((_, i) => 2 + ((i * 7) % 9));
     const glyphs = 'ABCDEFGHIJKLMNOPRSTUVZ0123456789';
-    flaps.forEach((f, i) => { f.textContent = glyphs[(i * 11) % glyphs.length]; });
+    flaps.forEach((f, i) => {
+      f.textContent = glyphs[(i * 11) % glyphs.length];
+      f.addEventListener('animationend', () => f.classList.remove('is-flipping'));
+    });
     flipper = window.setInterval(() => {
       let busy = false;
       flaps.forEach((f, i) => {
