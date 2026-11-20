@@ -14,7 +14,7 @@ export const h7: Piece[] = [
     ],
     good: ['Convincing depth from two ordinary pictures', 'Simple, cheap and well understood'],
     bad: ['Something has to be worn or looked into', 'The eyes converge on the object but focus on the screen, which tires them', 'Move your head and nothing changes: there is no looking around'],
-    look: 'The viewer holds a stereo card, two nearly identical pictures of the works. In front of it lie red and cyan spectacles, which do the same job with colour.',
+    look: 'A hand viewer on a stand, with a stereo card of the works in the holder. Press Look in to put an eye to the lens. The flat card becomes a scene with depth, and the chimney slides across the sheds as your head moves. In front lie red and cyan spectacles, which do the same job with colour.',
     sources: [wiki('Stereoscopy'), wiki('Anaglyph_3D', 'Anaglyph 3D'), wiki('Teleview'), src('archive', 'Rollmann, 1853, the first description of the anaglyph', 'https://books.google.com/books?id=cmYEAAAAYAAJ')],
   },
   {
@@ -75,7 +75,7 @@ export const h7: Piece[] = [
     ],
     good: ['Every depth cue the eye uses, all correct at once', 'A window, not a picture: look around, look closer'],
     bad: ['A moving version needs pixels near the size of a wavelength of light and a flood of data', 'Usually one colour, and speckled', 'The word is used for almost anything that floats'],
-    look: 'The laser on the tripod lights the plate. Move from side to side and up and down: the scene behind the plate shifts smoothly, with no steps. Compare the panel next door.',
+    look: 'A laser behind the plate lights it at the angle the plate was made for. Look through the glass: a toy engine stands behind it, in one colour and grainy with speckle. Move from side to side and up and down and you see round it smoothly, with no steps. From behind the plate there is nothing. Compare the panel next door.',
     sources: [src('paper', 'Gabor, A New Microscopic Principle, Nature (1948)', 'https://doi.org/10.1038/161777a0'), src('paper', 'Leith and Upatnieks, Journal of the Optical Society of America (1962)', 'https://doi.org/10.1364/JOSA.52.001123'), wiki('Holography'), wiki('Holographic_display', 'Holographic display')],
   },
   {
@@ -90,7 +90,7 @@ export const h7: Piece[] = [
     ],
     good: ['Fills the field of view and follows the head', 'A private display of any apparent size'],
     bad: ['Worn on the face', 'Eyes focus at one fixed distance while converging at another', 'Any delay between head and picture is felt at once'],
-    look: 'The front cover is off. There are two screens in there, and the pictures on them are not the same: each is drawn for its own eye.',
+    look: 'A headset on a dummy head, and beside it the works of one eye: a lens and the small screen it looks at. The picture on that screen bulges, because the lens will pinch it straight. Press Put it on to see what the wearer sees.',
     sources: [wiki('Head-mounted_display', 'Head-mounted display')],
   },
   {
@@ -105,7 +105,7 @@ export const h7: Piece[] = [
     ],
     good: ['Bright enough to overlay on a sunny scene', 'Very small optics', 'Sold as an aid for low vision'],
     bad: ['The beam has to find the pupil: move the eye and the picture can vanish', 'Has to stay far below the power that could harm the eye', 'Hard to get right, and there are few products'],
-    look: 'The eye is cut away. One beam enters through the pupil and the picture builds up line by line on the back wall.',
+    look: 'A classroom eye with a quarter cut away. One beam enters through the pupil and the picture builds up line by line on the back wall, upside down, as every image in an eye is.',
     sources: [wiki('Virtual_retinal_display', 'Virtual retinal display'), src('press', 'In the Eye of the Beholder, IEEE Spectrum (2004)', 'https://spectrum.ieee.org/in-the-eye-of-the-beholder')],
   },
   {
@@ -120,7 +120,7 @@ export const h7: Piece[] = [
     ],
     good: ['Information without looking down or refocusing', 'Can be lined up with real things outside'],
     bad: ['Visible only from a small box of head positions', 'A narrow field of view', 'Must be bright enough to read against the sky'],
-    look: 'The projector sits in the top of the instrument shroud and the combiner slopes above it. The green symbols are added to whatever you see through the glass.',
+    look: 'The projector sits in the top of the instrument shroud and the combiner leans over it. Press Sit down for the pilot\'s seat. The green symbols are focused far away, so they hold still against the far wall when your head moves. From anywhere else you see part of them or nothing.',
     sources: [wiki('Heads-up_display', 'Head-up display')],
   },
 ];

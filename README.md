@@ -42,12 +42,14 @@ Node 22 or newer.
 | `src/data/pieces/h1.ts` to `h7.ts` | The catalogue, one file per hall. Text, dates, sources. |
 | `src/data/halls.ts`, `schema.ts` | Halls and the shape of a piece. |
 | `src/three/models/h1.ts` to `h7.ts` | One model builder per piece. |
-| `src/three/kit.ts` | Materials and shapes shared by every model. |
+| `src/three/kit.ts` | Materials and shapes shared by every model: glass, finishes, eased edges, glow, and portals for things seen through other things. |
+| `src/three/parts.ts` | Small hardware: screws, louvres, knobs, feet, lenses, posts, breadboards. |
 | `src/three/stage.ts` | The plinth, the hall, the lights and the camera. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/art/` | The floor plan and the building drawings, generated as SVG. |
 | `src/main.ts` | Pages and routing. |
 | `scripts/validate.ts` | The collection's rules as code. |
+| `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
 | `scripts/mock.ts` | Regenerates the concept sheets and mockups from before the build. |
 
 ## Adding a piece
@@ -56,10 +58,20 @@ Node 22 or newer.
    List the sources you actually read.
 2. Add a builder to `src/three/models/hN.ts` and register it under the same id in
    `src/three/models/index.ts`. A builder returns a `Built`: a group, an optional per-frame
-   `update`, and how the piece behaves when the hall lights go off.
+   `update`, and how the piece behaves when the hall lights go off. If the piece was made to
+   be looked into or sat in front of, give it an `eye`: the page then offers a button that
+   puts the visitor there.
 3. `npm run check`.
 
 To look at every model at once, open `#sheet` on the dev server, or `#sheet?lights=off`.
+Add `&ids=a,b` for a few pieces, `&size=420` for bigger tiles, `&eye=1` for the eye views,
+or `&az=40&el=60` to look from any angle.
+
+Models are built from code, with no mesh files. What makes them read as objects is in the
+kit: edges are eased by default, glass shows a dark line where it turns away, and a lamp is a
+bright core with a halo. A reflection, a scene behind a lens or a symbol in a combiner is
+drawn with `portal()`, which shows its contents only through a window and so behaves like the
+real thing when the visitor moves.
 
 ## Known gaps
 
@@ -67,6 +79,8 @@ To look at every model at once, open `#sheet` on the dev server, or `#sheet?ligh
   sources is the main open job. `npm run validate` prints the current count.
 - Not yet in the collection: falling-water curtains, aerial imaging plates, grating light
   valves, switchable privacy glass, ferrofluid, light-activated paints.
+- The models were reviewed against text sources, not against photographs. See
+  `docs/model-review.md` for the scores and what is still open.
 - No photographs or archive film. If added, they should be public domain or openly licensed,
   hosted here, and credited on the piece.
 - Routes are hash links (`#hall-2`, `#piece-nixie-tube`), so pieces are not separate pages for

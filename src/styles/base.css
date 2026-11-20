@@ -89,9 +89,13 @@ h1, h2, h3 { text-wrap: balance; }
 .stage__box { aspect-ratio: 1 / 1; max-height: 74vh; width: 100%; }
 @media (min-width: 900px) { .stage__box { aspect-ratio: 5 / 4; } }
 .stage__hint { position: absolute; left: 12px; top: 10px; font-size: .78rem; font-weight: 600; color: var(--ink-2); pointer-events: none; transition: opacity .6s; }
-.stage__note { position: absolute; left: 12px; right: 12px; top: 34px; font-size: .86rem; font-weight: 600; text-align: center; color: var(--ink); pointer-events: none; }
+.stage__note { position: absolute; left: 50%; top: 38px; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); font-size: .86rem; font-weight: 600; text-align: center; color: var(--ink); pointer-events: none; }
+/* both sit on the picture, which may be bright or dark, so each brings its own ground */
+.stage__hint, .stage__note { padding: 2px 7px; border-radius: 3px; background: color-mix(in srgb, var(--wash) 80%, transparent); }
+.stage__note:empty { display: none; }
 .stage__bar { display: flex; gap: 8px; padding: 9px 10px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--line); }
 .stage__bar .gap { margin-left: auto; }
+@media (max-width: 400px) { .stage__bar { gap: 6px; padding: 9px 8px; } .stage__bar .btn { padding: 7px 9px; } }
 .btn {
   appearance: none; border: 1.5px solid var(--ink); background: color-mix(in srgb, var(--wash) 82%, transparent); color: var(--ink);
   padding: 7px 12px; border-radius: 3px; font-weight: 700; font-size: .82rem; line-height: 1.1; cursor: pointer; backdrop-filter: blur(6px);

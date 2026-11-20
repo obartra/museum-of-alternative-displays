@@ -46,7 +46,7 @@ export const h4: Piece[] = [
     ],
     good: ['Very high resolution on a small chip', 'Smooth picture with almost no visible pixel grid', 'Small and low power'],
     bad: ['Needs polarised light and a splitter, which costs brightness', 'Early panels held ghost images', 'Like any light valve, only as good as the lamp behind it'],
-    look: 'Follow the beams: lamp to cube, down to the chip, back up and out through the lens.',
+    look: 'Follow the beams: lamp to cube, down to the chip, back up and out through the lens to the card it throws the picture on.',
     sources: [wiki('Liquid_crystal_on_silicon', 'Liquid crystal on silicon')],
   },
   {
@@ -61,7 +61,7 @@ export const h4: Piece[] = [
     ],
     good: ['Brightness limited by the lamp, not by a glowing tube: enough for a cinema or a stadium', 'Decades ahead of any alternative for large-screen video'],
     bad: ['The size of a wardrobe, with a vacuum pump', 'Needed engineers to set up and three-phase power', 'Dust or contamination in the oil showed on screen'],
-    look: 'Follow the light. Lamp at the left, across to the bars, down to the dish of oil under its glass bell, back up through the lens and off the top mirror to the little screen.',
+    look: 'The machine with its panels off. Follow the light: lamp house at the left, across to the bars, down to the dish of oil turning under its glass bell, back up through the lens and off the top mirror to the little screen.',
     sources: [wiki('Eidophor')],
   },
   {
@@ -91,7 +91,7 @@ export const h4: Piece[] = [
     ],
     good: ['Turns any object or building into a display without touching it', 'As large as the projectors you can bring'],
     bad: ['Needs darkness, or a great deal of projector', 'The illusion holds only while object and projector stay exactly where they were measured', 'Shadows wherever someone stands in the beam'],
-    look: 'White plaster shapes and a projector on a tripod. With the hall lights on the picture is barely there. Switch them off.',
+    look: 'White plaster shapes and a projector on a tripod. The picture is worked out from where the projector stands, so each solid gets its own pattern and nothing spills on to the floor. With the hall lights on it is barely there. Switch them off.',
     sources: [src('paper', 'Raskar, Welch, Low and Bandyopadhyay, Shader Lamps (2001)', 'https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf'), src('press', 'The Illustrated History of Projection Mapping', 'https://projection-mapping.org/the-history-of-projection-mapping/'), wiki('Projection_mapping', 'Projection mapping')],
   },
 ];

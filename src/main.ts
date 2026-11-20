@@ -167,7 +167,7 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"></div>
     <p class="stage__hint" id="stage-hint">Drag to turn. Pinch or scroll to zoom.</p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__bar">${switchHtml('Lights')}<span class="gap"></span><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
+    <div class="stage__bar">${switchHtml('Lights')}<span class="gap"></span><button type="button" class="btn" data-act="eye" aria-pressed="false" hidden></button><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
   </div>
   <div class="stack">
     <a class="crumb" href="#hall-${h.id}"><b>${h.id}</b><span>${esc(h.name)}, <span lang="cs">${esc(h.cz)}</span></span></a>
@@ -196,6 +196,15 @@ function pieceView(id: string): void {
   const box = document.getElementById('stage-box')!, wrap = document.getElementById('stage')!;
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
   const fullBtn = wrap.querySelector<HTMLButtonElement>('[data-act="full"]')!;
+  const eyeBtn = wrap.querySelector<HTMLButtonElement>('[data-act="eye"]')!, frontBtn = wrap.querySelector<HTMLButtonElement>('[data-act="front"]')!;
+  const setEye = (on: boolean) => {
+    if (!stage?.eye) return;
+    if (on) stage.goEye(); else stage.goHome();
+    eyeBtn.setAttribute('aria-pressed', String(on));
+    eyeBtn.textContent = on ? 'Back' : stage.eye.label;
+    hint.textContent = on ? 'Drag to move your head.' : 'Drag to turn. Pinch or scroll to zoom.';
+    hint.style.opacity = '1';
+  };
   let alive = true;
   const say = (on: boolean) => {
     const d = stage?.inDark;
@@ -217,8 +226,9 @@ function pieceView(id: string): void {
   };
   wrap.addEventListener('click', (e) => {
     const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
-    if (act === 'front') stage?.goFront();
-    if (act === 'home') stage?.goHome();
+    if (act === 'eye') setEye(!stage?.inEye);
+    if (act === 'front') { setEye(false); stage?.goFront(); }
+    if (act === 'home') { setEye(false); stage?.goHome(); }
     if (act === 'full') setFull(!wrap.classList.contains('is-full'));
   });
   document.addEventListener('keydown', onKey);
@@ -242,6 +252,8 @@ function pieceView(id: string): void {
     stage.setLights(lightsOn, true);
     stage.start();
     say(lightsOn);
+    // a piece made to be looked into gets a button that puts your eye there, in place of the plain front view
+    if (stage.eye) { eyeBtn.hidden = false; eyeBtn.textContent = stage.eye.label; frontBtn.hidden = true; }
     const surf = stage.surface;
     if (surf) {
       const holder = document.getElementById('surface')!;
@@ -349,13 +361,16 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const on = q.get('lights') !== 'off';
   const size = Number(q.get('size') ?? 240);
   const only = q.get('ids')?.split(',');
+  const num = (k: string) => (q.has(k) ? Number(q.get(k)) : undefined);
+  const shot = q.has('eye') ? { eye: true } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
   root.dataset.lights = on ? 'on' : 'off';
   app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${size}px);gap:4px;padding:4px"></div>`;
   const grid = document.getElementById('grid')!;
-  const { thumb } = await three();
+  const { thumb, builders } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
-    const url = await thumb(p.id, hallColour(p.hall), on, size);
+    if (shot?.eye && !builders[p.id]().eye) continue;
+    const url = await thumb(p.id, hallColour(p.hall), on, size, shot);
     grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${size}" height="${size}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
   }
   document.body.dataset.ready = '1';

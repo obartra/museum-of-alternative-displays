@@ -1,10 +1,12 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { THREE, type Built } from './kit';
+import { THREE, type Built, type Eye } from './kit';
 
 const PLINTH_TOP = 0.22;
 const TARGET_Y = PLINTH_TOP + 0.54;
 const WASH = '#e4e5df';
+const FOV = 30;
+const UP = new THREE.Vector3(0, 1, 0);
 
 /**
  * One plinth in one hall: a steel turntable in front of a two-tone wall.
@@ -12,13 +14,13 @@ const WASH = '#e4e5df';
  */
 export class Stage {
   readonly renderer: THREE.WebGLRenderer;
-  readonly camera = new THREE.PerspectiveCamera(30, 1, 0.1, 60);
+  readonly camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 60);
   private scene = new THREE.Scene();
   private controls?: OrbitControls;
   private hemi = new THREE.HemisphereLight(0xffffff, 0x8d8f89, 0.6);
   private key = new THREE.DirectionalLight(0xfff3e2, 2.4);
   private fill = new THREE.DirectionalLight(0xdfe8ff, 0.55);
-  private glow = new THREE.PointLight(0xffffff, 0, 7, 1.6);
+  private glow = new THREE.PointLight(0xffffff, 0, 9, 1.4);
   private wallCanvas = document.createElement('canvas');
   private wallTex: THREE.CanvasTexture;
   private piece?: Built;
@@ -30,11 +32,17 @@ export class Stage {
   private home = { az: 28, el: 13, dist: 5.1 };
   private ro?: ResizeObserver;
   private dragged = false;
+  private still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  private eyeAt?: THREE.Vector3;
+  private eyeTo?: THREE.Vector3;
+  private eyePlay = 0.1;
+  private eyeT0 = 0;
   /** Called the first time the visitor turns the piece. */
   onTouch?: () => void;
 
   constructor(private canvas: HTMLCanvasElement, interactive: boolean) {
-    this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: !interactive, powerPreference: 'high-performance' });
+    // the stencil buffer is what lets a reflection show only inside its pane, and a scene only through its lens
+    this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, stencil: true, preserveDrawingBuffer: !interactive, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(interactive ? Math.min(window.devicePixelRatio || 1, 2) : 1);
     this.renderer.toneMapping = THREE.NeutralToneMapping;
     this.renderer.shadowMap.enabled = true;
@@ -53,22 +61,23 @@ export class Stage {
     const floor = new THREE.Mesh(new THREE.CircleGeometry(9, 72), new THREE.MeshStandardMaterial({ color: 0xc4c6be, roughness: 0.82 }));
     floor.rotation.x = -Math.PI / 2;
     floor.receiveShadow = true;
-    const plinth = new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.16, PLINTH_TOP, 72), new THREE.MeshStandardMaterial({ color: 0x24272b, roughness: 0.42, metalness: 0.6 }));
+    const plinth = new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.16, PLINTH_TOP, 96), new THREE.MeshStandardMaterial({ color: 0x24272b, roughness: 0.42, metalness: 0.6 }));
     plinth.position.y = PLINTH_TOP / 2;
     plinth.castShadow = plinth.receiveShadow = true;
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.14, 0.012, 8, 96), new THREE.MeshStandardMaterial({ color: 0xb08d4a, roughness: 0.3, metalness: 0.9 }));
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.14, 0.012, 10, 128), new THREE.MeshStandardMaterial({ color: 0xb08d4a, roughness: 0.3, metalness: 0.9 }));
     ring.rotation.x = Math.PI / 2; ring.position.y = PLINTH_TOP;
     this.scene.add(wall, floor, plinth, ring);
     this.paintWall('#586067');
 
     this.key.position.set(3.4, 6, 4);
     this.key.castShadow = true;
-    this.key.shadow.mapSize.set(1024, 1024);
+    this.key.shadow.mapSize.set(2048, 2048);
     const sc = this.key.shadow.camera;
     sc.left = -2.4; sc.right = 2.4; sc.top = 2.6; sc.bottom = -2.2; sc.near = 1; sc.far = 16;
-    this.key.shadow.bias = -0.0006; this.key.shadow.normalBias = 0.025;
+    this.key.shadow.bias = -0.0004; this.key.shadow.normalBias = 0.02;
     this.fill.position.set(-4.5, 2.6, 2.5);
-    this.glow.position.set(0, 1.1, 0.5);
+    // above and in front, so that its mirror image never lands in a screen someone is looking at
+    this.glow.position.set(0, 2.5, 1.0);
     this.scene.add(this.hemi, this.key, this.fill, this.glow);
     this.scene.background = new THREE.Color(WASH);
 
@@ -77,7 +86,7 @@ export class Stage {
       c.enablePan = false; c.enableDamping = true; c.dampingFactor = 0.08;
       c.minPolarAngle = 0.2; c.maxPolarAngle = Math.PI / 2 - 0.03;
       c.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_ROTATE };
-      c.autoRotate = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      c.autoRotate = !this.still;
       c.autoRotateSpeed = 0.7;
       c.target.set(0, TARGET_Y, 0);
       c.addEventListener('start', () => { c.autoRotate = false; if (!this.dragged) { this.dragged = true; this.onTouch?.(); } });
@@ -98,6 +107,8 @@ export class Stage {
 
   get inDark(): Built['inDark'] | undefined { return this.piece?.inDark; }
   get surface(): HTMLCanvasElement | undefined { return this.piece?.surface; }
+  get eye(): Eye | undefined { return this.piece?.eye; }
+  get inEye(): boolean { return !!this.eyeAt; }
 
   private paintWall(hall: string): void {
     const g = this.wallCanvas.getContext('2d')!;
@@ -123,8 +134,13 @@ export class Stage {
   setPiece(b: Built, hallColour: string): void {
     this.clear();
     const root = b.root;
+    // what is only seen through a window (a reflection, a scene behind a lens) takes up no room on the plinth
+    const aside: [THREE.Object3D, THREE.Object3D][] = [];
+    root.traverse((o) => { if (o.userData.noFit && o.parent) aside.push([o, o.parent]); });
+    for (const [o] of aside) o.removeFromParent();
     root.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(root);
+    for (const [o, parent] of aside) parent.add(o);
     const size = box.getSize(new THREE.Vector3());
     const c = box.getCenter(new THREE.Vector3());
     const s = Math.min(1.95 / Math.max(size.x, size.z, 0.001), 1.5 / Math.max(size.y, 0.001));
@@ -134,7 +150,7 @@ export class Stage {
       const m = o as THREE.Mesh;
       if (!m.isMesh) return;
       const mat = (Array.isArray(m.material) ? m.material[0] : m.material) as THREE.Material;
-      const solid = !mat.transparent && mat.blending === THREE.NormalBlending;
+      const solid = !mat.transparent && mat.blending === THREE.NormalBlending && mat.colorWrite && !m.userData.noShadow;
       m.castShadow = solid; m.receiveShadow = solid;
     });
     this.scene.add(root);
@@ -144,7 +160,7 @@ export class Stage {
     this.home = { az: b.view?.[0] ?? 28, el: b.view?.[1] ?? 13, dist: 5.1 / (b.zoom ?? 1) };
     this.t0 = performance.now();
     this.dragged = false;
-    if (this.controls) this.controls.autoRotate = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.controls) this.controls.autoRotate = !this.still;
     this.goHome();
   }
 
@@ -165,29 +181,64 @@ export class Stage {
   }
 
   private place(az: number, el: number, dist: number): void {
+    this.eyeAt = this.eyeTo = undefined;
+    this.camera.fov = FOV; this.camera.near = 0.05;
+    this.camera.updateProjectionMatrix();
     const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
     const d = dist * Math.max(1, 1.02 / this.camera.aspect);
     this.camera.position.set(Math.sin(a) * Math.cos(e) * d, TARGET_Y + Math.sin(e) * d, Math.cos(a) * Math.cos(e) * d);
     this.camera.lookAt(0, TARGET_Y, 0);
-    if (this.controls) {
-      this.controls.minDistance = d * 0.4; this.controls.maxDistance = d * 1.45;
-      this.controls.update();
+    const c = this.controls;
+    if (c) {
+      c.target.set(0, TARGET_Y, 0);
+      c.minAzimuthAngle = -Infinity; c.maxAzimuthAngle = Infinity;
+      c.minPolarAngle = 0.2; c.maxPolarAngle = Math.PI / 2 - 0.03;
+      c.minDistance = d * 0.4; c.maxDistance = d * 1.45;
+      c.update();
     }
   }
 
   goHome(): void { this.place(this.home.az, this.home.el, this.home.dist); }
   /** Straight on and closer, to read the lit surface. */
   goFront(): void { if (this.controls) this.controls.autoRotate = false; this.place(0, 4, this.home.dist * 0.78); }
+  /** Any angle, for checking a model from behind or above. */
+  goTo(az: number, el: number, zoom = 1): void { if (this.controls) this.controls.autoRotate = false; this.place(az, el, this.home.dist / zoom); }
+
+  /** Put the visitor's eye where the piece expects one. Dragging then moves the head a little, which is how depth shows on a flat screen. */
+  goEye(): void {
+    const eye = this.piece?.eye;
+    if (!eye) return;
+    const root = this.piece!.root;
+    root.updateMatrixWorld(true);
+    const at = root.localToWorld(new THREE.Vector3(...eye.at)), to = root.localToWorld(new THREE.Vector3(...eye.to));
+    this.eyeAt = at; this.eyeTo = to; this.eyePlay = eye.play ?? 0.1; this.eyeT0 = performance.now();
+    this.dragged = false;
+    this.camera.fov = eye.fov ?? 38; this.camera.near = 0.004;
+    this.camera.updateProjectionMatrix();
+    this.camera.position.copy(at); this.camera.lookAt(to);
+    const c = this.controls;
+    if (c) {
+      c.autoRotate = false;
+      c.target.copy(to);
+      const sph = new THREE.Spherical().setFromVector3(at.clone().sub(to));
+      c.minDistance = sph.radius * 0.94; c.maxDistance = sph.radius * 1.04;
+      c.minAzimuthAngle = sph.theta - this.eyePlay; c.maxAzimuthAngle = sph.theta + this.eyePlay;
+      c.minPolarAngle = Math.max(0.02, sph.phi - this.eyePlay * 0.7); c.maxPolarAngle = Math.min(Math.PI - 0.02, sph.phi + this.eyePlay * 0.7);
+      c.update();
+    }
+  }
 
   /** Turn or tilt by degrees, zoom by a factor. For keys and buttons. */
   nudge(dAz: number, dEl: number, zoom = 1): void {
     const c = this.controls;
     if (!c) return;
     c.autoRotate = false;
+    this.dragged = true;
+    const k = this.eyeAt ? 0.12 : 1;
     const off = this.camera.position.clone().sub(c.target);
     const sph = new THREE.Spherical().setFromVector3(off);
-    sph.theta += THREE.MathUtils.degToRad(dAz);
-    sph.phi = THREE.MathUtils.clamp(sph.phi - THREE.MathUtils.degToRad(dEl), c.minPolarAngle, c.maxPolarAngle);
+    sph.theta = THREE.MathUtils.clamp(sph.theta + THREE.MathUtils.degToRad(dAz * k), c.minAzimuthAngle, c.maxAzimuthAngle);
+    sph.phi = THREE.MathUtils.clamp(sph.phi - THREE.MathUtils.degToRad(dEl * k), c.minPolarAngle, c.maxPolarAngle);
     sph.radius = THREE.MathUtils.clamp(sph.radius * zoom, c.minDistance, c.maxDistance);
     this.camera.position.copy(c.target).add(new THREE.Vector3().setFromSpherical(sph));
     c.update();
@@ -210,8 +261,15 @@ export class Stage {
     this.key.intensity = 2.4 * L;
     this.fill.intensity = 0.55 * L;
     this.scene.environmentIntensity = 0.035 + 0.5 * L;
-    this.glow.intensity = this.piece?.glow ? (1 - L) * 4.5 : 0;
+    this.glow.intensity = this.piece?.glow ? (1 - L) * 9 : 0;
     (this.scene.background as THREE.Color).set(WASH).multiplyScalar(0.02 + 0.98 * L);
+    if (this.eyeAt && this.eyeTo && !this.dragged && !this.still && at === undefined) {
+      // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
+      const dir = this.eyeTo.clone().sub(this.eyeAt), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;
+      const side = dir.cross(UP).normalize();
+      this.camera.position.copy(this.eyeAt).addScaledVector(side, Math.sin((performance.now() - this.eyeT0) / 1000 * 1.2) * reach);
+      this.camera.lookAt(this.eyeTo);
+    }
     this.piece?.update?.({ t: at ?? (performance.now() - this.t0) / 1000, lights: L, camera: this.camera });
     this.controls?.update();
     this.renderer.render(this.scene, this.camera);

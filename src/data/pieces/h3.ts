@@ -44,7 +44,7 @@ export const h3: Piece[] = [
     ],
     good: ['Very bright, very long lived', 'No burn-in', 'Modular: a wall of any size'],
     bad: ['Mass transfer of millions of tiny chips is slow and costly', 'Every faulty chip has to be found and replaced', 'Priced for boardrooms, not living rooms'],
-    look: 'One tile is pulled forward on its rails. A wall is serviced that way, one square at a time.',
+    look: 'One tile has been lifted out and leans against the stand, dark, with the suction lifter still on it. The socket it came from shows the backplane and the magnets that hold a tile. A wall is serviced that way, one square at a time.',
     sources: [wiki('MicroLED')],
   },
   {
@@ -75,7 +75,7 @@ export const h3: Piece[] = [
     ],
     good: ['Puts information on the thing itself, not beside it', 'Emissive types glow against a dark scene'],
     bad: ['Emissive: no black, and it washes out against a bright background', 'Absorptive: no light of its own', 'Never as clear as plain glass'],
-    look: 'This case has an emissive front. Turn the hall lights on and off: the graphics are strong in the dark and thin in the light, and the brass ball behind them never goes away.',
+    look: 'A shop case whose front pane is the screen. Inside stands an alarm clock, and the pane draws the same time in figures over it. Turn the hall lights on and off: the graphics are strong in the dark and thin in the light, and the clock behind them never goes away.',
     sources: [wiki('See-through_display', 'See-through display')],
   },
   {

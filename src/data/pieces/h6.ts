@@ -14,7 +14,7 @@ export const h6: Piece[] = [
     ],
     good: ['A bright, full-colour figure that seems to stand in real space', 'No special glasses, and a whole audience sees it', 'Mixes with real actors and scenery'],
     bad: ['It is a flat reflection at one fixed depth, not a three-dimensional image', 'Needs a dark stage, a hidden bright area and controlled sight lines', 'It is not a hologram, whatever the poster says'],
-    look: 'From the front you see a pale figure on the stage. Now look down into the pit in front of it: the real figure is lying there under a strip of light, and the glass slopes between the two.',
+    look: 'Press Sit down for a seat in the stalls. A pale figure walks the stage and you can see the chair through it. It is a true mirror image: move your head and it stays where it is on the stage, and it stops at the edge of the glass. Then step back and look down into the pit. The real figure is lying there in limelight, and the glass leans out over it.',
     sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/archive-blog/ghosts-and-pantos-at-the-rpi/'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
   },
   {
@@ -106,7 +106,7 @@ export const h6: Piece[] = [
     ],
     good: ['An image in open air, with sound and touch from the same hardware', 'One physical principle does all three jobs'],
     bad: ['A bead can only cover so much path, so figures are small and simple', 'Needs speakers above and below the image', 'Air currents disturb it'],
-    look: 'The bead is the bright point. The loop behind it is where it has been in the last fraction of a second.',
+    look: 'The bead is the bright point. The butterfly behind it is where it has been in the last fraction of a second.',
     sources: [src('paper', 'Hirayama and others, A volumetric display for visual, tactile and audio presentation using acoustic trapping, Nature (2019)', 'https://doi.org/10.1038/s41586-019-1739-5'), src('lab', 'University of Sussex research record', 'https://sro.sussex.ac.uk/id/eprint/86930/')],
   },
   {
