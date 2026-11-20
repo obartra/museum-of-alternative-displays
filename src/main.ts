@@ -31,7 +31,10 @@ function setLights(on: boolean): void {
 }
 const switchHtml = (label = 'Hall lights') => `<button type="button" class="switch" role="switch" aria-checked="${lightsOn}" data-lights-switch><span class="switch__track"><span class="switch__knob"></span></span><span>${label}</span></button>`;
 document.addEventListener('click', (e) => {
-  if ((e.target as HTMLElement).closest('[data-lights-switch]')) setLights(!lightsOn);
+  const t = e.target as HTMLElement;
+  if (t.closest('[data-lights-switch]')) setLights(!lightsOn);
+  // the skip link shares the address bar with the router, so handle it here
+  if (t.closest('a[href="#main"]')) { e.preventDefault(); document.getElementById('main')?.focus(); }
 });
 
 // ---------- the one live 3D stage, kept between pieces ----------
