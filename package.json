@@ -1,0 +1,28 @@
+{
+  "name": "museum-of-alternative-displays",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A vendor-neutral digital museum of alternative display technologies.",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx scripts/validate.ts",
+    "check": "npm run typecheck && npm run validate",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/sofia-sans": "^5.3.0",
+    "@fontsource-variable/sofia-sans-extra-condensed": "^5.3.0",
+    "@fontsource/pt-mono": "^5.3.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8"
+  }
+}

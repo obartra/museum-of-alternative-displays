@@ -1,0 +1,54 @@
+/* Layout idea: a works hall. Whitewash above, a painted dado below, enamel plates for wayfinding.
+   Each hall owns one enamel colour, used only on its plate, its tab and the dado behind its pieces. */
+:root {
+  --wash: #e8e9e3;      /* whitewashed wall */
+  --wash-2: #dcdfd7;    /* recessed panel */
+  --ink: #14171a;       /* enamel black lettering */
+  --ink-2: #4c5356;     /* secondary lettering */
+  --line: #b4b9af;      /* joints and rules */
+  --plate: #f7f6f0;     /* white enamel */
+  --signal: #d1481f;    /* red lead primer, used for the visitor route and alerts */
+
+  --h1: #586067;        /* Strojovna: machine grey */
+  --h2: #d1481f;        /* Sklárna: red lead */
+  --h3: #1f3fa6;        /* Polovodiče: cobalt */
+  --h4: #dba51a;        /* Optika: chrome yellow */
+  --h5: #efe8d2;        /* Tiskárna: ivory */
+  --h6: #14857c;        /* Temná komora: turquoise */
+  --h7: #57409a;        /* Věž: violet */
+  --hall: var(--ink);
+  --hall-ink: #ffffff;
+
+  --display: "Sofia Sans Extra Condensed Variable", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --text: "Sofia Sans Variable", "Segoe UI", system-ui, sans-serif;
+  --mono: "PT Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --step--1: 0.84rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.75rem;
+  --step-3: 2.6rem;
+  --step-4: 4rem;
+  --gutter: clamp(16px, 4vw, 40px);
+  --measure: 62ch;
+  color-scheme: light;
+}
+
+:root[data-lights="off"] {
+  --wash: #000000;
+  --wash-2: #0e0f0f;
+  --ink: #d8dbd4;
+  --ink-2: #8b918d;
+  --line: #2b2e2c;
+  --plate: #181919;
+  --signal: #e2603a;
+  color-scheme: dark;
+}
+
+[data-hall="1"] { --hall: var(--h1); --hall-ink: #fff; }
+[data-hall="2"] { --hall: var(--h2); --hall-ink: #fff; }
+[data-hall="3"] { --hall: var(--h3); --hall-ink: #fff; }
+[data-hall="4"] { --hall: var(--h4); --hall-ink: #14171a; }
+[data-hall="5"] { --hall: var(--h5); --hall-ink: #14171a; }
+[data-hall="6"] { --hall: var(--h6); --hall-ink: #fff; }
+[data-hall="7"] { --hall: var(--h7); --hall-ink: #fff; }
