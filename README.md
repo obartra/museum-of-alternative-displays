@@ -120,11 +120,15 @@ is not linked from anywhere. Its own address opens it, and shows that visitor th
 tour and that the model can speak. The workflow **Tour audio** runs it:
 
 1. Add the key of the ElevenLabs account as a repository secret called
-   `ELEVENLABS_API_KEY` (Settings, Secrets and variables, Actions).
+   `ELEVENLABS_API_KEY` (Settings, Secrets and variables, Actions). A key that may only
+   make speech is enough to record. Listing the voices also needs the permission to read
+   voices, and checking beforehand which languages the model speaks needs the permission
+   to read models. Without that one the check is skipped.
 2. Run the workflow with "List the voices to choose from". Its summary lists the women's
    voices of the account, each with a sample to listen to.
 3. Put the id of the voice in `tour/voices.json`: under `default` for one guide in every
-   language, or under a language code for a voice of its own.
+   language, or under a language code for a voice of its own. `leaveOut` names the
+   languages that get no recording because the model does not speak them.
 4. Run it with "Say how many characters it would send", then with "Record what is missing
    or out of date". The recordings are kept in `public/tour/` and the site is deployed.
 

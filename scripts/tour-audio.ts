@@ -25,7 +25,7 @@ const args = process.argv.slice(2), dry = args.includes('--dry'), listVoices = a
 const only = (args[args.indexOf('--langs') + 1] ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const wanted = args.includes('--langs') && only.length ? only : null;
 const key = process.env.ELEVENLABS_API_KEY ?? '';
-const config = JSON.parse(readFileSync(`${ROOT}tour/voices.json`, 'utf8')) as { model: string; format: string; voices: Record<string, string> };
+const config = JSON.parse(readFileSync(`${ROOT}tour/voices.json`, 'utf8')) as { model: string; format: string; voices: Record<string, string>; leaveOut?: string[] };
 const listFile = `${ROOT}src/data/tour-audio.json`;
 type Kept = { file: string; mark: string; voice: string; model: string };
 const list = (existsSync(listFile) ? JSON.parse(readFileSync(listFile, 'utf8')) : {}) as Record<string, Record<string, Record<string, Kept>>>;
@@ -66,6 +66,10 @@ for (const tour of tours) {
   }
 }
 let langs = [...new Set(told.map((x) => x.lang))].filter((l) => !wanted || wanted.includes(l));
+// tour/voices.json may name languages that get no recording, because the model does not speak them
+const left = langs.filter((l) => (config.leaveOut ?? []).includes(l));
+if (left.length) note(`Left out, as tour/voices.json says: ${left.join(', ')}.`);
+langs = langs.filter((l) => !left.includes(l));
 
 if (!dry) {
   needKey();
@@ -88,19 +92,23 @@ if (!dry) {
 }
 
 let sent = 0, made = 0, same = 0;
-const missingVoice = new Set<string>();
+const missingVoice = new Set<string>(), refusedFor: string[] = [];
+// The newer models are told which language the words are in, so that Catalan is not read as Spanish. The older ones refuse the field.
+const namesLanguage = /^eleven_(v[3-9]|turbo_v2_5|flash_v2_5)/.test(config.model);
 for (const lang of langs) {
   const voice = config.voices[lang] || config.voices.default || '';
   let chars = 0, parts = 0;
   for (const x of told.filter((t) => t.lang === lang)) {
+    if (refusedFor.includes(lang)) break;
     const was = list[x.tour]?.[lang]?.[x.part], m = mark(x.text);
     const file = `${String(x.n).padStart(2, '0')}-${x.part}.mp3`, dir = `${ROOT}public/tour/${x.tour}/${lang}`;
     if (was && was.mark === m && was.voice === voice && was.model === config.model && existsSync(`${dir}/${was.file}`)) { same++; continue; }
     chars += x.text.length; parts++;
     if (dry) continue;
     if (!voice) { missingVoice.add(lang); continue; }
-    const res = await ask(`/v1/text-to-speech/${encodeURIComponent(voice)}?output_format=${encodeURIComponent(config.format)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: x.text, model_id: config.model }) });
-    if (!res.ok) { console.error(`${lang}, ${x.part}: ElevenLabs answered ${res.status}: ${(await res.text()).slice(0, 400)}`); process.exit(1); }
+    const res = await ask(`/v1/text-to-speech/${encodeURIComponent(voice)}?output_format=${encodeURIComponent(config.format)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: x.text, model_id: config.model, ...(namesLanguage ? { language_code: spokenAs(lang) } : {}) }) });
+    // a refusal ends this language and not the run: the others may still be recorded, and what was made is kept
+    if (!res.ok) { note(`${lang}, ${x.part}: ElevenLabs answered ${res.status}: ${(await res.text()).slice(0, 400)}`); refusedFor.push(lang); chars -= x.text.length; parts--; continue; }
     mkdirSync(dir, { recursive: true });
     writeFileSync(`${dir}/${file}`, Buffer.from(await res.arrayBuffer()));
     ((list[x.tour] ??= {})[lang] ??= {})[x.part] = { file, mark: m, voice, model: config.model };
@@ -112,3 +120,4 @@ for (const lang of langs) {
 }
 note(`${dry ? 'Would send' : 'Sent'} ${sent.toLocaleString('en')} characters in all. ${made} recordings made, ${same} already up to date.`);
 if (missingVoice.size) { console.error(`No voice is chosen for: ${[...missingVoice].join(', ')}. Run with --voices, listen, and put an id in tour/voices.json, under the language or under "default".`); process.exit(1); }
+if (refusedFor.length) { console.error(`Stopped early for: ${refusedFor.join(', ')}. What was recorded before that is kept.`); process.exit(1); }

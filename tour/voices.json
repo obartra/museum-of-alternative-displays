@@ -4,5 +4,8 @@
   "voices": {
     "default": "",
     "en": "jVMsZEw3hfmEAe9OUUtS"
-  }
+  },
+  "leaveOut": [
+    "eo"
+  ]
 }
