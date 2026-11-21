@@ -143,7 +143,7 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>

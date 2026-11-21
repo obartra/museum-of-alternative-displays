@@ -72,7 +72,7 @@ export const people: Record<string, Credit> = {
   },
   'nixie-tube': {
     people: [{ who: ['David Hagelbarger'], did: 'The engineer most often named as its inventor.' }],
-    note: 'Credit is shared. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s.',
+    note: 'Credit for the invention is not clear. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s.',
   },
   'vacuum-fluorescent': {
     people: [
@@ -146,7 +146,7 @@ export const people: Record<string, Credit> = {
   },
   'persistence-of-vision': {
     people: [{ who: ['Joseph Plateau'], did: 'Used the effect in his spinning picture discs of 1832.' }],
-    note: 'Persistence of vision is the traditional name, not a full explanation. How the eye and brain merge flicker into motion is more complex. No first maker of the spinning LED kind is agreed.',
+    note: 'Persistence of vision is the traditional name, not a full explanation. The way the eye and brain merge flicker and perceive motion is more complex. No first maker of the spinning LED kind is agreed.',
   },
   'swept-volume': {
     people: [
