@@ -20,68 +20,65 @@ export const tours: Tour[] = [
   {
     id: 'women',
     draft: true,
-    title: 'Eleven names',
-    lead: 'A guided walk along the green line: ten pieces, eleven women, and how each name came to be written down.',
+    title: 'The green line',
+    lead: 'A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with a woman among the people on its label.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'Welcome to the museum. I am your guide along the green line on the floor. It stops at every piece whose label names a woman: ten stops, eleven names.',
-        'I will not read you the labels. They are there if you want them. Listen for something else: how each of these names came to be written down. Sometimes it is a patent. Sometimes a paper, a thesis or a film. And twice, before there is a name at all, there is a face.',
-        'Follow the line into hall 1.',
+        'Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has a woman among the people on its label.',
+        'The picture is made of something different at every stop. It starts with pins, at the braille display in hall 1.',
       ] },
-      { id: 'braille-display', title: 'Two names, one patent', text: [
-        'This display shows nothing. It is read with the fingertips, so it works as well in the dark as in the sun. Under every dot lies a sliver of crystal that bends when a voltage reaches it, and the bend lifts a pin. Watch the cells on the right. They change every second.',
-        'In 1974, in France, a patent was filed for raising braille dots this way. It carries two names with one surname: Oleg and Andrée Tretiakoff.',
-        'A patent does not say who had the idea and who made it work. It gives two names, side by side. Remember that picture. On this walk it comes back, and it changes.',
+      { id: 'braille-display', title: 'Read by touch', text: [
+        'This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right: they change every second.',
+        'Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Oleg and Andrée Tretiakoff patented this way of raising the dots. They filed first in France, in 1974.',
+        'It is the only piece in the museum that needs no light at all. Every other display on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow.',
       ] },
-      { id: 'cathode-ray-tube', title: 'A face on the screen', text: [
-        'Here a single beam of electrons draws the whole picture, line by line. The bright band moving down the glass is that beam at work, slowed so that you can see it.',
-        'In 1927, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. His wife Elma, known as Pem, worked beside him in his laboratories. When the system could show a person, hers was among the first faces it sent.',
-        'So the record holds her in two ways: as a colleague at the bench, and as the picture itself. The patents carry his name. Keep her face in mind. Another one is waiting in hall 4.',
+      { id: 'cathode-ray-tube', title: 'A beam that draws', text: [
+        'Press the button marked Sit in front. The bright band moving down the screen is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam.',
+        'In 1927, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked beside him in his laboratories. Her face was among the first that his system sent.',
+        'In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps.',
       ] },
       { id: 'microled', title: 'A question at dinner', text: [
-        'Some seventy years later, another laboratory and another married couple: the physicists Hongxing Jiang and Jingyu Lin. This piece began as a question at their dinner table. What would happen to an LED if you shrank it to a few thousandths of a millimetre? In 2000, at Kansas State University, they made the first ones.',
-        'The wall in front of you is built from such lamps, each too small to see. One tile is out, leaning against the stand. That is how a wall is repaired.',
-        'Now think back to the Farnsworths. Again two people share a life and a laboratory. This time the invention is recorded as theirs together.',
+        'The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time.',
+        'The idea began as a question at their dinner table. Hongxing Jiang and Jingyu Lin are physicists and a married couple, and they asked what would happen to an LED shrunk to thousandths of a millimetre. In 2000, at Kansas State University, they made the first microLEDs.',
+        'Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps.',
       ] },
-      { id: 'quantum-dot', title: 'First author', text: [
-        'Stay in this hall and find the three small wells: red, green and blue. The colour comes from crystals so small that their size alone decides it. Small ones glow green, larger ones red.',
-        'Three people shared a Nobel Prize in 2023 for those crystals. The step that turned them into a lamp came in 1994, at Berkeley, when a layer of them was made to glow by passing a current through it. The paper has three authors. The first is Vicki Colvin.',
-        'In her field, the first name on a paper is usually the person who did most of the work at the bench. It is a small thing, a position in a list. But it is in print, and no name stands before hers.',
+      { id: 'quantum-dot', title: 'Colour from size', text: [
+        'This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour.',
+        'The crystals are called quantum dots, and they are a few millionths of a millimetre across. The model shows what most screens do with them. In 1994, at Berkeley, Vicki Colvin, M. C. Schlamp and Paul Alivisatos took another route: they made a layer of dots glow by passing a current through it. Colvin is the first author of the paper.',
+        'The last three displays made their own light. In hall 4 a lamp or a laser makes it, and the display shapes it. The stop there is the scanned laser.',
       ] },
-      { id: 'scanned-laser', title: 'A reel of film', text: [
-        'Three lasers on the left merge into one white beam. Two small mirrors on fast motors throw that beam about, and your eye joins the moving dot into a drawing on the wall.',
-        'Elsa Garmire was a physicist at the California Institute of Technology, and she made images with laser light. In 1972 they were filmed. The filmmaker who worked with her, Ivan Dryer, opened Laserium a year later at Griffith Observatory in Los Angeles. Her images were its model.',
-        'Here the record is a reel of film, and a show that people queued for. Not every contribution ends in a patent. Some end in an audience.',
+      { id: 'scanned-laser', title: 'Drawing with a laser', text: [
+        'Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall.',
+        'The laser images of Elsa Garmire, a physicist at the California Institute of Technology, were filmed in 1972, and they became the model for Laserium. Ivan Dryer, a filmmaker who worked with her, opened Laserium at Griffith Observatory in Los Angeles in 1973.',
+        'In hall 2 a beam of electrons drew the picture inside a glass tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. The next stop is a few steps on, in the same hall: projection mapping.',
       ] },
-      { id: 'projection-mapping', title: 'A face in a crystal ball', text: [
-        'A few steps on: white plaster shapes, and a projector on a tripod. By day you will hardly see the picture, so switch the daylight off. The whole trick is in the picture. It is cut and bent to fit the object it lands on, until the object itself seems to change.',
-        'In 1969, at the Haunted Mansion in Disneyland, the faces of singers were filmed and projected onto plaster busts of the same faces. And inside a crystal ball, a blank head received the filmed face of Leota Toombs.',
-        'This is the second face on our walk. Pem Farnsworth was sent as a television picture. Leota Toombs was laid over a blank head. But she was not a visitor who happened to be there. She was an artist in the workshop that built the ride.',
+      { id: 'projection-mapping', title: 'A picture cut to fit', text: [
+        'Switch the daylight off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor.',
+        'In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. The Haunted Mansion also has a crystal ball with a blank head inside. The face projected onto it is the filmed face of Leota Toombs, an artist at the Disney design workshop.',
+        'The next stop is in hall 5, at the electrowetting display. The displays there behave like print: they use the light of the room.',
       ] },
-      { id: 'electrowetting', title: 'A word', text: [
-        'In this hall the displays behave like paper. Each cell here holds a drop of dyed oil under water. With no voltage, the oil lies flat and shows its colour. With a voltage, the water pushes it into a corner. Watch one cell switch. The oil does not vanish. It gathers, and stands higher.',
-        'In 1981, at Bell Laboratories, Gerardo Beni and Susan Hackwood proposed a display built on this effect, and they gave the effect its name: electrowetting. He was born in Florence, she in England.',
-        'The display had to wait. It ran at video speed only in 2003, in another laboratory, in other hands. What stayed from 1981 is the word. Everyone who has worked on this since uses a name that two people chose.',
+      { id: 'electrowetting', title: 'Oil and water', text: [
+        'These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher.',
+        'At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Gerardo Beni and Susan Hackwood proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. In 2003, at Philips Research in Eindhoven, Robert Hayes and Johan Feenstra made it work at video speed.',
+        'Next is hall 6, where the pictures have no screen that you can point to. The stop there is the illusion transmitter.',
       ] },
-      { id: 'illusion-transmitter', title: 'One name', text: [
-        'Look at the two boxes. On the left a real bulb hangs hidden below, and its picture stands in the empty socket above it. On the right there is no bulb at all. When the left one goes dark, the right one follows.',
-        'In 1976, at an exhibition, Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket. She asked a question: could that picture be sent somewhere else? She worked at NASA. She had started there as a data analyst, and by then she managed the image systems for the Landsat satellite. At Morgan State University she had been one of only two women to major in physics.',
-        'Her patent was granted on 21 October 1980. At our first stop, a patent carried two names side by side. This one carries a single name, and it is hers.',
+      { id: 'illusion-transmitter', title: 'A bulb that is not there', text: [
+        'Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows a moment later.',
+        'Like the lamps in hall 3, this piece began with a question. At an exhibition in 1976, Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket. She asked whether the picture could be sent. She had joined NASA as a data analyst. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat. Her patent was granted on 21 October 1980.',
+        'Stay in hall 6. At the next stop, the static-volume display, the picture is inside a stack of clear sheets.',
       ] },
-      { id: 'static-volume', title: 'First author, again', text: [
-        'Stay in this hall. The knot in front of you is cut into slices, and a lit sheet runs through them from front to back. Nothing moves but the light.',
-        'There is an earlier way to do this, with no sheets at all: a block of special glass that glows only at the point where two invisible beams cross. Steer that point, and you draw inside the solid, in colour. The work came out of Stanford University in 1996. The paper has four authors, and the first is Elizabeth Downing.',
-        'You have heard that phrase before, in the hall of solid light. First author. Valerie Thomas stood a picture in the air. Elizabeth Downing drew one inside a block of glass.',
+      { id: 'static-volume', title: 'Drawing inside glass', text: [
+        'The figure is a knot. A stack of clear sheets stands in front of you, and one sheet at a time turns milky and catches its slice of the picture. Look along the stack from the side to see the knot in slices. Nothing moves.',
+        'There is another way to fill a volume, with no sheets: a block of special glass that glows only where two invisible beams cross. The model does not show it. A beam of electrons drew in hall 2, and a laser in hall 4. Here the crossing point of two beams draws, in three dimensions.',
+        'Elizabeth Downing, Lambertus Hesselink, John Ralston and Roger Macfarlane drew coloured points of light inside a block of glass in this way. Their work was published from Stanford University in 1996. Downing is the first author. One hall is left, and the last stop is holography, in hall 7.',
       ] },
-      { id: 'holography', title: 'A painter and a thesis', text: [
-        'The last hall, and the last stop. Behind the glass plate there seems to be a toy locomotive. Move, and you see round it. There is no locomotive. The plate holds the light that one once sent out.',
-        'Two names wait here, twenty-one years apart. Margaret Benyon was a painter, born in Birmingham and raised in Kenya. From 1968 she made holograms as art, and a year later she showed them. Then, in 1989, the first holographic video display was built in the group of Stephen Benton at the MIT Media Lab. The thesis that sets out its design is by Mary Lou Jepsen.',
-        'A painter who took up a laboratory technique, and a student who wrote down how to make a hologram move.',
+      { id: 'holography', title: 'The light itself', text: [
+        'Look through the glass plate. A toy engine seems to stand behind it. Turn the model, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did.',
+        'Dennis Gabor invented holography in 1948. Margaret Benyon, a painter, made holograms as art from 1968 and showed them a year later. A hologram like this one is a still picture. In 1989 the first holographic video display was built in the group of Stephen Benton at the MIT Media Lab, and Mary Lou Jepsen set out its design in her thesis of that year.',
       ] },
-      { id: 'end', title: 'At the end of the line', text: [
-        'That is the end of the line. Look back along it. Two names on a patent. A face on a screen. A question at a dinner table. First author. A reel of film. A face in a crystal ball. A word. A patent in one name. First author again. A painter, and a thesis.',
-        'Eleven names, among more than a hundred on the labels of this museum. The list is short. Part of that is history, and part of it is the record, which has not always written down who did the work. When we find another name, the green line gets another stop.',
-        'Thank you for walking it with me.',
+      { id: 'end', title: 'The end of the green line', text: [
+        'That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there.',
+        'Every piece in these halls has its people, and their names are on the labels. Thank you for taking the tour.',
       ] },
     ],
   },
