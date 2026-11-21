@@ -26,6 +26,11 @@ export interface Room {
   surroundings?: THREE.Scene;
   /** Where the light a piece gives off in the dark seems to come from, and how much of it this room shows. */
   glow?: { at: [number, number, number]; gain: number };
+  /** As high as the camera may go. Past it you would be looking down through the roof. */
+  headroom?: number;
+  /** Kept when everything the room shows has arrived. Still pictures wait for it, then `settle` skips any fade. */
+  ready?: Promise<void>;
+  settle?: () => void;
   dispose?: () => void;
 }
 
@@ -87,7 +92,7 @@ const solid = (m: THREE.Mesh): THREE.Mesh => { m.castShadow = m.receiveShadow = 
 
 // ---------- the house ----------
 
-const XL = -5.4, XR = 8.2, ZF = 8.5, TALL = 4.6;   // the east, west and north walls, and the height of the room
+const XL = -5.4, XR = 8.2, ZF = 8.5, TALL = 6;     // the east, west and north walls, and the height of the room
 const SILL = 0.34, HEAD = 4.2, REVEAL = 0.16;      // the windows: how high they start and stop, how deep they sit
 
 const kept = new Map<string, Skin>();
@@ -312,14 +317,24 @@ function house(): Room {
     for (const end of [-1, 1]) { const up = crease(TALL, 0.6, 0.16); up.rotation.z = (end * Math.PI) / 2; up.position.set(mid + end * (len / 2 - 0.3), FLOOR + TALL / 2, 0.003); w.fit.add(up); }
   }
 
-  // the floor, and the storeys under it for when the house is seen from outside
-  const ground = once('polished', () => polished(2048, 13));
-  const floor = new THREE.Mesh(new THREE.PlaneGeometry(XR - XL + 0.3, ZF - BACK + 0.3), wear(ground, [XR - XL + 0.3, ZF - BACK + 0.3], [6.5, 6.5], { bump: 0, rough: 1 }));
+  // the floor
+  const ground = once('polished', () => polished(matchMedia('(pointer: coarse)').matches ? 1024 : 2048, 13));
+  const fw = XR - XL + 0.3, fd = ZF - BACK + 0.3;
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(fw, fd), wear(ground, [fw, fd], [6.5, 6.5], { bump: 0, rough: 1 }));
   floor.rotation.x = -Math.PI / 2; floor.position.set((XL + XR) / 2, FLOOR, (BACK + ZF) / 2); floor.receiveShadow = true;
-  const below = new THREE.Mesh(new THREE.BoxGeometry(XR - XL + 0.7, 14, ZF - BACK + 0.7), new THREE.MeshStandardMaterial({ color: 0xe9e8e3, roughness: 0.95 }));
-  below.position.set((XL + XR) / 2, FLOOR - 7.03, (BACK + ZF) / 2);
-  g.add(floor, below, contact(XR - XL, 1.6, (XL + XR) / 2, BACK + 0.8, 0.2, 0.5));
-  const mirrored = mirror(floor, [floor, below]);
+  g.add(floor, contact(XR - XL, 1.6, (XL + XR) / 2, BACK + 0.8, 0.2, 0.5));
+  const mirrored = mirror(floor, [floor]);
+  // step back through a wall and the floor carries on under you as a terrace, so that its edge is never found.
+  // From indoors the terraces are put away: they would lie across the view from the windows.
+  const OUT = 16;
+  const terraces = walls.map((w, i) => {
+    const along = i === 1 || i === 2 ? ZF - BACK : XR - XL, slabs = new THREE.MeshStandardMaterial({ map: tex(ground.map), roughness: 0.5 });
+    slabs.map!.repeat.set((along + OUT * 2) / 6.5, OUT / 6.5);
+    const t = new THREE.Mesh(new THREE.PlaneGeometry(along + OUT * 2, OUT), slabs);
+    t.rotation.x = -Math.PI / 2; t.position.set(i === 0 ? (XL + XR) / 2 : i === 3 ? -(XL + XR) / 2 : i === 1 ? -(BACK + ZF) / 2 : (BACK + ZF) / 2, FLOOR - 0.002 - i * 0.001, -OUT / 2); t.receiveShadow = true; t.visible = false;
+    w.wall.add(t);
+    return t;
+  });
 
   // the stand: one cast block, a steel plate floating a finger's width above it
   const cast = once('fair', () => fairFaced(21, 2.2, TOP - 0.03 - FLOOR));
@@ -344,7 +359,7 @@ function house(): Room {
   sun.position.copy(SUN).multiplyScalar(40).add(new THREE.Vector3(1.4, 0.5, 3.4)); sun.target.position.set(1.4, 0.5, 3.4);
   sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.radius = 2.2; sun.shadow.blurSamples = 12;
   sun.shadow.bias = -0.0005; sun.shadow.normalBias = 0.035;
-  const sc = sun.shadow.camera; sc.left = -9.6; sc.right = 9.6; sc.top = 6.4; sc.bottom = -5.6; sc.near = 8; sc.far = 72;
+  const sc = sun.shadow.camera; sc.left = -10.2; sc.right = 10.2; sc.top = 8.6; sc.bottom = -6.2; sc.near = 8; sc.far = 72;
   const sky = new THREE.HemisphereLight(0xffffff, 0xffffff, 0);
   const fill = new THREE.DirectionalLight(0xeef2f8, 0); fill.position.set(4, 3, 8);                          // what the north of the room returns
   g.add(sun, sun.target, sky, fill);
@@ -366,9 +381,10 @@ function house(): Room {
 
   const local = new THREE.Vector3();
   return {
-    group: g, targetY: 0.42, reach: 1.3, walled: true, surroundings: around, glow: { at: [0, 2.2, 1.5], gain: 0.16 },
+    group: g, targetY: 0.42, reach: 1.3, walled: true, surroundings: around, glow: { at: [0, 2.2, 1.5], gain: 0.11 },
+    headroom: FLOOR + TALL - 0.32, ready: out.ready, settle: out.settle,
     prepare: mirrored.prepare, dispose: mirrored.dispose,
-    seenFrom: (camera) => { for (const w of walls) { w.wall.updateMatrixWorld(); w.fit.visible = w.wall.worldToLocal(local.copy(camera.position)).z > 0.02; } },
+    seenFrom: (camera) => { walls.forEach((w, i) => { w.wall.updateMatrixWorld(); const indoors = w.wall.worldToLocal(local.copy(camera.position)).z > 0.02; w.fit.visible = indoors; terraces[i].visible = !indoors; }); },
     light: (L, scene) => {
       const e = L * L * (3 - 2 * L);
       sun.color.copy(NIGHT.sun).lerp(DAY.sun, e); sun.intensity = 0.3 + 3.1 * e;

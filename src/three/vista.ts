@@ -50,10 +50,16 @@ function noise1(seed: number): (x: number) => number {
   return (x) => n(x) * 0.52 + n(x * 2.03 + 17) * 0.26 + n(x * 4.1 + 31) * 0.14 + n(x * 8.3 + 5) * 0.08;
 }
 
-/** The land from the window, far to near. The sky is left clear: it is drawn behind, by the dome. */
-function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
+/**
+ * The land from the window, far to near. The sky is left clear: it is drawn behind, by the dome.
+ * Two pictures come out of one pass: the land by day, and at half the size the lights that are on
+ * in it at night. It is painted a little at a time, so the page never waits on it.
+ */
+function* paint(W: number, H: number): Generator<void, Land> {
   const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
   const c = cv.getContext('2d')!;
+  const lv = document.createElement('canvas'); lv.width = W / 2; lv.height = H / 2;
+  const l = lv.getContext('2d')!; l.scale(0.5, 0.5);
   const t0 = Math.tan(rad(EL0)), t1 = Math.tan(rad(EL1));
   const X = (az: number) => W * (az < SPLIT ? ((az - AZ0) / (SPLIT - AZ0)) * USPLIT : USPLIT + ((az - SPLIT) / (AZ1 - SPLIT)) * (1 - USPLIT));
   const AZ = (x: number) => { const u = x / W; return u < USPLIT ? AZ0 + (u / USPLIT) * (SPLIT - AZ0) : SPLIT + ((u - USPLIT) / (1 - USPLIT)) * (AZ1 - SPLIT); };
@@ -62,9 +68,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
   /** The east end of the picture is squeezed sideways; things drawn there are squeezed to match. */
   const squeeze = (x: number) => (x < USPLIT * W ? (USPLIT / (SPLIT - AZ0)) / ((1 - USPLIT) / (AZ1 - SPLIT)) : 1);
   const HAZE: RGB = [208, 212, 212];
-  // by night nothing is lit but by the moon: everything falls to a few blues
-  const tone = (d: RGB): RGB => (night ? [d[0] * 0.075 + 3, d[1] * 0.1 + 5, d[2] * 0.19 + 11] : d);
-  const col = (d: RGB, a = 1) => css(tone(d), a);
+  const col = css;
   const under = (f: (az: number) => number, top: RGB, bottom: RGB, depth: number) => {
     c.beginPath(); c.moveTo(0, H);
     let hi = H;
@@ -79,6 +83,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
   const far1 = noise1(3), far2 = noise1(4);
   under((az) => 0.2 + 1.1 * far1(az * 0.045), [190, 200, 212], [200, 208, 215], 30);
   under((az) => -0.1 + 0.8 * far2(az * 0.08 + 9), [170, 183, 199], [188, 198, 208], 30);
+  yield;
 
   // ---- the mountain
   const rough = noise1(7), long = noise1(8);
@@ -98,7 +103,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
     if (h < M_BASE + 0.15) continue;
     const yt = Y(h), len = (yBase - yt) * (0.5 + 0.4 * long(az * 1.7)), a = Math.min(0.55, Math.abs(slope) * 0.34) * (0.75 + 0.25 * r());
     if (a < 0.03) continue;
-    const tint: RGB = slope > 0 ? (night ? [170, 190, 235] : [204, 208, 214]) : [94, 106, 130];
+    const tint: RGB = slope > 0 ? [204, 208, 214] : [94, 106, 130];
     const g = c.createLinearGradient(0, yt, 0, yt + len);
     g.addColorStop(0, col(tint, a)); g.addColorStop(0.6, col(tint, a * 0.45)); g.addColorStop(1, col(tint, 0));
     c.fillStyle = g; c.fillRect(x, yt, 2 * k + 0.5, len);
@@ -120,6 +125,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
   pine.addColorStop(0, col([108, 124, 134], 0.7)); pine.addColorStop(1, col([134, 147, 152], 0.92));
   c.fillStyle = pine; c.fill();
   c.restore();
+  yield;
 
   // ---- hills between: pine and holm oak, a few fields, a farmhouse here and there
   const hills: [(az: number) => number, RGB, RGB, number][] = [
@@ -128,7 +134,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
     [((n, m) => (az: number) => -3.3 + 0.8 * n(az * 0.2 + 29) + 1.2 * Math.pow(m(az * 0.05 + 8), 2))(noise1(13), noise1(17)), [90, 106, 94], [112, 124, 110], 1],
     [((n, m) => (az: number) => -4.9 + 0.9 * n(az * 0.27 + 41) + 1.3 * Math.pow(m(az * 0.06 + 3), 2))(noise1(14), noise1(18)), [74, 92, 76], [100, 114, 96], 1.35],
   ];
-  hills.forEach(([f, a, b, near], hi) => {
+  for (const [hi, [f, a, b, near]] of hills.entries()) {
     under(f, a, b, 60);
     const hr = rng(40 + hi);
     // the lit and the shaded side of every rise
@@ -158,19 +164,19 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
         const hx = x + w * hr(), hw = (3 + hr() * 3) * k * near * squeeze(x), hh = (2 + hr() * 1.6) * k * near;
         c.fillStyle = col([228, 222, 208]); c.fillRect(hx, y - hh, hw, hh);
         c.fillStyle = col([172, 108, 86]); c.fillRect(hx - 0.6 * k, y - hh - 1.4 * k, hw + 1.2 * k, 1.6 * k);
-        if (night && hr() > 0.4) { c.fillStyle = 'rgba(255,206,140,.95)'; c.fillRect(hx + hw * 0.4, y - hh * 0.6, Math.max(1, k), Math.max(1, k)); }
+        if (hr() > 0.4) { l.fillStyle = 'rgba(255,206,140,.95)'; l.fillRect(hx + hw * 0.4, y - hh * 0.6, Math.max(1.4, k), Math.max(1.4, k)); }
       }
     }
-  });
-  if (night) {
+    yield;
+  }
+  {
     // villages at the foot of the mountain, and the road between them
     const vr = rng(77);
     for (const [az0, n, spread] of [[126, 40, 4], [141, 60, 5], [156, 30, 3], [176, 46, 4], [203, 40, 5], [232, 36, 5], [92, 26, 9], [56, 22, 10]] as const) for (let i = 0; i < n; i++) {
       const az = az0 + (vr() + vr() - 1) * spread, x = X(az), y = Y(-0.95 - vr() * 1.2 - Math.abs(az - az0) * 0.03);
-      c.fillStyle = vr() > 0.25 ? `rgba(255,${190 + vr() * 40},${110 + vr() * 50},${0.5 + vr() * 0.5})` : `rgba(220,232,255,${0.5 + vr() * 0.4})`;
-      const s = (0.9 + vr() * 0.9) * k; c.fillRect(x, y, s, s);
+      l.fillStyle = vr() > 0.25 ? `rgba(255,${190 + vr() * 40},${110 + vr() * 50},${0.5 + vr() * 0.5})` : `rgba(220,232,255,${0.5 + vr() * 0.4})`;
+      const s = (1.4 + vr() * 1.2) * k; l.fillRect(x, y, s, s);
     }
-  } else {
     // morning haze lying in the valley
     const hz = c.createLinearGradient(0, Y(1.6), 0, Y(-7.5));
     hz.addColorStop(0, css(HAZE, 0)); hz.addColorStop(0.3, css(HAZE, 0.3)); hz.addColorStop(1, css(HAZE, 0));
@@ -210,15 +216,23 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
       const home = tr();                                 // how many people are in tonight
       const windows = (x: number, top: number, w: number, bays: number, floors: number, balcony: boolean) => {
         if (storey < 2.4 * k) return;
+        if (storey < 4.4 * k) {
+          // too far to tell one window from the next: a band of glass to each floor, and a light or two
+          for (let f = 0; f < floors; f++) {
+            c.fillStyle = col(glass, 0.7); c.fillRect(x + w * 0.08, top + f * storey + storey * 0.26, w * 0.84, storey * 0.46);
+            if (tr() < home * 0.5) { l.fillStyle = `rgb(255,${196 + Math.round(tr() * 34)},${124 + Math.round(tr() * 50)})`; l.fillRect(x + w * (0.1 + tr() * 0.7), top + f * storey + storey * 0.28, Math.max(1.6 * k, w * 0.1), Math.max(1.6 * k, storey * 0.42)); }
+          }
+          return;
+        }
         const ww = (w / bays) * (0.36 + tr() * 0.1), wh = storey * 0.52;
         for (let f = 0; f < floors; f++) for (let b = 0; b < bays; b++) {
           const wx = x + (b + 0.5) * (w / bays) - ww / 2, wy = top + f * storey + storey * 0.24;
-          const lit = night && tr() < home * 0.3, blind = !lit && tr() < 0.32;
+          const lit = tr() < home * 0.3, blind = tr() < 0.32;
           if (balcony && storey > 5 * k && b % 2 === 0) { c.fillStyle = col(mix(wall, [30, 34, 40], 0.34)); c.fillRect(wx - ww * 0.5, wy - storey * 0.04, ww * 2, storey * 0.62); }
-          if (lit) { c.fillStyle = tr() > 0.2 ? `rgb(255,${196 + Math.round(tr() * 34)},${124 + Math.round(tr() * 50)})` : 'rgb(214,230,255)'; if (storey > 5 * k) lamps.push([wx + ww / 2, wy + wh / 2, storey * 0.7, false]); }
-          else c.fillStyle = blind ? col(mix(pick(BLIND), HAZE, fade)) : col(glass);
+          if (lit) { l.fillStyle = tr() > 0.2 ? `rgb(255,${196 + Math.round(tr() * 34)},${124 + Math.round(tr() * 50)})` : 'rgb(214,230,255)'; l.fillRect(wx, wy, ww, wh); if (storey > 5 * k) lamps.push([wx + ww / 2, wy + wh / 2, storey * 0.7, false]); }
+          c.fillStyle = blind ? col(mix(pick(BLIND), HAZE, fade)) : col(glass);
           c.fillRect(wx, wy, ww, wh);
-          if (storey > 9 * k && !lit && !blind) { c.fillStyle = col([156, 170, 184], 0.3); c.fillRect(wx, wy, ww, wh * 0.28); }
+          if (storey > 9 * k && !blind) { c.fillStyle = col([156, 170, 184], 0.3); c.fillRect(wx, wy, ww, wh * 0.28); }
           if (balcony && storey > 5 * k && b % 2 === 0) { c.fillStyle = col(mix(wall, [255, 255, 255], 0.12)); c.fillRect(wx - ww * 0.55, wy + wh * 0.62, ww * 2.1, storey * 0.3); c.fillStyle = col(mix(wall, [30, 34, 40], 0.45)); c.fillRect(wx - ww * 0.55, wy + wh * 0.62 + storey * 0.3, ww * 2.1, Math.max(1, storey * 0.05)); }
         }
       };
@@ -260,7 +274,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
         for (let i = 0; i < teeth; i++) {
           const tx = x + (i * w) / teeth, tw = w / teeth;
           c.fillStyle = col(mix([204, 204, 198], HAZE, fade)); c.beginPath(); c.moveTo(tx, y - h); c.lineTo(tx + tw * 0.3, y - h - storey * 0.7); c.lineTo(tx + tw, y - h); c.closePath(); c.fill();
-          c.fillStyle = night && home > 0.8 ? 'rgb(255,214,150)' : col(mix([90, 100, 110], HAZE, fade)); c.beginPath(); c.moveTo(tx, y - h); c.lineTo(tx + tw * 0.3, y - h - storey * 0.7); c.lineTo(tx + tw * 0.3, y - h); c.closePath(); c.fill();
+          for (const ctx of home > 0.8 ? [c, l] : [c]) { ctx.fillStyle = ctx === l ? 'rgb(255,214,150)' : col(mix([90, 100, 110], HAZE, fade)); ctx.beginPath(); ctx.moveTo(tx, y - h); ctx.lineTo(tx + tw * 0.3, y - h - storey * 0.7); ctx.lineTo(tx + tw * 0.3, y - h); ctx.closePath(); ctx.fill(); }
         }
       } else {
         // a church: a nave and a square tower
@@ -273,26 +287,28 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
         c.fillStyle = col(mix(ROOFS[1], HAZE, fade)); c.beginPath(); c.moveTo(x + w - storey * 0.15, y - th); c.lineTo(x + w + tw / 2, y - th - storey * 1.6); c.lineTo(x + w + tw + storey * 0.15, y - th); c.closePath(); c.fill();
         w += tw;
       }
-      if (night && d > 0.1 && tr() > 0.5) lamps.push([x + w + storey * 0.3 * q, y + storey * 0.4, storey * 1.1, true]);
+      if (d > 0.1 && tr() > 0.5) lamps.push([x + w + storey * 0.3 * q, y + storey * 0.4, storey * 1.1, true]);
       if (tr() < 0.5) { const s = storey * (0.9 + tr() * 1.5); crown(x + w + s * 0.8 * q, y + storey * 0.6, s, fade); x += s * 1.4 * q; }
       x += w + storey * tr() * 0.5 * q;
     }
+    yield;
   }
-  if (night) {
+  {
     // street lamps, and the little light that windows throw
-    c.globalCompositeOperation = 'lighter';
+    l.globalCompositeOperation = 'lighter';
     for (const [x, y, s, street] of lamps) {
       const rr = Math.max(1.5 * k, s);
-      const g = c.createRadialGradient(x, y, 0, x, y, rr);
+      const g = l.createRadialGradient(x, y, 0, x, y, rr);
       g.addColorStop(0, street ? 'rgba(255,186,104,.7)' : 'rgba(255,206,140,.16)'); g.addColorStop(0.25, street ? 'rgba(255,176,96,.22)' : 'rgba(255,196,130,.08)'); g.addColorStop(1, 'rgba(255,170,90,0)');
-      c.fillStyle = g; c.fillRect(x - rr, y - rr, rr * 2, rr * 2);
-      if (street) { c.fillStyle = 'rgba(255,236,200,.95)'; c.fillRect(x - 0.6 * k, y - 0.6 * k, Math.max(1, 1.2 * k), Math.max(1, 1.2 * k)); }
+      l.fillStyle = g; l.fillRect(x - rr, y - rr, rr * 2, rr * 2);
+      if (street) { l.fillStyle = 'rgba(255,236,200,.95)'; l.fillRect(x - k, y - k, 2 * k, 2 * k); }
     }
-    c.globalCompositeOperation = 'source-over';
+    l.globalCompositeOperation = 'source-over';
   }
+  yield;
 
   // ---- the grain of a photograph, so that no patch of colour is quite flat
-  if (!night) {
+  {
     const mask = document.createElement('canvas'); mask.width = W; mask.height = H; mask.getContext('2d')!.drawImage(cv, 0, 0);
     const g = document.createElement('canvas'); g.width = g.height = 256;
     const gc = g.getContext('2d')!, gi = gc.createImageData(256, 256), gr = rng(303);
@@ -304,27 +320,54 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
   }
 
   // ---- let the ends melt into the distance
-  c.globalCompositeOperation = 'destination-out';
-  for (const [a, b] of [[0, 0.03], [1, 0.975]]) { const g = c.createLinearGradient(a * W, 0, b * W, 0); g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(Math.min(a, b) * W, 0, Math.abs(b - a) * W, H); }
-  c.globalCompositeOperation = 'source-over';
-  return cv;
+  for (const ctx of [c, l]) {
+    ctx.globalCompositeOperation = 'destination-out';
+    for (const [a, b] of [[0, 0.03], [1, 0.975]]) { const g = ctx.createLinearGradient(a * W, 0, b * W, 0); g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(Math.min(a, b) * W, 0, Math.abs(b - a) * W, H); }
+    ctx.globalCompositeOperation = 'source-over';
+  }
+  return { land: cv, lights: lv };
 }
 
-let painted: { day: HTMLCanvasElement; night: HTMLCanvasElement } | undefined;
-/** Both pictures, painted once however many stages ask. */
-export function pictures(): { day: HTMLCanvasElement; night: HTMLCanvasElement } {
-  painted ??= { day: paint(false, 4096, 704), night: paint(true, 2048, 352) };
+export interface Land { land: HTMLCanvasElement; lights: HTMLCanvasElement }
+
+let painted: Promise<Land> | undefined;
+/** Both pictures, painted once however many stages ask, in turns of a few milliseconds between frames. */
+export function landscape(): Promise<Land> {
+  painted ??= new Promise((resolve) => {
+    const steps = paint(4096, 704);
+    const turn = () => {
+      const t = performance.now();
+      for (;;) { const s = steps.next(); if (s.done) { resolve(s.value); return; } if (performance.now() - t > 9) break; }
+      setTimeout(turn, 0);
+    };
+    setTimeout(turn, 0);
+  });
   return painted;
 }
 
-export interface Vista { group: THREE.Group; set: (L: number) => void }
+export interface Vista {
+  group: THREE.Group;
+  /** Day (1) to night (0). */
+  set: (L: number) => void;
+  /** Kept when the land has been painted and handed to the graphics card. */
+  ready: Promise<void>;
+  /** Show the land at once, without the fade it gets when it arrives late. For still pictures. */
+  settle: () => void;
+}
 
-/** The sky and the land beyond the walls. `set` moves it between day (1) and night (0). */
+/** The sky and the land beyond the walls. */
 export function vista(): Vista {
   const group = new THREE.Group();
-  const uL = { value: 1 };
-  const { day, night } = pictures();
+  const uL = { value: 1 }, uShow = { value: 0 };
   const tex = (cv: HTMLCanvasElement) => { const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t; };
+  const blank = document.createElement('canvas'); blank.width = blank.height = 2;
+  const tLand = { value: tex(blank) as THREE.Texture }, tLights = { value: tex(blank) as THREE.Texture };
+  let since = 0, still = false;
+  const ready = landscape().then(({ land, lights }) => {
+    tLand.value.dispose(); tLights.value.dispose();
+    tLand.value = tex(land); tLights.value = tex(lights);
+    since = performance.now();
+  });
 
   // the land: a tall band standing in a part circle well beyond the walls
   const N = 120, pos: number[] = [], uv: number[] = [], idx: number[] = [];
@@ -338,15 +381,16 @@ export function vista(): Vista {
   const band = new THREE.BufferGeometry();
   band.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); band.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); band.setIndex(idx);
   const land = new THREE.Mesh(band, new THREE.ShaderMaterial({
-    uniforms: { tDay: { value: tex(day) }, tNight: { value: tex(night) }, uL },
+    uniforms: { tLand, tLights, uL, uShow },
     vertexShader: 'varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
     fragmentShader: /* glsl */ `
-      uniform sampler2D tDay, tNight; uniform float uL; varying vec2 vUv;
+      uniform sampler2D tLand, tLights; uniform float uL, uShow; varying vec2 vUv;
       void main() {
-        // a camera set for the room leaves the far distance a touch soft
-        vec4 d = texture2D(tDay, vUv, 0.7), n = texture2D(tNight, vUv);
-        // seen from a room the outside is always a little overexposed
-        gl_FragColor = vec4(mix(n.rgb * 1.5, d.rgb * 1.22, uL), d.a);
+        // a camera set for the room leaves the far distance a touch soft, and a little overexposed
+        vec4 d = texture2D(tLand, vUv, 0.7), lamp = texture2D(tLights, vUv);
+        // by night nothing is lit but by the moon: the same land in a few blues, and the lights people leave on
+        vec3 night = d.rgb * vec3(0.03, 0.046, 0.12) + vec3(0.0016, 0.0026, 0.0072) + lamp.rgb * lamp.a * 1.7;
+        gl_FragColor = vec4(mix(night, d.rgb * 1.22, uL), d.a * uShow);
         #include <tonemapping_fragment>
         #include <colorspace_fragment>
       }`,
@@ -386,5 +430,9 @@ export function vista(): Vista {
   }));
   sky.renderOrder = -20; sky.frustumCulled = false;
   group.add(sky, land);
-  return { group, set: (L) => { uL.value = L; } };
+  return {
+    group, ready,
+    set: (L) => { uL.value = L; uShow.value = !since ? 0 : still ? 1 : Math.min(1, (performance.now() - since) / 700); },
+    settle: () => { still = true; },
+  };
 }

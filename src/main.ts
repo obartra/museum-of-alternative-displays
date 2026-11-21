@@ -387,7 +387,7 @@ function route(): void {
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
-  if (name === 'vista') { void import('./three/vista').then(({ pictures }) => { const { day, night } = pictures(); app.innerHTML = ''; for (const cv of [day, night]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } night.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
+  if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   if (!name) entrance();
   else if (hall) hallView(Number(hall[1]));
   else if (piece) pieceView(piece[1]);

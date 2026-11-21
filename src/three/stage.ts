@@ -34,6 +34,8 @@ export class Stage {
   private eyeTo?: THREE.Vector3;
   private eyePlay = 0.1;
   private eyeT0 = 0;
+  /** Where the visitor has put the camera, when the room has had to pull it in from there. */
+  private free?: THREE.Vector3;
   /** Called the first time the visitor turns the piece. */
   onTouch?: () => void;
 
@@ -82,6 +84,21 @@ export class Stage {
   get surface(): HTMLCanvasElement | undefined { return this.piece?.surface; }
   get eye(): Eye | undefined { return this.piece?.eye; }
   get inEye(): boolean { return !!this.eyeAt; }
+  /** Kept when the room has everything it shows. Still pictures wait for it. */
+  get ready(): Promise<void> { return this.room.ready ?? Promise.resolve(); }
+  settle(): void { this.room.settle?.(); }
+
+  /** Put the camera back where the visitor left it, before working from its position. */
+  private release(): void { if (this.free) { this.camera.position.copy(this.free); this.free = undefined; } }
+
+  /** Keep the camera under the roof: past the room's headroom it slides in along its own line of sight. */
+  private restrain(): void {
+    const top = this.room.headroom, y0 = this.controls?.target.y ?? this.room.targetY;
+    if (top === undefined || this.eyeAt || this.camera.position.y <= top) return;
+    const centre = this.controls?.target ?? new THREE.Vector3(0, y0, 0);
+    this.free = this.camera.position.clone();
+    this.camera.position.sub(centre).multiplyScalar((top - y0) / (this.camera.position.y - y0)).add(centre);
+  }
 
   /** What glass and metal on the stand reflect: the room itself where it can say, a plain studio where it cannot. */
   private surround(): void {
@@ -96,6 +113,7 @@ export class Stage {
     const el = this.canvas.parentElement ?? this.canvas;
     const W = w ?? Math.max(1, el.clientWidth), H = h ?? Math.max(1, el.clientHeight);
     const back = (aspect: number) => Math.max(1, 1.02 / aspect), k = back(W / H) / back(this.camera.aspect);
+    this.release();
     this.renderer.setSize(W, H, false);
     this.camera.aspect = W / H;
     this.camera.updateProjectionMatrix();
@@ -160,7 +178,7 @@ export class Stage {
   }
 
   private place(az: number, el: number, dist: number): void {
-    this.eyeAt = this.eyeTo = undefined;
+    this.eyeAt = this.eyeTo = undefined; this.free = undefined;
     this.camera.fov = FOV; this.camera.near = 0.05;
     this.camera.updateProjectionMatrix();
     const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
@@ -187,6 +205,7 @@ export class Stage {
   goEye(): void {
     const eye = this.piece?.eye;
     if (!eye) return;
+    this.free = undefined;
     const root = this.piece!.root;
     root.updateMatrixWorld(true);
     const at = root.localToWorld(new THREE.Vector3(...eye.at)), to = root.localToWorld(new THREE.Vector3(...eye.to));
@@ -213,6 +232,7 @@ export class Stage {
     if (!c) return;
     c.autoRotate = false;
     this.dragged = true;
+    this.release();
     const k = this.eyeAt ? 0.12 : 1;
     const off = this.camera.position.clone().sub(c.target);
     const sph = new THREE.Spherical().setFromVector3(off);
@@ -248,7 +268,9 @@ export class Stage {
       this.camera.lookAt(this.eyeTo);
     }
     this.piece?.update?.({ t: at ?? (performance.now() - this.t0) / 1000, lights: L, camera: this.camera });
+    this.release();
     this.controls?.update();
+    this.restrain();
     this.room.prepare?.(this.renderer, this.scene, this.camera);
     this.renderer.render(this.scene, this.camera);
   }

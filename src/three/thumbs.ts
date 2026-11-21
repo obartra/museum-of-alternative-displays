@@ -16,9 +16,11 @@ export function thumb(id: string, hallColour: string, lightsOn: boolean, size = 
   const hit = shot ? undefined : cache.get(key);
   if (hit) return Promise.resolve(hit);
   const job = chain.then(() => new Promise<string>((resolve) => {
-    idle(() => {
+    idle(async () => {
       try {
         if (!stage) { const c = document.createElement('canvas'); stage = new Stage(c, false); }
+        // a still should show the whole room: wait for whatever of it is still on its way
+        await stage.ready; stage.settle();
         stage.resize(shot?.w ?? size, shot?.h ?? size);
         const make = builders[id];
         if (!make) return resolve('');
