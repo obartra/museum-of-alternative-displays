@@ -27,6 +27,7 @@ h1, h2, h3 { text-wrap: balance; }
   padding: 14px var(--gutter); max-width: 1240px; margin: 0 auto;
 }
 .top .tabs { grid-column: 1 / -1; }
+.top__tools { display: flex; align-items: center; gap: 12px; }
 @media (min-width: 900px) {
   .top { grid-template-columns: auto 1fr auto; gap: 12px 28px; }
   .top .tabs { grid-column: auto; justify-self: end; order: 0; }
@@ -51,6 +52,14 @@ h1, h2, h3 { text-wrap: balance; }
 .tabs a.tabs__about { display: none; }
 @media (min-width: 520px) { .tabs a.tabs__about { display: grid; } }
 @media (max-width: 519px) { .top .switch > span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }
+
+/* language: the short name of the one in use on a small outlined plate. The browser's own list lies invisibly over it,
+   so a phone opens its native picker and a keyboard gets a real select */
+.lang { position: relative; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 9px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--ink); font-weight: 700; font-size: .8rem; line-height: 1; }
+.lang__now::after { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 0 3px 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
+.lang select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; appearance: none; border: 0; font-size: 16px; }
+.lang:focus-within { outline: 3px solid var(--signal); outline-offset: 3px; }
+@media (pointer: coarse) { .lang { height: 40px; } }
 
 /* ---------- enamel plate ---------- */
 .plate {
@@ -111,6 +120,8 @@ h1, h2, h3 { text-wrap: balance; }
 .btn:hover { background: var(--ink); color: var(--wash); }
 .btn[aria-pressed="true"] { background: var(--ink); color: var(--wash); }
 .btn:disabled { opacity: .42; pointer-events: none; }
+/* under a finger, a button is at least 40px tall */
+@media (pointer: coarse) { .btn { min-height: 40px; } }
 .stage.is-full { position: fixed; inset: 0; z-index: 50; border-radius: 0; display: flex; flex-direction: column; }
 .stage.is-full .stage__box { aspect-ratio: auto; max-height: none; flex: 1; min-height: 0; }
 .stage.is-full canvas.gl { touch-action: none; }
@@ -157,7 +168,8 @@ h1, h2, h3 { text-wrap: balance; }
 .flap {
   /* never shorter than 24px, the least a finger target may be, however narrow the phone */
   width: 1.02em; height: max(1.5em, 24px); display: inline-grid; place-items: center; background: #1d1f20; border-radius: 2px;
-  font-family: var(--display); font-weight: 700; font-size: clamp(.8rem, 3.55vw, 1.6rem); line-height: 1; position: relative; text-transform: uppercase;
+  /* the board fits its longest row on one line: more letters, smaller flaps */
+  font-family: var(--display); font-weight: 700; font-size: clamp(.7rem, calc(60.3vw / var(--cells, 17)), 1.6rem); line-height: 1; position: relative; text-transform: uppercase;
   background-image: linear-gradient(#0000 49.2%, #000 49.2%, #000 51%, #0000 51%);
 }
 .flap--gap { background: none; width: .5em; }
@@ -196,7 +208,8 @@ h1, h2, h3 { text-wrap: balance; }
 .crumb { font-weight: 700; font-size: .9rem; display: inline-flex; gap: 8px; align-items: center; text-decoration: none; }
 .crumb b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 3px; background: var(--hall); color: var(--hall-ink); font: 800 1.1rem/1 var(--display); }
 .crumb:hover span { text-decoration: underline; }
-.piece { display: grid; gap: 26px 44px; }
+/* the one column may shrink below its widest child, or a sideways-scrolling row would stretch the page */
+.piece { display: grid; gap: 26px 44px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 980px) {
   .piece { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); align-items: start; }
   .piece > .stage { position: sticky; top: 14px; }
@@ -211,3 +224,47 @@ h1, h2, h3 { text-wrap: balance; }
 .drawing { width: 100%; height: auto; display: block; }
 .count { font-weight: 700; }
 .top .switch { margin-left: 4px; }
+
+/* ---------- from the archive ---------- */
+/* Real pictures beside the model, mounted the way a print room mounts them: the whole picture on a board, never cropped,
+   with a typed line saying what it is. One row that scrolls sideways, so three pictures cost a phone no more height than one. */
+.archive__row { display: flex; gap: 14px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding: 2px 2px 12px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.mount { flex: none; width: min(272px, 74vw); scroll-snap-align: start; display: grid; gap: 5px; align-content: start; }
+.archive__row--one .mount { width: min(100%, 440px); }
+.mount__open { appearance: none; display: block; position: relative; width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 3px; background: var(--plate); cursor: zoom-in; margin-bottom: 3px; }
+.mount__open img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: var(--wash-2); }
+.archive__row--one .mount__open img { aspect-ratio: 3 / 2; }
+.mount__open:hover { border-color: var(--ink); }
+/* a film is marked on its frame: a triangle and its length */
+.mount__play { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 7px; padding: 4px 9px 4px 8px; border-radius: 3px; background: #101112; color: #f1efe6; font: 700 .78rem/1 var(--text); }
+.mount__play::before { content: ""; border-left: 9px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.mount__kind { font-family: var(--mono); font-size: .72rem; line-height: 1.35; color: var(--ink-2); }
+.mount__cap { font-size: .92rem; line-height: 1.4; }
+.mount__credit { font-size: .76rem; line-height: 1.35; color: var(--ink-2); }
+/* on a phone the row runs out to both edges of the screen, so the next mount shows it can be reached */
+@media (max-width: 899px) {
+  .archive__row { margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+}
+
+/* one picture large, with its record: the picture takes the room, the words sit below it on a phone and beside it on a desk */
+.viewer { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--wash); color: var(--ink); overflow: hidden; }
+.viewer[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.viewer::backdrop { background: var(--wash); }
+.viewer__media { min-height: 0; display: grid; place-items: center; padding: 12px; background: var(--wash-2); }
+.viewer__media img, .viewer__film { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; min-height: 0; }
+.viewer__side { display: grid; gap: 12px; align-content: start; padding: 12px var(--gutter) 16px; max-height: 46dvh; overflow-y: auto; border-top: 1px solid var(--line); }
+/* the way out stays in reach while a long record scrolls under it */
+.viewer__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: sticky; top: -12px; margin: -12px 0 0; padding: 12px 0 6px; background: var(--wash); z-index: 1; }
+.viewer__kind { font-family: var(--mono); font-size: .78rem; color: var(--ink-2); }
+.viewer__cap { font-size: 1rem; line-height: 1.42; max-width: var(--measure); }
+.viewer .card div { grid-template-columns: 6.2em 1fr; }
+.viewer .card dd { overflow-wrap: anywhere; }
+.viewer__nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: .84rem; font-weight: 600; color: var(--ink-2); }
+@media (min-width: 900px) {
+  .viewer[open] { grid-template-rows: none; grid-template-columns: minmax(0, 1fr) 380px; }
+  .viewer__media { padding: 28px; }
+  .viewer__side { max-height: none; padding: 22px 26px; border-top: 0; border-left: 1px solid var(--line); gap: 18px; }
+  .viewer__cap { font-size: 1.08rem; }
+}
+.credits { font-size: var(--step--1); }
+.credits li { padding: 7px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }

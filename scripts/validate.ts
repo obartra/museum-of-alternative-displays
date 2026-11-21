@@ -3,8 +3,12 @@
  * usage: tsx scripts/validate.ts
  */
 import { halls } from '../src/data/halls';
+import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL } from '../src/data/schema';
+import { en, type UiKey } from '../src/i18n/en';
+import { LANGS, SOURCE_KIND, type Locale } from '../src/i18n/types';
 import { pieces } from '../src/data/pieces';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, statSync } from 'node:fs';
+import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
 
@@ -45,6 +49,42 @@ for (const p of pieces) for (const when of ['day', 'night']) for (const w of [38
   if (!existsSync(new URL(`../public/posters/${p.id}-${when}-${w}.webp`, import.meta.url))) fail(p.id, `no still picture for ${when} at ${w} px. Run npm run posters`);
 }
 
+// archive pictures: free to reuse, credited in full, and small enough to carry
+const LICENCE = /^(Public domain|CC0 1\.0|CC BY(-SA)? [1-4]\.[05]( [A-Za-z-]+)?)$/;
+const words = (t: string) => t.trim().split(/\s+/).length;
+const here = (path: string) => new URL(`../public/${path.replace(/^\.\//, '')}`, import.meta.url);
+const bytes = (path: string) => (existsSync(here(path)) ? statSync(here(path)).size : -1);
+let mediaBytes = 0;
+for (const [id, list] of Object.entries(media)) {
+  if (!seen.has(id)) errors.push(`${id}: archive pictures for a piece that is not in the data`);
+  if (list.length > 3) fail(id, 'at most three archive pictures');
+  const ids = new Set<string>();
+  for (const m of list) {
+    const at = `${id}/${m.id}`;
+    if (ids.has(m.id)) fail(at, 'two archive pictures with this id');
+    ids.add(m.id);
+    if (!/^[a-z0-9-]+$/.test(m.id)) fail(at, 'id must be lower case letters, digits and hyphens');
+    if (!LICENCE.test(m.credit.licence)) fail(at, `licence "${m.credit.licence}" is not public domain, CC0, CC BY or CC BY-SA`);
+    if (m.credit.licence !== 'Public domain' && !/^https:\/\/creativecommons\.org\//.test(m.credit.licenceUrl ?? '')) fail(at, 'a Creative Commons picture needs the link to its licence');
+    if (!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(m.credit.source)) fail(at, 'the source must be the file page on Wikimedia Commons');
+    if (!m.credit.author.trim() || !m.credit.title.trim() || !m.credit.changes.trim()) fail(at, 'the credit needs an author, a title and what was changed');
+    if (words(m.caption) > 40) fail(at, `caption is ${words(m.caption)} words, at most 40`);
+    if (words(m.alt) > 30 || m.alt.trim().length < 12) fail(at, 'the text alternative should be 12 characters to 30 words');
+    if (m.alt.trim() === m.caption.trim()) fail(at, 'the text alternative repeats the caption');
+    if (DASH.test([m.caption, m.alt, m.credit.author, m.credit.changes].join('\n'))) fail(at, 'house style: no em dashes or double hyphens');
+    if (!(m.width > 0 && m.height > 0)) fail(at, 'needs its pixel size');
+    const files = m.kind === 'film' ? [m.mp4, m.webm, m.poster, m.poster.replace(/-poster\.webp$/, '-poster-480.webp')] : [m.small, m.large];
+    for (const f of files) {
+      const n = bytes(f);
+      if (n < 0) fail(at, `missing file ${f}`); else mediaBytes += n;
+      if (!f.startsWith(`./media/${id}/`)) fail(at, `${f} should be under ./media/${id}/`);
+      if (n > (/\.(mp4|webm)$/.test(f) ? 1_600_000 : 260_000)) fail(at, `${f} is ${Math.round(n / 1000)} KB, too heavy`);
+    }
+    if (m.kind === 'film' && (m.seconds < 2 || m.seconds > 20)) fail(at, 'a film runs 2 to 20 seconds');
+  }
+}
+if (mediaBytes > 20_000_000) errors.push(`archive pictures weigh ${Math.round(mediaBytes / 1e6)} MB in all, at most 20`);
+
 // places to look from: the words are data, the camera positions are in the model under the same id
 for (const [id, list] of Object.entries(views)) {
   if (!seen.has(id)) errors.push(`${id}: views for a piece that is not in the data`);
@@ -60,6 +100,65 @@ for (const [id, list] of Object.entries(views)) {
   if (list.filter((v) => v.kind === 'person').length > 2) fail(id, 'at most two person views, so the row of buttons stays short');
   if (list.length > 4) fail(id, 'at most four views');
 }
+
+// languages: every file in src/i18n/locales says everything the English says, in the same shape
+const localeDir = new URL('../src/i18n/locales/', import.meta.url);
+const doubts: string[] = [];
+const marks = (x: string) => (x.match(/\{\/?\w+\}/g) ?? []).sort().join(' ');
+const figures = (x: string) => new Set((x.match(/\d+(?:[.,]\d+)*/g) ?? []).map((n) => n.replace(/[.,]/g, '')).filter((n) => n.length > 1));
+for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => f.endsWith('.ts')) : []) {
+  const code = file.replace(/\.ts$/, '');
+  const loc = ((await import(new URL(file, localeDir).href)) as { default: Locale }).default;
+  const say = (msg: string) => errors.push(`${code}: ${msg}`);
+  const clean = (where: string, text: string) => { if (DASH.test(text)) say(`${where}: no em dashes or double hyphens`); };
+  /** A figure in the English that the translation does not carry is worth a second look, though it may be right. */
+  const sameFigures = (where: string, from: string, to: string) => { for (const n of figures(from)) if (!figures(to).has(n)) doubts.push(`${code} ${where}: the English has ${n}, the translation does not`); };
+  if (!LANGS.some((l) => l.code === code)) say('this file is not one of the languages listed in src/i18n/index.ts');
+  for (const k of Object.keys(en) as UiKey[]) {
+    const v = loc.ui?.[k];
+    if (typeof v !== 'string' || !v.trim()) { say(`ui "${k}" is missing`); continue; }
+    if (marks(v) !== marks(en[k])) say(`ui "${k}" must keep the marks of the English: ${marks(en[k]) || 'none'}`);
+    clean(`ui "${k}"`, v);
+  }
+  for (const k of Object.keys(loc.ui ?? {})) if (!(k in en)) say(`ui "${k}" is not in the English list`);
+  const sets: [keyof Locale & string, Record<string, string>][] = [['status', STATUS_LABEL], ['principle', PRINCIPLE_LABEL], ['need', NEED_LABEL], ['sourceKind', SOURCE_KIND]];
+  for (const [name, source] of sets) for (const k of Object.keys(source)) if (!(loc[name] as Record<string, string> | undefined)?.[k]?.trim()) say(`${name} "${k}" is missing`);
+  for (const h of halls) {
+    const x = loc.halls?.[h.id];
+    if (!x?.name?.trim() || !x.was?.trim() || !x.intro?.trim()) say(`hall ${h.id} is missing or incomplete`);
+    else { clean(`hall ${h.id}`, x.name + x.was + x.intro); if ([...x.name].length > 18) say(`hall ${h.id}: the name must fit the board, at most 18 characters`); }
+  }
+  for (const p of pieces) {
+    const x = loc.pieces?.[p.id];
+    if (!x) { say(`piece ${p.id} is missing`); continue; }
+    for (const f of ['name', 'origin', 'statusNote', 'lead', 'look'] as const) if (!x[f]?.trim()) say(`${p.id}.${f} is missing`);
+    if (!!p.aka !== !!x.aka?.trim()) say(`${p.id}.aka ${p.aka ? 'is missing' : 'is not in the English'}`);
+    if (!!p.dispute !== !!x.dispute?.trim()) say(`${p.id}.dispute ${p.dispute ? 'is missing' : 'is not in the English'}`);
+    for (const f of ['how', 'good', 'bad'] as const) {
+      if (x[f]?.length !== p[f].length || x[f].some((line) => !line?.trim())) say(`${p.id}.${f} should have ${p[f].length} entries, as the English has`);
+    }
+    const whole = (q: typeof x) => [q.name, q.aka ?? '', q.origin, q.statusNote, q.lead, ...(q.how ?? []), ...(q.good ?? []), ...(q.bad ?? []), q.look, q.dispute ?? ''].join('\n');
+    clean(p.id, whole(x));
+    sameFigures(p.id, whole(p), whole(x));
+  }
+  for (const id of Object.keys(loc.pieces ?? {})) if (!seen.has(id)) say(`piece ${id} is not in the collection`);
+  for (const [id, list] of Object.entries(views)) for (const v of list) {
+    const x = loc.views?.[id]?.[v.id];
+    if (!x?.label?.trim()) { say(`view ${id}/${v.id} is missing`); continue; }
+    if ([...x.label].length > 28) say(`view ${id}/${v.id}: the button should be at most 28 characters`);
+    if (!!v.hint !== !!x.hint?.trim()) say(`view ${id}/${v.id}: the line ${v.hint ? 'is missing' : 'is not in the English'}`);
+    clean(`view ${id}/${v.id}`, x.label + (x.hint ?? ''));
+  }
+  for (const [id, list] of Object.entries(media)) for (const m of list) {
+    const x = loc.media?.[id]?.[m.id];
+    if (!x?.caption?.trim() || !x.alt?.trim() || !x.changes?.trim()) { say(`archive picture ${id}/${m.id} is missing or incomplete`); continue; }
+    if (!!m.year !== !!x.year?.trim()) say(`archive picture ${id}/${m.id}: the year ${m.year ? 'is missing' : 'is not in the English'}`);
+    clean(`archive picture ${id}/${m.id}`, x.caption + x.alt + x.changes);
+    sameFigures(`${id}/${m.id}`, m.caption + (m.year ?? ''), x.caption + (x.year ?? ''));
+  }
+  console.log(`language ${code}: ${Object.keys(loc.ui ?? {}).length} interface strings, ${Object.keys(loc.pieces ?? {}).length} pieces`);
+}
+if (doubts.length) console.log(`\n${doubts.length} figure(s) to look at in the translations:\n` + doubts.slice(0, 40).map((d) => '  ' + d).join('\n'));
 
 const kinds: Record<string, number> = {};
 for (const p of pieces) for (const s of p.sources) kinds[s.kind] = (kinds[s.kind] ?? 0) + 1;

@@ -52,3 +52,10 @@
 [data-hall="5"] { --hall: var(--h5); --hall-ink: #14171a; }
 [data-hall="6"] { --hall: var(--h6); --hall-ink: #fff; }
 [data-hall="7"] { --hall: var(--h7); --hall-ink: #fff; }
+
+/* Chinese is set in the reader's own system face. The Latin faces stay first for numerals and names. */
+:root:lang(zh) {
+  --display: "Sofia Sans Extra Condensed Variable", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  --text: "Sofia Sans Variable", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --mono: "PT Mono", ui-monospace, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", monospace;
+}

@@ -8,3 +8,5 @@ scripts/sheet.mjs
 scripts/stills.mjs
 scripts/vista.mjs
 scripts/profile.mjs
+public/media-dev
+src/data/media.dev.ts
