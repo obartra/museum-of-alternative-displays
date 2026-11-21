@@ -13,6 +13,10 @@ across a Catalan town to Montserrat. Nothing lights it but those windows. One sw
 day into night. A hall is not a room: it is a group of pieces that make a picture in the
 same way.
 
+The whole collection also stands in one long hall that a visitor can walk through: fifty
+blocks in two rows, seven bays, the same windows down one side. Arrow keys walk and turn,
+a click or a tap on a piece goes to it, and a plan of the hall shows where the visitor is.
+
 ## Rules of the collection
 
 - A piece is a principle, never a product. A product is named only when it was the first
@@ -36,6 +40,7 @@ npm run dev        # local server
 npm run check      # typecheck and validate the collection
 npm run build      # static site in dist/
 npm run posters    # re-render the still pictures (dev server running, Playwright installed)
+npm run cutouts    # re-photograph the pieces for the walk, and the hall from its door (the same)
 ```
 
 Node 22 or newer.
@@ -58,6 +63,9 @@ Node 22 or newer.
 | `src/three/parts.ts` | Small hardware: screws, louvres, knobs, feet, lenses, posts, breadboards. |
 | `src/three/stage.ts` | The renderer, the camera and the piece on show. |
 | `src/three/room.ts` | The room around the piece: glazed walls, the mirroring floor, the cast block, and the sun and moon that light it. |
+| `src/walk.ts` | The page round the walk: the plan of the hall, the line that says where the visitor is, the buttons that do what the keys do. |
+| `src/three/walk/` | The long hall and the visitor in it. `plan.ts` is the floor plan and the way round the blocks, `hall.ts` the building, `stands.ts` the blocks and what stands on them, `gallery.ts` the renderer and the walking, `vr.ts` the headset. |
+| `public/cutouts/` | Each piece photographed alone on its block from three sides, by day and by night, and a sheet of the same pictures small. In the walk only the few pieces nearest the visitor are models. The rest are these pictures, stood upright and turned to the visitor. Made by `scripts/cutouts.mjs`, with `public/walk-*.webp`, the hall from its door. |
 | `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
@@ -111,13 +119,23 @@ says which of those things was done to it.
    be looked into or sat in front of, or has a part worth going close to, give it `views`:
    the camera's two points under an id, with the words for that id in `src/data/views.ts`.
    The page then offers a button that puts the visitor there.
-3. Run `npm run posters` so the new piece has its still pictures.
+3. Run `npm run posters` so the new piece has its still pictures, and `npm run cutouts` so
+   it has its place in the walk.
 4. `npm run check`.
 
 To look at every model at once, open `#sheet` on the dev server, or `#sheet?lights=off`.
-To see the painted landscape on its own, open `#vista`.
+To see the painted landscape on its own, open `#vista`. `#cutouts` is the workshop that
+`scripts/cutouts.mjs` drives: it photographs the pieces for the walk and has nothing to look at.
 Add `&ids=a,b` for a few pieces, `&size=420` for bigger tiles, `&view=seat` for a named view, `&view=*` for every named view of each piece beside the whole piece,
 or `&az=40&el=60` to look from any angle.
+
+In the walk, a phone runs three models at once and a desk machine up to eight. Every other
+piece is a picture of itself, cut out and stood on its block. A picture from the front would
+be wrong for someone coming down the hall, who sees each piece ahead from round its side, so
+every piece has three pictures and the one nearest the visitor's angle is shown. The pictures
+are taken in the hall, in its own light and shadow, by `scripts/cutouts.mjs`. The same run
+writes `src/three/walk/glows.ts`, the colour of every piece that glows, which at night
+becomes a pool of light on the floor in front of it.
 
 A piece page shows its still picture first and starts the model by itself only where the
 device draws 3D with its graphics chip and the visitor has not asked to save data. Anywhere
@@ -138,8 +156,10 @@ real thing when the visitor moves.
   valves, switchable privacy glass, ferrofluid, light-activated paints.
 - The models were reviewed against text sources, not against photographs. See
   `docs/model-review.md` for the scores and what is still open.
-- No photographs or archive film. If added, they should be public domain or openly licensed,
-  hosted here, and credited on the piece.
+- The walk has only been run in a test browser that draws in software. How fast it runs on a
+  phone's graphics chip has not been measured, and the headset view has never been tried in
+  a headset.
+- Archive film is thin: most pieces have photographs or patent drawings and no moving picture.
 - Routes are hash links (`#hall-2`, `#piece-nixie-tube`), so pieces are not separate pages for
   search engines.
 

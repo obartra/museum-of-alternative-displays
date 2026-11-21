@@ -235,6 +235,8 @@ h1, h2, h3 { text-wrap: balance; }
 .crumb { font-weight: 700; font-size: .9rem; display: inline-flex; gap: 8px; align-items: center; text-decoration: none; }
 .crumb b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 3px; background: var(--hall); color: var(--hall-ink); font: 800 1.1rem/1 var(--display); }
 .crumb:hover span { text-decoration: underline; }
+.crumbs { display: flex; align-items: center; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; }
+.crumbs__walk { font-weight: 700; font-size: .9rem; }
 /* the one column may shrink below its widest child, or a sideways-scrolling row would stretch the page */
 .piece { display: grid; gap: 26px 44px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 980px) {
@@ -308,3 +310,80 @@ h1, h2, h3 { text-wrap: balance; }
 .credits__piece { font-weight: 700; }
 .credits ul { margin: 4px 0 0; padding: 0 0 0 14px; list-style: none; border-left: 2px solid var(--line); }
 .credits ul li { padding: 3px 0; color: var(--ink-2); }
+
+/* ---------- walk: the whole museum in one hall ---------- */
+.hallpic { display: grid; gap: 18px 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); align-items: center; }
+.hallpic__img { display: block; border-radius: 4px; overflow: hidden; background: var(--wash-2); }
+.hallpic__img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+@media (min-width: 760px) { .hallpic { grid-template-columns: 1.6fr 1fr; } }
+.walkpage { display: flex; flex-direction: column; gap: 18px; }
+.walk__lead { align-items: center; }
+.walk__lead .plate__title { font-size: clamp(1.7rem, 6vw, 2.5rem); }
+/* on a phone the hall comes straight after its name, and the words about it after the hall */
+@media (max-width: 619px) { .walk__lead { display: contents; } .walk__lead .lead { order: 3; } .walkpage { gap: 14px; } }
+.walk { position: relative; background: var(--wash-2); border-radius: 4px; overflow: hidden; isolation: isolate; }
+.walk__view { position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 62vh; overflow: hidden; }
+/* on a desk the picture leaves room under it for the plan and the buttons, so nothing has to be scrolled to */
+@media (min-width: 620px) { .walk__view { aspect-ratio: 16 / 9; max-height: max(320px, calc(100vh - 404px)); } }
+.walk__still, .walk__gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.walk__still { object-fit: cover; }
+.walk__still[hidden] { display: none; }
+.walk__gl { cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .45s ease; }
+.walk__gl.is-live { opacity: 1; }
+.walk__gl:active { cursor: grabbing; }
+.walk__start { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); padding: 11px 20px; font-size: .95rem; background: var(--wash); white-space: nowrap; }
+.walk__hint { position: absolute; left: 12px; top: 10px; max-width: calc(100% - 24px); font-size: .78rem; font-weight: 600; color: var(--ink-2); pointer-events: none; transition: opacity .6s; }
+.walk__note { position: absolute; left: 50%; top: 42px; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); font-size: .86rem; font-weight: 600; text-align: center; pointer-events: none; }
+.walk__hint, .walk__note { padding: 2px 7px; border-radius: 3px; background: color-mix(in srgb, var(--wash) 80%, transparent); }
+.walk__hint:empty, .walk__note:empty { display: none; }
+/* the four walking buttons, one above three. They stand at the left, clear of the name plate on the block in front */
+.walk__pad { position: absolute; left: 10px; bottom: 10px; display: grid; grid-template-columns: repeat(3, 50px); grid-template-rows: repeat(2, 50px); gap: 5px; touch-action: none; -webkit-user-select: none; user-select: none; }
+.walk__pad[hidden] { display: none; }
+.walk__key { appearance: none; display: grid; place-items: center; padding: 0; border: 1.5px solid var(--ink); border-radius: 4px; background: color-mix(in srgb, var(--wash) 78%, transparent); color: var(--ink); cursor: pointer; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.walk__key svg { width: 22px; height: 22px; fill: currentColor; pointer-events: none; }
+.walk__key:active { background: var(--ink); color: var(--wash); }
+.walk__key:nth-child(1) { grid-area: 1 / 2; } .walk__key:nth-child(2) { grid-area: 2 / 1; }
+.walk__key:nth-child(3) { grid-area: 2 / 2; } .walk__key:nth-child(4) { grid-area: 2 / 3; }
+/* where the visitor stands, in words */
+.walk__where { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; min-height: 54px; padding: 10px 12px 0; font-weight: 600; font-size: .95rem; line-height: 1.25; }
+.walk__no { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 3px; background: var(--hall); color: var(--hall-ink); font: 800 1.1rem/1 var(--display); }
+.walk__open { margin-left: auto; display: inline-flex; align-items: center; text-decoration: none; background: var(--ink); color: var(--wash); }
+.walk__open:hover { background: var(--wash); color: var(--ink); }
+/* on a phone the line is one row: the hall, or the piece in front and the way to its page */
+@media (max-width: 619px) { .walk__where { flex-wrap: nowrap; min-height: 56px; } .walk__where:has(.walk__open) > span { display: none; } .walk__open { margin-left: 0; text-align: left; } }
+/* the plan of the hall, to scale: seven bays, the fifty blocks, and a mark where the visitor stands that points the way they face */
+.walk__plan { position: relative; display: flex; margin: 12px 12px 0; height: clamp(44px, calc((100vw - 2 * var(--gutter) - 24px) * var(--wide) / var(--long)), 96px); }
+.walk__bay { appearance: none; position: relative; flex: 1 1 0; min-width: 0; padding: 0; border: 0; border-right: 2px solid var(--wash-2); background: var(--hall); color: var(--hall-ink); font: 800 clamp(.8rem, 2.2vw, 1.7rem)/1 var(--display); cursor: pointer; }
+/* the number of a bay stands in the clear floor just inside its opening, where no block is */
+.walk__bay > span:first-child { position: absolute; left: var(--at, 50%); top: 50%; transform: translate(-50%, -50%); }
+.walk__bay:first-child { border-radius: 3px 0 0 3px; } .walk__bay:last-of-type { border-right: 0; border-radius: 0 3px 3px 0; }
+.walk__bay:disabled { cursor: default; }
+.walk__bay[aria-current="true"] { box-shadow: inset 0 -4px 0 var(--hall-ink); }
+.walk__bay:focus-visible { outline-offset: -3px; position: relative; z-index: 1; }
+.walk__blocks { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; pointer-events: none; }
+.walk__wall { fill: var(--wash-2); }
+.walk__block { opacity: .85; }
+.walk__block.is-here { opacity: 1; stroke: var(--signal); stroke-width: 3px; vector-effect: non-scaling-stroke; paint-order: stroke; }
+@media (pointer: fine) {
+  .walk__plan.is-live .walk__block { pointer-events: auto; cursor: pointer; }
+  .walk__plan.is-live .walk__block:hover { opacity: 1; stroke: var(--signal); stroke-width: 3px; vector-effect: non-scaling-stroke; paint-order: stroke; }
+  .walk__plan.is-live .walk__bay { cursor: crosshair; }
+}
+.walk__me { position: absolute; left: 0; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; transform: rotate(var(--turn, 0deg)); pointer-events: none; z-index: 2; visibility: hidden; }
+.walk__plan.is-live .walk__me { visibility: visible; }
+.walk__me svg { display: block; width: 100%; height: 100%; overflow: visible; fill: var(--ink); stroke: var(--wash); stroke-width: 2.5px; stroke-linejoin: round; paint-order: stroke; }
+.walk__bar { display: flex; gap: 8px; padding: 12px; align-items: center; flex-wrap: wrap; }
+.walk__bar .gap { margin-left: auto; }
+.walk__bar [hidden] { display: none; }
+.walk__goto { height: auto; min-height: 31px; padding: 0 28px 0 12px; font-size: .86rem; font-weight: 600; box-shadow: inset 0 0 0 1.5px var(--ink); background: color-mix(in srgb, var(--wash) 82%, transparent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23808080' stroke-width='1.6'/%3E%3C/svg%3E") right 10px center / 10px 6px no-repeat; }
+.walk__goto:has(select:disabled) { opacity: .42; }
+@media (pointer: coarse) { .walk__goto { min-height: 40px; } }
+@media (max-width: 400px) { .walk__bar { gap: 6px; padding: 12px 8px; } .walk__bar .btn { padding: 7px 9px; } }
+.walk__keys { padding: 0 12px 14px; max-width: 76ch; }
+.walk.is-full { position: fixed; inset: 0; z-index: 50; border-radius: 0; display: flex; flex-direction: column; }
+.walk.is-full .walk__view { aspect-ratio: auto; max-height: none; flex: 1; min-height: 0; }
+.walk.is-full .walk__keys { display: none; }
+.walk.is-full .walk__where { min-height: 0; padding-top: 8px; }
+.walk.is-full .walk__plan { height: 44px; }
+.walk.is-full .walk__bar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+@media (prefers-reduced-motion: reduce) { .walk__gl, .walk__hint { transition: none; } }

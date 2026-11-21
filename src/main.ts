@@ -141,7 +141,7 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -153,6 +153,14 @@ function entrance(): void {
     <h2 class="h-sec">${tx('entrance.room')}</h2>
     <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p><p>${tx('entrance.room.3', { n: pieces.length })}</p></div>
     <p class="small muted">${tx('entrance.room.note', { n: pieces.length })}</p>
+  </section>
+  <section class="hallpic">
+    <a class="hallpic__img" href="#walk" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 1160px, 92vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
+    <div class="stack" style="--gap: 12px">
+      <h2 class="h-sec">${tx('walk.title')}</h2>
+      <p class="prose">${tx('walk.lead', { n: pieces.length })}</p>
+      <p class="ways"><a class="btn btn--go" href="#walk">${tx('walk.start')}</a></p>
+    </div>
   </section>
 </div>`);
   // the board settles into place the way a real one does, one flap at a time
@@ -188,12 +196,16 @@ const posterSet = (id: string, on = lightsOn) => `${poster(id, 380, on)} 380w, $
 /** The room itself, in one wide picture for the entrance. */
 const room = (w: 600 | 1200, on = lightsOn) => `./room-${on ? 'day' : 'night'}-${w}.webp`;
 const roomSet = (on = lightsOn) => `${room(600, on)} 600w, ${room(1200, on)} 1200w`;
+/** The long hall of the walk, seen from its door. */
+const hallPic = (w: 800 | 1600, on = lightsOn) => `./walk-${on ? 'day' : 'night'}-${w}.webp`;
+const hallPicSet = (on = lightsOn) => `${hallPic(800, on)} 800w, ${hallPic(1600, on)} 1600w`;
 lightListeners.add((on) => {
   for (const img of document.querySelectorAll<HTMLImageElement>('img[data-poster]')) {
     const id = img.dataset.poster!;
     img.srcset = posterSet(id, on); img.src = poster(id, 760, on);
   }
   for (const img of document.querySelectorAll<HTMLImageElement>('img[data-room]')) { img.srcset = roomSet(on); img.src = room(1200, on); }
+  for (const img of document.querySelectorAll<HTMLImageElement>('img[data-hallpic]')) { img.srcset = hallPicSet(on); img.src = hallPic(800, on); }
 });
 
 /** The first tiles of a list are in view when the page opens: they load at once, the rest as they come near. */
@@ -212,7 +224,7 @@ function hallView(n: number): void {
 <div class="stack">
   <div class="hallhead">
     <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(words.name)}</span><span class="plate__sub" style="padding-left:0">${esc(count('count.pieces', list.length))}</span></span></h1>
-    <p class="lead">${esc(words.intro)}</p>
+    <div class="stack" style="--gap: 16px"><p class="lead">${esc(words.intro)}</p>${list.length ? `<p class="ways"><a class="btn" href="#walk-${list[0].id}">${tx('walk.hall')}</a></p>` : ''}</div>
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="#hall-${prev.id}">${tx('pager.backHall', named(prev))}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#hall-${next.id}">${tx('pager.nextHall', named(next))}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
@@ -249,7 +261,7 @@ function pieceView(id: string): void {
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
-    <a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a>
+    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a></p>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
@@ -552,12 +564,17 @@ function about(): void {
 // ---------- walk: the whole museum in one hall ----------
 function walkView(start?: string): void {
   document.title = titled(t('walk.title'));
-  shell(`<div class="walk" id="walk"><p class="walk__wait" role="status">${tx('walk.loading')}</p></div>`, undefined, 'walk');
+  const from = start ? pieceById(start) : undefined;
+  shell(`
+<div class="walkpage">
+  <div class="hallhead walk__lead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('walk.title')}</span></h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
+  <div class="walk" id="walk" data-hall="${from?.hall ?? 1}"></div>
+</div>`, undefined, 'walk');
   const host = document.getElementById('walk')!;
   let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;
   const relight = (on: boolean) => hall?.setLights(on);
   lightListeners.add(relight);
-  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start, lights: lightsOn }); })
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto: wants3d(), switchHtml: switchHtml() }); })
     .catch(() => { host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
   leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); };
 }
@@ -606,6 +623,8 @@ function route(): void {
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
+  // the workshop that photographs the pieces for the walk: `scripts/cutouts.mjs` drives it
+  if (name === 'cutouts') { void import('./three/walk/photo').then(({ workshop }) => workshop(app)); return; }
   if (!name) entrance();
   else if (hall) hallView(Number(hall[1]));
   else if (piece) pieceView(piece[1]);

@@ -36,13 +36,13 @@ export interface Room {
 
 /** Top of every stand. Pieces are set down here. */
 export const TOP = 0.22;
-const FLOOR = -0.95, BACK = -1.5;
+export const FLOOR = -0.95, BACK = -1.5;
 
 // ---------- surfaces, drawn rather than photographed ----------
 
 type Ctx = CanvasRenderingContext2D;
-const rng = (seed: number) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-const sheet = (w: number, h: number): [HTMLCanvasElement, Ctx] => { const c = document.createElement('canvas'); c.width = w; c.height = h; return [c, c.getContext('2d')!]; };
+export const rng = (seed: number) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+export const sheet = (w: number, h: number): [HTMLCanvasElement, Ctx] => { const c = document.createElement('canvas'); c.width = w; c.height = h; return [c, c.getContext('2d')!]; };
 const grey = (v: number, a = 1) => `rgba(${v},${v},${v},${a})`;
 
 /** Random greys at a given coarseness, blown up smooth and laid over what is there: cloud, mottle, grain. */
@@ -57,7 +57,7 @@ function mottle(c: Ctx, w: number, h: number, r: () => number, cells: number[], 
   }
 }
 
-function tex(canvas: HTMLCanvasElement, colour = true): THREE.CanvasTexture {
+export function tex(canvas: HTMLCanvasElement, colour = true): THREE.CanvasTexture {
   const t = new THREE.CanvasTexture(canvas);
   if (colour) t.colorSpace = THREE.SRGBColorSpace;
   t.wrapS = t.wrapT = THREE.MirroredRepeatWrapping;
@@ -65,10 +65,10 @@ function tex(canvas: HTMLCanvasElement, colour = true): THREE.CanvasTexture {
   return t;
 }
 
-interface Skin { map: HTMLCanvasElement; bump: HTMLCanvasElement; rough?: HTMLCanvasElement }
+export interface Skin { map: HTMLCanvasElement; bump: HTMLCanvasElement; rough?: HTMLCanvasElement }
 
 /** Wear the surface with the skin. `across` and `up` are how many metres of wall one copy of the picture covers. */
-function wear(skin: Skin, size: [number, number], covers: [number, number], o: { bump?: number; rough?: number; metal?: number; tint?: number; fromFloor?: boolean } = {}): THREE.MeshStandardMaterial {
+export function wear(skin: Skin, size: [number, number], covers: [number, number], o: { bump?: number; rough?: number; metal?: number; tint?: number; fromFloor?: boolean } = {}): THREE.MeshStandardMaterial {
   const rep: [number, number] = [size[0] / covers[0], size[1] / covers[1]];
   const fit = (canvas: HTMLCanvasElement, colour: boolean) => { const t = tex(canvas, colour); t.repeat.set(rep[0], rep[1]); t.offset.set(0.5 * (1 - rep[0]), o.fromFloor ? 0 : 0.5 * (1 - rep[1])); return t; };
   return new THREE.MeshStandardMaterial({
@@ -78,7 +78,7 @@ function wear(skin: Skin, size: [number, number], covers: [number, number], o: {
 }
 
 /** The darkening where two surfaces meet, which a rendered room otherwise lacks: a soft-edged patch laid on the floor. */
-function contact(w: number, d: number, x: number, z: number, strength: number, edge = 0.3): THREE.Mesh {
+export function contact(w: number, d: number, x: number, z: number, strength: number, edge = 0.3): THREE.Mesh {
   const [small, sc] = sheet(32, 32), [big, bc] = sheet(128, 128), m = Math.round(16 * edge);
   sc.fillStyle = '#000'; sc.fillRect(m, m, 32 - 2 * m, 32 - 2 * m);
   bc.imageSmoothingEnabled = true; bc.imageSmoothingQuality = 'high'; bc.drawImage(small, 0, 0, 128, 128);
@@ -92,15 +92,15 @@ const solid = (m: THREE.Mesh): THREE.Mesh => { m.castShadow = m.receiveShadow = 
 
 // ---------- the house ----------
 
-const XL = -5.4, XR = 8.2, ZF = 8.5, TALL = 6;     // the east, west and north walls, and the height of the room
-const SILL = 0.34, HEAD = 4.2, REVEAL = 0.16;      // the windows: how high they start and stop, how deep they sit
+export const XL = -5.4, XR = 8.2, ZF = 8.5, TALL = 6;     // the east, west and north walls, and the height of the room
+export const SILL = 0.34, HEAD = 4.2, REVEAL = 0.16;      // the windows: how high they start and stop, how deep they sit
 
 const kept = new Map<string, Skin>();
 /** A surface is drawn once, however many stages show the room. */
-const once = (key: string, make: () => Skin): Skin => { let k = kept.get(key); if (!k) { k = make(); kept.set(key, k); } return k; };
+export const once = (key: string, make: () => Skin): Skin => { let k = kept.get(key); if (!k) { k = make(); kept.set(key, k); } return k; };
 
 /** A concrete floor ground and sealed until it shines: fine cloud, the ghost of the trowel, stone showing as specks. */
-function polished(w: number, seed: number): Skin {
+export function polished(w: number, seed: number): Skin {
   const r = rng(seed), h = w / 2;
   const [map, c] = sheet(w, w), [bump, b] = sheet(8, 8), [rough, q] = sheet(h, h);
   c.fillStyle = 'rgb(134,137,131)'; c.fillRect(0, 0, w, w);
@@ -117,7 +117,7 @@ function polished(w: number, seed: number): Skin {
 }
 
 /** One face of a block cast in a smooth shutter: the joint between two panels, cone holes where the ties went, and little else. */
-function fairFaced(seed: number, wide: number, tall: number): Skin {
+export function fairFaced(seed: number, wide: number, tall: number): Skin {
   const r = rng(seed), w = 1024, h = Math.round((1024 * tall) / wide), ppm = w / wide;
   const [map, c] = sheet(w, h), [bump, b] = sheet(w, h);
   c.fillStyle = 'rgb(176,178,174)'; c.fillRect(0, 0, w, h);
@@ -159,11 +159,11 @@ function fairFaced(seed: number, wide: number, tall: number): Skin {
  * picture, and the floor's own shading lays that picture over itself: sharper and stronger the
  * flatter you look across it and the better that part of the slab took its polish.
  */
-function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullable<Room['prepare']>; dispose: () => void } {
+export function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullable<Room['prepare']>; show: (on: boolean) => void; dispose: () => void } {
   const mat = floor.material as THREE.MeshStandardMaterial;
   let target: THREE.WebGLRenderTarget | undefined;
   const eye = new THREE.PerspectiveCamera(), toPicture = new THREE.Matrix4();
-  const u = { tMirror: { value: null as THREE.Texture | null }, uMirror: { value: toPicture }, uTexel: { value: 1 / 512 } };
+  const u = { tMirror: { value: null as THREE.Texture | null }, uMirror: { value: toPicture }, uTexel: { value: 1 / 512 }, uMirrorOn: { value: 1 } };
   mat.envMapIntensity = 0;
   mat.onBeforeCompile = (sh) => {
     Object.assign(sh.uniforms, u);
@@ -171,7 +171,7 @@ function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullab
       .replace('#include <common>', '#include <common>\nuniform mat4 uMirror;\nvarying vec4 vMirror;')
       .replace('#include <project_vertex>', '#include <project_vertex>\nvMirror = uMirror * modelMatrix * vec4(transformed, 1.0);');
     sh.fragmentShader = sh.fragmentShader
-      .replace('#include <common>', '#include <common>\nuniform sampler2D tMirror;\nuniform float uTexel;\nvarying vec4 vMirror;')
+      .replace('#include <common>', '#include <common>\nuniform sampler2D tMirror;\nuniform float uTexel;\nuniform float uMirrorOn;\nvarying vec4 vMirror;')
       .replace('#include <opaque_fragment>', /* glsl */ `
         vec2 mUv = vMirror.xy / vMirror.w;
         float mGraze = 1.0 - saturate(dot(normalize(vViewPosition), normal));
@@ -182,7 +182,7 @@ function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullab
         vec3 mSeen = textureLod(tMirror, mUv, mLod).rgb * 0.34
           + (textureLod(tMirror, mUv + vec2(0.0, mStep.y * 1.5), mLod + 0.5).rgb + textureLod(tMirror, mUv - vec2(0.0, mStep.y * 1.5), mLod + 0.5).rgb) * 0.21
           + (textureLod(tMirror, mUv + vec2(mStep.x * 0.8, 0.0), mLod + 0.2).rgb + textureLod(tMirror, mUv - vec2(mStep.x * 0.8, 0.0), mLod + 0.2).rgb) * 0.12;
-        float mShine = mFresnel * (1.0 - 0.5 * roughnessFactor);
+        float mShine = uMirrorOn * mFresnel * (1.0 - 0.5 * roughnessFactor);
         outgoingLight = outgoingLight * (1.0 - mShine * 0.7) + min(mSeen, vec3(6.0)) * mShine;
         #include <opaque_fragment>`);
   };
@@ -190,6 +190,8 @@ function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullab
   const size = new THREE.Vector2(), at = new THREE.Vector3(), to = new THREE.Vector3(), turn = new THREE.Matrix4(), UP = new THREE.Vector3(0, 1, 0);
   let primed = false;
   return {
+    // where nothing redraws the mirror, as in a headset, the floor is plain polished concrete
+    show: (on) => { u.uMirrorOn.value = on ? 1 : 0; },
     prepare: (renderer, scene, camera) => {
       const y = floor.position.y;
       camera.updateMatrixWorld();
@@ -227,14 +229,14 @@ function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullab
   };
 }
 
-interface Opening { from: number; to: number; panes: number }
+export interface Opening { from: number; to: number; panes: number }
 
 /**
  * A wall seen from inside, standing in the plane z = 0 and facing +z, with tall windows let into it.
  * `face` is the plaster. `fit` is everything that only makes sense from indoors (reveals, frames, glass)
  * and is put away when the wall is looked through from behind.
  */
-function glazed(from: number, to: number, openings: Opening[], plaster: THREE.Material, frame: THREE.Material, pane: THREE.Material): { wall: THREE.Group; fit: THREE.Group } {
+export function glazed(from: number, to: number, openings: Opening[], plaster: THREE.Material, frame: THREE.Material, pane: THREE.Material): { wall: THREE.Group; fit: THREE.Group } {
   const wall = new THREE.Group(), fit = new THREE.Group();
   const y0 = FLOOR - 0.2, y1 = FLOOR + TALL, sill = FLOOR + SILL, head = FLOOR + HEAD;
   const rect = (a: number, b: number, lo: number, hi: number, mat = plaster) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(b - a, hi - lo), mat); m.position.set((a + b) / 2, (lo + hi) / 2, 0); m.castShadow = m.receiveShadow = true; wall.add(m); return m; };
@@ -273,7 +275,7 @@ function socket(plastic: THREE.Material): THREE.Group {
 }
 
 /** A soft shadow along the line where two surfaces meet. Dark at one edge of the strip, gone at the other. */
-function crease(len: number, wide: number, strength: number): THREE.Mesh {
+export function crease(len: number, wide: number, strength: number): THREE.Mesh {
   const [cv, c] = sheet(4, 64), g = c.createLinearGradient(0, 0, 0, 64);
   g.addColorStop(0, 'rgba(22,24,28,1)'); g.addColorStop(0.35, 'rgba(22,24,28,.36)'); g.addColorStop(1, 'rgba(22,24,28,0)');
   c.fillStyle = g; c.fillRect(0, 0, 4, 64);
