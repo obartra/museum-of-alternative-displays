@@ -8,8 +8,6 @@ import { esc } from './html';
 import { byName, count, langNow, offered, rich, said, t, tx, useLang, wanted, type Lang } from './i18n';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
-import { planSvg } from './art/plan';
-import { axoSvg, elevationSvg } from './art/building';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -86,7 +84,7 @@ function shell(inner: string, hall?: number, current?: string): void {
 <header class="top">
   <a class="top__name" href="#">${tx('site.name')}</a>
   <div class="top__tools">${menu}${switchHtml()}</div>
-  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#depot"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
+  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
 <footer class="foot"><span>${tx('foot.claim')}</span><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}">${tx('foot.repo')}</a></footer>
@@ -109,24 +107,22 @@ function entrance(): void {
     const n = inHall(x.id).length, name = said.hall(x).name;
     return `<a class="board__row" href="#hall-${x.id}" data-hall="${x.id}"><span class="vh">${tx('board.row', { n: x.id, name, count: count('count.pieces', n) })}</span><span aria-hidden="true" style="display:contents">${cell(String(x.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(name, wide)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
   }).join('');
-  const counts = Object.fromEntries(halls.map((x) => [x.id, inHall(x.id).length]));
   shell(`
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
-    <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
-    <div class="board__rows">${rows}</div>
-  </section>
   <div class="split">
-    <section class="stack" style="--gap: 12px"><h2 class="h-sec">${tx('entrance.plan')}</h2>${planSvg((to) => `#${to.replace('/', '-')}`, counts)}</section>
-    <section class="stack" style="--gap: 14px">
-      <h2 class="h-sec">${tx('entrance.building')}</h2>
-      <div class="prose"><p>${tx('entrance.building.1')}</p><p>${tx('entrance.building.2')}</p></div>
-      ${axoSvg().replace('<svg ', '<svg class="drawing" ')}
-      <p class="small muted">${tx('entrance.building.note')}</p>
+    <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
+      <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
+      <div class="board__rows">${rows}</div>
     </section>
+    <figure class="roompic"><img data-room src="${room(1200)}" srcset="${roomSet()}" sizes="(min-width: 760px) 46vw, 92vw" width="1200" height="800" alt="${tx('entrance.room.alt')}" decoding="async"></figure>
   </div>
+  <section class="stack" style="--gap: 14px">
+    <h2 class="h-sec">${tx('entrance.room')}</h2>
+    <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p><p>${tx('entrance.room.3', { n: pieces.length })}</p></div>
+    <p class="small muted">${tx('entrance.room.note', { n: pieces.length })}</p>
+  </section>
 </div>`);
   // the board settles into place the way a real one does, one flap at a time
   const clock = document.getElementById('clock')!;
@@ -158,11 +154,15 @@ function entrance(): void {
 // Still pictures of every piece on its stand, made ahead of time by scripts/posters.mjs, so a list never starts 3D graphics.
 const poster = (id: string, w: 380 | 760, on = lightsOn) => `./posters/${id}-${on ? 'day' : 'night'}-${w}.webp`;
 const posterSet = (id: string, on = lightsOn) => `${poster(id, 380, on)} 380w, ${poster(id, 760, on)} 760w`;
+/** The room itself, in one wide picture for the entrance. */
+const room = (w: 600 | 1200, on = lightsOn) => `./room-${on ? 'day' : 'night'}-${w}.webp`;
+const roomSet = (on = lightsOn) => `${room(600, on)} 600w, ${room(1200, on)} 1200w`;
 lightListeners.add((on) => {
   for (const img of document.querySelectorAll<HTMLImageElement>('img[data-poster]')) {
     const id = img.dataset.poster!;
     img.srcset = posterSet(id, on); img.src = poster(id, 760, on);
   }
+  for (const img of document.querySelectorAll<HTMLImageElement>('img[data-room]')) { img.srcset = roomSet(on); img.src = room(1200, on); }
 });
 
 /** The first tiles of a list are in view when the page opens: they load at once, the rest as they come near. */
@@ -180,11 +180,11 @@ function hallView(n: number): void {
   shell(`
 <div class="stack">
   <div class="hallhead">
-    <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(words.name)}</span><span class="plate__sub" style="padding-left:0">${tx('hall.once', { was: words.was })}</span></span></h1>
+    <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(words.name)}</span><span class="plate__sub" style="padding-left:0">${esc(count('count.pieces', list.length))}</span></span></h1>
     <p class="lead">${esc(words.intro)}</p>
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
-  <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="#hall-${prev.id}">${tx('pager.backHall', named(prev))}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#hall-${next.id}">${tx('pager.nextHall', named(next))}</a>` : `<a href="#depot">${tx('pager.depot')}</a>`}</nav>
+  <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="#hall-${prev.id}">${tx('pager.backHall', named(prev))}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#hall-${next.id}">${tx('pager.nextHall', named(next))}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
 </div>`, n);
 }
 
@@ -209,15 +209,16 @@ function pieceView(id: string): void {
   </div>
   <div class="stack">
     <a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a>
-    <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${esc(x.aka)}</span>` : ''}</h1>
+    <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
+    <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
     <dl class="card">
       ${row(tx('card.no'), inv(p))}
-      ${row(tx('card.first'), String(p.year))}
+      ${row(tx('card.year'), String(p.year))}
       ${row(tx('card.origin'), esc(x.origin))}
       ${row(tx('card.status'), `${esc(said.status(p.status))}. ${esc(x.statusNote)}`)}
-      ${row(tx('card.light'), esc(said.principle(p.principle)))}
-      ${p.needs.length ? row(tx('card.notes'), esc(p.needs.map((n) => said.need(n)).join('. '))) : ''}
+      ${row(tx('card.principle'), esc(said.principle(p.principle)))}
+      ${p.needs.length ? row(tx('card.properties'), esc(p.needs.map((n) => said.need(n)).join('. '))) : ''}
     </dl>
     ${archiveSection(p.id)}
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.how')}</h2><div class="prose">${x.how.map((par) => `<p>${esc(par)}</p>`).join('')}</div></section>
@@ -225,10 +226,9 @@ function pieceView(id: string): void {
       <section><h3>${tx('piece.good')}</h3><ul>${x.good.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
       <section><h3>${tx('piece.bad')}</h3><ul>${x.bad.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
     </div>
-    <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.plinth')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
     ${x.dispute ? `<p class="flag"><strong>${tx('piece.dispute')}</strong> ${esc(x.dispute)}</p>` : ''}
-    <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.provenance')}</h2><ol class="sources">${p.sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
-    <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="#piece-${prev.id}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#piece-${next.id}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="#depot">${tx('pager.depot')}</a>`}</nav>
+    <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${p.sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
+    <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="#piece-${prev.id}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#piece-${next.id}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
   </div>
 </article>`, p.hall);
 
@@ -421,7 +421,7 @@ function about(): void {
   const held = archiveCount();
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('about.title')}</span></h1><p class="lead">${tx('about.lead')}</p></div>
+  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.about')}</span></h1><p class="lead">${tx('about.lead')}</p></div>
   <div class="split">
     <section class="stack prose" style="--gap: 12px">
       <h2 class="h-sec">${tx('about.piece')}</h2>
@@ -432,9 +432,9 @@ function about(): void {
       <p>${tx('about.sourced.2', { pieces: pieces.length, links: total, kinds: byKind })}</p>
       <p>${tx('about.sourced.3', { n: flagged })}</p>
       <h2 class="h-sec">${tx('about.pictures')}</h2>
-      <p>${tx('about.pictures.1')}</p>
-      ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
+      <p>${tx('about.pictures.1', { n: pieces.length })}</p>
       <p>${tx('about.pictures.2')}</p>
+      ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
       <h2 class="h-sec">${tx('about.missing')}</h2>
       <p>${tx('about.missing.1')}</p>
       ${held ? `<h2 class="h-sec">${tx('about.credits')}</h2><p>${tx('about.credits.1', { n: held })}</p>${creditsList()}` : ''}
@@ -442,11 +442,11 @@ function about(): void {
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
       <p class="small muted">${rich('about.thanks', { a: 'https://blair-neal.gitbook.io/survey-of-alternative-displays' })}</p>
     </section>
-    <section class="stack" style="--gap: 14px">
-      <h2 class="h-sec">${tx('about.works')}</h2>
-      ${elevationSvg().replace('<svg ', '<svg class="drawing" ')}
-      ${axoSvg().replace('<svg ', '<svg class="drawing" ')}
-      <p class="prose small muted">${tx('about.works.note')}</p>
+    <section class="stack prose" style="--gap: 12px">
+      <h2 class="h-sec">${tx('about.room')}</h2>
+      <p>${tx('about.room.1')}</p>
+      <p>${tx('about.room.2')}</p>
+      <p>${tx('about.room.3')}</p>
     </section>
   </div>
 </div>`, undefined, 'about');
@@ -454,7 +454,7 @@ function about(): void {
 
 function notFound(): void {
   document.title = titled(t('missing.page'));
-  shell(`<div class="stack"><h1 class="h-sec">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#depot' })}</p></div>`);
+  shell(`<div class="stack"><h1 class="h-sec">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#index' })}</p></div>`);
 }
 
 // ---------- contact sheet, for checking every model at once ----------
@@ -483,7 +483,7 @@ async function sheet(q: URLSearchParams): Promise<void> {
 // ---------- router ----------
 function route(): void {
   leave?.(); leave = null;
-  // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #depot, #about
+  // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
@@ -491,7 +491,7 @@ function route(): void {
   if (!name) entrance();
   else if (hall) hallView(Number(hall[1]));
   else if (piece) pieceView(piece[1]);
-  else if (name === 'depot') depot();
+  else if (name === 'index' || name === 'depot') depot();
   else if (name === 'about') about();
   else notFound();
   window.scrollTo(0, 0);

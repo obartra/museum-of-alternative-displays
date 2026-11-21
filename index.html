@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Museum of Alternative Displays</title>
-<meta name="description" content="A vendor-neutral museum of display technologies that are not the screen you are holding. Fifty pieces you can turn around, with sources.">
+<meta name="description" content="A museum of 50 display technologies, from split-flap boards to holograms. Turn each one around, see how it works and where it fails. Nothing is for sale.">
 <meta name="theme-color" content="#e8e9e3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23d1481f'/%3E%3Crect x='3' y='3' width='26' height='26' rx='3' fill='none' stroke='%23fff' stroke-width='1.5'/%3E%3Cpath d='M9 23V9l7 9 7-9v14' fill='none' stroke='%23fff' stroke-width='3.2'/%3E%3C/svg%3E">
 <script>
@@ -16,13 +16,19 @@
   var piece = /^#\/?piece-([a-z0-9-]+)/.exec(location.hash), hall = /^#\/?hall-(\d)/.exec(location.hash);
   var first = __FIRST_IN_HALL__;
   var id = piece ? piece[1] : hall ? first[hall[1]] : '';
-  if (!id) return;
-  var base = './posters/' + id + (day ? '-day-' : '-night-'), link = document.createElement('link');
+  var when = day ? '-day-' : '-night-', link = document.createElement('link');
   link.rel = 'preload'; link.as = 'image'; link.fetchPriority = 'high';
-  link.imageSrcset = base + '380.webp 380w, ' + base + '760.webp 760w';
   // the same sizes as the picture itself declares, or the browser would fetch a second file
-  link.imageSizes = piece ? '(min-width: 900px) 50vw, 100vw' : '(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px';
-  link.href = base + '760.webp';
+  if (id) {
+    link.imageSrcset = './posters/' + id + when + '380.webp 380w, ./posters/' + id + when + '760.webp 760w';
+    link.imageSizes = piece ? '(min-width: 900px) 50vw, 100vw' : '(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px';
+    link.href = './posters/' + id + when + '760.webp';
+  } else if (!location.hash.replace('#', '') && matchMedia('(min-width: 760px)').matches) {
+    // the entrance, on a screen wide enough to show the room beside the board
+    link.imageSrcset = './room' + when + '600.webp 600w, ./room' + when + '1200.webp 1200w';
+    link.imageSizes = '(min-width: 760px) 46vw, 92vw';
+    link.href = './room' + when + '1200.webp';
+  } else return;
   document.head.appendChild(link);
 })();
 </script>
@@ -30,7 +36,7 @@
 <body>
 <a class="vh" href="#main">Skip to content</a>
 <div id="app"></div>
-<noscript><p style="padding:24px;font-family:sans-serif">This museum is built in the browser and needs JavaScript. The collection data is in the repository under src/data.</p></noscript>
+<noscript><p style="padding:24px;font-family:sans-serif">This museum needs JavaScript to show its pages. Please switch it on in your browser.</p></noscript>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

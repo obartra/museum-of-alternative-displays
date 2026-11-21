@@ -1,5 +1,4 @@
-/* Layout idea: a works hall. Whitewash above, a painted dado below, enamel plates for wayfinding.
-   Each hall owns one enamel colour, used only on its plate, its tab and the dado behind its pieces. */
+/* Plain grounds, black lettering, and one enamel colour for each hall: on its plate, its tab and the block its pieces stand on. */
 :root {
   --wash: #e8e9e3;      /* whitewashed wall */
   --wash-2: #dcdfd7;    /* recessed panel */

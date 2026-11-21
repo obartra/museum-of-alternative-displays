@@ -1,27 +1,29 @@
 # Museum of Alternative Displays
 
-A vendor-neutral museum of display technologies that are not the screen you are holding.
-Fifty pieces in seven halls. Each one is a 3D model you can turn and zoom, with its lit
-surface running live, a plain account of how it makes an image, what it is good at, where
-it fails, and the sources.
+A museum of fifty display technologies, from split-flap boards to holograms, in seven
+halls. Each one is a 3D model you can turn and zoom, with its lit surface running live, a
+plain account of how it works, what it is good at, where it fails, and the sources. Nothing
+is for sale.
 
-The museum is imagined as a physical place first, and the website follows that building:
-a floor plan, halls with door plates, and one room that every piece is shown in. The room
-has a polished concrete floor that mirrors what stands on it, white walls, a cast concrete
-block for a stand, and tall windows that look across a Catalan town to Montserrat. Nothing
-lights it but those windows. One switch turns day into night.
+Live at https://obartra.github.io/museum-of-alternative-displays/
+
+Every piece is shown in the same room. It has a polished concrete floor that mirrors what
+stands on it, white walls, a cast concrete block for a stand, and tall windows that look
+across a Catalan town to Montserrat. Nothing lights it but those windows. One switch turns
+day into night. A hall is not a room: it is a group of pieces that make a picture in the
+same way.
 
 ## Rules of the collection
 
 - A piece is a principle, never a product. A product is named only when it was the first
   of its kind or is the example everyone means.
-- No adverts, no affiliate links, no video embeds, no links to shops.
+- No adverts, no affiliate links, no video players from other sites, no links to shops.
 - Every piece states its limits. A piece with no stated limits is an advert.
 - Every date and name comes from a source that was opened and read. Sources are listed per
   piece and labelled by kind (paper, patent, archive, lab, maker, press, reference).
 - Where sources disagree or say nothing, the piece carries a note saying so.
-- Nothing is a photograph. Every object is built in code, so there are no image rights to
-  clear and nothing to go stale.
+- Every object on a stand is a model built in code. Real photographs, drawings and films
+  appear only under "From the archive", only when free to reuse, and always with a credit.
 
 `npm run validate` enforces the checkable parts of this and CI fails the build if a piece
 breaks them.
@@ -57,11 +59,9 @@ Node 22 or newer.
 | `src/three/room.ts` | The room around the piece: glazed walls, the mirroring floor, the cast block, and the sun and moon that light it. |
 | `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
-| `src/art/` | The floor plan and the building drawings, generated as SVG. |
 | `src/main.ts` | Pages and routing. |
 | `scripts/validate.ts` | The collection's rules as code. |
 | `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
-| `scripts/mock.ts` | Regenerates the concept sheets and mockups from before the build. |
 
 ## Languages
 
