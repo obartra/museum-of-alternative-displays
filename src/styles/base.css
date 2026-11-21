@@ -166,7 +166,8 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* ---------- entrance ---------- */
 .roompic img { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--wash-2); }
-.board { background: #101112; color: #f1efe6; border-radius: 6px; padding: 14px 12px 12px; overflow-x: auto; box-shadow: inset 0 0 0 2px #2a2c2d; }
+/* the board measures itself, so its flaps can be sized to fit a row whatever column the board is in */
+.board { container-type: inline-size; background: #101112; color: #f1efe6; border-radius: 6px; padding: 14px 12px 12px; overflow-x: auto; box-shadow: inset 0 0 0 2px #2a2c2d; }
 .board__head { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; font-size: .78rem; color: #b9bbb3; padding: 0 2px 9px; }
 .board__rows { display: grid; gap: 4px; min-width: max-content; }
 .board__row { display: flex; gap: 3px; text-decoration: none; color: inherit; align-items: center; }
@@ -175,7 +176,7 @@ h1, h2, h3 { text-wrap: balance; }
   /* never shorter than 24px, the least a finger target may be, however narrow the phone */
   width: 1.02em; height: max(1.5em, 24px); display: inline-grid; place-items: center; background: #1d1f20; border-radius: 2px;
   /* the board fits its longest row on one line: more letters, smaller flaps */
-  font-family: var(--display); font-weight: 700; font-size: clamp(.7rem, calc(60.3vw / var(--cells, 17)), 1.6rem); line-height: 1; position: relative; text-transform: uppercase;
+  font-family: var(--display); font-weight: 700; font-size: clamp(.6rem, calc((100cqw - 24px - (var(--cells, 17) + 2) * 3px) / (var(--cells, 17) * 1.02 + 1)), 1.6rem); line-height: 1; position: relative; text-transform: uppercase;
   background-image: linear-gradient(#0000 49.2%, #000 49.2%, #000 51%, #0000 51%);
 }
 .flap--gap { background: none; width: .5em; }

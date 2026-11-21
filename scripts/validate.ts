@@ -140,7 +140,7 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
   for (const h of halls) {
     const x = loc.halls?.[h.id];
     if (!x?.name?.trim() || !x.intro?.trim()) say(`hall ${h.id} is missing or incomplete`);
-    else { clean(`hall ${h.id}`, x.name + x.intro); if ([...x.name].length > 18) say(`hall ${h.id}: the name must fit the board, at most 18 characters`); }
+    else { clean(`hall ${h.id}`, x.name + x.intro); if ([...x.name].length > 16) say(`hall ${h.id}: the name must fit the board on a small phone, at most 16 characters`); }
   }
   for (const p of pieces) {
     const x = loc.pieces?.[p.id];
