@@ -74,7 +74,7 @@ function wants3d(): boolean {
 }
 
 function shell(inner: string, hall?: number, current?: string): void {
-  const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}" aria-label="Hall ${n}, ${esc(hallById(n).name)}"${hall === n ? ' aria-current="true"' : ''}>${n}</a>`;
+  const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}"${hall === n ? ' aria-current="true"' : ''}><span class="vh">Hall </span>${n}<span class="vh">, ${esc(hallById(n).name)}</span></a>`;
   app.innerHTML = `
 <header class="top">
   <a class="top__name" href="#">Museum of Alternative Displays</a>
@@ -100,7 +100,7 @@ function entrance(): void {
   const counts = Object.fromEntries(halls.map((h) => [h.id, inHall(h.id).length]));
   shell(`
 <div class="stack">
-  <p class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${pieces.length} ways to make a picture that are not the screen you are holding.</p>
+  <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${pieces.length} ways to make a picture that are not the screen you are holding.</h1>
   <p class="prose">Turn each one around. Switch the daylight off and see which ones survive the night. Read how it works, what it is good at and where it fails, with the sources.</p>
   <section class="board" aria-label="Directory of halls">
     <div class="board__head"><span>Hall</span><span class="board__clock" id="clock" aria-label="Time now"></span><span>Pieces</span></div>
@@ -126,17 +126,15 @@ function entrance(): void {
     const flaps = [...document.querySelectorAll<HTMLElement>('.board .flap[data-ch]')].filter((f) => f.dataset.ch !== ' ');
     const left = flaps.map((_, i) => 2 + ((i * 7) % 9));
     const glyphs = 'ABCDEFGHIJKLMNOPRSTUVZ0123456789';
-    flaps.forEach((f, i) => {
-      f.textContent = glyphs[(i * 11) % glyphs.length];
-      f.addEventListener('animationend', () => f.classList.remove('is-flipping'));
-    });
+    const flip: Keyframe[] = [{ transform: 'scaleY(1)' }, { transform: 'scaleY(.08)', filter: 'brightness(.6)' }, { transform: 'scaleY(1)' }];
+    flaps.forEach((f, i) => { f.textContent = glyphs[(i * 11) % glyphs.length]; });
     flipper = window.setInterval(() => {
       let busy = false;
       flaps.forEach((f, i) => {
         if (left[i] <= 0) return;
         left[i]--; busy = true;
         f.textContent = left[i] === 0 ? f.dataset.ch! : glyphs[(i * 5 + left[i] * 3) % glyphs.length];
-        f.classList.remove('is-flipping'); void f.offsetWidth; f.classList.add('is-flipping');
+        f.animate(flip, { duration: 90 });
       });
       if (!busy) clearInterval(flipper);
     }, 95);
@@ -173,7 +171,7 @@ function hallView(n: number): void {
     <p class="lead">${esc(h.intro)}</p>
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
-  <nav class="pager" aria-label="Halls">${prev ? `<a href="#hall-${prev.id}">Back to hall ${prev.id}, ${esc(prev.name)}</a>` : '<a href="#">Back to the entrance</a>'}${next ? `<a href="#hall-${next.id}">On to hall ${next.id}, ${esc(next.name)}</a>` : '<a href="#depot">On to the depot</a>'}</nav>
+  <nav class="pager" aria-label="Previous and next hall">${prev ? `<a href="#hall-${prev.id}">Back to hall ${prev.id}, ${esc(prev.name)}</a>` : '<a href="#">Back to the entrance</a>'}${next ? `<a href="#hall-${next.id}">On to hall ${next.id}, ${esc(next.name)}</a>` : '<a href="#depot">On to the depot</a>'}</nav>
 </div>`, n);
 }
 
@@ -216,7 +214,7 @@ function pieceView(id: string): void {
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">On the plinth</h2><p class="prose">${esc(p.look)}</p><div id="surface"></div></section>
     ${p.dispute ? `<p class="flag"><strong>The record is not settled.</strong> ${esc(p.dispute)}</p>` : ''}
     <section class="stack" style="--gap: 6px"><h2 class="h-sec">Provenance</h2><ol class="sources">${p.sources.map((s) => `<li><span class="kind">${s.kind}</span><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ol></section>
-    <nav class="pager" aria-label="Pieces">${prev ? `<a href="#piece-${prev.id}">Back: ${esc(prev.name)}</a>` : `<a href="#">Back to the entrance</a>`}${next ? `<a href="#piece-${next.id}">Next: ${esc(next.name)}</a>` : `<a href="#depot">On to the depot</a>`}</nav>
+    <nav class="pager" aria-label="Previous and next piece">${prev ? `<a href="#piece-${prev.id}">Back: ${esc(prev.name)}</a>` : `<a href="#">Back to the entrance</a>`}${next ? `<a href="#piece-${next.id}">Next: ${esc(next.name)}</a>` : `<a href="#depot">On to the depot</a>`}</nav>
   </div>
 </article>`, p.hall);
 

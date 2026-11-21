@@ -133,7 +133,9 @@ export class Stage {
     const W = w ?? Math.max(1, el.clientWidth), H = h ?? Math.max(1, el.clientHeight);
     const back = (aspect: number) => Math.max(1, 1.02 / aspect), k = back(W / H) / back(this.camera.aspect);
     this.release();
-    this.renderer.setSize(W, H, false);
+    // a new drawing buffer is costly: only ask for one when the size has changed
+    const now = this.renderer.getSize(new THREE.Vector2());
+    if (now.x !== W || now.y !== H) this.renderer.setSize(W, H, false);
     this.owed = 3;
     this.camera.aspect = W / H;
     this.camera.updateProjectionMatrix();

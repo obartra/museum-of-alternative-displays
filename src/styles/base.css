@@ -155,14 +155,13 @@ h1, h2, h3 { text-wrap: balance; }
 .board__row { display: flex; gap: 3px; text-decoration: none; color: inherit; align-items: center; }
 .board__row:hover .flap, .board__row:focus-visible .flap { background: #2c2f31; }
 .flap {
-  width: 1.02em; height: 1.5em; display: inline-grid; place-items: center; background: #1d1f20; border-radius: 2px;
+  /* never shorter than 24px, the least a finger target may be, however narrow the phone */
+  width: 1.02em; height: max(1.5em, 24px); display: inline-grid; place-items: center; background: #1d1f20; border-radius: 2px;
   font-family: var(--display); font-weight: 700; font-size: clamp(.8rem, 3.55vw, 1.6rem); line-height: 1; position: relative; text-transform: uppercase;
   background-image: linear-gradient(#0000 49.2%, #000 49.2%, #000 51%, #0000 51%);
 }
 .flap--gap { background: none; width: .5em; }
 .flap--tag { color: var(--hall-ink); background-color: var(--hall); }
-.flap.is-flipping { animation: flap .09s linear; }
-@keyframes flap { 0% { transform: scaleY(1); } 50% { transform: scaleY(.08); filter: brightness(.6); } 100% { transform: scaleY(1); } }
 
 .plan { width: 100%; height: auto; display: block; }
 .plan a { cursor: pointer; }
@@ -191,7 +190,6 @@ h1, h2, h3 { text-wrap: balance; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body, .switch__knob, .stage canvas.gl, .stage__hint { transition: none; }
-  .flap.is-flipping { animation: none; }
 }
 
 /* ---------- piece page ---------- */

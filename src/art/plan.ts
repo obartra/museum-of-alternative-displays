@@ -22,7 +22,8 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
   const out: string[] = [];
   const a = (target: string, label: string, inner: string) => {
     const href = link(target);
-    return href ? `<a href="${href}" aria-label="${esc(label)}">${inner}</a>` : `<g>${inner}</g>`;
+    // a title, not an aria-label: the name then adds to the text drawn inside the link, and does not have to repeat it exactly
+    return href ? `<a href="${href}"><title>${esc(label)}</title>${inner}</a>` : `<g>${inner}</g>`;
   };
 
   // yard
@@ -52,7 +53,7 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
       inner += `<text x="${tx}" y="${ty}" class="plan__name" fill="${h.id === 6 ? fg : 'var(--ink)'}">${esc(h.name)}</text>`;
       if (n && h.id === 6) inner += `<text x="${tx}" y="${ty + 15}" class="plan__en" fill="var(--line)">${n} pieces</text>`;
     }
-    out.push(a(`hall/${h.id}`, `Hall ${h.id}, ${h.name}`, inner));
+    out.push(a(`hall/${h.id}`, `Hall ${h.id}, ${h.name}${n ? `, ${n} pieces` : ''}`, inner));
   }
 
   // door openings between bays
