@@ -460,6 +460,19 @@ function about(): void {
 </div>`, undefined, 'about');
 }
 
+// ---------- walk: the whole museum in one hall ----------
+function walkView(start?: string): void {
+  document.title = titled(t('walk.title'));
+  shell(`<div class="walk" id="walk"><p class="walk__wait" role="status">${tx('walk.loading')}</p></div>`, undefined, 'walk');
+  const host = document.getElementById('walk')!;
+  let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;
+  const relight = (on: boolean) => hall?.setLights(on);
+  lightListeners.add(relight);
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start, lights: lightsOn }); })
+    .catch(() => { host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
+  leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); };
+}
+
 function notFound(): void {
   document.title = titled(t('missing.page'));
   shell(`<div class="stack"><h1 class="h-sec">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#index' })}</p></div>`);
@@ -493,7 +506,7 @@ function route(): void {
   leave?.(); leave = null;
   // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
-  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name);
+  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   if (!name) entrance();
@@ -501,6 +514,7 @@ function route(): void {
   else if (piece) pieceView(piece[1]);
   else if (name === 'index' || name === 'depot') depot();
   else if (name === 'about') about();
+  else if (walk) walkView(walk[1]);
   else notFound();
   window.scrollTo(0, 0);
   document.body.dataset.ready = '1';

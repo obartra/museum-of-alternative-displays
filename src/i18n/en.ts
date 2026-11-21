@@ -142,6 +142,10 @@ export const en = {
   'about.room.2': 'Nothing lights the room but the windows: the sun by day, and the moon and the town by night. One switch, marked Daylight, turns day into night.',
   'about.room.3': 'The room is imagined and the view from its windows is painted, not photographed. The mountain is real.',
 
+  'walk.title': 'Walk the museum',
+  'walk.loading': 'Opening the hall.',
+  'walk.fail': 'The hall did not load. Check the connection and reload. Every piece is also in the index.',
+
   'missing.page': 'Not found',
   'missing.title': 'Nothing at this address',
   'missing.text': 'There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}.',
