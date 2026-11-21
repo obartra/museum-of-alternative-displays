@@ -48,12 +48,14 @@ jobs:
             *) npx tsx scripts/tour-audio.ts ${LANGS:+--langs "$LANGS"} ;;
           esac
       - name: Keep the recordings
-        if: startsWith(inputs.what, 'Record')
+        # also after a failure part of the way through, so that what was recorded is not sent and paid for twice
+        if: ${{ !cancelled() && startsWith(inputs.what, 'Record') }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -d public/tour ]; then echo "Nothing was recorded."; exit 0; fi
           git add public/tour src/data/tour-audio.json
           if git diff --cached --quiet; then echo "Nothing new to keep."; exit 0; fi
           git commit -m "Tour audio"

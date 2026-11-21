@@ -19,7 +19,8 @@ import { mark, spoken, tours } from '../src/data/tours';
 import { LANGS, type Locale } from '../src/i18n/types';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const API = 'https://api.elevenlabs.io';
+// ELEVENLABS_API_URL is for an account kept in another region, and for trying the script against a stand-in
+const API = (process.env.ELEVENLABS_API_URL || 'https://api.elevenlabs.io').replace(/\/+$/, '');
 const args = process.argv.slice(2), dry = args.includes('--dry'), listVoices = args.includes('--voices');
 const only = (args[args.indexOf('--langs') + 1] ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const wanted = args.includes('--langs') && only.length ? only : null;
@@ -68,15 +69,22 @@ let langs = [...new Set(told.map((x) => x.lang))].filter((l) => !wanted || wante
 
 if (!dry) {
   needKey();
+  // Which languages the model speaks is asked first, so that none is sent in vain. A key that may only make speech
+  // cannot ask (it lacks the permission models_read). Then nothing is checked here, and ElevenLabs itself refuses
+  // a model or a language it does not have when the first part is sent.
   const res = await ask('/v1/models');
-  if (!res.ok) { console.error(`ElevenLabs answered ${res.status}: ${(await res.text()).slice(0, 400)}`); process.exit(1); }
-  const models = (await res.json()) as { model_id: string; can_do_text_to_speech?: boolean; languages?: { language_id: string }[] }[];
-  const model = models.find((m) => m.model_id === config.model);
-  if (!model) { console.error(`This account has no model called ${config.model}. It has: ${models.filter((m) => m.can_do_text_to_speech).map((m) => m.model_id).join(', ')}`); process.exit(1); }
-  const speaks = new Set((model.languages ?? []).map((x) => x.language_id.toLowerCase().split('-')[0]));
-  const cannot = langs.filter((l) => !speaks.has(spokenAs(l)));
-  if (cannot.length) note(`${config.model} does not speak: ${cannot.join(', ')}. They get no recording.`);
-  langs = langs.filter((l) => !cannot.includes(l));
+  const refused = res.ok ? '' : (await res.text()).slice(0, 400);
+  if (!res.ok && !(res.status === 401 && /missing_permissions/.test(refused))) { console.error(`ElevenLabs answered ${res.status}: ${refused}`); process.exit(1); }
+  if (!res.ok) note(`This key may not read the list of models, so the languages that ${config.model} speaks are not checked first.`);
+  else {
+    const models = (await res.json()) as { model_id: string; can_do_text_to_speech?: boolean; languages?: { language_id: string }[] }[];
+    const model = models.find((m) => m.model_id === config.model);
+    if (!model) { console.error(`This account has no model called ${config.model}. It has: ${models.filter((m) => m.can_do_text_to_speech).map((m) => m.model_id).join(', ')}`); process.exit(1); }
+    const speaks = new Set((model.languages ?? []).map((x) => x.language_id.toLowerCase().split('-')[0]));
+    const cannot = langs.filter((l) => !speaks.has(spokenAs(l)));
+    if (cannot.length) note(`${config.model} does not speak: ${cannot.join(', ')}. They get no recording.`);
+    langs = langs.filter((l) => !cannot.includes(l));
+  }
 }
 
 let sent = 0, made = 0, same = 0;
