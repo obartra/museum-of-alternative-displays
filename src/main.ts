@@ -70,6 +70,17 @@ const afterPicture = (img: HTMLImageElement, fn: () => void) => {
   img.addEventListener('load', fn, { once: true });
   img.addEventListener('error', fn, { once: true });
 };
+/** Whether this device can put a model in the visitor's own room: an iPhone or iPad through Quick Look, others through WebXR. */
+let roomReady: Promise<boolean> | undefined;
+function canShowInRoom(): Promise<boolean> {
+  roomReady ??= (async () => {
+    if (document.createElement('a').relList.supports('ar')) return true;
+    const xr = (navigator as Navigator & { xr?: { isSessionSupported(mode: string): Promise<boolean> } }).xr;
+    try { return !!xr && (await xr.isSessionSupported('immersive-ar')); } catch { return false; }
+  })();
+  return roomReady;
+}
+
 /**
  * Whether to start a model without being asked. Not when the browser would draw it in software, which is slow enough
  * to freeze a page, and not when the visitor has asked to save data. `?gl=force` and `?gl=off` in the address override it.
@@ -230,7 +241,7 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: x.name })}" fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>${tx('stage.start')}</button></div>
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}</div>
+    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
@@ -263,7 +274,7 @@ function pieceView(id: string): void {
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
   const views = document.getElementById('stage-views')!, still = document.getElementById('stage-poster') as HTMLImageElement;
   const act = (name: string) => wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`)!;
-  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), stereoBtn = act('stereo');
+  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), stereoBtn = act('stereo'), arBtn = act('ar');
   const HINT = { turn: t('stage.hint.turn'), person: t('stage.hint.person'), detail: t('stage.hint.detail') };
   // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
   let alive = true, live = false, begun = false, seen = true, wantFocus = false;
@@ -352,6 +363,7 @@ function pieceView(id: string): void {
       // the first frame is drawn: let it come up over the still picture, then take the picture away
       requestAnimationFrame(() => { cv.classList.add('is-live'); window.setTimeout(() => { if (alive) still.hidden = true; }, 420); });
       for (const b of views.querySelectorAll<HTMLButtonElement>('button')) b.disabled = !!b.dataset.view && !stage.hasView(b.dataset.view);
+      arBtn.hidden = !(await canShowInRoom());
       if (import.meta.env.DEV) for (const v of places) if (!stage.hasView(v.id)) console.warn(`${p.id}: the view "${v.id}" has words but the model gives it no place`);
       pauseBtn.disabled = stereoBtn.disabled = false;
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
@@ -385,6 +397,14 @@ function pieceView(id: string): void {
       stage.setStereo(!stage.isStereo);
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
       if (stage.isStereo) tell(t('stage.stereo.on')); else tell(HINT.turn);
+    }
+    if (name === 'ar' && stage?.pieceRoot && live) {
+      // the model leaves the stand for the visitor's own room. It is prepared on demand, which takes a moment
+      const root = stage.pieceRoot;
+      arBtn.disabled = true;
+      tell(t('stage.ar.preparing'));
+      void import('./three/ar').then(({ showInRoom }) => showInRoom(root, x.name)).then(() => tell(HINT.turn), () => { hint.textContent = ''; note.textContent = t('stage.ar.fail'); })
+        .finally(() => { arBtn.disabled = false; });
     }
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));
   });

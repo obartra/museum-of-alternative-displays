@@ -100,6 +100,8 @@ export class Stage {
   hasView(id: string): boolean { return !!this.piece?.views?.[id]; }
   /** The id of the view that is on, or null for the ordinary turning view. */
   get inView(): string | null { return this.viewId; }
+  /** The model on the stand, as it stands there: for handing to something that shows it elsewhere. */
+  get pieceRoot(): THREE.Group | undefined { return this.piece?.root; }
   get isStereo(): boolean { return !!this.stereo; }
   /** Draw for red and cyan glasses, or go back to the plain picture. */
   setStereo(on: boolean): void {
