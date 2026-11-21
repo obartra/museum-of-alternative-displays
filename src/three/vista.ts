@@ -123,9 +123,10 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
 
   // ---- hills between: pine and holm oak, a few fields, a farmhouse here and there
   const hills: [(az: number) => number, RGB, RGB, number][] = [
-    [((n, m) => (az: number) => -0.7 + 0.5 * n(az * 0.1 + 3) + 0.55 * Math.pow(m(az * 0.03 + 5), 2))(noise1(11), noise1(15)), [132, 144, 150], [146, 156, 158], 0.5],
-    [((n, m) => (az: number) => -1.55 + 0.7 * n(az * 0.15 + 11) + 0.9 * Math.pow(m(az * 0.04 + 1), 2))(noise1(12), noise1(16)), [110, 124, 122], [128, 139, 134], 0.72],
-    [((n, m) => (az: number) => -2.5 + 0.8 * n(az * 0.2 + 29) + 1.1 * Math.pow(m(az * 0.05 + 8), 2))(noise1(13), noise1(17)), [88, 104, 92], [112, 124, 110], 1],
+    [((n, m) => (az: number) => -0.9 + 0.5 * n(az * 0.1 + 3) + 0.6 * Math.pow(m(az * 0.03 + 5), 2))(noise1(11), noise1(15)), [132, 144, 150], [146, 156, 158], 0.5],
+    [((n, m) => (az: number) => -2.0 + 0.7 * n(az * 0.15 + 11) + 1.0 * Math.pow(m(az * 0.04 + 1), 2))(noise1(12), noise1(16)), [110, 124, 122], [128, 139, 134], 0.72],
+    [((n, m) => (az: number) => -3.3 + 0.8 * n(az * 0.2 + 29) + 1.2 * Math.pow(m(az * 0.05 + 8), 2))(noise1(13), noise1(17)), [90, 106, 94], [112, 124, 110], 1],
+    [((n, m) => (az: number) => -4.9 + 0.9 * n(az * 0.27 + 41) + 1.3 * Math.pow(m(az * 0.06 + 3), 2))(noise1(14), noise1(18)), [74, 92, 76], [100, 114, 96], 1.35],
   ];
   hills.forEach(([f, a, b, near], hi) => {
     under(f, a, b, 60);
@@ -171,9 +172,9 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
     }
   } else {
     // morning haze lying in the valley
-    const hz = c.createLinearGradient(0, Y(1.6), 0, Y(-5));
-    hz.addColorStop(0, css(HAZE, 0)); hz.addColorStop(0.4, css(HAZE, 0.3)); hz.addColorStop(1, css(HAZE, 0));
-    c.globalCompositeOperation = 'source-atop'; c.fillStyle = hz; c.fillRect(0, Y(1.6), W, Y(-5) - Y(1.6)); c.globalCompositeOperation = 'source-over';
+    const hz = c.createLinearGradient(0, Y(1.6), 0, Y(-7.5));
+    hz.addColorStop(0, css(HAZE, 0)); hz.addColorStop(0.3, css(HAZE, 0.3)); hz.addColorStop(1, css(HAZE, 0));
+    c.globalCompositeOperation = 'source-atop'; c.fillStyle = hz; c.fillRect(0, Y(1.6), W, Y(-7.5) - Y(1.6)); c.globalCompositeOperation = 'source-over';
   }
 
   // ---- the town, street behind street, down to the roofs under the window
@@ -196,7 +197,7 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
   const ROWS = 28;
   for (let row = 0; row < ROWS; row++) {
     const d = row / (ROWS - 1), fade = Math.pow(1 - d, 1.15) * 0.72;
-    const el = -2.7 - 15.9 * Math.pow(d, 1.5), base = Y(el);
+    const el = -5.9 - 12.8 * Math.pow(d, 1.5), base = Y(el);
     const storey = (1.7 + 31 * Math.pow(d, 1.75)) * k;
     const thin = row < 4 ? 0.55 - row * 0.1 : 0;       // the first streets straggle up the hill
     for (let x = -tr() * 60 * k; x < W;) {
@@ -288,6 +289,18 @@ function paint(night: boolean, W: number, H: number): HTMLCanvasElement {
       if (street) { c.fillStyle = 'rgba(255,236,200,.95)'; c.fillRect(x - 0.6 * k, y - 0.6 * k, Math.max(1, 1.2 * k), Math.max(1, 1.2 * k)); }
     }
     c.globalCompositeOperation = 'source-over';
+  }
+
+  // ---- the grain of a photograph, so that no patch of colour is quite flat
+  if (!night) {
+    const mask = document.createElement('canvas'); mask.width = W; mask.height = H; mask.getContext('2d')!.drawImage(cv, 0, 0);
+    const g = document.createElement('canvas'); g.width = g.height = 256;
+    const gc = g.getContext('2d')!, gi = gc.createImageData(256, 256), gr = rng(303);
+    for (let i = 0; i < 256 * 256; i++) { const v = 128 + (gr() + gr() - 1) * 70; gi.data[i * 4] = gi.data[i * 4 + 1] = gi.data[i * 4 + 2] = v; gi.data[i * 4 + 3] = 255; }
+    gc.putImageData(gi, 0, 0);
+    c.save(); c.globalCompositeOperation = 'overlay'; c.globalAlpha = 0.16; c.fillStyle = c.createPattern(g, 'repeat')!; c.fillRect(0, 0, W, H); c.restore();
+    // overlay paints the clear sky too: take that back
+    c.globalCompositeOperation = 'destination-in'; c.drawImage(mask, 0, 0); c.globalCompositeOperation = 'source-over';
   }
 
   // ---- let the ends melt into the distance
