@@ -191,6 +191,10 @@ const locale: Locale = {
     'walk.vr.fail': 'El visor no se inició.',
     'walk.piece': 'Verla en su sala',
     'walk.hall': 'Recorrer esta sala',
+    'trail.label': 'Recorrido',
+    'trail.none': 'Todas las piezas',
+    'trail.women': 'Mujeres',
+    'trail.walk': 'Seguir este recorrido',
 
     'missing.page': 'Página no encontrada',
     'missing.title': 'No hay nada en esta dirección',

@@ -9,6 +9,7 @@ import { byName, comma, count, langNow, offered, rich, said, standIn, t, tx, use
 import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
+import { trails } from './data/trails';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -258,6 +259,7 @@ function peopleView(): void {
   <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
   <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${pill('women', tx('people.women'))}</fieldset></form>
   <p class="count" id="who-count" role="status"></p>
+  <p class="ways" id="who-walk" hidden><a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a></p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
 </div>`, undefined, 'people');
   const rows = document.getElementById('who-rows')!, tally = document.getElementById('who-count')!;
@@ -276,7 +278,9 @@ function peopleView(): void {
       return blocks ? `<section class="stack" style="--gap: 4px"><h2 class="h-sec">${tx('hall.title', { n: h.id, name: said.hall(h).name })}</h2><div class="who__grid">${blocks}</div></section>` : '';
     }).join('');
     tally.textContent = t('people.count', { n: names.size });
+    document.getElementById('who-walk')!.hidden = !women;
   };
+  document.getElementById('who-walk')!.addEventListener('click', (ev) => { const id = (ev.target as HTMLElement).closest<HTMLElement>('[data-trail]')?.dataset.trail; try { if (id) localStorage.setItem('trail', id); } catch { /* the walk opens without it */ } });
   document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = (ev.target as HTMLInputElement).value as '' | 'women'; draw(); });
   draw();
 }

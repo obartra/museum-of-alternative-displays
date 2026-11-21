@@ -377,6 +377,12 @@ h1, h2, h3 { text-wrap: balance; }
 .walk__bay[aria-current="true"] { box-shadow: inset 0 -4px 0 var(--hall-ink); }
 .walk__bay:focus-visible { outline-offset: -3px; position: relative; z-index: 1; }
 .walk__blocks { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; pointer-events: none; }
+/* a trail on the plan: the same line as on the floor of the halls. It is quiet until its trail is chosen */
+.walk__trail { fill: none; stroke-width: 2px; vector-effect: non-scaling-stroke; stroke-linecap: round; opacity: .5; }
+.walk__trail--under { stroke: #fff; stroke-width: 4px; opacity: .35; }
+.walk__stops { stroke-width: 7px; }
+.walk__plan[data-trail] .walk__trail { opacity: 1; }
+.walk__plan[data-trail] .walk__trail--under { opacity: .9; }
 .walk__wall { fill: var(--wash-2); }
 .walk__block { opacity: .85; }
 .walk__block.is-here { opacity: 1; stroke: var(--signal); stroke-width: 3px; vector-effect: non-scaling-stroke; paint-order: stroke; }

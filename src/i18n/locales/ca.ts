@@ -191,6 +191,10 @@ const locale: Locale = {
     'walk.vr.fail': "El casc no s'ha engegat.",
     'walk.piece': "Mira-la al seu àmbit",
     'walk.hall': "Recorre aquest àmbit",
+    'trail.label': "Recorregut",
+    'trail.none': "Totes les peces",
+    'trail.women': "Dones",
+    'trail.walk': "Segueix aquest recorregut",
 
     'missing.page': "No s'ha trobat",
     'missing.title': "No hi ha res en aquesta adreça",

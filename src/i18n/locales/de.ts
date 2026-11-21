@@ -190,6 +190,10 @@ const locale: Locale = {
     'walk.vr.fail': 'Die VR-Brille ist nicht gestartet.',
     'walk.piece': 'In seinem Saal ansehen',
     'walk.hall': 'Durch diesen Saal gehen',
+    'trail.label': 'Rundgang',
+    'trail.none': 'Alle Exponate',
+    'trail.women': 'Frauen',
+    'trail.walk': 'Diesem Rundgang folgen',
 
     'missing.page': 'Nicht gefunden',
     'missing.title': 'Unter dieser Adresse gibt es nichts',

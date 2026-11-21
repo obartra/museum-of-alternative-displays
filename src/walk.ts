@@ -1,5 +1,6 @@
 import { halls } from './data/halls';
 import { people } from './data/people';
+import { trailById, trails } from './data/trails';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -62,11 +63,19 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   ${halls.map((h) => { const b = plan.bayOf(h.id), long = b.to - b.from, clear = (h.id === 1 ? 2 : 1) * plan.PITCH - plan.BLOCK / 2; return `<button type="button" class="walk__bay" data-hall="${h.id}" data-bay="${h.id}" style="flex-grow: ${long}; --at: ${(((h.id === 1 ? 0.62 : 0.5) * clear / long) * 100).toFixed(2)}%" disabled><span aria-hidden="true">${h.id}</span><span class="vh">${tx('nav.hall', { n: h.id, name: hallName(h.id) })}</span></button>`; }).join('')}
   <svg class="walk__blocks" viewBox="0 ${-plan.HALF} ${plan.LENGTH} ${2 * plan.HALF}" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     ${plan.walls.map((x) => [-1, 1].map((side) => `<rect class="walk__wall" x="${x - 0.4}" y="${side < 0 ? -plan.HALF : plan.GATE / 2}" width="0.8" height="${plan.HALF - plan.GATE / 2}"/>`).join('')).join('')}
+    ${trails.map((tr) => {
+      const stops = tr.stops.map((id) => plan.placeOf(id)).filter((p) => !!p);
+      if (!stops.length) return '';
+      const end = (p: plan.Place) => p.z - p.side * (plan.BLOCK / 2 + 0.34);
+      const d = `M${plan.DOOR.x} ${tr.lane}H${Math.max(...stops.map((p) => p.x))}` + stops.map((p) => `M${p.x} ${tr.lane}V${end(p)}`).join('');
+      return `<path class="walk__trail walk__trail--under" data-trail="${tr.id}" d="${d}"/><path class="walk__trail" data-trail="${tr.id}" d="${d}" stroke="${tr.colour}"/><path class="walk__trail walk__stops" data-trail="${tr.id}" d="${stops.map((p) => `M${p.x} ${end(p)}h0`).join('')}" stroke="${tr.colour}"/>`;
+    }).join('')}
     ${plan.places.map((p) => `<rect class="walk__block" data-piece="${p.id}" x="${p.x - plan.BLOCK / 2}" y="${p.z - plan.BLOCK / 2}" width="${plan.BLOCK}" height="${plan.BLOCK}" fill="${INK[p.hall] ?? '#ffffff'}"><title>${names[p.id]}</title></rect>`).join('')}
   </svg>
   <span class="walk__me" id="walk-me" aria-hidden="true"><svg viewBox="-10 -10 20 20" focusable="false"><path d="M9 0L-7 7.5L-3.5 0L-7 -7.5Z"/></svg></span>
 </div>
 <div class="walk__bar">
+  <label class="lang walk__goto walk__pick"><span aria-hidden="true">${tx('trail.label')}</span><select id="walk-trail" aria-label="${tx('trail.label')}"><option value="">${tx('trail.none')}</option>${trails.map((tr) => `<option value="${tr.id}">${tx(`trail.${tr.id}`)}</option>`).join('')}</select></label>
   <button type="button" class="btn" data-walk="prev" disabled>${tx('walk.prev')}</button>
   <button type="button" class="btn" data-walk="next" disabled>${tx('walk.next')}</button>
   <label class="lang walk__goto"><span aria-hidden="true">${tx('walk.goto')}</span><select id="walk-goto" aria-label="${tx('walk.goto')}" disabled><option value="">${tx('walk.goto')}</option>${halls.map((h) => `<optgroup label="${tx('nav.hall', { n: h.id, name: hallName(h.id) })}">${plan.places.filter((p) => p.hall === h.id).map((p) => `<option value="${p.id}">${names[p.id]}</option>`).join('')}</optgroup>`).join('')}</select></label>
@@ -89,7 +98,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   const fine = matchMedia('(pointer: fine)').matches;
 
   type Gallery = import('./three/walk/gallery').Gallery;
-  let gallery: Gallery | null = null, canvas: HTMLCanvasElement | null = null, begun = false, raf = 0;
+  let gallery: Gallery | null = null, canvas: HTMLCanvasElement | null = null, begun = false, raf = 0, trailNow: string[] | undefined;
   /** The piece the visitor last stood in front of: where the address points. */
   let last = o.start && plan.placeOf(o.start) ? o.start : '';
   /** Keep the address on the piece in front of the visitor. Nothing is added to the browser's history. */
@@ -158,6 +167,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       for (const b of planEl.querySelectorAll<HTMLButtonElement>('[data-bay]')) b.disabled = false;
       planEl.classList.add('is-live'); goto.disabled = false;
       tell(gallery.where);
+      gallery.follow(trailNow);
       gallery.start();
       track();
       requestAnimationFrame(() => { canvas!.classList.add('is-live'); window.setTimeout(() => { if (!closed) stillImg.hidden = true; }, 500); });
@@ -231,6 +241,21 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   const onHide = () => { if (document.hidden) gallery?.stop(); else if (!closed) gallery?.start(); };
 
   const onGoto = () => { if (goto.value) gallery?.goPiece(goto.value); };
+  // the trail being followed: kept from one visit to the next, shown on the plan, and what Next and Previous stop at
+  const pick = document.getElementById('walk-trail') as HTMLSelectElement;
+  const follow = (id: string, go = false) => {
+    const tr = trailById(id);
+    pick.value = tr ? tr.id : '';
+    if (tr) planEl.dataset.trail = tr.id; else delete planEl.dataset.trail;
+    try { if (tr) localStorage.setItem('trail', tr.id); else localStorage.removeItem('trail'); } catch { /* remembering is a courtesy */ }
+    trailNow = tr?.stops;
+    gallery?.follow(trailNow);
+    if (go && tr && gallery) gallery.next(1);
+  };
+  pick.addEventListener('change', () => follow(pick.value, true));
+  let kept = '';
+  try { kept = localStorage.getItem('trail') ?? ''; } catch { /* fine */ }
+  follow(kept);
   host.addEventListener('click', onClick);
   goto.addEventListener('change', onGoto);
   pad.addEventListener('pointerdown', padDown); pad.addEventListener('pointerup', padUp); pad.addEventListener('pointercancel', padUp); pad.addEventListener('pointerleave', padUp);

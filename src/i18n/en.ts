@@ -188,6 +188,10 @@ export const en = {
   'walk.vr.fail': 'The headset did not start.',
   'walk.piece': 'See it in its hall',
   'walk.hall': 'Walk this hall',
+  'trail.label': 'Trail',
+  'trail.none': 'Every piece',
+  'trail.women': 'Women',
+  'trail.walk': 'Walk this trail',
 
   'missing.page': 'Not found',
   'missing.title': 'Nothing at this address',

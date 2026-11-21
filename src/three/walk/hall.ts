@@ -2,7 +2,8 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { THREE } from '../kit';
 import { HEAD, SILL, TALL, crease, glazed, mirror, once, polished, sheet, wear } from '../room';
 import { SUN, vista } from '../vista';
-import { FLOOR, GATE, GATE_H, HALF, LENGTH, WALL, WINDOW, bays, plateAt, walls, windows } from './plan';
+import { trails } from '../../data/trails';
+import { BLOCK, DOOR, FLOOR, GATE, GATE_H, HALF, LENGTH, WALL, WINDOW, bays, placeOf, plateAt, walls, windows } from './plan';
 
 /**
  * The museum as a building: seven halls in a row, one for each hall of the collection, with a wall and a
@@ -184,6 +185,27 @@ export function buildHall(o: HallOptions): Hall {
   floor.rotation.x = -Math.PI / 2; floor.position.set(LENGTH / 2, FLOOR, 0); floor.receiveShadow = true;
   shell.add(floor);
   const mirrored = o.lite ? undefined : mirror(floor, [floor]);
+  // the trails: a painted line down the aisle for each, with a spur and a dot at every piece it stops at
+  for (const trail of trails) {
+    const stops = trail.stops.map((id) => placeOf(id)).filter((p) => !!p);
+    if (!stops.length) continue;
+    const paint = new THREE.MeshStandardMaterial({ color: trail.colour, roughness: 0.5, metalness: 0, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4 });
+    const strip = (x1: number, z1: number, x2: number, z2: number, wide = 0.07) => {
+      const g = new THREE.PlaneGeometry(Math.hypot(x2 - x1, z2 - z1) + wide, wide);
+      g.rotateX(-Math.PI / 2); g.rotateY(-Math.atan2(z2 - z1, x2 - x1)); g.translate((x1 + x2) / 2, FLOOR + 0.014, (z1 + z2) / 2);
+      return g;
+    };
+    const parts: THREE.BufferGeometry[] = [strip(DOOR.x, trail.lane, Math.max(...stops.map((p) => p.x)), trail.lane)];
+    for (const p of stops) {
+      const end = p.z - p.side * (BLOCK / 2 + 0.34);
+      parts.push(strip(p.x, trail.lane, p.x, end));
+      const dot = new THREE.CircleGeometry(0.16, 28); dot.rotateX(-Math.PI / 2); dot.translate(p.x, FLOOR + 0.015, end);
+      parts.push(dot);
+    }
+    const line = new THREE.Mesh(mergeGeometries(parts.map((g) => g.toNonIndexed())), paint);
+    line.receiveShadow = true;
+    shell.add(line);
+  }
 
   // outside: the same land and sky, turned with the plot, and big enough to stand beyond the far end of the hall
   const out = vista();

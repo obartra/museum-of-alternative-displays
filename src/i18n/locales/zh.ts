@@ -187,6 +187,10 @@ const locale: Locale = {
     'walk.vr.fail': '头显没有启动成功。',
     'walk.piece': '到它的展厅里看它',
     'walk.hall': '漫步这个展厅',
+    'trail.label': '路线',
+    'trail.none': '全部展品',
+    'trail.women': '女性',
+    'trail.walk': '沿这条路线参观',
 
     'missing.page': '未找到',
     'missing.title': '这个地址下什么也没有',

@@ -192,6 +192,10 @@ const locale: Locale = {
     'walk.vr.fail': 'Le casque n’a pas démarré.',
     'walk.piece': 'La voir dans sa galerie',
     'walk.hall': 'Parcourir cette galerie',
+    'trail.label': 'Parcours',
+    'trail.none': 'Toutes les pièces',
+    'trail.women': 'Femmes',
+    'trail.walk': 'Suivre ce parcours',
 
     'missing.page': 'Page introuvable',
     'missing.title': 'Rien à cette adresse',

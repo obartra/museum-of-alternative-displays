@@ -89,6 +89,7 @@ export class Gallery {
   private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean };
   /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
   private twin?: number;
+  private stops?: number[];
   /** How much smaller than asked the picture is drawn, when the device cannot keep up. */
   private thrift = 1;
   private slow = 0;
@@ -206,15 +207,20 @@ export class Gallery {
     if (p) { this.goTo(plan.standing(p, this.back), this.tilt(), cut); this.aimed = p.no; }
   }
   goHall(n: number, cut = false): void { if (plan.bayOf(n)) { const at = plan.arrival(n); this.goTo(at, at.pitch ?? 0, cut); } }
-  /** The next piece of the collection, or the one before. From nowhere in particular, the nearest. */
+  /** The pieces that Next and Previous stop at: a trail's, or with nothing given every piece. */
+  follow(ids?: string[]): void {
+    this.stops = ids?.map((id) => plan.placeOf(id)?.no).filter((n): n is number => n !== undefined).sort((x, y) => x - y);
+  }
+  /** The next piece, or the one before: of the trail being followed, or of the whole collection. From nowhere in particular, the nearest. */
   next(by: 1 | -1): void {
+    const far = (p: plan.Place) => { const at = plan.standing(p, this.back); return Math.hypot(at.x - this.x, at.z - this.z); };
+    const near = (list: plan.Place[]) => list.reduce((a, p) => (far(p) < far(a) ? p : a)).no;
+    // on the way to a piece already: go on from that one
+    const on = this.glide && this.aimed >= 0 ? this.aimed : this.here.piece ? plan.placeOf(this.here.piece)!.no : -1;
+    const stops = this.stops?.length ? this.stops : undefined;
     let no: number;
-    if (this.glide && this.aimed >= 0) no = this.aimed + by;                      // on the way to a piece already: go on from that one
-    else if (this.here.piece) no = plan.placeOf(this.here.piece)!.no + by;
-    else {
-      const far = (p: plan.Place) => { const at = plan.standing(p, this.back); return Math.hypot(at.x - this.x, at.z - this.z); };
-      no = plan.places.reduce((a, p) => (far(p) < far(a) ? p : a)).no;
-    }
+    if (stops) no = on < 0 ? near(stops.map((n) => plan.places[n])) : by > 0 ? stops.find((n) => n > on) ?? stops[stops.length - 1] : [...stops].reverse().find((n) => n < on) ?? stops[0];
+    else no = on < 0 ? near(plan.places) : on + by;
     this.goPiece(plan.places[Math.min(plan.places.length - 1, Math.max(0, no))].id);
   }
 
