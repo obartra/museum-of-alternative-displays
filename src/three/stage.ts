@@ -1,5 +1,6 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { Anaglyph } from './anaglyph';
 import { THREE, type Built } from './kit';
 import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Room } from './room';
 
@@ -42,6 +43,8 @@ export class Stage {
   private eyePlay = 0.1;
   private eyeT0 = 0;
   private viewId: string | null = null;
+  /** Set while the picture is drawn for red and cyan glasses. */
+  private stereo?: Anaglyph;
   private drift = false;
   /** Where the visitor has put the camera, when the room has had to pull it in from there. */
   private free?: THREE.Vector3;
@@ -97,6 +100,13 @@ export class Stage {
   hasView(id: string): boolean { return !!this.piece?.views?.[id]; }
   /** The id of the view that is on, or null for the ordinary turning view. */
   get inView(): string | null { return this.viewId; }
+  get isStereo(): boolean { return !!this.stereo; }
+  /** Draw for red and cyan glasses, or go back to the plain picture. */
+  setStereo(on: boolean): void {
+    if (on && !this.stereo) this.stereo = new Anaglyph(this.renderer, !matchMedia('(pointer: coarse)').matches);
+    if (!on) { this.stereo?.dispose(); this.stereo = undefined; }
+    this.owed = 3;
+  }
   get isPaused(): boolean { return this.paused; }
   setPaused(paused: boolean): void { this.paused = paused; this.owed = 3; }
   /** Have the shaders built off the main thread where the browser can, so the first frame does not stall the page. */
@@ -308,6 +318,12 @@ export class Stage {
     this.glow.intensity = this.piece?.glow ? (1 - L) * 9 * (this.room.glow?.gain ?? 1) : 0;
     (this.scene.background as THREE.Color).set(OUTSIDE).multiplyScalar(0.02 + 0.98 * L);
     this.piece?.update?.({ t: at ?? this.clock, lights: L, camera: this.camera });
+    if (this.stereo) {
+      // whatever is being looked at sits on the glass of the screen: the room falls away behind it
+      const focus = this.camera.position.distanceTo(this.controls?.target ?? new THREE.Vector3(0, this.room.targetY, 0));
+      this.stereo.render(this.scene, this.camera, focus, (eye) => this.room.prepare?.(this.renderer, this.scene, eye));
+      return;
+    }
     this.room.prepare?.(this.renderer, this.scene, this.camera);
     this.renderer.render(this.scene, this.camera);
   }
@@ -329,6 +345,7 @@ export class Stage {
 
   dispose(): void {
     this.stop();
+    this.stereo?.dispose();
     this.ro?.disconnect();
     this.controls?.dispose();
     this.clear();

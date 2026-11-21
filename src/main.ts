@@ -209,7 +209,7 @@ function pieceView(id: string): void {
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}</div>
-    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
+    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
     <a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a>
@@ -241,7 +241,7 @@ function pieceView(id: string): void {
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
   const views = document.getElementById('stage-views')!, still = document.getElementById('stage-poster') as HTMLImageElement;
   const act = (name: string) => wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`)!;
-  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause');
+  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), stereoBtn = act('stereo');
   const HINT = { turn: t('stage.hint.turn'), person: t('stage.hint.person'), detail: t('stage.hint.detail') };
   // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
   let alive = true, live = false, begun = false, seen = true, wantFocus = false;
@@ -315,7 +315,8 @@ function pieceView(id: string): void {
       requestAnimationFrame(() => { cv.classList.add('is-live'); window.setTimeout(() => { if (alive) still.hidden = true; }, 420); });
       for (const b of views.querySelectorAll<HTMLButtonElement>('button')) b.disabled = !!b.dataset.view && !stage.hasView(b.dataset.view);
       if (import.meta.env.DEV) for (const v of places) if (!stage.hasView(v.id)) console.warn(`${p.id}: the view "${v.id}" has words but the model gives it no place`);
-      pauseBtn.disabled = false;
+      pauseBtn.disabled = stereoBtn.disabled = false;
+      stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
       pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause');
       tell(HINT.turn);
       say(lightsOn);
@@ -342,6 +343,11 @@ function pieceView(id: string): void {
     if (name === 'front') { setView(null); stage?.goFront(); }
     if (name === 'home') setView(null);
     if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause'); }
+    if (name === 'stereo' && stage && live) {
+      stage.setStereo(!stage.isStereo);
+      stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
+      if (stage.isStereo) tell(t('stage.stereo.on')); else tell(HINT.turn);
+    }
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));
   });
   document.addEventListener('keydown', onKey);

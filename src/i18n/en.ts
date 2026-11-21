@@ -49,6 +49,8 @@ export const en = {
   'stage.front': 'Front',
   'stage.pause': 'Pause',
   'stage.play': 'Play',
+  'stage.stereo': '3D glasses',
+  'stage.stereo.on': 'Put on red and cyan glasses, with red over the left eye.',
   'stage.expand': 'Expand',
   'stage.close': 'Close',
   'stage.hint.turn': 'Drag to turn. Pinch or scroll to zoom.',
