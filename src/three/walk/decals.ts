@@ -27,26 +27,30 @@ export interface DecalOptions {
  * Nothing hangs for a person without a portrait.
  */
 export function buildDecals(o: DecalOptions): { mesh?: THREE.Mesh; hung: Hung[] } {
-  // a portrait is four wide to five tall, and its two lines of text take a third of its width more. Up to three hang
-  // in the two metres of wall that a piece has, so three are a little smaller than one or two. All stand on one line.
+  // a portrait is four wide to five tall, and its two lines of text take a third of its width more. Up to four hang
+  // in the two metres of wall that a piece has, so three are a little smaller than one or two, and four smaller
+  // again. Four with a stretch of wall to themselves spread over all of it that their own model leaves in view.
+  // All stand on one line.
   const GAP = 0.1, FOOT = FLOOR + 1.32, TALL = 1.25 + 0.33, COLS = 8, CLEAR = 1.85;
   const list: { name: string; piece: string; x: number; w: number }[] = [];
   // the groups, by the stretch of wall each hangs in: a stretch is known by its middle, half way from one block to the next
-  const groups = new Map<number, { piece: string; who: string[]; w: number; span: number; side: number }[]>();
+  const groups = new Map<number, { piece: string; who: string[]; side: number }[]>();
   for (const p of places) {
-    const who = [...new Set((people[p.id]?.people ?? []).flatMap((e) => e.who))].filter((n) => portraits[n]).slice(0, 3);
+    const who = [...new Set((people[p.id]?.people ?? []).flatMap((e) => e.who))].filter((n) => portraits[n]).slice(0, 4);
     if (!who.length) continue;
-    const w = Math.min(0.72, (2.1 - (who.length - 1) * GAP) / who.length), mid = Math.round((p.x + (p.side > 0 ? -PITCH / 2 : PITCH / 2)) * 100) / 100;
-    groups.set(mid, [...(groups.get(mid) ?? []), { piece: p.id, who, w, span: who.length * w + (who.length - 1) * GAP, side: p.side }]);
+    const mid = Math.round((p.x + (p.side > 0 ? -PITCH / 2 : PITCH / 2)) * 100) / 100;
+    groups.set(mid, [...(groups.get(mid) ?? []), { piece: p.id, who, side: p.side }]);
   }
   for (const [mid, here] of groups) for (const g of here) {
+    const n = g.who.length, room = here.length === 1 && n > 3 ? PITCH - CLEAR - GAP : 2.1;
+    const w = Math.min(0.72, (room - (n - 1) * GAP) / n), span = n * w + (n - 1) * GAP;
     // which way its stretch lies from the piece's own block, and where along the hall that block stands
     const dir = g.side > 0 ? -1 : 1, own = mid - (dir * PITCH) / 2;
     // a group starts where the widest model no longer stands in front of it for someone looking at its piece. Two in
     // one stretch change sides at its middle, so that each is in plain view from its own piece
-    const from = here.length === 1 ? CLEAR : PITCH / 2 + GAP / 2, top = dir > 0 ? own + from + g.span : own - from;
+    const from = here.length === 1 ? CLEAR : PITCH / 2 + GAP / 2, top = dir > 0 ? own + from + span : own - from;
     // facing this wall, the hall runs from right to left: the first name hangs furthest along it, and so on the left
-    g.who.forEach((name, i) => list.push({ name, piece: g.piece, w: g.w, x: top - g.w / 2 - i * (g.w + GAP) }));
+    g.who.forEach((name, i) => list.push({ name, piece: g.piece, w, x: top - w / 2 - i * (w + GAP) }));
   }
   if (!list.length) return { hung: [] };
   // one sheet for all of them: each cell is a portrait with two lines of text under it

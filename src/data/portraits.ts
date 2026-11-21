@@ -41,6 +41,12 @@ export const portraits: Record<string, Portrait> = {
   "Juris Upatnieks": { file: "juris-upatnieks.webp", by: "University of Michigan News and Information Services", licence: "CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Professor_Juris_Upatnieks_1963.jpg" },
   "Ivan Sutherland": { file: "ivan-sutherland.webp", by: "Dick Lyon", licence: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Ivan_Sutherland_at_CHM.jpg" },
   "Bob Sproull": { file: "bob-sproull.webp", by: "Marcin Wichary", licence: "CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Bob_Sproull_in_2008.jpg" },
+  "Jingyu Lin": { file: "jingyu-lin.webp", by: "Santasgift", licence: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jingyu_Lin_%28MOCVD%29.jpg" },
+  "Valerie Thomas": { file: "valerie-thomas.webp", by: "NASA", licence: "Public domain", source: "https://commons.wikimedia.org/wiki/File:Valerie_L._Thomas_standing_with_a_stack_of_early_Landsat_Computer_Compatible_Tapes_-_Original.png" },
+  "Mary Lou Jepsen": { file: "mary-lou-jepsen.webp", by: "Maryloujepsen", licence: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Mary_Lou_Jepsen_Headshot_April_2022.png" },
+  "Paul Alivisatos": { file: "paul-alivisatos.webp", by: "The University of Chicago Office of Communications", licence: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Paul_Alivisatos_University_of_Chicago_President_September_2021.png" },
+  "Aleksey Yekimov": { file: "aleksey-yekimov.webp", by: "US Embassy Sweden", licence: "CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:US_Embassy_Sweden_2023_Nobel_Reception_%2853390424929%29_%28cropped%29.jpg" },
+  "Moungi Bawendi": { file: "moungi-bawendi.webp", by: "US Embassy Sweden", licence: "CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:US_Embassy_Sweden_2023_Nobel_Reception_%2853390424864%29_%28cropped%29.jpg" },
 };
 
 /** The file name a portrait is expected under: the name in plain lower-case letters, joined by hyphens. */

@@ -1,14 +1,14 @@
 # Portraits still to do
 
-The labels name 110 people. 32 have a portrait on the site and 78 do not. This file lists those 78, sorted by what each one needs. It is written out from the package of drawings received on 21 November 2026 and from the labels, and it is written again whenever either changes. `PORTRAITS.md` has the whole list and the rules.
+The labels name 110 people. 38 have a portrait on the site and 72 do not. This file lists those 72, sorted by what each one needs. It is written out from the two packages of drawings received on 21 November 2026 and from the labels, and it is written again whenever one of them changes. `PORTRAITS.md` has the whole list and the rules.
 
 | What is needed | People |
 | --- | --- |
-| A first try: these names were added to the labels after the package was made | 14 |
+| A first try: these names were added to the labels after the first package was made | 8 |
 | A picture: the search found none it could trust | 15 |
 | A picture that shows clearly who it is: the check stopped the one used | 2 |
-| A sharper or better picture, then a new drawing | 19 |
-| A picture that is free to publish, or leave to use this one | 28 |
+| A sharper or better picture, then a new drawing | 18 |
+| A picture that is free to publish, or leave to use this one | 29 |
 
 Each person below comes with what is needed to find the right one and not a namesake: the piece and its date, what the label says the person did, where the label says the piece came from, and the pages the label rests on. For anyone already tried, it also quotes what went wrong and names the picture that was used.
 
@@ -16,25 +16,25 @@ A drawing goes on the site when two things hold: its source is in the public dom
 
 ## The women first
 
-None of the 11 women named on the labels has a portrait on the site yet.
+3 of the 11 women named on the labels have a portrait on the site: Jingyu Lin, Valerie Thomas, Mary Lou Jepsen. The table lists all 11.
 
 | Person | Piece | Where it stands |
 | --- | --- | --- |
 | Andrée Tretiakoff | Refreshable braille display | No picture found |
 | Elma Farnsworth | Cathode ray tube | Needs a better picture |
-| Jingyu Lin | MicroLED | Needs a better picture |
-| Vicki Colvin | Quantum-dot display | Not tried yet |
+| Jingyu Lin | MicroLED | On the site |
+| Vicki Colvin | Quantum-dot display | Drawing ready, source not free to publish |
 | Elsa Garmire | Scanned laser | Drawing ready, source not free to publish |
 | Leota Toombs | Projection mapping | Needs a better picture |
 | Susan Hackwood | Electrowetting display | Needs a better picture |
-| Valerie Thomas | Illusion transmitter | Not tried yet |
+| Valerie Thomas | Illusion transmitter | On the site |
 | Elizabeth Downing | Static-volume display | No picture found |
 | Margaret Benyon | Holography | Needs a better picture |
-| Mary Lou Jepsen | Holography | Not tried yet |
+| Mary Lou Jepsen | Holography | On the site |
 
-## Not tried yet (14)
+## Not tried yet (8)
 
-Added to the labels after the package was made, so nobody has looked for a picture of them yet.
+Added to the labels after the first package was made, so nobody has looked for a picture of them yet.
 
 ### Guillermo González Camarena
 
@@ -71,31 +71,10 @@ Added to the labels after the package was made, so nobody has looked for a pictu
 - The label's own line of origin: Donald Bitzer, Gene Slottow and Robert Willson, University of Illinois, for the PLATO teaching system.
 - Pages the label rests on, which tie the name to the work: [Milestones: Color Plasma Television, 1993, Engineering and Technology History Wiki](https://ethw.org/Milestones:Color_Plasma_Television,_1993); [Plasma display (Wikipedia)](https://en.wikipedia.org/wiki/Plasma_display); [PLATO (Wikipedia)](https://en.wikipedia.org/wiki/PLATO_(computer_system)).
 
-### Vicki Colvin (woman)
-
-- Piece: Quantum-dot display, hall 3. Dated 1994.
-- Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
-- The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
-- Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
-
 ### M. C. Schlamp
 
 - Piece: Quantum-dot display, hall 3. Dated 1994.
 - Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
-- The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
-- Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
-
-### Paul Alivisatos
-
-- Piece: Quantum-dot display, hall 3. Dated 1994.
-- Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
-- The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
-- Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
-
-### Aleksey Yekimov
-
-- Piece: Quantum-dot display, hall 3. Dated 1994.
-- Who this is: Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour.
 - The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
 - Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
 
@@ -106,28 +85,7 @@ Added to the labels after the package was made, so nobody has looked for a pictu
 - The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
 - Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
 
-### Moungi Bawendi
-
-- Piece: Quantum-dot display, hall 3. Dated 1994.
-- Who this is: American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry.
-- The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
-- Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
-
-### Valerie Thomas (woman)
-
-- Piece: Illusion transmitter, hall 6. Dated 1980.
-- Who this is: Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there.
-- The label's own line of origin: Valerie Thomas, NASA Goddard Space Flight Center, USA. Patent granted on 21 October 1980.
-- Pages the label rests on, which tie the name to the work: [Valerie Thomas, Biography.com](https://www.biography.com/scientists/valerie-thomas); [Thomas, US patent 4,229,761](https://patents.google.com/patent/US4229761); [Valerie Thomas, Lemelson-MIT](https://lemelson.mit.edu/resources/valerie-thomas); [Valerie Thomas and Landsat, SPIE Photonics Focus (2022)](https://www.spie.org/news/photonics-focus/marapr-2022/valerie-thomas-and-landsat); [Illusion transmitter (Wikipedia)](https://en.wikipedia.org/wiki/Illusion_transmitter).
-
 ### Stephen Benton
-
-- Piece: Holography, hall 7. Dated 1948.
-- Who this is: The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design.
-- The label's own line of origin: Dennis Gabor, British Thomson-Houston, Rugby, England.
-- Pages the label rests on, which tie the name to the work: [Jepsen, Holographic Video: Design and Implementation of a Display System, MIT (1989)](http://hdl.handle.net/1721.1/14173); [The Mark-I Holographic Video Display, MIT Media Lab](https://www.media.mit.edu/spi/HVmark1.htm); [Margaret Benyon, Center for the Holographic Arts](https://holocenter.org/margaret-benyon); [Margaret Benyon (Wikipedia)](https://en.wikipedia.org/wiki/Margaret_Benyon); [Gabor, A New Microscopic Principle, Nature (1948)](https://doi.org/10.1038/161777a0).
-
-### Mary Lou Jepsen (woman)
 
 - Piece: Holography, hall 7. Dated 1948.
 - Who this is: The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design.
@@ -287,7 +245,7 @@ A drawing exists and the check stopped it: either nothing ties the picture to th
 - Why it was stopped: The HNF caption supports the man at the top of the steps, but the face is only a few dozen pixels across. The drawing invents specific facial detail that cannot be validated from this reference. Do not treat it as a validated likeness.
 - Picture used: [HNF Blog: Wenn das Papier den Dreh raushat](https://blog.hnf.de/wenn-das-papier-den-dreh-raushat/), by Xerox Corporation. Licence as the package found it: Unconfirmed; reference only.
 
-## Needs a better picture (19)
+## Needs a better picture (18)
 
 A drawing exists, but the picture behind it is too small, too soft or too altered, so part of the face in the drawing is made up. Each needs a better picture and a new drawing. Where the licence line says the rights are unconfirmed, the new picture must also be free to publish.
 
@@ -362,15 +320,6 @@ A drawing exists, but the picture behind it is too small, too soft or too altere
 - Pages the label rests on, which tie the name to the work: [Organic light-emitting diode (Wikipedia)](https://en.wikipedia.org/wiki/Organic_light-emitting_diode).
 - What is wrong: Named source supports the identity. The small soft face limits validation of the enlarged eye, glasses and tooth detail; the drawing is a plausible interpretation, not an exact transcription.
 - Picture used: [File:Ching W Tang.jpg](https://commons.wikimedia.org/wiki/File:Ching_W_Tang.jpg), by Xiakunlun. Licence as the package found it: CC BY-SA 3.0.
-
-### Jingyu Lin (woman)
-
-- Piece: MicroLED, hall 3. Dated 2000.
-- Who this is: Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000.
-- The label's own line of origin: Hongxing Jiang and Jingyu Lin, Kansas State University, USA.
-- Pages the label rests on, which tie the name to the work: [MicroLED (Wikipedia)](https://en.wikipedia.org/wiki/MicroLED).
-- What is wrong: The correct woman is selected in the landscape photo. Her face is small and angled; the drawing sharpens features and expands the visible smile beyond what can be confidently checked.
-- Picture used: [File:Jingyu Lin.jpg](https://commons.wikimedia.org/wiki/File:Jingyu_Lin.jpg), by Santasgift. Licence as the package found it: CC BY-SA 4.0.
 
 ### Ivan Dryer
 
@@ -462,7 +411,7 @@ A drawing exists, but the picture behind it is too small, too soft or too altere
 - What is wrong: The history-group publication explicitly labels the sitter. Hair, hand-to-cheek pose and smile correspond, but the small low-detail source cannot substantiate the drawing’s finer face and hair contours.
 - Picture used: [Margaret Benyon 1940, 2016, Holographic Pioneer and Artist](https://nottinghamwomenshistory.org.uk/wp-content/uploads/2020/12/Margaret-Benyon.pdf), by Photographer unidentified; reproduced by Nottingham Women’s History Group. Licence as the package found it: Unconfirmed; reference only.
 
-## Drawing ready, source not free to publish (28)
+## Drawing ready, source not free to publish (29)
 
 The drawing passed its check. The picture it was made from is not known to be free to publish, so the drawing stays off the site. Either of two things clears one: a picture of the same person that is in the public domain or under an open licence, and a new drawing from it, or written leave from whoever holds the rights to the picture used.
 
@@ -558,6 +507,15 @@ The drawing passed its check. The picture it was made from is not known to be fr
 - Pages the label rests on, which tie the name to the work: [Field-emission display (Wikipedia)](https://en.wikipedia.org/wiki/Field-emission_display).
 - Picture used: [Spindt cold cathode for displays - SRI](https://www.sri.com/hoi/spindt-cold-cathode-for-displays/), photographer not named on its page. Licence as the package found it: Unconfirmed; reference only.
 - From the check: Correct sole subject selected; swept hair, profile and buttoned shirt correspond.
+
+### Vicki Colvin (woman)
+
+- Piece: Quantum-dot display, hall 3. Dated 1994.
+- Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
+- The label's own line of origin: Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots.
+- Pages the label rests on, which tie the name to the work: [Nobel Chemistry Prize 2023, Tecnológico de Monterrey](https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/); [Colvin, Schlamp and Alivisatos, Nature (1994)](https://doi.org/10.1038/370354a0); [The Nobel Prize in Chemistry 2023, press release](https://www.nobelprize.org/prizes/chemistry/2023/press-release/); [Quantum dot display (Wikipedia)](https://en.wikipedia.org/wiki/Quantum_dot_display).
+- Picture used: [File:Vicki Colvin Picture.jpg](https://commons.wikimedia.org/wiki/File:Vicki_Colvin_Picture.jpg), by Amacadams. Licence as the package found it: CC BY-SA 4.0 on the file page, not confirmed.
+- From the check: From the second package of 21 November 2026. The drawing follows its picture. The rights are the open question. The file page calls the picture the uploader's own work, made on 3 October 2014, and it was uploaded on 19 December 2018 as a small copy of 320 by 480 pixels with no camera data. The package's own notes say the same photograph is in Brown University's announcement of 20 May 2014, which is months earlier, on a page marked as Brown's copyright. Nothing on the file page shows that Brown or the photographer agreed to the licence. Clear it with leave from one of them, or use another picture.
 
 ### James Fergason
 

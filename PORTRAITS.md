@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 110 people, and 32 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 110 people, and 38 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model from a photograph or an earlier portrait. One is shown only when two things hold: its source is in the public domain or under an open licence, and the check of who it shows and how closely it follows its source has passed. A drawing made from a picture whose rights are not confirmed stays off the site, and so does one that still needs a second look.
 
@@ -81,13 +81,13 @@ Take the picture from the person's own article or file page, where the caption s
 | Ching Wan Tang | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. |  | `public/people/ching-wan-tang.jpg` |
 | Steven Van Slyke | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. | yes | `public/people/steven-van-slyke.webp` |
 | Hongxing Jiang | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | yes | `public/people/hongxing-jiang.webp` |
-| Jingyu Lin | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. |  | `public/people/jingyu-lin.jpg` |
+| Jingyu Lin | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | yes | `public/people/jingyu-lin.webp` |
 | Vicki Colvin | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. |  | `public/people/vicki-colvin.jpg` |
 | M. C. Schlamp | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. |  | `public/people/m-c-schlamp.jpg` |
-| Paul Alivisatos | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. |  | `public/people/paul-alivisatos.jpg` |
-| Aleksey Yekimov | Quantum-dot display | Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour. |  | `public/people/aleksey-yekimov.jpg` |
+| Paul Alivisatos | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | yes | `public/people/paul-alivisatos.webp` |
+| Aleksey Yekimov | Quantum-dot display | Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour. | yes | `public/people/aleksey-yekimov.webp` |
 | Louis Brus | Quantum-dot display | Proved the same effect in particles floating freely in a liquid. |  | `public/people/louis-brus.jpg` |
-| Moungi Bawendi | Quantum-dot display | American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry. |  | `public/people/moungi-bawendi.jpg` |
+| Moungi Bawendi | Quantum-dot display | American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry. | yes | `public/people/moungi-bawendi.webp` |
 | Tuomo Suntola | Thin-film electroluminescent panel | Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels. | yes | `public/people/tuomo-suntola.webp` |
 | Nicholas Sheridon | Flexible display | Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center. |  | `public/people/nicholas-sheridon.jpg` |
 
@@ -133,7 +133,7 @@ Take the picture from the person's own article or file page, where the caption s
 |---|---|---|---|---|
 | Henry Dircks | Pepper's ghost | Engineer who devised the illusion. | yes | `public/people/henry-dircks.webp` |
 | John Henry Pepper | Pepper's ghost | Staged it at the Royal Polytechnic Institution in London in 1862, and it took his name. | yes | `public/people/john-henry-pepper.webp` |
-| Valerie Thomas | Illusion transmitter | Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there. |  | `public/people/valerie-thomas.jpg` |
+| Valerie Thomas | Illusion transmitter | Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there. | yes | `public/people/valerie-thomas.webp` |
 | Karri Palovuori | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. |  | `public/people/karri-palovuori.jpg` |
 | Ismo Rakkolainen | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. |  | `public/people/ismo-rakkolainen.jpg` |
 | Joseph Plateau | Persistence of vision display | Used the effect in his spinning picture discs of 1832. | yes | `public/people/joseph-plateau.webp` |
@@ -164,7 +164,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Juris Upatnieks | Holography | Published the off-axis method of recording holograms in 1962. | yes | `public/people/juris-upatnieks.webp` |
 | Margaret Benyon | Holography | Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later. |  | `public/people/margaret-benyon.jpg` |
 | Stephen Benton | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. |  | `public/people/stephen-benton.jpg` |
-| Mary Lou Jepsen | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. |  | `public/people/mary-lou-jepsen.jpg` |
+| Mary Lou Jepsen | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. | yes | `public/people/mary-lou-jepsen.webp` |
 | Ivan Sutherland | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/ivan-sutherland.webp` |
 | Bob Sproull | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/bob-sproull.webp` |
 | Kazuo Yoshinaka | Virtual retinal display | Proposed the display at Nippon Electric in Japan in 1986. |  | `public/people/kazuo-yoshinaka.jpg` |
