@@ -253,7 +253,12 @@ function pieceView(id: string): void {
     for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(b.dataset.view === v?.id));
     tell(v ? v.hint ?? HINT[v.kind] : HINT.turn);
   };
-  const setFull = (full: boolean) => {
+  // Full view takes one step in the browser's history, so the back button of a phone closes it and stays on the page.
+  let stepped = false;
+  const setFull = (full: boolean, byBack = false) => {
+    if (full === wrap.classList.contains('is-full')) return;
+    if (full) { try { history.pushState({ full: true }, ''); stepped = true; } catch { stepped = false; } }
+    else if (stepped) { stepped = false; if (!byBack) history.back(); }
     wrap.classList.toggle('is-full', full);
     fullBtn.textContent = t(full ? 'stage.close' : 'stage.expand');
     document.body.style.overflow = full ? 'hidden' : '';
@@ -335,6 +340,8 @@ function pieceView(id: string): void {
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));
   });
   document.addEventListener('keydown', onKey);
+  const onBack = () => setFull(false, true);
+  window.addEventListener('popstate', onBack);
   const relight = (on: boolean) => { if (live) stage?.setLights(on); say(on); };
   lightListeners.add(relight);
   // nothing is drawn while the stage is scrolled out of the window
@@ -354,7 +361,8 @@ function pieceView(id: string): void {
   leave = () => {
     alive = false; live = false;
     unwire();
-    setFull(false);
+    window.removeEventListener('popstate', onBack);
+    setFull(false, true);
     watch.disconnect();
     document.removeEventListener('keydown', onKey);
     lightListeners.delete(relight);

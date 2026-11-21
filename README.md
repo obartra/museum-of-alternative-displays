@@ -45,6 +45,10 @@ Node 22 or newer.
 | `src/data/pieces/h1.ts` to `h7.ts` | The catalogue, one file per hall. Text, dates, sources. |
 | `src/data/halls.ts`, `schema.ts` | Halls and the shape of a piece. |
 | `src/data/views.ts` | The words for each piece's own places to look from: the button and a line about what to notice. |
+| `src/data/media.ts`, `public/media/` | Archive pictures and films from Wikimedia Commons, with captions and full credits. `scripts/media.mjs` rebuilds the files from `scripts/media.json`. |
+| `src/archive.ts` | The "From the archive" row on a piece page, its viewer, and the credits list. |
+| `src/i18n/en.ts` | Every word of the interface, in English. The list a translation has to cover. |
+| `src/i18n/locales/` | One file per language, with the interface and the whole collection in that language. Loaded on demand. |
 | `public/posters/` | A still picture of every piece by day and by night, in two sizes. Lists show these, and a piece page shows one until its model is running. Made by `scripts/posters.mjs`. |
 | `src/three/models/h1.ts` to `h7.ts` | One model builder per piece. |
 | `src/three/kit.ts` | Materials and shapes shared by every model: glass, finishes, eased edges, glow, and portals for things seen through other things. |
@@ -58,6 +62,24 @@ Node 22 or newer.
 | `scripts/validate.ts` | The collection's rules as code. |
 | `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
 | `scripts/mock.ts` | Regenerates the concept sheets and mockups from before the build. |
+
+## Languages
+
+English is the source and lives with the data. Another language is one file in
+`src/i18n/locales/`, named by its code, that default-exports a `Locale` (see
+`src/i18n/types.ts`): the interface words, the labels, and the text of every hall, piece,
+view and archive picture. `npm run check` fails if a language lacks anything the English
+says, and prints any figure that appears in the English but not in the translation, so a
+dropped date gets a second look. The header shows the language menu as soon as one such
+file exists. A first visit follows the browser's language. The choice is remembered.
+
+## Archive pictures
+
+Only public domain, CC0, CC BY and CC BY-SA files from Wikimedia Commons, hosted here at web
+sizes. Each entry in `src/data/media.ts` carries its author, licence, source page and what
+was changed, and `npm run check` refuses an entry without them, a licence outside that
+list, or a file that is missing or too heavy. No portraits, and no pictures whose subject
+is someone else's copyrighted work.
 
 ## Adding a piece
 

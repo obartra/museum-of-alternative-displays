@@ -245,6 +245,12 @@ h1, h2, h3 { text-wrap: balance; }
 @media (max-width: 899px) {
   .archive__row { margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
 }
+/* with a mouse a sideways row is awkward to reach, and a desk has height to spare: the mounts wrap instead */
+@media (min-width: 900px) {
+  .archive__row { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 20px 16px; overflow: visible; padding: 0; }
+  .archive__row .mount { width: auto; }
+  .archive__row--one { grid-template-columns: minmax(0, 440px); }
+}
 
 /* one picture large, with its record: the picture takes the room, the words sit below it on a phone and beside it on a desk */
 .viewer { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--wash); color: var(--ink); overflow: hidden; }
