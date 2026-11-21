@@ -33,6 +33,8 @@ export const en = {
 
   'entrance.lead': '{n} ways to make a picture. The screen in front of you uses one of them.',
   'entrance.intro': 'Turn each one around. Switch the daylight off to see which ones still show a picture at night. Read how each one works, what it is good at and where it fails, and check the sources.',
+  'entrance.start': 'Start in hall 1',
+  'entrance.browse': 'Look through the index',
   'board.label': 'Directory of halls',
   'board.hall': 'Hall',
   'board.pieces': 'Pieces',

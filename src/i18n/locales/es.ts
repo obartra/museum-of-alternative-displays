@@ -36,6 +36,8 @@ const locale: Locale = {
 
     'entrance.lead': '{n} maneras de formar una imagen. La pantalla que tienes delante usa una de ellas.',
     'entrance.intro': 'Gira cada pieza. Apaga la luz del día para ver cuáles siguen mostrando una imagen de noche. Lee cómo funciona cada una, qué hace bien y dónde falla, y comprueba las fuentes.',
+    'entrance.start': 'Empieza por la sala 1',
+    'entrance.browse': 'Consulta el índice',
     'board.label': 'Directorio de salas',
     'board.hall': 'Sala',
     'board.pieces': 'Piezas',

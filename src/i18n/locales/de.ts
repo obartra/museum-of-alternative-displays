@@ -35,6 +35,8 @@ const locale: Locale = {
 
     'entrance.lead': '{n} Arten, ein Bild zu erzeugen. Der Bildschirm vor Ihnen nutzt eine davon.',
     'entrance.intro': 'Drehen Sie jedes Exponat nach allen Seiten. Schalten Sie das Tageslicht aus und sehen Sie, welche auch nachts noch ein Bild zeigen. Lesen Sie, wie jedes funktioniert, was es gut kann und woran es scheitert, und prüfen Sie die Quellen.',
+    'entrance.start': 'In Saal 1 beginnen',
+    'entrance.browse': 'Im Verzeichnis stöbern',
     'board.label': 'Übersicht der Säle',
     'board.hall': 'Saal',
     'board.pieces': 'Exponate',

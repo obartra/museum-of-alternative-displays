@@ -123,13 +123,16 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
   };
 }
 
-/** Every archive picture in the museum with its full credit, for the about page. */
+/** Every archive picture in the museum with its full credit, for the about page: one block for each piece. */
 export function creditsList(): string {
-  const rows: string[] = [];
-  for (const p of pieces) for (const m of archiveOf(p.id)) {
-    rows.push(`<li><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a>: <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${tx('archive.by', { author: m.credit.author })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. ${esc(m.credit.changes)}.</li>`);
+  const blocks: string[] = [];
+  for (const p of pieces) {
+    const list = archiveOf(p.id);
+    if (!list.length) continue;
+    const lines = list.map((m) => `<li><a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${tx('archive.by', { author: m.credit.author })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. <span${standIn.media(p.id, m.id)}>${esc(m.credit.changes)}</span>.</li>`);
+    blocks.push(`<li><a class="credits__piece" href="#piece-${p.id}">${esc(said.piece(p).name)}</a><ul>${lines.join('')}</ul></li>`);
   }
-  return rows.length ? `<ul class="credits">${rows.join('')}</ul>` : '';
+  return blocks.length ? `<ul class="credits">${blocks.join('')}</ul>` : '';
 }
 
 export const archiveCount = (): number => Object.values(media).reduce((n, list) => n + list.length, 0);

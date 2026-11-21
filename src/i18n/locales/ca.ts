@@ -36,6 +36,8 @@ const locale: Locale = {
 
     'entrance.lead': "{n} maneres de fer una imatge. La pantalla que tens al davant en fa servir una.",
     'entrance.intro': "Fes girar cada peça. Apaga la llum del dia per veure quines encara mostren una imatge de nit. Llegeix com funciona cadascuna, què fa bé i on falla, i comprova'n les fonts.",
+    'entrance.start': "Comença per l'àmbit 1",
+    'entrance.browse': "Consulta l'índex",
     'board.label': "Directori d'àmbits",
     'board.hall': "Àmbit",
     'board.pieces': "Peces",

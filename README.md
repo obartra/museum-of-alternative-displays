@@ -63,6 +63,7 @@ Node 22 or newer.
 | `src/main.ts` | Pages and routing. |
 | `scripts/validate.ts` | The collection's rules as code. |
 | `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
+| `docs/design-review.md` | A review of the interface on phone and desktop: what was looked at, what was changed, what was left. |
 
 ## Languages
 

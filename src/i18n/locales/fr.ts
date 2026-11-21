@@ -37,6 +37,8 @@ const locale: Locale = {
 
     'entrance.lead': '{n}\u00a0façons de faire une image. L’écran que vous avez devant vous en utilise une.',
     'entrance.intro': 'Faites tourner chaque pièce. Éteignez la lumière du jour pour voir lesquelles montrent encore une image la nuit. Lisez comment chacune fonctionne, ce qu’elle fait bien et où elle échoue, et vérifiez les sources.',
+    'entrance.start': 'Commencer par la galerie 1',
+    'entrance.browse': 'Consulter l’index',
     'board.label': 'Tableau des galeries',
     'board.hall': 'Galerie',
     'board.pieces': 'Pièces',

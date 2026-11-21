@@ -141,6 +141,7 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -243,7 +244,7 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: x.name })}" fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>${tx('stage.start')}</button></div>
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
+    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
@@ -380,7 +381,7 @@ function pieceView(id: string): void {
       pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause');
       tell(HINT.turn);
       say(lightsOn);
-      if (askedFor && stage.hasView(askedFor)) setView(askedFor);
+      if (askedFor === '@front') stage.goFront(); else if (askedFor && stage.hasView(askedFor)) setView(askedFor);
       askedFor = null;
       if (wantFocus) cv.focus();
       const surf = stage.surface;
@@ -403,8 +404,9 @@ function pieceView(id: string): void {
     // a place to look from starts the model if it is not running yet, and goes there once it is
     if (el.dataset.view) { if (live) setView(el.dataset.view); else { askedFor = el.dataset.view; void go(); } }
     if (name === 'start') { wantFocus = true; void go(); }
-    if (name === 'front') { setView(null); stage?.goFront(); }
-    if (name === 'home') setView(null);
+    if ((name === 'front' || name === 'home') && !live) { askedFor = name === 'front' ? '@front' : null; void go(); }
+    else if (name === 'front') { setView(null); stage?.goFront(); }
+    else if (name === 'home') setView(null);
     if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause'); }
     if (name === 'stereo' && stage && live) {
       stage.setStereo(!stage.isStereo);

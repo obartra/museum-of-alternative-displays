@@ -32,6 +32,8 @@ const locale: Locale = {
 
     'entrance.lead': '{n}种显示画面的方法。你眼前这块屏幕用的是其中一种。',
     'entrance.intro': '把每件展品都转着看一看。关掉日光，看哪些展品到了夜里还能显示画面。读一读每件展品怎样工作、长处是什么、短处在哪里，再核对一下资料来源。',
+    'entrance.start': '从1号展厅开始',
+    'entrance.browse': '查看索引',
     'board.label': '展厅一览',
     'board.hall': '展厅',
     'board.pieces': '展品',
