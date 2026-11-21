@@ -11,6 +11,7 @@ import { existsSync, readdirSync, statSync } from 'node:fs';
 import { facts } from '../src/data/facts';
 import { people } from '../src/data/people';
 import { portraits } from '../src/data/portraits';
+import { tourFault, tours } from '../src/data/tours';
 import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
@@ -68,6 +69,12 @@ for (const [id, c] of Object.entries(people)) {
     try { host = new URL(s.url).hostname; } catch { fail(id, `bad source URL ${s.url}`); }
     if (BANNED_HOSTS.test(host)) fail(id, `shops and video hosts are not sources: ${host}`);
   }
+}
+// a guided tour stops where its trail stops, and is written without the dashes the site does not use
+for (const tour of tours) {
+  const fault = tourFault(tour);
+  if (fault) errors.push(`tour ${tour.id}: ${fault}`);
+  for (const part of tour.parts) if (DASH.test(part.title + part.text.join(' '))) errors.push(`tour ${tour.id}, ${part.id}: no em dashes or double hyphens`);
 }
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in
 {
@@ -257,8 +264,18 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
     clean(`archive picture ${id}/${m.id}`, x.caption + x.alt + x.changes);
     sameFigures(`${id}/${m.id}`, m.caption + (m.year ?? ''), x.caption + (x.year ?? ''));
   }
+  for (const tour of tours) {
+    const own = loc.tours?.[tour.id];
+    if (!own) { later(`tour ${tour.id}`); continue; }
+    for (const part of tour.parts) {
+      const x = own.parts[part.id];
+      if (!x?.title?.trim() || x.text?.length !== part.text.length || x.text.some((line) => !line?.trim())) { say(`tour ${tour.id}, ${part.id}: should have a title and ${part.text.length} paragraphs, as the English has`); continue; }
+      clean(`tour ${tour.id}, ${part.id}`, x.title + x.text.join('\n'));
+      sameFigures(`tour ${tour.id}, ${part.id}`, part.text.join('\n'), x.text.join('\n'));
+    }
+  }
   const wait = owed[code] ?? [];
-  const kindsOwed = ['fact', 'People section', 'view', 'archive picture'].map((k) => [k, wait.filter((w) => w.startsWith(k + ' ')).length] as const).filter(([, n]) => n);
+  const kindsOwed = ['fact', 'People section', 'view', 'archive picture', 'tour'].map((k) => [k, wait.filter((w) => w.startsWith(k + ' ')).length] as const).filter(([, n]) => n);
   console.log(`language ${code}: ${Object.keys(loc.ui ?? {}).length} interface strings, ${Object.keys(loc.pieces ?? {}).length} pieces` + (wait.length ? `, still in English: ${kindsOwed.map(([k, n]) => `${n} ${k}${n > 1 ? 's' : ''}`).join(', ')}` : ''));
 }
 if (doubts.length) console.log(`\n${doubts.length} figure(s) to look at in the translations:\n` + doubts.slice(0, 40).map((d) => '  ' + d).join('\n'));

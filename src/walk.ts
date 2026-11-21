@@ -1,6 +1,8 @@
 import { halls } from './data/halls';
 import { people } from './data/people';
 import { trailById, trails } from './data/trails';
+import { tourStops } from './data/tours';
+import { partHtml, toursNow } from './tour';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -59,6 +61,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   </div>
 </div>
 <p class="walk__where" id="walk-where" aria-live="polite"></p>
+<div class="guide" id="walk-guide" hidden></div>
 <div class="walk__plan" id="walk-plan" role="group" aria-label="${tx('walk.plan')}" style="--long: ${plan.LENGTH}; --wide: ${2 * plan.HALF}">
   ${halls.map((h) => { const b = plan.bayOf(h.id), long = b.to - b.from, clear = (h.id === 1 ? 2 : 1) * plan.PITCH - plan.BLOCK / 2; return `<button type="button" class="walk__bay" data-hall="${h.id}" data-bay="${h.id}" style="flex-grow: ${long}; --at: ${(((h.id === 1 ? 0.62 : 0.5) * clear / long) * 100).toFixed(2)}%" disabled><span aria-hidden="true">${h.id}</span><span class="vh">${tx('nav.hall', { n: h.id, name: hallName(h.id) })}</span></button>`; }).join('')}
   <svg class="walk__blocks" viewBox="0 ${-plan.HALF} ${plan.LENGTH} ${2 * plan.HALF}" preserveAspectRatio="none" aria-hidden="true" focusable="false">
@@ -120,6 +123,28 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     for (const b of planEl.querySelectorAll<SVGElement>('[data-piece]')) b.classList.toggle('is-here', b.dataset.piece === w.piece);
     goto.value = w.piece ?? '';
     if (w.piece) { last = w.piece; mark(); }
+    tellGuide(w.piece);
+  };
+  /**
+   * The guided tour of the trail being followed, where the language tells one. Before the first stop the guide says
+   * the opening words. At a stop she says its part, and goes on saying it while the visitor walks on, until the
+   * next stop. The closing words follow the last stop. A part is drawn once, so that a recording is not cut off.
+   */
+  const guide = document.getElementById('walk-guide')!;
+  let guided = '', wordsOpen = false;
+  // a visitor who opened the words wants them open at the next stop too
+  guide.addEventListener('toggle', (e) => { const d = e.target as HTMLDetailsElement; if (d.matches?.('details.tour__words')) wordsOpen = d.open; }, true);
+  const tellGuide = (piece?: string) => {
+    const tour = trailNow ? toursNow().find((x) => trailById(x.id)?.stops === trailNow) : undefined;
+    if (!tour) { guided = ''; guide.hidden = true; guide.innerHTML = ''; return; }
+    const stops = tourStops(tour).map((x) => x.id), was = guided.startsWith(`${tour.id}:`) ? guided.slice(tour.id.length + 1) : '';
+    const at = piece && stops.includes(piece) ? piece : was || 'start';
+    if (guided === `${tour.id}:${at}`) return;
+    guided = `${tour.id}:${at}`;
+    const o = { heading: 'h2', fold: true, open: wordsOpen, walk: true } as const;
+    guide.innerHTML = partHtml(tour, at, o) + (at === stops[stops.length - 1] ? `<div class="guide__end">${partHtml(tour, 'end', o)}</div>` : '')
+      + `<p class="guide__more"><a href="#tour-${tour.id}">${tx('tour.whole')}</a></p>`;
+    guide.hidden = false;
   };
   const fail = (text: string) => { hint.textContent = ''; note.textContent = text; startBtn.hidden = true; };
 
@@ -249,6 +274,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (tr) planEl.dataset.trail = tr.id; else delete planEl.dataset.trail;
     try { if (tr) localStorage.setItem('trail', tr.id); else localStorage.removeItem('trail'); } catch { /* remembering is a courtesy */ }
     trailNow = tr?.stops;
+    guided = ''; tellGuide(last || undefined);
     gallery?.follow(trailNow);
     if (go && tr && gallery) gallery.next(1);
   };

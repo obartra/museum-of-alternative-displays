@@ -102,6 +102,36 @@ paragraphs. It also prints any figure that the English has and the translation l
 dropped date gets a second look. It reads "10,197", "10.197" and "10 197" as one figure,
 and it knows that "130 million" and "1.3亿" are the same.
 
+## Guided tours
+
+A guided tour is a story told along a trail. `src/data/tours.ts` holds it: a few words
+before the first stop, a part for each stop of the trail, and a few words at the end. It is
+written to be spoken, and it adds no facts to the labels: everything in it is on the label
+of the piece it is told at. What it adds is the thread from one stop to the next.
+
+The tour has a page of its own, `#tour-women`, and in the walk the guide's words appear as
+the visitor reaches each stop of the trail. A language offers a tour only when it tells all
+of it, and the translations are in the PO files with everything else. A tour marked `draft`
+is not linked from anywhere. Its own address opens it, and shows that visitor the rest.
+
+### Having a tour spoken
+
+`scripts/tour-audio.ts` has ElevenLabs speak each part, in each language that tells the
+tour and that the model can speak. The workflow **Tour audio** runs it:
+
+1. Add the key of the ElevenLabs account as a repository secret called
+   `ELEVENLABS_API_KEY` (Settings, Secrets and variables, Actions).
+2. Run the workflow with "List the voices to choose from". Its summary lists the women's
+   voices of the account, each with a sample to listen to.
+3. Put the id of the voice in `tour/voices.json`: under `default` for one guide in every
+   language, or under a language code for a voice of its own.
+4. Run it with "Say how many characters it would send", then with "Record what is missing
+   or out of date". The recordings are kept in `public/tour/` and the site is deployed.
+
+The site offers a recording only beside the very words it was made from. When a part is
+reworded it falls silent until the workflow is run again, and only that part is recorded
+again. The words are always on the page, so the tour works without sound.
+
 ## Archive pictures
 
 Only public domain, CC0, CC BY and CC BY-SA files from open archives, hosted here at web

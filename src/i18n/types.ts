@@ -36,6 +36,8 @@ export type HallText = Pick<Hall, 'name' | 'intro'>;
 export type ViewText = Pick<ViewInfo, 'label' | 'hint'>;
 export interface CreditText { did: string[]; note?: string }
 export type MediaText = Pick<Media, 'caption' | 'alt' | 'year'> & { changes: string };
+/** A guided tour as a language tells it: every part under its id, each a title and its paragraphs. */
+export interface TourText { title: string; lead: string; parts: Record<string, { title: string; text: string[] }> }
 
 /** Everything a language has to say. The build checks each one against the English. */
 export interface Locale {
@@ -52,6 +54,8 @@ export interface Locale {
   media: Record<string, Record<string, MediaText>>;
   /** The People section of each piece: what each line says, in the order of the English, and the note under them. */
   people?: Record<string, CreditText>;
+  /** The guided tours. A tour is here only when the language tells all of it. */
+  tours?: Record<string, TourText>;
   /** For a language with more than two forms for a number: the sentence for each form, under the name of the sentence. */
   plural?: Record<string, Partial<Record<Intl.LDMLPluralRule, string>>>;
 }

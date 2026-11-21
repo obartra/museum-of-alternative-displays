@@ -3,8 +3,9 @@ import type { Media } from '../data/media';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Hall, type Need, type Piece, type Principle, type SourceKind, type Status } from '../data/schema';
 import type { Credit } from '../data/people';
 import type { ViewInfo } from '../data/views';
+import type { Tour } from '../data/tours';
 import { en, type UiKey } from './en';
-import { LANGS, SOURCE_KIND, type CreditText, type HallText, type Lang, type LangInfo, type Locale, type PieceText, type ViewText } from './types';
+import { LANGS, SOURCE_KIND, type CreditText, type HallText, type Lang, type LangInfo, type Locale, type PieceText, type TourText, type ViewText } from './types';
 
 export * from './types';
 
@@ -78,6 +79,8 @@ export const said = {
     const own = loc?.people?.[pieceId];
     return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
   },
+  /** A guided tour. A language that does not tell it has none: the tour is offered only where it is told. */
+  tour: (tour: Tour): TourText | undefined => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
   status: (s: Status): string => loc?.status[s] ?? STATUS_LABEL[s],
   principle: (p: Principle): string => loc?.principle[p] ?? PRINCIPLE_LABEL[p],
   need: (n: Need): string => loc?.need[n] ?? NEED_LABEL[n],

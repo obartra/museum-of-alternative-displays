@@ -1,0 +1,62 @@
+name: Tour audio
+
+# Has the guided tours spoken by ElevenLabs and puts the recordings on the site.
+# It runs only when someone starts it by hand, and it needs the repository secret ELEVENLABS_API_KEY.
+on:
+  workflow_dispatch:
+    inputs:
+      what:
+        description: What to do
+        type: choice
+        default: List the voices to choose from
+        options:
+          - List the voices to choose from
+          - Say how many characters it would send
+          - Record what is missing or out of date
+      langs:
+        description: Languages, by code and with commas between them. Empty means all.
+        required: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: tour-audio
+  cancel-in-progress: false
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run i18n
+      - name: ElevenLabs
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          WHAT: ${{ inputs.what }}
+          LANGS: ${{ inputs.langs }}
+        run: |
+          case "$WHAT" in
+            List*) npx tsx scripts/tour-audio.ts --voices ;;
+            Say*) npx tsx scripts/tour-audio.ts --dry ${LANGS:+--langs "$LANGS"} ;;
+            *) npx tsx scripts/tour-audio.ts ${LANGS:+--langs "$LANGS"} ;;
+          esac
+      - name: Keep the recordings
+        if: startsWith(inputs.what, 'Record')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/tour src/data/tour-audio.json
+          if git diff --cached --quiet; then echo "Nothing new to keep."; exit 0; fi
+          git commit -m "Tour audio"
+          git push
+          # a push made by a workflow does not start the deploy by itself
+          gh workflow run deploy.yml --ref main

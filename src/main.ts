@@ -11,6 +11,8 @@ import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
 import { trails } from './data/trails';
+import { tourById } from './data/tours';
+import { keepTrail, preview, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -143,7 +145,7 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a>${toursNow().map((tour) => `<a class="btn" href="#tour-${tour.id}">${tx('tour.label')}: ${esc(said.tour(tour)!.title)}</a>`).join('')}</p>
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -262,7 +264,7 @@ function peopleView(): void {
   <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
   <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${pill('women', tx('people.women'))}</fieldset></form>
   <p class="count" id="who-count" role="status"></p>
-  <p class="ways" id="who-walk" hidden><a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a></p>
+  <p class="ways" id="who-walk" hidden><a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a>${toursNow().filter((tour) => tour.id === trails[0]?.id).map((tour) => `<a class="btn" href="#tour-${tour.id}">${tx('tour.take')}</a>`).join('')}</p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
 </div>`, undefined, 'people');
   const rows = document.getElementById('who-rows')!, tally = document.getElementById('who-count')!;
@@ -283,9 +285,20 @@ function peopleView(): void {
     tally.textContent = t('people.count', { n: names.size });
     document.getElementById('who-walk')!.hidden = !women;
   };
-  document.getElementById('who-walk')!.addEventListener('click', (ev) => { const id = (ev.target as HTMLElement).closest<HTMLElement>('[data-trail]')?.dataset.trail; try { if (id) localStorage.setItem('trail', id); } catch { /* the walk opens without it */ } });
+  document.getElementById('who-walk')!.addEventListener('click', keepTrail);
   document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = (ev.target as HTMLInputElement).value as '' | 'women'; draw(); });
   draw();
+}
+
+// ---------- guided tour ----------
+function tourView(id: string): void {
+  const tour = tourById(id);
+  if (!tour || !said.tour(tour)) return notFound();
+  if (tour.draft) preview();
+  document.title = titled(said.tour(tour)!.title);
+  shell(tourPageHtml(tour));
+  app.addEventListener('click', keepTrail);
+  leave = () => app.removeEventListener('click', keepTrail);
 }
 
 // ---------- piece ----------
@@ -597,6 +610,7 @@ function about(): void {
       <p>${tx('about.pictures.2')}</p>
       ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
       ${Object.keys(portraits).length ? `<p>${tx('about.portraits')}</p>` : ''}
+      ${toursNow().length ? `<p>${tx('about.tour')}</p>` : ''}
       ${held ? `<h2 class="h-sec">${tx('about.credits')}</h2><p>${tx('about.credits.1', { n: held })}</p>${creditsList()}` : ''}
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
@@ -671,7 +685,7 @@ function route(): void {
   leave?.(); leave = null;
   // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
-  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name);
+  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), tour = /^tour-([a-z0-9-]+)$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   // the workshop that photographs the pieces for the walk: `scripts/cutouts.mjs` drives it
@@ -683,6 +697,7 @@ function route(): void {
   else if (name === 'about') about();
   else if (name === 'people') peopleView();
   else if (walk) walkView(walk[1]);
+  else if (tour) tourView(tour[1]);
   else notFound();
   fitPlates();
   window.scrollTo(0, 0);

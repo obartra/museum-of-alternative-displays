@@ -13,8 +13,9 @@ import { media } from '../../src/data/media';
 import { people } from '../../src/data/people';
 import { pieces } from '../../src/data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL } from '../../src/data/schema';
+import { tours } from '../../src/data/tours';
 import { views } from '../../src/data/views';
-import { SOURCE_KIND, type CreditText, type Locale, type MediaText, type PieceText, type ViewText } from '../../src/i18n/types';
+import { SOURCE_KIND, type CreditText, type Locale, type MediaText, type PieceText, type TourText, type ViewText } from '../../src/i18n/types';
 
 export interface Slot {
   /** The name of the sentence: the msgctxt of its entry. */
@@ -98,6 +99,16 @@ export function slots(): Slot[] {
   changePatterns().forEach((pattern, i) => out.push({ key: `changes.${i + 1}`, en: pattern, note: marked(pattern, 'What was done to an archive picture or film before it was put on the site.'), where: 'archive' }));
   out.push({ key: 'year', en: YEAR, note: `A year standing alone under an archive picture, as in "1930". Most languages leave it as it is, and some add a word to it. ${MARKS}`, where: 'archive' });
   out.push({ key: 'about', en: ABOUT, note: `Before a year that is not certain, as in "about 1930". ${MARKS}`, where: 'archive' });
+  for (const tour of tours) {
+    const k = `tour.${tour.id}`, where = `tour-${tour.id}`;
+    out.push({ key: `${k}.title`, en: tour.title, note: 'Title of a guided tour.', where });
+    out.push({ key: `${k}.lead`, en: tour.lead, note: 'One sentence under the title of the tour, saying what it is.', where });
+    for (const part of tour.parts) {
+      const at = part.id === 'start' ? 'before the first stop' : part.id === 'end' ? 'after the last stop' : `at the piece ${pieces.find((p) => p.id === part.id)?.name ?? part.id}`;
+      out.push({ key: `${k}.${part.id}.title`, en: part.title, note: `Guided tour, ${at}: the title of this part.`, where });
+      part.text.forEach((t, i) => out.push({ key: `${k}.${part.id}.text.${i + 1}`, en: t, note: `Guided tour, ${at}: what the guide says, paragraph ${i + 1} of ${part.text.length}. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.`, where }));
+    }
+  }
   return out;
 }
 
@@ -148,6 +159,12 @@ export function fromLocale(loc: Locale, code: string): { said: Said; notes: stri
       if (y && own.year?.includes(y[1])) { const words = own.year.replace(y[1], '{n}'); abouts.set(words, (abouts.get(words) ?? 0) + 1); }
       if (m.year && /^\d{4}$/.test(m.year) && own.year?.includes(m.year)) { const words = own.year.replace(m.year, '{n}'); years.set(words, (years.get(words) ?? 0) + 1); }
     }
+  }
+  for (const tour of tours) {
+    const own = loc.tours?.[tour.id], k = `tour.${tour.id}`;
+    if (!own) continue;
+    put(`${k}.title`, own.title); put(`${k}.lead`, own.lead);
+    for (const part of tour.parts) { put(`${k}.${part.id}.title`, own.parts[part.id]?.title); own.parts[part.id]?.text.forEach((t, i) => put(`${k}.${part.id}.text.${i + 1}`, t)); }
   }
   const most = (tally: Map<string, number>) => [...tally].sort((a, b) => b[1] - a[1])[0]?.[0];
   patterns.forEach((pattern, i) => {
@@ -219,6 +236,15 @@ export function toLocale(said: Said, code: string): { locale: Locale; english: s
       const own: MediaText = { caption, alt, ...(year ? { year } : {}), changes };
       (locale.media[p.id] ??= {})[m.id] = own;
     }
+  }
+  for (const tour of tours) {
+    const k = `tour.${tour.id}`, title = get(`${k}.title`), lead = get(`${k}.lead`);
+    const parts = tour.parts.map((part) => ({ id: part.id, title: get(`${k}.${part.id}.title`), text: part.text.map((_, i) => get(`${k}.${part.id}.text.${i + 1}`)) }));
+    // a tour is a story told from end to end: a language has all of it or none of it
+    if (title && lead && parts.every((x) => x.title && x.text.every(Boolean))) {
+      const own: TourText = { title, lead, parts: Object.fromEntries(parts.map((x) => [x.id, { title: x.title!, text: x.text as string[] }])) };
+      (locale.tours ??= {})[tour.id] = own;
+    } else english.push(k);
   }
   return { locale, english };
 }
