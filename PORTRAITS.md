@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 104 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
+The labels name 110 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
 
 ## Adding a portrait
 
@@ -80,6 +80,12 @@ Take the picture from the person's own article or file page, where the caption s
 | Steven Van Slyke | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. | `public/people/steven-van-slyke.jpg` |
 | Hongxing Jiang | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | `public/people/hongxing-jiang.jpg` |
 | Jingyu Lin | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | `public/people/jingyu-lin.jpg` |
+| Vicki Colvin | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | `public/people/vicki-colvin.jpg` |
+| M. C. Schlamp | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | `public/people/m-c-schlamp.jpg` |
+| Paul Alivisatos | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | `public/people/paul-alivisatos.jpg` |
+| Aleksey Yekimov | Quantum-dot display | Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour. | `public/people/aleksey-yekimov.jpg` |
+| Louis Brus | Quantum-dot display | Proved the same effect in particles floating freely in a liquid. | `public/people/louis-brus.jpg` |
+| Moungi Bawendi | Quantum-dot display | American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry. | `public/people/moungi-bawendi.jpg` |
 | Tuomo Suntola | Thin-film electroluminescent panel | Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels. | `public/people/tuomo-suntola.jpg` |
 | Nicholas Sheridon | Flexible display | Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center. | `public/people/nicholas-sheridon.jpg` |
 

@@ -87,6 +87,10 @@ export const factsA: Record<string, Fact> = {
     text: 'The inventors are a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to the scale of micrometres? Their first patent expired just as the first microLED screens reached consumers.',
     source: { label: 'Jiang and Lin, How we made the microLED, Nature Electronics (2023)', url: 'https://www.depts.ttu.edu/ece/Nanophotonics/papers/2023How%20we%20made%20the%20microLED_Nature%20electronics.pdf', kind: 'paper' },
   },
+  'quantum-dot': {
+    text: 'The colour of quantum dots was first seen in glass. Aleksey Yekimov coloured glass with tiny crystals of copper chloride and showed that the colour depended on the size of the crystals. He shared the 2023 Nobel Prize in Chemistry for it.',
+    source: { label: 'The Nobel Prize in Chemistry 2023, press release', url: 'https://www.nobelprize.org/prizes/chemistry/2023/press-release/', kind: 'archive' },
+  },
   'thin-film-el': {
     text: 'Atomic layer deposition, which builds a film one layer of atoms at a time and now helps to make computer chips, was devised by a Finnish physicist in 1974 for one purpose: to make these panels. The first panel showed flights at Helsinki Airport.',
     source: { label: 'Finnish physicist Tuomo Suntola wins Millennium Technology Prize, thisisFINLAND (2018)', url: 'https://finland.fi/business-innovation/finnish-physicist-tuomo-suntola-wins-millennium-technology-prize/', kind: 'press' },

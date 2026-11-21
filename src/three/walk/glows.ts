@@ -16,6 +16,7 @@ export const glows: Record<string, number> = {
   'led-display': 0xff9a4a,
   'oled': 0xb8a0ff,
   'microled': 0xffb0d0,
+  'quantum-dot': 0x9db4ff,
   'thin-film-el': 0xffb21a,
   'transparent-display': 0x9fe8ff,
   'flexible-display': 0x7fe0c0,

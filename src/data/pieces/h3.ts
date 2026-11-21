@@ -48,6 +48,21 @@ export const h3: Piece[] = [
     sources: [wiki('MicroLED')],
   },
   {
+    id: 'quantum-dot', hall: 3, name: 'Quantum-dot display', aka: 'QLED, QD-OLED',
+    year: 1994, origin: 'Vicki Colvin, M. C. Schlamp and Paul Alivisatos, University of California, Berkeley: an LED made with quantum dots',
+    status: 'production', statusNote: 'In televisions and monitors as a film that turns blue light into red and green. Screens whose dots are driven directly by a current have been shown as prototypes.',
+    principle: 'emits', needs: [],
+    lead: 'Crystals a few millionths of a millimetre across glow in a colour set by their size alone: the small ones green, the larger ones red.',
+    how: [
+      'A quantum dot is a crystal of semiconductor so small that it no longer behaves like the same material in bulk. The smaller the dot, the more tightly it holds its electrons, and the bluer the light it gives off. Dots of one material can therefore be made to glow in different colours, simply by growing them to different sizes.',
+      'In most screens that use them, the dots do not make the picture on their own. Blue light from LEDs or from an OLED layer shines on a film of dots, and the dots turn part of it into very pure red and green. In 1994 a group at Berkeley took another route and made a layer of dots glow by passing a current through it. Screens built that way are the next step.',
+    ],
+    good: ['Gives very pure red, green and blue, and so a wide range of colours', 'One material makes several colours, and only the size of the crystal changes', 'Turns blue light into another colour, where a colour filter would throw most of the light away'],
+    bad: ['The dots with the purest colours long depended on cadmium, a toxic metal', 'Air and moisture damage the dots, so they have to be sealed in', 'Blue dots driven by a current still wear out too quickly'],
+    look: 'In front is one pixel, cut open and enlarged many thousands of times. Blue light rises from the lamps on the board. In the left well, large dots turn it red. In the middle well, small dots turn it green. The right well has no dots, and the blue passes through. The bar on top shows the three colours mixed, as the eye sees them.',
+    sources: [src('paper', 'Colvin, Schlamp and Alivisatos, Nature (1994)', 'https://doi.org/10.1038/370354a0'), src('archive', 'The Nobel Prize in Chemistry 2023, press release', 'https://www.nobelprize.org/prizes/chemistry/2023/press-release/'), wiki('Quantum_dot_display', 'Quantum dot display')],
+  },
+  {
     id: 'thin-film-el', hall: 3, name: 'Thin-film electroluminescent panel', aka: 'TFEL, EL display',
     year: 1974, origin: 'Commercialised in the 1980s by Sharp (Japan), Finlux (Finland) and Planar (USA)',
     status: 'niche', statusNote: 'One manufacturer remains. Used where a screen must survive cold, vibration and decades of service.',

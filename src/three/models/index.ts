@@ -29,6 +29,7 @@ export const builders: Record<string, () => Built> = {
   'led-display': h3.led,
   'oled': h3.oled,
   'microled': h3.microled,
+  'quantum-dot': h3.quantumDots,
   'thin-film-el': h3.tfel,
   'transparent-display': h3.transparent,
   'flexible-display': h3.flexible,

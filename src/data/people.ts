@@ -104,6 +104,15 @@ export const people: Record<string, Credit> = {
   },
   'oled': { people: [{ who: ['Ching Wan Tang', 'Steven Van Slyke'], did: 'Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells.' }] },
   'microled': { people: [{ who: ['Hongxing Jiang', 'Jingyu Lin'], she: ['Jingyu Lin'], did: 'Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000.' }] },
+  'quantum-dot': {
+    people: [
+      { who: ['Vicki Colvin', 'M. C. Schlamp', 'Paul Alivisatos'], she: ['Vicki Colvin'], did: 'Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.' },
+      { who: ['Aleksey Yekimov'], did: 'Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour.' },
+      { who: ['Louis Brus'], did: 'Proved the same effect in particles floating freely in a liquid.' },
+      { who: ['Moungi Bawendi'], did: 'American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry.' },
+    ],
+    sources: [src('press', 'Nobel Chemistry Prize 2023, Tecnológico de Monterrey', 'https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/')],
+  },
   'thin-film-el': { people: [{ who: ['Tuomo Suntola'], did: 'Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels.' }] },
   'flexible-display': { people: [{ who: ['Nicholas Sheridon'], did: 'Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.' }] },
   'liquid-crystal': {

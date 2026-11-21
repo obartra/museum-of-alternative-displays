@@ -305,3 +305,59 @@ export function flexible(): Built {
     },
   };
 }
+
+/**
+ * Quantum dots. In front, one pixel of a screen cut open and enlarged: blue lamps below, a film with three wells
+ * above them. Large dots turn the blue light red, small dots turn it green, and the third well lets it through.
+ * Behind stands the screen the pixel belongs to, showing the time.
+ */
+export function quantumDots(): Built {
+  const root = G.group();
+  const s = screen(512, 288), W = 512, H = 288;
+  const dark = M.dark(), black = M.black();
+  const FILM = 0.42, TALL = 0.28, XS = [-0.6, 0, 0.6], COLOURS = [0xff2b1c, 0x22e04a, 0x2a5cff];
+  root.add(G.rbox(2.6, 0.06, 1.7, 0.02, M.wood(0x3a2a1c), [0, 0.03, -0.1]));
+  // the screen the pixel is taken from
+  root.add(G.rbox(2.2, 1.32, 0.07, 0.02, dark, [0, 1.4, -0.72]), G.plane(2.08, 1.17, M.lit(s, 1.35), [0, 1.4, -0.682]), G.box(0.4, 0.72, 0.26, dark, [0, 0.42, -0.72], 0));
+  // the slice: a board of blue lamps, a sheet of glass, the film with its three wells, and a sheet of glass on top
+  root.add(G.box(2.1, 0.08, 0.5, M.pcb(), [0, 0.12, 0.25], 0), G.box(2.1, 0.03, 0.5, M.glass(0xb9c9c6, 0.2), [0, FILM - 0.02, 0.25], 0), G.box(2.1, 0.03, 0.5, M.glass(0xb9c9c6, 0.2), [0, FILM + TALL + 0.015, 0.25], 0));
+  for (const x of [-0.9, -0.3, 0.3, 0.9]) root.add(G.box(0.1, TALL, 0.46, black, [x, FILM + TALL / 2, 0.25], 0));
+  const lampsLit = XS.map((x) => { const m = M.glow(0x2a5cff, 2); root.add(G.box(0.4, 0.04, 0.3, m, [x, 0.18, 0.25], 0)); return m; });
+  const rising = XS.map((x) => { const m = M.add(null, 0x2a5cff, 0.2); root.add(G.box(0.4, FILM - 0.24, 0.3, m, [x, (FILM + 0.16) / 2, 0.25], 0)); return m; });
+  const leaving = XS.map((x, i) => { const m = M.add(null, COLOURS[i], 0.2); root.add(G.box(0.46, 0.46, 0.4, m, [x, FILM + TALL + 0.27, 0.25], 0)); return m; });
+  for (const x of XS) root.add(G.box(0.5, TALL, 0.44, M.glass(0xe6f0ff, 0.1), [x, FILM + TALL / 2, 0.25], 0));
+  // the dots themselves: few and large for red, many and small for green, none where the blue passes
+  const sown = (count: number, r: number, colour: number, x0: number) => {
+    const mat = M.glow(colour, 1.8), mesh = new THREE.InstancedMesh(new THREE.SphereGeometry(r, 12, 10), mat, count), at = new THREE.Matrix4();
+    let seed = count * 7919 + 13;
+    const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let i = 0; i < count; i++) mesh.setMatrixAt(i, at.makeTranslation(x0 + (rnd() - 0.5) * 0.42, FILM + 0.035 + rnd() * (TALL - 0.07), 0.25 + (rnd() - 0.5) * 0.36));
+    root.add(mesh);
+    return mat;
+  };
+  const dotsLit = [sown(46, 0.034, COLOURS[0], XS[0]), sown(110, 0.019, COLOURS[1], XS[1])];
+  // where the three colours meet again: one pixel, as the eye sees it
+  const mixed = M.glow(0xffffff, 1.5);
+  root.add(G.box(1.9, 0.035, 0.46, mixed, [0, FILM + TALL + 0.56, 0.25], 0));
+  const hue = new THREE.Color();
+  let drawn = '', due = 0;
+  return {
+    root, inDark: 'glows', glow: 0x9db4ff, view: [22, 14], surface: s.canvas,
+    update: ({ t }) => {
+      hue.setHSL((t * 0.045) % 1, 1, 0.5);
+      const level = [hue.r, hue.g, hue.b];
+      level.forEach((v, i) => { lampsLit[i].emissiveIntensity = 0.25 + 2.3 * v; rising[i].opacity = 0.04 + 0.24 * v; leaving[i].opacity = 0.03 + 0.3 * v; });
+      dotsLit[0].emissiveIntensity = 0.12 + 2.3 * level[0]; dotsLit[1].emissiveIntensity = 0.12 + 2.3 * level[1];
+      mixed.emissive.copy(hue);
+      const text = now().hhmm;
+      if (text !== drawn || t > due) {
+        const { ctx } = s, band = ctx.createLinearGradient(0, 0, W, H);
+        for (let i = 0; i <= 6; i++) band.addColorStop(i / 6, hsl((t * 16 + i * 60) % 360, 96, 46));
+        ctx.fillStyle = band; ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = 'rgba(0,0,0,.34)'; ctx.fillRect(0, H * 0.24, W, H * 0.52);
+        bigTime(ctx, W, H, text, '#ffffff', 800, 0.5);
+        s.tex.needsUpdate = true; drawn = text; due = t + 0.2;
+      }
+    },
+  };
+}
