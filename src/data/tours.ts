@@ -21,10 +21,10 @@ export const tours: Tour[] = [
     id: 'women',
     draft: true,
     title: 'The green line',
-    lead: 'A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with a woman among the people on its label.',
+    lead: 'A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has a woman among the people on its label.',
+        'Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors.',
         'The picture is made of something different at every stop. It starts with pins, at the braille display in hall 1.',
       ] },
       { id: 'braille-display', title: 'Read by touch', text: [

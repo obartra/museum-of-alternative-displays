@@ -7909,7 +7909,7 @@ msgstr ""
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with a woman among the people on its label."
+msgid "A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
 msgstr ""
 
 #: tour-women
@@ -7921,7 +7921,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has a woman among the people on its label."
+msgid "Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors."
 msgstr ""
 
 #: tour-women
