@@ -80,7 +80,13 @@ export const people: Record<string, Credit> = {
       { who: ['Tadashi Sasaki'], did: 'Led calculator development at Hayakawa Electric, now Sharp, and asked Nakamura for a low-voltage display.' },
     ],
   },
-  'plasma-panel': { people: [{ who: ['Donald Bitzer', 'Gene Slottow', 'Robert Willson'], did: 'Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student.' }] },
+  'plasma-panel': {
+    people: [
+      { who: ['Donald Bitzer', 'Gene Slottow', 'Robert Willson'], did: 'Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student.' },
+      { who: ['Tsutae Shinoda'], did: 'Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993.' },
+    ],
+    sources: [src('archive', 'Milestones: Color Plasma Television, 1993, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Color_Plasma_Television,_1993')],
+  },
   'field-emission': { people: [{ who: ['Charles Spindt', 'Kenneth Shoulders', 'Louis Heynick'], did: 'Patented the way of making the microscopic tips, at Stanford Research Institute.' }] },
   'led-display': {
     people: [
@@ -172,8 +178,11 @@ export const people: Record<string, Credit> = {
       { who: ['Dennis Gabor'], did: 'Invented holography in 1948 at British Thomson-Houston in Rugby, England.' },
       { who: ['Emmett Leith', 'Juris Upatnieks'], did: 'Published the off-axis method of recording holograms in 1962.' },
       { who: ['Margaret Benyon'], she: ['Margaret Benyon'], did: 'Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later.' },
+      { who: ['Stephen Benton', 'Mary Lou Jepsen'], she: ['Mary Lou Jepsen'], did: "The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design." },
     ],
     sources: [
+      src('paper', 'Jepsen, Holographic Video: Design and Implementation of a Display System, MIT (1989)', 'http://hdl.handle.net/1721.1/14173'),
+      src('lab', 'The Mark-I Holographic Video Display, MIT Media Lab', 'https://www.media.mit.edu/spi/HVmark1.htm'),
       src('archive', 'Margaret Benyon, Center for the Holographic Arts', 'https://holocenter.org/margaret-benyon'),
       src('reference', 'Margaret Benyon (Wikipedia)', 'https://en.wikipedia.org/wiki/Margaret_Benyon'),
     ],
