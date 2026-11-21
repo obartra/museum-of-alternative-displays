@@ -55,24 +55,24 @@ export interface Piece {
 
 export const STATUS_LABEL: Record<Status, string> = {
   production: 'In production',
-  niche: 'Niche',
-  extinct: 'Extinct',
-  lab: 'Lab only',
+  niche: 'Specialist use',
+  extinct: 'No longer made',
+  lab: 'Laboratory only',
 };
 
 export const PRINCIPLE_LABEL: Record<Principle, string> = {
   emits: 'Makes its own light',
-  gates: 'Gates or steers another light',
-  directs: 'Sorts light by direction',
-  reflects: 'Reflects room light',
-  moves: 'Moves real matter',
+  gates: 'Shapes light from a separate lamp or laser',
+  directs: 'Sends light in chosen directions',
+  reflects: 'Reflects the light of the room',
+  moves: 'Moves real objects',
 };
 
 export const NEED_LABEL: Record<Need, string> = {
   daylight: 'Readable in daylight',
-  unpowered: 'Holds its image unpowered',
+  unpowered: 'Holds its image with the power off',
   seethrough: 'See-through',
   depth: 'Depth without glasses',
-  midair: 'Image in open air',
+  midair: 'Image in mid-air',
   dark: 'Needs a dark room',
 };
