@@ -5,7 +5,7 @@ import { halls, hallById } from './data/halls';
 import { inHall, inv, pieceById, pieces } from './data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type Principle, type SourceKind, type Status } from './data/schema';
 import { esc } from './html';
-import { byName, count, langNow, offered, rich, said, t, tx, useLang, wanted, type Lang } from './i18n';
+import { byName, count, langNow, offered, rich, said, standIn, t, tx, useLang, wanted, type Lang } from './i18n';
 import { facts } from './data/facts';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
@@ -251,7 +251,7 @@ function pieceView(id: string): void {
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
-    ${fact ? `<section class="fact stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.fact')}</h2><p class="fact__text">${esc(said.fact(p.id, fact.text))}</p><p class="small muted">${rich('piece.fact.source', { a: fact.source.url }, { label: fact.source.label })}</p></section>` : ''}
+    ${fact ? `<section class="fact stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.fact')}</h2><p class="fact__text"${standIn.fact(p.id)}>${esc(said.fact(p.id, fact.text))}</p><p class="small muted">${rich('piece.fact.source', { a: fact.source.url }, { label: fact.source.label })}</p></section>` : ''}
     <dl class="card">
       ${row(tx('card.no'), inv(p))}
       ${row(tx('card.year'), esc(x.yearText ?? String(p.year)))}

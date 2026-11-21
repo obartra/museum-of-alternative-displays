@@ -125,14 +125,48 @@ for (const [id, list] of Object.entries(views)) {
 const localeDir = new URL('../src/i18n/locales/', import.meta.url);
 const doubts: string[] = [];
 const marks = (x: string) => (x.match(/\{\/?\w+\}/g) ?? []).sort().join(' ');
-const figures = (x: string) => new Set((x.match(/\d+(?:[.,]\d+)*/g) ?? []).map((n) => n.replace(/[.,]/g, '')).filter((n) => n.length > 1));
+/** What a word after a figure multiplies it by, in the six languages. The longer words come first. */
+const UNITS: [string, number][] = [
+  ['mil millones', 1e9], ['mil milions', 1e9], ['milliards', 1e9], ['milliard', 1e9], ['milliarden', 1e9], ['milliarde', 1e9], ['mrd.', 1e9], ['billion', 1e9], ['十亿', 1e9],
+  ['millones', 1e6], ['millón', 1e6], ['milions', 1e6], ['milió', 1e6], ['millionen', 1e6], ['millions', 1e6], ['million', 1e6], ['mio.', 1e6], ['百万', 1e6],
+  ['千万', 1e7], ['亿', 1e8], ['万', 1e4],
+  ['thousand', 1e3], ['tausend', 1e3], ['mille', 1e3], ['mil', 1e3], ['千', 1e3],
+];
+const ROMAN: Record<string, number> = { I: 1, V: 5, X: 10, L: 50 };
+const roman = (x: string) => [...x].reduce((sum, c, i, all) => sum + (ROMAN[c]! < (ROMAN[all[i + 1] ?? ''] ?? 0) ? -ROMAN[c]! : ROMAN[c]!), 0);
+/**
+ * The figures in a text, each in one spelling, so that two languages can be compared. "10,197", "10.197" and "10 197" are one
+ * figure. So are "130 million", "130 Millionen" and "1.3亿". A century also counts as its first year, so that "the 1500s",
+ * "siglo XVI", "16. Jahrhundert" and "16世纪" agree. Figures of one digit are left out, because languages spell them as words.
+ */
+const figures = (text: string, lang: string) => {
+  const found = new Set<string>();
+  const x = text.replace(/(\d)[   ](?=\d{3}(?!\d))/g, '$1');
+  const comma = !['en', 'zh'].includes(lang); // these languages write the decimal mark as a comma
+  for (const m of x.matchAll(/\d+(?:[.,]\d+)*/g)) {
+    const after = x.slice(m.index + m[0].length).replace(/^[\s  ]+/, '').toLowerCase();
+    const unit = UNITS.find(([word]) => after.startsWith(word) && (/[\u4e00-\u9fff]/.test(word) || !/^\p{L}/u.test(after.slice(word.length))));
+    if (unit) {
+      const plain = comma ? m[0].replace(/\./g, '').replace(',', '.') : m[0].replace(/,/g, '');
+      found.add(String(Math.round(parseFloat(plain) * unit[1])));
+    } else found.add(m[0].replace(/[.,]/g, ''));
+  }
+  const century = (n: number) => { found.add(String(n)); found.add(`${n - 1}00`); };
+  for (const m of x.matchAll(/(?:siglo|segle)[\s ]+([IVXL]+)\b|\b([IVXL]+)e[\s  ]*siècle/g)) century(roman(m[1] ?? m[2]!));
+  for (const m of x.matchAll(/(\d{1,2})\.[\s ]*Jahrhundert|(\d{1,2})\s*世纪/g)) century(Number(m[1] ?? m[2]));
+  for (const m of x.matchAll(/(\d{2})\s*世纪\s*(\d{2})\s*年代/g)) found.add(`${Number(m[1]) - 1}${m[2]}`);
+  return new Set([...found].filter((n) => n.length > 1));
+};
+/** What a language still shows in English: a fact, a view or an archive caption added after its translation. It is listed, and it does not stop the build. */
+const owed: Record<string, string[]> = {};
 for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => f.endsWith('.ts')) : []) {
   const code = file.replace(/\.ts$/, '');
   const loc = ((await import(new URL(file, localeDir).href)) as { default: Locale }).default;
   const say = (msg: string) => errors.push(`${code}: ${msg}`);
   const clean = (where: string, text: string) => { if (DASH.test(text)) say(`${where}: no em dashes or double hyphens`); };
   /** A figure in the English that the translation does not carry is worth a second look, though it may be right. */
-  const sameFigures = (where: string, from: string, to: string) => { for (const n of figures(from)) if (!figures(to).has(n)) doubts.push(`${code} ${where}: the English has ${n}, the translation does not`); };
+  const sameFigures = (where: string, from: string, to: string) => { const there = figures(to, code); for (const n of figures(from, 'en')) if (!there.has(n)) doubts.push(`${code} ${where}: the English has ${n}, the translation does not`); };
+  const later = (what: string) => (owed[code] ??= []).push(what);
   if (!LANGS.some((l) => l.code === code)) say('this file is not one of the languages listed in src/i18n/index.ts');
   for (const k of Object.keys(en) as UiKey[]) {
     const v = loc.ui?.[k];
@@ -165,25 +199,28 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
   for (const id of Object.keys(loc.pieces ?? {})) if (!seen.has(id)) say(`piece ${id} is not in the collection`);
   for (const [id, f] of Object.entries(facts)) {
     const said = loc.facts?.[id];
-    if (!said?.trim()) { say(`the fact for ${id} is missing`); continue; }
+    if (!said?.trim()) { later(`fact ${id}`); continue; }
     clean(`fact ${id}`, said);
     sameFigures(`fact ${id}`, f.text, said);
   }
   for (const [id, list] of Object.entries(views)) for (const v of list) {
     const x = loc.views?.[id]?.[v.id];
-    if (!x?.label?.trim()) { say(`view ${id}/${v.id} is missing`); continue; }
+    if (!x?.label?.trim()) { later(`view ${id}/${v.id}`); continue; }
     if ([...x.label].length > 28) say(`view ${id}/${v.id}: the button should be at most 28 characters`);
     if (!!v.hint !== !!x.hint?.trim()) say(`view ${id}/${v.id}: the line ${v.hint ? 'is missing' : 'is not in the English'}`);
     clean(`view ${id}/${v.id}`, x.label + (x.hint ?? ''));
   }
   for (const [id, list] of Object.entries(media)) for (const m of list) {
     const x = loc.media?.[id]?.[m.id];
-    if (!x?.caption?.trim() || !x.alt?.trim() || !x.changes?.trim()) { say(`archive picture ${id}/${m.id} is missing or incomplete`); continue; }
+    if (!x) { later(`archive picture ${id}/${m.id}`); continue; }
+    if (!x.caption?.trim() || !x.alt?.trim() || !x.changes?.trim()) { say(`archive picture ${id}/${m.id} is incomplete`); continue; }
     if (!!m.year !== !!x.year?.trim()) say(`archive picture ${id}/${m.id}: the year ${m.year ? 'is missing' : 'is not in the English'}`);
     clean(`archive picture ${id}/${m.id}`, x.caption + x.alt + x.changes);
     sameFigures(`${id}/${m.id}`, m.caption + (m.year ?? ''), x.caption + (x.year ?? ''));
   }
-  console.log(`language ${code}: ${Object.keys(loc.ui ?? {}).length} interface strings, ${Object.keys(loc.pieces ?? {}).length} pieces`);
+  const wait = owed[code] ?? [];
+  const kindsOwed = ['fact', 'view', 'archive picture'].map((k) => [k, wait.filter((w) => w.startsWith(k + ' ')).length] as const).filter(([, n]) => n);
+  console.log(`language ${code}: ${Object.keys(loc.ui ?? {}).length} interface strings, ${Object.keys(loc.pieces ?? {}).length} pieces` + (wait.length ? `, still in English: ${kindsOwed.map(([k, n]) => `${n} ${k}${n > 1 ? 's' : ''}`).join(', ')}` : ''));
 }
 if (doubts.length) console.log(`\n${doubts.length} figure(s) to look at in the translations:\n` + doubts.slice(0, 40).map((d) => '  ' + d).join('\n'));
 

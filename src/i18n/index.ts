@@ -71,3 +71,13 @@ export const said = {
   need: (n: Need): string => loc?.need[n] ?? NEED_LABEL[n],
   sourceKind: (k: SourceKind): string => loc?.sourceKind[k] ?? SOURCE_KIND[k],
 };
+
+/**
+ * ` lang="en"` for a text that stands in for a translation that does not exist yet, and nothing otherwise.
+ * It goes on the element that holds the text, so that a screen reader reads the English as English.
+ */
+export const standIn = {
+  fact: (pieceId: string): string => (loc && !loc.facts?.[pieceId] ? ' lang="en"' : ''),
+  view: (pieceId: string, id: string): string => (loc && !loc.views?.[pieceId]?.[id] ? ' lang="en"' : ''),
+  media: (pieceId: string, id: string): string => (loc && !loc.media?.[pieceId]?.[id] ? ' lang="en"' : ''),
+};

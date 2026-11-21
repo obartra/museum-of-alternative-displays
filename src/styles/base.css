@@ -194,9 +194,9 @@ h1, h2, h3 { text-wrap: balance; }
 .pill input:checked + span { background: var(--ink); color: var(--wash); }
 .pill input:focus-visible + span { outline: 3px solid var(--signal); outline-offset: 2px; }
 .rows { border-top: 2px solid var(--ink); }
-.row { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
 .row__hall { width: 34px; height: 34px; display: grid; place-items: center; background: var(--hall); color: var(--hall-ink); font-family: var(--display); font-weight: 800; font-size: 1.25rem; border-radius: 3px; }
-.row__name { font-weight: 700; }
+.row__name { font-weight: 700; overflow-wrap: anywhere; hyphens: auto; }
 .row__year { font-family: var(--mono); font-size: .8rem; color: var(--ink-2); }
 
 .stack > * + * { margin-top: var(--gap, 28px); }

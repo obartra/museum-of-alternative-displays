@@ -1,7 +1,7 @@
 import { media, type Media } from './data/media';
 import { pieces } from './data/pieces';
 import { esc } from './html';
-import { said, t, tx } from './i18n';
+import { said, standIn, t, tx } from './i18n';
 
 /**
  * "From the archive": real photographs, drawings and short films beside the model, each with its credit.
@@ -21,9 +21,9 @@ export function archiveSection(pieceId: string): string {
   const list = archiveOf(pieceId);
   if (!list.length) return '';
   const mount = (m: Media, i: number) => `<li class="mount">
-  <button type="button" class="mount__open" data-media="${i}"><span class="vh">${tx(m.kind === 'film' ? 'archive.playFilm' : 'archive.enlarge')}. </span><img src="${esc(small(m))}" alt="${esc(m.alt)}" width="${m.width}" height="${m.height}" loading="lazy" decoding="async">${m.kind === 'film' ? `<span class="mount__play" aria-hidden="true">${tx('archive.film.badge', { n: Math.round(m.seconds) })}</span>` : ''}</button>
+  <button type="button" class="mount__open" data-media="${i}"><span class="vh">${tx(m.kind === 'film' ? 'archive.playFilm' : 'archive.enlarge')}. </span><img src="${esc(small(m))}" alt="${esc(m.alt)}"${standIn.media(pieceId, m.id)} width="${m.width}" height="${m.height}" loading="lazy" decoding="async">${m.kind === 'film' ? `<span class="mount__play" aria-hidden="true">${tx('archive.film.badge', { n: Math.round(m.seconds) })}</span>` : ''}</button>
   <p class="mount__kind">${esc(kindLine(m))}</p>
-  <p class="mount__cap">${esc(m.caption)}</p>
+  <p class="mount__cap"${standIn.media(pieceId, m.id)}>${esc(m.caption)}</p>
   <p class="mount__credit">${esc(m.credit.author)}, ${licence(m)}</p>
 </li>`;
   return `<section class="archive stack" style="--gap: 12px" aria-labelledby="archive-h">
@@ -46,20 +46,21 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
   const show = (i: number) => {
     at = (i + list.length) % list.length;
     const m = list[at];
+    const en = standIn.media(pieceId, m.id);
     const picture = m.kind === 'film'
-      ? `<video class="viewer__film" controls muted loop playsinline preload="metadata" poster="${esc(m.poster)}" width="${m.width}" height="${m.height}" aria-label="${esc(m.alt)}"${calm ? '' : ' autoplay'}><source src="${esc(m.webm)}" type="video/webm"><source src="${esc(m.mp4)}" type="video/mp4"></video>`
-      : `<img src="${esc(m.large)}" alt="${esc(m.alt)}" width="${m.width}" height="${m.height}" decoding="async">`;
+      ? `<video class="viewer__film" controls muted loop playsinline preload="metadata" poster="${esc(m.poster)}" width="${m.width}" height="${m.height}" aria-label="${esc(m.alt)}"${en}${calm ? '' : ' autoplay'}><source src="${esc(m.webm)}" type="video/webm"><source src="${esc(m.mp4)}" type="video/mp4"></video>`
+      : `<img src="${esc(m.large)}" alt="${esc(m.alt)}"${en} width="${m.width}" height="${m.height}" decoding="async">`;
     const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
     dialog.innerHTML = `
 <div class="viewer__media">${picture}</div>
 <div class="viewer__side">
   <div class="viewer__head"><p class="viewer__kind">${esc(kindLine(m))}</p><button type="button" class="btn" data-v="close" autofocus>${tx('stage.close')}</button></div>
-  <p class="viewer__cap">${esc(m.caption)}</p>
+  <p class="viewer__cap"${en}>${esc(m.caption)}</p>
   <dl class="card">
     ${row(tx('archive.madeBy'), esc(m.credit.author))}
     ${row(tx('archive.licence'), licence(m))}
     ${row(tx('archive.source'), `<a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>, ${esc(m.credit.archive ?? t('archive.commons'))}`)}
-    ${row(tx('archive.changes'), esc(m.credit.changes))}
+    ${row(tx('archive.changes'), `<span${en}>${esc(m.credit.changes)}</span>`)}
   </dl>
   ${list.length > 1 ? `<div class="viewer__nav"><button type="button" class="btn" data-v="prev">${tx('archive.previous')}</button><span aria-live="polite">${tx('archive.of', { n: at + 1, total: list.length })}</span><button type="button" class="btn" data-v="next">${tx('archive.next')}</button></div>` : ''}
 </div>`;
