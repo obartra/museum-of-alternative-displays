@@ -66,6 +66,7 @@ Node 22 or newer.
 | `src/walk.ts` | The page round the walk: the plan of the hall, the line that says where the visitor is, the buttons that do what the keys do. |
 | `src/three/walk/` | The long hall and the visitor in it. `plan.ts` is the floor plan and the way round the blocks, `hall.ts` the building, `stands.ts` the blocks and what stands on them, `gallery.ts` the renderer and the walking, `vr.ts` the headset. |
 | `public/cutouts/` | Each piece photographed alone on its block from three sides, by day and by night, and a sheet of the same pictures small. In the walk only the few pieces nearest the visitor are models. The rest are these pictures, stood upright and turned to the visitor. Made by `scripts/cutouts.mjs`, with `public/walk-*.webp`, the hall from its door. |
+| `src/three/ar.ts` | A piece in the visitor's own room: built again at table size and shown through the browser's own room view (WebXR), where there is one. |
 | `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
@@ -156,9 +157,13 @@ real thing when the visitor moves.
   valves, switchable privacy glass, ferrofluid, light-activated paints.
 - The models were reviewed against text sources, not against photographs. See
   `docs/model-review.md` for the scores and what is still open.
-- The walk has only been run in a test browser that draws in software. How fast it runs on a
-  phone's graphics chip has not been measured, and the headset view has never been tried in
-  a headset.
+- The walk has been run in a test browser that draws in software and once on a desk
+  machine's graphics chip. How fast it runs on a phone has not been measured.
+- The headset view of the walk and the room view of a piece (`src/three/ar.ts`) have been
+  tried in an emulated headset ([IWER](https://github.com/meta-quest/immersive-web-emulation-runtime)),
+  not on a real one and not on a phone. In the emulator there are no surfaces to find, so the
+  ring that marks a table or the floor has never been seen working. iPhones have no such room
+  view in their browsers and are not offered the button.
 - Archive film is thin: most pieces have photographs or patent drawings and no moving picture.
 - Routes are hash links (`#hall-2`, `#piece-nixie-tube`), so pieces are not separate pages for
   search engines.

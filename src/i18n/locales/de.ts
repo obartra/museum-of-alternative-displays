@@ -69,6 +69,8 @@ const locale: Locale = {
     'stage.ar': 'In Ihrem Zimmer',
     'stage.ar.preparing': 'Das Modell wird für Ihr Zimmer vorbereitet.',
     'stage.ar.fail': 'Dieses Gerät konnte das Modell nicht in Ihrem Zimmer zeigen.',
+    'stage.ar.hint': 'Bewegen Sie das Telefon, bis ein Ring auf einem Tisch oder dem Boden erscheint. Tippen Sie, um das Exponat dort abzustellen.',
+    'stage.ar.placed': 'Gehen Sie darum herum. Tippen Sie auf eine andere Stelle, um es zu versetzen.',
     'stage.expand': 'Vergrößern',
     'stage.close': 'Schließen',
     'stage.hint.turn': 'Zum Drehen ziehen. Zum Zoomen zwei Finger spreizen oder scrollen.',

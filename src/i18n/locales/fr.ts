@@ -71,6 +71,8 @@ const locale: Locale = {
     'stage.ar': 'Chez vous',
     'stage.ar.preparing': 'Préparation du modèle pour l’afficher chez vous.',
     'stage.ar.fail': 'Cet appareil n’a pas pu afficher le modèle chez vous.',
+    'stage.ar.hint': 'Déplacez le téléphone jusqu’à ce qu’un anneau apparaisse sur une table ou au sol. Touchez pour y poser la pièce.',
+    'stage.ar.placed': 'Tournez autour. Touchez un autre endroit pour la déplacer.',
     'stage.expand': 'Agrandir',
     'stage.close': 'Fermer',
     'stage.hint.turn': 'Faites glisser pour tourner. Pincez ou faites défiler pour zoomer.',

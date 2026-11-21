@@ -70,13 +70,13 @@ const afterPicture = (img: HTMLImageElement, fn: () => void) => {
   img.addEventListener('load', fn, { once: true });
   img.addEventListener('error', fn, { once: true });
 };
-/** Whether this device can put a model in the visitor's own room: an iPhone or iPad through Quick Look, others through WebXR. */
-const ROOM_VIEW_BUILT = false; // until src/three/ar.ts does the work, the button stays out of sight
+/**
+ * Whether this browser can put a piece in the visitor's own room. It asks the browser only: the code that does
+ * the work is fetched when the button is pressed. iPhones have no such room view in their browsers and are not offered it.
+ */
 let roomReady: Promise<boolean> | undefined;
 function canShowInRoom(): Promise<boolean> {
   roomReady ??= (async () => {
-    if (!ROOM_VIEW_BUILT) return false;
-    if (document.createElement('a').relList.supports('ar')) return true;
     const xr = (navigator as Navigator & { xr?: { isSessionSupported(mode: string): Promise<boolean> } }).xr;
     try { return !!xr && (await xr.isSessionSupported('immersive-ar')); } catch { return false; }
   })();
@@ -425,12 +425,12 @@ function pieceView(id: string): void {
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
       if (stage.isStereo) tell(t('stage.stereo.on')); else tell(HINT.turn);
     }
-    if (name === 'ar' && stage?.pieceRoot && live) {
-      // the model leaves the stand for the visitor's own room. It is prepared on demand, which takes a moment
-      const root = stage.pieceRoot;
+    if (name === 'ar' && live) {
+      // the piece is built a second time, table sized, and stands in the visitor's own room for as long as they look
       arBtn.disabled = true;
       tell(t('stage.ar.preparing'));
-      void import('./three/ar').then(({ showInRoom }) => showInRoom(root, x.name)).then(() => tell(HINT.turn), () => { hint.textContent = ''; note.textContent = t('stage.ar.fail'); })
+      void import('./three/ar').then(({ showInRoom }) => showInRoom(p.id, { hint: t('stage.ar.hint'), placed: t('stage.ar.placed'), close: t('stage.close') }))
+        .then(() => tell(HINT.turn), () => { hint.textContent = ''; note.textContent = t('stage.ar.fail'); })
         .finally(() => { arBtn.disabled = false; });
     }
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));

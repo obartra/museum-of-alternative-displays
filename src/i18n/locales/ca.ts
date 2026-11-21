@@ -70,6 +70,8 @@ const locale: Locale = {
     'stage.ar': "Al teu espai",
     'stage.ar.preparing': "S'està preparant el model per al teu espai.",
     'stage.ar.fail': "Aquest dispositiu no ha pogut mostrar el model al teu espai.",
+    'stage.ar.hint': "Mou el telèfon fins que aparegui un anell sobre una taula o a terra. Toca per posar-hi la peça.",
+    'stage.ar.placed': "Camina al seu voltant. Toca un altre lloc per moure-la.",
     'stage.expand': "Amplia",
     'stage.close': "Tanca",
     'stage.hint.turn': "Arrossega per girar. Pessiga o desplaça't per fer zoom.",

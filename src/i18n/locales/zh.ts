@@ -66,6 +66,8 @@ const locale: Locale = {
     'stage.ar': '放进你的房间',
     'stage.ar.preparing': '正在为你的房间准备模型。',
     'stage.ar.fail': '这台设备无法在你的房间里显示模型。',
+    'stage.ar.hint': '移动手机，直到桌面或地面上出现一个圆环。轻点一下，把展品放在那里。',
+    'stage.ar.placed': '绕着它走一圈。轻点别处可以把它移过去。',
     'stage.expand': '全屏',
     'stage.close': '关闭',
     'stage.hint.turn': '拖动可旋转。双指捏合或滚动可缩放。',

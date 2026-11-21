@@ -67,6 +67,8 @@ export const en = {
   'stage.ar': 'In your room',
   'stage.ar.preparing': 'Preparing the model for your room.',
   'stage.ar.fail': 'This device could not show the model in your room.',
+  'stage.ar.hint': 'Move the phone until a ring shows on a table or the floor. Tap to put the piece there.',
+  'stage.ar.placed': 'Walk round it. Tap another place to move it.',
   'stage.expand': 'Expand',
   'stage.close': 'Close',
   'stage.hint.turn': 'Drag to turn. Pinch or scroll to zoom.',

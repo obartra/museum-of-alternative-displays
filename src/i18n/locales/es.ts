@@ -70,6 +70,8 @@ const locale: Locale = {
     'stage.ar': 'En tu espacio',
     'stage.ar.preparing': 'Preparando el modelo para tu espacio.',
     'stage.ar.fail': 'Este dispositivo no pudo mostrar el modelo en tu espacio.',
+    'stage.ar.hint': 'Mueve el teléfono hasta que aparezca un anillo sobre una mesa o el suelo. Toca para poner la pieza ahí.',
+    'stage.ar.placed': 'Camina a su alrededor. Toca otro sitio para moverla.',
     'stage.expand': 'Ampliar',
     'stage.close': 'Cerrar',
     'stage.hint.turn': 'Arrastra para girar. Pellizca o desplázate para hacer zoom.',

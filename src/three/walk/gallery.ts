@@ -295,7 +295,13 @@ export class Gallery {
     for (const k of this.keys) if (KEYS[k]) { go += KEYS[k][0]; turn += KEYS[k][1]; }
     go = Math.max(-1, Math.min(1, go)); turn = Math.max(-1, Math.min(1, turn));
     const fast = this.keys.has('Shift');
-    if (this.vr?.active) { const moved = this.vr.update(dt); this.locate(); return moved; }
+    if (this.vr?.active) {
+      // in a headset the head is where the visitor is: the page behind it is told the same
+      const moved = this.vr.update(dt), at = this.vr.head();
+      this.x = at.x; this.z = at.z; this.yaw = at.yaw;
+      this.locate();
+      return moved;
+    }
     if ((go || turn) && this.glide) this.glide = undefined;
     const g = this.glide, x0 = this.x, z0 = this.z, yaw0 = this.yaw, pitch0 = this.pitch;
     if (g) {
