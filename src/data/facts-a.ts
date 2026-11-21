@@ -1,6 +1,6 @@
 import type { Fact } from './facts';
 
-/** Did you know? One fact per piece for halls 1, 2 and 3. Each comes from the source beside it, which was opened and read. */
+/** Worth knowing: one fact per piece for halls 1, 2 and 3. Each comes from the source beside it, which was opened and read. */
 export const factsA: Record<string, Fact> = {
   // hall 1, mechanics
   'split-flap': {

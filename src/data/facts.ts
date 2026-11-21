@@ -1,7 +1,8 @@
 import { factsA } from './facts-a';
+import { factsB } from './facts-b';
 import type { Source } from './schema';
 
-/** One thing about a piece that is worth repeating to someone. Shown on its page under "Did you know?". */
+/** One thing about a piece that is worth repeating to someone. Shown on its page under "Worth knowing". */
 export interface Fact {
   /** One or two sentences, at most 45 words. Not something the label already says. */
   text: string;
@@ -10,4 +11,4 @@ export interface Fact {
 }
 
 /** By piece id. The researchers' files hold them, a few halls each. */
-export const facts: Record<string, Fact> = { ...factsA };
+export const facts: Record<string, Fact> = { ...factsA, ...factsB };
