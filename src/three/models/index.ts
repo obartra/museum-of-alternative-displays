@@ -17,6 +17,7 @@ export const builders: Record<string, () => Built> = {
   'braille-display': h1.braille,
   'drone-show': h1.droneShow,
   'cathode-ray-tube': h2.crt,
+  'colour-wheel-television': h2.colourWheel,
   'vector-display': h2.vector,
   'storage-tube': h2.storageTube,
   'nixie-tube': h2.nixie,

@@ -1,5 +1,5 @@
 import type { Piece } from '../schema';
-import { wiki } from './src';
+import { src, wiki } from './src';
 
 export const h2: Piece[] = [
   {
@@ -16,6 +16,21 @@ export const h2: Piece[] = [
     bad: ['Becomes deeper and heavier, with more vacuum to hold, as the screen grows', 'Needs a high voltage, and its glass bulb is under pressure from the air outside', 'Redraws its picture constantly and does not hold it, so the picture flickers'],
     look: 'Press the Sit in front button. The bright band that moves down the screen is where the beam has just drawn its lines. The model slows this about 60 times. Then turn the model and look from the side at the copper coils on the neck, which steer the beam.',
     sources: [wiki('Cathode_ray_tube', 'Cathode ray tube'), wiki('Shadow_mask', 'Shadow mask')],
+  },
+  {
+    id: 'colour-wheel-television', hall: 2, name: 'Colour-wheel television', aka: 'Field-sequential colour, chromoscopic adapter',
+    year: 1940, origin: 'Guillermo González Camarena, Mexico City. Mexican patent of 19 August 1940, United States patent granted in 1942',
+    status: 'niche', statusNote: 'No television set is built this way now. The principle survives where one fast display is given its three colours in turn.',
+    principle: 'emits', needs: [],
+    lead: 'A black-and-white picture tube shows the red, green and blue parts of a picture one after another, and a spinning wheel of filters gives each part its colour.',
+    how: [
+      'The tube itself makes only white light. In front of it turns a disc of red, green and blue filters. While the red filter passes, the tube shows the red part of the picture. The green part follows behind the green filter, and then the blue. A second wheel turns in step in front of the camera. The eye cannot follow the changes and sees one picture in full colour.',
+      'González Camarena patented his adapter in Mexico in 1940, at the age of 23. He designed it to be fitted to the black-and-white cameras and receivers already in use. The idea of a colour wheel was older: a German patent application of 1904 already described one. Television later settled on tubes that show the three colours at the same time.',
+    ],
+    good: ['Adds colour to a black-and-white system with one moving part', 'Needs no pattern of coloured dots, so the picture is as sharp as the tube', 'Puts all three colours in exactly the same place'],
+    bad: ['The wheel has to be much larger than the picture', 'A fast-moving object breaks up into flashes of red, green and blue', 'The tube must show three pictures in the time of one, or the picture flickers'],
+    look: 'The model first turns the wheel slowly. Watch the screen behind it: the tube shows three different pictures in turn, and the bars change as each filter passes. Then the wheel runs at speed and the three pictures merge into one. Switch the daylight off to see the screen alone.',
+    sources: [src('patent', 'González Camarena, US patent 2,296,019', 'https://patents.google.com/patent/US2296019'), src('archive', 'The Original Patent For Color Television Explained, Archivo General de la Nación', 'https://artsandculture.google.com/story/qQVxulIPRfmyJw'), wiki('Field-sequential_color_system', 'Field-sequential color system'), wiki('Guillermo_Gonz%C3%A1lez_Camarena', 'Guillermo González Camarena')],
   },
   {
     id: 'vector-display', hall: 2, name: 'Vector display', aka: 'Calligraphic display, XY monitor',

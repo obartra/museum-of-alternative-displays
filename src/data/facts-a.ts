@@ -37,6 +37,10 @@ export const factsA: Record<string, Fact> = {
     text: 'A picture tube gives off X-rays while it runs, and the glass contains lead to stop them. The United States Environmental Protection Agency said in 2002 that a typical computer monitor could hold up to eight pounds of lead, about 3.6 kilograms.',
     source: { label: 'EPA Proposes Easing Barriers to Encourage Recycling of Computers, Televisions and Mercury-Containing Equipment, U.S. Environmental Protection Agency (2002)', url: 'https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/c414f152eb0f1abf85256bc80055308a.html', kind: 'archive' },
   },
+  'colour-wheel-television': {
+    text: 'The original patent of 1940 is kept in the national archive of Mexico, the Archivo General de la Nación. In it González Camarena calls his invention a simple and novel adapter that could be fitted to any black-and-white television of the day.',
+    source: { label: 'The Original Patent For Color Television Explained, Archivo General de la Nación', url: 'https://artsandculture.google.com/story/qQVxulIPRfmyJw', kind: 'archive' },
+  },
   'vector-display': {
     text: 'The Vectrex home console of 1982 had a vector tube built in. Its screen was black and white, so colour came from plastic sheets laid over the glass.',
     source: { label: 'Vectrex Game Console, Computer History Museum', url: 'https://www.computerhistory.org/revolution/computer-games/16/210/873', kind: 'archive' },

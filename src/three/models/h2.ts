@@ -474,3 +474,63 @@ export function eggcrate(): Built {
     },
   };
 }
+
+/**
+ * Colour-wheel television. A black-and-white tube shows the red, green and blue parts of a picture in turn, and a
+ * wheel of filters turning in front of it colours each one. The model runs slowly first, so that the three
+ * separate pictures can be seen, and then at speed, where they merge.
+ */
+export function colourWheel(): Built {
+  const root = G.group();
+  const s = screen(384, 288), tube = M.lit(s, 1.5, 0.5);
+  const walnut = M.wood(0x5a3b22), trim = M.wood(0x2e1e12);
+  // SY: the height of the middle of the screen. AXLE: the height of the wheel's axle. R: the size of the wheel. FACE: the front of the cabinet.
+  const SY = 1.04, AXLE = 0.62, R = 0.62, FACE = 0.3, W = 384, H = 288;
+  root.add(G.rbox(0.92, 0.05, 0.64, 0.015, trim, [0, 0.025, 0]), G.rbox(0.86, 1.3, 0.56, 0.03, walnut, [0, 0.7, 0]));
+  root.add(G.bezel(0.52, 0.44, 0.36, 0.28, 0.05, 0.03, trim, [0, SY, FACE - 0.02]), G.bulge(0.37, 0.29, 0.03, tube, [0, SY, FACE - 0.03]));
+  root.add(G.box(0.5, 0.26, 0.012, M.cloth(0x6b5a3a), [0, 0.36, FACE - 0.014], 0), knob(0.034, [-0.32, 0.66, FACE - 0.02]), knob(0.034, [0.32, 0.66, FACE - 0.02]));
+  // the wheel: six filters, two of each colour, on an axle below the screen, driven by a motor on the cabinet's face
+  const COLOURS = [0xff2a1a, 0x1fd13a, 0x2a4bff];
+  const wheel = G.group(), filters: THREE.MeshStandardMaterial[] = [];
+  for (let i = 0; i < 6; i++) {
+    const m = new THREE.MeshStandardMaterial({ color: COLOURS[i % 3], transparent: true, opacity: 0.4, roughness: 0.15, metalness: 0, side: THREE.DoubleSide, depthWrite: false });
+    filters.push(m);
+    wheel.add(new THREE.Mesh(new THREE.CircleGeometry(R, 20, (i * Math.PI) / 3, Math.PI / 3), m));
+    wheel.add(G.rod([0, 0, 0], [R * Math.cos((i * Math.PI) / 3), R * Math.sin((i * Math.PI) / 3), 0], 0.006, M.steel()));
+  }
+  const blur = new THREE.MeshStandardMaterial({ color: 0xa9a2b4, transparent: true, opacity: 0, roughness: 0.2, side: THREE.DoubleSide, depthWrite: false });
+  wheel.add(new THREE.Mesh(new THREE.CircleGeometry(R, 48), blur), G.torus(R, 0.01, M.steel(), [0, 0, 0]), G.cyl(0.05, 0.035, M.dark(), [0, 0, 0], 24).rotateX(Math.PI / 2));
+  wheel.position.set(0, AXLE, FACE + 0.07);
+  root.add(wheel, G.cyl(0.08, 0.09, M.dark(1), [0, AXLE, FACE + 0.02], 28).rotateX(Math.PI / 2), G.box(0.3, 0.05, 0.03, M.steel(), [0, AXLE - 0.09, FACE + 0.005], 0));
+  // the picture: colour bars above the time. One field of it is that colour's share, shown in white light
+  const BARS: [number, number, number][] = [[1, 1, 1], [1, 1, 0], [0, 1, 1], [0, 1, 0], [1, 0, 1], [1, 0, 0], [0, 0, 1]];
+  const INK: [number, number, number] = [1, 0.62, 0.12];
+  const paint = (field: number, text: string) => {
+    const { ctx } = s;
+    const tone = (c: [number, number, number]) => {
+      if (field === 3) return `rgb(${c.map((x) => Math.round(255 * x)).join(',')})`;
+      const g = Math.round(255 * c[field]);
+      return `rgb(${g},${g},${g})`;
+    };
+    ctx.fillStyle = '#050505'; ctx.fillRect(0, 0, W, H);
+    BARS.forEach((c, i) => { ctx.fillStyle = tone(c); ctx.fillRect(Math.round((i * W) / 7), 0, Math.ceil(W / 7), H * 0.5); });
+    ctx.save(); ctx.translate(0, H * 0.5); bigTime(ctx, W, H * 0.5, text, tone(INK), 800, 0.8); ctx.restore();
+    s.tex.needsUpdate = true;
+  };
+  let angle = 0, before = 0, shown = -1, label = '';
+  return {
+    root, inDark: 'glows', glow: 0xcfd6ff, view: [20, 8], surface: s.canvas,
+    update: ({ t }) => {
+      const fast = t % 16 >= 8; // eight seconds slowly, then eight at speed
+      angle += (fast ? 11 : 0.85) * Math.min(0.1, Math.max(0, t - before)); before = t;
+      wheel.rotation.z = -angle;
+      // the filter that stands in front of the screen, which is straight above the axle
+      const k = Math.floor((((Math.PI / 2 + angle) % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI) / (Math.PI / 3)) % 3;
+      const field = fast ? 3 : k, text = now().hhmm;
+      if (field !== shown || text !== label) { paint(field, text); shown = field; label = text; }
+      tube.emissive.setHex(fast ? 0xffffff : COLOURS[k]);
+      for (const m of filters) m.opacity = fast ? 0.13 : 0.4;
+      blur.opacity = fast ? 0.2 : 0;
+    },
+  };
+}

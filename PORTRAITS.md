@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 100 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
+The labels name 104 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
 
 ## Adding a portrait
 
@@ -50,6 +50,10 @@ Take the picture from the person's own article or file page, where the caption s
 | Kenjiro Takayanagi | Cathode ray tube | Showed a television receiver built on a cathode ray tube, in Japan in 1926. | `public/people/kenjiro-takayanagi.jpg` |
 | Philo Farnsworth | Cathode ray tube | Sent the first all-electronic television picture, in San Francisco in 1927. | `public/people/philo-farnsworth.jpg` |
 | Elma Farnsworth | Cathode ray tube | Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent. | `public/people/elma-farnsworth.jpg` |
+| Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. | `public/people/guillermo-gonzalez-camarena.jpg` |
+| A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. | `public/people/a-frankenstein.jpg` |
+| Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. | `public/people/werner-von-jaworski.jpg` |
+| Peter Goldmark | Colour-wheel television | Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years. | `public/people/peter-goldmark.jpg` |
 | Robert H. Anderson | Storage tube terminal | The Tektronix engineer. A common name. | `public/people/robert-h-anderson.jpg` |
 | Andrew Haeff | Storage tube terminal | Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen. | `public/people/andrew-haeff.jpg` |
 | David Hagelbarger | Nixie tube | The engineer most often named as its inventor. | `public/people/david-hagelbarger.jpg` |

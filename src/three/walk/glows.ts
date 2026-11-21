@@ -4,6 +4,7 @@ export const glows: Record<string, number> = {
   'mechanical-television': 0xff5a1e,
   'drone-show': 0x8fb4ff,
   'cathode-ray-tube': 0xbfd8ff,
+  'colour-wheel-television': 0xcfd6ff,
   'vector-display': 0x58ff8a,
   'storage-tube': 0x4dff86,
   'nixie-tube': 0xff6a1a,

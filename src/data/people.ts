@@ -64,6 +64,13 @@ export const people: Record<string, Credit> = {
     ],
     sources: [src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707')],
   },
+  'colour-wheel-television': {
+    people: [
+      { who: ['Guillermo González Camarena'], did: 'Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.' },
+      { who: ['A. Frankenstein', 'Werner von Jaworski'], did: 'Applied in Germany in 1904 for a patent on a colour system with a filter wheel.' },
+      { who: ['Peter Goldmark'], did: 'Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years.' },
+    ],
+  },
   'storage-tube': {
     people: [
       { who: ['Robert H. Anderson'], did: 'Developed the storage tube at Tektronix.' },
