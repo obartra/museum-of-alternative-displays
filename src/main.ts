@@ -41,6 +41,22 @@ document.addEventListener('click', (e) => {
   if (t.closest('a[href="#main"]')) { e.preventDefault(); document.getElementById('main')?.focus(); }
 });
 
+// ---------- the keys, listed for whoever has a keyboard ----------
+document.addEventListener('click', (e) => {
+  if (!(e.target as HTMLElement).closest('[data-keys]')) return;
+  const opener = e.target as HTMLElement, box = document.createElement('dialog');
+  const row = (keys: string[], what: string) => `<div><dt>${keys.map((k) => `<kbd>${esc(k)}</kbd>`).join(' ')}</dt><dd>${what}</dd></div>`;
+  box.className = 'keys';
+  box.setAttribute('aria-labelledby', 'keys-h');
+  box.innerHTML = `<div class="keys__head"><h2 class="h-sec" id="keys-h">${tx('keys.title')}</h2><button type="button" class="btn" autofocus>${tx('stage.close')}</button></div>
+<h3>${tx('keys.anywhere')}</h3><dl>${row(['\u2190', '\u2192'], tx('keys.step'))}${row(['Tab'], tx('keys.tab'))}${row(['Esc'], tx('keys.esc'))}</dl>
+<h3>${tx('keys.model')}</h3><dl>${row(['\u2190', '\u2192', '\u2191', '\u2193'], tx('keys.turn'))}${row(['+', '-'], tx('keys.zoom'))}${row(['R'], tx('stage.home'))}${row(['1', '2', '3'], tx('keys.views'))}${row(['D'], tx('switch.daylight'))}${row(['P'], tx('keys.pause'))}${row(['G'], tx('stage.stereo'))}${row(['F'], tx('keys.full'))}</dl>`;
+  document.body.append(box);
+  box.addEventListener('click', (ev) => { if (ev.target === box || (ev.target as HTMLElement).closest('button')) box.close(); });
+  box.addEventListener('close', () => { box.remove(); opener.focus(); });
+  box.showModal();
+});
+
 // ---------- the one live 3D stage, kept between pieces ----------
 let stage: Stage | null = null;
 let stageCanvas: HTMLCanvasElement | null = null;
@@ -88,7 +104,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><span>${tx('foot.claim')}</span><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}">${tx('foot.repo')}</a></footer>
+<footer class="foot"><span>${tx('foot.claim')}</span><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button></footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -186,7 +202,13 @@ function hallView(n: number): void {
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="#hall-${prev.id}">${tx('pager.backHall', named(prev))}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#hall-${next.id}">${tx('pager.nextHall', named(next))}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
-</div>`, n);
+</div>`, n);  const onKey = (e: KeyboardEvent) => {
+    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test((document.activeElement as HTMLElement | null)?.tagName ?? '')) return;
+    const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
+    if (to) location.hash = `#hall-${to.id}`;
+  };
+  document.addEventListener('keydown', onKey);
+  leave = () => document.removeEventListener('keydown', onKey);
 }
 
 // ---------- piece ----------
@@ -272,11 +294,27 @@ function pieceView(id: string): void {
     stage?.setFree(full);
     stage?.resize();
   };
+  const press = (name: string) => { const b = wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`); if (b && !b.disabled) b.click(); };
   const onKey = (e: KeyboardEvent) => {
-    if (e.key === 'Escape' && wrap.classList.contains('is-full')) setFull(false);
-    if (document.activeElement !== stageCanvas || !stage || !live) return;
-    const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
-    if (k[e.key]) { e.preventDefault(); stage.nudge(...k[e.key]); }
+    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('dialog[open]')) return;
+    if (e.key === 'Escape' && wrap.classList.contains('is-full')) return setFull(false);
+    const on = document.activeElement as HTMLElement | null, inStage = !!on?.closest('#stage');
+    if (on === stageCanvas && stage && live) {
+      const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
+      if (k[e.key]) { e.preventDefault(); return stage.nudge(...k[e.key]); }
+    }
+    if (inStage) {
+      // with the stage in focus, one key does what its button does. Only there, so that typing elsewhere is never hijacked
+      const key = e.key.toLowerCase();
+      const act = ({ d: 'daylight', f: 'full', p: 'pause', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
+      if (act === 'daylight') setLights(!lightsOn); else if (act) press(act);
+      else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled)[Number(key) - 1]?.click();
+      return;
+    }
+    // anywhere else on the page, left and right step through the collection
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(on?.tagName ?? '')) return;
+    const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
+    if (to) location.hash = `#piece-${to.id}`;
   };
   const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; };
 
@@ -368,6 +406,16 @@ function pieceView(id: string): void {
   else afterPicture(still, () => whenIdle(() => { if (!alive) return; if (wants3d()) void go(); else startBtn.hidden = false; }));
 
   const unwire = wireArchive(app, p.id, x.name);
+  // a sideways swipe across the text steps to the next piece or the one before. Rows that scroll sideways keep their own gesture
+  const words = app.querySelector<HTMLElement>('.piece > .stack')!;
+  let x0 = 0, y0 = 0, free = false;
+  words.addEventListener('touchstart', (e) => { x0 = e.changedTouches[0].clientX; y0 = e.changedTouches[0].clientY; free = !(e.target as HTMLElement).closest('.archive__row, a, button'); }, { passive: true });
+  words.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (!free || Math.abs(dx) < 80 || Math.abs(dx) < Math.abs(dy) * 2.2) return;
+    const to = dx < 0 ? next : prev;
+    if (to) location.hash = `#piece-${to.id}`;
+  }, { passive: true });
 
   leave = () => {
     alive = false; live = false;
