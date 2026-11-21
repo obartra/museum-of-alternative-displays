@@ -342,7 +342,7 @@ const locale: Locale = {
       ],
       good: ['Emite su luz en la misma superficie que miras, así que la imagen se ve con claridad desde cualquier ángulo', 'Responde más rápido de lo que el ojo puede seguir', 'En un tubo de un solo color no tiene una cuadrícula fija de píxeles'],
       bad: ['Se vuelve más profundo y pesado, y tiene más vacío que contener, a medida que crece la pantalla', 'Necesita un voltaje alto, y su ampolla de vidrio soporta la presión del aire exterior', 'Redibuja la imagen sin parar y no la retiene, así que la imagen parpadea'],
-      look: 'Pulsa el botón «De frente». La franja brillante que baja por la pantalla es la zona donde el haz acaba de trazar sus líneas. El modelo ralentiza este proceso unas 60 veces. Después gira el modelo y mira de lado las bobinas de cobre del cuello, que guían el haz.',
+      look: 'Pulsa el botón «Siéntate delante». La franja brillante que baja por la pantalla es la zona donde el haz acaba de trazar sus líneas. El modelo ralentiza este proceso unas 60 veces. Después gira el modelo y mira de lado las bobinas de cobre del cuello, que guían el haz.',
     },
     'vector-display': {
       name: 'Pantalla vectorial', aka: 'Pantalla caligráfica, monitor XY',
@@ -422,7 +422,7 @@ const locale: Locale = {
       ],
       good: ['Produce su propia luz en cada celda, así que los negros son profundos y los ángulos de visión, amplios', 'Fue plana y grande mucho antes de que los paneles de cristal líquido pudieran serlo'],
       bad: ['Consume mucha electricidad y pesa mucho', 'Conserva una marca duradera de las imágenes que permanecen mucho tiempo en pantalla, el llamado quemado', 'Sus celdas no se pueden hacer muy pequeñas, así que no son posibles los paneles pequeños con detalle fino'],
-      look: 'El modelo muestra el tipo primitivo: un panel cuadrado y anaranjado en un terminal de aula. Un marco de haces infrarrojos invisibles alrededor de la pantalla permite al terminal detectar dónde hay un dedo. Pulsa el botón «De frente» para ver los puntos uno a uno.',
+      look: 'El modelo muestra el tipo primitivo: un panel cuadrado y anaranjado en un terminal de aula. Un marco de haces infrarrojos invisibles alrededor de la pantalla permite al terminal detectar dónde hay un dedo. Pulsa el botón «Acércate a los puntos» para ver los puntos uno a uno.',
     },
     'field-emission': {
       name: 'Pantalla de emisión de campo', aka: 'FED, el CRT plano',
@@ -968,9 +968,87 @@ const locale: Locale = {
   },
 
   views: {
-    'mechanical-television': { eyepiece: { label: 'Mira dentro' } },
+    'split-flap': {
+      hall: { label: 'Espera en el vestíbulo', hint: 'Quien esperaba aprendió a levantar la vista al oír el traqueteo. Aquí cae una lámina cada segundo.' },
+      flaps: { label: 'Acércate a las láminas', hint: 'Detrás de cada cifra hay un fajo de láminas en espera, articuladas con pasadores alrededor de un tambor. Dos topes sujetan la de arriba.' },
+    },
+    'flip-disc': {
+      kerb: { label: 'Espera en la parada', hint: 'Como en el frontal de un autobús. El panel refleja la luz del día y no produce ninguna, y en la fila de abajo se voltea un disco por segundo.' },
+      discs: { label: 'Acércate a los discos', hint: 'Cada disco descansa sobre un eje. Un pulso en las bobinas de cobre que tiene debajo lo voltea, y así se queda sin corriente.' },
+    },
+    'mechanical-television': {
+      eyepiece: { label: 'Mira dentro', hint: 'Treinta líneas de neón parpadeante, vistas a través de los agujeros en movimiento. Las horas arriba, los minutos abajo.' },
+      disc: { label: 'Sigue la espiral', hint: 'Treinta agujeros, cada uno el ancho de un agujero más cerca del centro que el anterior. Una vuelta del disco es una imagen.' },
+    },
+    'kinetic-mirror': {
+      stand: { label: 'Ponte delante', hint: 'La forma oscura eres tú. Una cámara en el centro observa, y las tablillas se inclinan para seguirte cuando mueves la cabeza.' },
+      tiles: { label: 'Acércate a las tablillas', hint: 'Cada tablilla se inclina con su propio servomotor. Inclinada hacia un lado recoge la luz, y hacia el otro queda en sombra.' },
+    },
+    'shape-display': {
+      table: { label: 'Ponte junto a la mesa', hint: 'La superficie es la imagen. Un bulto recorre las varillas y se lleva consigo la bola roja.' },
+      pins: { label: 'Baja entre las varillas', hint: 'Un motor situado debajo lleva cada varilla a su propia altura. La altura es todo lo que hay: no puede haber voladizos.' },
+    },
+    'braille-display': {
+      touch: { label: 'Pasa un dedo por encima', hint: 'Lo que encuentra la yema del dedo: varillas redondeadas, subidas o bajadas, ocho por celda. Las celdas de la derecha cambian cada segundo.' },
+      cell: { label: 'Mira dentro de una celda', hint: 'La última celda, sacada y ampliada. Bajo cada punto, una tira de cristal piezoeléctrico se curva y levanta su varilla.' },
+    },
+    'drone-show': {
+      field: { label: 'Ponte en el campo', hint: 'Cada punto de luz es una aeronave con su propia ruta planificada. Escriben la hora y luego se reagrupan en una esfera.' },
+      close: { label: 'Sube volando hasta uno', hint: 'Cada luz cuelga de un pequeño cuadricóptero, que el posicionamiento por satélite mantiene a centímetros de su sitio.' },
+    },
+    'cathode-ray-tube': {
+      seat: { label: 'Siéntate delante', hint: 'La franja que baja por la cara es el barrido, unas sesenta veces más lento. Un solo haz lo pinta línea a línea.' },
+      raster: { label: 'Acércate a la cara', hint: 'La imagen está hecha de líneas horizontales. El haz las recorre de arriba abajo, una y otra vez.' },
+      gun: { label: 'Mira dentro del cuello', hint: 'El cañón. Un cátodo caliente desprende electrones, y las bobinas de cobre que rodean el cuello dirigen el haz.' },
+    },
+    'vector-display': {
+      seat: { label: 'Siéntate ante la consola', hint: 'El haz traza cada línea directamente, como una pluma. La estela que deja la pelota es fósforo que todavía brilla.' },
+      trace: { label: 'Acércate al trazo', hint: 'Ni puntos ni líneas de barrido. Cada trazo es una sola pasada continua del haz, en cualquier ángulo.' },
+    },
+    'storage-tube': {
+      seat: { label: 'Siéntate ante el terminal', hint: 'El gráfico se dibuja una vez y se queda encendido, guardado en el propio tubo. El destello es la única manera de borrarlo.' },
+    },
+    'nixie-tube': {
+      stack: { label: 'Acércate a un tubo', hint: 'Diez cátodos con forma de cifra, apilados de delante atrás dentro de un ánodo de malla. El neón brilla alrededor del que recibe tensión.' },
+    },
+    'vacuum-fluorescent': {
+      grid: { label: 'Mira a ras del vidrio', hint: 'Delante, unos hilos finos y calientes. Detrás, una rejilla de malla, y después los segmentos de fósforo. Todas las patillas salen por abajo.' },
+    },
+    numitron: {
+      filaments: { label: 'Acércate a una ampolla', hint: 'Siete filamentos de lámpara tendidos entre postes. Los encendidos son alambre que brilla, y no hay más luz que esa.' },
+    },
+    'plasma-panel': {
+      seat: { label: 'Siéntate delante', hint: 'Un terminal de aula. Cada punto naranja es una pequeña descarga de neón. Unos haces infrarrojos que cruzan el marco localizan un dedo.' },
+      dots: { label: 'Acércate a los puntos', hint: 'Cada punto es una celda de gas entre dos láminas de vidrio. Una celda encendida es un pequeño letrero de neón.' },
+    },
+    'field-emission': {
+      tips: { label: 'Baja hasta las puntas', hint: 'Una punta de cátodo frío bajo cada agujero de la puerta. Los electrones salen de las puntas y cruzan el hueco hasta el fósforo de arriba.' },
+    },
+    eggcrate: {
+      below: { label: 'Míralo desde abajo', hint: 'Un marcador tal como lo veía el público. Las bombillas no se encienden ni se apagan de golpe: crecen y se desvanecen.' },
+      lamps: { label: 'Acércate a las bombillas', hint: 'Bombillas corrientes, cada una en su propia celda de la máscara para que su luz no invada a las vecinas.' },
+    },
+    'led-display': {
+      below: { label: 'Ponte debajo', hint: 'Los letreros de exterior se cuelgan altos. La visera de cada fila protege las lámparas del sol y nunca las tapa desde abajo.' },
+      lamps: { label: 'Acércate a las lámparas', hint: 'Tres lámparas por píxel: roja, verde y azul. El ámbar es la roja y la verde encendidas a la vez, con la azul apagada.' },
+    },
+    oled: {
+      seat: { label: 'Siéntate delante', hint: 'Apaga la luz del día. El negro del panel se pierde en la oscuridad y solo quedan los colores.' },
+    },
+    microled: {
+      socket: { label: 'Mira dentro del hueco', hint: 'Se ha sacado un módulo. Detrás están la placa de circuito, los conectores de alimentación y de datos, y los cuatro imanes que sujetan un módulo.' },
+    },
+    'thin-film-el': {
+      dots: { label: 'Acércate a los puntos', hint: 'Cada punto es un cruce de dos tiras de electrodo. El amarillo es lo que emite la propia película, no un filtro.' },
+    },
+    'transparent-display': {
+      window: { label: 'Ponte ante la vitrina', hint: 'Las cifras son luz añadida sobre el vidrio, y el reloj está detrás. Mueve la cabeza y se separan.' },
+    },
+    'flexible-display': {
+      edge: { label: 'Mira a lo largo del borde', hint: 'La lámina es toda la pantalla: películas delgadas sobre plástico, sin nada detrás. Se enrolla en el tambor de abajo.' },
+    },
     'peppers-ghost': { seat: { label: 'Siéntate' } },
-    'stereoscope': { eyepiece: { label: 'Mira dentro' } },
+    stereoscope: { eyepiece: { label: 'Mira dentro' } },
     'head-mounted': { worn: { label: 'Póntelo' } },
     'head-up': { seat: { label: 'Siéntate' } },
   },

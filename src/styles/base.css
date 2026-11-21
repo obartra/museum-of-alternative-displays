@@ -109,7 +109,11 @@ h1, h2, h3 { text-wrap: balance; }
 /* places to look from: one row that never changes height, and scrolls sideways when a piece offers many */
 .stage__views { display: flex; gap: 8px; padding: 9px 10px 0; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--line); }
 .stage__views::-webkit-scrollbar { display: none; }
+.stage__views[hidden] { display: none; }
 .stage__views .btn { flex: none; white-space: nowrap; }
+/* what the chosen view shows: it stays while the visitor looks, so it sits under the buttons and not over the picture */
+.stage__say { margin: 0; padding: 8px 12px 0; font-size: .86rem; line-height: 1.4; color: var(--ink-2); max-width: 62ch; }
+.stage__say:empty { display: none; }
 .stage__bar { display: flex; gap: 8px; padding: 9px 10px; align-items: center; flex-wrap: wrap; }
 .stage__bar .gap { margin-left: auto; }
 @media (max-width: 400px) { .stage__bar { gap: 6px; padding: 9px 8px; } .stage__bar .btn { padding: 7px 9px; } }

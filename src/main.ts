@@ -243,7 +243,8 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: x.name })}" fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>${tx('stage.start')}</button></div>
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
+    <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
+    <p class="stage__say" id="stage-say" aria-live="polite"></p>
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
@@ -281,6 +282,7 @@ function pieceView(id: string): void {
   // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
   let alive = true, live = false, begun = false, seen = true, wantFocus = false;
   const tell = (text: string) => { hint.textContent = text; hint.style.opacity = '1'; };
+  const caption = document.getElementById('stage-say')!;
   const say = (on: boolean) => {
     const d = live ? stage?.inDark : undefined;
     note.textContent = !on && d === 'vanishes' ? t('stage.note.vanishes') : on && d === 'better' ? t('stage.note.better') : '';
@@ -291,7 +293,10 @@ function pieceView(id: string): void {
     const v = id && stage.inView !== id ? places.find((x) => x.id === id) : undefined;
     if (v) stage.goView(v.id, v.kind === 'detail'); else stage.goHome();
     for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(b.dataset.view === v?.id));
-    tell(v ? v.hint ?? HINT[v.kind] : HINT.turn);
+    // how to move goes over the picture and fades at the first touch. What the view shows stays, under the buttons
+    tell(v ? HINT[v.kind] : HINT.turn);
+    caption.textContent = v?.hint ?? '';
+    if (v && standIn.view(p.id, v.id)) caption.lang = 'en'; else caption.removeAttribute('lang');
   };
   // Full view takes one step in the browser's history, so the back button of a phone closes it and stays on the page.
   let stepped = false;
@@ -329,7 +334,10 @@ function pieceView(id: string): void {
     const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
     if (to) location.hash = `#piece-${to.id}`;
   };
-  const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; };
+  // without the model there is nowhere to look from, so the row of places goes too
+  const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; views.hidden = true; caption.textContent = ''; };
+  /** A place the visitor asked for before the model was running. It is taken up as soon as the model is. */
+  let askedFor: string | null = null;
 
   /** Bring the model to life over its still picture. Only this needs three.js. */
   const go = async () => {
@@ -372,6 +380,8 @@ function pieceView(id: string): void {
       pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause');
       tell(HINT.turn);
       say(lightsOn);
+      if (askedFor && stage.hasView(askedFor)) setView(askedFor);
+      askedFor = null;
       if (wantFocus) cv.focus();
       const surf = stage.surface;
       if (surf) {
@@ -390,7 +400,8 @@ function pieceView(id: string): void {
     const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act], [data-view]');
     if (!el) return;
     const name = el.dataset.act;
-    if (el.dataset.view) setView(el.dataset.view);
+    // a place to look from starts the model if it is not running yet, and goes there once it is
+    if (el.dataset.view) { if (live) setView(el.dataset.view); else { askedFor = el.dataset.view; void go(); } }
     if (name === 'start') { wantFocus = true; void go(); }
     if (name === 'front') { setView(null); stage?.goFront(); }
     if (name === 'home') setView(null);
@@ -568,6 +579,14 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const { thumb } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
+    // every named view of every piece, each beside the whole piece: `#sheet?view=*`
+    if (q.get('view') === '*') {
+      for (const v of [undefined, ...viewsOf(p.id)]) {
+        const url = await thumb(p.id, hallColour(p.hall), on, size, { view: v?.id, az: v ? undefined : 24, el: v ? undefined : 10, zoom: v ? undefined : 1, no: p.hall, w, h });
+        grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${w}" height="${h}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id} ${v ? `${v.kind}: ${v.id}` : ''}</figcaption></figure>`);
+      }
+      continue;
+    }
     // a named view: only the pieces that have it
     if (view && 'view' in view && !viewsOf(p.id).some((v) => v.id === view.view)) continue;
     const shot = view || q.has('w') ? { ...view, no: p.hall, w, h } : undefined;

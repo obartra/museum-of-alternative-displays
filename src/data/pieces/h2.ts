@@ -14,7 +14,7 @@ export const h2: Piece[] = [
     ],
     good: ['Gives off its light at the surface you look at, so the picture is clear from any angle', 'Responds faster than the eye can follow', 'Has no fixed grid of pixels in a one-colour tube'],
     bad: ['Becomes deeper and heavier, with more vacuum to hold, as the screen grows', 'Needs a high voltage, and its glass bulb is under pressure from the air outside', 'Redraws its picture constantly and does not hold it, so the picture flickers'],
-    look: 'Press the Front button. The bright band that moves down the screen is where the beam has just drawn its lines. The model slows this about 60 times. Then turn the model and look from the side at the copper coils on the neck, which steer the beam.',
+    look: 'Press the Sit in front button. The bright band that moves down the screen is where the beam has just drawn its lines. The model slows this about 60 times. Then turn the model and look from the side at the copper coils on the neck, which steer the beam.',
     sources: [wiki('Cathode_ray_tube', 'Cathode ray tube'), wiki('Shadow_mask', 'Shadow mask')],
   },
   {
@@ -105,7 +105,7 @@ export const h2: Piece[] = [
     ],
     good: ['Makes its own light in each cell, so blacks are deep and viewing angles are wide', 'Was flat and large long before liquid crystal panels could be'],
     bad: ['Uses a lot of power and is heavy', 'Keeps a lasting mark of a picture that stays on screen for a long time, called burn-in', 'Has cells that cannot be made very small, so small panels with fine detail are not possible'],
-    look: 'The model shows the early kind: a square orange panel in a classroom terminal. A frame of invisible infrared beams around the screen lets the terminal detect where a finger is. Press the Front button to see the individual dots.',
+    look: 'The model shows the early kind: a square orange panel in a classroom terminal. A frame of invisible infrared beams around the screen lets the terminal detect where a finger is. Press the Go close to the dots button to see the individual dots.',
     sources: [wiki('Plasma_display', 'Plasma display'), wiki('PLATO_(computer_system)', 'PLATO')],
   },
   {

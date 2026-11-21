@@ -409,7 +409,7 @@ const locale: Locale = {
         'Braucht Hochspannung, und auf ihrem Glaskolben lastet der Druck der Außenluft',
         'Zeichnet ihr Bild ständig neu und hält es nicht, deshalb flimmert das Bild',
       ],
-      look: 'Drücken Sie auf „Von vorn“. Das helle Band, das über den Schirm nach unten wandert, zeigt, wo der Strahl gerade seine Zeilen gezeichnet hat. Das Modell verlangsamt das etwa 60-fach. Drehen Sie dann das Modell und betrachten Sie von der Seite die Kupferspulen am Hals, die den Strahl lenken.',
+      look: 'Drücken Sie auf „Davorsetzen“. Das helle Band, das über den Schirm nach unten wandert, zeigt, wo der Strahl gerade seine Zeilen gezeichnet hat. Das Modell verlangsamt das etwa 60-fach. Drehen Sie dann das Modell und betrachten Sie von der Seite die Kupferspulen am Hals, die den Strahl lenken.',
     },
     'vector-display': {
       name: 'Vektorbildschirm',
@@ -537,7 +537,7 @@ const locale: Locale = {
         'Behält eine bleibende Spur von einem Bild, das lange auf dem Schirm steht, das sogenannte Einbrennen',
         'Hat Zellen, die sich nicht sehr klein bauen lassen, deshalb sind kleine Bildschirme mit feinen Details nicht möglich',
       ],
-      look: 'Das Modell zeigt die frühe Bauart: einen quadratischen orangen Bildschirm in einem Unterrichtsterminal. Ein Rahmen aus unsichtbaren Infrarotstrahlen um den Schirm lässt das Terminal erkennen, wo ein Finger ist. Drücken Sie auf „Von vorn“, dann sehen Sie die einzelnen Punkte.',
+      look: 'Das Modell zeigt die frühe Bauart: einen quadratischen orangen Bildschirm in einem Unterrichtsterminal. Ein Rahmen aus unsichtbaren Infrarotstrahlen um den Schirm lässt das Terminal erkennen, wo ein Finger ist. Drücken Sie auf „Nah an die Punkte“, dann sehen Sie die einzelnen Punkte.',
     },
     'field-emission': {
       name: 'Feldemissionsbildschirm',
@@ -1381,9 +1381,87 @@ const locale: Locale = {
   },
 
   views: {
-    'mechanical-television': { eyepiece: { label: 'Hineinsehen' } },
+    'split-flap': {
+      hall: { label: 'In der Halle warten', hint: 'Wer wartete, lernte, beim Rattern aufzuschauen. Hier fällt jede Sekunde ein Blatt.' },
+      flaps: { label: 'Nah an die Blätter', hint: 'Hinter jeder Ziffer steht ein Bündel wartender Blätter, mit Stiften um eine Trommel gelagert. Zwei Nasen halten das oberste fest.' },
+    },
+    'flip-disc': {
+      kerb: { label: 'An der Haltestelle warten', hint: 'Wie an der Front eines Busses. Die Tafel wirft Tageslicht zurück und erzeugt selbst keines, und in der untersten Reihe klappt jede Sekunde eine Scheibe um.' },
+      discs: { label: 'Nah an die Scheiben', hint: 'Jede Scheibe sitzt auf einer Achse. Ein Impuls durch die Kupferspulen darunter wirft sie um, und sie bleibt ohne Strom so stehen.' },
+    },
+    'mechanical-television': {
+      eyepiece: { label: 'Hineinsehen', hint: 'Dreißig Zeilen flackerndes Neonlicht, gesehen durch die wandernden Löcher. Oben die Stunden, unten die Minuten.' },
+      disc: { label: 'Der Spirale folgen', hint: 'Dreißig Löcher, jedes um eine Lochbreite näher an der Mitte als das vorige. Eine Umdrehung der Scheibe ergibt ein Bild.' },
+    },
+    'kinetic-mirror': {
+      stand: { label: 'Davorstellen', hint: 'Die dunkle Form sind Sie. Eine Kamera in der Mitte schaut zu, und die Plättchen kippen passend dazu, wenn Sie den Kopf bewegen.' },
+      tiles: { label: 'Nah an die Plättchen', hint: 'Jedes Plättchen kippt mit einem eigenen Servomotor. In die eine Richtung gekippt, fängt es das Licht, in die andere fällt es in den Schatten.' },
+    },
+    'shape-display': {
+      table: { label: 'An den Tisch treten', hint: 'Die Oberfläche ist das Bild. Ein Buckel wandert über die Stifte und nimmt den roten Ball mit.' },
+      pins: { label: 'Zwischen die Stifte', hint: 'Jeder Stift wird von einem Motor darunter auf seine eigene Höhe gefahren. Mehr als Höhe gibt es nicht: keine Überhänge.' },
+    },
+    'braille-display': {
+      touch: { label: 'Mit dem Finger entlang', hint: 'Was eine Fingerkuppe spürt: runde Stifte, oben oder unten, acht je Zelle. Die Zellen rechts wechseln jede Sekunde.' },
+      cell: { label: 'In eine Zelle sehen', hint: 'Die letzte Zelle, herausgenommen und vergrößert. Unter jedem Punkt biegt sich ein Streifen Piezokristall und hebt seinen Stift.' },
+    },
+    'drone-show': {
+      field: { label: 'Auf das Feld stellen', hint: 'Jeder Lichtpunkt ist ein Fluggerät auf seiner eigenen geplanten Bahn. Sie schreiben die Uhrzeit und formieren sich dann zu einer Weltkugel.' },
+      close: { label: 'Zu einer Drohne fliegen', hint: 'Jedes Licht hängt unter einem kleinen Quadrocopter, den die Satellitenortung auf Zentimeter genau an seinem Platz hält.' },
+    },
+    'cathode-ray-tube': {
+      seat: { label: 'Davorsetzen', hint: 'Das Band, das über die Schirmfläche nach unten wandert, ist das Zeilenraster, etwa sechzigfach verlangsamt. Ein einziger Strahl malt es Zeile für Zeile.' },
+      raster: { label: 'Nah an den Schirm', hint: 'Das Bild besteht aus waagerechten Zeilen. Der Strahl überstreicht sie von oben nach unten, immer wieder.' },
+      gun: { label: 'In den Hals sehen', hint: 'Die Elektronenkanone. Eine beheizte Kathode gibt Elektronen ab, und die Kupferspulen um den Hals lenken den Strahl.' },
+    },
+    'vector-display': {
+      seat: { label: 'An die Konsole setzen', hint: 'Der Strahl zeichnet jeden Strich direkt, wie ein Stift. Die Spur hinter dem Ball ist Leuchtstoff, der noch nachleuchtet.' },
+      trace: { label: 'Nah an die Spur', hint: 'Keine Punkte und keine Zeilen. Jeder Strich ist ein einziger glatter Zug des Strahls, in jedem Winkel.' },
+    },
+    'storage-tube': {
+      seat: { label: 'An das Terminal setzen', hint: 'Die Kurve wird einmal gezeichnet und leuchtet weiter, gespeichert in der Röhre selbst. Nur der Blitz kann sie löschen.' },
+    },
+    'nixie-tube': {
+      stack: { label: 'Nah an eine Röhre', hint: 'Zehn geformte Kathoden, von vorn nach hinten gestapelt, in einer Gitteranode. Das Neon leuchtet um die, an der Spannung liegt.' },
+    },
+    'vacuum-fluorescent': {
+      grid: { label: 'Flach über das Glas sehen', hint: 'Vorn dünne heiße Drähte, dahinter ein Gitter aus Geflecht, dann die Leuchtstoffsegmente. Alle Anschlüsse treten unten aus.' },
+    },
+    numitron: {
+      filaments: { label: 'Nah an einen Kolben', hint: 'Sieben Glühfäden, zwischen Stützen gespannt. Die eingeschalteten sind glühender Draht, und mehr Licht gibt es nicht.' },
+    },
+    'plasma-panel': {
+      seat: { label: 'Davorsetzen', hint: 'Ein Unterrichtsterminal. Jeder orange Punkt ist eine kleine Neonentladung. Infrarotstrahlen quer über den Rahmen finden einen Finger.' },
+      dots: { label: 'Nah an die Punkte', hint: 'Jeder Punkt ist eine Gaszelle zwischen zwei Glasscheiben. Eine eingeschaltete Zelle ist eine kleine Neonreklame.' },
+    },
+    'field-emission': {
+      tips: { label: 'Hinunter zu den Spitzen', hint: 'Unter jedem Loch im Gate sitzt eine Kaltkathodenspitze. Elektronen verlassen die Spitzen und überqueren den Spalt zum Leuchtstoff darüber.' },
+    },
+    eggcrate: {
+      below: { label: 'Zur Tafel hinaufsehen', hint: 'Eine Anzeigetafel, wie das Publikum sie sah. Die Lampen schalten nicht schlagartig ein und aus: Sie schwellen an und verglimmen.' },
+      lamps: { label: 'Nah an die Glühbirnen', hint: 'Gewöhnliche Glühbirnen, jede in einer eigenen Zelle der Maske, damit ihr Licht nicht auf die Nachbarn fällt.' },
+    },
+    'led-display': {
+      below: { label: 'Darunterstellen', hint: 'Außenanzeigen hängen hoch. Die Blende über jeder Reihe hält die Sonne von den Lampen ab und verdeckt sie von unten nie.' },
+      lamps: { label: 'Nah an die Lampen', hint: 'Drei Lampen je Pixel: rot, grün und blau. Bernstein ist Rot und Grün zusammen, während Blau dunkel bleibt.' },
+    },
+    oled: {
+      seat: { label: 'Davorsetzen', hint: 'Schalten Sie das Tageslicht aus. Das Schwarz des Bildschirms verschwindet mit ihm, und nur die Farben bleiben.' },
+    },
+    microled: {
+      socket: { label: 'In die Lücke sehen', hint: 'Eine Kachel wurde herausgenommen. Dahinter: die Leiterplatte, Buchsen für Strom und Daten und die vier Magnete, die eine Kachel halten.' },
+    },
+    'thin-film-el': {
+      dots: { label: 'Nah an die Punkte', hint: 'Jeder Punkt ist eine Kreuzung zweier Elektrodenstreifen. Das Gelb ist das, was die Schicht selbst abgibt, kein Filter.' },
+    },
+    'transparent-display': {
+      window: { label: 'Vor die Vitrine treten', hint: 'Die Ziffern sind Licht, das auf der Scheibe hinzukommt, und der Wecker steht dahinter. Bewegen Sie den Kopf, dann rücken sie auseinander.' },
+    },
+    'flexible-display': {
+      edge: { label: 'An der Kante entlangsehen', hint: 'Die Folie ist das ganze Display: dünne Schichten auf Kunststoff, und nichts dahinter. Sie wickelt sich auf die Rolle darunter.' },
+    },
     'peppers-ghost': { seat: { label: 'Platz nehmen' } },
-    'stereoscope': { eyepiece: { label: 'Hineinsehen' } },
+    stereoscope: { eyepiece: { label: 'Hineinsehen' } },
     'head-mounted': { worn: { label: 'Aufsetzen' } },
     'head-up': { seat: { label: 'Platz nehmen' } },
   },

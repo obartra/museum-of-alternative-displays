@@ -12,7 +12,8 @@ export function crt(): Built {
   // the funnel is painted with graphite, which is why you cannot see in from the side
   const dag = M.black(); dag.side = THREE.DoubleSide;
   tube.add(G.lathe([[0.972, 0.5], [0.806, 0.9], [0.526, 1.42], [0.276, 1.82], [0.172, 1.97]], dag, 80, true));
-  const face = screen(512, 512);
+  // drawn at twice the size it is laid out in, so that the lines of the raster hold up from close to
+  const face = screen(1024, 1024);
   const phosphor = G.dish(0.935, 0.17, M.lit(face, 1.5, 0.9), [0, 0.2, 0]);
   phosphor.rotation.x = Math.PI / 2;
   const band = G.lathe([[1.004, 0.27], [1.018, 0.285], [1.018, 0.4], [1.004, 0.415]], M.steel(), 80);
@@ -25,6 +26,8 @@ export function crt(): Built {
   // the gun, seen through the clear neck
   for (const [y, h, r] of [[2.34, 0.1, 0.085], [2.48, 0.14, 0.09], [2.66, 0.16, 0.085]] as const) tube.add(G.cyl(r, h, M.steel(), [0, y, 0], 28));
   for (const a of [0, 2.09, 4.19]) tube.add(G.rod([Math.cos(a) * 0.115, 2.26, Math.sin(a) * 0.115], [Math.cos(a) * 0.115, 2.78, Math.sin(a) * 0.115], 0.012, M.ceramic(), 8));
+  // the cathode at the back of the gun, kept hot by its heater: the one part of the works that glows
+  tube.add(G.cyl(0.034, 0.09, M.glow(0xff7a2a, 1.5), [0, 2.82, 0], 16), halo(0xff6a20, 0.42, [0, 2.84, 0], 0.55));
   tube.add(G.cyl(0.19, 0.13, M.plastic(0x16181a, 0.45), [0, 3.02, 0], 32));
   for (let i = 0; i < 8; i++) { const a = (i / 8) * Math.PI * 2; tube.add(G.rod([Math.cos(a) * 0.12, 3.08, Math.sin(a) * 0.12], [Math.cos(a) * 0.12, 3.2, Math.sin(a) * 0.12], 0.012, M.brass(1), 8)); }
   // anode cap and its lead
@@ -43,8 +46,16 @@ export function crt(): Built {
   root.add(saddle, G.box(0.5, 0.08, 0.16, steel, [0, 0.9, -1.2]));
   return {
     root, inDark: 'glows', glow: 0xbfd8ff, view: [30, 12], surface: face.canvas,
+    views: {
+      // far enough back that the whole face fits a narrow frame
+      seat: { at: [0, 1.2, 6.6], to: [0, 1.14, 1.4] },
+      raster: { at: [0.45, 1.25, 2.3], to: [0.1, 1.14, 1.38], play: 0.4 },
+      // from behind and to one side, clear of the anode lead
+      gun: { at: [-0.9, 1.45, -1.9], to: [0, 1.14, -1.15] },
+    },
     update: ({ t }) => {
       const c = face.ctx, n = now();
+      c.setTransform(2, 0, 0, 2, 0, 0);
       c.fillStyle = '#020303'; c.fillRect(0, 0, 512, 512);
       const X = 82, Y = 126, W = 348, H = 260;
       c.save(); c.beginPath(); c.roundRect(X, Y, W, H, 30); c.clip();
@@ -70,7 +81,8 @@ export function vector(): Built {
   const shell = M.enamel(0x6f857b), panel = M.plastic(0x1f2225, 0.5);
   root.add(G.rbox(2.2, 1.7, 1.5, 0.07, shell, [0, 0.97, -0.25]), G.box(2.02, 1.52, 0.05, panel, [0, 0.97, 0.49], 0.012), feet(2.2, 1.5, 0.08, 0.12, 0));
   const cx = -0.34, cy = 1.0;
-  const scope = screen(512, 512);
+  const scope = screen(1024, 1024);
+  scope.ctx.setTransform(2, 0, 0, 2, 0, 0);
   scope.ctx.fillStyle = '#010502'; scope.ctx.fillRect(0, 0, 512, 512);
   // a deep hood keeps room light off the phosphor
   const hood = G.lathe([[0.8, 0], [0.8, 0.05], [0.73, 0.33], [0.7, 0.35], [0.66, 0.33], [0.615, 0.02]], M.plastic(0x15171a, 0.6), 72);
@@ -92,6 +104,10 @@ export function vector(): Built {
   root.add(pen, G.wire([[0.06, 0.3, 0.9], [-0.3, 0.33, 0.82], [-0.7, 0.36, 0.66], [-0.86, 0.4, 0.52]], 0.012, M.rubber()));
   return {
     root, inDark: 'glows', glow: 0x58ff8a, view: [24, 10], zoom: 0.9, surface: scope.canvas,
+    views: {
+      seat: { at: [-0.25, 1.3, 3], to: [cx, cy, 0.52], fov: 46 },
+      trace: { at: [-0.05, 1.22, 1.5], to: [-0.3, 1.02, 0.55], play: 0.4 },
+    },
     update: ({ t }) => {
       const c = scope.ctx, n = now();
       // phosphor persistence: old strokes fade instead of vanishing
@@ -135,6 +151,7 @@ export function storageTube(): Built {
   let cycle = -1, done = 0;
   return {
     root, inDark: 'glows', glow: 0x4dff86, view: [26, 9], surface: s.canvas,
+    views: { seat: { at: [0, 2.25, 3.9], to: [0, 1.85, 0.66], fov: 42 } },
     update: ({ t }) => {
       const c = s.ctx, T = 14, k = Math.floor(t / T), u = (t % T);
       if (k !== cycle) { cycle = k; done = 0; }
@@ -208,7 +225,7 @@ export function nixie(): Built {
       const z = (4.5 - k) * 0.03;
       const ghost = nixieDigit(d, off, 0.0045, 5); ghost.position.z = z;
       // the glow is a sheath of excited neon a little way off the metal, so the lit numeral looks fatter than its wire
-      hot[d] = G.group(nixieDigit(d, on, 0.021, 8), nixieDigit(d, aura, 0.05, 6)); hot[d].position.z = z; hot[d].visible = false;
+      hot[d] = G.group(nixieDigit(d, on, 0.021, 14), nixieDigit(d, aura, 0.05, 14)); hot[d].position.z = z; hot[d].visible = false;
       g.add(ghost, hot[d]);
     });
     // mesh anode wrapped round the stack, mica spacers above and below, leads down into the socket
@@ -233,6 +250,8 @@ export function nixie(): Built {
   root.add(screws([[-2.08, 0.31, 0.34], [2.08, 0.31, 0.34], [-2.08, 0.31, -0.34], [2.08, 0.31, -0.34]], 0.026, 'y', M.brass()));
   return {
     root, inDark: 'glows', glow: 0xff6a1a, view: [20, 9], zoom: 1.12,
+    // the tube that counts seconds, from far enough round that the stack shows as a stack
+    views: { stack: { at: [2.55, 1.3, 1.35], to: [1.78, 0.98, 0], play: 0.6 } },
     update: () => {
       const d = now().digits;
       tubes.forEach((tb, i) => {
@@ -269,6 +288,7 @@ export function vfd(): Built {
   for (const x of [-1.3, 1.3]) root.add(G.box(0.12, 0.24, 0.1, M.dark(), [x, 0.2, -0.2]));
   return {
     root, inDark: 'glows', glow: 0x58ffd8, view: [18, 8], zoom: 1.08, surface: s.canvas,
+    views: { grid: { at: [-1.75, 1, 0.75], to: [-0.95, 0.78, 0], play: 0.3 } },
     update: () => {
       s.ctx.fillStyle = '#040807'; s.ctx.fillRect(0, 0, 768, 256);
       segClock(s.ctx, 768, 256, now(), '#7dffe6', '#0d2a26', true, 14);
@@ -283,13 +303,13 @@ export function numitron(): Built {
   const on = M.glow(0xffb45a, 3), off = M.dark(1);
   const tubes = [-1.14, -0.42, 0.42, 1.14].map((x) => {
     const g = G.group(); g.position.set(x, 0.42, 0);
-    const segs: Record<string, { wire: THREE.Mesh; bloom: THREE.Mesh }> = {};
+    const segs: Record<string, { wire: THREE.Mesh; bloom: THREE.Group }> = {};
     for (const k of 'abcdefg') {
       const [x0, y0, x1, y1] = SEG_LINES[k];
       const a: V3 = [(x0 - 0.5) * 0.25, 0.3 + y0 * 0.25, 0.04], b: V3 = [(x1 - 0.5) * 0.25, 0.3 + y1 * 0.25, 0.04];
       const wire = G.rod(a, b, 0.008, off, 6);
       // a lit filament is too bright to see as a wire: it reads as a soft bar of light
-      const bloom = G.rod(a, b, 0.024, M.add(null, 0xff9a3a, 0.55), 8); bloom.visible = false;
+      const bloom = G.group(G.rod(a, b, 0.02, M.add(null, 0xff9a3a, 0.5), 16), G.rod(a, b, 0.036, M.add(null, 0xff8a2a, 0.22), 16)); bloom.visible = false;
       segs[k] = { wire, bloom };
       g.add(wire, bloom);
     }
@@ -307,6 +327,7 @@ export function numitron(): Built {
   root.add(vents(1.2, 0.16, 5, [0, 0.19, 0.476]), screws([[-1.42, 0.3, 0.476], [1.42, 0.3, 0.476], [-1.42, 0.07, 0.476], [1.42, 0.07, 0.476]], 0.02));
   return {
     root, inDark: 'glows', glow: 0xffc98a, view: [20, 9], zoom: 1.1,
+    views: { filaments: { at: [1.75, 1.15, 0.95], to: [1.14, 0.97, 0.02] } },
     update: () => {
       const d = [...now().digits.slice(0, 4)];
       tubes.forEach((tb, i) => {
@@ -322,7 +343,8 @@ export function numitron(): Built {
 export function plasma(): Built {
   const root = G.group();
   const putty = M.enamel(0xcbc4af), dark = M.plastic(0x1d1f22, 0.6);
-  const s = screen(512, 512);
+  const s = screen(1024, 1024);
+  s.ctx.setTransform(2, 0, 0, 2, 0, 0);
   // the cabinet is deep only to hold the electronics: the panel itself is a sandwich of two glass plates
   root.add(G.rbox(2.1, 2.0, 1.4, 0.08, putty, [0, 1.2, -0.45]), G.rbox(1.5, 0.2, 1.1, 0.04, dark, [0, 0.1, -0.45]));
   root.add(G.bezel(1.86, 1.8, 1.42, 1.42, 0.02, 0.1, dark, [0, 1.22, 0.27], 0.05, 0.02), G.plane(1.46, 1.46, M.lit(s, 1.4, 0.9), [0, 1.22, 0.256]));
@@ -336,6 +358,10 @@ export function plasma(): Built {
   const noise = Array.from({ length: 9 }, (_, r) => Array.from({ length: 30 }, (_, c) => Math.sin(r * 91.7 + c * 37.3) > 0.1));
   return {
     root, inDark: 'glows', glow: 0xff7a22, view: [24, 10], surface: s.canvas,
+    views: {
+      seat: { at: [0, 1.75, 3.6], to: [0, 1.15, 0.26], fov: 44 },
+      dots: { at: [-0.85, 1.5, 1], to: [-0.45, 1.38, 0.26], play: 0.4 },
+    },
     update: ({ t }) => {
       const c = s.ctx;
       c.fillStyle = '#070301'; c.fillRect(0, 0, 512, 512);
@@ -357,14 +383,11 @@ export function fed(): Built {
   for (let i = 0; i < COLS * ROWS; i++) { const [x, z] = xz(i); tips.put(i, x, 0.115, z); }
   tips.done();
   // gate: a metal film with a hole over every tip
-  const gate = screen(416, 224);
-  gate.ctx.fillStyle = '#8a8f96'; gate.ctx.fillRect(0, 0, 416, 224);
-  gate.ctx.globalCompositeOperation = 'destination-out';
-  for (let i = 0; i < COLS * ROWS; i++) { gate.ctx.beginPath(); gate.ctx.arc(16 + (i % COLS) * 32, 16 + Math.floor(i / COLS) * 32, 9, 0, 7); gate.ctx.fill(); }
-  gate.tex.needsUpdate = true;
-  const gateMat = new THREE.MeshStandardMaterial({ map: gate.tex, alphaTest: 0.5, metalness: 0.85, roughness: 0.3, side: THREE.DoubleSide });
-  const gatePlate = G.plane(W, D, gateMat, [0, 0.2, 0]); gatePlate.rotation.x = -Math.PI / 2;
-  const ph = screen(416, 224);
+  const gateMat = new THREE.MeshStandardMaterial({ color: 0x8a8f96, metalness: 0.85, roughness: 0.3 });
+  const gatePlate = G.cut(W, D, 0.004, Array.from({ length: COLS * ROWS }, (_, i) => [xz(i)[0], xz(i)[1], 0.042]), 0.012, gateMat, [0, 0.2, 0], 0);
+  gatePlate.rotation.x = -Math.PI / 2;
+  const ph = screen(832, 448);
+  ph.ctx.setTransform(2, 0, 0, 2, 0, 0);
   const phMat = M.lit(ph, 1.7, 0); phMat.side = THREE.DoubleSide;
   const phosphor = G.plane(W, D, phMat, [0, 0.94, 0]); phosphor.rotation.x = -Math.PI / 2;
   const face = G.pane(W + 0.24, D + 0.24, 0.09, [0, 0.99, 0]); face.rotation.x = -Math.PI / 2;
@@ -381,6 +404,8 @@ export function fed(): Built {
   let stamp = -1;
   return {
     root, inDark: 'glows', glow: 0x9db8ff, view: [28, 20],
+    // from the open side, low enough to see under the gate and up to the phosphor
+    views: { tips: { at: [1.75, 0.62, 0.55], to: [0.2, 0.32, 0], play: 0.35 } },
     update: () => {
       const n = now();
       if (n.s === stamp) return; stamp = n.s;
@@ -427,6 +452,10 @@ export function eggcrate(): Built {
   const level = new Float32Array(N);
   return {
     root, inDark: 'glows', glow: 0xffc070, view: [18, 6], zoom: 1.08,
+    views: {
+      below: { room: true, at: [2.5, 0.25, 2.2], to: [0.5, 0, 0], fov: 50 },
+      lamps: { at: [1, 0.25, 0.75], to: [0.62, 0.1, 0] },
+    },
     update: () => {
       const n = now();
       const text = n.hhmm.replace(':', '');

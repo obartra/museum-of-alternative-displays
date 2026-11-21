@@ -2,16 +2,21 @@ import { G, M, Swarm, glows, lamps, screen, THREE, type Built, type V3 } from '.
 import { feet, screws, vents } from '../parts';
 import { bigTime, dotMatrix, dots, hsl, now } from '../../sims/draw';
 
-/** LED sign: one lamp per pixel, bright enough to read outdoors at noon. */
+/** LED sign: a red, a green and a blue lamp to every pixel, bright enough to read outdoors at noon. */
 export function led(): Built {
   const root = G.group();
   const COLS = 32, ROWS = 16, P = 0.07, N = COLS * ROWS;
-  const dome = new THREE.SphereGeometry(0.023, 12, 9).scale(1, 1, 1.35);
-  const domes = new Swarm(dome, M.plastic(0x3a3d41, 0.3), N);
-  const light = lamps(new THREE.SphereGeometry(0.027, 10, 8).scale(1, 1, 1.3), N);
+  // oval lamps side by side, as on an outdoor tile: from across the hall the three merge into one colour
+  const domes = new Swarm(new THREE.SphereGeometry(0.0088, 10, 8).scale(1, 1.3, 1.7), M.plastic(0xffffff, 0.25), N * 3);
+  const light = lamps(new THREE.SphereGeometry(0.0102, 10, 8).scale(1, 1.3, 1.65), N * 3);
   const bloom = glows(N, 0.13);
   const xy = (i: number): [number, number] => [((i % COLS) - (COLS - 1) / 2) * P, ((ROWS - 1) / 2 - Math.floor(i / COLS)) * P];
-  for (let i = 0; i < N; i++) { const [x, y] = xy(i); domes.put(i, x, y, 0.02); light.put(i, x, y, 0.026); bloom.pos.set([x, y, 0.06], i * 3); }
+  const LENS = [[0.075, 0.022, 0.02], [0.02, 0.06, 0.028], [0.022, 0.03, 0.085]];
+  for (let i = 0; i < N; i++) {
+    const [x, y] = xy(i);
+    for (let k = 0; k < 3; k++) { const j = i * 3 + k, lx = x + (k - 1) * 0.0205; domes.put(j, lx, y, 0.018); domes.tint(j, LENS[k][0], LENS[k][1], LENS[k][2]); light.put(j, lx, y, 0.022); }
+    bloom.pos.set([x, y, 0.06], i * 3);
+  }
   domes.done(); light.done(); bloom.flush(true); bloom.points.geometry.computeBoundingBox();
   const W = COLS * P + 0.08, H = ROWS * P + 0.08;
   root.add(domes.mesh, light.mesh, bloom.points, G.box(W, H, 0.05, M.black(), [0, 0, -0.005], 0.006));
@@ -24,21 +29,39 @@ export function led(): Built {
   root.add(fins.mesh, G.rbox(W + 0.1, H + 0.1, 0.24, 0.02, tin, [0, 0, -0.14]), vents(W - 0.5, H - 0.4, 12, [0, 0, -0.262]));
   root.add(screws([[-W / 2, H / 2, -0.02], [W / 2, H / 2, -0.02], [-W / 2, -H / 2, -0.02], [W / 2, -H / 2, -0.02]].map(([x, y, z]) => [x * 0.99, y * 0.97, z] as V3), 0.016));
   for (const x of [-0.8, 0.8]) root.add(G.cyl(0.035, 0.4, M.steel(1), [x, -H / 2 - 0.23, -0.14], 20), G.cyl(0.14, 0.03, M.steel(), [x, -H / 2 - 0.43, -0.14], 28));
-  const col = new THREE.Color();
-  let stamp = -1;
+  const col = new THREE.Color(), eye = new THREE.Vector3(), mixed = new Float32Array(N * 3);
+  let stamp = -1, merge = -1;
   return {
     root, inDark: 'glows', glow: 0xff9a4a, view: [20, 8], zoom: 1.05,
-    update: () => {
+    views: {
+      below: { room: true, at: [-2.3, 0.1, 2.2], to: [-0.3, 0.05, 0], fov: 50 },
+      lamps: { at: [-0.75, 0.35, 0.5], to: [-0.6, 0.22, 0.02], play: 0.4 },
+    },
+    update: ({ camera }) => {
       const n = now();
-      if (n.s === stamp) return; stamp = n.s;
-      const d = dots(n.hhmm);
-      for (let i = 0; i < N; i++) {
-        const c = i % COLS, r = Math.floor(i / COLS);
-        if (r >= 2 && r <= 8 && d.on(c - 4, r - 2)) col.setHSL(0.02 + (c / COLS) * 0.1, 1, 0.55);
-        else if (r >= 11 && r <= 13 && c >= 1 && c <= 30 && c - 1 < n.s / 2) col.setHSL((c - 1) / 30 * 0.8, 1, 0.5);
-        else col.setRGB(0, 0, 0);
-        light.tint(i, col.r, col.g, col.b);
-        bloom.col.set([col.r * 0.5, col.g * 0.5, col.b * 0.5], i * 3);
+      // The eye merges the three lamps of a pixel from a distance and tells them apart from close to.
+      // The halo round each pixel is the merged light: it gives way to the lamps as the visitor comes near.
+      root.worldToLocal(eye.copy(camera.position));
+      const away = Math.hypot(Math.max(0, Math.abs(eye.x) - W / 2), Math.max(0, Math.abs(eye.y) - H / 2), eye.z);
+      const m = Math.round(THREE.MathUtils.smoothstep(away, 0.9, 2.6) * 25) / 25;
+      if (n.s === stamp && m === merge) return;
+      if (n.s !== stamp) {
+        const d = dots(n.hhmm);
+        for (let i = 0; i < N; i++) {
+          const c = i % COLS, r = Math.floor(i / COLS);
+          if (r >= 2 && r <= 8 && d.on(c - 4, r - 2)) col.setHSL(0.02 + (c / COLS) * 0.1, 1, 0.55);
+          else if (r >= 11 && r <= 13 && c >= 1 && c <= 30 && c - 1 < n.s / 2) col.setHSL((c - 1) / 30 * 0.8, 1, 0.5);
+          else col.setRGB(0, 0, 0);
+          mixed.set([col.r, col.g, col.b], i * 3);
+        }
+      }
+      stamp = n.s; merge = m;
+      const lamp = 1.5 - 1.0 * m, halo = 0.42 + 0.76 * m;
+      for (let i = 0; i < N * 3; i++) {
+        // each lamp gives only its own colour, as much of it as the pixel's colour calls for
+        const v = mixed[i] * lamp, k = i % 3;
+        light.tint(i, k === 0 ? v : 0, k === 1 ? v : 0, k === 2 ? v : 0);
+        bloom.col[i] = mixed[i] * halo;
       }
       if (light.mesh.instanceColor) light.mesh.instanceColor.needsUpdate = true;
       bloom.flush();
@@ -60,6 +83,7 @@ export function oled(): Built {
   root.add(panel, G.rbox(1.15, 0.035, 0.52, 0.016, M.steel(), [0, 0.0175, -0.04]), G.box(0.16, 0.42, 0.035, M.steel(1), [0, 0.23, -0.13]));
   return {
     root, inDark: 'glows', glow: 0xb8a0ff, view: [28, 8], surface: s.canvas,
+    views: { seat: { at: [0, 1, 3.6], to: [0, 0.95, 0] } },
     update: ({ t }) => {
       const c = s.ctx, n = now();
       c.fillStyle = '#000'; c.fillRect(0, 0, 640, 360);
@@ -70,6 +94,29 @@ export function oled(): Built {
       s.tex.needsUpdate = true;
     },
   };
+}
+
+/** The board behind a tile of the wall, which the tile plugs into: tracks, and rows of contacts down both sides. */
+function backplane(): THREE.CanvasTexture {
+  const s = screen(1024, 1024), c = s.ctx;
+  c.fillStyle = '#1d5236'; c.fillRect(0, 0, 1024, 1024);
+  // tracks fan out from the data socket to the contact rows, in bundles with a dog-leg
+  c.strokeStyle = '#2c7049'; c.lineWidth = 3;
+  for (let k = 0; k < 22; k++) { const y = 232 + k * 26; c.beginPath(); c.moveTo(700, 560 + k * 5); c.lineTo(640 - k * 9, 560 + k * 5); c.lineTo(500 - k * 9, y); c.lineTo(250, y); c.stroke(); }
+  for (let k = 0; k < 9; k++) { c.beginPath(); c.moveTo(250 + k * 14, 474); c.lineTo(250 + k * 14, 150); c.lineTo(940 - k * 16, 150 - k * 6); c.stroke(); }
+  // contacts in two rows down each side, gold on the green
+  for (const x of [118, 150, 874, 906]) for (let k = 0; k < 22; k++) { c.fillStyle = '#c9a23f'; c.fillRect(x - 9, 226 + k * 26, 18, 13); c.fillStyle = '#7d6220'; c.fillRect(x - 3, 230 + k * 26, 6, 5); }
+  // where the magnets and pegs sit
+  c.strokeStyle = '#d9d6c7'; c.lineWidth = 3;
+  for (const x of [128, 896]) for (const y of [128, 896]) { c.beginPath(); c.arc(x, y, 58, 0, 7); c.stroke(); }
+  c.strokeRect(232, 468, 240, 90); c.strokeRect(630, 500, 150, 150);
+  // vias, and the lettering a board carries
+  c.fillStyle = '#b9c2b4';
+  for (let i = 0; i < 150; i++) { const x = 60 + (Math.abs(Math.sin(i * 12.9898) * 43758.5453) % 1) * 900, y = 60 + (Math.abs(Math.sin(i * 78.233) * 12543.21) % 1) * 900; c.beginPath(); c.arc(x, y, 3.2, 0, 7); c.fill(); }
+  c.fillStyle = '#d9d6c7'; c.font = '26px "PT Mono", monospace';
+  c.fillText('POWER', 236, 456); c.fillText('DATA', 632, 488); c.fillText('ROW 1  COLUMN 3', 380, 960);
+  s.tex.needsUpdate = true;
+  return s.tex;
 }
 
 /** MicroLED wall: inorganic LEDs too small to see, built as tiles so a dead one can be lifted out and swapped. */
@@ -86,8 +133,11 @@ export function microled(): Built {
     const at: V3 = [(c - 1) * T, top - r * T, 0];
     if (r === 0 && c === 2) {
       // the empty socket: backplane, power and data sockets, four magnets that hold a tile
-      root.add(G.box(T - 0.04, T - 0.04, 0.012, M.pcb(), [at[0], at[1], -0.07], 0), G.box(0.16, 0.06, 0.03, M.plastic(0xe9e6dc, 0.5), [at[0] - 0.12, at[1], -0.055]), G.box(0.1, 0.1, 0.03, M.plastic(0x16181a, 0.5), [at[0] + 0.14, at[1] - 0.05, -0.055]));
+      root.add(G.box(T - 0.04, T - 0.04, 0.012, M.pcb(), [at[0], at[1], -0.07], 0), G.plane(T - 0.04, T - 0.04, new THREE.MeshStandardMaterial({ map: backplane(), roughness: 0.5, metalness: 0.15 }), [at[0], at[1], -0.0635]));
+      root.add(G.box(0.16, 0.06, 0.03, M.plastic(0xe9e6dc, 0.5), [at[0] - 0.12, at[1], -0.055]), G.box(0.1, 0.1, 0.03, M.plastic(0x16181a, 0.5), [at[0] + 0.14, at[1] - 0.05, -0.055]));
       for (const sx of [-1, 1]) for (const sy of [-1, 1]) root.add(G.cyl(0.03, 0.03, M.steel(), [at[0] + sx * 0.27, at[1] + sy * 0.27, -0.055], 20).rotateX(Math.PI / 2));
+      // two pegs that steer a tile on to its contacts
+      for (const sx of [-1, 1]) root.add(G.cyl(0.012, 0.05, M.brass(), [at[0] + sx * 0.3, at[1], -0.04], 12).rotateX(Math.PI / 2));
       continue;
     }
     const tex = s.tex.clone(); tex.repeat.set(1 / 3, 1 / 2); tex.offset.set(c / 3, 1 - (r + 1) / 2); tex.needsUpdate = true;
@@ -108,6 +158,7 @@ export function microled(): Built {
   for (const x of [-T, T]) root.add(G.box(0.05, 0.05, 0.6, al, [x, 0.3, -0.38]).rotateX(0.5));
   return {
     root, inDark: 'glows', glow: 0xffb0d0, view: [26, 8], surface: s.canvas,
+    views: { socket: { at: [1.35, 1.55, 1.05], to: [0.74, 1.3, -0.05], play: 0.4 } },
     update: ({ t }) => {
       const c = s.ctx;
       const g = c.createLinearGradient(0, 0, 768, 512);
@@ -122,7 +173,8 @@ export function microled(): Built {
 /** Thin-film electroluminescent panel: a yellow glow from zinc sulphide, built for cockpits, cold and vibration. */
 export function tfel(): Built {
   const root = G.group();
-  const s = screen(640, 400);
+  const s = screen(1280, 800);
+  s.ctx.setTransform(2, 0, 0, 2, 0, 0);
   const unit = G.group(
     G.rbox(2.0, 1.36, 0.22, 0.03, M.dark(), [0, 0, -0.02]),
     G.bezel(2.0, 1.36, 1.68, 1.06, 0.02, 0.05, M.plastic(0x1a1c1f, 0.5), [0, 0, 0.1], 0.03, 0.012),
@@ -137,9 +189,15 @@ export function tfel(): Built {
   for (const x of [-0.6, 0.6]) root.add(G.box(0.06, 0.62, 0.06, M.steel(1), [x, 0.33, -0.3]).rotateX(-0.12));
   return {
     root, inDark: 'glows', glow: 0xffb21a, view: [22, 10], surface: s.canvas,
+    views: { dots: { at: [-1.15, 1.5, 0.8], to: [-0.6, 1.05, 0.06], play: 0.35 } },
     update: () => {
       const c = s.ctx, n = now();
       c.fillStyle = '#060400'; c.fillRect(0, 0, 640, 400);
+      // the two sets of electrode strips, seen as fine lines between the dots: a dot is one crossing
+      const cell = 640 / 41, ox = cell, oy = 30 + (210 - 7 * cell) / 2;
+      c.fillStyle = 'rgba(255,178,26,.085)';
+      for (let x = ox % cell; x < 640; x += cell) c.fillRect(x - 0.4, 0, 0.8, 400);
+      for (let y = oy % cell; y < 400; y += cell) c.fillRect(0, y - 0.4, 640, 0.8);
       c.save(); c.translate(0, 30); dotMatrix(c, 640, 210, n.hhmmss, '#ffb21a', null, false, 0.86, 4); c.restore();
       c.strokeStyle = c.fillStyle = '#ffb21a'; c.lineWidth = 2;
       c.strokeRect(30, 280, 580, 34); c.fillRect(34, 284, (572 * (n.s + n.ms / 1000)) / 60, 26);
@@ -187,6 +245,8 @@ export function transparent(): Built {
   let stamp = -1;
   return {
     root, inDark: 'glows', glow: 0x9fe8ff, view: [16, 8], surface: s.canvas,
+    // a standing visitor square to the pane: from this height the ring on the glass sits round the clock behind it
+    views: { window: { room: true, at: [0, 0.62, 3], to: [0, 0.94, -0.05], fov: 42, play: 0.14 } },
     update: ({ t }) => {
       const n = now();
       if (n.s !== stamp) {
@@ -236,6 +296,7 @@ export function flexible(): Built {
   for (const x of [-1.03, 1.03]) { const cap = G.cyl(0.21, 0.08, M.steel(), [x, 0.22, -0.06], 48); cap.rotation.z = Math.PI / 2; root.add(cap, G.box(0.08, 0.2, 0.44, M.steel(1), [x, 0.14, -0.06]), G.cyl(0.05, 0.1, M.dark(), [x + Math.sign(x) * 0.02, 0.22, -0.06], 20).rotateZ(Math.PI / 2)); }
   return {
     root, inDark: 'glows', glow: 0x7fe0c0, view: [34, 10], surface: s.canvas,
+    views: { edge: { at: [1.95, 0.75, 0.95], to: [0.9, 0.6, 0] } },
     update: ({ t }) => {
       const c = s.ctx;
       for (let y = 0; y < 448; y += 8) { c.fillStyle = hsl(160 + 70 * Math.sin(y / 70 + t * 0.9), 85, 30 + 14 * Math.sin(y / 31 - t)); c.fillRect(0, y, 512, 8); }

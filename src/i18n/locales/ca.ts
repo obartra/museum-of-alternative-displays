@@ -410,7 +410,7 @@ const locale: Locale = {
         "Necessita alta tensió, i l'ampolla de vidre suporta la pressió de l'aire de fora",
         "Redibuixa la imatge contínuament i no la reté, i per això la imatge parpelleja",
       ],
-      look: "Prem el botó «De cara». La franja lluminosa que baixa per la pantalla és on el feix acaba de dibuixar les línies. El model ho alenteix unes 60 vegades. Després fes girar el model i mira de costat les bobines de coure del coll, que guien el feix.",
+      look: "Prem el botó «Seu al davant». La franja lluminosa que baixa per la pantalla és on el feix acaba de dibuixar les línies. El model ho alenteix unes 60 vegades. Després fes girar el model i mira de costat les bobines de coure del coll, que guien el feix.",
     },
     'vector-display': {
       name: "Pantalla vectorial",
@@ -538,7 +538,7 @@ const locale: Locale = {
         "Una imatge que es queda molta estona en pantalla hi deixa una marca duradora, anomenada cremada de pantalla (burn-in)",
         "Les cel·les no es poden fer gaire petites, i per això no hi pot haver panells petits amb detall fi",
       ],
-      look: "El model mostra el tipus antic: un panell quadrat i taronja en un terminal d'aula. Un marc de feixos infrarojos invisibles al voltant de la pantalla permet al terminal detectar on hi ha un dit. Prem el botó «De cara» per veure els punts d'un en un.",
+      look: "El model mostra el tipus antic: un panell quadrat i taronja en un terminal d'aula. Un marc de feixos infrarojos invisibles al voltant de la pantalla permet al terminal detectar on hi ha un dit. Prem el botó «Acosta't als punts» per veure els punts d'un en un.",
     },
     'field-emission': {
       name: "Pantalla d'emissió de camp",
@@ -1382,9 +1382,87 @@ const locale: Locale = {
   },
 
   views: {
-    'mechanical-television': { eyepiece: { label: "Mira a dins" } },
+    'split-flap': {
+      hall: { label: "Espera't al vestíbul", hint: "Qui s'esperava va aprendre a alçar la vista en sentir el repic. Aquí cau una lamel·la cada segon." },
+      flaps: { label: "Acosta't a les lamel·les", hint: "Darrere de cada xifra hi ha un feix de lamel·les que esperen, articulades amb passadors al voltant d'un tambor. Dos topalls aguanten la de dalt." },
+    },
+    'flip-disc': {
+      kerb: { label: "Espera't a la parada", hint: "Com al davant d'un autobús. El panell reflecteix la llum del dia i no en fa gens, i a la fila de baix es capgira un disc cada segon." },
+      discs: { label: "Acosta't als discos", hint: "Cada disc reposa sobre un eix. Un impuls a les bobines de coure que té a sota el capgira, i es queda així sense corrent." },
+    },
+    'mechanical-television': {
+      eyepiece: { label: "Mira a dins", hint: "Trenta línies de neó que parpelleja, vistes a través dels forats en moviment. Les hores a dalt, els minuts a baix." },
+      disc: { label: "Segueix l'espiral", hint: "Trenta forats, cadascun l'amplada d'un forat més a prop del centre que l'anterior. Una volta del disc és una imatge." },
+    },
+    'kinetic-mirror': {
+      stand: { label: "Posa-t'hi al davant", hint: "La forma fosca ets tu. Una càmera al mig et mira, i les tessel·les s'inclinen per seguir-te quan mous el cap." },
+      tiles: { label: "Acosta't a les tessel·les", hint: "Cada tessel·la s'inclina amb el seu propi servomotor. Inclinada cap a un costat recull la llum, i cap a l'altre queda a l'ombra." },
+    },
+    'shape-display': {
+      table: { label: "Posa't davant la taula", hint: "La superfície és la imatge. Un bony recorre els pius i s'emporta la bola vermella." },
+      pins: { label: "Baixa entre els pius", hint: "Un motor situat a sota porta cada piu a la seva alçada. L'alçada és tot el que hi ha: no hi pot haver voladissos." },
+    },
+    'braille-display': {
+      touch: { label: "Passa-hi un dit", hint: "El que troba el tou del dit: pius arrodonits, amunt o avall, vuit per cel·la. Les cel·les de la dreta canvien cada segon." },
+      cell: { label: "Mira dins d'una cel·la", hint: "L'última cel·la, treta i ampliada. Sota cada punt, una tira de cristall piezoelèctric es doblega i aixeca el seu piu." },
+    },
+    'drone-show': {
+      field: { label: "Posa't al camp", hint: "Cada punt de llum és una aeronau amb la seva pròpia ruta planificada. Escriuen l'hora i després es reagrupen en una esfera." },
+      close: { label: "Vola fins a un", hint: "Cada llum penja d'un petit quadricòpter, que el posicionament per satèl·lit manté a centímetres del seu lloc." },
+    },
+    'cathode-ray-tube': {
+      seat: { label: "Seu al davant", hint: "La franja que baixa per la cara és l'escombratge, unes seixanta vegades més lent. Un sol feix el pinta línia a línia." },
+      raster: { label: "Acosta't a la cara", hint: "La imatge és feta de línies horitzontals. El feix les recorre de dalt a baix, una vegada i una altra." },
+      gun: { label: "Mira dins del coll", hint: "El canó. Un càtode calent desprèn electrons, i les bobines de coure que envolten el coll dirigeixen el feix." },
+    },
+    'vector-display': {
+      seat: { label: "Seu davant la consola", hint: "El feix traça cada línia directament, com una ploma. El rastre que deixa la pilota és luminòfor que encara brilla." },
+      trace: { label: "Acosta't al traç", hint: "Ni punts ni línies d'escombratge. Cada traç és una sola passada contínua del feix, en qualsevol angle." },
+    },
+    'storage-tube': {
+      seat: { label: "Seu davant del terminal", hint: "El gràfic es dibuixa una vegada i es queda encès, guardat al mateix tub. El flaix és l'única manera d'esborrar-lo." },
+    },
+    'nixie-tube': {
+      stack: { label: "Acosta't a un tub", hint: "Deu càtodes en forma de xifra, apilats de davant cap enrere dins d'un ànode de malla. El neó brilla al voltant del que rep tensió." },
+    },
+    'vacuum-fluorescent': {
+      grid: { label: "Mira arran del vidre", hint: "Al davant, uns fils fins i calents. Al darrere, una reixeta de malla, i després els segments de luminòfor. Totes les potes surten per baix." },
+    },
+    numitron: {
+      filaments: { label: "Acosta't a una ampolla", hint: "Set filaments de bombeta tibats entre suports. Els encesos són filferro que brilla, i no hi ha cap més llum que aquesta." },
+    },
+    'plasma-panel': {
+      seat: { label: "Seu al davant", hint: "Un terminal d'aula. Cada punt taronja és una petita descàrrega de neó. Uns feixos infrarojos que travessen el marc troben un dit." },
+      dots: { label: "Acosta't als punts", hint: "Cada punt és una cel·la de gas entre dues làmines de vidre. Una cel·la encesa és un petit rètol de neó." },
+    },
+    'field-emission': {
+      tips: { label: "Baixa fins a les puntes", hint: "Una punta de càtode fred sota cada forat de la porta. Els electrons surten de les puntes i travessen el buit fins al luminòfor de dalt." },
+    },
+    eggcrate: {
+      below: { label: "Mira'l des de baix", hint: "Un marcador tal com el veia el públic. Les bombetes no s'encenen ni s'apaguen de cop: creixen i s'esvaeixen." },
+      lamps: { label: "Acosta't a les bombetes", hint: "Bombetes corrents, cadascuna dins la seva cel·la de la màscara perquè la llum no s'escampi cap a les veïnes." },
+    },
+    'led-display': {
+      below: { label: "Posa-t'hi a sota", hint: "Els rètols d'exterior es pengen alts. La visera de cada fila protegeix els llums del sol i no els tapa mai des de baix." },
+      lamps: { label: "Acosta't als llums", hint: "Tres llums per píxel: vermell, verd i blau. L'ambre és el vermell i el verd encesos alhora, amb el blau apagat." },
+    },
+    oled: {
+      seat: { label: "Seu al davant", hint: "Apaga la llum del dia. El negre del panell es perd en la foscor i només queden els colors." },
+    },
+    microled: {
+      socket: { label: "Mira dins del forat", hint: "S'ha tret un mòdul. Al darrere hi ha la placa de circuits, els connectors d'alimentació i de dades, i els quatre imants que aguanten un mòdul." },
+    },
+    'thin-film-el': {
+      dots: { label: "Acosta't als punts", hint: "Cada punt és un encreuament de dues tires d'elèctrode. El groc és el que emet la mateixa pel·lícula, no un filtre." },
+    },
+    'transparent-display': {
+      window: { label: "Posa't davant la vitrina", hint: "Les xifres són llum afegida sobre el vidre, i el rellotge és al darrere. Mou el cap i se separen." },
+    },
+    'flexible-display': {
+      edge: { label: "Mira al llarg de la vora", hint: "La làmina és tota la pantalla: pel·lícules primes sobre plàstic, sense res al darrere. S'enrotlla al corró de sota." },
+    },
     'peppers-ghost': { seat: { label: "Asseu-te" } },
-    'stereoscope': { eyepiece: { label: "Mira a dins" } },
+    stereoscope: { eyepiece: { label: "Mira a dins" } },
     'head-mounted': { worn: { label: "Posa-te'l" } },
     'head-up': { seat: { label: "Asseu-te" } },
   },

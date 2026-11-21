@@ -105,7 +105,7 @@ is someone else's copyrighted work.
 
 To look at every model at once, open `#sheet` on the dev server, or `#sheet?lights=off`.
 To see the painted landscape on its own, open `#vista`.
-Add `&ids=a,b` for a few pieces, `&size=420` for bigger tiles, `&view=seat` for a named view,
+Add `&ids=a,b` for a few pieces, `&size=420` for bigger tiles, `&view=seat` for a named view, `&view=*` for every named view of each piece beside the whole piece,
 or `&az=40&el=60` to look from any angle.
 
 A piece page shows its still picture first and starts the model by itself only where the

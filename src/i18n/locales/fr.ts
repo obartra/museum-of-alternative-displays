@@ -335,7 +335,7 @@ const locale: Locale = {
       ],
       good: ['Émet sa lumière à la surface même que vous regardez, d’où une image nette sous tous les angles', 'Réagit plus vite que l’œil ne peut suivre', 'N’a pas de grille de pixels fixe, dans un tube monochrome'],
       bad: ['Devient plus profond et plus lourd, avec plus de vide à contenir, à mesure que l’écran grandit', 'Demande une haute tension, et son ampoule de verre subit la pression de l’air extérieur', 'Redessine sans cesse son image sans la conserver, si bien que l’image scintille'],
-      look: 'Appuyez sur le bouton «\u202fDe face\u202f». La bande brillante qui descend sur l’écran est l’endroit où le faisceau vient de tracer ses lignes. Le modèle ralentit ce mouvement environ 60\u00a0fois. Faites ensuite tourner le modèle et regardez de côté les bobines de cuivre du col, qui guident le faisceau.',
+      look: 'Appuyez sur le bouton «\u202fS’asseoir devant\u202f». La bande brillante qui descend sur l’écran est l’endroit où le faisceau vient de tracer ses lignes. Le modèle ralentit ce mouvement environ 60\u00a0fois. Faites ensuite tourner le modèle et regardez de côté les bobines de cuivre du col, qui guident le faisceau.',
     },
     'vector-display': {
       name: 'Écran vectoriel', aka: 'Écran à balayage cavalier, moniteur XY',
@@ -415,7 +415,7 @@ const locale: Locale = {
       ],
       good: ['Produit sa propre lumière dans chaque cellule\u202f: les noirs sont profonds et les angles de vision larges', 'A été plat et grand bien avant que les écrans à cristaux liquides puissent l’être'],
       bad: ['Consomme beaucoup d’électricité et pèse lourd', 'Garde la marque durable d’une image restée longtemps à l’écran, appelée brûlure d’écran', 'Ses cellules ne peuvent pas être très petites\u202f: les petits panneaux aux détails fins sont donc impossibles'],
-      look: 'Le modèle montre la première version\u202f: un panneau orange carré dans un terminal de salle de classe. Autour de l’écran, un cadre de faisceaux infrarouges invisibles permet au terminal de détecter où se trouve un doigt. Appuyez sur le bouton «\u202fDe face\u202f» pour voir chacun des points.',
+      look: 'Le modèle montre la première version\u202f: un panneau orange carré dans un terminal de salle de classe. Autour de l’écran, un cadre de faisceaux infrarouges invisibles permet au terminal de détecter où se trouve un doigt. Appuyez sur le bouton «\u202fS’approcher des points\u202f» pour voir chacun des points.',
     },
     'field-emission': {
       name: 'Écran à émission de champ', aka: 'FED, le tube cathodique plat',
@@ -961,9 +961,87 @@ const locale: Locale = {
   },
 
   views: {
-    'mechanical-television': { eyepiece: { label: 'Regarder dedans' } },
+    'split-flap': {
+      hall: { label: 'Attendre dans le hall', hint: 'Les voyageurs ont appris à lever les yeux au cliquetis. Ici, une palette tombe chaque seconde.' },
+      flaps: { label: 'S’approcher des palettes', hint: 'Derrière chaque chiffre se tient une liasse de palettes en attente, articulées par des axes autour d’un tambour. Deux ergots retiennent celle du haut.' },
+    },
+    'flip-disc': {
+      kerb: { label: 'Attendre à l’arrêt', hint: 'Comme à l’avant d’un bus. Le tableau réfléchit la lumière du jour et n’en produit aucune, et la rangée du bas retourne une pastille par seconde.' },
+      discs: { label: 'S’approcher des pastilles', hint: 'Chaque pastille repose sur un axe. Une impulsion dans les bobines de cuivre placées dessous la fait basculer, et elle reste ainsi sans courant.' },
+    },
+    'mechanical-television': {
+      eyepiece: { label: 'Regarder dedans', hint: 'Trente lignes de néon vacillant, vues à travers les trous en mouvement. Les heures en haut, les minutes en bas.' },
+      disc: { label: 'Suivre la spirale', hint: 'Trente trous, chacun plus près du centre que le précédent de la largeur d’un trou. Un tour de disque fait une image.' },
+    },
+    'kinetic-mirror': {
+      stand: { label: 'Se placer devant', hint: 'La forme sombre, c’est vous. Une caméra au centre observe, et les plaquettes s’inclinent pour vous suivre quand vous bougez la tête.' },
+      tiles: { label: 'S’approcher des plaquettes', hint: 'Chaque plaquette s’incline grâce à son propre servomoteur. Inclinée d’un côté, elle prend la lumière\u202f; de l’autre, elle passe dans l’ombre.' },
+    },
+    'shape-display': {
+      table: { label: 'Se tenir devant la table', hint: 'La surface est l’image. Une bosse parcourt les tiges et emporte la balle rouge avec elle.' },
+      pins: { label: 'Descendre parmi les tiges', hint: 'Chaque tige est amenée à sa propre hauteur par un moteur placé dessous. Il n’y a que la hauteur\u202f: aucun surplomb n’est possible.' },
+    },
+    'braille-display': {
+      touch: { label: 'Passer le doigt dessus', hint: 'Ce que rencontre le bout du doigt\u202f: des picots arrondis, levés ou baissés, huit par cellule. Les cellules de droite changent chaque seconde.' },
+      cell: { label: 'Ouvrir une cellule', hint: 'La dernière cellule, sortie et agrandie. Sous chaque point, une lame de cristal piézoélectrique se courbe et soulève son picot.' },
+    },
+    'drone-show': {
+      field: { label: 'Se tenir sur le terrain', hint: 'Chaque point lumineux est un aéronef qui suit sa propre route planifiée. Ils écrivent l’heure, puis se regroupent en un globe.' },
+      close: { label: 'Voler jusqu’à l’un d’eux', hint: 'Chaque lumière est suspendue sous un petit quadricoptère, maintenu à quelques centimètres de sa place par le positionnement par satellite.' },
+    },
+    'cathode-ray-tube': {
+      seat: { label: 'S’asseoir devant', hint: 'La bande qui descend sur la face est le balayage, ralenti environ soixante fois. Un seul faisceau le peint ligne après ligne.' },
+      raster: { label: 'S’approcher de la face', hint: 'L’image est faite de lignes horizontales. Le faisceau les parcourt de haut en bas, encore et encore.' },
+      gun: { label: 'Regarder dans le col', hint: 'Le canon. Une cathode chauffée émet des électrons, et les bobines de cuivre qui entourent le col dirigent le faisceau.' },
+    },
+    'vector-display': {
+      seat: { label: 'S’asseoir à la console', hint: 'Le faisceau trace chaque trait directement, comme une plume. La traînée derrière la balle est du luminophore qui luit encore.' },
+      trace: { label: 'S’approcher du tracé', hint: 'Ni points ni lignes de balayage. Chaque trait est un seul passage continu du faisceau, sous n’importe quel angle.' },
+    },
+    'storage-tube': {
+      seat: { label: 'S’asseoir au terminal', hint: 'Le graphique est tracé une fois et reste allumé, mémorisé dans le tube lui-même. L’éclair est le seul moyen de l’effacer.' },
+    },
+    'nixie-tube': {
+      stack: { label: 'S’approcher d’un tube', hint: 'Dix cathodes en forme de chiffre, empilées d’avant en arrière dans une anode en grillage. Le néon luit autour de celle qui est sous tension.' },
+    },
+    'vacuum-fluorescent': {
+      grid: { label: 'Regarder au ras du verre', hint: 'De fins fils chauds à l’avant, une grille en treillis derrière eux, puis les segments de luminophore. Toutes les broches sortent par le bas.' },
+    },
+    numitron: {
+      filaments: { label: 'S’approcher d’une ampoule', hint: 'Sept filaments de lampe tendus entre des tiges. Ceux qui sont allumés sont du fil incandescent, et c’est toute la lumière qu’il y a.' },
+    },
+    'plasma-panel': {
+      seat: { label: 'S’asseoir devant', hint: 'Un terminal de salle de classe. Chaque point orange est une petite décharge dans le néon. Des faisceaux infrarouges en travers du cadre repèrent un doigt.' },
+      dots: { label: 'S’approcher des points', hint: 'Chaque point est une cellule de gaz entre deux plaques de verre. Une cellule allumée est une petite enseigne au néon.' },
+    },
+    'field-emission': {
+      tips: { label: 'Descendre vers les pointes', hint: 'Une pointe de cathode froide sous chaque trou de la grille. Les électrons quittent les pointes et traversent l’intervalle jusqu’au luminophore, au-dessus.' },
+    },
+    eggcrate: {
+      below: { label: 'Regarder d’en bas', hint: 'Un tableau d’affichage tel que la foule le voyait. Les lampes ne s’allument pas et ne s’éteignent pas d’un coup\u202f: leur éclat monte, puis retombe.' },
+      lamps: { label: 'S’approcher des ampoules', hint: 'Des ampoules ordinaires, chacune dans sa propre alvéole du masque, pour que sa lumière ne déborde pas sur ses voisines.' },
+    },
+    'led-display': {
+      below: { label: 'Se placer dessous', hint: 'Les panneaux d’extérieur sont accrochés haut. La visière placée au-dessus de chaque rangée protège les lampes du soleil sans jamais les cacher d’en bas.' },
+      lamps: { label: 'S’approcher des lampes', hint: 'Trois lampes par pixel\u202f: rouge, verte et bleue. L’ambre, c’est la rouge et la verte allumées ensemble, la bleue restant éteinte.' },
+    },
+    oled: {
+      seat: { label: 'S’asseoir devant', hint: 'Éteignez la lumière du jour. Le noir de la dalle se fond dans l’obscurité, et il ne reste que les couleurs.' },
+    },
+    microled: {
+      socket: { label: 'Regarder dans le logement', hint: 'Une dalle a été retirée. Derrière elle\u202f: le circuit imprimé, les connecteurs d’alimentation et de données, et les quatre aimants qui retiennent une dalle.' },
+    },
+    'thin-film-el': {
+      dots: { label: 'S’approcher des points', hint: 'Chaque point est le croisement de deux bandes d’électrode. Le jaune est ce qu’émet le film lui-même, et non un filtre.' },
+    },
+    'transparent-display': {
+      window: { label: 'Se tenir devant la vitrine', hint: 'Les chiffres sont de la lumière ajoutée sur la vitre, et le réveil se trouve derrière. Bougez la tête, et ils se décalent.' },
+    },
+    'flexible-display': {
+      edge: { label: 'Regarder le long du bord', hint: 'La feuille est tout l’écran\u202f: des couches minces sur du plastique, sans rien derrière. Elle s’enroule sur le rouleau, en bas.' },
+    },
     'peppers-ghost': { seat: { label: 'S’asseoir' } },
-    'stereoscope': { eyepiece: { label: 'Regarder dedans' } },
+    stereoscope: { eyepiece: { label: 'Regarder dedans' } },
     'head-mounted': { worn: { label: 'Mettre le casque' } },
     'head-up': { seat: { label: 'S’asseoir' } },
   },
