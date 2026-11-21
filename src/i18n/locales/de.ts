@@ -1483,6 +1483,78 @@ const locale: Locale = {
     'flexible-display': {
       edge: { label: 'An der Kante entlangsehen', hint: 'Die Folie ist das ganze Display: dünne Schichten auf Kunststoff, und nichts dahinter. Sie wickelt sich auf die Rolle darunter.' },
     },
+    'liquid-crystal': {
+      layers: { label: 'Zwischen die Schichten', hint: 'Die Kristallschicht allein zeigt nur Grau. Sie legt fest, wie weit jede Zelle das Licht dreht. Die Farbe kommt vom Filter.' },
+    },
+    micromirror: {
+      mirrors: { label: 'Nah an die Spiegel', hint: 'Einige wenige Spiegel, mehrere tausend Mal vergrößert. Jeder kippt um seine Diagonale: In die eine Richtung schickt er Licht zum Objektiv.' },
+    },
+    lcos: {
+      cube: { label: 'Dem Licht folgen', hint: 'Der Würfel lenkt das Licht der Lampe nach unten auf den Chip. Nur Licht, das der Chip gedreht hat, tritt durch das Objektiv aus.' },
+    },
+    eidophor: {
+      oil: { label: 'Nah an das Öl', hint: 'Ein Ölfilm auf einem sich drehenden Spiegel. Der Elektronenstrahl dellt ihn ein, und nur Licht, das eine Delle ablenkt, kommt an den Stäben vorbei.' },
+    },
+    'scanned-laser': {
+      galvos: { label: 'Nah an die Spiegel', hint: 'Zwei kleine Spiegel auf schnellen Motoren. Der eine schwenkt den Strahl nach links und rechts, der andere auf und ab. Das Auge sieht die Bahn.' },
+    },
+    'projection-mapping': {
+      lens: { label: 'Neben den Projektor', hint: 'Vom Objektiv aus ist es ein einziges flaches Bild, passend zugeschnitten. Jeder Körper bekommt seinen Teil, und die Lücken dazwischen bleiben schwarz.' },
+    },
+    gyricon: {
+      beads: { label: 'Nah an die Kügelchen', hint: 'Jedes Kügelchen ist auf einer Hälfte schwarz und auf der anderen weiß und liegt in seiner eigenen Öltasche. Das Feld dreht es um, und so bleibt es.' },
+    },
+    'electrophoretic-ink': {
+      read: { label: 'Zum Lesen in die Hand', hint: 'Man liest im Licht des Raums, wie bei Gedrucktem. Beobachten Sie einen Seitenwechsel: Jede Kapsel wird schwarz, dann weiß, dann zur neuen Seite.' },
+    },
+    'cholesteric-lcd': {
+      slate: { label: 'Über die Tafel beugen', hint: 'Druck schaltet den Kristall in seinen spiegelnden Zustand, und der Strich bleibt ohne Strom stehen. Ein einziger Impuls löscht die Fläche.' },
+    },
+    electrowetting: {
+      cells: { label: 'Nah an die Zellen', hint: 'Ein Film aus gefärbtem Öl bedeckt jede Zelle. Eine Spannung lässt das Wasser das Öl in eine Ecke schieben, und die Zelle wird klar.' },
+    },
+    'interferometric-modulator': {
+      gaps: { label: 'Auf die Abstände schauen', hint: 'Ein Spiegel auf Federn hinter Glas. Die Breite des Abstands bestimmt die Farbe. Liegt der Spiegel am Glas an, ist die Zelle schwarz.' },
+    },
+    electrochromic: {
+      label: { label: 'Nah an das Etikett', hint: 'Ionen dringen in den gedruckten Film ein und färben ihn dunkel. Das dauert Sekunden, nicht Millisekunden, und hält dann ohne Strom.' },
+    },
+    'fog-screen': {
+      fog: { label: 'Vor den Nebel treten', hint: 'Das Bild hängt in fallendem Nebel, der am Boden schon zerfasert ist. Am hellsten ist es, wenn Sie zum Projektor schauen.' },
+    },
+    'persistence-of-vision': {
+      bar: { label: 'Nah an die Leiste', hint: 'Eine einzige Leiste mit Lampen, achtzehn auf jeder Seite der Nabe. Warten Sie, bis sie langsamer wird: Das Bild zerfällt wieder zu einer Leiste.' },
+    },
+    'swept-volume': {
+      dome: { label: 'Nah an die Kuppel', hint: 'Die Punkte sind in der Kuppel, nicht auf ihr. Gehen Sie um sie herum: Jeder leuchtet nur, wenn der rotierende Schirm durch ihn hindurchgeht.' },
+    },
+    'static-volume': {
+      sheets: { label: 'Am Stapel entlangsehen', hint: 'Zwölf Flüssigkristallscheiben. Immer nur eine wird milchig und fängt ihre Scheibe des Bildes auf. Die übrigen bleiben klar.' },
+    },
+    'optical-trap': {
+      speck: { label: 'Nah an das Körnchen', hint: 'Ein Körnchen Zellulose, in einem Laserstrahl gehalten und umhergeführt. Drei kleine Laser färben es im Vorbeigehen.' },
+    },
+    'acoustic-levitation': {
+      bead: { label: 'Nah an das Kügelchen', hint: 'Ein einziges Kügelchen, gehalten vom Ultraschall der Felder oben und unten, fliegt den Umriss so schnell ab, dass man ihn ganz sieht.' },
+    },
+    'laser-plasma': {
+      points: { label: 'Nah an die Punkte', hint: 'Jeder Punkt ist Luft, die aufblitzt, wo der gepulste Strahl gebündelt wird. Es gibt immer nur einen. Der Rest ist Nachbild.' },
+    },
+    'parallax-barrier': {
+      spot: { label: 'Davorstellen', hint: 'Bewegen Sie den Kopf. Durch die Schlitze weichen die Spalten für das eine Auge denen für das andere: Aus L wird R.' },
+    },
+    lenticular: {
+      pass: { label: 'Daran vorbeigehen', hint: 'Ziehen Sie, um vorbeizugehen. Jede Linse zeigt den Streifen, der Ihnen zugewandt ist, also folgt Ihnen das gedruckte Auge. Es gibt neun Ansichten.' },
+    },
+    'integral-imaging': {
+      round: { label: 'Ringsum ansehen', hint: 'Bewegen Sie den Kopf zur Seite, dann auf und ab. Die Szene verschiebt sich in beide Richtungen, in kleinen Stufen: eine Ansicht je Position unter der Linse.' },
+    },
+    holography: {
+      plate: { label: 'Durch die Platte sehen', hint: 'Die Spielzeuglok steht nicht hinter dem Glas. Bewegen Sie den Kopf: Sie dreht sich, wie es die echte täte. Am besten bei ausgeschaltetem Tageslicht.' },
+    },
+    'retinal-display': {
+      retina: { label: 'Hinein zur Netzhaut sehen', hint: 'Es gibt keinen Bildschirm. Der Strahl tritt durch die Pupille ein und malt das Bild auf die Rückwand des Auges, auf dem Kopf.' },
+    },
     'peppers-ghost': { seat: { label: 'Platz nehmen' } },
     stereoscope: { eyepiece: { label: 'Hineinsehen' } },
     'head-mounted': { worn: { label: 'Aufsetzen' } },

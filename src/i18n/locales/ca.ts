@@ -1484,6 +1484,78 @@ const locale: Locale = {
     'flexible-display': {
       edge: { label: "Mira al llarg de la vora", hint: "La làmina és tota la pantalla: pel·lícules primes sobre plàstic, sense res al darrere. S'enrotlla al corró de sota." },
     },
+    'liquid-crystal': {
+      layers: { label: "Fica't entre les capes", hint: "La capa de cristall sola només mostra grisos. Fixa quant fa girar la llum cada cel·la. El color el posa el filtre." },
+    },
+    micromirror: {
+      mirrors: { label: "Acosta't als miralls", hint: "Uns quants miralls, ampliats uns quants milers de vegades. Cadascun bascula sobre la diagonal: cap a un costat envia la llum a la lent." },
+    },
+    lcos: {
+      cube: { label: "Segueix la llum", hint: "El cub desvia la llum de la làmpada cap avall, fins al xip. Per la lent només surt la llum que el xip ha fet girar." },
+    },
+    eidophor: {
+      oil: { label: "Acosta't a l'oli", hint: "Una pel·lícula d'oli sobre un mirall que gira. El feix d'electrons hi fa sots, i només la llum que un sot desvia passa entre les barres." },
+    },
+    'scanned-laser': {
+      galvos: { label: "Acosta't als miralls", hint: "Dos miralls petits sobre motors ràpids. L'un mou el feix a esquerra i dreta, l'altre amunt i avall. L'ull veu el recorregut." },
+    },
+    'projection-mapping': {
+      lens: { label: "Posa't vora el projector", hint: "Des de la lent és una sola imatge plana, retallada a mida. Cada forma rep la seva part, i els buits entre elles queden en negre." },
+    },
+    gyricon: {
+      beads: { label: "Acosta't a les boletes", hint: "Cada boleta és negra per una meitat i blanca per l'altra, dins la seva cavitat d'oli. El camp la capgira, i així es queda." },
+    },
+    'electrophoretic-ink': {
+      read: { label: "Agafa'l per llegir", hint: "Es llegeix amb la llum de la sala, com el paper imprès. Mira com canvia la pàgina: cada càpsula passa a negre, després a blanc i després a la pàgina nova." },
+    },
+    'cholesteric-lcd': {
+      slate: { label: "Inclina't sobre la tauleta", hint: "La pressió fa passar el cristall a l'estat reflector, i el traç es queda sense gastar energia. Un sol impuls esborra la làmina." },
+    },
+    electrowetting: {
+      cells: { label: "Acosta't a les cel·les", hint: "Una pel·lícula d'oli tenyit cobreix cada cel·la. Una tensió fa que l'aigua empenyi l'oli cap a un racó, i la cel·la s'aclareix." },
+    },
+    'interferometric-modulator': {
+      gaps: { label: "Mira les separacions", hint: "Un mirall sobre molles darrere un vidre. L'amplada de la separació tria el color. Enganxat al vidre, la cel·la queda negra." },
+    },
+    electrochromic: {
+      label: { label: "Acosta't a l'etiqueta", hint: "Els ions amaren la pel·lícula impresa i l'enfosqueixen. Triga segons, no mil·lisegons, i després s'aguanta sense energia." },
+    },
+    'fog-screen': {
+      fog: { label: "Acosta't a la boira", hint: "La imatge penja d'una boira que cau, ja esfilagarsada quan arriba a terra. Es veu més brillant de cara al projector." },
+    },
+    'persistence-of-vision': {
+      bar: { label: "Acosta't a la barra", hint: "Una sola barra de llums, divuit a cada costat de l'eix. Espera que freni: la imatge es desfà i torna a ser una barra." },
+    },
+    'swept-volume': {
+      dome: { label: "Acosta't a la cúpula", hint: "Els punts són dins la cúpula, no al damunt. Mou-te al seu voltant: cadascun s'il·lumina només quan la pantalla giratòria hi passa." },
+    },
+    'static-volume': {
+      sheets: { label: "Mira al llarg de la pila", hint: "Dotze làmines de cristall líquid. Una cada vegada es torna lletosa i recull la seva llesca de la imatge. Les altres continuen transparents." },
+    },
+    'optical-trap': {
+      speck: { label: "Acosta't a la volva", hint: "Una volva de cel·lulosa, retinguda per un feix làser i arrossegada d'un costat a l'altre. Tres làsers petits li donen color quan passa." },
+    },
+    'acoustic-levitation': {
+      bead: { label: "Acosta't a la boleta", hint: "Una sola boleta, sostinguda pels ultrasons de les matrius de dalt i de baix, recorre el contorn tan de pressa que es veu sencer." },
+    },
+    'laser-plasma': {
+      points: { label: "Acosta't als punts", hint: "Cada punt és aire que espurneja allà on el feix polsat s'enfoca. Només n'existeix un cada vegada. La resta és imatge persistent." },
+    },
+    'parallax-barrier': {
+      spot: { label: "Posa't al davant", hint: "Mou el cap. A través de les escletxes, les columnes d'un ull deixen pas a les de l'altre: la L es converteix en R." },
+    },
+    lenticular: {
+      pass: { label: "Passa-hi pel davant", hint: "Arrossega per passar-hi pel davant. Cada lent mostra la franja que et mira, de manera que l'ull imprès et segueix. Hi ha nou vistes." },
+    },
+    'integral-imaging': {
+      round: { label: "Mira'l des de tots costats", hint: "Mou el cap cap als costats, i després amunt i avall. L'escena es desplaça en tots dos sentits, a petits salts: una vista per cada posició sota la lent." },
+    },
+    holography: {
+      plate: { label: "Mira a través de la placa", hint: "La locomotora de joguina no és darrere el vidre. Mou el cap: gira com ho faria la de debò. Es veu millor amb la llum del dia apagada." },
+    },
+    'retinal-display': {
+      retina: { label: "Mira a dins, cap a la retina", hint: "No hi ha pantalla. El feix entra per la pupil·la i pinta la imatge a la paret del fons de l'ull, cap per avall." },
+    },
     'peppers-ghost': { seat: { label: "Asseu-te" } },
     stereoscope: { eyepiece: { label: "Mira a dins" } },
     'head-mounted': { worn: { label: "Posa-te'l" } },

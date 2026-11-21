@@ -180,7 +180,7 @@ export function fogScreen(): Built {
   const throwMat = M.add(null, 0xffffff, 0.04);
   root.add(proj, new THREE.Mesh(cone, throwMat), post([-0.12, py - 0.12, pz], 0, 0.03), G.cyl(0.24, 0.03, M.dark(), [-0.12, 0.015, pz], 32));
   return {
-    root, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
+    root, views: { fog: { at: [0.1, 1.3, 1.9], to: [0, 1.05, 0], fov: 46, play: 0.12 } }, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
     update: ({ t, lights, camera }) => {
       uT.value = t;
       const c2 = img.ctx;
@@ -219,7 +219,7 @@ export function pov(): Built {
   const c = s.ctx;
   let angle = 0, last = 0;
   return {
-    root, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
+    root, views: { bar: { at: [0.85, 1.6, 1.6], to: [0.25, 1.35, 0.05], fov: 32 } }, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
     update: ({ t }) => {
       const dt = Math.min(0.1, t - last); last = t;
       // spin up, hold, spin down: at low speed you can see it is only a bar
@@ -258,7 +258,7 @@ export function sweptVolume(): Built {
   for (let i = 0; i < 6; i++) { const v = vents(0.3, 0.14, 5, [Math.sin(i * 1.047) * 1.001, 0.15, Math.cos(i * 1.047) * 1.001]); v.rotation.y = i * 1.047; root.add(v); }
   const col = new THREE.Color();
   return {
-    root, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
+    root, views: { dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
     update: ({ t }) => {
       const th = t * 3.2;
       scr.rotation.y = -th;
@@ -299,7 +299,7 @@ export function staticVolume(): Built {
   root.add(G.cyl(0.11, 0.05, M.dark(), [0, cy, -h - 0.02], 32).rotateX(Math.PI / 2), G.cyl(0.09, 0.006, M.glow(0xfff2e0, 1.6), [0, cy, -h + 0.008], 28).rotateX(Math.PI / 2));
   const col = new THREE.Color();
   return {
-    root, inDark: 'glows', glow: 0xffb070, view: [32, 12],
+    root, views: { sheets: { at: [1.8, 1.25, 0.55], to: [0, 1.0, 0], fov: 32 } }, inDark: 'glows', glow: 0xffb070, view: [32, 12],
     update: ({ t }) => {
       const live = Math.floor(t * 7) % LAYERS; // slowed far down: the real stack cycles every sheet about fifty times a second
       sheets.forEach((m, k) => { m.opacity = k === live ? 0.3 : 0.025; });
@@ -350,7 +350,7 @@ export function opticalTrap(): Built {
   b0.aim([-0.3, Y, 0], [0.25, Y, 0]);
   root.add(trail.points, speck, b0.line, b1.line);
   return {
-    root, inDark: 'better', glow: 0xb090ff, view: [26, 12],
+    root, views: { speck: { at: [1.1, 1.6, 1.5], to: [0.25, 1.5, 0], fov: 32 } }, inDark: 'better', glow: 0xb090ff, view: [26, 12],
     update: ({ t }) => {
       const ph = (t * 0.35) % 1;
       trail.trace(ph);
@@ -382,7 +382,7 @@ export function acousticLev(): Built {
   const spark = halo(0xffffff, 0.16);
   root.add(trail.points, bead, spark);
   return {
-    root, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
+    root, views: { bead: { at: [0.9, 1.2, 1.6], to: [0, 0.99, 0], fov: 30 } }, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
     update: ({ t }) => {
       const ph = (t * 0.45) % 1;
       trail.trace(ph);
@@ -416,7 +416,7 @@ export function laserPlasma(): Built {
   root.add(vox.points, c1.line, c2.line, flash);
   const spin = new THREE.Matrix4(), p = new THREE.Vector3();
   return {
-    root, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
+    root, views: { points: { at: [1.6, 1.75, 1.5], to: [0.48, 1.32, 0], fov: 28 } }, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
     update: ({ t }) => {
       vox.points.rotation.y = t * 0.4; vox.points.position.set(0.48 - 0.48 * Math.cos(t * 0.4), 0, 0.48 * Math.sin(t * 0.4));
       // one point of plasma exists at a time; the rest is afterimage

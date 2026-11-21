@@ -168,7 +168,7 @@ export function parallaxBarrier(): Built {
   root.add(G.rbox(W + 0.14, H + 0.14, 0.07, 0.02, M.dark(), [0, y, -0.04]), G.plane(W, H, M.lit(s, 1.3, 0.2), [0, y, 0]), G.plane(W, H, maskMat, [0, y, 0.085]), G.pane(W + 0.06, H + 0.06, 0.012, [0, y, 0.093]));
   for (const sx of [-1, 1]) for (const sy of [-1, 1]) root.add(G.rod([sx * (W / 2 + 0.01), y + sy * (H / 2 + 0.01), -0.01], [sx * (W / 2 + 0.01), y + sy * (H / 2 + 0.01), 0.1], 0.014, M.steel(2), 10));
   root.add(G.rbox(W + 0.3, 0.05, 0.6, 0.02, M.dark(), [0, 0.025, 0]), G.box(0.06, 0.32, 0.06, M.steel(1), [-0.8, 0.19, -0.04]), G.box(0.06, 0.32, 0.06, M.steel(1), [0.8, 0.19, -0.04]));
-  return { root, inDark: 'glows', glow: 0xff8fb0, view: [9, 4] };
+  return { root, views: { spot: { at: [0, 0.95, 3.0], to: [0, 0.9, 0], fov: 34, play: 0.2 } }, inDark: 'glows', glow: 0xff8fb0, view: [9, 4] };
 }
 
 /** Lenticular sheet: ribs of plastic lens over a striped print. Which stripe each rib shows depends on where you stand. */
@@ -186,7 +186,7 @@ export function lenticular(): Built {
   root.add(tilt, G.box(1.3, 0.04, 0.08, M.wood(0x8a5a30), [0, 0.3, 0.02]), G.box(0.05, 1.3, 0.05, easel, [-0.5, 0.66, -0.22]).rotateX(-0.2), G.box(0.05, 1.3, 0.05, easel, [0.5, 0.66, -0.22]).rotateX(-0.2), G.box(0.05, 1.2, 0.05, easel, [0, 0.58, -0.52]).rotateX(0.36), G.box(1.1, 0.04, 0.05, M.wood(0x8a5a30), [0, 1.0, -0.3]));
   let shown = -99;
   return {
-    root, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
+    root, views: { pass: { at: [0, 1.05, 3.0], to: [0, 0.92, 0], fov: 34, play: 0.45 } }, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
     update: (env) => {
       const [az] = gaze(root, env);
       const frame = Math.round(Math.max(-1, Math.min(1, az / 0.7)) * 4); // nine views behind every rib
@@ -217,7 +217,7 @@ export function integral(): Built {
   root.add(G.rbox(W + 0.14, H + 0.14, 0.1, 0.025, M.dark(), [0, y, -0.055]), G.plane(W, H, M.lit(s, 1.3, 0), [0, y, 0]), lenslets.mesh, G.rbox(1.2, 0.05, 0.6, 0.02, M.dark(), [0, 0.025, 0]), G.cyl(0.045, 0.3, M.steel(1), [0, 0.17, -0.05], 20), vents(1.1, 0.6, 8, [0, y, -0.106]));
   let key = '';
   return {
-    root, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
+    root, views: { round: { at: [0, 0.98, 2.8], to: [0, 0.9, 0], fov: 34, play: 0.35 } }, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
     update: (env) => {
       const [az, el] = gaze(root, env, y);
       // a lens array gives a limited number of views, so the picture moves in small steps
@@ -277,7 +277,7 @@ export function hologram(): Built {
   root.add(tube, spread, post([src[0] - 0.33, src[1] - 0.06, src[2] - 0.36], 0.06), post([src[0], src[1] - 0.07, src[2]], 0.06), halo(RED, 0.2, src, 0.5));
   for (const [tx, ty] of [[-0.6, 0.5], [0.6, 0.5], [-0.6, -0.5], [0.6, -0.5]]) { const b = beam(RED, 0.2); b.aim(src, [tx, y + ty, -0.012]); root.add(b.line); }
   return {
-    root, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
+    root, views: { plate: { at: [0.2, 1.12, 2.3], to: [0, 1.0, -0.3], fov: 34, play: 0.3 } }, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
     update: ({ lights }) => { mat.uniforms.uGain.value = 1 - 0.5 * lights; },
   };
 }
@@ -379,7 +379,7 @@ export function retinal(): Built {
   root.add(b1.line, b2.line);
   let lastRow = -1;
   return {
-    root, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
+    root, views: { retina: { at: [1.25, 1.35, 0.95], to: [0, 1.05, -0.5], fov: 30 } }, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
     update: ({ t }) => {
       const n = now(), c = s.ctx;
       const row = Math.floor((t * 22) % 32), u = (t * 9) % 1;

@@ -34,7 +34,7 @@ export function lcd(): Built {
   for (const x of [-0.7, 0.7]) for (const z of [-0.95, 0.93]) root.add(G.box(0.1, y - H / 2 - 0.2, 0.1, M.dark(1), [x, (y - H / 2 - 0.2) / 2 + 0.03, z]));
   let stamp = -1;
   return {
-    root, inDark: 'glows', glow: 0xdde8ff, view: [38, 12], surface: final.canvas,
+    root, views: { layers: { at: [1.5, 1.2, 0.3], to: [0.25, 0.86, -0.1], fov: 32 } }, inDark: 'glows', glow: 0xdde8ff, view: [38, 12], surface: final.canvas,
     update: ({ t }) => {
       const n = now();
       if (n.s === stamp) return; stamp = n.s;
@@ -82,7 +82,7 @@ export function dmd(): Built {
   }
   let first = true;
   return {
-    root, inDark: 'vanishes', view: [24, 16],
+    root, views: { mirrors: { at: [0.6, 1.6, 1.1], to: [0, 1.1, 0.05], fov: 30 } }, inDark: 'vanishes', view: [24, 16],
     update: () => {
       const d = dots(now().hhmmss.slice(6));
       for (let i = 0; i < N; i++) {
@@ -129,7 +129,7 @@ export function lcos(): Built {
   const rays: [V3, V3, number][] = [[[-0.82, AX, 0], [-0.1, AX, 0], 0xffffff], [[-0.1, AX, 0], [-0.1, B + 0.1, 0], 0xffffff], [[-0.08, B + 0.1, 0], [-0.08, AX, 0], 0xffd27a], [[-0.08, AX, 0], [0.82, AX, 0], 0xffd27a], [[0.82, AX, 0], [1.02, AX + 0.2, -0.2], 0xffd27a], [[0.82, AX, 0], [1.2, AX - 0.16, -0.4], 0xffd27a]];
   for (const [a, b, col] of rays) { const r = beam(col, 0.7); r.aim(a, b); root.add(r.line); }
   return {
-    root, inDark: 'glows', glow: 0xffe2b0, view: [28, 16], zoom: 1.08, surface: s.canvas,
+    root, views: { cube: { at: [0.55, 1.1, 1.0], to: [-0.1, 0.5, 0], fov: 32 } }, inDark: 'glows', glow: 0xffe2b0, view: [28, 16], zoom: 1.08, surface: s.canvas,
     update: ({ lights }) => {
       for (const sc of [s, shot]) { sc.ctx.fillStyle = sc === s ? '#10131a' : '#000'; sc.ctx.fillRect(0, 0, 320, 240); bigTime(sc.ctx, 320, 240, now().hhmm, '#ffd27a', 800, 0.6); sc.tex.needsUpdate = true; }
       ((scr.children[1] as THREE.Mesh).material as THREE.MeshBasicMaterial).opacity = 1 - 0.6 * lights;
@@ -175,7 +175,7 @@ export function eidophor(): Built {
   for (const [a, b, col] of rays) { const r = beam(col, 0.6); r.aim(a, b); root.add(r.line); }
   const eb = beam(0x7fb0ff, 0.5); eb.aim([0.2, 0.34, 0], [0.0, 0.25, 0]); root.add(eb.line);
   return {
-    root, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
+    root, views: { oil: { at: [0.8, 0.8, 1.0], to: [0, 0.3, 0], fov: 30 } }, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
     update: ({ t, lights }) => {
       dish.rotation.y = t * 0.25;
       s.ctx.fillStyle = '#000'; s.ctx.fillRect(0, 0, 320, 240);
@@ -225,7 +225,7 @@ export function laserScan(): Built {
   const spot = halo(0xffffff, 0.12);
   root.add(spot);
   return {
-    root, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
+    root, views: { galvos: { at: [0.05, 1.0, 1.15], to: [0.62, 0.55, 0.06], fov: 32 } }, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
     update: ({ t }) => {
       const strokes = clockStrokes(now());
       const c = s.ctx;
@@ -304,7 +304,7 @@ export function projectionMapping(): Built {
   const throwMat = M.add(null, 0xffffff, 0.04);
   root.add(new THREE.Mesh(throwGeo, throwMat));
   return {
-    root, inDark: 'better', glow: 0x6a5f55, view: [-24, 14], surface: frame.canvas,
+    root, views: { lens: { at: [0.1, 1.42, 2.2], to: [0.1, 0.75, -0.45], fov: 40, play: 0.12 } }, inDark: 'better', glow: 0x6a5f55, view: [-24, 14], surface: frame.canvas,
     update: ({ t, lights }) => {
       const c = frame.ctx;
       // black wherever there is nothing to hit: the picture is cut to the outline of each solid

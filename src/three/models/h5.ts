@@ -24,7 +24,7 @@ export function gyricon(): Built {
   root.add(G.wire([[W / 2, y - 0.3, 0.104], [W / 2 + 0.16, y - 0.5, 0.1], [W / 2 + 0.1, 0.1, 0.16]], 0.012, M.plastic(0xb5281d, 0.5)), G.wire([[W / 2, y - 0.2, -0.115], [W / 2 + 0.2, y - 0.5, -0.14], [W / 2 + 0.16, 0.1, -0.1]], 0.012, M.rubber()));
   let first = true;
   return {
-    root, inDark: 'vanishes', view: [20, 6],
+    root, views: { beads: { at: [0.6, 1.05, 1.0], to: [0.1, 0.8, 0], fov: 28 } }, inDark: 'vanishes', view: [20, 6],
     update: () => {
       const d = dots(now().hhmmss.slice(6));
       for (let i = 0; i < N; i++) {
@@ -62,7 +62,7 @@ export function eink(): Built {
   };
   let stamp = '', flashAt = -9;
   return {
-    root, inDark: 'vanishes', view: [22, 8], surface: s.canvas,
+    root, views: { read: { at: [0, 1.45, 3.0], to: [0, 1.1, 0], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [22, 8], surface: s.canvas,
     update: ({ t }) => {
       const n = now();
       const mark = `${n.hhmm}:${String(Math.floor(n.s / 15) * 15).padStart(2, '0')}`;
@@ -105,7 +105,7 @@ export function chlcd(): Built {
   };
   const len = (p: [number, number][]) => p.reduce((sum, q, i) => (i ? sum + Math.hypot(q[0] - p[i - 1][0], q[1] - p[i - 1][1]) : 0), 0);
   return {
-    root, inDark: 'vanishes', view: [18, 18], surface: s.canvas,
+    root, views: { slate: { at: [0, 2.2, 1.12], to: [0, 0.7, 0.02], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [18, 18], surface: s.canvas,
     update: ({ t }) => {
       const T = 13, u = t % T;
       if (u < 0.3 || !path.length) { const h = now().hhmm; if (h !== stamp || u < 0.3) { stamp = h; plan(h); } }
@@ -161,7 +161,7 @@ export function electrowetting(): Built {
   root.add(tray, G.rbox(2.3, 0.05, 1.6, 0.02, M.dark(), [0, 0.025, 0]), G.profile([[-0.62, 0.05], [0.5, 0.05], [-0.5, 0.86], [-0.62, 0.86]], 1.9, M.dark(), undefined, 0.012));
   let first = true;
   return {
-    root, inDark: 'vanishes', view: [22, 16],
+    root, views: { cells: { at: [0.5, 1.6, 1.2], to: [0, 0.85, 0.15], fov: 30 } }, inDark: 'vanishes', view: [22, 16],
     update: ({ t }) => {
       for (let i = 0; i < N; i++) {
         const want = Math.sin(t * 1.3 + (i % COLS) * 1.1 + Math.floor(i / COLS) * 2.3) > 0.1 ? 1 : 0;
@@ -205,7 +205,7 @@ export function imod(): Built {
   const palette = [[1, 1, 1], [1, 0, 0], [1, 1, 0], [0, 1, 0], [0, 1, 1], [0, 0, 1], [1, 0, 1], [0, 0, 0]];
   let first = true;
   return {
-    root, inDark: 'vanishes', view: [40, 10],
+    root, views: { gaps: { at: [1.3, 0.95, 0.8], to: [0.3, 0.76, 0.05], fov: 30 } }, inDark: 'vanishes', view: [40, 10],
     update: ({ t }) => {
       for (let i = 0; i < N; i++) {
         const pixel = Math.floor((i % COLS) / 3) + Math.floor(i / COLS) * 2;
@@ -235,7 +235,7 @@ export function electrochromic(): Built {
   root.add(screws([[0.12, 1.58, -0.3], [1.12, 1.58, -0.3]], 0.014));
   const level = new Float32Array(14).fill(-1);
   return {
-    root, inDark: 'vanishes', view: [20, 12], surface: s.canvas,
+    root, views: { label: { at: [-0.1, 1.15, 1.75], to: [-0.38, 0.62, 0.32], fov: 30 } }, inDark: 'vanishes', view: [20, 12], surface: s.canvas,
     update: ({ t }) => {
       const n = now(), c = s.ctx;
       c.fillStyle = '#f1efe6'; c.fillRect(0, 0, 384, 256);

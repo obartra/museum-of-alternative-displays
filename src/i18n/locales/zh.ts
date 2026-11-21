@@ -1480,6 +1480,78 @@ const locale: Locale = {
     'flexible-display': {
       edge: { label: '顺着边缘看', hint: '这张薄片就是整个显示屏：塑料上的几层薄膜，后面什么也没有。它卷进下面的卷轴里。' },
     },
+    'liquid-crystal': {
+      layers: { label: '钻到各层之间', hint: '单看液晶这一层，只有灰度。它决定每个单元把光扭转多少。颜色来自滤光片。' },
+    },
+    micromirror: {
+      mirrors: { label: '凑近看镜子', hint: '几面放大了几千倍的镜子。每一面都绕对角线摆动：倒向一边时，把光送进镜头。' },
+    },
+    lcos: {
+      cube: { label: '跟着光走', hint: '立方体把灯光折向下方，照到芯片上。只有被芯片扭转过的光，才从镜头射出去。' },
+    },
+    eidophor: {
+      oil: { label: '凑近看油膜', hint: '转动的镜面上有一层油膜。电子束在油膜上压出小坑，只有被小坑偏折的光才能穿过栅条。' },
+    },
+    'scanned-laser': {
+      galvos: { label: '凑近看镜子', hint: '两面小镜子装在高速电机上。一面让光束左右摆动，另一面让它上下摆动。眼睛看到的是光走过的路径。' },
+    },
+    'projection-mapping': {
+      lens: { label: '站到投影机旁', hint: '从镜头这里看，它只是一幅裁好的平面画面。每个形体各得一块，形体之间的空隙是黑的。' },
+    },
+    gyricon: {
+      beads: { label: '凑近看珠子', hint: '每颗珠子一半黑、一半白，各自待在一个充油的小腔里。电场让它翻过来，它就停在那里。' },
+    },
+    'electrophoretic-ink': {
+      read: { label: '拿起来读', hint: '它靠房间里的光来读，像印刷品一样。看一次翻页：每个微囊先变黑，再变白，然后才显示新的一页。' },
+    },
+    'cholesteric-lcd': {
+      slate: { label: '俯身看写字板', hint: '压力让液晶翻到反光的状态，笔画不用电也能留住。一个脉冲就把整张薄膜清空。' },
+    },
+    electrowetting: {
+      cells: { label: '凑近看小格', hint: '每个小格上盖着一层染色的油膜。加上电压，水把油推到角落里，小格就变透明了。' },
+    },
+    'interferometric-modulator': {
+      gaps: { label: '看看这些间隙', hint: '玻璃后面是一面装在弹簧上的镜子。间隙的宽窄决定颜色。镜子贴到玻璃上时，这个单元就是黑的。' },
+    },
+    electrochromic: {
+      label: { label: '凑近看标签', hint: '离子渗进印刷的薄膜，使它变深。这要花几秒钟，而不是几毫秒，之后不用电也能保持。' },
+    },
+    'fog-screen': {
+      fog: { label: '走到雾幕跟前', hint: '画面挂在往下落的雾里，落到地面时已经散乱。迎着投影机看时最亮。' },
+    },
+    'persistence-of-vision': {
+      bar: { label: '凑近看长条', hint: '一根装着灯的长条，转轴两侧各十八颗。等它慢下来：画面又散成了一根长条。' },
+    },
+    'swept-volume': {
+      dome: { label: '凑近看圆罩', hint: '这些点在圆罩里面，不在罩面上。绕着它们看：旋转的屏幕经过哪个点，哪个点才亮。' },
+    },
+    'static-volume': {
+      sheets: { label: '顺着叠层看', hint: '十二片液晶片。每次只有一片变成乳白色，接住画面中属于它的那一个切片。其余的保持透明。' },
+    },
+    'optical-trap': {
+      speck: { label: '凑近看微粒', hint: '一粒纤维素微粒，被激光束抓住并拖着四处移动。它经过时，三台小激光器给它上色。' },
+    },
+    'acoustic-levitation': {
+      bead: { label: '凑近看珠子', hint: '一颗珠子，被上下两个阵列发出的超声波托住，沿着轮廓飞得很快，快到整个轮廓都能看见。' },
+    },
+    'laser-plasma': {
+      points: { label: '凑近看光点', hint: '每个点都是空气，在脉冲光束聚焦的地方闪光。同一时刻只存在一个点。其余的都是视觉残留。' },
+    },
+    'parallax-barrier': {
+      spot: { label: '站到正前方', hint: '动一动头。透过狭缝，给一只眼睛看的那些列，会让位给另一只眼睛的列：L变成了R。' },
+    },
+    lenticular: {
+      pass: { label: '从它面前走过', hint: '拖动画面，从它面前走过。每条透镜显示的都是朝向你的那一条，所以印着的眼睛会跟着你。一共有九个视图。' },
+    },
+    'integral-imaging': {
+      round: { label: '绕着它看', hint: '把头左右移动，再上下移动。画面在两个方向上都会错动，而且是一小步一小步的：透镜下的每个位置对应一个视图。' },
+    },
+    holography: {
+      plate: { label: '透过感光板看', hint: '玩具火车头并不在玻璃后面。动一动头：它会像真的那样转过去。关掉日光看得最清楚。' },
+    },
+    'retinal-display': {
+      retina: { label: '往里看视网膜', hint: '这里没有屏幕。光束穿过瞳孔射进去，把画面上下颠倒地画在眼球的后壁上。' },
+    },
     'peppers-ghost': { seat: { label: '入座' } },
     stereoscope: { eyepiece: { label: '往里看' } },
     'head-mounted': { worn: { label: '戴上' } },

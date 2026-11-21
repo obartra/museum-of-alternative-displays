@@ -1070,6 +1070,78 @@ const locale: Locale = {
     'flexible-display': {
       edge: { label: 'Mira a lo largo del borde', hint: 'La lámina es toda la pantalla: películas delgadas sobre plástico, sin nada detrás. Se enrolla en el tambor de abajo.' },
     },
+    'liquid-crystal': {
+      layers: { label: 'Métete entre las capas', hint: 'La capa de cristal sola solo muestra grises. Fija cuánto gira la luz cada celda. El color lo pone el filtro.' },
+    },
+    micromirror: {
+      mirrors: { label: 'Acércate a los espejos', hint: 'Unos pocos espejos, ampliados varios miles de veces. Cada uno bascula sobre su diagonal: hacia un lado manda la luz a la lente.' },
+    },
+    lcos: {
+      cube: { label: 'Sigue la luz', hint: 'El cubo desvía la luz de la lámpara hacia abajo, hasta el chip. Solo sale por la lente la luz que el chip ha girado.' },
+    },
+    eidophor: {
+      oil: { label: 'Acércate al aceite', hint: 'Una película de aceite sobre un espejo que gira. El haz de electrones la abolla, y solo la luz que desvía una abolladura pasa entre las barras.' },
+    },
+    'scanned-laser': {
+      galvos: { label: 'Acércate a los espejos', hint: 'Dos espejos pequeños sobre motores rápidos. Uno mueve el haz a izquierda y derecha, el otro arriba y abajo. El ojo ve el recorrido.' },
+    },
+    'projection-mapping': {
+      lens: { label: 'Ponte junto al proyector', hint: 'Desde la lente es una sola imagen plana, recortada a medida. Cada forma recibe su parte, y los huecos entre ellas quedan en negro.' },
+    },
+    gyricon: {
+      beads: { label: 'Acércate a las bolitas', hint: 'Cada bolita es negra por una mitad y blanca por la otra, en su propia cavidad de aceite. El campo le da la vuelta, y así se queda.' },
+    },
+    'electrophoretic-ink': {
+      read: { label: 'Cógelo para leer', hint: 'Se lee con la luz de la habitación, como el papel impreso. Mira cómo cambia la página: cada cápsula pasa a negro, luego a blanco y luego a la página nueva.' },
+    },
+    'cholesteric-lcd': {
+      slate: { label: 'Inclínate sobre la tableta', hint: 'La presión pasa el cristal a su estado reflectante, y el trazo se queda sin gastar energía. Un solo impulso borra la lámina.' },
+    },
+    electrowetting: {
+      cells: { label: 'Acércate a las celdas', hint: 'Una película de aceite teñido cubre cada celda. Una tensión hace que el agua empuje el aceite a un rincón, y la celda se aclara.' },
+    },
+    'interferometric-modulator': {
+      gaps: { label: 'Mira las separaciones', hint: 'Un espejo sobre muelles detrás de un vidrio. La anchura de la separación elige el color. Pegado al vidrio, la celda queda negra.' },
+    },
+    electrochromic: {
+      label: { label: 'Acércate a la etiqueta', hint: 'Los iones empapan la película impresa y la oscurecen. Tarda segundos, no milisegundos, y después se mantiene sin energía.' },
+    },
+    'fog-screen': {
+      fog: { label: 'Acércate a la niebla', hint: 'La imagen cuelga de una niebla que cae, ya deshilachada cuando llega al suelo. Se ve más brillante de cara al proyector.' },
+    },
+    'persistence-of-vision': {
+      bar: { label: 'Acércate a la barra', hint: 'Una sola barra de lámparas, dieciocho a cada lado del eje. Espera a que frene: la imagen se deshace y vuelve a ser una barra.' },
+    },
+    'swept-volume': {
+      dome: { label: 'Acércate a la cúpula', hint: 'Los puntos están dentro de la cúpula, no sobre ella. Muévete a su alrededor: cada uno se ilumina solo cuando la pantalla giratoria pasa por él.' },
+    },
+    'static-volume': {
+      sheets: { label: 'Mira a lo largo de la pila', hint: 'Doce láminas de cristal líquido. Una cada vez se vuelve lechosa y recoge su rebanada de la imagen. Las demás siguen transparentes.' },
+    },
+    'optical-trap': {
+      speck: { label: 'Acércate a la mota', hint: 'Una mota de celulosa, sujeta por un haz láser y arrastrada de un lado a otro. Tres láseres pequeños le dan color al pasar.' },
+    },
+    'acoustic-levitation': {
+      bead: { label: 'Acércate a la bolita', hint: 'Una sola bolita, sostenida por los ultrasonidos de las matrices de arriba y de abajo, recorre el contorno tan deprisa que se ve entero.' },
+    },
+    'laser-plasma': {
+      points: { label: 'Acércate a los puntos', hint: 'Cada punto es aire que destella donde el haz pulsado se enfoca. Solo existe uno cada vez. Lo demás es imagen persistente.' },
+    },
+    'parallax-barrier': {
+      spot: { label: 'Ponte delante', hint: 'Mueve la cabeza. A través de las rendijas, las columnas de un ojo dejan paso a las del otro: la L se convierte en R.' },
+    },
+    lenticular: {
+      pass: { label: 'Pasa por delante', hint: 'Arrastra para pasar por delante. Cada lente muestra la franja que te mira, así que el ojo impreso te sigue. Hay nueve vistas.' },
+    },
+    'integral-imaging': {
+      round: { label: 'Míralo desde varios lados', hint: 'Mueve la cabeza a los lados, y luego arriba y abajo. La escena se desplaza en los dos sentidos, a pequeños saltos: una vista por cada posición bajo la lente.' },
+    },
+    holography: {
+      plate: { label: 'Mira a través de la placa', hint: 'La locomotora de juguete no está detrás del vidrio. Mueve la cabeza: gira como lo haría la de verdad. Se ve mejor con la luz del día apagada.' },
+    },
+    'retinal-display': {
+      retina: { label: 'Mira dentro, hacia la retina', hint: 'No hay pantalla. El haz entra por la pupila y pinta la imagen en la pared del fondo del ojo, cabeza abajo.' },
+    },
     'peppers-ghost': { seat: { label: 'Siéntate' } },
     stereoscope: { eyepiece: { label: 'Mira dentro' } },
     'head-mounted': { worn: { label: 'Póntelo' } },

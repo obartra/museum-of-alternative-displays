@@ -1063,6 +1063,78 @@ const locale: Locale = {
     'flexible-display': {
       edge: { label: 'Regarder le long du bord', hint: 'La feuille est tout l’écran\u202f: des couches minces sur du plastique, sans rien derrière. Elle s’enroule sur le rouleau, en bas.' },
     },
+    'liquid-crystal': {
+      layers: { label: 'Se glisser entre les couches', hint: 'La couche de cristal seule ne montre que du gris. Elle règle de combien chaque cellule tourne la lumière. La couleur vient du filtre.' },
+    },
+    micromirror: {
+      mirrors: { label: 'S’approcher des miroirs', hint: 'Quelques miroirs, agrandis plusieurs milliers de fois. Chacun bascule sur sa diagonale\u202f: d’un côté, il envoie la lumière vers l’objectif.' },
+    },
+    lcos: {
+      cube: { label: 'Suivre la lumière', hint: 'Le cube renvoie la lumière de la lampe vers le bas, sur la puce. Seule la lumière que la puce a fait tourner sort par l’objectif.' },
+    },
+    eidophor: {
+      oil: { label: 'S’approcher de l’huile', hint: 'Un film d’huile sur un miroir qui tourne. Le faisceau d’électrons le creuse, et seule la lumière déviée par un creux passe entre les barreaux.' },
+    },
+    'scanned-laser': {
+      galvos: { label: 'S’approcher des miroirs', hint: 'Deux petits miroirs sur des moteurs rapides. L’un déplace le faisceau de gauche à droite, l’autre de haut en bas. L’œil voit le tracé.' },
+    },
+    'projection-mapping': {
+      lens: { label: 'Se placer au projecteur', hint: 'Depuis l’objectif, c’est une seule image plate, découpée sur mesure. Chaque forme reçoit sa part, et les vides entre elles restent noirs.' },
+    },
+    gyricon: {
+      beads: { label: 'S’approcher des billes', hint: 'Chaque bille est noire d’un côté et blanche de l’autre, dans sa propre poche d’huile. Le champ la retourne, et elle reste ainsi.' },
+    },
+    'electrophoretic-ink': {
+      read: { label: 'La prendre pour lire', hint: 'Elle se lit à la lumière de la salle, comme un imprimé. Regardez une page changer\u202f: chaque capsule passe au noir, puis au blanc, puis à la nouvelle page.' },
+    },
+    'cholesteric-lcd': {
+      slate: { label: 'Se pencher sur la tablette', hint: 'La pression fait passer le cristal à son état réfléchissant, et le trait reste sans énergie. Une seule impulsion efface la feuille.' },
+    },
+    electrowetting: {
+      cells: { label: 'S’approcher des cellules', hint: 'Un film d’huile teintée couvre chaque cellule. Une tension fait que l’eau pousse l’huile dans un coin, et la cellule s’éclaircit.' },
+    },
+    'interferometric-modulator': {
+      gaps: { label: 'Regarder les intervalles', hint: 'Un miroir sur ressorts derrière un verre. La largeur de l’intervalle choisit la couleur. Plaqué contre le verre, la cellule est noire.' },
+    },
+    electrochromic: {
+      label: { label: 'S’approcher de l’étiquette', hint: 'Des ions imprègnent le film imprimé et l’assombrissent. Cela prend des secondes, pas des millisecondes, puis l’état se conserve sans énergie.' },
+    },
+    'fog-screen': {
+      fog: { label: 'S’avancer vers le brouillard', hint: 'L’image flotte dans un brouillard qui tombe, déjà effiloché en arrivant au sol. Elle est la plus vive face au projecteur.' },
+    },
+    'persistence-of-vision': {
+      bar: { label: 'S’approcher de la barre', hint: 'Une seule barre de lampes, dix-huit de chaque côté du moyeu. Attendez qu’elle ralentisse\u202f: l’image se défait et redevient une barre.' },
+    },
+    'swept-volume': {
+      dome: { label: 'S’approcher du dôme', hint: 'Les points sont dans le dôme, pas à sa surface. Tournez autour\u202f: chacun ne s’allume qu’au passage de l’écran qui tourne.' },
+    },
+    'static-volume': {
+      sheets: { label: 'Regarder le long de la pile', hint: 'Douze feuilles de cristal liquide. Une seule à la fois devient laiteuse et retient sa tranche de l’image. Les autres restent claires.' },
+    },
+    'optical-trap': {
+      speck: { label: 'S’approcher du grain', hint: 'Un grain de cellulose, retenu dans un faisceau laser et promené en tous sens. Trois petits lasers le colorent à son passage.' },
+    },
+    'acoustic-levitation': {
+      bead: { label: 'S’approcher de la bille', hint: 'Une seule bille, tenue par les ultrasons des réseaux du haut et du bas, parcourt le contour assez vite pour qu’on le voie entier.' },
+    },
+    'laser-plasma': {
+      points: { label: 'S’approcher des points', hint: 'Chaque point est de l’air, qui jette un éclair là où le faisceau pulsé se concentre. Il n’en existe qu’un à la fois. Le reste est une image rémanente.' },
+    },
+    'parallax-barrier': {
+      spot: { label: 'Se placer devant', hint: 'Bougez la tête. À travers les fentes, les colonnes d’un œil cèdent la place à celles de l’autre\u202f: le L devient R.' },
+    },
+    lenticular: {
+      pass: { label: 'Passer devant', hint: 'Faites glisser pour passer devant. Chaque lentille montre la bande tournée vers vous\u202f: l’œil imprimé vous suit. Il y a neuf vues.' },
+    },
+    'integral-imaging': {
+      round: { label: 'Regarder tout autour', hint: 'Bougez la tête de côté, puis de haut en bas. La scène se décale dans les deux sens, par petits sauts\u202f: une vue par position sous la lentille.' },
+    },
+    holography: {
+      plate: { label: 'Regarder à travers la plaque', hint: 'La locomotive jouet n’est pas derrière le verre. Bougez la tête\u202f: elle tourne comme le ferait la vraie. Elle se voit mieux lumière du jour éteinte.' },
+    },
+    'retinal-display': {
+      retina: { label: 'Regarder vers la rétine', hint: 'Il n’y a pas d’écran. Le faisceau entre par la pupille et peint l’image sur la paroi du fond de l’œil, à l’envers.' },
+    },
     'peppers-ghost': { seat: { label: 'S’asseoir' } },
     stereoscope: { eyepiece: { label: 'Regarder dedans' } },
     'head-mounted': { worn: { label: 'Mettre le casque' } },

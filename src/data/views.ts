@@ -98,8 +98,84 @@ export const views: Record<string, ViewInfo[]> = {
   'flexible-display': [
     { id: 'edge', kind: 'detail', label: 'Look along the edge', hint: 'The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below.' },
   ],
+  // hall 4, light valves
+  'liquid-crystal': [
+    { id: 'layers', kind: 'detail', label: 'Go between the layers', hint: 'The crystal layer alone shows only grey. It sets how far each cell twists the light. The colour comes from the filter.' },
+  ],
+  'micromirror': [
+    { id: 'mirrors', kind: 'detail', label: 'Go close to the mirrors', hint: 'A few mirrors, enlarged several thousand times. Each rocks on its diagonal: one way sends light to the lens.' },
+  ],
+  'lcos': [
+    { id: 'cube', kind: 'detail', label: 'Follow the light', hint: 'The cube turns the light of the lamp down onto the chip. Only light the chip has twisted leaves through the lens.' },
+  ],
+  'eidophor': [
+    { id: 'oil', kind: 'detail', label: 'Go close to the oil', hint: 'A film of oil on a turning mirror. The electron beam dimples it, and only light bent by a dimple passes the bars.' },
+  ],
+  'scanned-laser': [
+    { id: 'galvos', kind: 'detail', label: 'Go close to the mirrors', hint: 'Two small mirrors on fast motors. One swings the beam left and right, the other up and down. The eye sees the path.' },
+  ],
+  'projection-mapping': [
+    { id: 'lens', kind: 'person', label: 'Stand at the projector', hint: 'From the lens it is one flat picture, cut to fit. Each solid gets its own part, and the gaps between them get black.' },
+  ],
+  // hall 5, paper
+  'gyricon': [
+    { id: 'beads', kind: 'detail', label: 'Go close to the beads', hint: 'Each bead is black on one half and white on the other, in its own pocket of oil. The field turns it, and it stays.' },
+  ],
+  'electrophoretic-ink': [
+    { id: 'read', kind: 'person', label: 'Pick it up to read', hint: 'It reads by room light, like print. Watch a page change: every capsule goes black, then white, then to the new page.' },
+  ],
+  'cholesteric-lcd': [
+    { id: 'slate', kind: 'person', label: 'Lean over the tablet', hint: 'Pressure flips the crystal to its reflecting state, and the stroke stays with no power. One pulse wipes the sheet.' },
+  ],
+  'electrowetting': [
+    { id: 'cells', kind: 'detail', label: 'Go close to the cells', hint: 'A film of dyed oil covers each cell. A voltage makes the water push the oil into a corner, and the cell clears.' },
+  ],
+  'interferometric-modulator': [
+    { id: 'gaps', kind: 'detail', label: 'Look across the gaps', hint: 'A mirror on springs behind glass. The width of the gap picks the colour. Pulled against the glass, the cell is black.' },
+  ],
+  'electrochromic': [
+    { id: 'label', kind: 'detail', label: 'Go close to the label', hint: 'Ions soak into the printed film and darken it. That takes seconds, not milliseconds, and then it holds with no power.' },
+  ],
+  // hall 6, mid-air
   'peppers-ghost': [{ id: 'seat', kind: 'person', label: 'Sit down' }],
+  'fog-screen': [
+    { id: 'fog', kind: 'person', label: 'Step up to the fog', hint: 'The picture hangs in falling fog, ragged by the time it reaches the floor. It is brightest facing the projector.' },
+  ],
+  'persistence-of-vision': [
+    { id: 'bar', kind: 'detail', label: 'Go close to the bar', hint: 'One bar of lamps, eighteen each side of the hub. Wait for it to slow down: the picture comes apart into a bar again.' },
+  ],
+  'swept-volume': [
+    { id: 'dome', kind: 'detail', label: 'Go close to the dome', hint: 'The points are inside the dome, not on it. Move round them: each is lit only as the spinning screen passes through it.' },
+  ],
+  'static-volume': [
+    { id: 'sheets', kind: 'detail', label: 'Look along the sheets', hint: 'Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear.' },
+  ],
+  'optical-trap': [
+    { id: 'speck', kind: 'detail', label: 'Go close to the speck', hint: 'One speck of cellulose, held in a laser beam and dragged round. Three small lasers colour it as it passes.' },
+  ],
+  'acoustic-levitation': [
+    { id: 'bead', kind: 'detail', label: 'Go close to the bead', hint: 'One bead, held by ultrasound from the arrays above and below, flown round the outline fast enough to be seen whole.' },
+  ],
+  'laser-plasma': [
+    { id: 'points', kind: 'detail', label: 'Go close to the points', hint: 'Each point is air, flashing where the pulsed beam comes to a focus. Only one exists at a time. The rest is afterimage.' },
+  ],
+  // hall 7, depth
   'stereoscope': [{ id: 'eyepiece', kind: 'person', label: 'Look in' }],
+  'parallax-barrier': [
+    { id: 'spot', kind: 'person', label: 'Stand in front', hint: 'Move your head. Through the slits, the columns for one eye give way to the columns for the other: L turns to R.' },
+  ],
+  'lenticular': [
+    { id: 'pass', kind: 'person', label: 'Walk past it', hint: 'Drag to walk past. Each rib shows the stripe that faces you, so the eye in the print follows you. There are nine views.' },
+  ],
+  'integral-imaging': [
+    { id: 'round', kind: 'person', label: 'Look round it', hint: 'Move your head sideways, then up and down. The scene shifts both ways, in small steps: one view for each lens position.' },
+  ],
+  'holography': [
+    { id: 'plate', kind: 'person', label: 'Look through the plate', hint: 'The toy engine is not behind the glass. Move your head: it turns as the real one would. Best with the daylight off.' },
+  ],
+  'retinal-display': [
+    { id: 'retina', kind: 'detail', label: 'Look in at the retina', hint: 'There is no screen. The beam goes in through the pupil and paints the picture on the back wall of the eye, upside down.' },
+  ],
   'head-mounted': [{ id: 'worn', kind: 'person', label: 'Put it on' }],
   'head-up': [{ id: 'seat', kind: 'person', label: 'Sit down' }],
 };
