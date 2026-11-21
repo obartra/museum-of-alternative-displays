@@ -22,7 +22,9 @@ function inlineCss(): Plugin {
         // inside the stylesheet, fonts are addressed from the assets folder. From the page they are one level down
         const css = String(file.source).replace(/url\(\.\//g, 'url(./assets/').trim();
         page = page.replace(link, () => `<style>${css}</style>`);
-        delete bundle[name];
+        // The file stays in the build although no page links to it. A part of the site that loads later from a part
+        // that itself loaded later (the hall of the walk, from the walk's page) is told to fetch the stylesheet of
+        // the opening script first, and gives up if that fetch fails.
       }
       html.source = page;
     },
