@@ -151,8 +151,12 @@ export interface StandsOptions {
   /** How many models may run at once. */
   cap: number;
   names: Record<string, string>;
+  /** Under the name on each plate: who made the piece and when. A piece without one has a plate of the old height's worth of name. */
+  makers?: Record<string, string>;
   signs: Sign[];
   display: string;
+  /** The face for running text. */
+  text?: string;
   sunward: THREE.Vector3;
 }
 
@@ -212,16 +216,16 @@ export class Stands {
     });
     const cut = new THREE.CanvasTexture(nc); cut.colorSpace = THREE.SRGBColorSpace; cut.anisotropy = 4;
     const numerals = new Quads(), labels = new Quads();
-    const COLS = 4, ROWS = Math.ceil(n / COLS), CW = o.lite ? 256 : 512, CH = o.lite ? 56 : 112, [lc, lx] = sheet(COLS * CW, ROWS * CH);
+    const COLS = 4, ROWS = Math.ceil(n / COLS), CW = o.lite ? 256 : 512, CH = o.lite ? 76 : 152, [lc, lx] = sheet(COLS * CW, ROWS * CH), PLATE = 0.94 * (CH / CW);
     const face = new THREE.Vector3();
     places.forEach((p, i) => {
       const s = o.signs[p.hall - 1], turn = p.side < 0 ? 0 : Math.PI, u = (p.hall - 1) / o.signs.length;
       // on the face towards the aisle and on the one behind, as the single room has them
       for (const [fx, fz, ry] of [[-0.55, 1.1004, 0], [0.55, -1.1004, Math.PI]] as const) {
         numerals.add(face.set(fx, TOP - 0.03 - 0.51 * tall, fz).applyAxisAngle(UPRIGHT, turn).add(at.set(p.x, 0, p.z)), ry + turn, 0.36, 0.45, u, 0, u + 1 / o.signs.length, 1);
-        labels.add(face.set(-fx * 0.92, TOP - 0.03 - 0.19, fz * 1.004).applyAxisAngle(UPRIGHT, turn).add(at.set(p.x, 0, p.z)), ry + turn, 0.94, 0.94 * (CH / CW), (i % COLS) / COLS, 1 - (Math.floor(i / COLS) + 1) / ROWS, ((i % COLS) + 1) / COLS, 1 - Math.floor(i / COLS) / ROWS);
+        labels.add(face.set(-fx * 0.92, TOP - 0.07 - PLATE / 2, fz * 1.004).applyAxisAngle(UPRIGHT, turn).add(at.set(p.x, 0, p.z)), ry + turn, 0.94, PLATE, (i % COLS) / COLS, 1 - (Math.floor(i / COLS) + 1) / ROWS, ((i % COLS) + 1) / COLS, 1 - Math.floor(i / COLS) / ROWS);
       }
-      this.label(lx, (i % COLS) * CW, Math.floor(i / COLS) * CH, CW, CH, o.names[p.id] ?? p.id, s);
+      this.label(lx, (i % COLS) * CW, Math.floor(i / COLS) * CH, CW, CH, o.names[p.id] ?? p.id, s, o.makers?.[p.id]);
     });
     const cutMesh = numerals.mesh(new THREE.MeshStandardMaterial({ map: cut, transparent: true, roughness: 0.9, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));
     cutMesh.receiveShadow = true;
@@ -274,8 +278,9 @@ export class Stands {
   }
 
   /** One name plate, drawn into its corner of the sheet of plates. */
-  private label(c: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, name: string, s: Sign): void {
-    const k = w / 512, text = name.toLocaleUpperCase();
+  private label(c: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, name: string, s: Sign, maker?: string): void {
+    // the name has the upper two thirds of the plate, and the maker's line the rest
+    const k = w / 512, text = name.toLocaleUpperCase(), mid = 112 * k / 2 + (maker ? -3 * k : (h - 112 * k) / 2);
     c.save(); c.translate(x, y);
     c.fillStyle = s.ground; c.beginPath(); c.roundRect(2 * k, 2 * k, w - 4 * k, h - 4 * k, 9 * k); c.fill();
     c.globalAlpha = 0.78; c.strokeStyle = s.ink; c.lineWidth = 2.5 * k; c.beginPath(); c.roundRect(9 * k, 9 * k, w - 18 * k, h - 18 * k, 5 * k); c.stroke(); c.globalAlpha = 1;
@@ -283,7 +288,7 @@ export class Stands {
     const fit = (line: string, size: number) => { c.font = `800 ${size * k}px ${this.o.display}`; return c.measureText(line).width <= w - 44 * k; };
     let size = 70;
     while (size > 46 && !fit(text, size)) size -= 2;
-    if (fit(text, size)) c.fillText(text, w / 2, h / 2 + 3 * k);
+    if (fit(text, size)) c.fillText(text, w / 2, mid + 3 * k);
     else {
       // too long for one line: break it at the space nearest the middle
       const words = text.split(' ');
@@ -293,7 +298,15 @@ export class Stands {
       size = 44;
       while (size > 26 && !lines.every((l) => fit(l, size))) size -= 2;
       c.font = `800 ${size * k}px ${this.o.display}`;
-      lines.forEach((l, i) => c.fillText(l, w / 2, h / 2 + 3 * k + (i - (lines.length - 1) / 2) * size * 0.95 * k));
+      lines.forEach((l, i) => c.fillText(l, w / 2, mid + 3 * k + (i - (lines.length - 1) / 2) * size * 0.95 * k));
+    }
+    if (maker) {
+      // a rule, then the line in the text face, shortened from the end if it will not fit
+      c.globalAlpha = 0.55; c.fillRect(34 * k, 103 * k, w - 68 * k, 1.5 * k); c.globalAlpha = 1;
+      c.font = `700 ${30 * k}px ${this.o.text ?? this.o.display}`;
+      let line = maker;
+      while (line.length > 8 && c.measureText(line).width > w - 52 * k) line = line.slice(0, line.lastIndexOf(' ', line.length - 3)).replace(/[,.]$/, '') + ' …';
+      c.fillText(line, w / 2, 126 * k);
     }
     c.restore();
   }

@@ -24,7 +24,11 @@ export interface GalleryOptions {
   fixed: boolean;
   signs: Sign[];
   names: Record<string, string>;
+  /** Who made each piece and when, for the second line of its plate. */
+  makers?: Record<string, string>;
   display: string;
+  /** The face for running text. */
+  text?: string;
   /** The visitor is somewhere new: another hall, or in front of another piece, or of none. */
   onWhere: (w: Where) => void;
   /** Enter was pressed in front of a piece. */
@@ -83,6 +87,8 @@ export class Gallery {
   private beat = 0;
   private free = false;
   private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean };
+  /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
+  private twin?: number;
   /** How much smaller than asked the picture is drawn, when the device cannot keep up. */
   private thrift = 1;
   private slow = 0;
@@ -117,7 +123,7 @@ export class Gallery {
     this.scene.add(this.rig);
     // a laptop with little memory runs fewer models than a desk machine
     const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 8;
-    this.stands = new Stands(this.renderer, this.scene, this.witness, { lite: o.lite, cap: o.lite ? 3 : memory <= 4 ? 6 : 8, names: o.names, signs: o.signs, display: o.display, sunward: this.hall.sunward });
+    this.stands = new Stands(this.renderer, this.scene, this.witness, { lite: o.lite, cap: o.lite ? 3 : memory <= 4 ? 6 : 8, names: o.names, makers: o.makers, signs: o.signs, display: o.display, text: o.text, sunward: this.hall.sunward });
     this.scene.add(this.stands.group, this.stands.models);
 
     const start = o.start ? plan.placeOf(o.start) : undefined;
@@ -243,7 +249,8 @@ export class Gallery {
   private onLost = (e: Event): void => { e.preventDefault(); this.stop(); };
 
   private onDown = (e: PointerEvent): void => {
-    if (this.drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (this.drag) { if (e.pointerType === 'touch' && this.twin === undefined) this.twin = e.pointerId; return; }
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
     this.drag = { id: e.pointerId, x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t0: performance.now(), moved: false };
     try { this.canvas.setPointerCapture(e.pointerId); } catch { /* the pointer has already gone */ }
   };
@@ -254,12 +261,18 @@ export class Gallery {
     if (!d.moved) { d.moved = true; this.glide = undefined; this.stir(); }
     // the hall is dragged like a picture: what was under the pointer stays under it
     const per = THREE.MathUtils.degToRad(this.camera.fov) / Math.max(1, this.canvas.clientHeight);
-    this.yaw = wrap(this.yaw + (e.clientX - d.x) * per);
+    if (this.twin !== undefined || e.shiftKey) this.yaw = wrap(this.yaw + (e.clientX - d.x) * per);
+    else {
+      // a sideways drag slides the visitor along the floor, by as much as moves the pieces across the aisle with the pointer
+      const reach = 3.4, by = -(e.clientX - d.x) * per * reach;
+      [this.x, this.z] = plan.step(this.x, this.z, Math.cos(this.yaw) * by, -Math.sin(this.yaw) * by);
+    }
     // inline, an up and down swipe belongs to the page
     if (this.free || e.pointerType === 'mouse') this.pitch = THREE.MathUtils.clamp(this.pitch + (e.clientY - d.y) * per, -0.9, 0.9);
     d.x = e.clientX; d.y = e.clientY; this.owed = 4;
   };
   private onUp = (e: PointerEvent): void => {
+    if (e.pointerId === this.twin) { this.twin = undefined; return; }
     const d = this.drag;
     if (!d || d.id !== e.pointerId) return;
     this.drag = undefined;
@@ -277,7 +290,7 @@ export class Gallery {
       this.goTo({ x, z, yaw: far > 1.5 ? Math.atan2(this.x - x, this.z - z) : this.yaw }, 0);
     }
   };
-  private onCancel = (e: PointerEvent): void => { if (this.drag?.id === e.pointerId) this.drag = undefined; };
+  private onCancel = (e: PointerEvent): void => { if (e.pointerId === this.twin) this.twin = undefined; if (this.drag?.id === e.pointerId) this.drag = undefined; };
   /** In full view the wheel walks: forward as it turns away. Inline, the wheel belongs to the page. */
   private onWheel = (e: WheelEvent): void => {
     if (!this.free || e.ctrlKey || this.vr?.active) return;

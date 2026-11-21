@@ -1,6 +1,7 @@
 import { halls } from './data/halls';
+import { people } from './data/people';
 import { pieceById, pieces } from './data/pieces';
-import { said, t, tx } from './i18n';
+import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
 
 /**
@@ -36,6 +37,11 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let lightsOn = o.lights, closed = false;
   const coarse = matchMedia('(pointer: coarse)').matches, calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const names = Object.fromEntries(pieces.map((p) => [p.id, said.piece(p).name]));
+  // the second line of each plate: the first people named for the piece, and its year
+  const makers = Object.fromEntries(pieces.map((p) => {
+    const who = people[p.id]?.people[0]?.who ?? [], year = said.piece(p).yearText ?? String(p.year);
+    return [p.id, [who.length > 3 ? `${who.slice(0, 2).join(comma())} +${who.length - 2}` : who.join(comma()), year].filter(Boolean).join(comma())];
+  }));
   const hallName = (n: number) => said.hall(halls[n - 1]).name;
 
   host.innerHTML = `
@@ -139,7 +145,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
         gallery = new Gallery(canvas, {
           lights: lightsOn, start: o.start, lite: coarse || innerWidth < 760, calm, fixed: false,
           signs: halls.map((h) => ({ no: h.id, name: hallName(h.id), ground: hallCss(h.id, 'h'), ink: INK[h.id] ?? '#ffffff' })),
-          names, display,
+          names, makers, display, text: getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || undefined,
           onWhere: tell,
           onOpen: (id) => { location.hash = `#piece-${id}`; },
           onRelease: () => { if (host.classList.contains('is-full')) setFull(false); else (where.querySelector('a') ?? btn('next')).focus(); },
