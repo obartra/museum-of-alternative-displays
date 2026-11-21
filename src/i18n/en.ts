@@ -141,7 +141,7 @@ export const en = {
   'about.sourced.3': '{n} pieces carry a note on dates and credit. It appears where sources disagree about who came first, or where the idea is older than the year shown. It stays until someone supplies better evidence.',
   'about.pictures': 'Models and archive pictures',
   'about.pictures.1': 'Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across {n} kinds of physics.',
-  'about.pictures.archive': 'Some pieces also have a strip called From the archive. It holds real photographs, drawings and short films of the technology, all from Wikimedia Commons. Each one is in the public domain or under a Creative Commons licence, and each one carries its credit and its licence. The models explain how a display works. The archive shows what it looked like.',
+  'about.pictures.archive': 'Some pieces also have a strip called From the archive. It holds real photographs, patent drawings and short films of the technology, from Wikimedia Commons and other open archives. Each one is free to reuse, and each one carries its credit and its licence. The models explain how a display works. The archive shows what it looked like.',
   'about.pictures.2': 'The models are simplified and not to scale. Where a model is enlarged or slowed down, the text says so.',
   'about.missing': 'Not yet in the collection',
   'about.missing.1': 'Falling-water curtains, aerial imaging plates, grating light valves, switchable privacy glass, ferrofluid, and light-activated paints and pigments. Each needs sources of the same standard before it joins the collection.',

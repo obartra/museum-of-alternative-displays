@@ -64,14 +64,16 @@ for (const [id, f] of Object.entries(facts)) {
 }
 
 // archive pictures: free to reuse, credited in full, and small enough to carry
-const LICENCE = /^(Public domain|CC0 1\.0|CC BY(-SA)? [1-4]\.[05]( [A-Za-z-]+)?)$/;
+const LICENCE = /^(Public domain|No known copyright restrictions|CC0 1\.0|CC BY(-SA)? [1-4]\.[05]( [A-Za-z-]+)?)$/;
+// the open archives a picture may come from, by the host of its page there
+const ARCHIVES = /(^|\.)(commons\.wikimedia\.org|archive\.org|nasa\.gov|patents\.google\.com|flickr\.com|rijksmuseum\.nl|wellcomecollection\.org|nypl\.org|loc\.gov|si\.edu|europeana\.eu)$/;
 const words = (t: string) => t.trim().split(/\s+/).length;
 const here = (path: string) => new URL(`../public/${path.replace(/^\.\//, '')}`, import.meta.url);
 const bytes = (path: string) => (existsSync(here(path)) ? statSync(here(path)).size : -1);
 let mediaBytes = 0;
 for (const [id, list] of Object.entries(media)) {
   if (!seen.has(id)) errors.push(`${id}: archive pictures for a piece that is not in the data`);
-  if (list.length > 3) fail(id, 'at most three archive pictures');
+  if (list.length > 6) fail(id, 'at most six archive pictures');
   const ids = new Set<string>();
   for (const m of list) {
     const at = `${id}/${m.id}`;
@@ -79,8 +81,11 @@ for (const [id, list] of Object.entries(media)) {
     ids.add(m.id);
     if (!/^[a-z0-9-]+$/.test(m.id)) fail(at, 'id must be lower case letters, digits and hyphens');
     if (!LICENCE.test(m.credit.licence)) fail(at, `licence "${m.credit.licence}" is not public domain, CC0, CC BY or CC BY-SA`);
-    if (m.credit.licence !== 'Public domain' && !/^https:\/\/creativecommons\.org\//.test(m.credit.licenceUrl ?? '')) fail(at, 'a Creative Commons picture needs the link to its licence');
-    if (!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(m.credit.source)) fail(at, 'the source must be the file page on Wikimedia Commons');
+    if (/^CC/.test(m.credit.licence) && !/^https:\/\/creativecommons\.org\//.test(m.credit.licenceUrl ?? '')) fail(at, 'a Creative Commons picture needs the link to its licence');
+    let from = '';
+    try { from = new URL(m.credit.source).hostname; } catch { /* reported below */ }
+    if (!/^https:\/\//.test(m.credit.source) || !ARCHIVES.test(from)) fail(at, `the source must be the item's page at one of the open archives, not ${m.credit.source}`);
+    if (!m.credit.archive && from !== 'commons.wikimedia.org') fail(at, 'name the archive when it is not Wikimedia Commons');
     if (!m.credit.author.trim() || !m.credit.title.trim() || !m.credit.changes.trim()) fail(at, 'the credit needs an author, a title and what was changed');
     if (words(m.caption) > 40) fail(at, `caption is ${words(m.caption)} words, at most 40`);
     if (words(m.alt) > 30 || m.alt.trim().length < 12) fail(at, 'the text alternative should be 12 characters to 30 words');

@@ -1,14 +1,16 @@
-/** Archive pictures and film for a piece: real objects, period drawings, the thing running. All from Wikimedia Commons. */
+/** Archive pictures and film for a piece: real objects, period drawings, patent figures, the thing running. Each from an open archive, free to reuse. */
 export interface MediaCredit {
   /** Who made it, as the source states it, in plain text. "Unknown" only when the source says so. */
   author: string;
-  /** Short licence name: "Public domain", "CC0 1.0", "CC BY 4.0", "CC BY-SA 3.0" ... */
+  /** Short licence name: "Public domain", "CC0 1.0", "CC BY 4.0", "CC BY-SA 3.0", or "No known copyright restrictions" from an institution that says so. */
   licence: string;
   /** Link to the licence deed. Left out only for the public domain. */
   licenceUrl?: string;
-  /** The Commons file page. */
+  /** The page of this item at the archive that holds it. */
   source: string;
-  /** The file's title on Commons, without the "File:" prefix. */
+  /** The archive: "Wikimedia Commons" when left out, otherwise "Internet Archive", "NASA", "Google Patents" and so on. */
+  archive?: string;
+  /** The item's title there. For a Commons file, its name without the "File:" prefix. */
   title: string;
   /** What was done to it: "Resized", "Cropped and resized", "Cut to 12 seconds, sound removed, re-encoded". */
   changes: string;

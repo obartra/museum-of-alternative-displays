@@ -61,7 +61,7 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
   <dl class="card">
     ${row(tx('archive.madeBy'), esc(m.credit.author))}
     ${row(tx('archive.licence'), licence(m))}
-    ${row(tx('archive.source'), `<a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>, ${tx('archive.commons')}`)}
+    ${row(tx('archive.source'), `<a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>, ${esc(m.credit.archive ?? t('archive.commons'))}`)}
     ${row(tx('archive.changes'), esc(m.credit.changes))}
   </dl>
   ${list.length > 1 ? `<div class="viewer__nav"><button type="button" class="btn" data-v="prev">${tx('archive.previous')}</button><span aria-live="polite">${tx('archive.of', { n: at + 1, total: list.length })}</span><button type="button" class="btn" data-v="next">${tx('archive.next')}</button></div>` : ''}
@@ -129,7 +129,7 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
 export function creditsList(): string {
   const rows: string[] = [];
   for (const p of pieces) for (const m of archiveOf(p.id)) {
-    rows.push(`<li><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a>: <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>, ${tx('archive.by', { author: m.credit.author })}. ${licence(m)}. ${esc(m.credit.changes)}.</li>`);
+    rows.push(`<li><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a>: <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>, ${tx('archive.by', { author: m.credit.author })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. ${esc(m.credit.changes)}.</li>`);
   }
   return rows.length ? `<ul class="credits">${rows.join('')}</ul>` : '';
 }
