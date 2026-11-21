@@ -49,7 +49,7 @@ export const h3: Piece[] = [
   },
   {
     id: 'thin-film-el', hall: 3, name: 'Thin-film electroluminescent panel', aka: 'TFEL, EL display',
-    year: 1974, origin: 'Commercialised in the 1980s by Sharp (Japan), Finlux (Finland) and Planar (USA)',
+    year: 1974, yearText: '1974, as an encyclopedia timeline lists it', origin: 'Commercialised in the 1980s by Sharp (Japan), Finlux (Finland) and Planar (USA)',
     status: 'niche', statusNote: 'One manufacturer remains. Used where a screen must survive cold, vibration and decades of service.',
     principle: 'emits', needs: [],
     lead: 'Thin layers on glass glow yellow at every point where two crossed conducting strips put a voltage across them.',
@@ -60,7 +60,6 @@ export const h3: Piece[] = [
     good: ['Works from deep cold to the heat of an engine compartment', 'Is sharp, fast and readable at any angle', 'Lasts for decades', 'Can be made transparent'],
     bad: ['Shows one colour only, in practice', 'Needs a high voltage to drive it', 'Is dimmer and costlier than the liquid crystal panels that took over its markets'],
     look: 'The model is an instrument panel, complete with its frame. Look at the colour of the display. No filter makes that colour: it is the light that manganese in zinc sulphide gives off.',
-    dispute: 'The article used here gives no first date. 1974 is the year that an encyclopedia timeline lists.',
     sources: [wiki('Electroluminescent_display', 'Electroluminescent display'), wiki('Electroluminescence'), wiki('History_of_display_technology', 'History of display technology')],
   },
   {

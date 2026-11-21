@@ -21,7 +21,7 @@ export const h4: Piece[] = [
   },
   {
     id: 'micromirror', hall: 4, name: 'Digital micromirror device', aka: 'DMD, DLP',
-    year: 1987, origin: 'Larry Hornbeck, Texas Instruments, USA',
+    year: 1987, origin: 'Larry Hornbeck, Texas Instruments, USA. The first projectors built around the chip followed in 1996 or 1997',
     status: 'production', statusNote: 'In many cinema projectors and in many other projectors.',
     principle: 'gates', needs: ['dark'],
     lead: 'Microscopic mirrors cover a chip, one for each pixel, and each mirror tips toward the projection lens or away from it.',
@@ -32,7 +32,6 @@ export const h4: Piece[] = [
     good: ['Reflects light, so it wastes little of it and withstands a powerful lamp', 'Switches in microseconds', 'Is a sealed chip with nothing in it that fades'],
     bad: ['Is a projector part, not a screen: it needs a lamp, a lens and a dark room', 'Can break colour into rainbow fringes in the single-chip kind', 'Comes from a single maker'],
     look: 'The chip sits on the stand. Above it, the model shows a patch of its mirrors greatly enlarged, counting seconds. Turn the model: the mirrors that tip toward you look bright. Then switch the daylight off. The chip makes no light, so at night it disappears.',
-    dispute: 'Sources give both 1996 and 1997 for the first projector built around the chip.',
     sources: [wiki('Digital_Light_Processing', 'Digital Light Processing'), wiki('Digital_micromirror_device', 'Digital micromirror device')],
   },
   {

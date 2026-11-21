@@ -20,7 +20,7 @@ export const LANGS: LangInfo[] = [
 ];
 
 export type PieceText = Pick<Piece, 'name' | 'aka' | 'yearText' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look' | 'dispute'>;
-export type HallText = Pick<Hall, 'name' | 'was' | 'intro'>;
+export type HallText = Pick<Hall, 'name' | 'intro'>;
 export type ViewText = Pick<ViewInfo, 'label' | 'hint'>;
 export type MediaText = Pick<Media, 'caption' | 'alt' | 'year'> & { changes: string };
 

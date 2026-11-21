@@ -46,7 +46,6 @@ export const h1: Piece[] = [
     good: ['Needs only a motor, a lamp and a punched disc', 'Worked, and so proved that pictures could be sent at all'],
     bad: ['Gives a small, dim, orange picture', 'Has only as many lines as holes will fit on a disc', 'Needs the transmitter disc and the receiver disc to turn exactly together'],
     look: 'The picture window is at the edge of the disc, where the holes move vertically. The picture has only 30 lines, so the model shows the hours above the minutes. Press the Look in button to put your eye to the magnifier. That is how viewers watched it.',
-    dispute: 'Sources disagree on two dates. They give 26 January and 27 January 1926 for the demonstration by Baird, and 1884 and 1885 for the patent by Nipkow.',
     sources: [src('press', 'In 1926, TV Was Mechanical, IEEE Spectrum', 'https://spectrum.ieee.org/first-tv'), src('press', 'Baird demonstrates TV, History.com', 'https://www.history.com/this-day-in-history/January-26/baird-demonstrates-tv')],
   },
   {
@@ -92,7 +91,6 @@ export const h1: Piece[] = [
     good: ['Works in complete darkness and in full sun', 'Is silent, private and precise', 'Rewrites its one line again and again, so that line can carry a whole book'],
     bad: ['Costs a lot for every cell', 'Usually shows one line at a time, so it has no page layout and no graphics', 'Is mechanical, and the fingers that read it wear it out'],
     look: 'The model spells the time as braille writes it: first the sign that announces numbers, then the digits, with that sign repeated after each colon. Watch the cells on the right, which change every second.',
-    dispute: 'The sources used here say little about who built the first one. The year comes from a timeline that gives no further detail.',
     sources: [wiki('Refreshable_Braille_display', 'Refreshable braille display'), wiki('History_of_display_technology', 'History of display technology')],
   },
   {

@@ -21,7 +21,6 @@ export interface Source {
 export interface Hall {
   id: HallId;
   name: string;
-  was: string;
   intro: string;
 }
 

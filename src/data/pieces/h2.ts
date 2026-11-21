@@ -35,7 +35,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'storage-tube', hall: 2, name: 'Storage tube terminal', aka: 'DVST, direct-view bistable storage tube',
-    year: 1968, origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff',
+    year: 1968, yearText: '1968, as an encyclopedia timeline lists it', origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s',
     status: 'extinct', statusNote: 'Replaced during the 1980s, when memory became cheap enough for raster graphics, in which the screen sweeps every line as a television does.',
     principle: 'emits', needs: [],
     lead: 'This tube stores its own picture: a line, once drawn, stays lit on the glass with no computer memory behind it.',
@@ -46,7 +46,6 @@ export const h2: Piece[] = [
     good: ['Shows dense, steady line drawings with no flicker', 'Needed no memory for the picture at a time when memory was the expensive part'],
     bad: ['Cannot erase one part: to change one thing, it must redraw everything', 'Shows no animation and no colour', 'Gives a dim picture on a glowing green background'],
     look: 'Watch one full cycle. The graph is drawn once and then stays. Next the screen flashes, which erases it, and the drawing starts again. The two wheels beside the keys move a crosshair, two crossed lines that mark a point.',
-    dispute: 'The tube was refined at Tektronix in the late 1950s. The year shown for this piece is the one that an encyclopedia timeline gives for the tube as a display.',
     sources: [wiki('Direct-View_Bistable_Storage_Tube', 'Direct-view bistable storage tube'), wiki('Tektronix_4014', 'Tektronix 4010 series')],
   },
   {
@@ -82,7 +81,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'numitron', hall: 2, name: 'Numitron', aka: 'Incandescent filament display',
-    year: 1970, origin: 'RCA, USA',
+    year: 1970, origin: 'RCA, USA. The source names no inventor',
     status: 'extinct', statusNote: 'Replaced by LED and liquid crystal digits within a few years.',
     principle: 'emits', needs: [],
     lead: 'One glass bulb holds seven tiny lamp filaments, arranged as the seven bars that form a digit.',
@@ -92,7 +91,6 @@ export const h2: Piece[] = [
     good: ['Contains nothing more unusual than a lamp filament', 'Gives a warm white light that filters can turn into any colour'],
     bad: ['Shows numerals only', 'Has filaments that burn out', 'Arrived just as LEDs made it unnecessary'],
     look: 'Compare it with the Nixie tube in this hall. Both are glass bulbs that show numerals. Here, however, each numeral consists of seven bars, and the light comes from a hot wire.',
-    dispute: 'The sources say little. The one article used here gives the maker and the year but names no inventor.',
     sources: [wiki('Numitron')],
   },
   {
@@ -138,7 +136,6 @@ export const h2: Piece[] = [
     good: ['Is very bright, and big enough for a stadium', 'Uses parts that any electrician stocks'],
     bad: ['Bulbs fail one at a time, and each failed bulb is a missing dot', 'Runs hot and uses a lot of power', 'Is coarse: it shows a few characters and no pictures'],
     look: 'Watch the minute change, or watch the colon blink. The lamps do not switch on and off sharply. They brighten and fade.',
-    dispute: 'The sources say little. The year comes from a timeline, and the description comes from a general article on text displays.',
     sources: [wiki('Text_display', 'Text display'), wiki('History_of_display_technology', 'History of display technology')],
   },
 ];

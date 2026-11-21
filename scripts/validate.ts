@@ -139,8 +139,8 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
   for (const [name, source] of sets) for (const k of Object.keys(source)) if (!(loc[name] as Record<string, string> | undefined)?.[k]?.trim()) say(`${name} "${k}" is missing`);
   for (const h of halls) {
     const x = loc.halls?.[h.id];
-    if (!x?.name?.trim() || !x.was?.trim() || !x.intro?.trim()) say(`hall ${h.id} is missing or incomplete`);
-    else { clean(`hall ${h.id}`, x.name + x.was + x.intro); if ([...x.name].length > 18) say(`hall ${h.id}: the name must fit the board, at most 18 characters`); }
+    if (!x?.name?.trim() || !x.intro?.trim()) say(`hall ${h.id} is missing or incomplete`);
+    else { clean(`hall ${h.id}`, x.name + x.intro); if ([...x.name].length > 18) say(`hall ${h.id}: the name must fit the board, at most 18 characters`); }
   }
   for (const p of pieces) {
     const x = loc.pieces?.[p.id];

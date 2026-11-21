@@ -4,7 +4,7 @@ import { src, wiki } from './src';
 export const h5: Piece[] = [
   {
     id: 'gyricon', hall: 5, name: 'Gyricon', aka: 'Rotating ball display',
-    year: 1974, origin: 'Nicholas Sheridon, Xerox Palo Alto Research Center, USA',
+    year: 1974, yearText: 'the 1970s', origin: 'Nicholas Sheridon, Xerox Palo Alto Research Center, USA',
     status: 'extinct', statusNote: 'Gyricon, a subsidiary of Xerox, sold signs for a few years and closed in December 2005.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'The first electronic paper was a sheet full of tiny beads, each black on one half and white on the other.',
@@ -15,7 +15,6 @@ export const h5: Piece[] = [
     good: ['Looks like print and is readable in sunlight', 'Keeps its picture with no power', 'Was flexible from the start'],
     bad: ['Shows two colours only', 'Needed a cheap grid of electronics behind it, which did not yet exist'],
     look: 'The model shows the sheet greatly enlarged. Watch the beads turn over as the seconds change. Then look from the side to see that they are spheres.',
-    dispute: 'The article on Gyricon itself gives no date. The 1970s date and the name of the inventor come from other writing on electronic paper.',
     sources: [wiki('Gyricon'), wiki('Electronic_paper', 'Electronic paper')],
   },
   {
@@ -35,7 +34,7 @@ export const h5: Piece[] = [
   },
   {
     id: 'cholesteric-lcd', hall: 5, name: 'Cholesteric display', aka: 'Bistable reflective LCD, writing tablet',
-    year: 1994, origin: 'Deng-Ke Yang, J. William Doane and colleagues, Liquid Crystal Institute, Kent State University, USA',
+    year: 1994, yearText: 'about 1994', origin: 'Deng-Ke Yang, J. William Doane and colleagues, Liquid Crystal Institute, Kent State University, USA',
     status: 'niche', statusNote: 'Made as a continuous roll of film since 2009, mostly for pressure-sensitive writing tablets.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'This liquid crystal reflects one colour in one state and lets light through in the other, and it keeps either state without power.',
@@ -46,7 +45,6 @@ export const h5: Piece[] = [
     good: ['Keeps its picture without power, indefinitely', 'Reflects brightly for a liquid crystal, because it has no polarising filters', 'Is simple enough to coat onto plastic film'],
     bad: ['Shows one colour for each layer', 'Erases the whole tablet at once, not line by line'],
     look: 'Watch the stylus write the time. The strokes stay. After a pause, the whole sheet clears at once.',
-    dispute: 'The work dates from the early 1990s at Kent State. The year shown for this piece is approximate.',
     sources: [src('patent', 'Yang, Lu and Doane, US patent 6,061,107', 'https://patents.google.com/patent/US6061107'), src('press', 'Cholesteric LCDs show images after power is turned off, Laser Focus World (1998)', 'https://laserfocusworld.com/test-measurement/research/article/16547241/cholesteric-lcds-show-images-after-power-is-turned-off'), src('archive', 'Reflective Cholesteric Liquid Crystals, American Physical Society prize talk (2017)', 'https://archive.aps.org/mar/2017/v29/4')],
   },
   {
