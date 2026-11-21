@@ -29,6 +29,17 @@ export interface Eye {
   play?: number;
 }
 
+/**
+ * A place to look from, offered as a button beside the stand.
+ * A person view puts the visitor where the piece is meant to be met: in the seat, at the eyepiece, across the hall.
+ * A detail view goes close to the part that does the work.
+ */
+export interface View extends Eye {
+  kind: 'person' | 'detail';
+  /** One line under the picture while the view is on, in place of the usual one. */
+  hint?: string;
+}
+
 export interface Built {
   root: THREE.Group;
   update?: (env: Env) => void;
@@ -41,7 +52,10 @@ export interface Built {
   zoom?: number;
   /** A live canvas worth showing flat as a close-up of the lit surface. */
   surface?: HTMLCanvasElement;
+  /** The first person view, where there is one obvious place for the eye. */
   eye?: Eye;
+  /** More places to look from. They follow the eye view in the row of buttons. */
+  views?: View[];
 }
 
 export interface Screen {

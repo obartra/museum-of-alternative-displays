@@ -62,18 +62,18 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
 
   // chimney
   out.push(`<circle cx="296" cy="306" r="13" fill="var(--plate)" stroke="var(--ink)" stroke-width="3"/><circle cx="296" cy="306" r="5" fill="var(--ink)"/>`);
-  out.push(`<text x="316" y="310" class="plan__en" fill="var(--ink-2)">Komín</text>`);
+  out.push(`<text x="316" y="310" class="plan__en" fill="var(--ink-2)">Chimney</text>`);
 
   // depot
   out.push(a('depot', 'The depot, an index of every piece',
     `<rect class="hit" x="252" y="344" width="88" height="88" fill="var(--wash-2)" stroke="var(--ink)" stroke-width="2" stroke-dasharray="7 4"/>` +
-    `<text x="260" y="366" class="plan__name" fill="var(--ink)">Depozitář</text><text x="260" y="381" class="plan__en" fill="var(--ink-2)">Depot</text>` +
+    `<text x="260" y="372" class="plan__name" fill="var(--ink)">Depot</text>` +
     `<text x="260" y="396" class="plan__en" fill="var(--ink-2)">Every piece,</text><text x="260" y="409" class="plan__en" fill="var(--ink-2)">sortable</text>`));
 
   // gatehouse
   out.push(a('about', 'The gatehouse, about the museum',
     `<rect class="hit" x="164" y="462" width="64" height="40" fill="var(--plate)" stroke="var(--ink)" stroke-width="3"/>` +
-    `<text x="196" y="479" text-anchor="middle" class="plan__name" fill="var(--ink)">Vrátnice</text><text x="196" y="493" text-anchor="middle" class="plan__en" fill="var(--ink-2)">About</text>`));
+    `<text x="196" y="479" text-anchor="middle" class="plan__name" fill="var(--ink)">Gatehouse</text><text x="196" y="493" text-anchor="middle" class="plan__en" fill="var(--ink-2)">About</text>`));
 
   // visitor route
   out.push(`<path d="M196 462 V72 H296 V222 M296 256 V293 M296 319 V344 M296 432 V448 H236" fill="none" stroke="var(--signal)" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round"/>`);

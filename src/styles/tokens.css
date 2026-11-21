@@ -9,13 +9,13 @@
   --plate: #f7f6f0;     /* white enamel */
   --signal: #d1481f;    /* red lead primer, used for the visitor route and alerts */
 
-  --h1: #586067;        /* Strojovna: machine grey */
-  --h2: #d1481f;        /* Sklárna: red lead */
-  --h3: #1f3fa6;        /* Polovodiče: cobalt */
-  --h4: #dba51a;        /* Optika: chrome yellow */
-  --h5: #efe8d2;        /* Tiskárna: ivory */
-  --h6: #14857c;        /* Temná komora: turquoise */
-  --h7: #57409a;        /* Věž: violet */
+  --h1: #586067;        /* Mechanics: machine grey */
+  --h2: #d1481f;        /* Glass: red lead */
+  --h3: #1f3fa6;        /* Semiconductors: cobalt */
+  --h4: #dba51a;        /* Optics: chrome yellow */
+  --h5: #efe8d2;        /* Print: ivory */
+  --h6: #14857c;        /* Darkroom: turquoise */
+  --h7: #57409a;        /* Tower: violet */
   --hall: var(--ink);
   --hall-ink: #ffffff;
 

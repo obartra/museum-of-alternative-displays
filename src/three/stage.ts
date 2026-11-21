@@ -1,6 +1,6 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { THREE, type Built, type Eye } from './kit';
+import { THREE, type Built, type Eye, type View } from './kit';
 import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Room } from './room';
 
 const FOV = 30;
@@ -23,17 +23,26 @@ export class Stage {
   private piece?: Built;
   private lights = 1;
   private lightsTarget = 1;
-  private t0 = performance.now();
+  /** The piece's own time in seconds. It stands still while the stage is paused. */
+  private clock = 0;
+  private last = performance.now();
   private raf = 0;
   private running = false;
+  /** Frames still owed while paused: nothing is drawn once the picture has stopped changing. */
+  private owed = 3;
+  private beat = 0;
   private home = { az: 28, el: 13, dist: 5.1 };
   private ro?: ResizeObserver;
   private dragged = false;
   private still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /** Motion that starts by itself can be stopped. A visitor who asked for less motion starts with it stopped. */
+  private paused = this.still;
   private eyeAt?: THREE.Vector3;
   private eyeTo?: THREE.Vector3;
   private eyePlay = 0.1;
   private eyeT0 = 0;
+  private viewNo = -1;
+  private drift = false;
   /** Where the visitor has put the camera, when the room has had to pull it in from there. */
   private free?: THREE.Vector3;
   /** Called the first time the visitor turns the piece. */
@@ -70,6 +79,8 @@ export class Stage {
       canvas.style.touchAction = 'pan-y';
       this.ro = new ResizeObserver(() => this.resize());
     }
+    // the landscape arrives a moment after the room: a paused stage still has to draw it coming in
+    void this.room.ready?.then(() => { this.owed = 70; });
     this.attach();
   }
 
@@ -84,6 +95,19 @@ export class Stage {
   get surface(): HTMLCanvasElement | undefined { return this.piece?.surface; }
   get eye(): Eye | undefined { return this.piece?.eye; }
   get inEye(): boolean { return !!this.eyeAt; }
+  /** Every place to look from that the piece offers, the eye view first. */
+  get views(): View[] {
+    const p = this.piece;
+    return p ? [...(p.eye ? [{ kind: 'person' as const, ...p.eye }] : []), ...(p.views ?? [])] : [];
+  }
+  /** Which of them is on, or -1. */
+  get inView(): number { return this.viewNo; }
+  get isPaused(): boolean { return this.paused; }
+  setPaused(paused: boolean): void { this.paused = paused; this.owed = 3; }
+  /** Have the shaders built off the main thread where the browser can, so the first frame does not stall the page. */
+  async warm(): Promise<void> {
+    try { await this.renderer.compileAsync(this.scene, this.camera); } catch { /* the first frame builds them instead */ }
+  }
   /** Kept when the room has everything it shows. Still pictures wait for it. */
   get ready(): Promise<void> { return this.room.ready ?? Promise.resolve(); }
   settle(): void { this.room.settle?.(); }
@@ -115,6 +139,7 @@ export class Stage {
     const back = (aspect: number) => Math.max(1, 1.02 / aspect), k = back(W / H) / back(this.camera.aspect);
     this.release();
     this.renderer.setSize(W, H, false);
+    this.owed = 3;
     this.camera.aspect = W / H;
     this.camera.updateProjectionMatrix();
     // a taller frame is a narrower view: step back far enough to keep the whole piece in it
@@ -155,7 +180,8 @@ export class Stage {
     this.room.hall(hallColour, hallNo);
     this.glow.color.set(b.glow ?? 0x000000);
     this.home = { az: b.view?.[0] ?? 28, el: b.view?.[1] ?? 13, dist: 5.1 / (b.zoom ?? 1) };
-    this.t0 = performance.now();
+    // paused from the start, a piece is shown a few seconds into its cycle: at zero many have nothing lit yet
+    this.clock = this.paused ? 2.6 : 0;
     this.dragged = false;
     if (this.controls) this.controls.autoRotate = !this.still && !this.room.walled;
     this.goHome();
@@ -178,7 +204,7 @@ export class Stage {
   }
 
   private place(az: number, el: number, dist: number): void {
-    this.eyeAt = this.eyeTo = undefined; this.free = undefined;
+    this.eyeAt = this.eyeTo = undefined; this.free = undefined; this.viewNo = -1; this.owed = 3;
     this.camera.fov = FOV; this.camera.near = 0.05;
     this.camera.updateProjectionMatrix();
     const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
@@ -202,16 +228,20 @@ export class Stage {
   goTo(az: number, el: number, zoom = 1): void { if (this.controls) this.controls.autoRotate = false; this.place(az, el, this.home.dist / zoom); }
 
   /** Put the visitor's eye where the piece expects one. Dragging then moves the head a little, which is how depth shows on a flat screen. */
-  goEye(): void {
-    const eye = this.piece?.eye;
-    if (!eye) return;
+  goEye(): void { if (this.piece?.eye) this.goView(0); }
+
+  /** Look from one of the piece's own places. A person view holds the head nearly still, a detail view lets it wander round the part. */
+  goView(n: number): void {
+    const view = this.views[n];
+    if (!view) return;
     this.free = undefined;
-    const root = this.piece!.root;
+    const root = this.piece!.root, detail = view.kind === 'detail';
     root.updateMatrixWorld(true);
-    const at = root.localToWorld(new THREE.Vector3(...eye.at)), to = root.localToWorld(new THREE.Vector3(...eye.to));
-    this.eyeAt = at; this.eyeTo = to; this.eyePlay = eye.play ?? 0.1; this.eyeT0 = performance.now();
+    const at = root.localToWorld(new THREE.Vector3(...view.at)), to = root.localToWorld(new THREE.Vector3(...view.to));
+    this.eyeAt = at; this.eyeTo = to; this.eyePlay = view.play ?? (detail ? 0.5 : 0.1); this.eyeT0 = this.clock;
+    this.viewNo = n; this.drift = !detail; this.owed = 3;
     this.dragged = false;
-    this.camera.fov = eye.fov ?? 38; this.camera.near = 0.004;
+    this.camera.fov = view.fov ?? (detail ? 32 : 38); this.camera.near = 0.004;
     this.camera.updateProjectionMatrix();
     this.camera.position.copy(at); this.camera.lookAt(to);
     const c = this.controls;
@@ -219,7 +249,7 @@ export class Stage {
       c.autoRotate = false;
       c.target.copy(to);
       const sph = new THREE.Spherical().setFromVector3(at.clone().sub(to));
-      c.minDistance = sph.radius * 0.94; c.maxDistance = sph.radius * 1.04;
+      c.minDistance = sph.radius * (detail ? 0.6 : 0.94); c.maxDistance = sph.radius * (detail ? 1.5 : 1.04);
       c.minAzimuthAngle = sph.theta - this.eyePlay; c.maxAzimuthAngle = sph.theta + this.eyePlay;
       c.minPolarAngle = Math.max(0.02, sph.phi - this.eyePlay * 0.7); c.maxPolarAngle = Math.min(Math.PI - 0.02, sph.phi + this.eyePlay * 0.7);
       c.update();
@@ -232,8 +262,9 @@ export class Stage {
     if (!c) return;
     c.autoRotate = false;
     this.dragged = true;
+    this.owed = 3;
     this.release();
-    const k = this.eyeAt ? 0.12 : 1;
+    const k = this.eyeAt ? (this.drift ? 0.12 : 0.4) : 1;
     const off = this.camera.position.clone().sub(c.target);
     const sph = new THREE.Spherical().setFromVector3(off);
     sph.theta = THREE.MathUtils.clamp(sph.theta + THREE.MathUtils.degToRad(dAz * k), c.minAzimuthAngle, c.maxAzimuthAngle);
@@ -249,28 +280,36 @@ export class Stage {
   setLights(on: boolean, instant = false): void {
     this.lightsTarget = on ? 1 : 0;
     if (instant) this.lights = this.lightsTarget;
+    this.owed = 3;
   }
 
   /** Advance and draw one frame. `at` pins the piece's clock, for still pictures. */
   step(at?: number): void {
+    const now = performance.now(), live = at === undefined;
+    if (live && !this.paused) this.clock += Math.min(0.1, (now - this.last) / 1000);
+    this.last = now;
     const d = this.lightsTarget - this.lights;
     this.lights = Math.abs(d) < 0.004 ? this.lightsTarget : this.lights + d * 0.1;
     const L = this.lights;
+    const drifting = !!this.eyeAt && !!this.eyeTo && this.drift && !this.dragged && !this.paused && live;
+    if (drifting) {
+      // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
+      const dir = this.eyeTo!.clone().sub(this.eyeAt!), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;
+      const side = dir.cross(UP).normalize();
+      this.camera.position.copy(this.eyeAt!).addScaledVector(side, Math.sin((this.clock - this.eyeT0) * 1.2) * reach);
+      this.camera.lookAt(this.eyeTo!);
+    }
+    this.release();
+    const moved = this.controls?.update() ?? false;
+    this.restrain();
+    // paused, with the camera at rest and the light settled, there is nothing new to draw: spare the battery,
+    // and look again a few times a second in case a texture has arrived since
+    if (live && this.paused && !moved && d === 0 && --this.owed < 0 && ++this.beat % 20) return;
     this.room.light(L, this.scene);
     this.room.seenFrom?.(this.camera);
     this.glow.intensity = this.piece?.glow ? (1 - L) * 9 * (this.room.glow?.gain ?? 1) : 0;
     (this.scene.background as THREE.Color).set(OUTSIDE).multiplyScalar(0.02 + 0.98 * L);
-    if (this.eyeAt && this.eyeTo && !this.dragged && !this.still && at === undefined) {
-      // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
-      const dir = this.eyeTo.clone().sub(this.eyeAt), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;
-      const side = dir.cross(UP).normalize();
-      this.camera.position.copy(this.eyeAt).addScaledVector(side, Math.sin((performance.now() - this.eyeT0) / 1000 * 1.2) * reach);
-      this.camera.lookAt(this.eyeTo);
-    }
-    this.piece?.update?.({ t: at ?? (performance.now() - this.t0) / 1000, lights: L, camera: this.camera });
-    this.release();
-    this.controls?.update();
-    this.restrain();
+    this.piece?.update?.({ t: at ?? this.clock, lights: L, camera: this.camera });
     this.room.prepare?.(this.renderer, this.scene, this.camera);
     this.renderer.render(this.scene, this.camera);
   }
@@ -278,6 +317,7 @@ export class Stage {
   start(): void {
     if (this.running) return;
     this.running = true;
+    this.last = performance.now(); this.owed = 3;
     const loop = () => { if (!this.running) return; this.raf = requestAnimationFrame(loop); this.step(); };
     loop();
   }

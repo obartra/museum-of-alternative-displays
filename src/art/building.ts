@@ -28,12 +28,12 @@ export function elevationSvg(): string {
   // gatehouse with its flap board
   o.push(`<rect x="584" y="206" width="78" height="44" fill="var(--plate)" stroke="var(--ink)" stroke-width="2"/><path d="M574 206 H672" stroke="var(--ink)" stroke-width="4"/>`);
   o.push(`<rect x="592" y="214" width="40" height="13" fill="var(--ink)"/><rect x="640" y="216" width="14" height="34" fill="var(--wash-2)" stroke="var(--ink)" stroke-width="1.2"/>`);
-  o.push(`<text x="623" y="200" text-anchor="middle" style="font:700 10px/1 var(--text)" fill="var(--ink-2)">Vrátnice</text>`);
+  o.push(`<text x="623" y="200" text-anchor="middle" style="font:700 10px/1 var(--text)" fill="var(--ink-2)">Gatehouse</text>`);
   // ground
   o.push(`<path d="M20 ${g} H700" stroke="var(--ink)" stroke-width="3"/>`);
   for (let x = 24; x < 700; x += 14) o.push(`<path d="M${x} ${g + 2} l-7 9" stroke="var(--ink-2)" stroke-width=".8"/>`);
   // sign
-  o.push(`<text x="60" y="${g + 34}" style="font:800 22px/1 var(--display);letter-spacing:.04em" fill="var(--ink)">MUZEUM ALTERNATIVNÍCH DISPLEJŮ</text>`);
+  o.push(`<text x="60" y="${g + 34}" style="font:800 22px/1 var(--display);letter-spacing:.04em" fill="var(--ink)">MUSEUM OF ALTERNATIVE DISPLAYS</text>`);
   o.push(`<text x="60" y="${g + 50}" style="font:500 11px/1 var(--text)" fill="var(--ink-2)">West elevation. Former picture-tube works, five north-light bays, darkroom block, water tower and stack.</text>`);
   return `<svg viewBox="0 0 720 310" role="img" aria-label="Elevation drawing of the imagined museum building: a sawtooth-roofed factory shed with a tower and a chimney." xmlns="http://www.w3.org/2000/svg">${o.join('')}</svg>`;
 }
@@ -84,7 +84,7 @@ export function axoSvg(): string {
     labels += `<text x="${(ox + x * s).toFixed(1)}" y="${(oy + y * s + 9).toFixed(1)}" text-anchor="middle" style="font:900 26px/1 var(--display)" fill="${HALL_INK[i + 1]}">${i + 1}</text>`;
   }
   const lab = (p: P3, t: string, dx = 0, dy = 0) => { const [x, y] = iso(p); return `<text x="${(ox + x * s + dx).toFixed(1)}" y="${(oy + y * s + dy).toFixed(1)}" style="font:700 12px/1 var(--text)" fill="var(--ink)">${t}</text>`; };
-  labels += lab([84, 82, 18], '6 Temná komora', 8, 4) + lab([77, 48, 38], '7 Věž', 10, 0) + lab([84, 13, 5], 'Depozitář', 8, 6) + lab([34, -22, 0], 'Vrátnice', 14, 16);
+  labels += lab([84, 82, 18], '6 Darkroom', 8, 4) + lab([77, 48, 38], '7 Tower', 10, 0) + lab([84, 13, 5], 'Depot', 8, 6) + lab([34, -22, 0], 'Gatehouse', 14, 16);
   const ground = `<polygon points="${d([[-14, -34, 0], [100, -34, 0], [100, 112, 0], [-14, 112, 0]])}" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 5"/>`;
   return `<svg viewBox="0 0 640 480" role="img" aria-label="Axonometric drawing of the imagined museum: five sawtooth-roofed halls in a row, a dark block, a tower and a chimney." xmlns="http://www.w3.org/2000/svg">${ground}${body}${labels}</svg>`;
 }

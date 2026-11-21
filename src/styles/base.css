@@ -83,16 +83,25 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* ---------- stage ---------- */
 .stage { position: relative; background: var(--wash-2); border-radius: 4px; overflow: hidden; isolation: isolate; }
-.stage canvas.gl { display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; outline-offset: -3px; }
+/* the still picture is there from the first paint. The model comes up over it once its first frame is drawn */
+.stage canvas.gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .35s ease; }
+.stage canvas.gl.is-live { opacity: 1; }
 .stage canvas.gl:active { cursor: grabbing; }
-.stage__box { aspect-ratio: 1 / 1; max-height: 74vh; width: 100%; }
+.stage__box { position: relative; aspect-ratio: 1 / 1; max-height: 74vh; width: 100%; }
+.stage__poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.stage__poster[hidden] { display: none; }
+.stage__start { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 10px 18px; font-size: .92rem; background: var(--wash); }
 @media (min-width: 900px) { .stage__box { aspect-ratio: 5 / 4; } }
 .stage__hint { position: absolute; left: 12px; top: 10px; font-size: .78rem; font-weight: 600; color: var(--ink-2); pointer-events: none; transition: opacity .6s; }
 .stage__note { position: absolute; left: 50%; top: 38px; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); font-size: .86rem; font-weight: 600; text-align: center; color: var(--ink); pointer-events: none; }
 /* both sit on the picture, which may be bright or dark, so each brings its own ground */
 .stage__hint, .stage__note { padding: 2px 7px; border-radius: 3px; background: color-mix(in srgb, var(--wash) 80%, transparent); }
-.stage__note:empty { display: none; }
-.stage__bar { display: flex; gap: 8px; padding: 9px 10px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--line); }
+.stage__hint:empty, .stage__note:empty { display: none; }
+/* places to look from: one row that never changes height, and scrolls sideways when a piece offers many */
+.stage__views { display: flex; gap: 8px; padding: 9px 10px 0; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--line); }
+.stage__views::-webkit-scrollbar { display: none; }
+.stage__views .btn { flex: none; white-space: nowrap; }
+.stage__bar { display: flex; gap: 8px; padding: 9px 10px; align-items: center; flex-wrap: wrap; }
 .stage__bar .gap { margin-left: auto; }
 @media (max-width: 400px) { .stage__bar { gap: 6px; padding: 9px 8px; } .stage__bar .btn { padding: 7px 9px; } }
 .btn {
@@ -101,9 +110,11 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .btn:hover { background: var(--ink); color: var(--wash); }
 .btn[aria-pressed="true"] { background: var(--ink); color: var(--wash); }
+.btn:disabled { opacity: .42; pointer-events: none; }
 .stage.is-full { position: fixed; inset: 0; z-index: 50; border-radius: 0; display: flex; flex-direction: column; }
 .stage.is-full .stage__box { aspect-ratio: auto; max-height: none; flex: 1; min-height: 0; }
 .stage.is-full canvas.gl { touch-action: none; }
+.stage.is-full .stage__poster { object-fit: contain; }
 
 /* lights switch: a rocker with the 0 and I of a machine isolator */
 .switch { display: inline-flex; align-items: center; gap: 9px; cursor: pointer; border: 0; background: none; padding: 4px 0; font-weight: 700; font-size: .82rem; }
@@ -179,7 +190,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  body, .switch__knob { transition: none; }
+  body, .switch__knob, .stage canvas.gl, .stage__hint { transition: none; }
   .flap.is-flipping { animation: none; }
 }
 

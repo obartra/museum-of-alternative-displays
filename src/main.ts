@@ -1,6 +1,4 @@
-import '@fontsource-variable/sofia-sans/wght.css';
-import '@fontsource-variable/sofia-sans-extra-condensed/wght.css';
-import '@fontsource/pt-mono/400.css';
+import './styles/fonts.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import { halls, hallById } from './data/halls';
@@ -44,6 +42,36 @@ let stage: Stage | null = null;
 let stageCanvas: HTMLCanvasElement | null = null;
 let leave: (() => void) | null = null;
 
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const breathe = () => new Promise<void>((done) => setTimeout(done, 0));
+const whenIdle = (fn: () => void) => { if ('requestIdleCallback' in window) window.requestIdleCallback(fn, { timeout: 1200 }); else setTimeout(fn, 200); };
+const afterPicture = (img: HTMLImageElement, fn: () => void) => {
+  if (img.complete) return fn();
+  img.addEventListener('load', fn, { once: true });
+  img.addEventListener('error', fn, { once: true });
+};
+/**
+ * Whether to start a model without being asked. Not when the browser would draw it in software, which is slow enough
+ * to freeze a page, and not when the visitor has asked to save data. `?gl=force` and `?gl=off` in the address override it.
+ */
+let hardware: boolean | undefined;
+function wants3d(): boolean {
+  const asked = new URLSearchParams(location.search).get('gl');
+  if (asked === 'force' || asked === 'off') return asked === 'force';
+  if ((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return false;
+  if (hardware === undefined) {
+    try {
+      const gl = document.createElement('canvas').getContext('webgl2', { failIfMajorPerformanceCaveat: true });
+      // some browsers hand over a software renderer without calling it a caveat: ask it for its name as well
+      const info = gl?.getExtension('WEBGL_debug_renderer_info');
+      const name = gl && info ? String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL)) : '';
+      hardware = !!gl && !/swiftshader|llvmpipe|software|basic render/i.test(name);
+      gl?.getExtension('WEBGL_lose_context')?.loseContext();
+    } catch { hardware = false; }
+  }
+  return hardware;
+}
+
 function shell(inner: string, hall?: number, current?: string): void {
   const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}" aria-label="Hall ${n}, ${esc(hallById(n).name)}"${hall === n ? ' aria-current="true"' : ''}>${n}</a>`;
   app.innerHTML = `
@@ -66,7 +94,7 @@ function entrance(): void {
   const word = (s: string, n: number) => [...s.toUpperCase().padEnd(n, ' ').slice(0, n)].map((c) => cell(c)).join('');
   const rows = halls.map((h) => {
     const n = inHall(h.id).length;
-    return `<a class="board__row" href="#hall-${h.id}" data-hall="${h.id}" aria-label="Hall ${h.id}, ${esc(h.name)}, ${n} pieces"><span aria-hidden="true" style="display:contents">${cell(String(h.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(h.name, 14)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
+    return `<a class="board__row" href="#hall-${h.id}" data-hall="${h.id}"><span class="vh">Hall ${h.id}, ${esc(h.name)}, ${n} pieces</span><span aria-hidden="true" style="display:contents">${cell(String(h.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(h.name, 14)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
   }).join('');
   const counts = Object.fromEntries(halls.map((h) => [h.id, inHall(h.id).length]));
   shell(`
@@ -116,22 +144,19 @@ function entrance(): void {
 }
 
 // ---------- hall ----------
-function tile(p: Piece): string {
-  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-thumb="${p.id}" width="420" height="420" loading="lazy"><span class="tile__no">No. ${inv(p)}</span></div><div class="tile__name">${esc(p.name)}</div><div class="tile__meta">${p.year} ${chip(p.status)}</div></a>`;
-}
+// Still pictures of every piece on its stand, made ahead of time by scripts/posters.mjs, so a list never starts 3D graphics.
+const poster = (id: string, w: 380 | 760, on = lightsOn) => `./posters/${id}-${on ? 'day' : 'night'}-${w}.webp`;
+const posterSet = (id: string, on = lightsOn) => `${poster(id, 380, on)} 380w, ${poster(id, 760, on)} 760w`;
+lightListeners.add((on) => {
+  for (const img of document.querySelectorAll<HTMLImageElement>('img[data-poster]')) {
+    const id = img.dataset.poster!;
+    img.srcset = posterSet(id, on); img.src = poster(id, 760, on);
+  }
+});
 
-function fillThumbs(): void {
-  const imgs = [...document.querySelectorAll<HTMLImageElement>('img[data-thumb]')];
-  if (!imgs.length) return;
-  const on = lightsOn;
-  three().then(async ({ thumb }) => {
-    for (const img of imgs) {
-      if (!img.isConnected || on !== lightsOn) return;
-      const p = pieceById(img.dataset.thumb!)!;
-      const url = await thumb(p.id, hallColour(p.hall), on, 360);
-      if (url && img.isConnected) img.src = url;
-    }
-  });
+/** The first tiles of a list are in view when the page opens: they load at once, the rest as they come near. */
+function tile(p: Piece, i = 9): string {
+  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">No. ${inv(p)}</span></div><div class="tile__name">${esc(p.name)}</div><div class="tile__meta">${p.year} ${chip(p.status)}</div></a>`;
 }
 
 function hallView(n: number): void {
@@ -146,13 +171,9 @@ function hallView(n: number): void {
     <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(h.name)}</span><span class="plate__sub" style="padding-left:0">Once ${esc(h.was)}</span></span></h1>
     <p class="lead">${esc(h.intro)}</p>
   </div>
-  <div class="pieces">${list.map(tile).join('')}</div>
+  <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="Halls">${prev ? `<a href="#hall-${prev.id}">Back to hall ${prev.id}, ${esc(prev.name)}</a>` : '<a href="#">Back to the entrance</a>'}${next ? `<a href="#hall-${next.id}">On to hall ${next.id}, ${esc(next.name)}</a>` : '<a href="#depot">On to the depot</a>'}</nav>
 </div>`, n);
-  fillThumbs();
-  const relight = () => fillThumbs();
-  lightListeners.add(relight);
-  leave = () => lightListeners.delete(relight);
 }
 
 // ---------- piece ----------
@@ -166,10 +187,11 @@ function pieceView(id: string): void {
   shell(`
 <article class="piece">
   <div class="stage" id="stage">
-    <div class="stage__box" id="stage-box"></div>
-    <p class="stage__hint" id="stage-hint">Drag to turn. Pinch or scroll to zoom.</p>
+    <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${esc(p.name)}, on its stand." fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>Start 3D</button></div>
+    <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__bar">${switchHtml('Daylight')}<span class="gap"></span><button type="button" class="btn" data-act="eye" aria-pressed="false" hidden></button><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
+    <div class="stage__views" id="stage-views" role="group" aria-label="Views"><button type="button" class="btn" data-act="home" disabled>Whole piece</button></div>
+    <div class="stage__bar">${switchHtml('Daylight')}<span class="gap"></span><button type="button" class="btn" data-act="pause" disabled>${calm ? 'Play' : 'Pause'}</button><button type="button" class="btn" data-act="full">Expand</button></div>
   </div>
   <div class="stack">
     <a class="crumb" href="#hall-${h.id}"><b>${h.id}</b><span>${esc(h.name)}</span></a>
@@ -197,78 +219,125 @@ function pieceView(id: string): void {
 
   const box = document.getElementById('stage-box')!, wrap = document.getElementById('stage')!;
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
-  const fullBtn = wrap.querySelector<HTMLButtonElement>('[data-act="full"]')!;
-  const eyeBtn = wrap.querySelector<HTMLButtonElement>('[data-act="eye"]')!, frontBtn = wrap.querySelector<HTMLButtonElement>('[data-act="front"]')!;
-  const setEye = (on: boolean) => {
-    if (!stage?.eye) return;
-    if (on) stage.goEye(); else stage.goHome();
-    eyeBtn.setAttribute('aria-pressed', String(on));
-    eyeBtn.textContent = on ? 'Back' : stage.eye.label;
-    hint.textContent = on ? 'Drag to move your head.' : 'Drag to turn. Pinch or scroll to zoom.';
-    hint.style.opacity = '1';
-  };
-  let alive = true;
+  const views = document.getElementById('stage-views')!, still = document.getElementById('stage-poster') as HTMLImageElement;
+  const act = (name: string) => wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`)!;
+  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), homeBtn = act('home');
+  const HINT = { turn: 'Drag to turn. Pinch or scroll to zoom.', person: 'Drag to move your head.', detail: 'Drag to look round it. Pinch or scroll to zoom.' };
+  // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
+  let alive = true, live = false, begun = false, seen = true, wantFocus = false;
+  const tell = (text: string) => { hint.textContent = text; hint.style.opacity = '1'; };
   const say = (on: boolean) => {
-    const d = stage?.inDark;
+    const d = live ? stage?.inDark : undefined;
     note.textContent = !on && d === 'vanishes' ? 'It is night and this piece makes no light of its own.' : on && d === 'better' ? 'Stronger in the dark. Switch the daylight off.' : '';
+  };
+  /** Look from one of the piece's own places. The same button again, or -1, goes back to the whole piece. */
+  const setView = (n: number) => {
+    if (!stage || !live) return;
+    if (n < 0 || stage.inView === n) { stage.goHome(); n = -1; } else stage.goView(n);
+    for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(Number(b.dataset.view) === n));
+    tell(n < 0 ? HINT.turn : stage.views[n].hint ?? HINT[stage.views[n].kind]);
   };
   const setFull = (full: boolean) => {
     wrap.classList.toggle('is-full', full);
-    fullBtn.setAttribute('aria-pressed', String(full));
     fullBtn.textContent = full ? 'Close' : 'Expand';
     document.body.style.overflow = full ? 'hidden' : '';
+    // while the stage covers the page, nothing behind it can be reached by key or by screen reader
+    for (const el of document.querySelectorAll<HTMLElement>('body > .vh, .top, .piece > :not(.stage), .foot')) el.inert = full;
     stage?.setFree(full);
     stage?.resize();
   };
   const onKey = (e: KeyboardEvent) => {
     if (e.key === 'Escape' && wrap.classList.contains('is-full')) setFull(false);
-    if (document.activeElement !== stageCanvas || !stage) return;
+    if (document.activeElement !== stageCanvas || !stage || !live) return;
     const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
     if (k[e.key]) { e.preventDefault(); stage.nudge(...k[e.key]); }
   };
+  const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; };
+
+  /** Bring the model to life over its still picture. Only this needs three.js. */
+  const go = async () => {
+    if (begun || !alive) return;
+    begun = true;
+    startBtn.hidden = true;
+    tell('Loading the 3D model.');
+    try {
+      const { Stage, builders } = await three();
+      if (!alive) return;
+      if (!stageCanvas) { stageCanvas = document.createElement('canvas'); stageCanvas.className = 'gl'; stageCanvas.tabIndex = 0; }
+      const cv = stageCanvas;
+      cv.classList.remove('is-live');
+      cv.setAttribute('aria-label', `3D model of ${p.name}. Drag or use the arrow keys to turn it, plus and minus to zoom.`);
+      box.append(cv);
+      try {
+        stage ??= new Stage(cv, true);
+      } catch {
+        cv.remove();
+        return fail('This browser could not start 3D graphics, so the picture stays still. The text below is complete without it.');
+      }
+      stage.attach();
+      stage.onTouch = () => { hint.style.opacity = '0'; };
+      await breathe();
+      if (!alive) return;
+      stage.setPiece(builders[p.id](), hallColour(p.hall), p.hall);
+      stage.setLights(lightsOn, true);
+      await stage.warm();
+      if (!alive) return;
+      live = true;
+      stage.start();
+      if (!seen) stage.stop();
+      // the first frame is drawn: let it come up over the still picture, then take the picture away
+      requestAnimationFrame(() => { cv.classList.add('is-live'); window.setTimeout(() => { if (alive) still.hidden = true; }, 420); });
+      const all = stage.views;
+      views.insertAdjacentHTML('beforeend', (all.some((v) => v.kind === 'person') ? '' : '<button type="button" class="btn" data-act="front">Front</button>')
+        + all.map((v, i) => `<button type="button" class="btn" data-view="${i}" aria-pressed="false">${esc(v.label)}</button>`).join(''));
+      homeBtn.disabled = pauseBtn.disabled = false;
+      pauseBtn.textContent = stage.isPaused ? 'Play' : 'Pause';
+      tell(HINT.turn);
+      say(lightsOn);
+      if (wantFocus) cv.focus();
+      const surf = stage.surface;
+      if (surf) {
+        const holder = document.getElementById('surface')!;
+        holder.className = 'surface';
+        holder.append(surf);
+        surf.setAttribute('role', 'img');
+        surf.setAttribute('aria-label', `The lit surface of the ${p.name}, shown flat.`);
+      }
+    } catch {
+      fail('The 3D viewer did not load, so the picture stays still. Check the connection and reload. The text below is complete without it.');
+    }
+  };
+
   wrap.addEventListener('click', (e) => {
-    const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
-    if (act === 'eye') setEye(!stage?.inEye);
-    if (act === 'front') { setEye(false); stage?.goFront(); }
-    if (act === 'home') { setEye(false); stage?.goHome(); }
-    if (act === 'full') setFull(!wrap.classList.contains('is-full'));
+    const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act], [data-view]');
+    if (!el) return;
+    const name = el.dataset.act;
+    if (el.dataset.view) setView(Number(el.dataset.view));
+    if (name === 'start') { wantFocus = true; void go(); }
+    if (name === 'front') { setView(-1); stage?.goFront(); }
+    if (name === 'home') setView(-1);
+    if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = stage.isPaused ? 'Play' : 'Pause'; }
+    if (name === 'full') setFull(!wrap.classList.contains('is-full'));
   });
   document.addEventListener('keydown', onKey);
-  const relight = (on: boolean) => { stage?.setLights(on); say(on); };
+  const relight = (on: boolean) => { if (live) stage?.setLights(on); say(on); };
   lightListeners.add(relight);
+  // nothing is drawn while the stage is scrolled out of the window
+  const watch = new IntersectionObserver(([e]) => {
+    seen = e.isIntersecting;
+    if (live) { if (seen) stage?.start(); else stage?.stop(); }
+  });
+  watch.observe(box);
 
-  three().then(({ Stage, builders }) => {
-    if (!alive) return;
-    if (!stageCanvas) { stageCanvas = document.createElement('canvas'); stageCanvas.className = 'gl'; stageCanvas.tabIndex = 0; }
-    stageCanvas.setAttribute('aria-label', `3D model of ${p.name}. Drag or use the arrow keys to turn it, plus and minus to zoom.`);
-    box.append(stageCanvas);
-    try {
-      stage ??= new Stage(stageCanvas, true);
-    } catch {
-      box.innerHTML = '<p style="padding:24px">This browser could not start 3D graphics, so the model cannot be shown. The text below is complete without it.</p>';
-      return;
-    }
-    stage.attach();
-    stage.onTouch = () => { hint.style.opacity = '0'; };
-    stage.setPiece(builders[p.id](), hallColour(p.hall), p.hall);
-    stage.setLights(lightsOn, true);
-    stage.start();
-    say(lightsOn);
-    // a piece made to be looked into gets a button that puts your eye there, in place of the plain front view
-    if (stage.eye) { eyeBtn.hidden = false; eyeBtn.textContent = stage.eye.label; frontBtn.hidden = true; }
-    const surf = stage.surface;
-    if (surf) {
-      const holder = document.getElementById('surface')!;
-      holder.className = 'surface';
-      holder.append(surf);
-      surf.setAttribute('role', 'img');
-      surf.setAttribute('aria-label', `The lit surface of the ${p.name}, shown flat.`);
-    }
-  }).catch(() => { box.innerHTML = '<p style="padding:24px">The 3D viewer did not load. Check the connection and reload. The text below is complete without it.</p>'; });
+  // The still picture comes first. The model follows by itself where the device draws 3D with its graphics chip
+  // and the visitor has not asked to save data. Anywhere else it waits for the button.
+  if (stage) void go();
+  else afterPicture(still, () => whenIdle(() => { if (!alive) return; if (wants3d()) void go(); else startBtn.hidden = false; }));
 
   leave = () => {
-    alive = false;
+    alive = false; live = false;
     setFull(false);
+    watch.disconnect();
     document.removeEventListener('keydown', onKey);
     lightListeners.delete(relight);
     stage?.stop();
@@ -347,7 +416,7 @@ function about(): void {
       <h2 class="h-sec">The works</h2>
       ${elevationSvg().replace('<svg ', '<svg class="drawing" ')}
       ${axoSvg().replace('<svg ', '<svg class="drawing" ')}
-      <p class="prose small muted">Concept drawings for the museum as a physical place. Halls 1 to 5 fill the old production shed from south to north. Hall 6 is the former test darkroom and hall 7 the water tower. The department names over the doors are Czech: Strojovna, machine room. Sklárna, glassworks. Polovodiče, semiconductors. Optika, optics. Tiskárna, print shop. Temná komora, darkroom. Věž, tower.</p>
+      <p class="prose small muted">Concept drawings for the museum as a physical place. Halls 1 to 5 fill the old production shed from south to north. Hall 6 is the former test darkroom and hall 7 the water tower.</p>
     </section>
   </div>
 </div>`, undefined, 'about');
@@ -364,7 +433,7 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const size = Number(q.get('size') ?? 240);
   const only = q.get('ids')?.split(',');
   const num = (k: string) => (q.has(k) ? Number(q.get(k)) : undefined);
-  const view = q.has('eye') ? { eye: true } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
+  const view = q.has('eye') ? { eye: true } : q.has('view') ? { view: num('view') } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
   const w = num('w') ?? size, h = num('h') ?? size;
   root.dataset.lights = on ? 'on' : 'off';
   app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${q.has('w') ? Number(q.get('w')) : size}px);gap:4px;padding:4px"></div>`;
@@ -372,7 +441,11 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const { thumb, builders } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
-    if (view?.eye && !builders[p.id]().eye) continue;
+    if (view && ('eye' in view || 'view' in view)) {
+      // only the pieces that have that view
+      const b = builders[p.id](), n = 'view' in view ? view.view ?? 0 : 0;
+      if ('eye' in view ? !b.eye : n >= (b.eye ? 1 : 0) + (b.views?.length ?? 0)) continue;
+    }
     const shot = view || q.has('w') ? { ...view, no: p.hall, w, h } : undefined;
     const url = await thumb(p.id, hallColour(p.hall), on, size, shot);
     grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${w}" height="${h}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
