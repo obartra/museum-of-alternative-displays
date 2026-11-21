@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 110 people, and 32 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
+The labels name 110 people, and 32 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model from a photograph or an earlier portrait. One is shown only when two things hold: its source is in the public domain or under an open licence, and the check of who it shows and how closely it follows its source has passed. A drawing made from a picture whose rights are not confirmed stays off the site, and so does one that still needs a second look.
 
