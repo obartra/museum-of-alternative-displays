@@ -1,3 +1,4 @@
+import { factsA } from './facts-a';
 import type { Source } from './schema';
 
 /** One thing about a piece that is worth repeating to someone. Shown on its page under "Did you know?". */
@@ -8,5 +9,5 @@ export interface Fact {
   source: Source;
 }
 
-/** By piece id. */
-export const facts: Record<string, Fact> = {};
+/** By piece id. The researchers' files hold them, a few halls each. */
+export const facts: Record<string, Fact> = { ...factsA };
