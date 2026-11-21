@@ -39,6 +39,14 @@ h1, h2, h3 { text-wrap: balance; }
   letter-spacing: .01em; text-transform: uppercase; text-decoration: none; margin-right: auto;
 }
 
+/* Japanese has no spaces, and a browser will break its lines inside a word. The museum's name breaks only at its
+   middle dot unless it has to, and headings break between phrases where the browser knows how. Korean keeps each
+   word whole, as its readers expect. */
+:root:lang(ja) .top__name { font-size: 1.2rem; line-height: 1.2; word-break: keep-all; overflow-wrap: anywhere; }
+:root:lang(ja) :is(h1, h2, h3, .lead) { word-break: auto-phrase; }
+:root:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
+:root:lang(ko) .top__name { font-size: 1.3rem; line-height: 1.15; }
+
 /* hall index: one small enamel plate per hall, like door numbers along a corridor */
 .tabs { display: flex; gap: 5px; }
 .tabs a {
