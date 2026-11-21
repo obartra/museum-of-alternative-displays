@@ -5,7 +5,8 @@ import { halls, hallById } from './data/halls';
 import { inHall, inv, pieceById, pieces } from './data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type Principle, type SourceKind, type Status } from './data/schema';
 import { esc } from './html';
-import { byName, comma, count, langNow, offered, rich, said, standIn, t, tx, useLang, wanted, type Lang } from './i18n';
+import { byName, comma, count, langNow, rich, said, standIn, t, tx, useLang, wanted } from './i18n';
+import { langMenu, wireLangMenu } from './langmenu';
 import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
@@ -110,9 +111,7 @@ function wants3d(): boolean {
 
 function shell(inner: string, hall?: number, current?: string): void {
   const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}"${hall === n ? ' aria-current="true"' : ''}><span class="vh">${tx('nav.hall', { n, name: said.hall(hallById(n)).name })}</span><span aria-hidden="true">${n}</span></a>`;
-  // the menu shows the language in use by its short name, and lists every language under the name its speakers give it
-  const langs = offered(), now = langNow();
-  const menu = langs.length > 1 ? `<label class="lang"><span class="lang__now" aria-hidden="true">${now.short}</span><select id="lang" aria-label="${tx('lang.label')}">${langs.map((l) => `<option value="${l.code}" lang="${l.tag}"${l.code === now.code ? ' selected' : ''}>${l.name}</option>`).join('')}</select></label>` : '';
+  const menu = langMenu();
   app.innerHTML = `
 <header class="top">
   <a class="top__name" href="#">${tx('site.name')}</a>
@@ -681,18 +680,35 @@ function route(): void {
   else if (name === 'people') peopleView();
   else if (walk) walkView(walk[1]);
   else notFound();
+  fitPlates();
   window.scrollTo(0, 0);
   document.body.dataset.ready = '1';
 }
 
+/**
+ * The name of a hall is a single long word in some languages, and a plate cannot break a word. Where a plate would
+ * be wider than the page, its lettering is made smaller until it fits.
+ */
+function fitPlates(): void {
+  for (const title of document.querySelectorAll<HTMLElement>('.plate .plate__title')) {
+    title.style.fontSize = '';
+    const plate = title.closest<HTMLElement>('.plate')!, within = plate.parentElement!;
+    for (let i = 0; i < 6; i++) {
+      const over = plate.getBoundingClientRect().right - within.getBoundingClientRect().right, wide = title.getBoundingClientRect().width;
+      if (over < 0.5 || wide < 40) break;
+      title.style.fontSize = `${Math.max(15, (parseFloat(getComputedStyle(title).fontSize) * (wide - over - 1)) / wide)}px`;
+    }
+  }
+}
+let fitting = 0;
+window.addEventListener('resize', () => { cancelAnimationFrame(fitting); fitting = requestAnimationFrame(fitPlates); });
+
 root.dataset.lights = lightsOn ? 'on' : 'off';
 window.addEventListener('hashchange', route);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
-document.addEventListener('change', (e) => {
-  const menu = e.target as HTMLSelectElement;
-  if (menu.id !== 'lang') return;
+wireLangMenu((code) => {
   const y = window.scrollY;
-  void useLang(menu.value as Lang, true).then(() => { route(); window.scrollTo({ top: y, behavior: 'instant' }); document.getElementById('lang')?.focus(); });
+  void useLang(code, true).then(() => { route(); window.scrollTo({ top: y, behavior: 'instant' }); document.getElementById('lang')?.focus(); });
 });
 const faces = () => Promise.all([document.fonts.load('800 40px "Sofia Sans Extra Condensed Variable"'), document.fonts.load('500 16px "Sofia Sans Variable"'), document.fonts.load('16px "PT Mono"')]).catch(() => undefined);
 void Promise.all([useLang(wanted()), faces()]).then(route);

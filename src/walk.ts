@@ -75,10 +75,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <span class="walk__me" id="walk-me" aria-hidden="true"><svg viewBox="-10 -10 20 20" focusable="false"><path d="M9 0L-7 7.5L-3.5 0L-7 -7.5Z"/></svg></span>
 </div>
 <div class="walk__bar">
-  <label class="lang walk__goto walk__pick"><span aria-hidden="true">${tx('trail.label')}</span><select id="walk-trail" aria-label="${tx('trail.label')}"><option value="">${tx('trail.none')}</option>${trails.map((tr) => `<option value="${tr.id}">${tx(`trail.${tr.id}`)}</option>`).join('')}</select></label>
+  <label class="pickbox walk__goto walk__pick"><span aria-hidden="true">${tx('trail.label')}</span><select id="walk-trail" aria-label="${tx('trail.label')}"><option value="">${tx('trail.none')}</option>${trails.map((tr) => `<option value="${tr.id}">${tx(`trail.${tr.id}`)}</option>`).join('')}</select></label>
   <button type="button" class="btn" data-walk="prev" disabled>${tx('walk.prev')}</button>
   <button type="button" class="btn" data-walk="next" disabled>${tx('walk.next')}</button>
-  <label class="lang walk__goto"><span aria-hidden="true">${tx('walk.goto')}</span><select id="walk-goto" aria-label="${tx('walk.goto')}" disabled><option value="">${tx('walk.goto')}</option>${halls.map((h) => `<optgroup label="${tx('nav.hall', { n: h.id, name: hallName(h.id) })}">${plan.places.filter((p) => p.hall === h.id).map((p) => `<option value="${p.id}">${names[p.id]}</option>`).join('')}</optgroup>`).join('')}</select></label>
+  <label class="pickbox walk__goto"><span aria-hidden="true">${tx('walk.goto')}</span><select id="walk-goto" aria-label="${tx('walk.goto')}" disabled><option value="">${tx('walk.goto')}</option>${halls.map((h) => `<optgroup label="${tx('nav.hall', { n: h.id, name: hallName(h.id) })}">${plan.places.filter((p) => p.hall === h.id).map((p) => `<option value="${p.id}">${names[p.id]}</option>`).join('')}</optgroup>`).join('')}</select></label>
   <span class="gap"></span>
   ${o.switchHtml}
   <button type="button" class="btn" data-walk="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button>

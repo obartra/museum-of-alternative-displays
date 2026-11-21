@@ -16,7 +16,7 @@ export const LANGS: LangInfo[] = [
   { code: 'ca', name: 'Català', short: 'CA', tag: 'ca' },
   { code: 'fr', name: 'Français', short: 'FR', tag: 'fr' },
   { code: 'de', name: 'Deutsch', short: 'DE', tag: 'de' },
-  { code: 'zh', name: '中文', short: '中文', tag: 'zh-Hans' },
+  { code: 'zh', name: '简体中文', short: '简体', tag: 'zh-Hans' },
 ];
 
 export type PieceText = Pick<Piece, 'name' | 'aka' | 'yearText' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look'>;

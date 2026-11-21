@@ -28,7 +28,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .top .tabs { grid-column: 1 / -1; }
 .top__tools { display: flex; align-items: center; gap: 12px; }
-@media (min-width: 1000px) {
+@media (min-width: 1040px) {
   .top { grid-template-columns: auto 1fr auto; gap: 12px 28px; }
   .top .tabs { grid-column: auto; justify-self: end; order: 0; }
   .top .tabs a { flex: 0 0 40px; }
@@ -53,13 +53,56 @@ h1, h2, h3 { text-wrap: balance; }
 @media (min-width: 520px) { .tabs a.tabs__about { display: grid; } }
 @media (max-width: 519px) { .top .switch > span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }
 
-/* language: the short name of the one in use on a small outlined plate. The browser's own list lies invisibly over it,
-   so a phone opens its native picker and a keyboard gets a real select */
-.lang { position: relative; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 9px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--ink); font-weight: 700; font-size: .8rem; line-height: 1; }
-.lang__now::after { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 0 3px 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
-.lang select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; appearance: none; border: 0; font-size: 16px; }
-.lang:focus-within { outline: 3px solid var(--signal); outline-offset: 3px; }
-@media (pointer: coarse) { .lang { height: 40px; } }
+/* language: a small outlined plate that names the one in use, and under it a directory of all of them, each under
+   its own name. The directory hangs from the right-hand end of the header and is as wide as a phone lets it be. */
+.top__tools { position: relative; }
+/* where the header is one row the plate stands in the middle of it, and the list hangs from the plate itself */
+@media (min-width: 1040px) { .lang { position: relative; } .lang__list { right: auto; left: 0; } }
+.lang__now {
+  display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 10px; border: 0; border-radius: 3px;
+  background: none; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); font-weight: 700; font-size: .8rem; line-height: 1; cursor: pointer;
+}
+.lang__now::after { content: ""; width: 6px; height: 6px; margin: 0 1px 3px 1px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform .15s ease; }
+.lang__now[aria-expanded="true"] { background: var(--ink); color: var(--wash); }
+.lang__now[aria-expanded="true"]::after { transform: translateY(3px) rotate(225deg); }
+.lang__globe { flex: none; width: 15px; height: 15px; }
+.lang__short { display: none; }
+@media (max-width: 359px) { .lang__globe { display: none; } }
+/* the name in full where there is room for it: not on a phone, and not where the one-row header is at its tightest */
+@media (max-width: 719px), (min-width: 1040px) and (max-width: 1199px) {
+  /* a language whose name is short enough has no short form, and keeps its name */
+  .lang__long:not(:last-child) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .lang__short { display: inline; }
+}
+@media (pointer: coarse) { .lang__now { height: 40px; } }
+.lang__list {
+  position: absolute; z-index: 60; top: calc(100% + 9px); right: 0; width: min(440px, 100vw - 2 * var(--gutter));
+  max-height: min(78vh, 640px); overflow-y: auto; overscroll-behavior: contain; padding: 14px 12px 12px;
+  background: var(--plate); color: var(--ink); border-radius: 6px; box-shadow: inset 0 0 0 1.5px var(--ink), 0 18px 40px rgba(0, 0, 0, .24);
+  animation: lang-in .16s ease-out;
+}
+@keyframes lang-in { from { opacity: 0; transform: translateY(-5px); } }
+.lang__title { padding: 0 8px 9px; margin-bottom: 8px; border-bottom: 1.5px solid var(--ink); font-family: var(--display); font-weight: 800; font-size: 1.5rem; line-height: 1; letter-spacing: .01em; }
+.lang__list ul { display: grid; grid-auto-flow: column; grid-template-rows: repeat(var(--rows), auto); grid-template-columns: 1fr 1fr; gap: 2px 8px; }
+.lang__pick {
+  display: flex; flex-direction: column; justify-content: center; gap: 2px; width: 100%; min-height: 46px; padding: 5px 8px; border: 0; border-radius: 3px;
+  background: none; color: inherit; text-align: start; line-height: 1.15; cursor: pointer;
+}
+.lang__own { font-weight: 700; font-size: 1rem; }
+.lang__other { font-size: .78rem; color: var(--ink-2); }
+.lang__other::first-letter { text-transform: uppercase; }
+.lang__pick:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.lang__pick[aria-current="true"] { background: var(--ink); color: var(--wash); }
+.lang__pick[aria-current="true"] .lang__other { color: inherit; opacity: .8; }
+.lang__pick:focus-visible { outline-offset: -3px; }
+@media (prefers-reduced-motion: reduce) { .lang__list { animation: none; } .lang__now::after { transition: none; } }
+
+/* a small outlined plate with the browser's own list lying invisibly over it: a phone opens its native picker and a
+   keyboard gets a real select. The walk uses it to choose a trail and to go to a piece */
+.pickbox { position: relative; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 9px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--ink); font-weight: 700; font-size: .8rem; line-height: 1; }
+.pickbox select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; appearance: none; border: 0; font-size: 16px; }
+.pickbox:focus-within { outline: 3px solid var(--signal); outline-offset: 3px; }
+@media (pointer: coarse) { .pickbox { height: 40px; } }
 
 /* ---------- enamel plate ---------- */
 .plate {
