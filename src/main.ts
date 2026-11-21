@@ -9,6 +9,12 @@ import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type 
 import { planSvg } from './art/plan';
 import { axoSvg, elevationSvg } from './art/building';
 import type { Stage } from './three/stage';
+import type { Look } from './three/room';
+
+/** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
+const ROOMS: [Look, string][] = [['works', 'Works'], ['betong', 'Betong'], ['tehdas', 'Tehdas'], ['ljus', 'Ljus']];
+let room: Look = 'works';
+try { const saved = localStorage.getItem('room') as Look | null; if (saved && ROOMS.some(([id]) => id === saved)) room = saved; } catch { /* no storage */ }
 
 const REPO = 'https://github.com/obartra/museum-of-alternative-displays';
 const app = document.getElementById('app')!;
@@ -168,6 +174,7 @@ function pieceView(id: string): void {
     <p class="stage__hint" id="stage-hint">Drag to turn. Pinch or scroll to zoom.</p>
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__bar">${switchHtml('Lights')}<span class="gap"></span><button type="button" class="btn" data-act="eye" aria-pressed="false" hidden></button><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
+    <div class="rooms" role="group" aria-label="Room study"><span>Room study</span>${ROOMS.map(([id, name]) => `<button type="button" class="chip-btn" data-room="${id}" aria-pressed="${id === room}">${name}</button>`).join('')}</div>
   </div>
   <div class="stack">
     <a class="crumb" href="#hall-${h.id}"><b>${h.id}</b><span>${esc(h.name)}, <span lang="cs">${esc(h.cz)}</span></span></a>
@@ -226,6 +233,13 @@ function pieceView(id: string): void {
   };
   wrap.addEventListener('click', (e) => {
     const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
+    const pick = (e.target as HTMLElement).closest<HTMLElement>('[data-room]')?.dataset.room as Look | undefined;
+    if (pick) {
+      room = pick;
+      try { localStorage.setItem('room', room); } catch { /* a private window: the choice lasts for the visit */ }
+      stage?.setLook(room);
+      wrap.querySelectorAll<HTMLElement>('[data-room]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.room === room)));
+    }
     if (act === 'eye') setEye(!stage?.inEye);
     if (act === 'front') { setEye(false); stage?.goFront(); }
     if (act === 'home') { setEye(false); stage?.goHome(); }
@@ -241,14 +255,15 @@ function pieceView(id: string): void {
     stageCanvas.setAttribute('aria-label', `3D model of ${p.name}. Drag or use the arrow keys to turn it, plus and minus to zoom.`);
     box.append(stageCanvas);
     try {
-      stage ??= new Stage(stageCanvas, true);
+      stage ??= new Stage(stageCanvas, true, room);
+      stage.setLook(room);
     } catch {
       box.innerHTML = '<p style="padding:24px">This browser could not start 3D graphics, so the model cannot be shown. The text below is complete without it.</p>';
       return;
     }
     stage.attach();
     stage.onTouch = () => { hint.style.opacity = '0'; };
-    stage.setPiece(builders[p.id](), hallColour(p.hall));
+    stage.setPiece(builders[p.id](), hallColour(p.hall), p.hall);
     stage.setLights(lightsOn, true);
     stage.start();
     say(lightsOn);
@@ -362,14 +377,16 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const size = Number(q.get('size') ?? 240);
   const only = q.get('ids')?.split(',');
   const num = (k: string) => (q.has(k) ? Number(q.get(k)) : undefined);
-  const shot = q.has('eye') ? { eye: true } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
+  const look = (q.get('look') ?? undefined) as Look | undefined;
+  const view = q.has('eye') ? { eye: true } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
   root.dataset.lights = on ? 'on' : 'off';
   app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${size}px);gap:4px;padding:4px"></div>`;
   const grid = document.getElementById('grid')!;
   const { thumb, builders } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
-    if (shot?.eye && !builders[p.id]().eye) continue;
+    if (view?.eye && !builders[p.id]().eye) continue;
+    const shot = view || look ? { ...view, look, no: p.hall } : undefined;
     const url = await thumb(p.id, hallColour(p.hall), on, size, shot);
     grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${size}" height="${size}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
   }

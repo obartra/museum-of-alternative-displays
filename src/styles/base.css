@@ -96,6 +96,10 @@ h1, h2, h3 { text-wrap: balance; }
 .stage__bar { display: flex; gap: 8px; padding: 9px 10px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--line); }
 .stage__bar .gap { margin-left: auto; }
 @media (max-width: 400px) { .stage__bar { gap: 6px; padding: 9px 8px; } .stage__bar .btn { padding: 7px 9px; } }
+.rooms { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; padding: 0 10px 10px; font-size: .78rem; font-weight: 600; color: var(--ink-2); }
+.rooms span { margin-right: 4px; }
+.chip-btn { appearance: none; border: 1px solid var(--line); background: none; color: var(--ink); padding: 5px 10px; border-radius: 99px; font: inherit; cursor: pointer; min-height: 30px; }
+.chip-btn[aria-pressed="true"] { background: var(--ink); color: var(--wash); border-color: var(--ink); }
 .btn {
   appearance: none; border: 1.5px solid var(--ink); background: color-mix(in srgb, var(--wash) 82%, transparent); color: var(--ink);
   padding: 7px 12px; border-radius: 3px; font-weight: 700; font-size: .82rem; line-height: 1.1; cursor: pointer; backdrop-filter: blur(6px);

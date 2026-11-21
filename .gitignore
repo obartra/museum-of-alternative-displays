@@ -5,3 +5,4 @@ dist
 .shots
 scripts/sheet.mjs
 .notes
+scripts/stills.mjs

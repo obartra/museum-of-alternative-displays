@@ -1,15 +1,13 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { THREE, type Built, type Eye } from './kit';
+import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Look, type Room } from './room';
 
-const PLINTH_TOP = 0.22;
-const TARGET_Y = PLINTH_TOP + 0.54;
-const WASH = '#e4e5df';
 const FOV = 30;
 const UP = new THREE.Vector3(0, 1, 0);
 
 /**
- * One plinth in one hall: a steel turntable in front of a two-tone wall.
+ * One stand in one room. Which room is a matter of look: see room.ts.
  * The hall lights are real lights. Switch them off and only what emits stays visible.
  */
 export class Stage {
@@ -17,12 +15,9 @@ export class Stage {
   readonly camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 60);
   private scene = new THREE.Scene();
   private controls?: OrbitControls;
-  private hemi = new THREE.HemisphereLight(0xffffff, 0x8d8f89, 0.6);
-  private key = new THREE.DirectionalLight(0xfff3e2, 2.4);
-  private fill = new THREE.DirectionalLight(0xdfe8ff, 0.55);
   private glow = new THREE.PointLight(0xffffff, 0, 9, 1.4);
-  private wallCanvas = document.createElement('canvas');
-  private wallTex: THREE.CanvasTexture;
+  private room!: Room;
+  private hallOf: [string, number?] = ['#586067'];
   private piece?: Built;
   private lights = 1;
   private lightsTarget = 1;
@@ -40,55 +35,34 @@ export class Stage {
   /** Called the first time the visitor turns the piece. */
   onTouch?: () => void;
 
-  constructor(private canvas: HTMLCanvasElement, interactive: boolean) {
+  constructor(private canvas: HTMLCanvasElement, interactive: boolean, private look: Look = 'works') {
     // the stencil buffer is what lets a reflection show only inside its pane, and a scene only through its lens
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, stencil: true, preserveDrawingBuffer: !interactive, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(interactive ? Math.min(window.devicePixelRatio || 1, 2) : 1);
     this.renderer.toneMapping = THREE.NeutralToneMapping;
     this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.shadowMap.type = THREE.PCFShadowMap;
 
     const pmrem = new THREE.PMREMGenerator(this.renderer);
     this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     pmrem.dispose();
 
-    // the hall: a drum of wall with a painted dado, and a terrazzo floor
-    this.wallCanvas.width = 4; this.wallCanvas.height = 512;
-    this.wallTex = new THREE.CanvasTexture(this.wallCanvas);
-    this.wallTex.colorSpace = THREE.SRGBColorSpace;
-    const wall = new THREE.Mesh(new THREE.CylinderGeometry(9, 9, 10, 72, 1, true), new THREE.MeshStandardMaterial({ map: this.wallTex, side: THREE.BackSide, roughness: 0.95 }));
-    wall.position.y = 5;
-    const floor = new THREE.Mesh(new THREE.CircleGeometry(9, 72), new THREE.MeshStandardMaterial({ color: 0xc4c6be, roughness: 0.82 }));
-    floor.rotation.x = -Math.PI / 2;
-    floor.receiveShadow = true;
-    const plinth = new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.16, PLINTH_TOP, 96), new THREE.MeshStandardMaterial({ color: 0x24272b, roughness: 0.42, metalness: 0.6 }));
-    plinth.position.y = PLINTH_TOP / 2;
-    plinth.castShadow = plinth.receiveShadow = true;
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.14, 0.012, 10, 128), new THREE.MeshStandardMaterial({ color: 0xb08d4a, roughness: 0.3, metalness: 0.9 }));
-    ring.rotation.x = Math.PI / 2; ring.position.y = PLINTH_TOP;
-    this.scene.add(wall, floor, plinth, ring);
-    this.paintWall('#586067');
-
-    this.key.position.set(3.4, 6, 4);
-    this.key.castShadow = true;
-    this.key.shadow.mapSize.set(2048, 2048);
-    const sc = this.key.shadow.camera;
-    sc.left = -2.4; sc.right = 2.4; sc.top = 2.6; sc.bottom = -2.2; sc.near = 1; sc.far = 16;
-    this.key.shadow.bias = -0.0004; this.key.shadow.normalBias = 0.02;
-    this.fill.position.set(-4.5, 2.6, 2.5);
     // above and in front, so that its mirror image never lands in a screen someone is looking at
     this.glow.position.set(0, 2.5, 1.0);
-    this.scene.add(this.hemi, this.key, this.fill, this.glow);
-    this.scene.background = new THREE.Color(WASH);
+    this.scene.add(this.glow);
+    this.scene.background = new THREE.Color(OUTSIDE[this.look]);
+    this.room = buildRoom(this.look);
+    this.scene.add(this.room.group);
+    this.room.hall(...this.hallOf);
 
     if (interactive) {
       const c = new OrbitControls(this.camera, canvas);
       c.enablePan = false; c.enableDamping = true; c.dampingFactor = 0.08;
       c.minPolarAngle = 0.2; c.maxPolarAngle = Math.PI / 2 - 0.03;
       c.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_ROTATE };
-      c.autoRotate = !this.still;
+      c.autoRotate = !this.still && !this.room.walled;
       c.autoRotateSpeed = 0.7;
-      c.target.set(0, TARGET_Y, 0);
+      c.target.set(0, this.room.targetY, 0);
       c.addEventListener('start', () => { c.autoRotate = false; if (!this.dragged) { this.dragged = true; this.onTouch?.(); } });
       this.controls = c;
       // a sideways drag turns the piece, a vertical swipe still scrolls the page
@@ -110,16 +84,26 @@ export class Stage {
   get eye(): Eye | undefined { return this.piece?.eye; }
   get inEye(): boolean { return !!this.eyeAt; }
 
-  private paintWall(hall: string): void {
-    const g = this.wallCanvas.getContext('2d')!;
-    // whitewash, a little greyer towards the roof, over a painted dado
-    const grad = g.createLinearGradient(0, 0, 0, 470);
-    grad.addColorStop(0, '#b9bbb4'); grad.addColorStop(0.55, '#d6d8d1'); grad.addColorStop(1, WASH);
-    g.fillStyle = grad; g.fillRect(0, 0, 4, 512);
-    // kept low, so the colour sits behind the plinth and the piece stands against whitewash
-    g.fillStyle = hall; g.fillRect(0, 470, 4, 42);
-    g.fillStyle = 'rgba(0,0,0,.45)'; g.fillRect(0, 468, 4, 3);
-    this.wallTex.needsUpdate = true;
+  get lookNow(): Look { return this.look; }
+
+  /** Move the stand into another room. The piece stays where it is. */
+  setLook(look: Look): void {
+    if (look === this.look) return;
+    this.scene.remove(this.room.group);
+    this.room.group.traverse((o) => {
+      const m = o as THREE.Mesh;
+      m.geometry?.dispose?.();
+      const mats = Array.isArray(m.material) ? m.material : m.material ? [m.material] : [];
+      for (const mat of mats as THREE.Material[]) { for (const v of Object.values(mat)) if (v && (v as THREE.Texture).isTexture) (v as THREE.Texture).dispose(); mat.dispose(); }
+      const l = o as THREE.SpotLight;
+      if (l.isLight) { l.shadow?.map?.dispose(); l.map?.dispose?.(); }
+    });
+    this.look = look;
+    this.room = buildRoom(look);
+    this.scene.add(this.room.group);
+    this.room.hall(...this.hallOf);
+    if (this.controls) this.controls.autoRotate = false;
+    if (this.eyeAt) this.goEye(); else this.goHome();
   }
 
   resize(w?: number, h?: number): void {
@@ -131,7 +115,7 @@ export class Stage {
   }
 
   /** Put a piece on the plinth, scaled to fit, in front of its hall colour. */
-  setPiece(b: Built, hallColour: string): void {
+  setPiece(b: Built, hallColour: string, hallNo?: number): void {
     this.clear();
     const root = b.root;
     // what is only seen through a window (a reflection, a scene behind a lens) takes up no room on the plinth
@@ -155,12 +139,13 @@ export class Stage {
     });
     this.scene.add(root);
     this.piece = b;
-    this.paintWall(hallColour);
+    this.hallOf = [hallColour, hallNo];
+    this.room.hall(hallColour, hallNo);
     this.glow.color.set(b.glow ?? 0x000000);
     this.home = { az: b.view?.[0] ?? 28, el: b.view?.[1] ?? 13, dist: 5.1 / (b.zoom ?? 1) };
     this.t0 = performance.now();
     this.dragged = false;
-    if (this.controls) this.controls.autoRotate = !this.still;
+    if (this.controls) this.controls.autoRotate = !this.still && !this.room.walled;
     this.goHome();
   }
 
@@ -185,12 +170,12 @@ export class Stage {
     this.camera.fov = FOV; this.camera.near = 0.05;
     this.camera.updateProjectionMatrix();
     const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
-    const d = dist * Math.max(1, 1.02 / this.camera.aspect);
-    this.camera.position.set(Math.sin(a) * Math.cos(e) * d, TARGET_Y + Math.sin(e) * d, Math.cos(a) * Math.cos(e) * d);
-    this.camera.lookAt(0, TARGET_Y, 0);
+    const d = dist * this.room.reach * Math.max(1, 1.02 / this.camera.aspect), ty = this.room.targetY;
+    this.camera.position.set(Math.sin(a) * Math.cos(e) * d, ty + Math.sin(e) * d, Math.cos(a) * Math.cos(e) * d);
+    this.camera.lookAt(0, ty, 0);
     const c = this.controls;
     if (c) {
-      c.target.set(0, TARGET_Y, 0);
+      c.target.set(0, ty, 0);
       c.minAzimuthAngle = -Infinity; c.maxAzimuthAngle = Infinity;
       c.minPolarAngle = 0.2; c.maxPolarAngle = Math.PI / 2 - 0.03;
       c.minDistance = d * 0.4; c.maxDistance = d * 1.45;
@@ -257,12 +242,10 @@ export class Stage {
     const d = this.lightsTarget - this.lights;
     this.lights = Math.abs(d) < 0.004 ? this.lightsTarget : this.lights + d * 0.1;
     const L = this.lights;
-    this.hemi.intensity = 0.025 + 0.6 * L;
-    this.key.intensity = 2.4 * L;
-    this.fill.intensity = 0.55 * L;
-    this.scene.environmentIntensity = 0.035 + 0.5 * L;
+    this.room.light(L, this.scene);
+    this.room.seenFrom?.(this.camera);
     this.glow.intensity = this.piece?.glow ? (1 - L) * 9 : 0;
-    (this.scene.background as THREE.Color).set(WASH).multiplyScalar(0.02 + 0.98 * L);
+    (this.scene.background as THREE.Color).set(OUTSIDE[this.look]).multiplyScalar(0.02 + 0.98 * L);
     if (this.eyeAt && this.eyeTo && !this.dragged && !this.still && at === undefined) {
       // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
       const dir = this.eyeTo.clone().sub(this.eyeAt), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;

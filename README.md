@@ -44,7 +44,8 @@ Node 22 or newer.
 | `src/three/models/h1.ts` to `h7.ts` | One model builder per piece. |
 | `src/three/kit.ts` | Materials and shapes shared by every model: glass, finishes, eased edges, glow, and portals for things seen through other things. |
 | `src/three/parts.ts` | Small hardware: screws, louvres, knobs, feet, lenses, posts, breadboards. |
-| `src/three/stage.ts` | The plinth, the hall, the lights and the camera. |
+| `src/three/stage.ts` | The renderer, the camera and the piece on show. |
+| `src/three/room.ts` | The room around the piece: walls, floor, stand and lights. Four looks are built here (Works, Betong, Tehdas, Ljus) and the Room study chips on a piece page switch between them while the direction is being chosen. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/art/` | The floor plan and the building drawings, generated as SVG. |
 | `src/main.ts` | Pages and routing. |
