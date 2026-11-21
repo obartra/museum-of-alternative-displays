@@ -53,6 +53,8 @@ export function count(key: 'count.pieces', n: number): string {
   const form = new Intl.PluralRules(langNow().tag).select(n) === 'one' ? 'one' : 'other';
   return t(`${key}.${form}`, { n });
 }
+/** What separates the items of a short list: a comma and a space, or the full-width comma of Chinese. */
+export const comma = (): string => (lang === 'zh' ? '，' : ', ');
 /** Compare two names the way the language in use sorts them. */
 export const byName = (a: string, b: string): number => a.localeCompare(b, langNow().tag);
 

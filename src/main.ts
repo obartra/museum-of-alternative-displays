@@ -5,7 +5,7 @@ import { halls, hallById } from './data/halls';
 import { inHall, inv, pieceById, pieces } from './data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type Principle, type SourceKind, type Status } from './data/schema';
 import { esc } from './html';
-import { byName, count, langNow, offered, rich, said, standIn, t, tx, useLang, wanted, type Lang } from './i18n';
+import { byName, comma, count, langNow, offered, rich, said, standIn, t, tx, useLang, wanted, type Lang } from './i18n';
 import { facts } from './data/facts';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
@@ -501,7 +501,7 @@ function about(): void {
   }
   const total = [...kinds.values()].reduce((a, b) => a + b, 0);
   const flagged = pieces.filter((p) => p.dispute).length;
-  const byKind = [...kinds.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${said.sourceKind(k)}`).join(', ');
+  const byKind = [...kinds.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${said.sourceKind(k)}`).join(comma());
   const held = archiveCount();
   shell(`
 <div class="stack">

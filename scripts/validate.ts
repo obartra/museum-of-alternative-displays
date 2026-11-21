@@ -145,7 +145,8 @@ const figures = (text: string, lang: string) => {
   const comma = !['en', 'zh'].includes(lang); // these languages write the decimal mark as a comma
   for (const m of x.matchAll(/\d+(?:[.,]\d+)*/g)) {
     const after = x.slice(m.index + m[0].length).replace(/^[\s  ]+/, '').toLowerCase();
-    const unit = UNITS.find(([word]) => after.startsWith(word) && (/[\u4e00-\u9fff]/.test(word) || !/^\p{L}/u.test(after.slice(word.length))));
+    // a unit word counts only when it ends there: not the "mil" of "mil·lisegons", and not the 千 of 千克, a kilogram
+    const unit = UNITS.find(([word]) => after.startsWith(word) && (/[\u4e00-\u9fff]/.test(word) ? !(word === '千' && /^[克米瓦赫伏卡帕焦欧安牛升]/.test(after.slice(1))) : !/^[\p{L}·]/u.test(after.slice(word.length))));
     if (unit) {
       const plain = comma ? m[0].replace(/\./g, '').replace(',', '.') : m[0].replace(/,/g, '');
       found.add(String(Math.round(parseFloat(plain) * unit[1])));
