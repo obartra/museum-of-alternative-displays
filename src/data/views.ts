@@ -45,6 +45,39 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'field', kind: 'person', label: 'Stand on the field', hint: 'Each point of light is an aircraft on its own planned route. They write the time, then regroup into a globe.' },
     { id: 'close', kind: 'detail', label: 'Fly up to one', hint: 'Every light hangs under a small quadcopter, kept within centimetres of its place by satellite positioning.' },
   ],
+  // hall 2, glass and glow
+  'cathode-ray-tube': [
+    { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'The band moving down the face is the raster, slowed about sixty times. One beam paints it line by line.' },
+    { id: 'raster', kind: 'detail', label: 'Go close to the face', hint: 'The picture is made of horizontal lines. The beam sweeps them from top to bottom, over and over.' },
+    { id: 'gun', kind: 'detail', label: 'Look into the neck', hint: 'The gun. A heated cathode gives off electrons, and the copper coils round the neck steer the beam.' },
+  ],
+  'vector-display': [
+    { id: 'seat', kind: 'person', label: 'Sit at the console', hint: 'The beam draws each stroke directly, like a pen. The trail behind the ball is phosphor still glowing.' },
+    { id: 'trace', kind: 'detail', label: 'Go close to the trace', hint: 'No dots and no scan lines. Each stroke is one smooth pass of the beam, at any angle.' },
+  ],
+  'storage-tube': [
+    { id: 'seat', kind: 'person', label: 'Sit at the terminal', hint: 'The plot is drawn once and stays lit, stored in the tube itself. The flash is the only way to erase it.' },
+  ],
+  'nixie-tube': [
+    { id: 'stack', kind: 'detail', label: 'Go close to one tube', hint: 'Ten shaped cathodes stacked front to back inside a mesh anode. Neon glows round the one that is energised.' },
+  ],
+  'vacuum-fluorescent': [
+    { id: 'grid', kind: 'detail', label: 'Look across the glass', hint: 'Thin hot wires in front, a mesh grid behind them, then the phosphor segments. Every lead leaves at the bottom.' },
+  ],
+  'numitron': [
+    { id: 'filaments', kind: 'detail', label: 'Go close to one bulb', hint: 'Seven lamp filaments strung between posts. The lit ones are white-hot wire, and that is all the light there is.' },
+  ],
+  'plasma-panel': [
+    { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'A classroom terminal. Every orange dot is a small neon discharge, and the frame of beams finds a finger.' },
+    { id: 'dots', kind: 'detail', label: 'Go close to the dots', hint: 'Each dot is one gas cell between two sheets of glass. A lit cell is a small neon sign.' },
+  ],
+  'field-emission': [
+    { id: 'tips', kind: 'detail', label: 'Go down to the tips', hint: 'A cold cathode tip under every hole in the gate. Electrons leave the tips and cross the gap to the phosphor above.' },
+  ],
+  'eggcrate': [
+    { id: 'below', kind: 'person', label: 'Look up at the board', hint: 'A scoreboard as the crowd met it. The lamps do not snap on and off: they swell and die away.' },
+    { id: 'lamps', kind: 'detail', label: 'Go close to the lamps', hint: 'Ordinary bulbs, each in its own cell of the baffle so that its light does not spill on to its neighbours.' },
+  ],
   'peppers-ghost': [{ id: 'seat', kind: 'person', label: 'Sit down' }],
   'stereoscope': [{ id: 'eyepiece', kind: 'person', label: 'Look in' }],
   'head-mounted': [{ id: 'worn', kind: 'person', label: 'Put it on' }],
