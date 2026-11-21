@@ -1,0 +1,283 @@
+import { pieceById } from './data/pieces';
+import { tourStops, type Stand, type Tour } from './data/tours';
+import { trailById } from './data/trails';
+import { esc } from './html';
+import { said, t, tx } from './i18n';
+import { clipOf, hush, keepVoice, speak, toursNow, voice, wantsVoice } from './tour';
+
+/**
+ * The guided tour in the walk: a dark band under the picture. On it are the stops of the tour along its line, the
+ * stop the tour is at, the keys that go to the stop before and the stop after, the switch for the guide's voice
+ * and the way out of the tour.
+ *
+ * The visitor moves the tour on. Asking for a stop carries them to it and the guide begins. The guide is never cut
+ * off by walking: a visitor who strolls to another stop while she speaks hears her out, and she takes up that stop
+ * when she has finished. With her voice switched off, or where a language has no recording, the tour is the same
+ * tour to read.
+ *
+ * While no tour is being taken and the language tells one, the band is a single quiet row that offers it.
+ */
+export interface GuideHooks {
+  /** Carry the visitor to a stop, to the place the tour stands them at. */
+  goTo(piece: string, stand?: Stand): void;
+  /** The visitor asked for a tour, with a click. */
+  enter(tour: string): void;
+  /** The visitor asked to leave the tour. */
+  leave(): void;
+  /** The tour is at another part, or there is no tour any more. */
+  onPart(): void;
+  /** A key of the band was pressed: the walk starts if it had not. */
+  onKey(): void;
+}
+export interface Guide {
+  /** The tour being taken, if one is, and the part it is at. */
+  readonly tour: Tour | undefined;
+  readonly part: string;
+  /** Take up a tour at one of its parts, or put the tour down. `say` starts the guide, which the first time only a click may do. */
+  take(tour: Tour | undefined, part?: string, say?: boolean): void;
+  /** The visitor is in front of another piece, or of none. */
+  arrive(piece?: string): void;
+  /** One stop on or back, from a key of the keyboard. Says whether a tour took the step. */
+  step(by: 1 | -1): boolean;
+  /** Have the guide speak at the part the tour is on. For the button that starts the walk. */
+  say(): void;
+  close(): void;
+}
+
+const ICON = {
+  prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 5H8v14H5.5zM19 5v14l-9.5-7z"/></svg>',
+  next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2.5v14H16zM5 5l9.5 7L5 19z"/></svg>',
+  play: '<svg class="guide__ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4.5v15L20 12z"/></svg>',
+  pause: '<svg class="guide__ic-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 5h4v14h-4zM13.5 5h4v14h-4z"/></svg>',
+};
+const clock = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+
+export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
+  const a = voice();
+  let tour: Tour | undefined, at = 'start', here = '', closed = false;
+  /** The stop a key has just sent the visitor to. Until they are there, the pieces they pass are not arrivals. */
+  let aiming = '', aimed = 0;
+  let sound = wantsVoice();
+  /** Whether the visitor has opened or shut the guide's words themselves. Until they do, the words are open when there is nothing to hear. */
+  let words: boolean | undefined, setting = false;
+  const fetched = new Set<string>();
+
+  const told = () => said.tour(tour!)!;
+  const index = () => tour!.parts.findIndex((p) => p.id === at);
+  const clip = () => (tour ? clipOf(tour, at) : '');
+  /** The player holds the recording of the part the tour is at. */
+  const mine = () => { const url = clip(); return !!url && a.src === url; };
+  /** The guide is in the middle of this part: speaking, or stopped part of the way through it. */
+  const busy = () => sound && mine() && !a.ended && (!a.paused || a.currentTime > 0);
+  const $ = <T extends HTMLElement>(sel: string) => root.querySelector<T>(sel)!;
+
+  /** Draw the band for the tour being taken, or the row that offers one, or nothing. */
+  const draw = () => {
+    root.classList.toggle('is-on', !!tour);
+    if (!tour) {
+      const offer = toursNow().find((x) => trailById(x.id));
+      root.hidden = !offer;
+      for (const name of ['data-playing', 'data-told', 'data-last', 'data-voice', 'data-voices']) root.removeAttribute(name);
+      root.style.removeProperty('--trail');
+      root.innerHTML = offer
+        ? `<div class="guide__invite"><p class="guide__name"><span>${tx('tour.label')}</span><b>${esc(said.tour(offer)!.title)}</b></p><button type="button" class="btn guide__start" data-guide="enter" data-tour="${offer.id}">${tx('tour.start')}</button></div>`
+        : '';
+      return;
+    }
+    const stops = tourStops(tour), any = tour.parts.some((p) => clipOf(tour!, p.id));
+    root.hidden = false;
+    root.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
+    root.dataset.voices = any ? 'some' : 'none';
+    root.innerHTML = `
+<div class="guide__line" role="group" aria-label="${tx('tour.line')}">${tour.parts.map((p) => { const n = stops.indexOf(p) + 1, title = told().parts[p.id].title; return `<button type="button" class="guide__dot${n ? '' : ' guide__dot--cap'}" data-guide="part" data-part="${p.id}" aria-label="${esc(n ? `${n}. ${title}` : title)}" title="${esc(n ? `${n}. ${title}` : title)}"><i></i></button>`; }).join('')}</div>
+<div class="guide__now">
+  <div class="guide__what">
+    <p class="guide__no" aria-live="polite"></p>
+    <h2 class="guide__title" aria-live="polite"></h2>
+    <p class="guide__place"></p>
+  </div>
+  <div class="guide__side">
+    <div class="guide__keys">
+      <button type="button" class="guide__key" data-guide="prev" aria-label="${tx('tour.prev')}" title="${tx('tour.prev')}">${ICON.prev}</button>
+      <button type="button" class="guide__key guide__key--play" data-guide="play">${ICON.play}${ICON.pause}</button>
+      <button type="button" class="guide__key guide__key--next" data-guide="next" aria-label="${tx('tour.next')}" title="${tx('tour.next')}"><span aria-hidden="true">${tx('tour.next')}</span>${ICON.next}</button>
+    </div>
+    <p class="guide__time" aria-hidden="true"></p>
+  </div>
+</div>
+<div class="guide__more">
+  <button type="button" class="switch" role="switch" data-guide="sound" aria-checked="${sound}"><span class="switch__track"><span class="switch__knob"></span></span><span>${tx('tour.sound')}</span></button>
+  <button type="button" class="btn guide__leave" data-guide="leave">${tx('tour.leave')}</button>
+</div>
+<details class="guide__words"><summary>${tx('tour.words')}</summary><div class="guide__text"></div><p class="guide__whole"><a href="#words-${tour.id}">${tx('tour.whole')}</a></p></details>`;
+  };
+
+  /** Show the part the tour is at. */
+  const show = () => {
+    if (!tour) return;
+    const stops = tourStops(tour), part = told().parts[at], n = stops.findIndex((s) => s.id === at) + 1, piece = n ? pieceById(at) : undefined, i = index();
+    $('.guide__no').textContent = n ? t('tour.stop', { n, total: stops.length }) : `${t('tour.label')}: ${told().title}`;
+    $('.guide__title').textContent = part.title;
+    $('.guide__place').innerHTML = piece ? `<a href="#piece-${piece.id}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
+    $('.guide__text').innerHTML = part.text.map((p) => `<p>${esc(p)}</p>`).join('');
+    root.querySelectorAll<HTMLButtonElement>('.guide__dot').forEach((dot, k) => {
+      dot.classList.toggle('is-past', k < i); dot.classList.toggle('is-now', k === i);
+      if (k === i) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');
+      dot.style.removeProperty('--played');
+    });
+    $<HTMLButtonElement>('[data-guide="prev"]').disabled = i <= 0;
+    $<HTMLButtonElement>('[data-guide="next"]').disabled = i >= tour.parts.length - 1;
+    root.toggleAttribute('data-last', i >= tour.parts.length - 1);
+    // the player is given the recording of this part, so that its length shows before it is played
+    const url = clip();
+    if (sound && url && !mine() && a.paused) a.src = url;
+    sync();
+    const box = $<HTMLDetailsElement>('.guide__words'), open = words ?? !(sound && url);
+    if (box.open !== open) { setting = true; box.open = open; }
+  };
+
+  /** Bring the keys, the time left and the line up to date with the player. */
+  const sync = () => {
+    if (!tour || closed) return;
+    const has = !!clip(), on = mine() && !a.paused && !a.ended;
+    root.dataset.voice = !has ? 'none' : sound ? 'on' : 'off';
+    root.toggleAttribute('data-playing', on);
+    root.toggleAttribute('data-told', mine() && a.ended);
+    const key = root.querySelector<HTMLButtonElement>('[data-guide="play"]');
+    if (!key) return;
+    key.setAttribute('aria-label', t(on ? 'tour.pause' : 'tour.play')); key.title = t(on ? 'tour.pause' : 'tour.play');
+    const long = mine() && Number.isFinite(a.duration) ? a.duration : 0, done = mine() ? a.currentTime : 0;
+    $('.guide__time').textContent = long && sound ? `−${clock(Math.max(0, long - done))}` : '';
+    // while she speaks, the line grows from this stop towards the next
+    root.querySelector<HTMLElement>('.guide__dot.is-now')?.style.setProperty('--played', long ? (a.ended ? 1 : Math.min(1, done / long)).toFixed(3) : '0');
+  };
+
+  const say = () => {
+    if (!tour || !sound || !clip()) return;
+    const part = told().parts[at];
+    void speak(tour, at).then(() => sync());
+    sync();
+    try {
+      if ('mediaSession' in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: part.title, album: told().title, artist: t('site.name') });
+    } catch { /* the lock screen goes without */ }
+  };
+
+  /** Go to a part because the visitor asked for it: the tour moves there, they are carried to its stop, and the guide begins. */
+  const go = (id: string) => {
+    if (!tour || !tour.parts.some((p) => p.id === id)) return;
+    at = id;
+    const stops = tourStops(tour), last = stops[stops.length - 1];
+    // the closing words are said at the last stop, and leave alone a visitor who is looking round it
+    const stop = stops.find((s) => s.id === id) ?? (id === 'end' && here !== last?.id ? last : undefined);
+    if (stop) { aiming = stop.id; window.clearTimeout(aimed); aimed = window.setTimeout(() => { aiming = ''; }, 3600); hooks.goTo(stop.id, stop.stand); }
+    show();
+    if (sound && clip()) say(); else hush();
+    hooks.onPart();
+  };
+
+  /** The visitor has walked up to another stop: the tour goes with them, unless the guide is in the middle of a part. */
+  const keepUp = () => {
+    if (!tour || !here || here === at || aiming || busy()) return;
+    const stops = tourStops(tour);
+    if (!stops.some((s) => s.id === here) || (at === 'end' && here === stops[stops.length - 1].id)) return;
+    at = here;
+    show(); say();
+    hooks.onPart();
+  };
+
+  const onClick = (e: MouseEvent) => {
+    const el = (e.target as Element).closest<HTMLElement>('[data-guide]');
+    if (!el || !root.contains(el)) return;
+    const what = el.dataset.guide;
+    if (what === 'enter') return hooks.enter(el.dataset.tour!);
+    if (!tour) return;
+    if (what === 'leave') return hooks.leave();
+    if (what === 'sound') {
+      sound = !sound; keepVoice(sound);
+      el.setAttribute('aria-checked', String(sound));
+      if (sound) { show(); say(); } else { hush(); show(); keepUp(); }
+      return;
+    }
+    hooks.onKey();
+    const i = index();
+    if (what === 'prev' && i > 0) go(tour.parts[i - 1].id);
+    if (what === 'next' && i < tour.parts.length - 1) go(tour.parts[i + 1].id);
+    if (what === 'part') go(el.dataset.part!);
+    if (what === 'play') { if (mine() && !a.paused && !a.ended) hush(); else say(); }
+  };
+  const onToggle = (e: Event) => {
+    const box = e.target as HTMLDetailsElement;
+    if (!box.matches?.('details.guide__words')) return;
+    if (setting) setting = false; else words = box.open;
+  };
+  const onEnded = () => { sync(); keepUp(); };
+  /** Once she is speaking, the recording of the next part is fetched, so that it starts without a wait. */
+  const onPlaying = () => {
+    sync();
+    if (!tour || !mine() || (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return;
+    const next = tour.parts[index() + 1], url = next ? clipOf(tour, next.id) : '';
+    if (url && !fetched.has(url)) { fetched.add(url); void fetch(url).catch(() => undefined); }
+  };
+
+  root.addEventListener('click', onClick);
+  root.addEventListener('toggle', onToggle, true);
+  for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.addEventListener(name, sync);
+  a.addEventListener('ended', onEnded);
+  a.addEventListener('playing', onPlaying);
+  try {
+    navigator.mediaSession?.setActionHandler('previoustrack', () => { guide.step(-1); });
+    navigator.mediaSession?.setActionHandler('nexttrack', () => { guide.step(1); });
+  } catch { /* a headset's keys go without */ }
+
+  const guide: Guide = {
+    get tour() { return tour; },
+    get part() { return at; },
+    take(next, part = 'start', speakNow = false) {
+      if (closed) return;
+      if (!next || !said.tour(next)) {
+        if (tour) hush();
+        tour = undefined; aiming = ''; window.clearTimeout(aimed);
+        draw();
+        return;
+      }
+      const fresh = next !== tour;
+      tour = next; at = next.parts.some((p) => p.id === part) ? part : 'start';
+      if (fresh) { words = undefined; draw(); }
+      const stops = tourStops(next), last = stops[stops.length - 1];
+      const stop = stops.find((s) => s.id === at) ?? (at === 'end' ? last : undefined);
+      // at a stop, the visitor is stood where the tour stands them
+      if (stop && (stop.stand || here !== stop.id)) hooks.goTo(stop.id, stop.stand);
+      show();
+      if (speakNow) say();
+      hooks.onPart();
+    },
+    arrive(piece) {
+      here = piece ?? '';
+      if (aiming) { if (here === aiming) { aiming = ''; window.clearTimeout(aimed); } return; }
+      keepUp();
+    },
+    step(by) {
+      if (!tour) return false;
+      const to = tour.parts[index() + by];
+      if (to) { hooks.onKey(); go(to.id); }
+      return true;
+    },
+    say,
+    close() {
+      closed = true;
+      hush();
+      window.clearTimeout(aimed);
+      root.removeEventListener('click', onClick);
+      root.removeEventListener('toggle', onToggle, true);
+      for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.removeEventListener(name, sync);
+      a.removeEventListener('ended', onEnded);
+      a.removeEventListener('playing', onPlaying);
+      try {
+        navigator.mediaSession?.setActionHandler('previoustrack', null);
+        navigator.mediaSession?.setActionHandler('nexttrack', null);
+      } catch { /* nothing was set */ }
+    },
+  };
+  draw();
+  return guide;
+}

@@ -109,10 +109,21 @@ before the first stop, a part for each stop of the trail, and a few words at the
 written to be spoken, and it adds no facts to the labels: everything in it is on the label
 of the piece it is told at. What it adds is the thread from one stop to the next.
 
-The tour has a page of its own, `#tour-women`, and in the walk the guide's words appear as
-the visitor reaches each stop of the trail. A language offers a tour only when it tells all
-of it, and the translations are in the PO files with everything else. A tour marked `draft`
-is not linked from anywhere. Its own address opens it, and shows that visitor the rest.
+A tour is taken in the walk. Its address is `#tour-women`, or `#tour-women-microled` for
+one of its stops, and following the trail in the walk takes up the tour too. A band under
+the picture (`src/guide.ts`) shows the stops along the line, carries the visitor to the stop
+before or after, and has the guide speak there. The visitor can switch her voice off and
+read the same words, and can leave the tour and go on walking. A phone gives a tour the
+whole screen. The words of the whole tour are also on one page, `#words-women`.
+
+A stop may say where the tour stands the visitor (`stand` in the tour's data), when the
+usual place in front of the block is too far back to show what the guide points at. The
+tour is written for the walk: it names only what a visitor in the halls can see or press.
+
+A language offers a tour only when it tells all of it, and the translations are in the PO
+files with everything else. In the other languages the tour's address opens the walk on its
+trail. A tour marked `draft` is not linked from anywhere. Its own address opens it, and
+shows that visitor the rest.
 
 ### Having a tour spoken
 
@@ -134,7 +145,11 @@ tour and that the model can speak. The workflow **Tour audio** runs it:
 
 The site offers a recording only beside the very words it was made from. When a part is
 reworded it falls silent until the workflow is run again, and only that part is recorded
-again. The words are always on the page, so the tour works without sound.
+again. The words are always there to read, so the tour works without sound.
+
+One player says every part (`voice` in `src/tour.ts`). A browser lets a page start a sound
+only from a click, and remembers it for the player the sound was started on. So the click
+that takes up a tour, on a link or on a button, starts the guide then and there.
 
 ## Archive pictures
 

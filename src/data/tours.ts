@@ -9,7 +9,14 @@ import { trailById, type Trail } from './trails';
  * `parts` begins with `start`, ends with `end`, and has one part for each stop of the trail, in order, under
  * the id of the piece. The check holds it to that.
  */
-export interface TourPart { id: string; title: string; text: string[] }
+/**
+ * Where the tour stands the visitor in the walk, for a stop whose usual place in front of the block is too far
+ * back to show what the guide points at. `wide` is how much of the block's width to fill the picture with, in
+ * metres: the block is 2.2 across, and less than that is a nearer look. `aim` is how far above the top of the block
+ * to look, in metres.
+ */
+export interface Stand { wide?: number; aim?: number }
+export interface TourPart { id: string; title: string; text: string[]; stand?: Stand }
 export interface Tour {
   id: Trail['id']; title: string; lead: string; parts: TourPart[];
   /** Not announced yet: no page links to it. Its own address opens it, and from then on that visitor is shown the rest. */
@@ -27,13 +34,13 @@ export const tours: Tour[] = [
         'Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors.',
         'The picture is made of something different at every stop. It starts with pins, at the braille display in hall 1.',
       ] },
-      { id: 'braille-display', title: 'Read by touch', text: [
+      { id: 'braille-display', title: 'Read by touch', stand: { wide: 2.1, aim: 0.2 }, text: [
         'This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right: they change every second.',
         'Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Oleg and Andrée Tretiakoff patented this way of raising the dots. They filed first in France, in 1974.',
         'It is the only piece in the museum that needs no light at all. Every other display on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow.',
       ] },
       { id: 'cathode-ray-tube', title: 'A beam that draws', text: [
-        'Press the button marked Sit in front. The bright band moving down the screen is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam.',
+        'Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam.',
         'In 1927, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked beside him in his laboratories. Her face was among the first that his system sent.',
         'In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps.',
       ] },
@@ -42,7 +49,7 @@ export const tours: Tour[] = [
         'Hongxing Jiang and Jingyu Lin are physicists and a married couple. The idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre? In 2000, at Kansas State University, they made the first microLEDs.',
         'Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps.',
       ] },
-      { id: 'quantum-dot', title: 'Colour from size', text: [
+      { id: 'quantum-dot', title: 'Colour from size', stand: { wide: 1.6, aim: 0.45 }, text: [
         'This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour.',
         'The crystals are called quantum dots. The model shows what most screens do with them. In 1994, at Berkeley, Vicki Colvin, M. C. Schlamp and Paul Alivisatos took another route: they made a layer of dots glow by passing a current through it. Colvin is the first author of the paper.',
         'The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes it, and the display shapes it. Go to the scanned laser.',
@@ -73,7 +80,7 @@ export const tours: Tour[] = [
         'Elizabeth Downing, Lambertus Hesselink, John Ralston and Roger Macfarlane drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996. Downing is the first author. The last stop is holography, in hall 7.',
       ] },
       { id: 'holography', title: 'The light itself', text: [
-        'Look through the glass plate. A toy engine seems to stand behind it. Turn the model, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did.',
+        'Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did.',
         'Dennis Gabor invented holography in 1948. Margaret Benyon, a painter, made holograms as art from 1968 and showed them a year later. A hologram like this one is static. In 1989 the first holographic video display was built in the group of Stephen Benton at the MIT Media Lab. Mary Lou Jepsen set out its design in her thesis of that year.',
       ] },
       { id: 'end', title: 'The end of the green line', text: [

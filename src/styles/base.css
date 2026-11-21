@@ -482,8 +482,80 @@ h1, h2, h3 { text-wrap: balance; }
 .tour__words p { margin: 0; }
 .tour__words p + p { margin-top: .75em; }
 details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom: 8px; }
-.guide { margin: 10px 12px 2px; padding: 12px 14px 10px; border: 1px solid var(--ink); max-width: 66ch; }
-.guide[hidden], .walk.is-full .guide { display: none; }
-.guide .tour__title { font-size: 1.15rem; line-height: 1.2; }
-.guide__end { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
-.guide__more { margin: 10px 0 0; font-size: .88rem; }
+/* ---------- a guided tour in the walk: the band under the picture ---------- */
+.guide { --trail: #1f9d55; --band: #14171a; --band-ink: #e8e9e3; }
+.guide[hidden] { display: none; }
+/* a tour is on offer: one quiet row, marked with a length of its line */
+.guide__invite { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; padding: 10px 12px 0; }
+.guide__name { display: flex; align-items: baseline; gap: 4px 8px; flex-wrap: wrap; font-size: .95rem; line-height: 1.25; }
+.guide__name::before { content: ""; flex: none; align-self: center; width: 26px; height: 4px; border-radius: 2px; background: var(--trail); }
+.guide__start { margin-left: auto; background: var(--ink); color: var(--wash); }
+.guide__start:hover { background: var(--wash); color: var(--ink); }
+.walk.is-full .guide:not(.is-on) { display: none; }
+/* a tour is being taken. The band is the same dark enamel by day and by night */
+.guide.is-on { background: var(--band); color: var(--band-ink); padding: 4px 12px 10px; }
+:root[data-lights="off"] .guide.is-on { box-shadow: inset 0 1px 0 #2b2e2c, inset 0 -1px 0 #2b2e2c; }
+/* the stops along the line, as on the map of a railway line. What lies behind is solid, what lies ahead is faint */
+.guide__line { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; height: 34px; margin: 0 -12px; }
+.guide__dot { appearance: none; position: relative; min-width: 0; padding: 0; border: 0; background: none; cursor: pointer; --faint: color-mix(in srgb, var(--trail) 42%, var(--band)); }
+.guide__dot::after { content: ""; position: absolute; left: 50%; top: 50%; width: 100%; height: 4px; margin-top: -2px; background: var(--faint); }
+.guide__dot:last-child::after { display: none; }
+.guide__dot.is-past::after { background: var(--trail); }
+.guide__dot.is-now::after { background: linear-gradient(to right, var(--trail) calc(var(--played, 0) * 100%), var(--faint) 0); }
+.guide__dot i { position: absolute; left: 50%; top: 50%; z-index: 1; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--band); box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--trail) 70%, var(--band)); }
+.guide__dot--cap i { width: 5px; height: 16px; margin: -8px 0 0 -2.5px; border-radius: 1px; background: color-mix(in srgb, var(--trail) 70%, var(--band)); box-shadow: none; }
+.guide__dot.is-past i { background: var(--trail); box-shadow: none; }
+.guide__dot.is-now i { width: 18px; height: 18px; margin: -9px 0 0 -9px; background: var(--band-ink); box-shadow: inset 0 0 0 4px var(--trail); }
+.guide__dot--cap.is-now i { width: 8px; height: 20px; margin: -10px 0 0 -4px; background: var(--band-ink); box-shadow: inset 0 0 0 2.5px var(--trail); }
+@media (hover: hover) { .guide__dot:hover i { background: var(--band-ink); } }
+.guide__dot:focus-visible { outline-offset: -3px; }
+.guide__now { display: flex; align-items: flex-start; gap: 12px; }
+.guide__what { flex: 1; min-width: 0; }
+.guide__no, .guide__time { font: .78rem/1.3 var(--mono); color: color-mix(in srgb, var(--band-ink) 78%, var(--band)); }
+.guide__title { margin: 2px 0 3px; font: 800 1.6rem/1 var(--display); letter-spacing: .01em; text-transform: uppercase; overflow-wrap: anywhere; }
+.guide__place { font-size: .86rem; line-height: 1.3; }
+/* the keys, and under them how much of this part she has still to say */
+.guide__side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; padding-top: 2px; }
+.guide__time { min-height: 1.3em; }
+.guide__keys { display: flex; gap: 6px; }
+.guide__key { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 46px; height: 46px; padding: 0 11px; border: 1.5px solid currentColor; border-radius: 4px; background: none; color: inherit; font-weight: 700; font-size: .84rem; line-height: 1.1; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.guide__key svg { flex: none; width: 20px; height: 20px; fill: currentColor; }
+.guide__key span { display: none; }
+@media (min-width: 720px) { .guide__key--next { padding: 0 12px 0 14px; } .guide__key span { display: inline; } }
+.guide__key:active { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); }
+@media (hover: hover) { .guide__key:hover { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); } }
+.guide__key:disabled { opacity: .35; pointer-events: none; }
+.guide__ic-pause, .guide[data-playing] .guide__ic-play { display: none; }
+.guide[data-playing] .guide__ic-pause { display: block; }
+/* she has said this part: the way on is lit, and after the closing words the way out */
+.guide[data-told] .guide__key--next:not(:disabled), .guide[data-told][data-last] .guide__leave { background: var(--trail); border-color: var(--trail); color: var(--band); }
+.guide[data-voice="off"] .guide__key--play, .guide[data-voice="none"] .guide__key--play, .guide[data-voices="none"] [data-guide="sound"] { display: none; }
+.guide__more { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; margin-top: 10px; }
+.guide .switch { color: inherit; }
+.guide .switch__track { background: var(--band-ink); box-shadow: none; }
+.guide .switch__track::before, .guide .switch__track::after { color: var(--band); }
+.guide__leave { margin-left: auto; border-color: currentColor; background: none; color: inherit; }
+.guide .guide__leave:hover { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); }
+.guide__words { margin-top: 6px; }
+.guide__words > summary { cursor: pointer; padding: 6px 0 4px; font-weight: 600; font-size: .9rem; }
+.guide__text { max-width: 66ch; padding-top: 4px; line-height: 1.5; }
+.guide__text p + p { margin-top: .7em; }
+.guide__whole { margin: 10px 0 2px; font-size: .88rem; }
+.walk.is-full .guide__words[open] .guide__text { max-height: 30vh; overflow: auto; overscroll-behavior: contain; }
+/* in a tour the band's keys go from stop to stop, so the buttons that go from piece to piece stand down */
+.walk.is-toured [data-walk="prev"], .walk.is-toured [data-walk="next"] { display: none; }
+/* on a wide screen the words open on the left of the band, beside the switch and the way out */
+@media (min-width: 720px) {
+  .guide.is-on { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; }
+  .guide__line, .guide__now { grid-column: 1 / -1; }
+  .guide__words { grid-column: 1; grid-row: 3; margin-top: 8px; }
+  .guide__more { grid-column: 2; grid-row: 3; align-self: start; flex-wrap: nowrap; }
+}
+@media (min-width: 620px) { .walk.is-toured:not(.is-full) .walk__view { max-height: max(300px, calc(100vh - 400px)); } }
+/* a phone that gives a tour the whole screen keeps the picture, the band and the last row of buttons */
+@media (max-width: 619px) {
+  .walk.is-full.is-toured :is(.walk__where, .walk__plan, .walk__goto) { display: none; }
+  .walk.is-full:has(.guide__words[open]) .walk__pad { display: none; }
+}
+@media (max-height: 540px) { .walk.is-full.is-toured :is(.walk__where, .walk__plan, .guide__line) { display: none; } }
+@media (prefers-reduced-motion: no-preference) { .guide__dot i { transition: width .2s ease, height .2s ease, margin .2s ease; } }

@@ -38,6 +38,8 @@ export interface GalleryOptions {
   onRelease: () => void;
   /** The first time the visitor moves or looks. */
   onTouch: () => void;
+  /** N or P was pressed. The page may take the step on itself, and says so: a guided tour does. */
+  onStep?: (by: 1 | -1) => boolean;
 }
 
 const WALK = 1.6, RUN = 4.3, TURN = 1.25;
@@ -203,9 +205,20 @@ export class Gallery {
     this.glide = { pts, at, len, t: 0, T: Math.min(2.6, Math.max(0.55, 0.5 + len * 0.085, Math.abs(turn) * 0.45)), yaw0: this.yaw, yaw1: this.yaw + turn, pitch0: this.pitch, pitch1: pitch };
   }
 
-  goPiece(id: string, cut = false): void {
+  /**
+   * Stand the visitor in front of a piece. A guided tour may ask for a nearer place than the usual one, by saying
+   * how much of the block's width should fill the picture, and for a lower or higher gaze, where that is what
+   * shows the thing its guide is talking about.
+   */
+  goPiece(id: string, cut = false, how?: { wide?: number; aim?: number }): void {
     const p = plan.placeOf(id);
-    if (p) { this.goTo(plan.standing(p, this.back), this.tilt(), cut); this.aimed = p.no; }
+    if (!p) return;
+    // how much is seen to either side of the middle of the picture, for each metre of distance
+    const reach = Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2)) * this.camera.aspect;
+    // never nearer than a body can stand to the block, and never further than the usual place
+    const back = how?.wide ? Math.min(this.back, Math.max(plan.BLOCK / 2 + 0.65, 0.4 + how.wide / 2 / reach)) : this.back;
+    this.goTo(plan.standing(p, back), how ? Math.atan2(TOP + (how.aim ?? 0.62) - (plan.FLOOR + plan.EYE), back) : this.tilt(), cut);
+    this.aimed = p.no;
   }
   goHall(n: number, cut = false): void { if (plan.bayOf(n)) { const at = plan.arrival(n); this.goTo(at, at.pitch ?? 0, cut); } }
   /** The pieces that Next and Previous stop at: a trail's, or with nothing given every piece. */
@@ -243,8 +256,8 @@ export class Gallery {
     const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
     if (KEYS[k] || k === 'Shift') { this.keys.add(k); this.owed = 4; if (KEYS[k]) { e.preventDefault(); this.stir(); } return; }
     if (e.repeat) { if (k === 'PageDown' || k === 'PageUp') e.preventDefault(); return; }
-    if (k === 'n' || k === 'PageDown') this.next(1);
-    else if (k === 'p' || k === 'PageUp') this.next(-1);
+    if (k === 'n' || k === 'PageDown') { if (!this.o.onStep?.(1)) this.next(1); }
+    else if (k === 'p' || k === 'PageUp') { if (!this.o.onStep?.(-1)) this.next(-1); }
     else if (k >= '1' && k <= String(plan.bays.length)) this.goHall(Number(k));
     else if (k === 'Enter') { if (this.here.piece) this.o.onOpen(this.here.piece); }
     else if (k === 'Escape') { this.keys.clear(); this.o.onRelease(); }

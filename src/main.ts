@@ -11,8 +11,8 @@ import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
 import { trails } from './data/trails';
-import { tourById } from './data/tours';
-import { keepTrail, preview, tourPageHtml, toursNow } from './tour';
+import { tourById, tourStops, type Tour } from './data/tours';
+import { greet, hush, justAsked, keepTrail, preview, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -43,6 +43,9 @@ const switchHtml = () => `<button type="button" class="switch" role="switch" ari
 document.addEventListener('click', (e) => {
   const t = e.target as HTMLElement;
   if (t.closest('[data-lights-switch]')) setLights(!lightsOn);
+  // a link into a guided tour, followed in this window: the guide may begin, since only a click lets a page start a voice
+  const into = t.closest<HTMLAnchorElement>('a[href^="#tour-"]');
+  if (into && !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) greet(into.hash);
   // the skip link shares the address bar with the router, so handle it here
   if (t.closest('a[href="#main"]')) { e.preventDefault(); document.getElementById('main')?.focus(); }
 });
@@ -145,7 +148,7 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a>${toursNow().map((tour) => `<a class="btn" href="#tour-${tour.id}">${tx('tour.label')}: ${esc(said.tour(tour)!.title)}</a>`).join('')}</p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a>${toursNow().map((tour) => `<a class="btn" href="${tourHash(tour)}">${tx('tour.label')}: ${esc(said.tour(tour)!.title)}</a>`).join('')}</p>
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -264,7 +267,7 @@ function peopleView(): void {
   <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
   <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${pill('women', tx('people.women'))}</fieldset></form>
   <p class="count" id="who-count" role="status"></p>
-  <p class="ways" id="who-walk" hidden><a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a>${toursNow().filter((tour) => tour.id === trails[0]?.id).map((tour) => `<a class="btn" href="#tour-${tour.id}">${tx('tour.take')}</a>`).join('')}</p>
+  <p class="ways" id="who-walk" hidden>${toursNow().filter((tour) => tour.id === trails[0]?.id).map((tour) => `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a>`).join('') || `<a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a>`}</p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
 </div>`, undefined, 'people');
   const rows = document.getElementById('who-rows')!, tally = document.getElementById('who-count')!;
@@ -290,15 +293,13 @@ function peopleView(): void {
   draw();
 }
 
-// ---------- guided tour ----------
-function tourView(id: string): void {
+// ---------- the words of a guided tour, on one page ----------
+function wordsView(id: string): void {
   const tour = tourById(id);
   if (!tour || !said.tour(tour)) return notFound();
   if (tour.draft) preview();
   document.title = titled(said.tour(tour)!.title);
   shell(tourPageHtml(tour));
-  app.addEventListener('click', keepTrail);
-  leave = () => app.removeEventListener('click', keepTrail);
 }
 
 // ---------- piece ----------
@@ -627,9 +628,21 @@ function about(): void {
 }
 
 // ---------- walk: the whole museum in one hall ----------
-function walkView(start?: string): void {
-  document.title = titled(t('walk.title'));
+/**
+ * `toured` is a guided tour to take up in the halls, at one of its parts. In a language that does not tell the
+ * tour, its address opens the walk on the tour's trail.
+ */
+function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
+  if (toured) {
+    if (toured.tour.draft) preview();
+    const stops = tourStops(toured.tour);
+    start = toured.part === 'start' ? (said.tour(toured.tour) ? undefined : stops[0]?.id) : toured.part === 'end' ? stops[stops.length - 1]?.id : toured.part;
+  }
+  const title = (tour?: string) => { document.title = titled(tour ?? t('walk.title')); };
+  title(toured ? said.tour(toured.tour)?.title : undefined);
   const from = start ? pieceById(start) : undefined;
+  // the walk starts by itself where a mouse says the device can carry it, and for a visitor who has just asked for a tour
+  const asked = !!toured && justAsked(), auto = wants3d() && (asked || !matchMedia('(pointer: coarse)').matches);
   shell(`
 <div class="walkpage">
   <div class="hallhead walk__lead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('walk.title')}</span></h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
@@ -639,9 +652,9 @@ function walkView(start?: string): void {
   let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;
   const relight = (on: boolean) => hall?.setLights(on);
   lightListeners.add(relight);
-  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto: wants3d() && !matchMedia('(pointer: coarse)').matches, switchHtml: switchHtml() }); })
-    .catch(() => { host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
-  leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); };
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: switchHtml(), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title }); })
+    .catch(() => { hush(); host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
+  leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); hush(); };
 }
 
 function notFound(): void {
@@ -685,7 +698,7 @@ function route(): void {
   leave?.(); leave = null;
   // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
-  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), tour = /^tour-([a-z0-9-]+)$/.exec(name);
+  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), words = /^words-([a-z0-9-]+)$/.exec(name), toured = tourAt(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   // the workshop that photographs the pieces for the walk: `scripts/cutouts.mjs` drives it
@@ -697,7 +710,8 @@ function route(): void {
   else if (name === 'about') about();
   else if (name === 'people') peopleView();
   else if (walk) walkView(walk[1]);
-  else if (tour) tourView(tour[1]);
+  else if (toured) walkView(undefined, toured);
+  else if (words) wordsView(words[1]);
   else notFound();
   fitPlates();
   window.scrollTo(0, 0);

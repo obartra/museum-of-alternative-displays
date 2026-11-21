@@ -1118,7 +1118,55 @@ msgstr ""
 #: interface
 #. Interface.
 msgctxt "ui.tour.follow"
-msgid "Follow it in the halls"
+msgid "Take the tour in the halls"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.start"
+msgid "Start the tour"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.leave"
+msgid "Leave the tour"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.prev"
+msgid "Previous stop"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.next"
+msgid "Next stop"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.play"
+msgid "Hear the guide"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.pause"
+msgid "Pause the guide"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.sound"
+msgid "Audio guide"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.tour.line"
+msgid "The stops of the tour"
 msgstr ""
 
 #: interface
@@ -7958,7 +8006,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
-msgid "Press the button marked Sit in front. The bright band moving down the screen is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
+msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
 msgstr ""
 
 #: tour-women
@@ -8150,7 +8198,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
-msgid "Look through the glass plate. A toy engine seems to stand behind it. Turn the model, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
+msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
 msgstr ""
 
 #: tour-women
