@@ -30,7 +30,7 @@ export const h4: Piece[] = [
     ],
     good: ['Reflects, so it wastes little light and survives a powerful lamp', 'Switches in microseconds', 'A sealed chip with nothing to fade'],
     bad: ['Needs a lamp, a lens and a dark room: it is a projector part, not a screen', 'One-chip colour can break into rainbows', 'A single maker'],
-    look: 'The chip sits on the plinth with a patch of its mirrors enlarged above it, counting seconds. Mirrors tipped toward you look bright. The piece makes no light, so with the hall lights off it vanishes.',
+    look: 'The chip sits on the plinth with a patch of its mirrors enlarged above it, counting seconds. Mirrors tipped toward you look bright. The piece makes no light, so at night it vanishes.',
     dispute: 'Sources give both 1996 and 1997 for the first projector built around the chip.',
     sources: [wiki('Digital_Light_Processing', 'Digital Light Processing'), wiki('Digital_micromirror_device', 'Digital micromirror device')],
   },
@@ -91,7 +91,7 @@ export const h4: Piece[] = [
     ],
     good: ['Turns any object or building into a display without touching it', 'As large as the projectors you can bring'],
     bad: ['Needs darkness, or a great deal of projector', 'The illusion holds only while object and projector stay exactly where they were measured', 'Shadows wherever someone stands in the beam'],
-    look: 'White plaster shapes and a projector on a tripod. The picture is worked out from where the projector stands, so each solid gets its own pattern and nothing spills on to the floor. With the hall lights on it is barely there. Switch them off.',
+    look: 'White plaster shapes and a projector on a tripod. The picture is worked out from where the projector stands, so each solid gets its own pattern and nothing spills on to the floor. By day it is barely there. Switch them off.',
     sources: [src('paper', 'Raskar, Welch, Low and Bandyopadhyay, Shader Lamps (2001)', 'https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf'), src('press', 'The Illustrated History of Projection Mapping', 'https://projection-mapping.org/the-history-of-projection-mapping/'), wiki('Projection_mapping', 'Projection mapping')],
   },
 ];

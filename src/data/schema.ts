@@ -20,8 +20,6 @@ export interface Source {
 
 export interface Hall {
   id: HallId;
-  /** Old department name, in Czech. */
-  cz: string;
   name: string;
   was: string;
   intro: string;

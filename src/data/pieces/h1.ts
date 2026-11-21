@@ -30,7 +30,7 @@ export const h1: Piece[] = [
     ],
     good: ['Readable in direct sun, because it reflects light and makes none', 'Uses power only when the picture changes', 'Simple and rugged enough for buses and roadsides'],
     bad: ['Each dot is one colour or the other, nothing in between', 'Invisible at night unless something lights it', 'Discs stick, and a stuck disc is a wrong pixel until someone fixes it'],
-    look: 'The bottom row is a seconds bar that fills one disc at a time. Watch a column ripple when the minute changes, then switch the hall lights off: the board is still showing the time, you just cannot see it.',
+    look: 'The bottom row is a seconds bar that fills one disc at a time. Watch a column ripple when the minute changes, then switch the daylight off: the board is still showing the time, you just cannot see it.',
     sources: [wiki('Flip-disc_display')],
   },
   {

@@ -5,9 +5,11 @@ Fifty pieces in seven halls. Each one is a 3D model you can turn and zoom, with 
 surface running live, a plain account of how it makes an image, what it is good at, where
 it fails, and the sources.
 
-Muzeum alternativních displejů is imagined as a physical place first, a former picture-tube
-works, and the website follows that building: a floor plan, halls with enamel door plates,
-pieces on steel plinths, and one switch for the hall lights.
+The museum is imagined as a physical place first, and the website follows that building:
+a floor plan, halls with door plates, and one room that every piece is shown in. The room
+has a polished concrete floor that mirrors what stands on it, white walls, a cast concrete
+block for a stand, and tall windows that look across a Catalan town to Montserrat. Nothing
+lights it but those windows. One switch turns day into night.
 
 ## Rules of the collection
 
@@ -45,7 +47,8 @@ Node 22 or newer.
 | `src/three/kit.ts` | Materials and shapes shared by every model: glass, finishes, eased edges, glow, and portals for things seen through other things. |
 | `src/three/parts.ts` | Small hardware: screws, louvres, knobs, feet, lenses, posts, breadboards. |
 | `src/three/stage.ts` | The renderer, the camera and the piece on show. |
-| `src/three/room.ts` | The room around the piece: walls, floor, stand and lights. Four looks are built here (Works, Betong, Tehdas, Ljus) and the Room study chips on a piece page switch between them while the direction is being chosen. |
+| `src/three/room.ts` | The room around the piece: glazed walls, the mirroring floor, the cast block, and the sun and moon that light it. |
+| `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/art/` | The floor plan and the building drawings, generated as SVG. |
 | `src/main.ts` | Pages and routing. |
@@ -59,12 +62,13 @@ Node 22 or newer.
    List the sources you actually read.
 2. Add a builder to `src/three/models/hN.ts` and register it under the same id in
    `src/three/models/index.ts`. A builder returns a `Built`: a group, an optional per-frame
-   `update`, and how the piece behaves when the hall lights go off. If the piece was made to
+   `update`, and how the piece behaves when day turns to night. If the piece was made to
    be looked into or sat in front of, give it an `eye`: the page then offers a button that
    puts the visitor there.
 3. `npm run check`.
 
 To look at every model at once, open `#sheet` on the dev server, or `#sheet?lights=off`.
+To see the painted landscape on its own, open `#vista`.
 Add `&ids=a,b` for a few pieces, `&size=420` for bigger tiles, `&eye=1` for the eye views,
 or `&az=40&el=60` to look from any angle.
 

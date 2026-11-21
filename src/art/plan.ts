@@ -40,9 +40,8 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
       for (let cx = x + 104; cx < x + w; cx += 52) inner += `<circle cx="${cx}" cy="${y + hgt / 2}" r="1.6" fill="var(--ink-2)"/>`;
       inner += `<rect x="${x + 10}" y="${y + 12}" width="46" height="56" rx="3" fill="var(--h${h.id})"/>`;
       inner += `<text x="${x + 33}" y="${y + 59}" text-anchor="middle" class="plan__no" fill="${h.id === 4 || h.id === 5 ? '#14171a' : '#fff'}">${h.id}</text>`;
-      inner += `<text x="${x + 68}" y="${y + 36}" class="plan__cz" fill="var(--ink)">${esc(h.cz)}</text>`;
-      inner += `<text x="${x + 68}" y="${y + 53}" class="plan__en" fill="var(--ink-2)">${esc(h.name)}</text>`;
-      if (n) inner += `<text x="${x + 68}" y="${y + 68}" class="plan__en" fill="var(--ink-2)">${n} pieces</text>`;
+      inner += `<text x="${x + 68}" y="${y + 38}" class="plan__name" fill="var(--ink)">${esc(h.name)}</text>`;
+      if (n) inner += `<text x="${x + 68}" y="${y + 56}" class="plan__en" fill="var(--ink-2)">${n} pieces</text>`;
     } else {
       const fg = dark ? 'var(--wash)' : 'var(--ink)';
       if (h.id === 7) inner += `<circle cx="${x + w / 2}" cy="${y + hgt / 2}" r="24" fill="none" stroke="var(--ink-2)" stroke-width="1"/><path d="M${x + w / 2} ${y + hgt / 2} l17 -17 M${x + w / 2} ${y + hgt / 2} l24 0 M${x + w / 2} ${y + hgt / 2} l17 17 M${x + w / 2} ${y + hgt / 2} l0 24" stroke="var(--ink-2)" stroke-width="1"/>`;
@@ -50,9 +49,8 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
       inner += `<text x="${x + 21}" y="${y + 32}" text-anchor="middle" class="plan__no plan__no--s" fill="#fff">${h.id}</text>`;
       const ty = h.id === 6 ? y + 62 : y + hgt + 14;
       const tx = h.id === 6 ? x + 8 : x;
-      inner += `<text x="${tx}" y="${ty}" class="plan__cz" fill="${h.id === 6 ? fg : 'var(--ink)'}">${esc(h.cz)}</text>`;
-      inner += `<text x="${tx}" y="${ty + 15}" class="plan__en" fill="${h.id === 6 ? 'var(--line)' : 'var(--ink-2)'}">${esc(h.name)}</text>`;
-      if (n && h.id === 6) inner += `<text x="${tx}" y="${ty + 30}" class="plan__en" fill="var(--line)">${n} pieces</text>`;
+      inner += `<text x="${tx}" y="${ty}" class="plan__name" fill="${h.id === 6 ? fg : 'var(--ink)'}">${esc(h.name)}</text>`;
+      if (n && h.id === 6) inner += `<text x="${tx}" y="${ty + 15}" class="plan__en" fill="var(--line)">${n} pieces</text>`;
     }
     out.push(a(`hall/${h.id}`, `Hall ${h.id}, ${h.name}`, inner));
   }
@@ -69,13 +67,13 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
   // depot
   out.push(a('depot', 'The depot, an index of every piece',
     `<rect class="hit" x="252" y="344" width="88" height="88" fill="var(--wash-2)" stroke="var(--ink)" stroke-width="2" stroke-dasharray="7 4"/>` +
-    `<text x="260" y="366" class="plan__cz" fill="var(--ink)">Depozitář</text><text x="260" y="381" class="plan__en" fill="var(--ink-2)">Depot</text>` +
+    `<text x="260" y="366" class="plan__name" fill="var(--ink)">Depozitář</text><text x="260" y="381" class="plan__en" fill="var(--ink-2)">Depot</text>` +
     `<text x="260" y="396" class="plan__en" fill="var(--ink-2)">Every piece,</text><text x="260" y="409" class="plan__en" fill="var(--ink-2)">sortable</text>`));
 
   // gatehouse
   out.push(a('about', 'The gatehouse, about the museum',
     `<rect class="hit" x="164" y="462" width="64" height="40" fill="var(--plate)" stroke="var(--ink)" stroke-width="3"/>` +
-    `<text x="196" y="479" text-anchor="middle" class="plan__cz" fill="var(--ink)">Vrátnice</text><text x="196" y="493" text-anchor="middle" class="plan__en" fill="var(--ink-2)">About</text>`));
+    `<text x="196" y="479" text-anchor="middle" class="plan__name" fill="var(--ink)">Vrátnice</text><text x="196" y="493" text-anchor="middle" class="plan__en" fill="var(--ink-2)">About</text>`));
 
   // visitor route
   out.push(`<path d="M196 462 V72 H296 V222 M296 256 V293 M296 319 V344 M296 432 V448 H236" fill="none" stroke="var(--signal)" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round"/>`);
@@ -88,7 +86,7 @@ export function planSvg(link: (target: string) => string | null, counts: Record<
   out.push(`<g transform="translate(20 512)"><path d="M0 0 H80 M0 -4 V4 M40 -4 V4 M80 -4 V4" stroke="var(--ink)" stroke-width="1.2" fill="none"/><text x="0" y="16" class="plan__en" fill="var(--ink-2)">0</text><text x="34" y="16" class="plan__en" fill="var(--ink-2)">10</text><text x="72" y="16" class="plan__en" fill="var(--ink-2)">20 m</text></g>`);
 
   return `<svg class="plan" viewBox="0 0 360 540" role="group" aria-label="Floor plan of the museum. Seven halls, a depot and a gatehouse." xmlns="http://www.w3.org/2000/svg">
-<style>.plan__no{font:900 50px/1 var(--display)}.plan__no--s{font-size:27px}.plan__cz{font:700 13px/1 var(--text)}.plan__en{font:500 11.5px/1 var(--text)}</style>
+<style>.plan__no{font:900 50px/1 var(--display)}.plan__no--s{font-size:27px}.plan__name{font:700 13px/1 var(--text)}.plan__en{font:500 11.5px/1 var(--text)}</style>
 ${out.join('\n')}
 </svg>`;
 }

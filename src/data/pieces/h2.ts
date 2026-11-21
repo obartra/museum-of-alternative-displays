@@ -61,7 +61,7 @@ export const h2: Piece[] = [
     ],
     good: ['Fully formed numerals with real depth', 'Clear in a dim room, with a colour nothing else quite has'],
     bad: ['Shows only the ten shapes inside it', 'Needs about 170 volts', 'The digits at the back are seen through the ones in front'],
-    look: 'Turn a tube side on to see the stack of ten cathodes inside its mesh, and the one that is lit moving forward and back as the seconds count. Then switch the hall lights off and watch the glass pick up the glow.',
+    look: 'Turn a tube side on to see the stack of ten cathodes inside its mesh, and the one that is lit moving forward and back as the seconds count. Then switch the daylight off and watch the glass pick up the glow.',
     dispute: 'National Union sold a similar tube, the Inditron, in 1954, and glow-lamp numeral patents go back to the 1930s. David Hagelbarger is often named as the inventor.',
     sources: [wiki('Nixie_tube', 'Nixie tube')],
   },

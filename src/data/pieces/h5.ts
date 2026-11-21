@@ -30,7 +30,7 @@ export const h5: Piece[] = [
     ],
     good: ['Reads like print, best in bright light', 'Uses power only to change the page', 'Thin and able to flex'],
     bad: ['Slow: fine for pages, wrong for video', 'Needs a light at night', 'Colour versions lose brightness'],
-    look: 'The page resets every fifteen seconds with the full black and white flash. Then switch the hall lights off. The page is still there, and you cannot read a word.',
+    look: 'The page resets every fifteen seconds with the full black and white flash. Then switch the daylight off. The page is still there, and you cannot read a word.',
     sources: [src('paper', 'Comiskey, Albert, Yoshizawa and Jacobson, Nature (1998)', 'https://doi.org/10.1038/28349'), wiki('E_Ink', 'E Ink'), wiki('Electrophoretic_display', 'Electrophoretic display')],
   },
   {

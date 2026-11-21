@@ -1,16 +1,12 @@
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { THREE } from './kit';
+import { SUN, vista } from './vista';
 
 /**
  * The room a piece is shown in: walls, floor, the stand it sits on and the light that falls on it.
- * `works` is the original hall. The other three are studies for a colder, Nordic house:
- * cast concrete, white paint, steel, and one considered source of light each.
+ * A polished concrete floor, white walls, tall windows onto Montserrat, and no light but what
+ * comes through them: the sun by day, the moon and the town by night.
  */
-export type Look = 'works' | 'betong' | 'tehdas' | 'ljus';
-export const LOOKS: { id: Look; name: string }[] = [
-  { id: 'works', name: 'Works' }, { id: 'betong', name: 'Betong' }, { id: 'tehdas', name: 'Tehdas' }, { id: 'ljus', name: 'Ljus' },
-];
-
 export interface Room {
   group: THREE.Group;
   /** Hall lights, 0 to 1. */
@@ -24,6 +20,13 @@ export interface Room {
   walled: boolean;
   /** Told where the camera is, so that what hangs on a wall can go when the wall is looked through from behind. */
   seenFrom?: (camera: THREE.Camera) => void;
+  /** Whatever the room has to draw for itself before each picture: here, what a polished floor mirrors. */
+  prepare?: (renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera) => void;
+  /** What shiny things in this room reflect, where the stock studio would be wrong. */
+  surroundings?: THREE.Scene;
+  /** Where the light a piece gives off in the dark seems to come from, and how much of it this room shows. */
+  glow?: { at: [number, number, number]; gain: number };
+  dispose?: () => void;
 }
 
 /** Top of every stand. Pieces are set down here. */
@@ -59,111 +62,6 @@ function tex(canvas: HTMLCanvasElement, colour = true): THREE.CanvasTexture {
 
 interface Skin { map: HTMLCanvasElement; bump: HTMLCanvasElement; rough?: HTMLCanvasElement }
 
-/** In-situ concrete cast against boards: board lines, grain, tie holes, the stains below them, and bug holes. */
-function castConcrete(w: number, h: number, metres: number, seed: number, boards = 0.14, base = 150): Skin {
-  const r = rng(seed), ppm = w / metres;
-  const [map, c] = sheet(w, h), [bump, b] = sheet(w, h);
-  c.fillStyle = `rgb(${base - 3},${base},${base - 1})`; c.fillRect(0, 0, w, h);
-  b.fillStyle = grey(128); b.fillRect(0, 0, w, h);
-  mottle(c, w, h, r, [4, 9, 22], 0.5, 26); mottle(c, w, h, r, [60, 160, w / 3], 0.45, 30);
-  mottle(b, w, h, r, [40, 140], 0.4, 50);
-  if (boards > 0) {
-    const [g, gc] = sheet(256, 24), gi = gc.createImageData(256, 24);
-    for (let i = 0; i < 256 * 24; i++) { const v = 70 + r() * 120; gi.data[i * 4] = gi.data[i * 4 + 1] = gi.data[i * 4 + 2] = v; gi.data[i * 4 + 3] = 255; }
-    gc.putImageData(gi, 0, 0);
-    for (let y = 0; y < h; y += boards * ppm) {
-      const bh = boards * ppm, tone = r();
-      c.fillStyle = tone > 0.5 ? `rgba(255,255,255,${(tone - 0.5) * 0.09})` : `rgba(0,0,0,${(0.5 - tone) * 0.11})`; c.fillRect(0, y, w, bh);
-      // the grain of the board, printed into the face
-      for (const ctx of [c, b]) { ctx.save(); ctx.globalAlpha = ctx === c ? 0.2 : 0.42; ctx.globalCompositeOperation = 'overlay'; ctx.drawImage(g, r() * 100, 0, 150, 24, 0, y, w, bh); ctx.restore(); }
-      c.fillStyle = 'rgba(0,0,0,.2)'; c.fillRect(0, y, w, 1.2); c.fillStyle = 'rgba(255,255,255,.13)'; c.fillRect(0, y + 1.2, w, 1.2);
-      b.fillStyle = grey(40, 0.75); b.fillRect(0, y, w, 1.6); b.fillStyle = grey(220, 0.5); b.fillRect(0, y + 1.6, w, 1.4);
-      for (let x = r() * 3 * ppm; x < w; x += (2.2 + r() * 2.4) * ppm) { c.fillStyle = 'rgba(0,0,0,.16)'; c.fillRect(x, y, 1.2, bh); b.fillStyle = grey(50, 0.6); b.fillRect(x, y, 1.5, bh); }
-    }
-  } else {
-    // smooth shutter: only the seams between panels
-    for (let x = 1.2 * ppm; x < w; x += 1.2 * ppm) { c.fillStyle = 'rgba(0,0,0,.1)'; c.fillRect(x, 0, 1.2, h); b.fillStyle = grey(60, 0.6); b.fillRect(x, 0, 1.6, h); }
-  }
-  // tie holes on a grid, and what the rain of fifty years would have done under them if this were outdoors
-  const tx = 0.9 * ppm, ty = 0.7 * ppm, hr = Math.max(2.2, 0.018 * ppm);
-  for (let y = ty * 0.55; y < h; y += ty) for (let x = tx * 0.5; x < w; x += tx) {
-    const drip = c.createLinearGradient(0, y, 0, y + ty * (0.5 + r() * 0.5));
-    drip.addColorStop(0, 'rgba(30,34,34,.07)'); drip.addColorStop(1, 'rgba(30,34,34,0)');
-    c.fillStyle = drip; c.fillRect(x - hr * (0.8 + r()), y, hr * (1.6 + r() * 2), ty);
-    c.fillStyle = 'rgba(255,255,255,.2)'; c.beginPath(); c.arc(x, y, hr * 1.5, 0, 7); c.fill();
-    c.fillStyle = 'rgba(28,30,30,.82)'; c.beginPath(); c.arc(x, y, hr, 0, 7); c.fill();
-    b.fillStyle = grey(10); b.beginPath(); b.arc(x, y, hr, 0, 7); b.fill();
-  }
-  for (let i = 0; i < (w * h) / 900; i++) { const x = r() * w, y = r() * h, pr = 0.5 + r() * r() * 2.2; c.fillStyle = `rgba(40,42,42,${0.25 + r() * 0.4})`; c.beginPath(); c.arc(x, y, pr, 0, 7); c.fill(); b.fillStyle = grey(30, 0.9); b.beginPath(); b.arc(x, y, pr, 0, 7); b.fill(); }
-  mottle(b, w, h, r, [w / 2.5], 0.3, 70);
-  return { map, bump };
-}
-
-/** A wall under white paint. What is under the paint (block, brick or plaster) still shows in a raking light. */
-function painted(w: number, h: number, metres: number, seed: number, under: 'block' | 'brick' | 'plaster'): Skin {
-  const r = rng(seed), ppm = w / metres;
-  const [map, c] = sheet(w, h), [bump, b] = sheet(w, h);
-  c.fillStyle = '#e6e8e7'; c.fillRect(0, 0, w, h);
-  b.fillStyle = grey(150); b.fillRect(0, 0, w, h);
-  mottle(c, w, h, r, [3, 9], 0.3, 14);
-  // roller lanes
-  for (let x = 0; x < w;) { const lane = (0.2 + r() * 0.12) * ppm; c.fillStyle = r() > 0.5 ? `rgba(255,255,255,${r() * 0.05})` : `rgba(0,0,0,${r() * 0.025})`; c.fillRect(x, 0, lane, h); x += lane; }
-  const joint = (x: number, y: number, jw: number, jh: number) => {
-    for (const [grow, a] of [[2.4, 0.22], [1.2, 0.5], [0, 0.95]] as const) { b.fillStyle = grey(52, a); b.fillRect(x - grow, y - grow, jw + grow * 2, jh + grow * 2); }
-    c.fillStyle = 'rgba(0,0,0,.05)'; c.fillRect(x, y, jw, jh);
-  };
-  if (under !== 'plaster') {
-    const uw = (under === 'block' ? 0.6 : 0.225) * ppm, uh = (under === 'block' ? 0.2 : 0.075) * ppm, j = Math.max(1.6, 0.011 * ppm);
-    let row = 0;
-    for (let y = h; y > -uh; y -= uh, row++) {
-      const off = row % 2 ? uw / 2 : 0;
-      for (let x = -off; x < w; x += uw) {
-        // no two units sit quite flush, and each took the paint a little differently
-        const lift = 136 + r() * 34, tone = r();
-        b.fillStyle = grey(lift); b.fillRect(x, y - uh, uw, uh);
-        c.fillStyle = tone > 0.5 ? `rgba(255,255,255,${(tone - 0.5) * 0.07})` : `rgba(0,0,0,${(0.5 - tone) * 0.045})`; c.fillRect(x, y - uh, uw, uh);
-        joint(x, y - uh, j, uh);
-      }
-      joint(0, y - j / 2, w, j);
-    }
-    mottle(b, w, h, r, [w / 2.2], under === 'brick' ? 0.6 : 0.4, 80);
-  } else {
-    mottle(b, w, h, r, [6, 20, 70], 0.5, 40); mottle(b, w, h, r, [w / 3], 0.3, 60);
-    // the sweep of the float
-    for (let i = 0; i < 60; i++) { b.strokeStyle = grey(r() > 0.5 ? 190 : 110, 0.07); b.lineWidth = 6 + r() * 20; b.beginPath(); b.arc(r() * w, r() * h, (0.4 + r() * 0.9) * ppm, r() * 6, r() * 6 + 1.6); b.stroke(); }
-  }
-  // scuffs and the grey that creeps up from a floor that gets mopped
-  const grime = c.createLinearGradient(0, h - 0.35 * ppm, 0, h); grime.addColorStop(0, 'rgba(60,64,64,0)'); grime.addColorStop(1, 'rgba(60,64,64,.1)');
-  c.fillStyle = grime; c.fillRect(0, h - 0.35 * ppm, w, 0.35 * ppm);
-  for (let i = 0; i < 14; i++) { c.strokeStyle = `rgba(50,52,54,${0.03 + r() * 0.05})`; c.lineWidth = 1 + r() * 3; const x = r() * w, y = h - (0.1 + r() * 1.0) * ppm; c.beginPath(); c.moveTo(x, y); c.lineTo(x + (r() - 0.3) * 0.5 * ppm, y + (r() - 0.5) * 6); c.stroke(); }
-  return { map, bump };
-}
-
-/** A power-floated concrete floor: clouded, burnished in patches, cut into bays. */
-function slab(w: number, metres: number, seed: number, base = 132, chips = false): Skin {
-  const r = rng(seed), ppm = w / metres;
-  const [map, c] = sheet(w, w), [bump, b] = sheet(w, w), [rough, q] = sheet(w / 2, w / 2);
-  c.fillStyle = `rgb(${base - 2},${base},${base})`; c.fillRect(0, 0, w, w);
-  b.fillStyle = grey(128); b.fillRect(0, 0, w, w);
-  q.fillStyle = grey(chips ? 132 : 158); q.fillRect(0, 0, w / 2, w / 2);
-  mottle(c, w, w, r, [3, 7, 16, 40], 0.55, 30); mottle(c, w, w, r, [120, w / 3], 0.4, 26);
-  mottle(q, w / 2, w / 2, r, [4, 10, 26], 0.7, 30);
-  // the arcs the trowel left
-  for (let i = 0; i < 90; i++) { c.strokeStyle = r() > 0.5 ? `rgba(255,255,255,${0.015 + r() * 0.03})` : `rgba(0,0,0,${0.015 + r() * 0.035})`; c.lineWidth = (0.06 + r() * 0.3) * ppm; c.beginPath(); c.arc(r() * w, r() * w, (0.5 + r() * 1.4) * ppm, r() * 6, r() * 6 + 1 + r() * 1.5); c.stroke(); }
-  if (chips) for (let i = 0; i < w * 7; i++) { const v = r(); c.fillStyle = v > 0.6 ? `rgba(250,250,246,${0.3 + r() * 0.4})` : v > 0.25 ? `rgba(70,74,76,${0.25 + r() * 0.4})` : `rgba(150,128,104,${0.3 + r() * 0.3})`; const s = 0.8 + r() * r() * 3.4; c.fillRect(r() * w, r() * w, s, s * (0.6 + r() * 0.8)); }
-  mottle(b, w, w, r, [w / 2.5], 0.2, 60);
-  // saw cuts
-  const bay = 3 * ppm;
-  for (let p = bay / 2; p < w; p += bay) for (const upright of [true, false]) {
-    for (const [ctx, k] of [[c, 1], [b, 1], [q, 0.5]] as const) { ctx.fillStyle = ctx === q ? grey(235) : ctx === b ? grey(20) : 'rgba(22,24,24,.7)'; if (upright) ctx.fillRect(p * k - 1.2 * k, 0, 2.4 * k, w * k); else ctx.fillRect(0, p * k - 1.2 * k, w * k, 2.4 * k); }
-    c.fillStyle = 'rgba(255,255,255,.1)'; if (upright) c.fillRect(p + 1.3, 0, 1.2, w); else c.fillRect(0, p + 1.3, w, 1.2);
-  }
-  // hairline cracks, and a few things that were spilled
-  for (let i = 0; i < 3; i++) { let x = r() * w, y = r() * w; c.strokeStyle = 'rgba(30,32,32,.3)'; c.lineWidth = 0.8; c.beginPath(); c.moveTo(x, y); for (let k = 0; k < 40; k++) { x += (r() - 0.3) * 26; y += (r() - 0.5) * 22; c.lineTo(x, y); } c.stroke(); }
-  for (let i = 0; i < 9; i++) { const x = r() * w, y = r() * w, rad = (0.1 + r() * 0.3) * ppm, g = c.createRadialGradient(x, y, 0, x, y, rad); g.addColorStop(0, 'rgba(40,44,44,.1)'); g.addColorStop(1, 'rgba(40,44,44,0)'); c.fillStyle = g; c.fillRect(x - rad, y - rad, rad * 2, rad * 2); }
-  return { map, bump, rough };
-}
-
 /** Wear the surface with the skin. `across` and `up` are how many metres of wall one copy of the picture covers. */
 function wear(skin: Skin, size: [number, number], covers: [number, number], o: { bump?: number; rough?: number; metal?: number; tint?: number; fromFloor?: boolean } = {}): THREE.MeshStandardMaterial {
   const rep: [number, number] = [size[0] / covers[0], size[1] / covers[1]];
@@ -172,23 +70,6 @@ function wear(skin: Skin, size: [number, number], covers: [number, number], o: {
     map: fit(skin.map, true), bumpMap: fit(skin.bump, false), bumpScale: o.bump ?? 2.4, roughness: o.rough ?? 0.93, metalness: o.metal ?? 0,
     roughnessMap: skin.rough ? fit(skin.rough, false) : null, color: o.tint ?? 0xffffff,
   });
-}
-
-function wall(mat: THREE.Material, w: number, h: number, x: number, z: number, turn: number): THREE.Mesh {
-  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), mat);
-  m.position.set(x, FLOOR + h / 2, z); m.rotation.y = turn; m.receiveShadow = true;
-  return m;
-}
-
-/** The box every Nordic study starts from: a floor, a picture wall behind the stand and three walls you rarely see. */
-function shell(g: THREE.Group, back: THREE.Material, others: THREE.Material, floor: THREE.Material): void {
-  const f = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), floor);
-  f.rotation.x = -Math.PI / 2; f.position.set(0, FLOOR, 2); f.receiveShadow = true;
-  g.add(f, wall(back, 16, 7, 0, BACK, 0), wall(others, 16, 7, -8, 2, Math.PI / 2), wall(others, 16, 7, 8, 2, -Math.PI / 2), wall(others, 16, 7, 0, 10, Math.PI));
-  // a shadow gap where the wall meets the floor
-  const gap = new THREE.Mesh(new THREE.BoxGeometry(16, 0.045, 0.02), new THREE.MeshStandardMaterial({ color: 0x0c0d0d, roughness: 1 }));
-  gap.position.set(0, FLOOR + 0.0225, BACK + 0.011);
-  g.add(gap, contact(18, 2.6, 0, BACK + 0.3, 0.3, 0.42));
 }
 
 /** The darkening where two surfaces meet, which a rendered room otherwise lacks: a soft-edged patch laid on the floor. */
@@ -202,186 +83,317 @@ function contact(w: number, d: number, x: number, z: number, strength: number, e
   return p;
 }
 
-const steel = (c = 0x33373b, rough = 0.5) => new THREE.MeshStandardMaterial({ color: c, roughness: rough, metalness: 0.35 });
 const solid = (m: THREE.Mesh): THREE.Mesh => { m.castShadow = m.receiveShadow = true; return m; };
 
-/** Surface wiring: galvanised conduit clipped to the wall, dropping to a socket. */
-function conduit(g: THREE.Group, y: number, boxX: number): THREE.Group {
-  const out = new THREE.Group();
-  const zinc = new THREE.MeshStandardMaterial({ color: 0xa9aeb1, roughness: 0.42, metalness: 0.75 });
-  const run = solid(new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 16, 12), zinc)); run.rotation.z = Math.PI / 2; run.position.set(0, y, BACK + 0.03);
-  const drop = solid(new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, y - FLOOR - 0.42, 12), zinc)); drop.position.set(boxX, (y + FLOOR + 0.42) / 2, BACK + 0.03);
-  const box = solid(new THREE.Mesh(new RoundedBoxGeometry(0.16, 0.16, 0.07, 2, 0.012), new THREE.MeshStandardMaterial({ color: 0x8f9497, roughness: 0.55, metalness: 0.4 }))); box.position.set(boxX, FLOOR + 0.36, BACK + 0.036);
-  const face = new THREE.Mesh(new THREE.CircleGeometry(0.045, 24), new THREE.MeshStandardMaterial({ color: 0x1a1c1d, roughness: 0.6 })); face.position.set(boxX, FLOOR + 0.36, BACK + 0.072);
-  out.add(run, drop, box, face);
-  for (let x = -7.6; x < 8; x += 0.8) { const clip = solid(new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.05, 0.036), zinc)); clip.position.set(x, y, BACK + 0.02); out.add(clip); }
-  g.add(out);
-  return out;
+// ---------- the house ----------
+
+const XL = -5.4, XR = 8.2, ZF = 8.5, TALL = 4.6;   // the east, west and north walls, and the height of the room
+const SILL = 0.34, HEAD = 4.2, REVEAL = 0.16;      // the windows: how high they start and stop, how deep they sit
+
+const kept = new Map<string, Skin>();
+/** A surface is drawn once, however many stages show the room. */
+const once = (key: string, make: () => Skin): Skin => { let k = kept.get(key); if (!k) { k = make(); kept.set(key, k); } return k; };
+
+/** A concrete floor ground and sealed until it shines: fine cloud, the ghost of the trowel, stone showing as specks. */
+function polished(w: number, seed: number): Skin {
+  const r = rng(seed), h = w / 2;
+  const [map, c] = sheet(w, w), [bump, b] = sheet(8, 8), [rough, q] = sheet(h, h);
+  c.fillStyle = 'rgb(134,137,131)'; c.fillRect(0, 0, w, w);
+  b.fillStyle = grey(128); b.fillRect(0, 0, 8, 8);
+  mottle(c, w, w, r, [3, 6], 0.5, 9); mottle(c, w, w, r, [13, 29, 64], 0.5, 11); mottle(c, w, w, r, [150, 400, w / 2], 0.5, 12);
+  for (let i = 0; i < 70; i++) { c.strokeStyle = r() > 0.5 ? `rgba(255,255,255,${0.012 + r() * 0.02})` : `rgba(0,0,0,${0.012 + r() * 0.024})`; c.lineWidth = (0.03 + r() * 0.14) * w; c.beginPath(); c.arc(r() * w, r() * w, (0.1 + r() * 0.3) * w, r() * 6, r() * 6 + 0.8 + r() * 1.4); c.stroke(); }
+  for (let i = 0; i < (w * w) / 240; i++) { const v = r(); c.fillStyle = v > 0.62 ? `rgba(236,236,228,${0.18 + r() * 0.3})` : v > 0.2 ? `rgba(62,66,66,${0.16 + r() * 0.3})` : `rgba(150,132,110,${0.2 + r() * 0.25})`; const d = 0.6 + r() * r() * 1.9; c.fillRect(r() * w, r() * w, d, d * (0.6 + r() * 0.8)); }
+  for (let i = 0; i < 2; i++) { let x = r() * w, y = r() * w; c.strokeStyle = 'rgba(40,42,42,.22)'; c.lineWidth = 0.7; c.beginPath(); c.moveTo(x, y); for (let n = 0; n < 50; n++) { x += (r() - 0.35) * 22; y += (r() - 0.5) * 20; c.lineTo(x, y); } c.stroke(); }
+  // how well each part took the polish: dark is glassy
+  q.fillStyle = grey(66); q.fillRect(0, 0, h, h);
+  mottle(q, h, h, r, [4, 9, 21], 0.6, 20); mottle(q, h, h, r, [60, 200], 0.4, 12);
+  for (let i = 0; i < 16; i++) { q.strokeStyle = grey(140, 0.05 + r() * 0.08); q.lineWidth = 2 + r() * 12; const x = r() * h, y = r() * h; q.beginPath(); q.moveTo(x, y); q.lineTo(x + (r() - 0.5) * h * 0.3, y + (r() - 0.5) * h * 0.3); q.stroke(); }
+  return { map, bump, rough };
 }
 
-const behindWall = (camera: THREE.Camera, root: THREE.Object3D): boolean => root.worldToLocal(camera.position.clone()).z < BACK + 0.05;
-
-function spot(colour: number, from: [number, number, number], to: [number, number, number], angle: number, penumbra: number, soft: number, size = 2048): THREE.SpotLight {
-  const s = new THREE.SpotLight(colour, 0, 0, angle, penumbra, 0);
-  s.position.set(...from); s.target.position.set(...to);
-  s.castShadow = true; s.shadow.mapSize.set(size, size); s.shadow.radius = soft; s.shadow.blurSamples = 16;
-  s.shadow.bias = -0.0004; s.shadow.normalBias = 0.03; s.shadow.camera.near = 2; s.shadow.camera.far = 30;
-  return s;
+/** One face of a block cast in a smooth shutter: the joint between two panels, cone holes where the ties went, and little else. */
+function fairFaced(seed: number, wide: number, tall: number): Skin {
+  const r = rng(seed), w = 1024, h = Math.round((1024 * tall) / wide), ppm = w / wide;
+  const [map, c] = sheet(w, h), [bump, b] = sheet(w, h);
+  c.fillStyle = 'rgb(176,178,174)'; c.fillRect(0, 0, w, h);
+  b.fillStyle = grey(128); b.fillRect(0, 0, w, h);
+  mottle(c, w, h, r, [2, 5], 0.5, 9); mottle(c, w, h, r, [14, 40, 110], 0.5, 10); mottle(c, w, h, r, [300, 800], 0.45, 11);
+  mottle(b, w, h, r, [60, 240, 700], 0.5, 34);
+  // two lifts: the second pour sat a shade lighter on the first
+  const lift = h * (0.52 + r() * 0.06);
+  c.fillStyle = 'rgba(255,255,255,.045)'; c.beginPath(); c.moveTo(0, 0); c.lineTo(w, 0); for (let x = w; x >= 0; x -= 16) c.lineTo(x, lift + Math.sin(x * 0.013 + seed) * 5 + (r() - 0.5) * 5); c.closePath(); c.fill();
+  // the seam between panels, with the fines that bled out of it
+  for (const x of [w / 2]) {
+    c.fillStyle = 'rgba(30,32,32,.2)'; c.fillRect(x - 0.7, 0, 1.4, h); c.fillStyle = 'rgba(255,255,255,.14)'; c.fillRect(x + 0.8, 0, 1.2, h);
+    b.fillStyle = grey(70, 0.8); b.fillRect(x - 1, 0, 2, h);
+    for (let i = 0; i < 26; i++) { const y = r() * h, l = 6 + r() * 40; c.fillStyle = `rgba(60,62,62,${0.03 + r() * 0.05})`; c.fillRect(x - 2 - r() * 3, y, 3 + r() * 5, l); }
+  }
+  // cone holes, plugged a little short of the face
+  const hr = 0.0125 * ppm;
+  for (const fy of [0.26, 0.76]) for (const fx of [0.125, 0.375, 0.625, 0.875]) {
+    const x = fx * w, y = fy * h;
+    const g = c.createRadialGradient(x - hr * 0.25, y - hr * 0.3, hr * 0.1, x, y, hr);
+    g.addColorStop(0, 'rgba(52,54,54,.95)'); g.addColorStop(0.7, 'rgba(84,86,84,.95)'); g.addColorStop(1, 'rgba(120,122,120,.9)');
+    c.fillStyle = 'rgba(255,255,255,.22)'; c.beginPath(); c.arc(x, y, hr * 1.22, 0, 7); c.fill();
+    c.fillStyle = g; c.beginPath(); c.arc(x, y, hr, 0, 7); c.fill();
+    b.fillStyle = grey(12); b.beginPath(); b.arc(x, y, hr, 0, 7); b.fill();
+    const drip = c.createLinearGradient(0, y, 0, y + hr * 9); drip.addColorStop(0, 'rgba(50,54,54,.06)'); drip.addColorStop(1, 'rgba(50,54,54,0)'); c.fillStyle = drip; c.fillRect(x - hr * 0.9, y, hr * 1.8, hr * 9);
+  }
+  // blowholes: air that never found its way up the shutter, thicker under the top of each lift
+  for (let i = 0; i < 260; i++) {
+    const top = r() > 0.5 ? 0 : lift, x = r() * w, y = top + Math.pow(r(), 2.2) * (top ? h - lift : lift), pr = 0.5 + r() * r() * 2.4;
+    c.fillStyle = `rgba(56,58,58,${0.3 + r() * 0.45})`; c.beginPath(); c.ellipse(x, y, pr * (1 + r() * 0.6), pr, 0, 0, 7); c.fill();
+    c.fillStyle = 'rgba(255,255,255,.16)'; c.fillRect(x - pr, y + pr * 0.7, pr * 2, 0.8);
+    b.fillStyle = grey(24, 0.9); b.beginPath(); b.arc(x, y, pr, 0, 7); b.fill();
+  }
+  return { map, bump };
 }
 
-/** A picture of what the light comes through, for a lamp to throw: window bars, or a long slot. */
-function gobo(draw: (c: Ctx) => void): THREE.CanvasTexture {
-  const [small, sc] = sheet(96, 96), [big, bc] = sheet(512, 512);
-  sc.fillStyle = '#000'; sc.fillRect(0, 0, 96, 96); draw(sc);
-  bc.imageSmoothingEnabled = true; bc.imageSmoothingQuality = 'high'; bc.drawImage(small, 0, 0, 512, 512);
-  const t = new THREE.CanvasTexture(big); t.colorSpace = THREE.SRGBColorSpace;
-  return t;
+/**
+ * Lets a floor mirror the room. The scene is drawn once more from below the floor, into a small
+ * picture, and the floor's own shading lays that picture over itself: sharper and stronger the
+ * flatter you look across it and the better that part of the slab took its polish.
+ */
+function mirror(floor: THREE.Mesh, hide: THREE.Object3D[]): { prepare: NonNullable<Room['prepare']>; dispose: () => void } {
+  const mat = floor.material as THREE.MeshStandardMaterial;
+  let target: THREE.WebGLRenderTarget | undefined;
+  const eye = new THREE.PerspectiveCamera(), toPicture = new THREE.Matrix4();
+  const u = { tMirror: { value: null as THREE.Texture | null }, uMirror: { value: toPicture }, uTexel: { value: 1 / 512 } };
+  mat.envMapIntensity = 0;
+  mat.onBeforeCompile = (sh) => {
+    Object.assign(sh.uniforms, u);
+    sh.vertexShader = sh.vertexShader
+      .replace('#include <common>', '#include <common>\nuniform mat4 uMirror;\nvarying vec4 vMirror;')
+      .replace('#include <project_vertex>', '#include <project_vertex>\nvMirror = uMirror * modelMatrix * vec4(transformed, 1.0);');
+    sh.fragmentShader = sh.fragmentShader
+      .replace('#include <common>', '#include <common>\nuniform sampler2D tMirror;\nuniform float uTexel;\nvarying vec4 vMirror;')
+      .replace('#include <opaque_fragment>', /* glsl */ `
+        vec2 mUv = vMirror.xy / vMirror.w;
+        float mGraze = 1.0 - saturate(dot(normalize(vViewPosition), normal));
+        float mFresnel = 0.06 + 0.94 * pow(mGraze, 5.0);
+        float mLod = 0.3 + 4.4 * roughnessFactor;
+        vec2 mStep = vec2(uTexel) * exp2(mLod);
+        // a polished slab smears what it mirrors towards you more than across
+        vec3 mSeen = textureLod(tMirror, mUv, mLod).rgb * 0.34
+          + (textureLod(tMirror, mUv + vec2(0.0, mStep.y * 1.5), mLod + 0.5).rgb + textureLod(tMirror, mUv - vec2(0.0, mStep.y * 1.5), mLod + 0.5).rgb) * 0.21
+          + (textureLod(tMirror, mUv + vec2(mStep.x * 0.8, 0.0), mLod + 0.2).rgb + textureLod(tMirror, mUv - vec2(mStep.x * 0.8, 0.0), mLod + 0.2).rgb) * 0.12;
+        float mShine = mFresnel * (1.0 - 0.5 * roughnessFactor);
+        outgoingLight = outgoingLight * (1.0 - mShine * 0.7) + min(mSeen, vec3(6.0)) * mShine;
+        #include <opaque_fragment>`);
+  };
+  mat.customProgramCacheKey = () => 'mirror';
+  const size = new THREE.Vector2(), at = new THREE.Vector3(), to = new THREE.Vector3(), turn = new THREE.Matrix4(), UP = new THREE.Vector3(0, 1, 0);
+  let primed = false;
+  return {
+    prepare: (renderer, scene, camera) => {
+      const y = floor.position.y;
+      camera.updateMatrixWorld();
+      at.setFromMatrixPosition(camera.matrixWorld);
+      if (at.y <= y + 0.01) return;
+      renderer.getDrawingBufferSize(size);
+      const want = Math.min(1024, Math.max(256, 2 ** Math.round(Math.log2(Math.max(size.x, size.y) * 0.62))));
+      if (!target || target.width !== want) {
+        target?.dispose();
+        const float = renderer.capabilities.isWebGL2 !== false && (renderer.extensions.has('EXT_color_buffer_float') || renderer.extensions.has('EXT_color_buffer_half_float'));
+        target = new THREE.WebGLRenderTarget(want, want, { type: float ? THREE.HalfFloatType : THREE.UnsignedByteType, stencilBuffer: true, generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter, magFilter: THREE.LinearFilter });
+        u.tMirror.value = target.texture; u.uTexel.value = 1 / want;
+      }
+      // the same eye, as far below the floor as it is above, looking at the same things upside down
+      turn.extractRotation(camera.matrixWorld);
+      to.set(0, 0, -1).applyMatrix4(turn).add(at);
+      eye.position.set(at.x, 2 * y - at.y, at.z);
+      eye.up.set(0, 1, 0).applyMatrix4(turn).reflect(UP);
+      eye.lookAt(to.x, 2 * y - to.y, to.z);
+      eye.near = camera.near; eye.far = camera.far;
+      eye.updateMatrixWorld();
+      eye.projectionMatrix.copy(camera.projectionMatrix); eye.projectionMatrixInverse.copy(camera.projectionMatrixInverse);
+      toPicture.set(0.5, 0, 0, 0.5, 0, 0.5, 0, 0.5, 0, 0, 0.5, 0.5, 0, 0, 0, 1).multiply(eye.projectionMatrix).multiply(eye.matrixWorldInverse);
+      const was = hide.map((o) => o.visible), before = renderer.getRenderTarget(), auto = renderer.shadowMap.autoUpdate;
+      hide.forEach((o) => { o.visible = false; });
+      // the shadows are already worked out for this moment: no need to do them twice
+      if (primed) renderer.shadowMap.autoUpdate = false;
+      renderer.setRenderTarget(target);
+      renderer.render(scene, eye);
+      renderer.setRenderTarget(before);
+      renderer.shadowMap.autoUpdate = auto; primed = true;
+      hide.forEach((o, i) => { o.visible = was[i]; });
+    },
+    dispose: () => { target?.dispose(); },
+  };
 }
 
-// ---------- the rooms ----------
+interface Opening { from: number; to: number; panes: number }
 
-/** Betong: board-marked concrete, a white-painted block wall, a cast block for a stand, cold daylight through a factory window. */
-function betong(): Room {
+/**
+ * A wall seen from inside, standing in the plane z = 0 and facing +z, with tall windows let into it.
+ * `face` is the plaster. `fit` is everything that only makes sense from indoors (reveals, frames, glass)
+ * and is put away when the wall is looked through from behind.
+ */
+function glazed(from: number, to: number, openings: Opening[], plaster: THREE.Material, frame: THREE.Material, pane: THREE.Material): { wall: THREE.Group; fit: THREE.Group } {
+  const wall = new THREE.Group(), fit = new THREE.Group();
+  const y0 = FLOOR - 0.2, y1 = FLOOR + TALL, sill = FLOOR + SILL, head = FLOOR + HEAD;
+  const rect = (a: number, b: number, lo: number, hi: number, mat = plaster) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(b - a, hi - lo), mat); m.position.set((a + b) / 2, (lo + hi) / 2, 0); m.castShadow = m.receiveShadow = true; wall.add(m); return m; };
+  let x = from;
+  for (const o of [...openings].sort((p, q) => p.from - q.from)) {
+    if (o.from > x) rect(x, o.from, y0, y1);
+    rect(o.from, o.to, y0, sill); rect(o.from, o.to, head, y1);
+    x = o.to;
+    const w = o.to - o.from, h = head - sill, mid = (o.from + o.to) / 2, ym = (sill + head) / 2;
+    // the thickness of the wall, plastered round into the opening
+    const side = (px: number, ry: number) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(REVEAL, h), plaster); m.position.set(px, ym, -REVEAL / 2); m.rotation.y = ry; m.receiveShadow = m.castShadow = true; fit.add(m); };
+    side(o.from, Math.PI / 2); side(o.to, -Math.PI / 2);
+    const ledge = (py: number, rx: number) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, REVEAL), plaster); m.position.set(mid, py, -REVEAL / 2); m.rotation.x = rx; m.receiveShadow = m.castShadow = true; fit.add(m); };
+    ledge(sill, -Math.PI / 2); ledge(head, Math.PI / 2);
+    // slim dark frames, one mullion between every two panes
+    const bar = (bw: number, bh: number, px: number, py: number) => { const m = new THREE.Mesh(new THREE.BoxGeometry(bw, bh, 0.07), frame); m.position.set(px, py, -REVEAL + 0.02); m.castShadow = m.receiveShadow = true; fit.add(m); };
+    bar(w, 0.05, mid, sill + 0.025); bar(w, 0.05, mid, head - 0.025);
+    for (let i = 0; i <= o.panes; i++) bar(i === 0 || i === o.panes ? 0.05 : 0.044, h, o.from + (w * i) / o.panes + (i === 0 ? 0.025 : i === o.panes ? -0.025 : 0), ym);
+    const glass = new THREE.Mesh(new THREE.PlaneGeometry(w, h), pane); glass.position.set(mid, ym, -REVEAL - 0.005); glass.renderOrder = -5; fit.add(glass);
+  }
+  if (x < to) rect(x, to, y0, y1);
+  wall.add(fit);
+  return { wall, fit };
+}
+
+/** A flush double socket, the earthed round kind used from Catalonia to Sweden. */
+function socket(plastic: THREE.Material): THREE.Group {
+  const g = new THREE.Group(), dark = new THREE.MeshStandardMaterial({ color: 0x8e9090, roughness: 0.6 });
+  for (const dx of [-0.043, 0.043]) {
+    const plate = new THREE.Mesh(new RoundedBoxGeometry(0.084, 0.084, 0.012, 2, 0.005), plastic); plate.position.set(dx, 0, 0.006); plate.castShadow = plate.receiveShadow = true;
+    const well = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.002, 28), new THREE.MeshStandardMaterial({ color: 0xdedfdc, roughness: 0.5 })); well.rotation.x = Math.PI / 2; well.position.set(dx, 0, 0.0125);
+    g.add(plate, well);
+    for (const px of [-0.0095, 0.0095]) { const pin = new THREE.Mesh(new THREE.CircleGeometry(0.0026, 10), dark); pin.position.set(dx + px, 0, 0.0138); g.add(pin); }
+  }
+  return g;
+}
+
+/** A soft shadow along the line where two surfaces meet. Dark at one edge of the strip, gone at the other. */
+function crease(len: number, wide: number, strength: number): THREE.Mesh {
+  const [cv, c] = sheet(4, 64), g = c.createLinearGradient(0, 0, 0, 64);
+  g.addColorStop(0, 'rgba(22,24,28,1)'); g.addColorStop(0.35, 'rgba(22,24,28,.36)'); g.addColorStop(1, 'rgba(22,24,28,0)');
+  c.fillStyle = g; c.fillRect(0, 0, 4, 64);
+  return new THREE.Mesh(new THREE.PlaneGeometry(len, wide), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(cv), transparent: true, opacity: strength, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));
+}
+
+/**
+ * A sealed concrete floor that mirrors the room, smooth white walls, tall windows with dark slim
+ * frames. South, behind the stand, they look across a town to Montserrat. East they let in a low
+ * sun that crosses the floor and climbs the wall, and at night the moon does the same.
+ */
+function house(): Room {
   const g = new THREE.Group();
-  const conc = castConcrete(1024, 512, 9, 11), white = painted(2048, 1024, 9, 12, 'block'), ground = slab(2048, 8, 13);
-  shell(g, wear(white, [16, 7], [9, 4.5], { bump: 3, rough: 0.9, fromFloor: true }), wear(conc, [16, 7], [9, 4.5], { fromFloor: true }), wear(ground, [24, 24], [8, 8], { bump: 1.2, rough: 1 }));
+  const plaster = new THREE.MeshStandardMaterial({ color: 0xf1f1ef, roughness: 0.95 });
+  const frame = new THREE.MeshStandardMaterial({ color: 0x1d2023, roughness: 0.45, metalness: 0.4 });
+  const pane = new THREE.MeshStandardMaterial({ color: 0xdfeaec, roughness: 0.03, metalness: 0, transparent: true, opacity: 0.07, depthWrite: false });
+  const white = new THREE.MeshStandardMaterial({ color: 0xf4f4f1, roughness: 0.38 });
+
+  // walls: south behind the stand, east for the sun, the other two blind
+  const south = glazed(XL - 0.2, XR + 0.2, [{ from: XL + 0.42, to: -1.95, panes: 3 }, { from: 2.35, to: 6.55, panes: 4 }], plaster, frame, pane);
+  south.wall.position.z = BACK;
+  const east = glazed(-(ZF + 0.2), -(BACK - 0.2), [{ from: -4.05, to: 0.15, panes: 4 }], plaster, frame, pane);
+  east.wall.position.x = XL; east.wall.rotation.y = Math.PI / 2;
+  const west = glazed(BACK - 0.2, ZF + 0.2, [], plaster, frame, pane);
+  west.wall.position.x = XR; west.wall.rotation.y = -Math.PI / 2;
+  const north = glazed(-(XR + 0.2), -(XL - 0.2), [], plaster, frame, pane);
+  north.wall.position.z = ZF; north.wall.rotation.y = Math.PI;
+  const walls = [south, east, west, north];
+  const lid = new THREE.Mesh(new THREE.PlaneGeometry(XR - XL + 1.4, ZF - BACK + 1.4), new THREE.MeshStandardMaterial({ color: 0xf3f2ee, roughness: 0.96 }));
+  lid.rotation.x = Math.PI / 2; lid.position.set((XL + XR) / 2, FLOOR + TALL, (BACK + ZF) / 2); lid.castShadow = lid.receiveShadow = true;
+  g.add(...walls.map((w) => w.wall), lid);
+
+  // sockets where a builder would put them, and the soft shadow in every corner
+  const s1 = socket(white); s1.position.set(1.42, FLOOR + 0.2, 0.001); south.fit.add(s1);
+  const s2 = socket(white); s2.position.set(-3.5, FLOOR + 0.17, 0.001); south.fit.add(s2);
+  const s3 = socket(white); s3.position.set(4.3, FLOOR + 0.17, 0.001); south.fit.add(s3);
+  for (const [w, len] of [[south, XR - XL], [east, ZF - BACK], [west, ZF - BACK], [north, XR - XL]] as const) {
+    const mid = w === south ? (XL + XR) / 2 : w === north ? -(XL + XR) / 2 : w === east ? -(BACK + ZF) / 2 : (BACK + ZF) / 2;
+    const top = crease(len, 0.7, 0.2); top.position.set(mid, FLOOR + TALL - 0.35, 0.003); w.fit.add(top);
+    const foot = crease(len, 0.3, 0.26); foot.rotation.z = Math.PI; foot.position.set(mid, FLOOR + 0.15, 0.003); w.fit.add(foot);
+    for (const end of [-1, 1]) { const up = crease(TALL, 0.6, 0.16); up.rotation.z = (end * Math.PI) / 2; up.position.set(mid + end * (len / 2 - 0.3), FLOOR + TALL / 2, 0.003); w.fit.add(up); }
+  }
+
+  // the floor, and the storeys under it for when the house is seen from outside
+  const ground = once('polished', () => polished(2048, 13));
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(XR - XL + 0.3, ZF - BACK + 0.3), wear(ground, [XR - XL + 0.3, ZF - BACK + 0.3], [6.5, 6.5], { bump: 0, rough: 1 }));
+  floor.rotation.x = -Math.PI / 2; floor.position.set((XL + XR) / 2, FLOOR, (BACK + ZF) / 2); floor.receiveShadow = true;
+  const below = new THREE.Mesh(new THREE.BoxGeometry(XR - XL + 0.7, 14, ZF - BACK + 0.7), new THREE.MeshStandardMaterial({ color: 0xe9e8e3, roughness: 0.95 }));
+  below.position.set((XL + XR) / 2, FLOOR - 7.03, (BACK + ZF) / 2);
+  g.add(floor, below, contact(XR - XL, 1.6, (XL + XR) / 2, BACK + 0.8, 0.2, 0.5));
+  const mirrored = mirror(floor, [floor, below]);
+
   // the stand: one cast block, a steel plate floating a finger's width above it
-  const cast = castConcrete(1024, 512, 2.6, 21, 0, 166);
-  const block = solid(new THREE.Mesh(new RoundedBoxGeometry(2.2, TOP - 0.03 - FLOOR, 2.2, 2, 0.018), wear(cast, [1, 1], [1, 1], { bump: 2 })));
+  const cast = once('fair', () => fairFaced(21, 2.2, TOP - 0.03 - FLOOR));
+  const block = solid(new THREE.Mesh(new RoundedBoxGeometry(2.2, TOP - 0.03 - FLOOR, 2.2, 3, 0.014), wear(cast, [1, 1], [1, 1], { bump: 0.9, rough: 0.82 })));
   block.position.y = (TOP - 0.03 + FLOOR) / 2;
   const spacer = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.014, 2.0), new THREE.MeshStandardMaterial({ color: 0x060606, roughness: 1 })); spacer.position.y = TOP - 0.023;
-  const plate = solid(new THREE.Mesh(new RoundedBoxGeometry(2.1, 0.016, 2.1, 1, 0.004), steel())); plate.position.y = TOP - 0.008;
-  // the hall number, stencilled on the wall the way a bay is numbered in a works
-  const [nc, nx] = sheet(512, 640);
-  const numeral = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 1.5), new THREE.MeshStandardMaterial({ map: new THREE.CanvasTexture(nc), transparent: true, roughness: 0.95, depthWrite: false }));
-  (numeral.material.map as THREE.Texture).colorSpace = THREE.SRGBColorSpace;
-  numeral.position.set(-2.45, 1.3, BACK + 0.004); numeral.receiveShadow = true;
-  g.add(block, spacer, plate, numeral, contact(3.3, 3.3, 0, 0, 0.5));
-  const wiring = conduit(g, 2.62, 3.3);
-  // light: a tall window out of sight to the left
-  const sun = spot(0xf6f8ff, [-7.5, 7.6, 6.2], [0.35, 0.3, -0.7], 0.42, 0.25, 5);
-  sun.map = gobo((c) => { c.fillStyle = '#fff'; for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) c.fillRect(19 + i * 20, 18 + j * 21, 17, 18); });
-  const sky = new THREE.HemisphereLight(0xe3ecf6, 0x7e827f, 0), bounce = new THREE.DirectionalLight(0xe8eef6, 0);
-  bounce.position.set(5, 2.5, 6);
-  g.add(sun, sun.target, sky, bounce);
-  const r = rng(5);
+  const plate = solid(new THREE.Mesh(new RoundedBoxGeometry(2.1, 0.016, 2.1, 1, 0.004), new THREE.MeshStandardMaterial({ color: 0x2a2e32, roughness: 0.4, metalness: 0.55 }))); plate.position.y = TOP - 0.008;
+  // the hall number, cast into the block: a form liner fixed to the shutter before the pour
+  const [nc, nx] = sheet(256, 320), cut = new THREE.CanvasTexture(nc); cut.colorSpace = THREE.SRGBColorSpace;
+  const cutMat = new THREE.MeshStandardMaterial({ map: cut, transparent: true, roughness: 0.9, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+  for (const [x, z, ry] of [[-0.55, 1.1004, 0], [0.55, -1.1004, Math.PI]] as const) {
+    const n = new THREE.Mesh(new THREE.PlaneGeometry(0.36, 0.45), cutMat); n.position.set(x, TOP - 0.03 - 0.51 * (TOP - 0.03 - FLOOR), z); n.rotation.y = ry; n.receiveShadow = true; g.add(n);
+  }
+  g.add(block, spacer, plate, contact(3.2, 3.2, 0, 0, 0.42));
+
+  // outside
+  const out = vista();
+  g.add(out.group);
+
+  // light: the sun, low in the east-north-east, through the east windows. Nothing else but the sky.
+  const sun = new THREE.DirectionalLight(0xffffff, 0);
+  sun.position.copy(SUN).multiplyScalar(40).add(new THREE.Vector3(1.4, 0.5, 3.4)); sun.target.position.set(1.4, 0.5, 3.4);
+  sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.radius = 2.2; sun.shadow.blurSamples = 12;
+  sun.shadow.bias = -0.0005; sun.shadow.normalBias = 0.035;
+  const sc = sun.shadow.camera; sc.left = -9.6; sc.right = 9.6; sc.top = 6.4; sc.bottom = -5.6; sc.near = 8; sc.far = 72;
+  const sky = new THREE.HemisphereLight(0xffffff, 0xffffff, 0);
+  const fill = new THREE.DirectionalLight(0xeef2f8, 0); fill.position.set(4, 3, 8);                          // what the north of the room returns
+  g.add(sun, sun.target, sky, fill);
+  const DAY = { sun: new THREE.Color(1, 0.93, 0.82), sky: new THREE.Color(0.9, 0.95, 1), ground: new THREE.Color(0.76, 0.74, 0.7) };
+  const NIGHT = { sun: new THREE.Color(0.58, 0.72, 1), sky: new THREE.Color(0.11, 0.16, 0.3), ground: new THREE.Color(0.03, 0.04, 0.06) };
+
+  // what polished things on the stand see around them: bright openings south and east, pale walls, a grey floor
+  const around = new THREE.Scene();
+  const flat = (c: number, k = 1) => new THREE.MeshBasicMaterial({ color: new THREE.Color(c).multiplyScalar(k), side: THREE.DoubleSide });
+  const shellBox = new THREE.Mesh(new THREE.BoxGeometry(XR - XL, TALL, ZF - BACK), new THREE.MeshBasicMaterial({ color: new THREE.Color(0xc9c8c3).multiplyScalar(0.62), side: THREE.BackSide }));
+  shellBox.position.set((XL + XR) / 2, FLOOR + TALL / 2, (BACK + ZF) / 2);
+  const underfoot = new THREE.Mesh(new THREE.PlaneGeometry(XR - XL, ZF - BACK), flat(0x8e918c, 0.4)); underfoot.rotation.x = -Math.PI / 2; underfoot.position.set((XL + XR) / 2, FLOOR + 0.01, (BACK + ZF) / 2);
+  around.add(shellBox, underfoot);
+  const bright = (w: number, h: number, x: number, y: number, z: number, ry: number, k: number, c = 0xe6edf2) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), flat(c, k)); m.position.set(x, y, z); m.rotation.y = ry; around.add(m); };
+  const wy = FLOOR + (SILL + HEAD) / 2, wh = HEAD - SILL;
+  bright(3.03, wh, (XL + 0.42 - 1.95) / 2, wy, BACK + 0.02, 0, 2.6); bright(4.2, wh, 4.45, wy, BACK + 0.02, 0, 2.6);
+  bright(4.2, wh, XL + 0.02, wy, 1.95, Math.PI / 2, 3.4, 0xfff0dc);
+  bright(0.7, 0.7, XL + 0.04, FLOOR + 2.9, 1.2, Math.PI / 2, 26, 0xffe6c0);
+
+  const local = new THREE.Vector3();
   return {
-    group: g, targetY: 0.42, reach: 1.3, walled: true,
-    seenFrom: (camera) => { wiring.visible = numeral.visible = !behindWall(camera, g); },
-    light: (L, scene) => { sun.intensity = 3.9 * L; sky.intensity = 0.02 + 0.44 * L; bounce.intensity = 0.3 * L; scene.environmentIntensity = 0.03 + 0.3 * L; },
+    group: g, targetY: 0.42, reach: 1.3, walled: true, surroundings: around, glow: { at: [0, 2.2, 1.5], gain: 0.16 },
+    prepare: mirrored.prepare, dispose: mirrored.dispose,
+    seenFrom: (camera) => { for (const w of walls) { w.wall.updateMatrixWorld(); w.fit.visible = w.wall.worldToLocal(local.copy(camera.position)).z > 0.02; } },
+    light: (L, scene) => {
+      const e = L * L * (3 - 2 * L);
+      sun.color.copy(NIGHT.sun).lerp(DAY.sun, e); sun.intensity = 0.3 + 3.1 * e;
+      sky.color.copy(NIGHT.sky).lerp(DAY.sky, e); sky.groundColor.copy(NIGHT.ground).lerp(DAY.ground, e); sky.intensity = 0.6 + 1.32 * e;
+      fill.intensity = 0.2 * e;
+      scene.environmentIntensity = 0.035 + 0.5 * e;
+      out.set(e);
+    },
     hall: (_colour, no) => {
-      nx.clearRect(0, 0, 512, 640);
-      if (!no) { (numeral.material.map as THREE.Texture).needsUpdate = true; return; }
-      nx.fillStyle = '#2b2e30'; nx.font = '800 700px "Sofia Sans Extra Condensed Variable", "Arial Narrow", sans-serif'; nx.textAlign = 'center'; nx.textBaseline = 'alphabetic';
-      nx.fillText(String(no), 256, 560);
-      // the bridges of the stencil, and paint that has started to let go
-      nx.globalCompositeOperation = 'destination-out';
-      nx.fillRect(0, 300, 512, 12); nx.fillRect(250, 0, 12, 640);
-      for (let i = 0; i < 2600; i++) { nx.fillStyle = `rgba(0,0,0,${r() * 0.7})`; nx.fillRect(r() * 512, r() * 640, 1 + r() * 3, 1 + r() * 2); }
-      nx.globalCompositeOperation = 'source-over';
-      (numeral.material.map as THREE.Texture).needsUpdate = true;
+      nx.clearRect(0, 0, 256, 320);
+      if (no) {
+        nx.font = '700 300px "Sofia Sans Extra Condensed Variable", "Arial Narrow", sans-serif'; nx.textAlign = 'center'; nx.textBaseline = 'alphabetic';
+        // the sun is to the left: the left wall of the cut is in shade, the right one catches the light
+        nx.fillStyle = 'rgba(255,255,255,.5)'; nx.fillText(String(no), 130.5, 262);
+        nx.fillStyle = 'rgba(40,42,44,.62)'; nx.fillText(String(no), 126, 260);
+        nx.fillStyle = 'rgba(118,120,118,.9)'; nx.fillText(String(no), 128, 261);
+      }
+      cut.needsUpdate = true;
     },
   };
 }
 
-/** Tehdas: a mill wall painted white over the brick, a ground floor, a steel table on a concrete foot, one lamp on a track. */
-function tehdas(): Room {
-  const g = new THREE.Group();
-  const brick = painted(2048, 1024, 7, 31, 'brick'), conc = castConcrete(1024, 512, 9, 32, 0, 142), ground = slab(2048, 8, 33, 118);
-  shell(g, wear(brick, [16, 7], [7, 3.5], { bump: 5, rough: 0.88, fromFloor: true }), wear(conc, [16, 7], [9, 4.5], { fromFloor: true, tint: 0xd9dcdc }), wear(ground, [24, 24], [8, 8], { bump: 1.2, rough: 0.82 }));
-  // the stand: a concrete foot, a square steel post, a round steel table
-  const cast = castConcrete(512, 512, 1.6, 41, 0, 160);
-  const foot = solid(new THREE.Mesh(new RoundedBoxGeometry(1.5, 0.2, 1.5, 2, 0.018), wear(cast, [1, 1], [1, 1], { bump: 2 }))); foot.position.y = FLOOR + 0.1;
-  // the post is the one painted thing in the room: it takes the colour of the hall
-  const coat = new THREE.MeshStandardMaterial({ color: 0x888888, roughness: 0.45, metalness: 0.1 });
-  const post = solid(new THREE.Mesh(new RoundedBoxGeometry(0.16, TOP - 0.06 - (FLOOR + 0.2), 0.16, 1, 0.012), coat)); post.position.y = (TOP - 0.06 + FLOOR + 0.2) / 2;
-  const shoe = solid(new THREE.Mesh(new RoundedBoxGeometry(0.4, 0.02, 0.4, 1, 0.004), steel())); shoe.position.y = FLOOR + 0.21;
-  const table = solid(new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.14, 0.03, 96), steel(0x303438, 0.46))); table.position.y = TOP - 0.015;
-  g.add(foot, post, shoe, table, contact(2.3, 2.3, 0, 0, 0.5));
-  for (const a of [0, Math.PI / 2]) { const rib = solid(new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.05, 0.02), steel())); rib.position.y = TOP - 0.055; rib.rotation.y = a + Math.PI / 4; g.add(rib); }
-  for (const [x, z] of [[-0.6, -0.6], [0.6, -0.6], [-0.6, 0.6], [0.6, 0.6]]) { const bolt = new THREE.Mesh(new THREE.CylinderGeometry(0.022, 0.022, 0.012, 6), steel(0x8a8f94, 0.3)); bolt.position.set(x * 0.28, FLOOR + 0.226, z * 0.28); g.add(bolt); }
-  const wiring = conduit(g, FLOOR + 0.52, -3.4);
-  // light: a single spot on a track, a pool on wall and floor, and not much else
-  const lamp = spot(0xf2f6ff, [1.9, 7.4, 4.6], [0, 0.35, -0.6], 0.3, 0.42, 6);
-  const side = new THREE.DirectionalLight(0xdfe8f4, 0); side.position.set(-6, 3, 3);
-  const sky = new THREE.HemisphereLight(0xdfe6ee, 0x6f7374, 0);
-  g.add(lamp, lamp.target, side, sky);
-  return {
-    group: g, targetY: 0.42, reach: 1.3, walled: true,
-    seenFrom: (camera) => { wiring.visible = !behindWall(camera, g); },
-    light: (L, scene) => { lamp.intensity = 5.2 * L; side.intensity = 0.22 * L; sky.intensity = 0.02 + 0.2 * L; scene.environmentIntensity = 0.03 + 0.2 * L; },
-    hall: (colour) => { coat.color.set(colour); },
-  };
+export function buildRoom(): Room {
+  return house();
 }
 
-/** Ljus: plaster, a pale ground floor, one long cast bench along the wall, and daylight falling down the wall from a slot in the roof. */
-function ljus(): Room {
-  const g = new THREE.Group();
-  const plaster = painted(2048, 1024, 9, 51, 'plaster'), ground = slab(2048, 8, 53, 176, true);
-  const white = wear(plaster, [16, 7], [9, 4.5], { bump: 4, rough: 0.94, fromFloor: true });
-  shell(g, white, wear(plaster, [16, 7], [9, 4.5], { bump: 3, fromFloor: true, tint: 0xe9ecec }), wear(ground, [24, 24], [8, 8], { bump: 0.8, rough: 0.7 }));
-  // the stand: a bench cast in one length, standing off the floor on a recessed foot
-  const cast = castConcrete(2048, 512, 9.4, 61, 0, 176);
-  const bench = solid(new THREE.Mesh(new RoundedBoxGeometry(9.4, TOP - (FLOOR + 0.07), 2.3, 2, 0.018), wear(cast, [1, 1], [1, 1], { bump: 1.6, rough: 0.8 })));
-  bench.position.set(0, (TOP + FLOOR + 0.07) / 2, -0.33);
-  const foot = new THREE.Mesh(new THREE.BoxGeometry(9.1, 0.07, 2.0), new THREE.MeshStandardMaterial({ color: 0x0c0d0d, roughness: 1 })); foot.position.set(0, FLOOR + 0.035, -0.33);
-  // where the piece stands: a square of steel let flush into the top, edged with the colour of the hall
-  const inlay = new THREE.Mesh(new THREE.PlaneGeometry(2.04, 2.04), steel(0x33373b, 0.5)); inlay.rotation.x = -Math.PI / 2; inlay.position.y = TOP + 0.0012; inlay.receiveShadow = true;
-  const edge = new THREE.MeshStandardMaterial({ color: 0x888888, roughness: 0.6, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
-  const mark = new THREE.Mesh(new THREE.PlaneGeometry(2.04, 0.014), edge); mark.position.set(0, TOP - 0.07, 0.821); mark.receiveShadow = true;
-  g.add(bench, foot, inlay, mark, contact(10.2, 3.0, 0, -0.33, 0.45, 0.2));
-  // light: a roof slot just in front of the wall
-  const slot = spot(0xf4f7ff, [0, 8.6, 0.25], [0, -0.2, -1.2], 0.66, 0.5, 8);
-  slot.map = gobo((c) => { const gr = c.createLinearGradient(0, 30, 0, 66); gr.addColorStop(0, '#000'); gr.addColorStop(0.25, '#fff'); gr.addColorStop(0.75, '#fff'); gr.addColorStop(1, '#000'); c.fillStyle = gr; c.fillRect(2, 30, 92, 36); });
-  const front = new THREE.DirectionalLight(0xeef2f8, 0); front.position.set(1.5, 5, 7);
-  const sky = new THREE.HemisphereLight(0xeef3f8, 0xb9bbb6, 0);
-  g.add(slot, slot.target, front, sky);
-  return {
-    group: g, targetY: 0.42, reach: 1.3, walled: true,
-    light: (L, scene) => { slot.intensity = 4.6 * L; front.intensity = 0.45 * L; sky.intensity = 0.02 + 0.36 * L; scene.environmentIntensity = 0.03 + 0.3 * L; },
-    hall: (colour) => { edge.color.set(colour); },
-  };
-}
-
-/** The original hall: a steel turntable in front of a drum of whitewashed wall with a painted dado. */
-function works(): Room {
-  const g = new THREE.Group();
-  const WASH = '#e4e5df';
-  const [wc, wx] = sheet(4, 512);
-  const wallTex = new THREE.CanvasTexture(wc); wallTex.colorSpace = THREE.SRGBColorSpace;
-  const drum = new THREE.Mesh(new THREE.CylinderGeometry(9, 9, 10, 72, 1, true), new THREE.MeshStandardMaterial({ map: wallTex, side: THREE.BackSide, roughness: 0.95 }));
-  drum.position.y = 5;
-  const floor = new THREE.Mesh(new THREE.CircleGeometry(9, 72), new THREE.MeshStandardMaterial({ color: 0xc4c6be, roughness: 0.82 }));
-  floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true;
-  const plinth = solid(new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.16, TOP, 96), new THREE.MeshStandardMaterial({ color: 0x24272b, roughness: 0.42, metalness: 0.6 })));
-  plinth.position.y = TOP / 2;
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(1.14, 0.012, 10, 128), new THREE.MeshStandardMaterial({ color: 0xb08d4a, roughness: 0.3, metalness: 0.9 }));
-  ring.rotation.x = Math.PI / 2; ring.position.y = TOP;
-  const hemi = new THREE.HemisphereLight(0xffffff, 0x8d8f89, 0), key = new THREE.DirectionalLight(0xfff3e2, 0), fill = new THREE.DirectionalLight(0xdfe8ff, 0);
-  key.position.set(3.4, 6, 4); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 3;
-  const sc = key.shadow.camera;
-  sc.left = -2.4; sc.right = 2.4; sc.top = 2.6; sc.bottom = -2.2; sc.near = 1; sc.far = 16;
-  key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02;
-  fill.position.set(-4.5, 2.6, 2.5);
-  g.add(drum, floor, plinth, ring, hemi, key, fill);
-  return {
-    group: g, targetY: TOP + 0.54, reach: 1, walled: false,
-    light: (L, scene) => { hemi.intensity = 0.025 + 0.6 * L; key.intensity = 2.4 * L; fill.intensity = 0.55 * L; scene.environmentIntensity = 0.035 + 0.5 * L; },
-    hall: (colour) => {
-      // whitewash, a little greyer towards the roof, over a painted dado kept low behind the plinth
-      const grad = wx.createLinearGradient(0, 0, 0, 470);
-      grad.addColorStop(0, '#b9bbb4'); grad.addColorStop(0.55, '#d6d8d1'); grad.addColorStop(1, WASH);
-      wx.fillStyle = grad; wx.fillRect(0, 0, 4, 512);
-      wx.fillStyle = colour; wx.fillRect(0, 470, 4, 42);
-      wx.fillStyle = 'rgba(0,0,0,.45)'; wx.fillRect(0, 468, 4, 3);
-      wallTex.needsUpdate = true;
-    },
-  };
-}
-
-export function buildRoom(look: Look): Room {
-  return look === 'betong' ? betong() : look === 'tehdas' ? tehdas() : look === 'ljus' ? ljus() : works();
-}
-
-/** What you see past the walls, by look and by how much light is on. */
-export const OUTSIDE: Record<Look, string> = { works: '#e4e5df', betong: '#8f9391', tehdas: '#6f7374', ljus: '#d9dbd8' };
+/** The colour past everything, should a gap ever show it. */
+export const OUTSIDE = '#c9d2da';

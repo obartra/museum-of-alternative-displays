@@ -1,6 +1,6 @@
 import { Stage } from './stage';
-import type { Look } from './room';
 import { builders } from './models';
+import { pieceById } from '../data/pieces';
 
 let stage: Stage | null = null;
 const cache = new Map<string, string>();
@@ -8,7 +8,7 @@ let chain: Promise<unknown> = Promise.resolve();
 const idle = (fn: () => void) => ('requestIdleCallback' in window ? window.requestIdleCallback(fn, { timeout: 400 }) : setTimeout(fn, 16));
 
 /** A view other than the opening one, for checking models: through the eyepiece, or from any angle. */
-export interface Shot { eye?: boolean; az?: number; el?: number; zoom?: number; look?: Look; no?: number }
+export interface Shot { eye?: boolean; az?: number; el?: number; zoom?: number; no?: number; w?: number; h?: number }
 
 /** A still of a piece on its plinth, rendered once and kept. One at a time, so the page stays responsive. */
 export function thumb(id: string, hallColour: string, lightsOn: boolean, size = 420, shot?: Shot): Promise<string> {
@@ -18,11 +18,11 @@ export function thumb(id: string, hallColour: string, lightsOn: boolean, size = 
   const job = chain.then(() => new Promise<string>((resolve) => {
     idle(() => {
       try {
-        if (!stage) { const c = document.createElement('canvas'); stage = new Stage(c, false); stage.resize(size, size); }
+        if (!stage) { const c = document.createElement('canvas'); stage = new Stage(c, false); }
+        stage.resize(shot?.w ?? size, shot?.h ?? size);
         const make = builders[id];
         if (!make) return resolve('');
-        if (shot?.look) stage.setLook(shot.look);
-        stage.setPiece(make(), hallColour, shot?.no);
+        stage.setPiece(make(), hallColour, shot?.no ?? pieceById(id)?.hall);
         stage.setLights(lightsOn, true);
         if (shot?.eye) stage.goEye();
         else if (shot?.az !== undefined) stage.goTo(shot.az, shot.el ?? 10, shot.zoom ?? 1);

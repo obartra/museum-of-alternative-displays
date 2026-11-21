@@ -29,7 +29,7 @@ export const h6: Piece[] = [
     ],
     good: ['An image hanging in a doorway that people can pass through', 'No surface to touch, break or clean'],
     bad: ['Turbulence in the fog smears fine detail', 'Narrow viewing angle and it needs a dim room', 'Draughts, and a steady supply of water'],
-    look: 'Look through the sheet toward the projector, then walk round to the side and watch the picture fade. With the hall lights on there is almost nothing to see.',
+    look: 'Look through the sheet toward the projector, then walk round to the side and watch the picture fade. By day there is almost nothing to see.',
     dispute: 'Fountain and water-curtain projection are older. A patent for an ornamental fountain screen dates from 1899.',
     sources: [src('paper', 'DiVerdi, Olwal, Rakkolainen and Höllerer, An Immaterial Pseudo-3D Display with 3D Interaction (2008)', 'http://www.olwal.com/projects/research/immaterial/diverdi_immaterial_3dtv_book_chapter_2008.pdf'), wiki('Fog_display', 'Fog display')],
   },

@@ -9,12 +9,8 @@ import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type 
 import { planSvg } from './art/plan';
 import { axoSvg, elevationSvg } from './art/building';
 import type { Stage } from './three/stage';
-import type { Look } from './three/room';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
-const ROOMS: [Look, string][] = [['works', 'Works'], ['betong', 'Betong'], ['tehdas', 'Tehdas'], ['ljus', 'Ljus']];
-let room: Look = 'works';
-try { const saved = localStorage.getItem('room') as Look | null; if (saved && ROOMS.some(([id]) => id === saved)) room = saved; } catch { /* no storage */ }
 
 const REPO = 'https://github.com/obartra/museum-of-alternative-displays';
 const app = document.getElementById('app')!;
@@ -23,7 +19,7 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const three = () => import('./three/runtime');
 const hallColour = (n: number) => getComputedStyle(root).getPropertyValue(`--h${n}`).trim();
 
-// ---------- hall lights: one switch for the whole building ----------
+// ---------- daylight: one switch for the whole building, day or night ----------
 let lightsOn = true;
 try { lightsOn = localStorage.getItem('lights') !== 'off'; } catch { /* storage is optional */ }
 const lightListeners = new Set<(on: boolean) => void>();
@@ -35,7 +31,7 @@ function setLights(on: boolean): void {
   for (const sw of document.querySelectorAll<HTMLElement>('[data-lights-switch]')) sw.setAttribute('aria-checked', String(on));
   for (const fn of lightListeners) fn(on);
 }
-const switchHtml = (label = 'Hall lights') => `<button type="button" class="switch" role="switch" aria-checked="${lightsOn}" data-lights-switch><span class="switch__track"><span class="switch__knob"></span></span><span>${label}</span></button>`;
+const switchHtml = (label = 'Daylight') => `<button type="button" class="switch" role="switch" aria-checked="${lightsOn}" data-lights-switch><span class="switch__track"><span class="switch__knob"></span></span><span>${label}</span></button>`;
 document.addEventListener('click', (e) => {
   const t = e.target as HTMLElement;
   if (t.closest('[data-lights-switch]')) setLights(!lightsOn);
@@ -52,7 +48,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}" aria-label="Hall ${n}, ${esc(hallById(n).name)}"${hall === n ? ' aria-current="true"' : ''}>${n}</a>`;
   app.innerHTML = `
 <header class="top">
-  <a class="top__name" href="#">Museum of Alternative Displays<small lang="cs">Muzeum alternativních displejů</small></a>
+  <a class="top__name" href="#">Museum of Alternative Displays</a>
   ${switchHtml()}
   <nav class="tabs" aria-label="Halls">${halls.map((h) => tab(h.id)).join('')}<a class="tabs__word" href="#depot"${current === 'depot' ? ' aria-current="true"' : ''}>Depot</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>About</a></nav>
 </header>
@@ -70,13 +66,13 @@ function entrance(): void {
   const word = (s: string, n: number) => [...s.toUpperCase().padEnd(n, ' ').slice(0, n)].map((c) => cell(c)).join('');
   const rows = halls.map((h) => {
     const n = inHall(h.id).length;
-    return `<a class="board__row" href="#hall-${h.id}" data-hall="${h.id}" aria-label="Hall ${h.id}, ${esc(h.name)}, ${n} pieces"><span aria-hidden="true" style="display:contents">${cell(String(h.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(h.cz, 12)}<span class="board__en"><span class="flap flap--gap"></span>${word(h.name, 14)}</span><span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
+    return `<a class="board__row" href="#hall-${h.id}" data-hall="${h.id}" aria-label="Hall ${h.id}, ${esc(h.name)}, ${n} pieces"><span aria-hidden="true" style="display:contents">${cell(String(h.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(h.name, 14)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
   }).join('');
   const counts = Object.fromEntries(halls.map((h) => [h.id, inHall(h.id).length]));
   shell(`
 <div class="stack">
   <p class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${pieces.length} ways to make a picture that are not the screen you are holding.</p>
-  <p class="prose">Turn each one around. Switch the hall lights off and see which ones survive. Read how it works, what it is good at and where it fails, with the sources.</p>
+  <p class="prose">Turn each one around. Switch the daylight off and see which ones survive the night. Read how it works, what it is good at and where it fails, with the sources.</p>
   <section class="board" aria-label="Directory of halls">
     <div class="board__head"><span>Hall</span><span class="board__clock" id="clock" aria-label="Time now"></span><span>Pieces</span></div>
     <div class="board__rows">${rows}</div>
@@ -121,7 +117,7 @@ function entrance(): void {
 
 // ---------- hall ----------
 function tile(p: Piece): string {
-  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-thumb="${p.id}" width="420" height="420" loading="lazy"><span class="tile__no">inv. č. ${inv(p)}</span></div><div class="tile__name">${esc(p.name)}</div><div class="tile__meta">${p.year} ${chip(p.status)}</div></a>`;
+  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-thumb="${p.id}" width="420" height="420" loading="lazy"><span class="tile__no">No. ${inv(p)}</span></div><div class="tile__name">${esc(p.name)}</div><div class="tile__meta">${p.year} ${chip(p.status)}</div></a>`;
 }
 
 function fillThumbs(): void {
@@ -147,7 +143,7 @@ function hallView(n: number): void {
   shell(`
 <div class="stack">
   <div class="hallhead">
-    <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(h.name)}</span><span class="plate__sub" style="padding-left:0"><span lang="cs">${esc(h.cz)}</span>, once ${esc(h.was)}</span></span></h1>
+    <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(h.name)}</span><span class="plate__sub" style="padding-left:0">Once ${esc(h.was)}</span></span></h1>
     <p class="lead">${esc(h.intro)}</p>
   </div>
   <div class="pieces">${list.map(tile).join('')}</div>
@@ -173,15 +169,14 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"></div>
     <p class="stage__hint" id="stage-hint">Drag to turn. Pinch or scroll to zoom.</p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__bar">${switchHtml('Lights')}<span class="gap"></span><button type="button" class="btn" data-act="eye" aria-pressed="false" hidden></button><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
-    <div class="rooms" role="group" aria-label="Room study"><span>Room study</span>${ROOMS.map(([id, name]) => `<button type="button" class="chip-btn" data-room="${id}" aria-pressed="${id === room}">${name}</button>`).join('')}</div>
+    <div class="stage__bar">${switchHtml('Daylight')}<span class="gap"></span><button type="button" class="btn" data-act="eye" aria-pressed="false" hidden></button><button type="button" class="btn" data-act="front">Front</button><button type="button" class="btn" data-act="home">Reset</button><button type="button" class="btn" data-act="full" aria-pressed="false">Expand</button></div>
   </div>
   <div class="stack">
-    <a class="crumb" href="#hall-${h.id}"><b>${h.id}</b><span>${esc(h.name)}, <span lang="cs">${esc(h.cz)}</span></span></a>
+    <a class="crumb" href="#hall-${h.id}"><b>${h.id}</b><span>${esc(h.name)}</span></a>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(p.name)}</span>${p.aka ? `<span class="plate__sub">${esc(p.aka)}</span>` : ''}</h1>
     <p class="lead">${esc(p.lead)}</p>
     <dl class="card">
-      ${row('inv. č.', inv(p))}
+      ${row('No.', inv(p))}
       ${row('First shown', String(p.year))}
       ${row('Origin', esc(p.origin))}
       ${row('Status', `${STATUS_LABEL[p.status]}. ${esc(p.statusNote)}`)}
@@ -215,7 +210,7 @@ function pieceView(id: string): void {
   let alive = true;
   const say = (on: boolean) => {
     const d = stage?.inDark;
-    note.textContent = !on && d === 'vanishes' ? 'The hall is dark and this piece makes no light of its own.' : on && d === 'better' ? 'Stronger in the dark. Try the hall lights.' : '';
+    note.textContent = !on && d === 'vanishes' ? 'It is night and this piece makes no light of its own.' : on && d === 'better' ? 'Stronger in the dark. Switch the daylight off.' : '';
   };
   const setFull = (full: boolean) => {
     wrap.classList.toggle('is-full', full);
@@ -233,13 +228,6 @@ function pieceView(id: string): void {
   };
   wrap.addEventListener('click', (e) => {
     const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
-    const pick = (e.target as HTMLElement).closest<HTMLElement>('[data-room]')?.dataset.room as Look | undefined;
-    if (pick) {
-      room = pick;
-      try { localStorage.setItem('room', room); } catch { /* a private window: the choice lasts for the visit */ }
-      stage?.setLook(room);
-      wrap.querySelectorAll<HTMLElement>('[data-room]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.room === room)));
-    }
     if (act === 'eye') setEye(!stage?.inEye);
     if (act === 'front') { setEye(false); stage?.goFront(); }
     if (act === 'home') { setEye(false); stage?.goHome(); }
@@ -255,8 +243,7 @@ function pieceView(id: string): void {
     stageCanvas.setAttribute('aria-label', `3D model of ${p.name}. Drag or use the arrow keys to turn it, plus and minus to zoom.`);
     box.append(stageCanvas);
     try {
-      stage ??= new Stage(stageCanvas, true, room);
-      stage.setLook(room);
+      stage ??= new Stage(stageCanvas, true);
     } catch {
       box.innerHTML = '<p style="padding:24px">This browser could not start 3D graphics, so the model cannot be shown. The text below is complete without it.</p>';
       return;
@@ -300,7 +287,7 @@ function depot(): void {
   const s = depotState;
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">Depot</span><span class="plate__sub" lang="cs">Depozitář</span></h1><p class="lead">Every piece in one list. Filter by what you need the display to do.</p></div>
+  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">Depot</span></h1><p class="lead">Every piece in one list. Filter by what you need the display to do.</p></div>
   <form class="filters" id="filters">
     <fieldset><legend>Where the light comes from</legend>${pill('principle', '', 'Any', 'radio', s.principle === '')}${(Object.keys(PRINCIPLE_LABEL) as Principle[]).map((k) => pill('principle', k, PRINCIPLE_LABEL[k], 'radio', s.principle === k)).join('')}</fieldset>
     <fieldset><legend>It has to</legend>${(Object.keys(NEED_LABEL) as Need[]).filter((k) => k !== 'dark').map((k) => pill('needs', k, NEED_LABEL[k].replace(/^Readable/, 'Be readable').replace(/^Holds/, 'Hold').replace(/^See-through/, 'Be see-through').replace(/^Depth/, 'Give depth').replace(/^Image/, 'Put the image'), 'checkbox', s.needs.has(k))).join('')}</fieldset>
@@ -337,7 +324,7 @@ function about(): void {
   const flagged = pieces.filter((p) => p.dispute).length;
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">Gatehouse</span><span class="plate__sub" lang="cs">Vrátnice</span></h1><p class="lead">What this is, how it was put together, and what is missing.</p></div>
+  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">Gatehouse</span></h1><p class="lead">What this is, how it was put together, and what is missing.</p></div>
   <div class="split">
     <section class="stack prose" style="--gap: 12px">
       <h2 class="h-sec">What counts as a piece</h2>
@@ -377,18 +364,18 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const size = Number(q.get('size') ?? 240);
   const only = q.get('ids')?.split(',');
   const num = (k: string) => (q.has(k) ? Number(q.get(k)) : undefined);
-  const look = (q.get('look') ?? undefined) as Look | undefined;
   const view = q.has('eye') ? { eye: true } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
+  const w = num('w') ?? size, h = num('h') ?? size;
   root.dataset.lights = on ? 'on' : 'off';
-  app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${size}px);gap:4px;padding:4px"></div>`;
+  app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${q.has('w') ? Number(q.get('w')) : size}px);gap:4px;padding:4px"></div>`;
   const grid = document.getElementById('grid')!;
   const { thumb, builders } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
     if (view?.eye && !builders[p.id]().eye) continue;
-    const shot = view || look ? { ...view, look, no: p.hall } : undefined;
+    const shot = view || q.has('w') ? { ...view, no: p.hall, w, h } : undefined;
     const url = await thumb(p.id, hallColour(p.hall), on, size, shot);
-    grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${size}" height="${size}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
+    grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${w}" height="${h}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
   }
   document.body.dataset.ready = '1';
 }
@@ -400,6 +387,7 @@ function route(): void {
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
+  if (name === 'vista') { void import('./three/vista').then(({ pictures }) => { const { day, night } = pictures(); app.innerHTML = ''; for (const cv of [day, night]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } night.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   if (!name) entrance();
   else if (hall) hallView(Number(hall[1]));
   else if (piece) pieceView(piece[1]);

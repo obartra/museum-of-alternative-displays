@@ -29,7 +29,7 @@ export const h3: Piece[] = [
     ],
     good: ['True black, because an unlit pixel emits nothing', 'Very fast response', 'Thin, light and able to bend'],
     bad: ['Static images leave a ghost, because lit pixels age', 'Blue wears out soonest', 'Must be sealed against air and moisture'],
-    look: 'Switch the hall lights off. The black of this panel disappears into the dark while the colours stay, which no backlit screen in the building can do.',
+    look: 'Switch the daylight off. The black of this panel disappears into the dark while the colours stay, which no backlit screen in the building can do.',
     sources: [wiki('Organic_light-emitting_diode', 'Organic light-emitting diode')],
   },
   {
@@ -75,7 +75,7 @@ export const h3: Piece[] = [
     ],
     good: ['Puts information on the thing itself, not beside it', 'Emissive types glow against a dark scene'],
     bad: ['Emissive: no black, and it washes out against a bright background', 'Absorptive: no light of its own', 'Never as clear as plain glass'],
-    look: 'A shop case whose front pane is the screen. Inside stands an alarm clock, and the pane draws the same time in figures over it. Turn the hall lights on and off: the graphics are strong in the dark and thin in the light, and the clock behind them never goes away.',
+    look: 'A shop case whose front pane is the screen. Inside stands an alarm clock, and the pane draws the same time in figures over it. Switch between day and night: the graphics are strong in the dark and thin in the light, and the clock behind them never goes away.',
     sources: [wiki('See-through_display', 'See-through display')],
   },
   {

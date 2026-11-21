@@ -1,22 +1,24 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { THREE, type Built, type Eye } from './kit';
-import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Look, type Room } from './room';
+import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Room } from './room';
 
 const FOV = 30;
 const UP = new THREE.Vector3(0, 1, 0);
 
 /**
- * One stand in one room. Which room is a matter of look: see room.ts.
- * The hall lights are real lights. Switch them off and only what emits stays visible.
+ * One stand in one room: see room.ts.
+ * The light is the room's own daylight. Switch it off and it is night: only the moon, the town and what the piece emits.
  */
 export class Stage {
   readonly renderer: THREE.WebGLRenderer;
-  readonly camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 60);
+  readonly camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 700);
   private scene = new THREE.Scene();
   private controls?: OrbitControls;
   private glow = new THREE.PointLight(0xffffff, 0, 9, 1.4);
   private room!: Room;
+  private pmrem: THREE.PMREMGenerator;
+  private around?: THREE.WebGLRenderTarget;
   private hallOf: [string, number?] = ['#586067'];
   private piece?: Built;
   private lights = 1;
@@ -35,7 +37,7 @@ export class Stage {
   /** Called the first time the visitor turns the piece. */
   onTouch?: () => void;
 
-  constructor(private canvas: HTMLCanvasElement, interactive: boolean, private look: Look = 'works') {
+  constructor(private canvas: HTMLCanvasElement, interactive: boolean) {
     // the stencil buffer is what lets a reflection show only inside its pane, and a scene only through its lens
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, stencil: true, preserveDrawingBuffer: !interactive, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(interactive ? Math.min(window.devicePixelRatio || 1, 2) : 1);
@@ -43,17 +45,14 @@ export class Stage {
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFShadowMap;
 
-    const pmrem = new THREE.PMREMGenerator(this.renderer);
-    this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-    pmrem.dispose();
+    this.pmrem = new THREE.PMREMGenerator(this.renderer);
 
-    // above and in front, so that its mirror image never lands in a screen someone is looking at
-    this.glow.position.set(0, 2.5, 1.0);
     this.scene.add(this.glow);
-    this.scene.background = new THREE.Color(OUTSIDE[this.look]);
-    this.room = buildRoom(this.look);
+    this.scene.background = new THREE.Color(OUTSIDE);
+    this.room = buildRoom();
     this.scene.add(this.room.group);
     this.room.hall(...this.hallOf);
+    this.surround();
 
     if (interactive) {
       const c = new OrbitControls(this.camera, canvas);
@@ -84,34 +83,29 @@ export class Stage {
   get eye(): Eye | undefined { return this.piece?.eye; }
   get inEye(): boolean { return !!this.eyeAt; }
 
-  get lookNow(): Look { return this.look; }
-
-  /** Move the stand into another room. The piece stays where it is. */
-  setLook(look: Look): void {
-    if (look === this.look) return;
-    this.scene.remove(this.room.group);
-    this.room.group.traverse((o) => {
-      const m = o as THREE.Mesh;
-      m.geometry?.dispose?.();
-      const mats = Array.isArray(m.material) ? m.material : m.material ? [m.material] : [];
-      for (const mat of mats as THREE.Material[]) { for (const v of Object.values(mat)) if (v && (v as THREE.Texture).isTexture) (v as THREE.Texture).dispose(); mat.dispose(); }
-      const l = o as THREE.SpotLight;
-      if (l.isLight) { l.shadow?.map?.dispose(); l.map?.dispose?.(); }
-    });
-    this.look = look;
-    this.room = buildRoom(look);
-    this.scene.add(this.room.group);
-    this.room.hall(...this.hallOf);
-    if (this.controls) this.controls.autoRotate = false;
-    if (this.eyeAt) this.goEye(); else this.goHome();
+  /** What glass and metal on the stand reflect: the room itself where it can say, a plain studio where it cannot. */
+  private surround(): void {
+    // above and in front by default, so that its mirror image never lands in a screen someone is looking at
+    this.glow.position.set(...(this.room.glow?.at ?? [0, 2.5, 1.0]));
+    this.around?.dispose();
+    this.around = this.pmrem.fromScene(this.room.surroundings ?? new RoomEnvironment(), 0.035);
+    this.scene.environment = this.around.texture;
   }
 
   resize(w?: number, h?: number): void {
     const el = this.canvas.parentElement ?? this.canvas;
     const W = w ?? Math.max(1, el.clientWidth), H = h ?? Math.max(1, el.clientHeight);
+    const back = (aspect: number) => Math.max(1, 1.02 / aspect), k = back(W / H) / back(this.camera.aspect);
     this.renderer.setSize(W, H, false);
     this.camera.aspect = W / H;
     this.camera.updateProjectionMatrix();
+    // a taller frame is a narrower view: step back far enough to keep the whole piece in it
+    const c = this.controls;
+    if (c && !this.eyeAt && Math.abs(k - 1) > 0.01) {
+      this.camera.position.sub(c.target).multiplyScalar(k).add(c.target);
+      c.minDistance *= k; c.maxDistance *= k;
+      c.update();
+    }
   }
 
   /** Put a piece on the plinth, scaled to fit, in front of its hall colour. */
@@ -244,8 +238,8 @@ export class Stage {
     const L = this.lights;
     this.room.light(L, this.scene);
     this.room.seenFrom?.(this.camera);
-    this.glow.intensity = this.piece?.glow ? (1 - L) * 9 : 0;
-    (this.scene.background as THREE.Color).set(OUTSIDE[this.look]).multiplyScalar(0.02 + 0.98 * L);
+    this.glow.intensity = this.piece?.glow ? (1 - L) * 9 * (this.room.glow?.gain ?? 1) : 0;
+    (this.scene.background as THREE.Color).set(OUTSIDE).multiplyScalar(0.02 + 0.98 * L);
     if (this.eyeAt && this.eyeTo && !this.dragged && !this.still && at === undefined) {
       // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
       const dir = this.eyeTo.clone().sub(this.eyeAt), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;
@@ -255,6 +249,7 @@ export class Stage {
     }
     this.piece?.update?.({ t: at ?? (performance.now() - this.t0) / 1000, lights: L, camera: this.camera });
     this.controls?.update();
+    this.room.prepare?.(this.renderer, this.scene, this.camera);
     this.renderer.render(this.scene, this.camera);
   }
 
@@ -277,6 +272,9 @@ export class Stage {
     this.ro?.disconnect();
     this.controls?.dispose();
     this.clear();
+    this.room.dispose?.();
+    this.around?.dispose();
+    this.pmrem.dispose();
     this.renderer.dispose();
   }
 }
