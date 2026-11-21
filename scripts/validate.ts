@@ -154,12 +154,14 @@ for (const [id, list] of Object.entries(views)) {
 const localeDir = new URL('../src/i18n/locales/', import.meta.url);
 const doubts: string[] = [];
 const marks = (x: string) => (x.match(/\{\/?\w+\}/g) ?? []).sort().join(' ');
-/** What a word after a figure multiplies it by, in the six languages. The longer words come first. */
+/** What a word after a figure multiplies it by, in the languages of the museum. The longer words come first. */
 const UNITS: [string, number][] = [
-  ['mil millones', 1e9], ['mil milions', 1e9], ['milliards', 1e9], ['milliard', 1e9], ['milliarden', 1e9], ['milliarde', 1e9], ['mrd.', 1e9], ['billion', 1e9], ['十亿', 1e9],
-  ['millones', 1e6], ['millón', 1e6], ['milions', 1e6], ['milió', 1e6], ['millionen', 1e6], ['millions', 1e6], ['million', 1e6], ['mio.', 1e6], ['百万', 1e6],
-  ['千万', 1e7], ['亿', 1e8], ['万', 1e4],
-  ['thousand', 1e3], ['tausend', 1e3], ['mille', 1e3], ['mil', 1e3], ['千', 1e3],
+  ['mil millones', 1e9], ['mil milions', 1e9], ['milliards', 1e9], ['milliard', 1e9], ['milliarden', 1e9], ['milliarde', 1e9], ['mrd.', 1e9], ['billion', 1e9], ['十亿', 1e9], ['十億', 1e9], ['십억', 1e9],
+  ['bilhões', 1e9], ['bilhão', 1e9], ['miliardi', 1e9], ['miliardoj', 1e9], ['miliardów', 1e9], ['miliardy', 1e9], ['miliardo', 1e9], ['miliard', 1e9], ['miljard', 1e9], ['mld', 1e9], ['миллиардов', 1e9], ['миллиарда', 1e9], ['миллиард', 1e9], ['млрд', 1e9],
+  ['millones', 1e6], ['millón', 1e6], ['milions', 1e6], ['milió', 1e6], ['millionen', 1e6], ['millions', 1e6], ['million', 1e6], ['mio.', 1e6], ['百万', 1e6], ['百萬', 1e6], ['백만', 1e6],
+  ['milhões', 1e6], ['milhão', 1e6], ['milioni', 1e6], ['milionoj', 1e6], ['milionów', 1e6], ['miliony', 1e6], ['milione', 1e6], ['miliono', 1e6], ['milion', 1e6], ['miljoen', 1e6], ['mln', 1e6], ['миллионов', 1e6], ['миллиона', 1e6], ['миллион', 1e6], ['млн', 1e6],
+  ['千万', 1e7], ['千萬', 1e7], ['천만', 1e7], ['亿', 1e8], ['億', 1e8], ['억', 1e8], ['万', 1e4], ['萬', 1e4], ['만', 1e4],
+  ['thousand', 1e3], ['tausend', 1e3], ['mille', 1e3], ['mila', 1e3], ['mil', 1e3], ['duizend', 1e3], ['тысячи', 1e3], ['тысяча', 1e3], ['тысяч', 1e3], ['тыс.', 1e3], ['tysięcy', 1e3], ['tysiące', 1e3], ['tysiąc', 1e3], ['tys.', 1e3], ['千', 1e3],
 ];
 const ROMAN: Record<string, number> = { I: 1, V: 5, X: 10, L: 50 };
 const roman = (x: string) => [...x].reduce((sum, c, i, all) => sum + (ROMAN[c]! < (ROMAN[all[i + 1] ?? ''] ?? 0) ? -ROMAN[c]! : ROMAN[c]!), 0);
@@ -171,20 +173,20 @@ const roman = (x: string) => [...x].reduce((sum, c, i, all) => sum + (ROMAN[c]! 
 const figures = (text: string, lang: string) => {
   const found = new Set<string>();
   const x = text.replace(/(\d)[   ](?=\d{3}(?!\d))/g, '$1');
-  const comma = !['en', 'zh'].includes(lang); // these languages write the decimal mark as a comma
+  const comma = !['en', 'zh', 'zh-hant', 'ja', 'ko'].includes(lang); // the others write the decimal mark as a comma
   for (const m of x.matchAll(/\d+(?:[.,]\d+)*/g)) {
     const after = x.slice(m.index + m[0].length).replace(/^[\s  ]+/, '').toLowerCase();
     // a unit word counts only when it ends there: not the "mil" of "mil·lisegons", and not the 千 of 千克, a kilogram
-    const unit = UNITS.find(([word]) => after.startsWith(word) && (/[\u4e00-\u9fff]/.test(word) ? !(word === '千' && /^[克米瓦赫伏卡帕焦欧安牛升]/.test(after.slice(1))) : !/^[\p{L}·]/u.test(after.slice(word.length))));
+    const unit = UNITS.find(([word]) => after.startsWith(word) && (/[\u4e00-\u9fff\uac00-\ud7af]/.test(word) ? !(word === '千' && /^[克米瓦赫伏卡帕焦欧歐安牛升]/.test(after.slice(1))) : !/^[\p{L}·]/u.test(after.slice(word.length))));
     if (unit) {
       const plain = comma ? m[0].replace(/\./g, '').replace(',', '.') : m[0].replace(/,/g, '');
       found.add(String(Math.round(parseFloat(plain) * unit[1])));
     } else found.add(m[0].replace(/[.,]/g, ''));
   }
   const century = (n: number) => { found.add(String(n)); found.add(`${n - 1}00`); };
-  for (const m of x.matchAll(/(?:siglo|segle)[\s ]+([IVXL]+)\b|\b([IVXL]+)e[\s  ]*siècle/g)) century(roman(m[1] ?? m[2]!));
-  for (const m of x.matchAll(/(\d{1,2})\.[\s ]*Jahrhundert|(\d{1,2})\s*世纪/g)) century(Number(m[1] ?? m[2]));
-  for (const m of x.matchAll(/(\d{2})\s*世纪\s*(\d{2})\s*年代/g)) found.add(`${Number(m[1]) - 1}${m[2]}`);
+  for (const m of x.matchAll(/(?:siglo|segle|século|secolo)[\s ]+([IVXL]+)\b|\b([IVXL]+)e[\s  ]*siècle|\b([IVXL]+)[\s\u00a0]+(?:secolo|wiek|век)/g)) century(roman(m[1] ?? m[2] ?? m[3]!));
+  for (const m of x.matchAll(/(\d{1,2})\.[\s ]*Jahrhundert|(\d{1,2})\s*世[纪紀]|(\d{1,2})\s*세기|(\d{1,2})-a[\s\u00a0]+jarcento|(\d{1,2})e[\s\u00a0]+eeuw/g)) century(Number(m[1] ?? m[2] ?? m[3] ?? m[4] ?? m[5]));
+  for (const m of x.matchAll(/(\d{2})\s*世[纪紀]\s*(\d{2})\s*年代/g)) found.add(`${Number(m[1]) - 1}${m[2]}`);
   return new Set([...found].filter((n) => n.length > 1));
 };
 /** What a language still shows in English: a fact, a view or an archive caption added after its translation. It is listed, and it does not stop the build. */

@@ -78,11 +78,11 @@ Node 22 or newer.
 
 ## Languages
 
-English is the source and lives with the data. Spanish, Catalan, French, German and
-Simplified Chinese each live in one file in `src/i18n/locales/`, named by its code, that
-default-exports a `Locale` (see `src/i18n/types.ts`): the interface words, the labels, and
-the text of every hall, piece, fact, view and archive picture. A language loads only when a
-visitor picks it.
+English is the source and lives with the data. Every other language lives in one file in
+`src/i18n/locales/`, named by its code, that default-exports a `Locale` (see
+`src/i18n/types.ts`): the interface words, the labels, and the text of every hall, piece,
+fact, view and archive picture. A language loads only when a visitor picks it. The languages
+are listed in `src/i18n/types.ts`, and one is offered as soon as its file exists.
 
 `npm run check` fails if a language lacks an interface string, a label, a hall or a piece,
 or if a piece has a different number of paragraphs than the English. A fact, a view or an
@@ -92,8 +92,9 @@ It also prints any figure that the English has and the translation lacks, so a d
 gets a second look. It reads "10,197", "10.197" and "10 197" as one figure, and it knows
 that "130 million" and "1.3亿" are the same.
 
-The header shows the language menu. A first visit follows the browser's language. The
-choice is remembered.
+The header shows the language menu: a plate with the name of the language in use, which
+opens a list of all of them, each under its own name. A first visit follows the browser's
+language. The choice is remembered.
 
 ## Archive pictures
 

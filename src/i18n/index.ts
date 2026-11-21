@@ -13,7 +13,7 @@ const fileOf = (code: Lang) => files[`./locales/${code}.ts`];
 let lang: Lang = 'en';
 let loc: Locale | null = null;
 
-/** The languages there is a file for, English first. */
+/** The languages there is a file for, and English, which needs none. */
 export const offered = (): LangInfo[] => LANGS.filter((l) => l.code === 'en' || fileOf(l.code));
 export const langNow = (): LangInfo => LANGS.find((l) => l.code === lang)!;
 
@@ -25,7 +25,9 @@ export function wanted(): Lang {
     if (kept && codes.includes(kept)) return kept;
   } catch { /* storage is optional */ }
   for (const tag of navigator.languages ?? [navigator.language]) {
-    const code = tag.toLowerCase().split('-')[0] as Lang;
+    const low = tag.toLowerCase(), code = low.split('-')[0] as Lang;
+    // Chinese is two languages on the page: the traditional characters of Taiwan, Hong Kong and Macau, and the simplified
+    if (code === 'zh' && /hant|-tw|-hk|-mo/.test(low) && codes.includes('zh-hant')) return 'zh-hant';
     if (codes.includes(code)) return code;
   }
   return 'en';
@@ -54,8 +56,8 @@ export function count(key: 'count.pieces', n: number): string {
   const form = new Intl.PluralRules(langNow().tag).select(n) === 'one' ? 'one' : 'other';
   return t(`${key}.${form}`, { n });
 }
-/** What separates the items of a short list: a comma and a space, or the full-width comma of Chinese. */
-export const comma = (): string => (lang === 'zh' ? '，' : ', ');
+/** What separates the items of a short list: a comma and a space, the full-width comma of Chinese or the comma of Japanese. */
+export const comma = (): string => (lang === 'zh' || lang === 'zh-hant' ? '，' : lang === 'ja' ? '、' : ', ');
 /** Compare two names the way the language in use sorts them. */
 export const byName = (a: string, b: string): number => a.localeCompare(b, langNow().tag);
 
