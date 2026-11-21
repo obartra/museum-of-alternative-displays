@@ -14,11 +14,8 @@ const licence = (m: Media) => (m.credit.licenceUrl ? `<a href="${esc(m.credit.li
 /** The small picture for the row. A film is shown by one frame of it. */
 const small = (m: Media) => (m.kind === 'film' ? m.poster.replace(/-poster\.webp$/, '-poster-480.webp') : m.small);
 
-// While the layout is being built, a file of stand-ins may sit beside the data. It is never committed and never built.
-const standIns = import.meta.env.DEV ? Object.values(import.meta.glob<{ devMedia: Record<string, Media[]> }>('./data/media.dev.ts', { eager: true }))[0]?.devMedia : undefined;
-
 /** The archive pictures of a piece, with their words in the language in use. */
-export const archiveOf = (pieceId: string): Media[] => (media[pieceId] ?? standIns?.[pieceId] ?? []).map((m) => said.media(pieceId, m));
+export const archiveOf = (pieceId: string): Media[] => (media[pieceId] ?? []).map((m) => said.media(pieceId, m));
 
 export function archiveSection(pieceId: string): string {
   const list = archiveOf(pieceId);

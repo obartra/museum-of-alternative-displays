@@ -97,7 +97,8 @@ for (const [id, list] of Object.entries(media)) {
       const n = bytes(f);
       if (n < 0) fail(at, `missing file ${f}`); else mediaBytes += n;
       if (!f.startsWith(`./media/${id}/`)) fail(at, `${f} should be under ./media/${id}/`);
-      if (n > (/\.(mp4|webm)$/.test(f) ? 1_600_000 : 260_000)) fail(at, `${f} is ${Math.round(n / 1000)} KB, too heavy`);
+      // a dense engraving needs more than a photograph does. The large file only loads when someone opens it
+      if (n > (/\.(mp4|webm)$/.test(f) ? 1_600_000 : /-480\.webp$/.test(f) ? 90_000 : 520_000)) fail(at, `${f} is ${Math.round(n / 1000)} KB, too heavy`);
     }
     if (m.kind === 'film' && (m.seconds < 2 || m.seconds > 20)) fail(at, 'a film runs 2 to 20 seconds');
   }
