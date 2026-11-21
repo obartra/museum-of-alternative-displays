@@ -1,1 +1,78 @@
-{}
+{
+ "women": {
+  "en": {
+   "start": {
+    "file": "00-start.mp3",
+    "mark": "175c7f88",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "braille-display": {
+    "file": "01-braille-display.mp3",
+    "mark": "869b4e3e",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.mp3",
+    "mark": "5750b002",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "microled": {
+    "file": "03-microled.mp3",
+    "mark": "bbe0ff54",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.mp3",
+    "mark": "40321bcd",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "scanned-laser": {
+    "file": "05-scanned-laser.mp3",
+    "mark": "3c1d8c09",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "projection-mapping": {
+    "file": "06-projection-mapping.mp3",
+    "mark": "bb8c2f71",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "electrowetting": {
+    "file": "07-electrowetting.mp3",
+    "mark": "8eac1477",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "illusion-transmitter": {
+    "file": "08-illusion-transmitter.mp3",
+    "mark": "91ab078e",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "static-volume": {
+    "file": "09-static-volume.mp3",
+    "mark": "07cde5a2",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "holography": {
+    "file": "10-holography.mp3",
+    "mark": "3788530b",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   },
+   "end": {
+    "file": "11-end.mp3",
+    "mark": "19a2f9fc",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4"
+   }
+  }
+ }
+}
