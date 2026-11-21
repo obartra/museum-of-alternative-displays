@@ -1,5 +1,6 @@
 import { THREE } from '../kit';
 import { OUTSIDE, TOP } from '../room';
+import { decalAt } from './decals';
 import { buildHall, type Hall, type Sign } from './hall';
 import * as plan from './plan';
 import { Stands } from './stands';
@@ -114,7 +115,7 @@ export class Gallery {
     this.paused = o.calm;
 
     this.scene.background = new THREE.Color(OUTSIDE);
-    this.hall = buildHall({ lite: o.lite, signs: o.signs, display: o.display });
+    this.hall = buildHall({ lite: o.lite, signs: o.signs, display: o.display, names: o.names, text: o.text });
     this.scene.add(this.hall.group);
     this.pmrem = new THREE.PMREMGenerator(this.renderer);
     this.around = this.pmrem.fromScene(this.hall.surroundings, 0.035);
@@ -289,7 +290,11 @@ export class Gallery {
     this.aim.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, 1 - ((e.clientY - r.top) / r.height) * 2), this.camera);
     const hit = landing(this.aim.ray.origin, this.aim.ray.direction);
     this.stir();
-    if (hit.piece) this.goPiece(hit.piece.id);
+    // a portrait on the wall leads to the piece its sitter worked on, unless a piece is in the way of it
+    const behind = decalAt(this.hall.hung, this.aim.ray.origin, this.aim.ray.direction);
+    const portrait = behind && (!hit.piece || !this.stands.strikes(hit.piece.id, this.aim)) ? behind : undefined;
+    if (portrait) this.goPiece(portrait.piece);
+    else if (hit.piece) this.goPiece(hit.piece.id);
     else if (hit.floor) {
       const [x, z] = hit.floor, far = Math.hypot(x - this.x, z - this.z);
       // arrive looking the way one came, unless it was only a step

@@ -75,7 +75,7 @@ for (const [id, c] of Object.entries(people)) {
   for (const [name, pic] of Object.entries(portraits)) {
     if (!named.has(name)) errors.push(`portrait of ${name}: no label spells a name that way`);
     if (!existsSync(new URL(`../public/people/${pic.file}`, import.meta.url))) errors.push(`portrait of ${name}: public/people/${pic.file} is not there`);
-    if (!pic.by.trim() || !pic.licence.trim() || !/^https?:\/\//.test(pic.source)) errors.push(`portrait of ${name}: needs its author, its licence and the address of its source page`);
+    if (!pic.licence.trim() || !/^https?:\/\//.test(pic.source)) errors.push(`portrait of ${name}: needs its licence and the address of its source page`);
   }
 }
 

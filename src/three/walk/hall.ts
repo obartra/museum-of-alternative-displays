@@ -3,6 +3,7 @@ import { THREE } from '../kit';
 import { HEAD, SILL, TALL, crease, glazed, mirror, once, polished, sheet, wear } from '../room';
 import { SUN, vista } from '../vista';
 import { trails } from '../../data/trails';
+import { buildDecals, type Hung } from './decals';
 import { BLOCK, DOOR, FLOOR, GATE, GATE_H, HALF, LENGTH, WALL, WINDOW, bays, placeOf, plateAt, walls, windows } from './plan';
 
 /**
@@ -19,6 +20,8 @@ export interface Hall {
   follow: (eye: THREE.Vector3) => void;
   /** What the polished floor mirrors, drawn before each picture. Only where the device can afford it. */
   prepare?: (renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera) => void;
+  /** The portraits on the blind wall, for finding the one under a click. */
+  hung: Hung[];
   /** Whether the floor mirrors at all. Not in a headset, where the mirror is not redrawn for each eye. */
   reflect: (on: boolean) => void;
   /** What shiny things in the hall see around them. */
@@ -41,6 +44,9 @@ export interface HallOptions {
   signs: Sign[];
   /** The typeface of the signs, as the page names it. */
   display: string;
+  /** The names of the pieces and the face for running text, for the lines under the portraits on the wall. */
+  names?: Record<string, string>;
+  text?: string;
 }
 
 /**
@@ -185,6 +191,9 @@ export function buildHall(o: HallOptions): Hall {
   floor.rotation.x = -Math.PI / 2; floor.position.set(LENGTH / 2, FLOOR, 0); floor.receiveShadow = true;
   shell.add(floor);
   const mirrored = o.lite ? undefined : mirror(floor, [floor]);
+  // the people: ink portraits on the blind wall, opposite the pieces they worked on
+  const decals = buildDecals({ lite: o.lite, names: o.names ?? {}, text: o.text ?? o.display });
+  if (decals.mesh) shell.add(decals.mesh);
   // the trails: a painted line down the aisle for each, with a spur and a dot at every piece it stops at
   for (const trail of trails) {
     const stops = trail.stops.map((id) => placeOf(id)).filter((p) => !!p);
@@ -247,7 +256,7 @@ export function buildHall(o: HallOptions): Hall {
   const glare = new THREE.Mesh(new THREE.PlaneGeometry(0.7, 0.7), flat(0xffe6c0, 26));
   glare.position.copy(sunward).multiplyScalar((-HALF + 0.04) / sunward.z); around.add(glare);
 
-  return {
+  return { hung: decals.hung, 
     group: g, shell, surroundings: around, sunward, sun, ready: out.ready, settle: out.settle,
     prepare: mirrored?.prepare,
     reflect: (on) => mirrored?.show(on),

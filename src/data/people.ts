@@ -191,7 +191,13 @@ export const people: Record<string, Credit> = {
       { who: ['Auguste Berthier'], did: 'Described the principle in 1896.' },
     ],
   },
-  'lenticular': { people: [{ who: ['Walter Hess'], did: 'Patented a sheet of cylindrical lenses in 1912.' }] },
+  'lenticular': {
+    people: [{ who: ['Walter Hess'], did: 'Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain.' }],
+    sources: [
+      src('patent', 'Hess, US patent 1,128,979', 'https://patents.google.com/patent/US1128979'),
+      src('paper', 'C. W. Hess, Walter R. Hess, Schweizer Archiv für Neurologie und Psychiatrie (2008)', 'https://mdpi-res.com/d_attachment/sanpp/sanpp-159-00255/article_deploy/sanpp-159-00255.pdf'),
+    ],
+  },
   'integral-imaging': { people: [{ who: ['Gabriel Lippmann'], did: 'Proposed it in France in 1908 and called it integral photography.' }] },
   'holography': {
     people: [

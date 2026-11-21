@@ -243,7 +243,7 @@ function hallView(n: number): void {
 /** A portrait, where one has been added by hand, with the credit that its licence asks for. */
 const portraitHtml = (name: string): string => {
   const pic = portraits[name];
-  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption><a href="${esc(pic.source)}" rel="noopener">${tx('people.portrait', { by: pic.by, licence: pic.licence })}</a></figcaption></figure>` : '';
+  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption><a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a></figcaption></figure>` : '';
 };
 /** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
 const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {
@@ -593,6 +593,7 @@ function about(): void {
       <p>${tx('about.pictures.1', { n: pieces.length })}</p>
       <p>${tx('about.pictures.2')}</p>
       ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
+      ${Object.keys(portraits).length ? `<p>${tx('about.portraits')}</p>` : ''}
       ${held ? `<h2 class="h-sec">${tx('about.credits')}</h2><p>${tx('about.credits.1', { n: held })}</p>${creditsList()}` : ''}
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>

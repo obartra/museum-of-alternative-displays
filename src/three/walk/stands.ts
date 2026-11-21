@@ -483,6 +483,27 @@ export class Stands {
 
   /** Whether any model is running: if so there is always something moving to draw. */
   get lively(): boolean { return this.stands.some((s) => s.built); }
+  /**
+   * Whether a ray that passes over a block lands on the piece that stands there. A model that is running is asked
+   * itself, so the wall can be reached past it and through it. A picture of a piece counts as the whole of its room.
+   */
+  strikes(id: string, ray: THREE.Raycaster): boolean {
+    const s = this.byId.get(id);
+    if (!s?.built || s.state !== 'live') return true;
+    const p = s.place, block = new THREE.Box3(new THREE.Vector3(p.x - BLOCK / 2, FLOOR, p.z - BLOCK / 2), new THREE.Vector3(p.x + BLOCK / 2, TOP, p.z + BLOCK / 2));
+    if (ray.ray.intersectsBox(block)) return true;
+    // a line or a cloud of points is not struck by coming within a metre of it, which is what the rule would otherwise be
+    const was = { line: ray.params.Line.threshold, points: ray.params.Points.threshold };
+    ray.params.Line.threshold = ray.params.Points.threshold = 0.02;
+    const hits = ray.intersectObject(s.built.root, true);
+    ray.params.Line.threshold = was.line; ray.params.Points.threshold = was.points;
+    return hits.some((h) => {
+      // what is not shown is not in the way, and neither is a glow, which is only light
+      for (let o: THREE.Object3D | null = h.object; o; o = o.parent) if (!o.visible) return false;
+      const of = (h.object as THREE.Mesh).material, mat = Array.isArray(of) ? of[0] : of;
+      return !mat || (mat.blending === THREE.NormalBlending && mat.opacity > 0.05);
+    });
+  }
   /** How many models are on their blocks now, and how many pictures stand in for the rest. */
   get count(): { live: number; making: number; pictured: number } {
     return { live: this.stands.filter((s) => s.built).length, making: this.stands.filter((s) => s.state === 'making').length, pictured: this.stands.filter((s) => this.pictured(s)).length };
