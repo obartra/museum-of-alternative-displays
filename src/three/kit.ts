@@ -18,26 +18,24 @@ export interface Env {
 /** How the piece behaves when the hall lights go off. */
 export type InDark = 'glows' | 'vanishes' | 'better';
 
-/** The place a piece was made to be looked at from: an eyepiece, a seat, a cockpit. Model coordinates. */
-export interface Eye {
+/**
+ * A place to look from, offered as a button beside the stand. Its words (the button, and a line about what to notice)
+ * are in src/data/views.ts under the same id, with the rest of the text. Here are only the camera's two points.
+ *
+ * `at` and `to` are in the model's own coordinates, the ones its parts are built in, before the stage scales it to fit.
+ * With `room` set, `at` is a place in the room instead, in metres: the stand's axis is x = 0, z = 0, its top is at
+ * y = 0.22 and the floor at y = -0.95, so a standing eye is near y = 0.65 and a seated one near y = 0.25. The visitor
+ * first sees the piece from +z. The room runs from x = -5.4 (the east windows) to 8.2 and from z = -1.5 (the south
+ * windows, behind the piece) to 8.5. `to` is always a point on the model.
+ */
+export interface Spot {
   at: V3;
   to: V3;
-  /** What the button says, for example "Look in". */
-  label: string;
+  room?: boolean;
+  /** Vertical field of view in degrees. A person view defaults to 38, a detail view to 32. */
   fov?: number;
-  /** How far the head may move, in radians about the thing looked at. */
+  /** How far the camera may swing about `to`, in radians. A person view defaults to 0.1, a detail view to 0.5. */
   play?: number;
-}
-
-/**
- * A place to look from, offered as a button beside the stand.
- * A person view puts the visitor where the piece is meant to be met: in the seat, at the eyepiece, across the hall.
- * A detail view goes close to the part that does the work.
- */
-export interface View extends Eye {
-  kind: 'person' | 'detail';
-  /** One line under the picture while the view is on, in place of the usual one. */
-  hint?: string;
 }
 
 export interface Built {
@@ -52,10 +50,8 @@ export interface Built {
   zoom?: number;
   /** A live canvas worth showing flat as a close-up of the lit surface. */
   surface?: HTMLCanvasElement;
-  /** The first person view, where there is one obvious place for the eye. */
-  eye?: Eye;
-  /** More places to look from. They follow the eye view in the row of buttons. */
-  views?: View[];
+  /** Places to look from, by the id they have in src/data/views.ts. */
+  views?: Record<string, Spot>;
 }
 
 export interface Screen {

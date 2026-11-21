@@ -135,7 +135,7 @@ export function peppersGhost(): Built {
   root.add(foot);
   const turn = new THREE.Quaternion(), UP = new THREE.Vector3(0, 1, 0);
   return {
-    root, inDark: 'better', view: [16, 11], eye: { at: [0, 1.22, 5.4], to: [0, 1.16, -0.3], label: 'Sit down', fov: 26, play: 0.11 },
+    root, inDark: 'better', view: [16, 11], views: { seat: { at: [0, 1.22, 5.4], to: [0, 1.16, -0.3], fov: 26, play: 0.11 } },
     update: ({ t, lights }) => {
       actor.position.set(-0.22 + Math.sin(t * 0.45) * 0.36, 0.2, FRONT + 0.025 + 0.012 * Math.sin(t * 1.3));
       actor.quaternion.copy(LIE).multiply(turn.setFromAxisAngle(UP, Math.sin(t * 0.6) * 0.45));

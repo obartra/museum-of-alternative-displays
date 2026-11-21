@@ -142,7 +142,7 @@ export function stereoscope(): Built {
   root.add(v, specs, G.cyl(0.035, 0.84, M.brass(1), [0, 0.47, 0], 24), G.cyl(0.07, 0.1, M.brass(), [0, 0.86, 0], 24), G.cyl(0.9, 0.06, M.wood(0x3b2616), [0, 0.03, 0.1], 72), G.cyl(0.16, 0.05, M.brass(), [0, 0.085, 0], 40));
   v.updateMatrixWorld(true);
   const at = v.localToWorld(new THREE.Vector3(0.212, 0, LZ + 0.17)), to = v.localToWorld(new THREE.Vector3(0.3, 0, CZ));
-  return { root, inDark: 'vanishes', view: [-8, 14], eye: { at: [at.x, at.y, at.z], to: [to.x, to.y, to.z], label: 'Look in', fov: 33, play: 0.045 } };
+  return { root, inDark: 'vanishes', view: [-8, 14], views: { eyepiece: { at: [at.x, at.y, at.z], to: [to.x, to.y, to.z], fov: 33, play: 0.045 } } };
 }
 
 /** Parallax barrier: a mask of slits in front of the pixels. Each eye sees through the slits to a different set of columns. */
@@ -330,7 +330,7 @@ export function hmd(): Built {
   let stamp = -1;
   return {
     root, inDark: 'glows', glow: 0x9fc0ff, view: [28, 8],
-    eye: { at: [0.09, EY, FZ - 0.09], to: [0.09, EY, FZ + 0.5], label: 'Put it on', fov: 62, play: 0.1 },
+    views: { worn: { at: [0.09, EY, FZ - 0.09], to: [0.09, EY, FZ + 0.5], fov: 62, play: 0.1 } },
     update: ({ t }) => {
       things.forEach((mesh, i) => { mesh.rotation.set(t * 0.4 + i, t * 0.3, 0); });
       const n = now();
@@ -432,7 +432,7 @@ export function hud(): Built {
   for (const [tx, tz] of [[-0.3, 0.2], [0.3, 0.2], [0, -0.05]]) { const b = beam(0x40ff70, 0.16); b.aim([0, 0.89, -0.05], [tx, GY + tz * 0.7, GZ + tz * 0.7]); root.add(b.line); }
   return {
     root, inDark: 'glows', glow: 0x40ff70, view: [7, 4], surface: s.canvas,
-    eye: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], label: 'Sit down', fov: 30, play: 0.05 },
+    views: { seat: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], fov: 30, play: 0.05 } },
     update: ({ t, lights }) => {
       const c = s.ctx, n = now();
       c.fillStyle = '#000'; c.fillRect(0, 0, 512, 400);

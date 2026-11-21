@@ -1,14 +1,15 @@
 import { Stage } from './stage';
 import { builders } from './models';
 import { pieceById } from '../data/pieces';
+import { viewsOf } from '../data/views';
 
 let stage: Stage | null = null;
 const cache = new Map<string, string>();
 let chain: Promise<unknown> = Promise.resolve();
 const idle = (fn: () => void) => ('requestIdleCallback' in window ? window.requestIdleCallback(fn, { timeout: 400 }) : setTimeout(fn, 16));
 
-/** A view other than the opening one, for checking models: through the eyepiece, or from any angle. */
-export interface Shot { eye?: boolean; view?: number; az?: number; el?: number; zoom?: number; no?: number; w?: number; h?: number }
+/** A view other than the opening one, for checking models: one of the piece's named views, or any angle. */
+export interface Shot { view?: string; az?: number; el?: number; zoom?: number; no?: number; w?: number; h?: number }
 
 /** A still of a piece on its plinth, rendered once and kept. One at a time, so the page stays responsive. */
 export function thumb(id: string, hallColour: string, lightsOn: boolean, size = 420, shot?: Shot): Promise<string> {
@@ -26,8 +27,7 @@ export function thumb(id: string, hallColour: string, lightsOn: boolean, size = 
         if (!make) return resolve('');
         stage.setPiece(make(), hallColour, shot?.no ?? pieceById(id)?.hall);
         stage.setLights(lightsOn, true);
-        if (shot?.eye) stage.goEye();
-        else if (shot?.view !== undefined) stage.goView(shot.view);
+        if (shot?.view) stage.goView(shot.view, viewsOf(id).find((v) => v.id === shot.view)?.kind === 'detail');
         else if (shot?.az !== undefined) stage.goTo(shot.az, shot.el ?? 10, shot.zoom ?? 1);
         const url = stage.snapshot();
         if (!shot) cache.set(key, url);

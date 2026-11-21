@@ -1,6 +1,6 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { THREE, type Built, type Eye, type View } from './kit';
+import { THREE, type Built } from './kit';
 import { OUTSIDE, TOP as PLINTH_TOP, buildRoom, type Room } from './room';
 
 const FOV = 30;
@@ -41,7 +41,7 @@ export class Stage {
   private eyeTo?: THREE.Vector3;
   private eyePlay = 0.1;
   private eyeT0 = 0;
-  private viewNo = -1;
+  private viewId: string | null = null;
   private drift = false;
   /** Where the visitor has put the camera, when the room has had to pull it in from there. */
   private free?: THREE.Vector3;
@@ -93,15 +93,10 @@ export class Stage {
 
   get inDark(): Built['inDark'] | undefined { return this.piece?.inDark; }
   get surface(): HTMLCanvasElement | undefined { return this.piece?.surface; }
-  get eye(): Eye | undefined { return this.piece?.eye; }
-  get inEye(): boolean { return !!this.eyeAt; }
-  /** Every place to look from that the piece offers, the eye view first. */
-  get views(): View[] {
-    const p = this.piece;
-    return p ? [...(p.eye ? [{ kind: 'person' as const, ...p.eye }] : []), ...(p.views ?? [])] : [];
-  }
-  /** Which of them is on, or -1. */
-  get inView(): number { return this.viewNo; }
+  /** Whether the piece on the stand has a place to look from under this id. */
+  hasView(id: string): boolean { return !!this.piece?.views?.[id]; }
+  /** The id of the view that is on, or null for the ordinary turning view. */
+  get inView(): string | null { return this.viewId; }
   get isPaused(): boolean { return this.paused; }
   setPaused(paused: boolean): void { this.paused = paused; this.owed = 3; }
   /** Have the shaders built off the main thread where the browser can, so the first frame does not stall the page. */
@@ -204,7 +199,7 @@ export class Stage {
   }
 
   private place(az: number, el: number, dist: number): void {
-    this.eyeAt = this.eyeTo = undefined; this.free = undefined; this.viewNo = -1; this.owed = 3;
+    this.eyeAt = this.eyeTo = undefined; this.free = undefined; this.viewId = null; this.owed = 3;
     this.camera.fov = FOV; this.camera.near = 0.05;
     this.camera.updateProjectionMatrix();
     const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
@@ -227,21 +222,22 @@ export class Stage {
   /** Any angle, for checking a model from behind or above. */
   goTo(az: number, el: number, zoom = 1): void { if (this.controls) this.controls.autoRotate = false; this.place(az, el, this.home.dist / zoom); }
 
-  /** Put the visitor's eye where the piece expects one. Dragging then moves the head a little, which is how depth shows on a flat screen. */
-  goEye(): void { if (this.piece?.eye) this.goView(0); }
-
-  /** Look from one of the piece's own places. A person view holds the head nearly still, a detail view lets it wander round the part. */
-  goView(n: number): void {
-    const view = this.views[n];
-    if (!view) return;
+  /**
+   * Look from one of the piece's own places. A person view holds the head nearly still and lets it drift a little,
+   * which is how depth shows on a flat screen. A detail view lets the camera wander round the part.
+   */
+  goView(id: string, detail = false): void {
+    const spot = this.piece?.views?.[id];
+    if (!spot) return;
     this.free = undefined;
-    const root = this.piece!.root, detail = view.kind === 'detail';
+    const root = this.piece!.root;
     root.updateMatrixWorld(true);
-    const at = root.localToWorld(new THREE.Vector3(...view.at)), to = root.localToWorld(new THREE.Vector3(...view.to));
-    this.eyeAt = at; this.eyeTo = to; this.eyePlay = view.play ?? (detail ? 0.5 : 0.1); this.eyeT0 = this.clock;
-    this.viewNo = n; this.drift = !detail; this.owed = 3;
+    const at = spot.room ? new THREE.Vector3(...spot.at) : root.localToWorld(new THREE.Vector3(...spot.at));
+    const to = root.localToWorld(new THREE.Vector3(...spot.to));
+    this.eyeAt = at; this.eyeTo = to; this.eyePlay = spot.play ?? (detail ? 0.5 : 0.1); this.eyeT0 = this.clock;
+    this.viewId = id; this.drift = !detail; this.owed = 3;
     this.dragged = false;
-    this.camera.fov = view.fov ?? (detail ? 32 : 38); this.camera.near = 0.004;
+    this.camera.fov = spot.fov ?? (detail ? 32 : 38); this.camera.near = 0.004;
     this.camera.updateProjectionMatrix();
     this.camera.position.copy(at); this.camera.lookAt(to);
     const c = this.controls;

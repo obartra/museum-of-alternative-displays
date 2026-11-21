@@ -4,6 +4,8 @@
  */
 import { halls } from '../src/data/halls';
 import { pieces } from '../src/data/pieces';
+import { existsSync } from 'node:fs';
+import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
 
 const errors: string[] = [];
@@ -37,6 +39,27 @@ for (const p of pieces) {
   if (DASH.test(text)) fail(p.id, 'house style: no em dashes or double hyphens');
 }
 for (const id of Object.keys(builders)) if (!seen.has(id)) errors.push(`${id}: a model with no piece in the data`);
+
+// every piece has its still pictures, which is what a list shows and what a piece page shows first
+for (const p of pieces) for (const when of ['day', 'night']) for (const w of [380, 760]) {
+  if (!existsSync(new URL(`../public/posters/${p.id}-${when}-${w}.webp`, import.meta.url))) fail(p.id, `no still picture for ${when} at ${w} px. Run npm run posters`);
+}
+
+// places to look from: the words are data, the camera positions are in the model under the same id
+for (const [id, list] of Object.entries(views)) {
+  if (!seen.has(id)) errors.push(`${id}: views for a piece that is not in the data`);
+  const ids = new Set<string>();
+  for (const v of list) {
+    if (ids.has(v.id)) fail(id, `two views called ${v.id}`);
+    ids.add(v.id);
+    if (!/^[a-z][a-z0-9-]*$/.test(v.id)) fail(id, `view id ${v.id} must be lower case letters, digits and hyphens`);
+    if (v.label.length < 3 || v.label.length > 24) fail(id, `the button for view ${v.id} should be 3 to 24 characters, got ${v.label.length}`);
+    if (v.hint && v.hint.length > 120) fail(id, `the line for view ${v.id} should be at most 120 characters, got ${v.hint.length}`);
+    if (DASH.test(v.label + (v.hint ?? ''))) fail(id, 'house style: no em dashes or double hyphens');
+  }
+  if (list.filter((v) => v.kind === 'person').length > 2) fail(id, 'at most two person views, so the row of buttons stays short');
+  if (list.length > 4) fail(id, 'at most four views');
+}
 
 const kinds: Record<string, number> = {};
 for (const p of pieces) for (const s of p.sources) kinds[s.kind] = (kinds[s.kind] ?? 0) + 1;

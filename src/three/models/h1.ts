@@ -166,7 +166,7 @@ export function nipkow(): Built {
   root.add(magnifier);
   return {
     root, inDark: 'glows', glow: 0xff5a1e, view: [30, 10], surface: img.canvas,
-    eye: { at: [LX, CY, 1.5], to: [LX, CY, 0.01], label: 'Look in', fov: 30, play: 0.04 },
+    views: { eyepiece: { at: [LX, CY, 1.5], to: [LX, CY, 0.01], fov: 30, play: 0.04 } },
     update: ({ t }) => {
       disc.rotation.z = -t * 9;
       const n = now();

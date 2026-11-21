@@ -4,6 +4,7 @@ import './styles/base.css';
 import { halls, hallById } from './data/halls';
 import { inHall, inv, pieceById, pieces } from './data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type Principle, type Status } from './data/schema';
+import { viewsOf } from './data/views';
 import { planSvg } from './art/plan';
 import { axoSvg, elevationSvg } from './art/building';
 import type { Stage } from './three/stage';
@@ -182,6 +183,8 @@ function pieceView(id: string): void {
   if (!p) return notFound();
   const h = hallById(p.hall);
   const all = pieces, i = all.indexOf(p), prev = all[i - 1], next = all[i + 1];
+  // a piece made to be looked into or sat in front of gets a button that puts the visitor there, in place of the plain front view
+  const places = viewsOf(p.id);
   document.title = `${p.name} | Museum of Alternative Displays`;
   const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
   shell(`
@@ -190,7 +193,7 @@ function pieceView(id: string): void {
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${esc(p.name)}, on its stand." fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>Start 3D</button></div>
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
-    <div class="stage__views" id="stage-views" role="group" aria-label="Views"><button type="button" class="btn" data-act="home" disabled>Whole piece</button></div>
+    <div class="stage__views" id="stage-views" role="group" aria-label="Views"><button type="button" class="btn" data-act="home" disabled>Whole piece</button>${places.some((v) => v.kind === 'person') ? '' : '<button type="button" class="btn" data-act="front" disabled>Front</button>'}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}</div>
     <div class="stage__bar">${switchHtml('Daylight')}<span class="gap"></span><button type="button" class="btn" data-act="pause" disabled>${calm ? 'Play' : 'Pause'}</button><button type="button" class="btn" data-act="full">Expand</button></div>
   </div>
   <div class="stack">
@@ -221,7 +224,7 @@ function pieceView(id: string): void {
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
   const views = document.getElementById('stage-views')!, still = document.getElementById('stage-poster') as HTMLImageElement;
   const act = (name: string) => wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`)!;
-  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), homeBtn = act('home');
+  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause');
   const HINT = { turn: 'Drag to turn. Pinch or scroll to zoom.', person: 'Drag to move your head.', detail: 'Drag to look round it. Pinch or scroll to zoom.' };
   // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
   let alive = true, live = false, begun = false, seen = true, wantFocus = false;
@@ -230,12 +233,13 @@ function pieceView(id: string): void {
     const d = live ? stage?.inDark : undefined;
     note.textContent = !on && d === 'vanishes' ? 'It is night and this piece makes no light of its own.' : on && d === 'better' ? 'Stronger in the dark. Switch the daylight off.' : '';
   };
-  /** Look from one of the piece's own places. The same button again, or -1, goes back to the whole piece. */
-  const setView = (n: number) => {
+  /** Look from one of the piece's own places. The same button again, or null, goes back to the whole piece. */
+  const setView = (id: string | null) => {
     if (!stage || !live) return;
-    if (n < 0 || stage.inView === n) { stage.goHome(); n = -1; } else stage.goView(n);
-    for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(Number(b.dataset.view) === n));
-    tell(n < 0 ? HINT.turn : stage.views[n].hint ?? HINT[stage.views[n].kind]);
+    const v = id && stage.inView !== id ? places.find((x) => x.id === id) : undefined;
+    if (v) stage.goView(v.id, v.kind === 'detail'); else stage.goHome();
+    for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(b.dataset.view === v?.id));
+    tell(v ? v.hint ?? HINT[v.kind] : HINT.turn);
   };
   const setFull = (full: boolean) => {
     wrap.classList.toggle('is-full', full);
@@ -287,10 +291,9 @@ function pieceView(id: string): void {
       if (!seen) stage.stop();
       // the first frame is drawn: let it come up over the still picture, then take the picture away
       requestAnimationFrame(() => { cv.classList.add('is-live'); window.setTimeout(() => { if (alive) still.hidden = true; }, 420); });
-      const all = stage.views;
-      views.insertAdjacentHTML('beforeend', (all.some((v) => v.kind === 'person') ? '' : '<button type="button" class="btn" data-act="front">Front</button>')
-        + all.map((v, i) => `<button type="button" class="btn" data-view="${i}" aria-pressed="false">${esc(v.label)}</button>`).join(''));
-      homeBtn.disabled = pauseBtn.disabled = false;
+      for (const b of views.querySelectorAll<HTMLButtonElement>('button')) b.disabled = !!b.dataset.view && !stage.hasView(b.dataset.view);
+      if (import.meta.env.DEV) for (const v of places) if (!stage.hasView(v.id)) console.warn(`${p.id}: the view "${v.id}" has words but the model gives it no place`);
+      pauseBtn.disabled = false;
       pauseBtn.textContent = stage.isPaused ? 'Play' : 'Pause';
       tell(HINT.turn);
       say(lightsOn);
@@ -312,10 +315,10 @@ function pieceView(id: string): void {
     const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act], [data-view]');
     if (!el) return;
     const name = el.dataset.act;
-    if (el.dataset.view) setView(Number(el.dataset.view));
+    if (el.dataset.view) setView(el.dataset.view);
     if (name === 'start') { wantFocus = true; void go(); }
-    if (name === 'front') { setView(-1); stage?.goFront(); }
-    if (name === 'home') setView(-1);
+    if (name === 'front') { setView(null); stage?.goFront(); }
+    if (name === 'home') setView(null);
     if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = stage.isPaused ? 'Play' : 'Pause'; }
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));
   });
@@ -433,19 +436,16 @@ async function sheet(q: URLSearchParams): Promise<void> {
   const size = Number(q.get('size') ?? 240);
   const only = q.get('ids')?.split(',');
   const num = (k: string) => (q.has(k) ? Number(q.get(k)) : undefined);
-  const view = q.has('eye') ? { eye: true } : q.has('view') ? { view: num('view') } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
+  const view = q.has('view') ? { view: q.get('view')! } : q.has('az') ? { az: num('az'), el: num('el'), zoom: num('zoom') } : undefined;
   const w = num('w') ?? size, h = num('h') ?? size;
   root.dataset.lights = on ? 'on' : 'off';
   app.innerHTML = `<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,${q.has('w') ? Number(q.get('w')) : size}px);gap:4px;padding:4px"></div>`;
   const grid = document.getElementById('grid')!;
-  const { thumb, builders } = await three();
+  const { thumb } = await three();
   for (const p of pieces) {
     if (only && !only.includes(p.id)) continue;
-    if (view && ('eye' in view || 'view' in view)) {
-      // only the pieces that have that view
-      const b = builders[p.id](), n = 'view' in view ? view.view ?? 0 : 0;
-      if ('eye' in view ? !b.eye : n >= (b.eye ? 1 : 0) + (b.views?.length ?? 0)) continue;
-    }
+    // a named view: only the pieces that have it
+    if (view && 'view' in view && !viewsOf(p.id).some((v) => v.id === view.view)) continue;
     const shot = view || q.has('w') ? { ...view, no: p.hall, w, h } : undefined;
     const url = await thumb(p.id, hallColour(p.hall), on, size, shot);
     grid.insertAdjacentHTML('beforeend', `<figure style="margin:0"><img src="${url}" width="${w}" height="${h}" alt=""><figcaption style="font:600 11px var(--text)">${inv(p)} ${p.id}</figcaption></figure>`);
