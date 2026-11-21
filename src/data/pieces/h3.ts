@@ -49,7 +49,7 @@ export const h3: Piece[] = [
   },
   {
     id: 'thin-film-el', hall: 3, name: 'Thin-film electroluminescent panel', aka: 'TFEL, EL display',
-    year: 1974, yearText: '1974, as an encyclopedia timeline lists it', origin: 'Commercialised in the 1980s by Sharp (Japan), Finlux (Finland) and Planar (USA)',
+    year: 1974, origin: 'Commercialised in the 1980s by Sharp (Japan), Finlux (Finland) and Planar (USA)',
     status: 'niche', statusNote: 'One manufacturer remains. Used where a screen must survive cold, vibration and decades of service.',
     principle: 'emits', needs: [],
     lead: 'Thin layers on glass glow yellow at every point where two crossed conducting strips put a voltage across them.',

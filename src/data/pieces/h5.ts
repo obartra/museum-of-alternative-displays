@@ -60,12 +60,11 @@ export const h5: Piece[] = [
     good: ['Reflects room light and is fast enough for moving pictures', 'Gives bright, strong colour from real dye'],
     bad: ['Has to hold liquids in millions of cells for years', 'Needs a small voltage to hold its picture, so it does not work fully without power', 'Did not reach volume production'],
     look: 'The model shows 12 cells, greatly enlarged and tilted toward you. Watch the oil when a cell switches. The oil does not disappear: it gathers in the corner and stands higher.',
-    dispute: 'The idea is older than the year shown. Beni and Hackwood introduced the term electrowetting in 1981 for a display that they proposed. The 2003 paper is the one that made the idea work at video speed.',
     sources: [src('paper', 'Hayes and Feenstra, Video-speed electronic paper based on electrowetting, Nature (2003)', 'https://doi.org/10.1038/nature01988'), src('paper', 'Beni and Hackwood, Electro-wetting displays, Applied Physics Letters (1981)', 'https://doi.org/10.1063/1.92322'), src('press', 'Electronic paper reaches video speeds, Physics World', 'https://physicsworld.com/a/electronic-paper-reaches-video-speeds/')],
   },
   {
     id: 'interferometric-modulator', hall: 5, name: 'Interferometric modulator', aka: 'IMOD, Mirasol',
-    year: 2004, origin: 'Mark Miles, Iridigm, USA, acquired by Qualcomm in 2004',
+    year: 1998, origin: 'Mark Miles, Etalon and later Iridigm, USA. First patent granted in 1998',
     status: 'extinct', statusNote: 'Sold in a few e-readers from 2011 and in a smartwatch, then discontinued.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'Colour without pigment: a tiny mirror on springs sits a precise distance behind glass, and that distance sets the colour.',
@@ -76,7 +75,6 @@ export const h5: Piece[] = [
     good: ['Reflects room light, so it is readable in direct sun', 'Holds its picture with almost no power', 'Is fast for a reflective display'],
     bad: ['Showed pale colours next to a screen that makes its own light', 'Needs a microscopic moving mirror under each of the three colour cells of every pixel', 'Had limited colour in most of the products that reached the market'],
     look: 'The model is greatly enlarged. Look from the side to see the three different gaps behind the glass. Watch the mirrors move forward against the glass, which turns their cells black.',
-    dispute: 'The year shown for this piece is the year in which Qualcomm bought the company. The basic patent is older.',
     sources: [wiki('Interferometric_modulator_display', 'Interferometric modulator display'), src('patent', 'US patent 5,835,255', 'https://worldwide.espacenet.com/textdoc?DB=EPODOC&IDX=US5835255')],
   },
   {

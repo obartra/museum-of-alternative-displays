@@ -35,7 +35,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'storage-tube', hall: 2, name: 'Storage tube terminal', aka: 'DVST, direct-view bistable storage tube',
-    year: 1968, yearText: '1968, as an encyclopedia timeline lists it', origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s',
+    year: 1968, origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s',
     status: 'extinct', statusNote: 'Replaced during the 1980s, when memory became cheap enough for raster graphics, in which the screen sweeps every line as a television does.',
     principle: 'emits', needs: [],
     lead: 'This tube stores its own picture: a line, once drawn, stays lit on the glass with no computer memory behind it.',
@@ -61,7 +61,6 @@ export const h2: Piece[] = [
     good: ['Shows fully formed numerals with real depth', 'Is clear in a dim room, in a colour unlike that of other displays'],
     bad: ['Shows only the ten shapes inside it', 'Needs about 170 volts', 'The numerals at the back show through the ones in front'],
     look: 'Turn the model until you see a tube from the side. The ten numerals stand in a stack inside the mesh, and the lit one moves forward and back as the seconds count. Then switch the daylight off and watch the orange glow appear on the glass.',
-    dispute: 'Credit for the invention is not clear. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s. David Hagelbarger is often named as the inventor.',
     sources: [wiki('Nixie_tube', 'Nixie tube')],
   },
   {
@@ -81,7 +80,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'numitron', hall: 2, name: 'Numitron', aka: 'Incandescent filament display',
-    year: 1970, origin: 'RCA, USA. The source names no inventor',
+    year: 1970, origin: 'RCA, USA',
     status: 'extinct', statusNote: 'Replaced by LED and liquid crystal digits within a few years.',
     principle: 'emits', needs: [],
     lead: 'One glass bulb holds seven tiny lamp filaments, arranged as the seven bars that form a digit.',
@@ -125,7 +124,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'eggcrate', hall: 2, name: 'Eggcrate display', aka: 'Lamp matrix',
-    year: 1968, origin: 'Listed under 1968 in an encyclopedia timeline of display technology. The timeline names no inventor',
+    year: 1968, origin: 'Maker not recorded',
     status: 'extinct', statusNote: 'Used on television game shows into the late 1990s, and on scoreboards and road signs until flip-disc, fibre optic and LED signs replaced it.',
     principle: 'emits', needs: ['daylight'],
     lead: 'Ordinary light bulbs sit in a grid, each in its own cell of a mask that keeps its light from spilling onto its neighbours.',

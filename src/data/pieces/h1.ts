@@ -15,7 +15,6 @@ export const h1: Piece[] = [
     good: ['Is as easy to read as print, even in full daylight and across a station hall', 'Holds its message with no power at all', 'Announces every change by its sound'],
     bad: ['Shows only what is printed on its flaps', 'Takes seconds, not milliseconds, to change a row', 'Has moving parts that wear and need maintenance by hand'],
     look: 'Look down into the open top of the case. On each drum, the waiting flaps fan out behind the two that face you. The last two positions count seconds, so one flap falls every second.',
-    dispute: 'The encyclopedia articles used here name no inventor and no first date for the mechanism itself. They credit both the designer Gino Valle and the Belgian inventor John Myer with shaping the boards made by Solari. The 1956 sign at Liège is the earliest installation that they name.',
     sources: [wiki('Split-flap_display'), wiki('Solari_di_Udine'), src('archive', 'Cifra 5 clock, ADI Design Museum', 'https://www.adidesignmuseum.org/en/schede/cifra-5-clock/')],
   },
   {
@@ -80,7 +79,7 @@ export const h1: Piece[] = [
   },
   {
     id: 'braille-display', hall: 1, name: 'Refreshable braille display',
-    year: 1969, origin: 'Listed under 1969 in an encyclopedia timeline of display technology. The timeline names no single inventor',
+    year: 1974, origin: 'Oleg and Andrée Tretiakoff, France: braille dots raised by piezoelectric reeds. Klaus Peter Schönherr built a piezoelectric module in Germany in 1975',
     status: 'production', statusNote: 'In daily use. Still expensive, because every dot is a separate moving part that must survive years of touch.',
     principle: 'moves', needs: ['daylight'],
     lead: 'This display is read by touch: rows of pins rise and fall to spell a line of braille.',
@@ -95,7 +94,7 @@ export const h1: Piece[] = [
   },
   {
     id: 'drone-show', hall: 1, name: 'Drone light show',
-    year: 2012, origin: 'Marshmallow Laser Feast, Meet Your Creator, Cannes. First 100-drone show in Linz, Austria, 2015',
+    year: 2012, origin: 'Marshmallow Laser Feast, Meet Your Creator, Cannes. In 2015 Intel and Ars Electronica Futurelab flew 100 drones near Hamburg, Germany',
     status: 'production', statusNote: 'A commercial service. In 2024 the record was 10,197 drones, in Shenzhen.',
     principle: 'emits', needs: ['midair', 'dark'],
     lead: 'Every pixel is a small aircraft that carries a lamp and flies a path planned in advance.',

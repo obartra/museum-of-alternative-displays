@@ -47,8 +47,6 @@ export interface Piece {
   bad: string[];
   /** What to try in the 3D viewer. */
   look: string;
-  /** Set when the origin is contested or the record is thin. */
-  dispute?: string;
   sources: Source[];
 }
 

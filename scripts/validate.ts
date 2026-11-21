@@ -9,6 +9,8 @@ import { LANGS, SOURCE_KIND, type Locale } from '../src/i18n/types';
 import { pieces } from '../src/data/pieces';
 import { existsSync, readdirSync, statSync } from 'node:fs';
 import { facts } from '../src/data/facts';
+import { people } from '../src/data/people';
+import { portraits } from '../src/data/portraits';
 import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
@@ -40,7 +42,7 @@ for (const p of pieces) {
     if (!/^https?:$/.test(s.url.slice(0, s.url.indexOf('/')))) fail(p.id, `source must be http(s): ${s.url}`);
     if (BANNED_HOSTS.test(host)) fail(p.id, `shops and video hosts are not sources: ${host}`);
   }
-  const text = [p.name, p.aka ?? '', p.origin, p.statusNote, p.lead, ...p.how, ...p.good, ...p.bad, p.look, p.dispute ?? ''].join('\n');
+  const text = [p.name, p.aka ?? '', p.origin, p.statusNote, p.lead, ...p.how, ...p.good, ...p.bad, p.look].join('\n');
   if (DASH.test(text)) fail(p.id, 'house style: no em dashes or double hyphens');
 }
 for (const id of Object.keys(builders)) if (!seen.has(id)) errors.push(`${id}: a model with no piece in the data`);
@@ -48,6 +50,33 @@ for (const id of Object.keys(builders)) if (!seen.has(id)) errors.push(`${id}: a
 // every piece has its still pictures, which is what a list shows and what a piece page shows first
 for (const p of pieces) for (const when of ['day', 'night']) for (const w of [380, 760]) {
   if (!existsSync(new URL(`../public/posters/${p.id}-${when}-${w}.webp`, import.meta.url))) fail(p.id, `no still picture for ${when} at ${w} px. Run npm run posters`);
+}
+
+// people: every entry belongs to a piece, names someone, says what they did, and marks as women only people it names
+for (const [id, c] of Object.entries(people)) {
+  if (!seen.has(id)) errors.push(`${id}: people for a piece that is not in the data`);
+  if (!c.people.length) fail(id, 'a People section with nobody in it');
+  for (const e of c.people) {
+    if (!e.who.length || e.who.some((n) => !n.trim())) fail(id, 'a People line with no name');
+    const n = e.did.trim().split(/\s+/).length;
+    if (n < 3 || n > 34) fail(id, `the line for ${e.who[0]} is ${n} words, it should be 3 to 34`);
+    for (const she of e.she ?? []) if (!e.who.includes(she)) fail(id, `${she} is marked but not named`);
+  }
+  if (DASH.test(c.people.map((e) => e.did).join('\n') + (c.note ?? ''))) fail(id, 'house style: no em dashes or double hyphens in People');
+  for (const s of c.sources ?? []) {
+    let host = '';
+    try { host = new URL(s.url).hostname; } catch { fail(id, `bad source URL ${s.url}`); }
+    if (BANNED_HOSTS.test(host)) fail(id, `shops and video hosts are not sources: ${host}`);
+  }
+}
+// a portrait is a file that is really there, under a name that a label uses, with its credit filled in
+{
+  const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
+  for (const [name, pic] of Object.entries(portraits)) {
+    if (!named.has(name)) errors.push(`portrait of ${name}: no label spells a name that way`);
+    if (!existsSync(new URL(`../public/people/${pic.file}`, import.meta.url))) errors.push(`portrait of ${name}: public/people/${pic.file} is not there`);
+    if (!pic.by.trim() || !pic.licence.trim() || !/^https?:\/\//.test(pic.source)) errors.push(`portrait of ${name}: needs its author, its licence and the address of its source page`);
+  }
 }
 
 // worth knowing: one fact a piece, short, and resting on a source like everything else
@@ -188,12 +217,11 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
     if (!x) { say(`piece ${p.id} is missing`); continue; }
     for (const f of ['name', 'origin', 'statusNote', 'lead', 'look'] as const) if (!x[f]?.trim()) say(`${p.id}.${f} is missing`);
     if (!!p.aka !== !!x.aka?.trim()) say(`${p.id}.aka ${p.aka ? 'is missing' : 'is not in the English'}`);
-    if (!!p.dispute !== !!x.dispute?.trim()) say(`${p.id}.dispute ${p.dispute ? 'is missing' : 'is not in the English'}`);
     for (const f of ['how', 'good', 'bad'] as const) {
       if (x[f]?.length !== p[f].length || x[f].some((line) => !line?.trim())) say(`${p.id}.${f} should have ${p[f].length} entries, as the English has`);
     }
     if (!!p.yearText !== !!x.yearText?.trim()) say(`${p.id}.yearText ${p.yearText ? 'is missing' : 'is not in the English'}`);
-    const whole = (q: typeof x) => [q.name, q.aka ?? '', q.yearText ?? '', q.origin, q.statusNote, q.lead, ...(q.how ?? []), ...(q.good ?? []), ...(q.bad ?? []), q.look, q.dispute ?? ''].join('\n');
+    const whole = (q: typeof x) => [q.name, q.aka ?? '', q.yearText ?? '', q.origin, q.statusNote, q.lead, ...(q.how ?? []), ...(q.good ?? []), ...(q.bad ?? []), q.look].join('\n');
     clean(p.id, whole(x));
     sameFigures(p.id, whole(p), whole(x));
   }
@@ -203,6 +231,14 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
     if (!said?.trim()) { later(`fact ${id}`); continue; }
     clean(`fact ${id}`, said);
     sameFigures(`fact ${id}`, f.text, said);
+  }
+  for (const [id, c] of Object.entries(people)) {
+    const x = loc.people?.[id];
+    if (!x) { later(`People section ${id}`); continue; }
+    if (x.did?.length !== c.people.length || x.did.some((line) => !line?.trim())) { say(`people ${id} should have ${c.people.length} lines, as the English has`); continue; }
+    if (!!c.note !== !!x.note?.trim()) say(`people ${id}: the note ${c.note ? 'is missing' : 'is not in the English'}`);
+    clean(`people ${id}`, x.did.join('\n') + (x.note ?? ''));
+    sameFigures(`people ${id}`, c.people.map((e) => e.did).join('\n') + (c.note ?? ''), x.did.join('\n') + (x.note ?? ''));
   }
   for (const [id, list] of Object.entries(views)) for (const v of list) {
     const x = loc.views?.[id]?.[v.id];
@@ -220,7 +256,7 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
     sameFigures(`${id}/${m.id}`, m.caption + (m.year ?? ''), x.caption + (x.year ?? ''));
   }
   const wait = owed[code] ?? [];
-  const kindsOwed = ['fact', 'view', 'archive picture'].map((k) => [k, wait.filter((w) => w.startsWith(k + ' ')).length] as const).filter(([, n]) => n);
+  const kindsOwed = ['fact', 'People section', 'view', 'archive picture'].map((k) => [k, wait.filter((w) => w.startsWith(k + ' ')).length] as const).filter(([, n]) => n);
   console.log(`language ${code}: ${Object.keys(loc.ui ?? {}).length} interface strings, ${Object.keys(loc.pieces ?? {}).length} pieces` + (wait.length ? `, still in English: ${kindsOwed.map(([k, n]) => `${n} ${k}${n > 1 ? 's' : ''}`).join(', ')}` : ''));
 }
 if (doubts.length) console.log(`\n${doubts.length} figure(s) to look at in the translations:\n` + doubts.slice(0, 40).map((d) => '  ' + d).join('\n'));

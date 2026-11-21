@@ -16,7 +16,6 @@ export const h4: Piece[] = [
     good: ['Is thin and cheap, and comes in every size', 'Uses very little power when it works with room light instead of a backlight', 'Lasts a long time'],
     bad: ['Shows black by blocking the backlight, so black is never fully dark', 'Changes in contrast and colour when viewed from an angle', 'Smears motion, because the liquid takes time to turn'],
     look: 'The model pulls the panel apart into its layers. From the back they are: the lamp, a polariser, the liquid crystal between glass, the colour filter and the second polariser. Look from the side to see the layers, then from the front, where they combine into a picture.',
-    dispute: 'Who came first was disputed. James Fergason filed a similar US patent in 1971, and the dispute over priority was settled out of court. George Heilmeier had built an earlier kind of liquid crystal display, which worked by scattering light, at RCA in the 1960s.',
     sources: [wiki('Liquid-crystal_display', 'Liquid-crystal display'), wiki('Twisted_nematic_field_effect', 'Twisted nematic field effect')],
   },
   {

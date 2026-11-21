@@ -1,9 +1,10 @@
 import { esc } from '../html';
 import type { Media } from '../data/media';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Hall, type Need, type Piece, type Principle, type SourceKind, type Status } from '../data/schema';
+import type { Credit } from '../data/people';
 import type { ViewInfo } from '../data/views';
 import { en, type UiKey } from './en';
-import { LANGS, SOURCE_KIND, type HallText, type Lang, type LangInfo, type Locale, type PieceText, type ViewText } from './types';
+import { LANGS, SOURCE_KIND, type CreditText, type HallText, type Lang, type LangInfo, type Locale, type PieceText, type ViewText } from './types';
 
 export * from './types';
 
@@ -68,6 +69,11 @@ export const said = {
     const own = loc?.media[pieceId]?.[m.id];
     return own ? { ...m, caption: own.caption, alt: own.alt, year: own.year ?? m.year, credit: { ...m.credit, changes: own.changes } } : m;
   },
+  /** The People section of a piece. A translation counts only when it has a line for every line of the English. */
+  credit: (pieceId: string, c: Credit): CreditText => {
+    const own = loc?.people?.[pieceId];
+    return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
+  },
   status: (s: Status): string => loc?.status[s] ?? STATUS_LABEL[s],
   principle: (p: Principle): string => loc?.principle[p] ?? PRINCIPLE_LABEL[p],
   need: (n: Need): string => loc?.need[n] ?? NEED_LABEL[n],
@@ -80,6 +86,7 @@ export const said = {
  */
 export const standIn = {
   fact: (pieceId: string): string => (loc && !loc.facts?.[pieceId] ? ' lang="en"' : ''),
+  people: (pieceId: string): string => (loc && !loc.people?.[pieceId] ? ' lang="en"' : ''),
   view: (pieceId: string, id: string): string => (loc && !loc.views?.[pieceId]?.[id] ? ' lang="en"' : ''),
   media: (pieceId: string, id: string): string => (loc && !loc.media?.[pieceId]?.[id] ? ' lang="en"' : ''),
 };

@@ -7,6 +7,8 @@ import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type 
 import { esc } from './html';
 import { byName, comma, count, langNow, offered, rich, said, standIn, t, tx, useLang, wanted, type Lang } from './i18n';
 import { facts } from './data/facts';
+import { people, type Entry } from './data/people';
+import { portraits } from './data/portraits';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -114,10 +116,10 @@ function shell(inner: string, hall?: number, current?: string): void {
 <header class="top">
   <a class="top__name" href="#">${tx('site.name')}</a>
   <div class="top__tools">${menu}${switchHtml()}</div>
-  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
+  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#people"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><span>${tx('foot.claim')}</span><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button></footer>
+<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button></footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -151,8 +153,7 @@ function entrance(): void {
   </div>
   <section class="stack" style="--gap: 14px">
     <h2 class="h-sec">${tx('entrance.room')}</h2>
-    <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p><p>${tx('entrance.room.3', { n: pieces.length })}</p></div>
-    <p class="small muted">${tx('entrance.room.note', { n: pieces.length })}</p>
+    <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p></div>
   </section>
   <section class="hallpic">
     <a class="hallpic__img" href="#walk" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 1160px, 92vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
@@ -237,6 +238,49 @@ function hallView(n: number): void {
   leave = () => document.removeEventListener('keydown', onKey);
 }
 
+// ---------- people ----------
+/** A portrait, where one has been added by hand, with the credit that its licence asks for. */
+const portraitHtml = (name: string): string => {
+  const pic = portraits[name];
+  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption><a href="${esc(pic.source)}" rel="noopener">${tx('people.portrait', { by: pic.by, licence: pic.licence })}</a></figcaption></figure>` : '';
+};
+/** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
+const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {
+  const pics = e.who.map(portraitHtml).join('');
+  return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${esc(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
+};
+let peopleOnly: '' | 'women' = '';
+function peopleView(): void {
+  document.title = titled(t('nav.people'));
+  const pill = (value: string, label: string) => `<label class="pill"><input type="radio" name="who" value="${value}"${peopleOnly === value ? ' checked' : ''}><span>${label}</span></label>`;
+  shell(`
+<div class="stack">
+  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
+  <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${pill('women', tx('people.women'))}</fieldset></form>
+  <p class="count" id="who-count" role="status"></p>
+  <div class="stack" id="who-rows" style="--gap: 44px"></div>
+</div>`, undefined, 'people');
+  const rows = document.getElementById('who-rows')!, tally = document.getElementById('who-count')!;
+  const draw = () => {
+    const women = peopleOnly === 'women', names = new Set<string>();
+    rows.innerHTML = halls.map((h) => {
+      const blocks = inHall(h.id).map((p) => {
+        const c = people[p.id];
+        if (!c) return '';
+        const told = said.credit(p.id, c);
+        const list = c.people.map((e, k) => ({ e, did: told.did[k] })).filter(({ e }) => !women || e.she?.length);
+        if (!list.length) return '';
+        for (const { e } of list) for (const n of women ? e.she! : e.who) names.add(n);
+        return `<section class="who"><h3 class="who__piece"><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, women ? (n) => !!e.she?.includes(n) : undefined)).join('')}</ul></section>`;
+      }).join('');
+      return blocks ? `<section class="stack" style="--gap: 4px"><h2 class="h-sec">${tx('hall.title', { n: h.id, name: said.hall(h).name })}</h2><div class="who__grid">${blocks}</div></section>` : '';
+    }).join('');
+    tally.textContent = t('people.count', { n: names.size });
+  };
+  document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = (ev.target as HTMLInputElement).value as '' | 'women'; draw(); });
+  draw();
+}
+
 // ---------- piece ----------
 function pieceView(id: string): void {
   const p = pieceById(id);
@@ -248,7 +292,10 @@ function pieceView(id: string): void {
   document.title = titled(x.name);
   // one thing worth repeating, with the source it rests on. That source joins the list at the foot of the page
   const fact = facts[p.id];
-  const sources = fact && !p.sources.some((src) => src.url === fact.source.url) ? [...p.sources, fact.source] : p.sources;
+  // the people behind the piece, and the sources that name them
+  const credit = people[p.id], told = credit ? said.credit(p.id, credit) : undefined;
+  const sources = [...p.sources];
+  for (const extra of [...(fact ? [fact.source] : []), ...(credit?.sources ?? [])]) if (!sources.some((src) => src.url === extra.url)) sources.push(extra);
   const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
   shell(`
 <article class="piece">
@@ -274,13 +321,13 @@ function pieceView(id: string): void {
       ${row(tx('card.principle'), esc(said.principle(p.principle)))}
       ${p.needs.length ? row(tx('card.properties'), esc(p.needs.map((n) => said.need(n)).join('. '))) : ''}
     </dl>
+    ${credit && told ? `<section class="people stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.people')}</h2><ul class="people__list">${credit.people.map((e, k) => entryHtml(p.id, e, told.did[k])).join('')}</ul>${told.note ? `<p class="people__note"${standIn.people(p.id)}>${esc(told.note)}</p>` : ''}<p class="small"><a href="#people">${tx('people.more')}</a></p></section>` : ''}
     ${archiveSection(p.id)}
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.how')}</h2><div class="prose">${x.how.map((par) => `<p>${esc(par)}</p>`).join('')}</div></section>
     <div class="duo">
       <section><h3>${tx('piece.good')}</h3><ul>${x.good.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
       <section><h3>${tx('piece.bad')}</h3><ul>${x.bad.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
     </div>
-    ${x.dispute ? `<p class="flag"><strong>${tx('piece.dispute')}</strong> ${esc(x.dispute)}</p>` : ''}
     <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
     <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="#piece-${prev.id}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#piece-${next.id}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
   </div>
@@ -525,7 +572,6 @@ function about(): void {
     for (const src of own && !p.sources.some((q) => q.url === own.url) ? [...p.sources, own] : p.sources) kinds.set(src.kind, (kinds.get(src.kind) ?? 0) + 1);
   }
   const total = [...kinds.values()].reduce((a, b) => a + b, 0);
-  const flagged = pieces.filter((p) => p.dispute).length;
   const byKind = [...kinds.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${said.sourceKind(k)}`).join(comma());
   const held = archiveCount();
   shell(`
@@ -535,17 +581,14 @@ function about(): void {
     <section class="stack prose" style="--gap: 12px">
       <h2 class="h-sec">${tx('about.piece')}</h2>
       <p>${tx('about.piece.1')}</p>
-      <p>${tx('about.piece.2')}</p>
       <h2 class="h-sec">${tx('about.sourced')}</h2>
       <p>${tx('about.sourced.1')}</p>
       <p>${tx('about.sourced.2', { pieces: pieces.length, links: total, kinds: byKind })}</p>
-      <p>${tx('about.sourced.3', { n: flagged })}</p>
+      <p>${tx('about.sourced.3')}</p>
       <h2 class="h-sec">${tx('about.pictures')}</h2>
       <p>${tx('about.pictures.1', { n: pieces.length })}</p>
       <p>${tx('about.pictures.2')}</p>
       ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
-      <h2 class="h-sec">${tx('about.missing')}</h2>
-      <p>${tx('about.missing.1')}</p>
       ${held ? `<h2 class="h-sec">${tx('about.credits')}</h2><p>${tx('about.credits.1', { n: held })}</p>${creditsList()}` : ''}
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
@@ -630,6 +673,7 @@ function route(): void {
   else if (piece) pieceView(piece[1]);
   else if (name === 'index' || name === 'depot') depot();
   else if (name === 'about') about();
+  else if (name === 'people') peopleView();
   else if (walk) walkView(walk[1]);
   else notFound();
   window.scrollTo(0, 0);

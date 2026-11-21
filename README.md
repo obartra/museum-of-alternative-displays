@@ -151,6 +151,20 @@ bright core with a halo. A reflection, a scene behind a lens or a symbol in a co
 drawn with `portal()`, which shows its contents only through a window and so behaves like the
 real thing when the visitor moves.
 
+## People
+
+`src/data/people.ts` names the people behind each piece: who they were and what they did for it, in one
+line each, with any extra sources. A piece with no named maker has no entry. Where credit is shared or
+contested, the entry carries a note, which the page prints under the names. The page for a piece shows its
+people under the registry card, and `#people` lists everyone, with a filter for the women among them.
+The lines are translated in each language file under `people`. Until a language has them, the English
+stands in and `npm run validate` says how many sections are still owed.
+
+Portraits are added by hand, and nothing in the build fetches one. `PORTRAITS.md` lists every name with
+the file name its picture is expected under, and says how to add one: a file in `public/people/` and one
+line in `src/data/portraits.ts` with the author, the licence and the source page. Every portrait is shown
+the same way, cropped alike and in black and white, with its credit beside it.
+
 ## Known gaps
 
 - 28 of the 50 pieces still rest only on encyclopedia articles. Replacing those with primary

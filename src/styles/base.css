@@ -28,7 +28,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .top .tabs { grid-column: 1 / -1; }
 .top__tools { display: flex; align-items: center; gap: 12px; }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .top { grid-template-columns: auto 1fr auto; gap: 12px 28px; }
   .top .tabs { grid-column: auto; justify-self: end; order: 0; }
   .top .tabs a { flex: 0 0 40px; }
@@ -166,7 +166,21 @@ h1, h2, h3 { text-wrap: balance; }
 .fact .h-sec { font-size: var(--step-1); }
 .fact__text { font-size: 1.14rem; line-height: 1.38; font-weight: 500; }
 .fact a { overflow-wrap: anywhere; }
-.flag { border-left: 6px solid var(--signal); padding: 8px 0 8px 14px; max-width: var(--measure); }
+/* people: who made the piece. A portrait shows only where one has been added by hand, and all are treated alike */
+.people { border-top: 2px solid var(--ink); padding-top: 14px; max-width: var(--measure); }
+.people__list { list-style: none; margin: 0; padding: 0; }
+.person { display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: space-between; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.person > div:first-child { flex: 1 1 220px; }
+.person__who { font-weight: 700; }
+.person__with { font-weight: 400; color: var(--ink-2); }
+.person__pics { display: flex; gap: 8px; flex: 0 0 auto; }
+.person__pic { margin: 0; width: 84px; }
+.person__pic img { display: block; width: 84px; height: 105px; object-fit: cover; object-position: 50% 22%; filter: grayscale(1) contrast(1.06); border: 1px solid var(--ink); }
+.person__pic figcaption { font-size: .68rem; line-height: 1.25; margin-top: 3px; overflow-wrap: anywhere; }
+.people__note { color: var(--ink-2); }
+.who { max-width: var(--measure); break-inside: avoid; }
+.who__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 0 44px; align-items: start; }
+.who__piece { font-size: 1rem; font-weight: 700; margin-top: 12px; }
 
 /* ---------- entrance ---------- */
 .roompic img { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--wash-2); }

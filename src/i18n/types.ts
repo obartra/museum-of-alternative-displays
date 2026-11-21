@@ -19,9 +19,10 @@ export const LANGS: LangInfo[] = [
   { code: 'zh', name: '中文', short: '中文', tag: 'zh-Hans' },
 ];
 
-export type PieceText = Pick<Piece, 'name' | 'aka' | 'yearText' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look' | 'dispute'>;
+export type PieceText = Pick<Piece, 'name' | 'aka' | 'yearText' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look'>;
 export type HallText = Pick<Hall, 'name' | 'intro'>;
 export type ViewText = Pick<ViewInfo, 'label' | 'hint'>;
+export interface CreditText { did: string[]; note?: string }
 export type MediaText = Pick<Media, 'caption' | 'alt' | 'year'> & { changes: string };
 
 /** Everything a language has to say. The build checks each one against the English. */
@@ -37,6 +38,8 @@ export interface Locale {
   facts: Record<string, string>;
   views: Record<string, Record<string, ViewText>>;
   media: Record<string, Record<string, MediaText>>;
+  /** The People section of each piece: what each line says, in the order of the English, and the note under them. */
+  people?: Record<string, CreditText>;
 }
 
 export const SOURCE_KIND: Record<SourceKind, string> = { paper: 'paper', patent: 'patent', archive: 'archive', lab: 'lab', maker: 'maker', press: 'press', reference: 'reference' };
