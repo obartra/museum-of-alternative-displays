@@ -568,7 +568,7 @@ function walkView(start?: string): void {
   shell(`
 <div class="walkpage">
   <div class="hallhead walk__lead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('walk.title')}</span></h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
-  <div class="walk" id="walk" data-hall="${from?.hall ?? 1}"></div>
+  <div class="walk" id="walk" data-hall="${from?.hall ?? 1}"><div class="walk__view"><img class="walk__still" src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="100vw" width="1600" height="900" alt="" fetchpriority="high" decoding="async"></div><div class="walk__wait"></div></div>
 </div>`, undefined, 'walk');
   const host = document.getElementById('walk')!;
   let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;

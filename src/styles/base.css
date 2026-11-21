@@ -325,6 +325,8 @@ h1, h2, h3 { text-wrap: balance; }
 .walk__view { position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 62vh; overflow: hidden; }
 /* on a desk the picture leaves room under it for the plan and the buttons, so nothing has to be scrolled to */
 @media (min-width: 620px) { .walk__view { aspect-ratio: 16 / 9; max-height: max(320px, calc(100vh - 404px)); } }
+/* until the rest of the page arrives, the picture of the hall stands in its place and the room under it is kept, so nothing below jumps */
+.walk__wait { min-height: 290px; }
 .walk__still, .walk__gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 .walk__still { object-fit: cover; }
 .walk__still[hidden] { display: none; }
