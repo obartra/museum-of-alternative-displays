@@ -8,3 +8,5 @@ scripts/sheet.mjs
 scripts/stills.mjs
 scripts/vista.mjs
 scripts/profile.mjs
+# written from po/ by scripts/i18n.ts
+src/i18n/locales/

@@ -52,6 +52,8 @@ export interface Locale {
   media: Record<string, Record<string, MediaText>>;
   /** The People section of each piece: what each line says, in the order of the English, and the note under them. */
   people?: Record<string, CreditText>;
+  /** For a language with more than two forms for a number: the sentence for each form, under the name of the sentence. */
+  plural?: Record<string, Partial<Record<Intl.LDMLPluralRule, string>>>;
 }
 
 export const SOURCE_KIND: Record<SourceKind, string> = { paper: 'paper', patent: 'patent', archive: 'archive', lab: 'lab', maker: 'maker', press: 'press', reference: 'reference' };

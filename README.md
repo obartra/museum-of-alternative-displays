@@ -78,23 +78,29 @@ Node 22 or newer.
 
 ## Languages
 
-English is the source and lives with the data. Every other language lives in one file in
-`src/i18n/locales/`, named by its code, that default-exports a `Locale` (see
-`src/i18n/types.ts`): the interface words, the labels, and the text of every hall, piece,
-fact, view and archive picture. A language loads only when a visitor picks it. The languages
-are listed in `src/i18n/types.ts`, and one is offered as soon as its file exists.
+English is the source and lives with the data. Every other language is one file in `po/`,
+in the gettext PO format that translation tools share: `po/es.po`, `po/ja.po` and so on.
+Each entry holds a sentence in English, its translation, and a note that says where it
+shows. `po/museum.pot` is the same list with no translation, for starting a new language.
+`TRANSLATING.md` says how to add or improve one.
 
-`npm run check` fails if a language lacks an interface string, a label, a hall or a piece,
-or if a piece has a different number of paragraphs than the English. A fact, a view or an
-archive caption that was added after a translation shows in English until it is translated.
-The check lists how many of those each language still owes, and it does not stop the build.
-It also prints any figure that the English has and the translation lacks, so a dropped date
-gets a second look. It reads "10,197", "10.197" and "10 197" as one figure, and it knows
-that "130 million" and "1.3亿" are the same.
+`npm run i18n` turns the PO files into what the site loads, `src/i18n/locales/<code>.ts`,
+which are written fresh on every build and are not kept in the repository. It runs by
+itself before `npm run dev`, `npm run check` and `npm run build`. A language goes on the
+site when its file is named in `po/LINGUAS` and it has a line in `src/i18n/types.ts`, which
+gives the menu its name. A language loads only when a visitor picks it. A sentence that is
+not translated yet shows in English.
 
-The header shows the language menu: a plate with the name of the language in use, which
-opens a list of all of them, each under its own name. A first visit follows the browser's
-language. The choice is remembered.
+After a change to the English, `npm run i18n:sync` writes `po/museum.pot` again and brings
+every PO file up to date. A sentence whose English changed is marked fuzzy, which
+translation tools show as "needs review", and keeps its old translation until someone
+looks at it.
+
+`npm run check` reads each built language against the English. It fails on a sentence that
+lost a `{mark}`, a button or a hall name that is too long, or a different number of
+paragraphs. It also prints any figure that the English has and the translation lacks, so a
+dropped date gets a second look. It reads "10,197", "10.197" and "10 197" as one figure,
+and it knows that "130 million" and "1.3亿" are the same.
 
 ## Archive pictures
 

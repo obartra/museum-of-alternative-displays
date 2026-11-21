@@ -53,8 +53,10 @@ export function rich(key: UiKey, links: Record<string, string>, vars?: Record<st
 }
 /** "1 piece", "7 pieces": the form each language uses for that number. */
 export function count(key: 'count.pieces', n: number): string {
-  const form = new Intl.PluralRules(langNow().tag).select(n) === 'one' ? 'one' : 'other';
-  return t(`${key}.${form}`, { n });
+  const form = new Intl.PluralRules(langNow().tag).select(n);
+  // Russian and Polish have a form for a few and a form for many
+  const own = loc?.plural?.[key]?.[form];
+  return own ? own.replace(/\{n\}/g, String(n)) : t(`${key}.${form === 'one' ? 'one' : 'other'}`, { n });
 }
 /** What separates the items of a short list: a comma and a space, the full-width comma of Chinese or the comma of Japanese. */
 export const comma = (): string => (lang === 'zh' || lang === 'zh-hant' ? '，' : lang === 'ja' ? '、' : ', ');
