@@ -19,7 +19,7 @@ export const LANGS: LangInfo[] = [
   { code: 'zh', name: '中文', short: '中文', tag: 'zh-Hans' },
 ];
 
-export type PieceText = Pick<Piece, 'name' | 'aka' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look' | 'dispute'>;
+export type PieceText = Pick<Piece, 'name' | 'aka' | 'yearText' | 'origin' | 'statusNote' | 'lead' | 'how' | 'good' | 'bad' | 'look' | 'dispute'>;
 export type HallText = Pick<Hall, 'name' | 'was' | 'intro'>;
 export type ViewText = Pick<ViewInfo, 'label' | 'hint'>;
 export type MediaText = Pick<Media, 'caption' | 'alt' | 'year'> & { changes: string };
@@ -33,6 +33,8 @@ export interface Locale {
   sourceKind: Record<SourceKind, string>;
   halls: Record<number, HallText>;
   pieces: Record<string, PieceText>;
+  /** The "Worth knowing" fact of each piece. */
+  facts: Record<string, string>;
   views: Record<string, Record<string, ViewText>>;
   media: Record<string, Record<string, MediaText>>;
 }

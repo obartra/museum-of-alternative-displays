@@ -60,6 +60,7 @@ export const byName = (a: string, b: string): number => a.localeCompare(b, langN
 export const said = {
   piece: (p: Piece): PieceText => loc?.pieces[p.id] ?? p,
   hall: (hall: Hall): HallText => loc?.halls[hall.id] ?? hall,
+  fact: (pieceId: string, text: string): string => loc?.facts?.[pieceId] ?? text,
   view: (pieceId: string, v: ViewInfo): ViewText => loc?.views[pieceId]?.[v.id] ?? v,
   media: <M extends Media>(pieceId: string, m: M): M => {
     const own = loc?.media[pieceId]?.[m.id];

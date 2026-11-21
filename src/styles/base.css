@@ -157,6 +157,11 @@ h1, h2, h3 { text-wrap: balance; }
 
 .sources li { padding: 8px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 6.2em 1fr; gap: 10px; align-items: baseline; }
 .sources .kind { font-family: var(--mono); font-size: .72rem; color: var(--ink-2); }
+/* the one thing worth repeating: set a size up under a rule, like a pulled line in print */
+.fact { border-top: 2px solid var(--ink); padding-top: 14px; max-width: var(--measure); }
+.fact .h-sec { font-size: var(--step-1); }
+.fact__text { font-size: 1.14rem; line-height: 1.38; font-weight: 500; }
+.fact a { overflow-wrap: anywhere; }
 .flag { border-left: 6px solid var(--signal); padding: 8px 0 8px 14px; max-width: var(--measure); }
 
 /* ---------- entrance ---------- */

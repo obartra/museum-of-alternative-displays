@@ -6,6 +6,7 @@ import { inHall, inv, pieceById, pieces } from './data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Need, type Piece, type Principle, type SourceKind, type Status } from './data/schema';
 import { esc } from './html';
 import { byName, count, langNow, offered, rich, said, t, tx, useLang, wanted, type Lang } from './i18n';
+import { facts } from './data/facts';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -197,6 +198,9 @@ function pieceView(id: string): void {
   // a piece made to be looked into or sat in front of gets a button that puts the visitor there, in place of the plain front view
   const places = viewsOf(p.id).map((v) => ({ ...v, ...said.view(p.id, v) }));
   document.title = titled(x.name);
+  // one thing worth repeating, with the source it rests on. That source joins the list at the foot of the page
+  const fact = facts[p.id];
+  const sources = fact && !p.sources.some((src) => src.url === fact.source.url) ? [...p.sources, fact.source] : p.sources;
   const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
   shell(`
 <article class="piece">
@@ -212,9 +216,10 @@ function pieceView(id: string): void {
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
+    ${fact ? `<section class="fact stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.fact')}</h2><p class="fact__text">${esc(said.fact(p.id, fact.text))}</p><p class="small muted">${rich('piece.fact.source', { a: fact.source.url }, { label: fact.source.label })}</p></section>` : ''}
     <dl class="card">
       ${row(tx('card.no'), inv(p))}
-      ${row(tx('card.year'), String(p.year))}
+      ${row(tx('card.year'), esc(x.yearText ?? String(p.year)))}
       ${row(tx('card.origin'), esc(x.origin))}
       ${row(tx('card.status'), `${esc(said.status(p.status))}. ${esc(x.statusNote)}`)}
       ${row(tx('card.principle'), esc(said.principle(p.principle)))}
@@ -227,7 +232,7 @@ function pieceView(id: string): void {
       <section><h3>${tx('piece.bad')}</h3><ul>${x.bad.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
     </div>
     ${x.dispute ? `<p class="flag"><strong>${tx('piece.dispute')}</strong> ${esc(x.dispute)}</p>` : ''}
-    <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${p.sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
+    <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
     <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="#piece-${prev.id}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#piece-${next.id}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
   </div>
 </article>`, p.hall);
@@ -414,7 +419,10 @@ function depot(): void {
 function about(): void {
   document.title = titled(t('nav.about'));
   const kinds = new Map<SourceKind, number>();
-  for (const p of pieces) for (const src of p.sources) kinds.set(src.kind, (kinds.get(src.kind) ?? 0) + 1);
+  for (const p of pieces) {
+    const own = facts[p.id]?.source;
+    for (const src of own && !p.sources.some((q) => q.url === own.url) ? [...p.sources, own] : p.sources) kinds.set(src.kind, (kinds.get(src.kind) ?? 0) + 1);
+  }
   const total = [...kinds.values()].reduce((a, b) => a + b, 0);
   const flagged = pieces.filter((p) => p.dispute).length;
   const byKind = [...kinds.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${said.sourceKind(k)}`).join(', ');

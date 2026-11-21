@@ -8,6 +8,7 @@ import { en, type UiKey } from '../src/i18n/en';
 import { LANGS, SOURCE_KIND, type Locale } from '../src/i18n/types';
 import { pieces } from '../src/data/pieces';
 import { existsSync, readdirSync, statSync } from 'node:fs';
+import { facts } from '../src/data/facts';
 import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
@@ -47,6 +48,19 @@ for (const id of Object.keys(builders)) if (!seen.has(id)) errors.push(`${id}: a
 // every piece has its still pictures, which is what a list shows and what a piece page shows first
 for (const p of pieces) for (const when of ['day', 'night']) for (const w of [380, 760]) {
   if (!existsSync(new URL(`../public/posters/${p.id}-${when}-${w}.webp`, import.meta.url))) fail(p.id, `no still picture for ${when} at ${w} px. Run npm run posters`);
+}
+
+// worth knowing: one fact a piece, short, and resting on a source like everything else
+for (const [id, f] of Object.entries(facts)) {
+  if (!seen.has(id)) errors.push(`${id}: a fact for a piece that is not in the data`);
+  const n = f.text.trim().split(/\s+/).length;
+  if (n < 8 || n > 45) fail(id, `the fact is ${n} words, it should be 8 to 45`);
+  if (DASH.test(f.text)) fail(id, 'house style: no em dashes or double hyphens in the fact');
+  let host = '';
+  try { host = new URL(f.source.url).hostname; } catch { fail(id, `bad source URL for the fact: ${f.source.url}`); }
+  if (!/^https?:\/\//.test(f.source.url)) fail(id, 'the source of the fact must be http(s)');
+  if (BANNED_HOSTS.test(host)) fail(id, `shops and video hosts are not sources: ${host}`);
+  if (!f.source.label.trim()) fail(id, 'the source of the fact needs a label');
 }
 
 // archive pictures: free to reuse, credited in full, and small enough to carry
@@ -137,11 +151,18 @@ for (const file of existsSync(localeDir) ? readdirSync(localeDir).filter((f) => 
     for (const f of ['how', 'good', 'bad'] as const) {
       if (x[f]?.length !== p[f].length || x[f].some((line) => !line?.trim())) say(`${p.id}.${f} should have ${p[f].length} entries, as the English has`);
     }
-    const whole = (q: typeof x) => [q.name, q.aka ?? '', q.origin, q.statusNote, q.lead, ...(q.how ?? []), ...(q.good ?? []), ...(q.bad ?? []), q.look, q.dispute ?? ''].join('\n');
+    if (!!p.yearText !== !!x.yearText?.trim()) say(`${p.id}.yearText ${p.yearText ? 'is missing' : 'is not in the English'}`);
+    const whole = (q: typeof x) => [q.name, q.aka ?? '', q.yearText ?? '', q.origin, q.statusNote, q.lead, ...(q.how ?? []), ...(q.good ?? []), ...(q.bad ?? []), q.look, q.dispute ?? ''].join('\n');
     clean(p.id, whole(x));
     sameFigures(p.id, whole(p), whole(x));
   }
   for (const id of Object.keys(loc.pieces ?? {})) if (!seen.has(id)) say(`piece ${id} is not in the collection`);
+  for (const [id, f] of Object.entries(facts)) {
+    const said = loc.facts?.[id];
+    if (!said?.trim()) { say(`the fact for ${id} is missing`); continue; }
+    clean(`fact ${id}`, said);
+    sameFigures(`fact ${id}`, f.text, said);
+  }
   for (const [id, list] of Object.entries(views)) for (const v of list) {
     const x = loc.views?.[id]?.[v.id];
     if (!x?.label?.trim()) { say(`view ${id}/${v.id} is missing`); continue; }

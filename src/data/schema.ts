@@ -30,8 +30,10 @@ export interface Piece {
   hall: HallId;
   name: string;
   aka?: string;
-  /** Year used for sorting and for the placard. */
+  /** Year used for sorting, and shown in the details unless `yearText` says it better. */
   year: number;
+  /** The year in words, where one number would claim too much: "1996 or 1997", "about 1880". */
+  yearText?: string;
   /** Who and where, for the registry card. */
   origin: string;
   status: Status;

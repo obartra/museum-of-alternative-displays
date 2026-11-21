@@ -71,6 +71,8 @@ export const en = {
   'piece.good': 'Good at',
   'piece.bad': 'Fails at',
   'piece.look': 'What to look for',
+  'piece.fact': 'Worth knowing',
+  'piece.fact.source': 'Source: {a}{label}{/a}',
   'piece.dispute': 'A note on dates and credit.',
   'piece.sources': 'Sources',
   'piece.aka': 'Also called: {names}',
