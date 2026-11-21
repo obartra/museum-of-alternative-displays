@@ -1086,6 +1086,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Image redimensionnée',
       },
+      'patent-1': {
+        caption: 'D’après le brevet de Maurice Taylor, de 1964, pour une enseigne à commande magnétique. Un panneau d’ouvertures rondes porte une pastille dans chacune. L’écorché montre une pastille sur sa suspension, l’aimant qu’elle porte et la bobine qui la fait tourner.',
+        alt: 'Dessins au trait\u202f: un panneau percé de rangées d’ouvertures rondes, l’écorché d’une pastille avec un aimant près d’une bobine, et une grille de points clairs et sombres.',
+        year: '1964',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
     },
     'mechanical-television': {
       receiver: {
@@ -1099,6 +1105,12 @@ const locale: Locale = {
         alt: 'Dessin au trait légendé\u202f: lampe à arc, disque et cellules photoélectriques face à une tête de profil, pylônes radio, puis une lampe au néon, un disque et une lentille devant une seconde tête.',
         year: '1928',
         changes: 'Image redimensionnée',
+      },
+      'patent-1': {
+        caption: 'Toute une chaîne de télévision, d’après le brevet américain de John Logie Baird, de 1929. Un disque tournant explore l’objet, ici une croix. Un second disque, qui tourne au même pas, reconstitue l’image sur un écran avec la lumière d’une lampe.',
+        alt: 'Dessin au trait\u202f: une croix, une lentille et un disque perforé mènent à deux boîtiers. En dessous, deux autres boîtiers mènent à une lampe, à un second disque et à un écran qui montre la croix.',
+        year: '1929',
+        changes: 'Image recadrée et redimensionnée',
       },
     },
     'nixie-tube': {
@@ -1120,6 +1132,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Image redimensionnée',
       },
+      'patent-1': {
+        caption: 'D’après un brevet Burroughs déposé en 1955 par Leo Landrey. Dix chiffres sont empilés, séparés par des anodes en forme d’anneau. Dans ce modèle, les chiffres sont faits de fil fin, et non découpés dans de la tôle.',
+        alt: 'Dessins au trait d’un tube de verre vu de côté, de dessus et en coupe\u202f: des chiffres marqués de 0 à 9 empilés entre des anneaux, et des broches qui sortent par la base.',
+        year: '1959',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
     },
     'cathode-ray-tube': {
       'braun-tube': {
@@ -1140,6 +1158,12 @@ const locale: Locale = {
         year: '2023',
         changes: 'Image redimensionnée',
       },
+      'patent-1': {
+        caption: 'L’idée à l’origine du tube image en couleur, d’après le brevet d’Alfred Schroeder pour RCA, déposé en 1947. Trois canons à électrons visent à travers une plaque percée de trous placée derrière l’écran, de sorte que chaque faisceau n’atteint que les zones de sa couleur.',
+        alt: 'Dessins au trait\u202f: un tube image avec trois canons dans le col et des bobines autour, trois faisceaux qui se croisent à une plaque devant un écran, et un agrandissement légendé avec des couleurs.',
+        year: '1952',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
     },
     eidophor: {
       prototype: {
@@ -1159,6 +1183,12 @@ const locale: Locale = {
         alt: 'Une haute armoire gris-bleu marquée Eidophor, avec un tableau de commande à interrupteurs et cadrans, un compartiment ouvert et un gros objectif noir au niveau du sol.',
         year: '2024',
         changes: 'Image redimensionnée',
+      },
+      'patent-1': {
+        caption: 'L’Eidophor, d’après le brevet américain de Fritz Fischer, de 1945. Un faisceau d’électrons écrit sur un film de liquide entraîné par un plateau tournant, et la lumière d’une lampe traverse ce film avant d’atteindre l’écran.',
+        alt: 'Dessins au trait\u202f: une enceinte de verre avec deux canons à électrons inclinés au-dessus d’une coupelle ronde, un trajet lumineux qui la traverse en montant vers un miroir et un écran, et un plateau tournant.',
+        year: '1945',
+        changes: 'Image recadrée et redimensionnée',
       },
     },
     'peppers-ghost': {
@@ -1181,6 +1211,228 @@ const locale: Locale = {
         alt: 'Gravure d’un homme de profil qui porte à son œil un disque à fentes monté sur un manche. Un miroir placé devant lui reflète la face illustrée du disque et ses mains.',
         year: '1884',
         changes: 'Image redimensionnée',
+      },
+    },
+    'swept-volume': {
+      'patent-1': {
+        caption: 'Le generescope de Max Hirsch, d’après son brevet de 1961. Un tube cathodique logé dans la colonne projette, par des miroirs, sur un écran qui tourne sous le dôme, de sorte que chaque point lumineux trouve sa place en profondeur.',
+        alt: 'Dessin au trait\u202f: coupe d’un meuble à dôme posé sur une haute colonne qui contient un tube et des lentilles, et en dessous un schéma de rayons passant entre des miroirs inclinés.',
+        year: '1961',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+      'patent-2': {
+        caption: 'L’intérieur de l’afficheur Perspecta, d’après le brevet d’Actuality Systems de 2003. L’image monte par l’arbre creux du moteur, et trois miroirs la replient vers l’écran rond qui tourne au-dessus.',
+        alt: 'Dessin en perspective\u202f: un écran rond dressé sur la tranche sur un axe vertical, un moteur annulaire à son pied et trois miroirs plans autour, reliés par des trajets lumineux en pointillé.',
+        year: '2003',
+        changes: 'Image recadrée, redressée et redimensionnée',
+      },
+    },
+    'parallax-barrier': {
+      'patent-1': {
+        caption: 'Le stéréogramme à parallaxe de Frederic Ives, d’après son brevet de 1903. Un appareil à deux ouvertures prend les deux vues à la fois à travers une trame de lignes fines. Une trame semblable posée sur l’image terminée les sépare pour les deux yeux.',
+        alt: 'Dessins au trait\u202f: une chambre à soufflet vue de dessus, des rayons venus d’une boule et d’un cube qui se croisent à l’objectif, de petits schémas de prismes et une plaque lignée vue de face et de côté.',
+        year: '1903',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redressée et redimensionnée',
+      },
+    },
+    lenticular: {
+      'patent-1': {
+        caption: 'La feuille nervurée de Walter Hess, d’après son brevet déposé en 1912. Les nervures sont de petites lentilles cylindriques. La seconde figure montre une nervure qui amène la lumière d’une direction sur une seule ligne de l’image placée derrière.',
+        alt: 'Dessins au trait\u202f: une feuille couverte de fines nervures verticales, et une vue agrandie par la tranche de deux nervures, avec des rayons qui convergent à travers l’une vers un point de la face plane.',
+        year: '1915',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    holography: {
+      'patent-1': {
+        caption: 'D’après le brevet américain de Dennis Gabor, de 1949. La lumière d’une source ponctuelle passe près d’un petit objet et atteint une plaque photographique. Là, la lumière directe et la lumière diffusée se rencontrent et laissent un motif d’anneaux.',
+        alt: 'Dessins au trait\u202f: des rayons qui s’ouvrent depuis un point marqué S, passent près d’un point marqué O et atteignent une plaque dressée, et à côté une plaque carrée marquée d’anneaux concentriques.',
+        year: '1949',
+        changes: 'Image recadrée et redimensionnée',
+      },
+      'patent-2': {
+        caption: 'Fabriquer et regarder un hologramme, d’après le brevet déposé en 1964 par Emmett Leith et Juris Upatnieks. Un prisme dévie une partie du faisceau, qui sert de référence. Éclairée de nouveau, la plaque donne une image réelle et une image virtuelle.',
+        alt: 'Deux schémas légendés\u202f: une source de lumière, un objet et un prisme devant une plaque d’enregistrement, puis la plaque éclairée par un faisceau, avec une image de chaque côté.',
+        year: '1970',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'storage-tube': {
+      'patent-1': {
+        caption: 'Le tube à mémoire, d’après le brevet de Robert Anderson, de 1966, pour Tektronix. La seconde vue est écorchée pour montrer l’intérieur. Le brevet porte sur la fine couche de la face qui conserve l’image.',
+        alt: 'Deux dessins au trait d’un long tube de verre qui s’évase jusqu’à une face rectangulaire, avec des broches à l’extrémité étroite. Sur celui du bas, la paroi est en partie écorchée.',
+        year: '1966',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    gyricon: {
+      'patent-1': {
+        caption: 'L’afficheur à billes tournantes de Nicholas Sheridon, d’après son brevet de 1978. Une feuille remplie de petites billes est prise entre deux plaques d’électrodes. L’agrandissement montre deux billes, chacune sombre sur une moitié, libres de tourner dans leur cavité.',
+        alt: 'Dessins au trait\u202f: une pile de plaques écartées, une coupe avec une rangée de petites billes entre deux plaques, et un agrandissement de deux billes à moitié ombrées dans des cavités rondes.',
+        year: '1978',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'plasma-panel': {
+      'patent-1': {
+        caption: 'L’écran à plasma en vue éclatée, d’après le brevet de Donald Bitzer, Gene Slottow et Robert Willson, déposé en 1966. Une plaque de verre percée de trous est prise entre deux plaques extérieures qui portent des rangées croisées de conducteurs.',
+        alt: 'Dessins au trait\u202f: trois plaques écartées, celle du milieu criblée de trous ronds et les deux autres lignées à angle droit, et une coupe à travers quatre cellules.',
+        year: '1971',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+    },
+    electrochromic: {
+      'patent-1': {
+        caption: 'Une cellule électrochrome en couches, d’après le brevet de Satyendra Deb et Robert Shaw, de 1970. Des couches minces sont prises entre deux électrodes sur du verre. Un interrupteur envoie le courant dans un sens pour colorer la cellule, et dans l’autre pour l’éclaircir.',
+        alt: 'Deux dessins au trait d’une dalle plate en couches reliée à une pile. Sur celui du bas, un interrupteur porte les mentions color et bleach.',
+        year: '1970',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+    },
+    'electrophoretic-ink': {
+      'patent-1': {
+        caption: 'Une capsule d’encre électronique entre ses deux électrodes, d’après le brevet de Joseph Jacobson, Barrett Comiskey et Jonathan Albert, de 1999. Des particules claires et sombres flottent dans un fluide transparent. Sur la seconde figure, elles portent des charges opposées.',
+        alt: 'Deux schémas d’un cercle entre deux barres. Dans chaque cercle, des points blancs se rassemblent en haut et des points noirs en bas, avec des signes plus et moins sur l’un des deux.',
+        year: '1999',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    electrowetting: {
+      'patent-1': {
+        caption: 'Une cellule à électromouillage en coupe, d’après le brevet de Bokke Feenstra, Robert Hayes et Menno Prins, déposé en 2003. Sans tension, une couche d’huile colorée couvre le fond de la cellule. Sous tension, elle se rompt en gouttes.',
+        alt: 'Deux coupes de couches empilées. Sur celle du haut, une fine couche pointillée s’étend d’un bord à l’autre. Sur celle du bas, elle s’est ramassée en quatre bosses, à côté d’une pile.',
+        year: '2008',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'cholesteric-lcd': {
+      'patent-1': {
+        caption: 'Les deux états stables d’une cellule cholestérique, d’après un brevet de l’université d’État de Kent, de 2000. Dans la texture planaire, les gouttelettes de cristal liquide réfléchissent une lumière colorée. Dans la texture conique focale, la lumière les traverse et se diffuse vers l’avant.',
+        alt: 'Deux coupes d’une cellule contenant trois gouttelettes ovales, légendées planar texture et focal conic texture. Des flèches montrent la lumière renvoyée par la première et traversant la seconde.',
+        year: '2000',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'fog-screen': {
+      'patent-1': {
+        caption: 'Le principe de l’écran de brouillard, d’après le brevet de Karri Palovuori et Ismo Rakkolainen, de 2004. Une nappe de brouillard fine et plane est portée par un courant d’air, et un projecteur y envoie son image.',
+        alt: 'Dessin au trait en perspective\u202f: une nappe plane pointillée tendue entre deux caissons, à l’intérieur d’un bloc dessiné en contour, avec une petite lampe en haut qui lui envoie des rayons.',
+        year: '2004',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'static-volume': {
+      'patent-1': {
+        caption: 'Un seul point de lumière à l’intérieur d’un bloc de verre, d’après le brevet d’Elizabeth Downing, de 1997. Le verre ne s’illumine que là où les deux faisceaux laser infrarouges se croisent.',
+        alt: 'Dessin au trait d’un cube légendé 3D display image volume. Deux lignes marquées laser 1 et laser 2 entrent par le bas et se croisent en une petite étoile à l’intérieur.',
+        year: '1997',
+        changes: 'Image recadrée et redimensionnée',
+      },
+      'patent-2': {
+        caption: 'Comment une pile d’écrans commutables construit une image en profondeur, d’après le brevet d’Alan Sullivan, de 2000. Le projecteur montre une tranche à la fois, et seul l’écran qui doit la recevoir devient laiteux.',
+        alt: 'Quatre petits schémas d’un projecteur face à quatre feuilles dressées. Sur chacun, une feuille différente porte une partie d’image, dont une montagne et une voiture.',
+        year: '2000',
+        changes: 'Image recadrée, redressée et redimensionnée',
+      },
+    },
+    micromirror: {
+      'patent-1': {
+        caption: 'L’un des premiers micromiroirs, d’après le brevet de Larry Hornbeck, de 1987. Le pixel est un volet carré tenu au-dessus d’une cuvette peu profonde par une charnière placée à un angle. Une tension appliquée dessous tire le volet vers le bas.',
+        alt: 'Trois dessins au trait d’une plaque carrée percée de quatre petits trous, reliée à son cadre par un angle\u202f: en perspective au-dessus d’un creux, en coupe et vue de dessus.',
+        year: '1987',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    lcos: {
+      'patent-1': {
+        caption: 'La valve optique à cristaux liquides de Hughes en coupe, d’après un brevet de 1974. Une image arrive d’un côté, et la lumière de projection se réfléchit de l’autre. La couche de cristal liquide placée entre les deux reporte l’image sur cette lumière.',
+        alt: 'Coupe d’un épais empilement de couches hachurées autour d’une couche centrale de fluide. Des flèches entrent par la droite, et des flèches à double pointe se tiennent à gauche.',
+        year: '1974',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    microled: {
+      'patent-1': {
+        caption: 'Des LED de taille micrométrique, d’après le brevet de l’université d’État du Kansas, de 2002. Chacune est un petit disque de nitrure de gallium sur une base commune. L’agrandissement donne sa largeur\u202f: de 5 à 20\u00a0millièmes de millimètre.',
+        alt: 'Dessin en perspective de quatre petits disques annelés et d’une plage de contact sur une dalle en couches, avec un disque agrandi et coté de 5 à 20\u00a0micromètres de large.',
+        year: '2002',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'liquid-crystal': {
+      'patent-1': {
+        caption: 'La cellule torsadée, d’après le brevet de James Fergason, de 1973. La deuxième figure montre les deux plaques de verre frottées à angle droit l’une de l’autre. La troisième montre la cellule entre deux polariseurs, traversée par la lumière.',
+        alt: 'Dessins au trait\u202f: une cellule en coupe reliée à une pile, deux plaques lignées dans des directions croisées, et une cellule carrée entre deux disques devant une source de lumière.',
+        year: '1973',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+    },
+    oled: {
+      'patent-1': {
+        caption: 'Les couches d’un dispositif organique émetteur de lumière, d’après le brevet Kodak de 1989, de Ching Tang et Steven VanSlyke. Les charges positives et négatives entrent par les deux électrodes et se rencontrent dans les fines couches organiques placées entre elles.',
+        alt: 'Deux schémas\u202f: une dalle reliée à une source de tension, avec à l’intérieur une rangée de signes moins au-dessus d’une rangée de signes plus, et une pile de cinq couches hachurées.',
+        year: '1989',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'field-emission': {
+      'patent-1': {
+        caption: 'La cathode de Spindt, d’après le brevet du Stanford Research Institute, de 1973. Un empilement de métal, d’isolant et de métal est percé de trous, et un cône pointu se dresse dans chacun.',
+        alt: 'Dessin en perspective d’un bloc en couches percé de six trous ronds, un petit cône pointu dans chacun, relié à un boîtier marqué variable potential source. En dessous, un trou en coupe.',
+        year: '1973',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+      'patent-2': {
+        caption: 'Un tube plat à cathode froide, d’après un brevet de l’armée américaine déposé en 1967. Des émetteurs d’électrons sont répartis sur des bandes conductrices croisées. Une impulsion sur une bande de chaque jeu fait émettre ceux qui se trouvent à leur croisement.',
+        alt: 'Dessins au trait\u202f: l’angle écorché d’une plaque couverte de petits points sur des bandes croisées, un tube rond et plat vu de dessus et en partie ouvert, et sa mince coupe.',
+        year: '1970',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'retinal-display': {
+      'patent-1': {
+        caption: 'L’affichage rétinien virtuel en schéma fonctionnel, d’après le brevet de l’université de Washington, de 1995. La lumière est modulée, balayée en largeur et en hauteur, puis envoyée dans l’œil. C’est le cristallin lui-même qui la met au point sur la rétine.',
+        alt: 'Schémas fonctionnels\u202f: des blocs marqués photon generator, modulator, scanner et projection optics mènent au dessin d’un œil, avec un eye tracker au-dessus. Un second schéma ajoute des circuits vidéo.',
+        year: '1995',
+        changes: 'Image recadrée, redressée et redimensionnée',
+      },
+      'patent-2': {
+        caption: 'L’un des scanners du même brevet. Un miroir courbe porté par un bloc de matériau piézoélectrique balaie le faisceau dans un sens, et un second miroir, qui pivote, le balaie dans l’autre. À eux deux, ils tracent une trame.',
+        alt: 'Dessin en perspective\u202f: un faisceau lumineux frappe la marche courbe d’un bloc marqué piezoelectric material, monte vers un miroir carré incliné et s’ouvre en éventail vers un cadre en pointillé marqué raster.',
+        year: '1995',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'interferometric-modulator': {
+      'patent-1': {
+        caption: 'La cellule interférométrique de Mark Miles, d’après son brevet de 1998. Une fine membrane est tenue sur des plots au-dessus de la surface, et une tension appliquée entre les deux la tire vers le bas. L’écart qui les sépare fixe la couleur que la cellule réfléchit.',
+        alt: 'Deux dessins en perspective d’une bande de membrane posée sur deux plots au-dessus d’un socle plat, qui s’enfonce entre eux sous une plaque plane. Des fils portent les mentions 0 volts et 7 volts.',
+        year: '1998',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'braille-display': {
+      'patent-1': {
+        caption: 'Le mécanisme d’une cellule braille, d’après le brevet d’Oleg et Andree Tretiakoff, de 1977. De fines lames piézoélectriques, une par picot, se courbent sous l’effet d’une tension et font monter et descendre les picots.',
+        alt: 'Coupe d’un boîtier\u202f: trois tiges verticales traversent une pile de fines lames horizontales, et des fils spiralés entrent par la gauche.',
+        year: '1977',
+        changes: 'Image recadrée et redimensionnée',
+      },
+    },
+    'head-mounted': {
+      'patent-1': {
+        caption: 'Le masque de télévision de Morton Heilig, d’après son brevet de 1960. Un petit tube de télévision et une lentille à grand angle sont placés devant chaque œil. Le brevet donne aussi à l’utilisateur des écouteurs et des buses qui soufflent de l’air.',
+        alt: 'Dessins au trait\u202f: une tête vue de profil avec une lentille contre l’œil et un tube en forme de cône derrière elle, et un masque en forme de boîte avec deux oculaires ronds.',
+        year: '1960',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
+      },
+    },
+    stereoscope: {
+      'patent-1': {
+        caption: 'Une visionneuse du système Teleview, d’après le brevet de Laurens Hammond, de 1924. Un petit moteur fait tourner un obturateur devant les yeux, au même pas que le projecteur, de sorte que chaque œil ne voit que les images qui lui sont destinées.',
+        alt: 'Dessins au trait\u202f: un boîtier rond et plat sur une tige courbe, avec une fenêtre dans sa moitié inférieure et un disque découpé à l’intérieur, et à côté une coupe de son moteur.',
+        year: '1924',
+        changes: 'Image recadrée, traces du reste de la planche effacées, redimensionnée',
       },
     },
   },

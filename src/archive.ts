@@ -20,7 +20,7 @@ export const archiveOf = (pieceId: string): Media[] => (media[pieceId] ?? []).ma
 export function archiveSection(pieceId: string): string {
   const list = archiveOf(pieceId);
   if (!list.length) return '';
-  const mount = (m: Media, i: number) => `<li class="mount">
+  const mount = (m: Media, i: number) => `<li class="mount mount--${m.kind}">
   <button type="button" class="mount__open" data-media="${i}"><span class="vh">${tx(m.kind === 'film' ? 'archive.playFilm' : 'archive.enlarge')}. </span><img src="${esc(small(m))}" alt="${esc(m.alt)}"${standIn.media(pieceId, m.id)} width="${m.width}" height="${m.height}" loading="lazy" decoding="async">${m.kind === 'film' ? `<span class="mount__play" aria-hidden="true">${tx('archive.film.badge', { n: Math.round(m.seconds) })}</span>` : ''}</button>
   <p class="mount__kind">${esc(kindLine(m))}</p>
   <p class="mount__cap"${standIn.media(pieceId, m.id)}>${esc(m.caption)}</p>
@@ -52,7 +52,7 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
       : `<img src="${esc(m.large)}" alt="${esc(m.alt)}"${en} width="${m.width}" height="${m.height}" decoding="async">`;
     const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
     dialog.innerHTML = `
-<div class="viewer__media">${picture}</div>
+<div class="viewer__media viewer__media--${m.kind}">${picture}</div>
 <div class="viewer__side">
   <div class="viewer__head"><p class="viewer__kind">${esc(kindLine(m))}</p><button type="button" class="btn" data-v="close" autofocus>${tx('stage.close')}</button></div>
   <p class="viewer__cap"${en}>${esc(m.caption)}</p>

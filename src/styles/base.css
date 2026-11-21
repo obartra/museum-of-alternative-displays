@@ -274,6 +274,8 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* one picture large, with its record: the picture takes the room, the words sit below it on a phone and beside it on a desk */
+/* a drawing is black ink on white paper: by night the paper is seen in a dim room, not as a lamp */
+:root[data-lights="off"] .mount--drawing img, :root[data-lights="off"] .viewer__media--drawing img { filter: brightness(.8); }
 .viewer { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--wash); color: var(--ink); overflow: hidden; }
 .viewer[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
 .viewer::backdrop { background: var(--wash); }

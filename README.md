@@ -47,7 +47,8 @@ Node 22 or newer.
 | `src/data/pieces/h1.ts` to `h7.ts` | The catalogue, one file per hall. Text, dates, sources. |
 | `src/data/halls.ts`, `schema.ts` | Halls and the shape of a piece. |
 | `src/data/views.ts` | The words for each piece's own places to look from: the button and a line about what to notice. |
-| `src/data/media.ts`, `public/media/` | Archive pictures and films from Wikimedia Commons, with captions and full credits. `scripts/media.mjs` rebuilds the files from `scripts/media.json`. |
+| `src/data/media.ts`, `public/media/` | Archive photographs, engravings and films, most from Wikimedia Commons, with captions and full credits. |
+| `src/data/media-patents.ts` | Drawings from United States patents, one or two for most pieces. `scripts/patents.mjs` cuts them from the sheets listed in `scripts/patents.json`. |
 | `src/archive.ts` | The "From the archive" row on a piece page, its viewer, and the credits list. |
 | `src/i18n/en.ts` | Every word of the interface, in English. The list a translation has to cover. |
 | `src/i18n/locales/` | One file per language, with the interface and the whole collection in that language. Loaded on demand. |
@@ -84,11 +85,20 @@ choice is remembered.
 
 ## Archive pictures
 
-Only public domain, CC0, CC BY and CC BY-SA files from Wikimedia Commons, hosted here at web
-sizes. Each entry in `src/data/media.ts` carries its author, licence, source page and what
-was changed, and `npm run check` refuses an entry without them, a licence outside that
-list, or a file that is missing or too heavy. No portraits, and no pictures whose subject
+Only public domain, CC0, CC BY and CC BY-SA files from open archives, hosted here at web
+sizes. Most photographs and films come from Wikimedia Commons. Each entry carries its
+author, licence, source page and what was changed, and `npm run check` refuses an entry
+without them, a licence outside that list, a source that is not one of the archives it
+knows, or a file that is missing or too heavy. No portraits, and no pictures whose subject
 is someone else's copyrighted work.
+
+The patent drawings are figures from United States patents, whose text and drawings are not
+subject to copyright unless the patent itself carries a notice, and none of these does.
+`scripts/patents.json` names each sheet at Google Patents and the box to cut from it, and
+`node scripts/patents.mjs` downloads the sheet once, cuts the figure, paints out anything
+listed as `blank` (an attorney's signature, the edge of a neighbouring figure), turns it
+upright and writes the two sizes. It needs the `sharp` package. The credit of each drawing
+says which of those things was done to it.
 
 ## Adding a piece
 

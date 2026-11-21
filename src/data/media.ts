@@ -1,3 +1,5 @@
+import { patentMedia } from './media-patents';
+
 /** Archive pictures and film for a piece: real objects, period drawings, patent figures, the thing running. Each from an open archive, free to reuse. */
 export interface MediaCredit {
   /** Who made it, as the source states it, in plain text. "Unknown" only when the source says so. */
@@ -33,7 +35,8 @@ export interface Still extends MediaBase { kind: 'photo' | 'drawing'; small: str
 export interface Film extends MediaBase { kind: 'film'; mp4: string; webm: string; poster: string; seconds: number }
 export type Media = Still | Film;
 
-export const media: Record<string, Media[]> = {
+/** Photographs, engravings and films, most of them from Wikimedia Commons. */
+const pictures: Record<string, Media[]> = {
   'split-flap': [
     {
       id: 'board-updating', kind: 'film',
@@ -365,3 +368,8 @@ export const media: Record<string, Media[]> = {
     },
   ],
 };
+
+/** Everything a piece has in the archive: its photographs and films first, then its patent drawings. */
+export const media: Record<string, Media[]> = Object.fromEntries(
+  [...new Set([...Object.keys(pictures), ...Object.keys(patentMedia)])].map((id) => [id, [...(pictures[id] ?? []), ...(patentMedia[id] ?? [])]]),
+);

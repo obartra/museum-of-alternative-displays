@@ -1507,6 +1507,12 @@ const locale: Locale = {
         year: "2016",
         changes: "Imatge redimensionada",
       },
+      'patent-1': {
+        caption: "De la patent de Maurice Taylor del 1964 per a un rètol accionat magnèticament. Un panell d'obertures rodones té un disc a cadascuna. El tall mostra un disc a la seva suspensió, l'imant que porta i la bobina que el fa girar.",
+        alt: "Dibuixos de línies: un tauler amb fileres d'obertures rodones, el tall d'un disc amb un imant al costat d'una bobina, i una graella de punts clars i foscos.",
+        year: "1964",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
     },
     'mechanical-television': {
       receiver: {
@@ -1520,6 +1526,12 @@ const locale: Locale = {
         alt: "Dibuix de línies amb rètols: llum d'arc, disc i cèl·lules fotoelèctriques davant d'un cap de perfil, antenes de ràdio, i després un llum de neó, un disc i una lent davant d'un segon cap.",
         year: "1928",
         changes: "Imatge redimensionada",
+      },
+      'patent-1': {
+        caption: "Una cadena de televisió sencera, de la patent nord-americana de John Logie Baird del 1929. Un disc giratori explora l'objecte, aquí una creu. Un segon disc, que gira al mateix pas, reconstrueix la imatge en una pantalla amb la llum d'un llum.",
+        alt: "Dibuix de línies: una creu, una lent i un disc foradat porten a dues caixes. A sota, dues caixes més porten a un llum, un segon disc i una pantalla que mostra la creu.",
+        year: "1929",
+        changes: "Imatge retallada i redimensionada",
       },
     },
     'nixie-tube': {
@@ -1541,6 +1553,12 @@ const locale: Locale = {
         year: "2016",
         changes: "Imatge redimensionada",
       },
+      'patent-1': {
+        caption: "D'una patent de Burroughs presentada el 1955 per Leo Landrey. Deu xifres formen una pila, amb ànodes en forma d'anell entremig. En aquest disseny les xifres són fetes de fil fi, no retallades en xapa metàl·lica.",
+        alt: "Dibuixos de línies d'un tub de vidre vist de costat, des de dalt i en secció: xifres marcades del 0 al 9 apilades l'una sobre l'altra entre anells, amb potes que surten per la base.",
+        year: "1959",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
     },
     'cathode-ray-tube': {
       'braun-tube': {
@@ -1561,6 +1579,12 @@ const locale: Locale = {
         year: "2023",
         changes: "Imatge redimensionada",
       },
+      'patent-1': {
+        caption: "La idea en què es basa el tub d'imatge en color, de la patent d'Alfred Schroeder per a RCA, presentada el 1947. Tres canons d'electrons apunten a través d'una placa amb forats situada darrere la pantalla, de manera que cada feix només arriba a les zones del seu color.",
+        alt: "Dibuixos de línies: un tub d'imatge amb tres canons al coll i bobines al voltant, tres feixos que es creuen en una placa davant d'una pantalla, i una ampliació retolada amb colors.",
+        year: "1952",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
     },
     eidophor: {
       prototype: {
@@ -1580,6 +1604,12 @@ const locale: Locale = {
         alt: "Un armari alt de color gris blavós amb el rètol Eidophor, un tauler de control amb interruptors i mesuradors, un compartiment obert i un gran objectiu negre arran de terra.",
         year: "2024",
         changes: "Imatge redimensionada",
+      },
+      'patent-1': {
+        caption: "L'Eidophor, de la patent nord-americana de Fritz Fischer del 1945. Un feix d'electrons escriu sobre una pel·lícula de líquid que un plat giratori s'emporta, i la llum d'un llum travessa aquesta pel·lícula camí de la pantalla.",
+        alt: "Dibuixos de línies: un recipient de vidre amb dos canons d'electrons inclinats sobre un plat rodó, un trajecte de llum que hi puja fins a un mirall i una pantalla, i un plat giratori.",
+        year: "1945",
+        changes: "Imatge retallada i redimensionada",
       },
     },
     'peppers-ghost': {
@@ -1602,6 +1632,228 @@ const locale: Locale = {
         alt: "Gravat d'un home de perfil que s'acosta a l'ull un disc amb ranures muntat en un mànec. Un mirall al davant reflecteix la cara dibuixada del disc i les seves mans.",
         year: "1884",
         changes: "Imatge redimensionada",
+      },
+    },
+    'swept-volume': {
+      'patent-1': {
+        caption: "El generescope de Max Hirsch, de la seva patent del 1961. Un tub d'imatge situat a la columna projecta, a través de miralls, sobre una pantalla que gira dins la cúpula, de manera que cada punt de llum ocupa un lloc en profunditat.",
+        alt: "Dibuix de línies: secció d'un moble amb cúpula sobre una columna alta que conté un tub i lents, i a sota un esquema de raigs que passen entre miralls inclinats.",
+        year: "1961",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+      'patent-2': {
+        caption: "L'interior de la pantalla Perspecta, de la patent d'Actuality Systems del 2003. La imatge puja per l'eix buit del motor, i tres miralls la pleguen fins a la pantalla rodona que gira al damunt.",
+        alt: "Dibuix en perspectiva: una pantalla rodona posada de cantell sobre un eix vertical, un motor en forma d'anell al peu i tres miralls plans al voltant, units per trajectes de llum en línia discontínua.",
+        year: "2003",
+        changes: "Imatge retallada, adreçada i redimensionada",
+      },
+    },
+    'parallax-barrier': {
+      'patent-1': {
+        caption: "L'estereograma de paral·laxi de Frederic Ives, de la seva patent del 1903. Una càmera amb dues obertures pren les dues vistes alhora a través d'una trama de línies fines. Una trama igual sobre la imatge acabada les separa per als dos ulls.",
+        alt: "Dibuixos de línies: una càmera de manxa vista des de dalt, raigs d'una bola i un cub que es creuen a la lent, petits esquemes de prismes i una placa ratllada vista de cara i de costat.",
+        year: "1903",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, adreçada i redimensionada",
+      },
+    },
+    lenticular: {
+      'patent-1': {
+        caption: "La làmina de nervis de Walter Hess, de la seva patent presentada el 1912. Els nervis són petites lents cilíndriques. La segona figura mostra com un nervi porta la llum d'una direcció a una sola línia de la imatge que té al darrere.",
+        alt: "Dibuixos de línies: una làmina coberta de nervis verticals fins, i una vista ampliada de cantell de dos nervis, amb raigs que convergeixen a través d'un fins a un punt de la cara plana.",
+        year: "1915",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    holography: {
+      'patent-1': {
+        caption: "De la patent nord-americana de Dennis Gabor del 1949. La llum d'una font puntual passa al costat d'un objecte petit i arriba a una placa fotogràfica. Allà la llum directa i la dispersada es troben i deixen un patró d'anells.",
+        alt: "Dibuixos de línies: raigs que s'obren des d'un punt marcat S, passen al costat d'un punt marcat O i arriben a una placa vertical, i al costat una placa quadrada amb anells concèntrics.",
+        year: "1949",
+        changes: "Imatge retallada i redimensionada",
+      },
+      'patent-2': {
+        caption: "Com es fa i com es mira un holograma, de la patent que Emmett Leith i Juris Upatnieks van presentar el 1964. Un prisma desvia una part del feix com a referència. Il·luminada de nou, la placa dona una imatge real i una de virtual.",
+        alt: "Dos esquemes amb rètols: una font de llum, un objecte i un prisma davant d'una placa d'enregistrament, i després la placa il·luminada per un feix, amb una imatge a cada costat.",
+        year: "1970",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'storage-tube': {
+      'patent-1': {
+        caption: "El tub d'emmagatzematge, de la patent de Robert Anderson del 1966 per a Tektronix. La segona vista està tallada per mostrar-ne l'interior. La patent tracta de la capa fina de la cara que conserva la imatge.",
+        alt: "Dos dibuixos de línies d'un tub de vidre llarg que s'eixampla fins a una cara rectangular, amb potes a l'extrem estret. Al de baix, la paret està tallada en part.",
+        year: "1966",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    gyricon: {
+      'patent-1': {
+        caption: "La pantalla de boles giratòries de Nicholas Sheridon, de la seva patent del 1978. Una làmina plena de boletes queda entre dues plaques d'elèctrodes. L'ampliació mostra dues boletes, cadascuna fosca per una meitat, que giren lliures dins la seva cavitat.",
+        alt: "Dibuixos de línies: una pila de plaques separades, una secció amb una filera de boletes entre dues plaques, i una ampliació de dues boletes mig ombrejades dins de cavitats rodones.",
+        year: "1978",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'plasma-panel': {
+      'patent-1': {
+        caption: "El panell de plasma amb les parts separades, de la patent de Donald Bitzer, Gene Slottow i Robert Willson, presentada el 1966. Una làmina de vidre foradada queda entre dues làmines exteriors que porten fileres encreuades de conductors.",
+        alt: "Dibuixos de línies: tres làmines separades, la del mig plena de forats rodons i les dues de fora ratllades en angle recte, i una secció que travessa quatre cel·les.",
+        year: "1971",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+    },
+    electrochromic: {
+      'patent-1': {
+        caption: "Una cel·la electrocròmica de capes, de la patent de Satyendra Deb i Robert Shaw del 1970. Unes pel·lícules primes queden entre dos elèctrodes sobre vidre. Un interruptor envia el corrent en un sentit per acolorir la cel·la i en l'altre per aclarir-la.",
+        alt: "Dos dibuixos de línies d'una llosa plana de capes connectada a una bateria. Al de baix, un interruptor porta els rètols color i bleach.",
+        year: "1970",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+    },
+    'electrophoretic-ink': {
+      'patent-1': {
+        caption: "Una càpsula de tinta electrònica entre els seus dos elèctrodes, de la patent de Joseph Jacobson, Barrett Comiskey i Jonathan Albert del 1999. Partícules clares i fosques suren en un fluid transparent. A la segona figura porten càrregues oposades.",
+        alt: "Dos esquemes d'un cercle entre dues barres. A cada cercle els punts blancs s'apleguen a dalt i els negres a baix, amb signes més i menys en un dels dos.",
+        year: "1999",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    electrowetting: {
+      'patent-1': {
+        caption: "Una cel·la d'electrohumectació en secció, de la patent de Bokke Feenstra, Robert Hayes i Menno Prins, presentada el 2003. Sense tensió, una capa d'oli acolorit cobreix el fons de la cel·la. Amb tensió, es trenca en gotes.",
+        alt: "Dues seccions de capes apilades. A la de dalt, una capa fina puntejada va de banda a banda. A la de baix s'ha recollit en quatre bonys, al costat d'una bateria.",
+        year: "2008",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'cholesteric-lcd': {
+      'patent-1': {
+        caption: "Els dos estats estables d'una cel·la colestèrica, d'una patent de la Universitat Estatal de Kent del 2000. En la textura planar, les gotetes de cristall líquid reflecteixen llum de color. En la textura cònica focal, la llum les travessa i es dispersa cap endavant.",
+        alt: "Dues seccions d'una cel·la amb tres gotetes ovalades, retolades planar texture i focal conic texture. Les fletxes mostren la llum retornada per la primera i travessant la segona.",
+        year: "2000",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'fog-screen': {
+      'patent-1': {
+        caption: "El principi de la pantalla de boira, de la patent de Karri Palovuori i Ismo Rakkolainen del 2004. Una làmina fina i plana de boira viatja dins d'un corrent d'aire, i un projector hi llança la imatge.",
+        alt: "Dibuix de línies en perspectiva: una làmina plana puntejada estesa entre dues caixes, dins d'un bloc dibuixat en contorn, amb un petit llum a dalt que hi envia raigs.",
+        year: "2004",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'static-volume': {
+      'patent-1': {
+        caption: "Un sol punt de llum dins d'un bloc de vidre, de la patent d'Elizabeth Downing del 1997. El vidre només brilla allà on es creuen els dos feixos de làser infraroig.",
+        alt: "Dibuix de línies d'un cub retolat 3D display image volume. Dues línies marcades laser 1 i laser 2 entren per baix i es creuen en una petita estrella a l'interior.",
+        year: "1997",
+        changes: "Imatge retallada i redimensionada",
+      },
+      'patent-2': {
+        caption: "Com una pila de pantalles commutables construeix una imatge en profunditat, de la patent d'Alan Sullivan del 2000. El projector mostra una llesca cada vegada, i només es torna tèrbola la pantalla que l'ha de recollir.",
+        alt: "Quatre petits esquemes d'un projector davant de quatre làmines verticals. A cadascun, una làmina diferent porta una part d'una imatge, entre les quals una muntanya i un cotxe.",
+        year: "2000",
+        changes: "Imatge retallada, adreçada i redimensionada",
+      },
+    },
+    micromirror: {
+      'patent-1': {
+        caption: "Un dels primers micromiralls, de la patent de Larry Hornbeck del 1987. El píxel és una llengüeta quadrada sostinguda sobre un pou poc profund per una frontissa en un cantó. Una tensió aplicada a sota estira la llengüeta cap avall.",
+        alt: "Tres dibuixos de línies d'una placa quadrada amb quatre foradets, unida al marc per un cantó: en perspectiva sobre un buit, en secció i des de dalt.",
+        year: "1987",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    lcos: {
+      'patent-1': {
+        caption: "La vàlvula de llum de cristall líquid de Hughes en secció, d'una patent del 1974. Una imatge arriba per un costat, i la llum de projecció es reflecteix a l'altre. La capa de cristall líquid que hi ha entremig copia la imatge en aquesta llum.",
+        alt: "Secció d'un sandvitx gruixut de capes ratllades al voltant d'una capa central de fluid. Unes fletxes entren per la dreta, i a l'esquerra hi ha fletxes de doble punta.",
+        year: "1974",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    microled: {
+      'patent-1': {
+        caption: "Leds de mida micromètrica, de la patent de la Universitat Estatal de Kansas del 2002. Cadascun és un petit disc de nitrur de gal·li sobre una base comuna. L'ampliació en dona l'amplada: de 5 a 20 mil·lèsimes de mil·límetre.",
+        alt: "Dibuix en perspectiva de quatre petits discos amb anells i una zona de contacte sobre una llosa de capes, amb un disc ampliat i marcat de 5 a 20 micròmetres d'amplada.",
+        year: "2002",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'liquid-crystal': {
+      'patent-1': {
+        caption: "La cel·la amb torsió, de la patent de James Fergason del 1973. La segona figura mostra les dues plaques de vidre fregades en angle recte l'una respecte de l'altra. La tercera mostra la cel·la entre dos polaritzadors, travessada per la llum.",
+        alt: "Dibuixos de línies: una cel·la en secció connectada a una bateria, dues plaques ratllades en direccions encreuades, i una cel·la quadrada entre dos discos davant d'una font de llum.",
+        year: "1973",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+    },
+    oled: {
+      'patent-1': {
+        caption: "Les capes d'un dispositiu orgànic emissor de llum, de la patent de Kodak del 1989, de Ching Tang i Steven VanSlyke. Les càrregues positives i negatives entren pels dos elèctrodes i es troben a les capes orgàniques primes que hi ha entremig.",
+        alt: "Dos esquemes: una llosa connectada a una font de tensió, amb una filera de signes menys sobre una filera de signes més a l'interior, i una pila de cinc capes ratllades.",
+        year: "1989",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'field-emission': {
+      'patent-1': {
+        caption: "El càtode de Spindt, de la patent de l'Stanford Research Institute del 1973. Un sandvitx de metall, aïllant i metall és ple de forats, i a cadascun s'hi alça un con esmolat.",
+        alt: "Dibuix en perspectiva d'un bloc de capes amb sis forats rodons i un petit con punxegut a cadascun, connectat a una caixa retolada variable potential source. A sota, un forat en secció.",
+        year: "1973",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+      'patent-2': {
+        caption: "Un tub pla de càtode fred, d'una patent de l'Exèrcit dels Estats Units presentada el 1967. Els emissors d'electrons estan repartits sobre tires de conductor encreuades. Quan es dona un impuls a una tira de cada joc, emeten els que són a l'encreuament.",
+        alt: "Dibuixos de línies: el cantó tallat d'una placa coberta de puntets sobre tires encreuades, un tub rodó i pla vist des de dalt amb una part oberta, i la seva secció prima.",
+        year: "1970",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'retinal-display': {
+      'patent-1': {
+        caption: "La pantalla retiniana virtual en un diagrama de blocs, de la patent de la Universitat de Washington del 1995. La llum es modula, s'escombra d'amplada i d'alçada i s'envia a l'ull. És el mateix cristal·lí el que l'enfoca a la retina.",
+        alt: "Diagrames de blocs: caixes retolades photon generator, modulator, scanner i projection optics porten al dibuix d'un ull, amb un eye tracker al damunt. Un segon diagrama hi afegeix circuits de vídeo.",
+        year: "1995",
+        changes: "Imatge retallada, adreçada i redimensionada",
+      },
+      'patent-2': {
+        caption: "Un dels escàners de la mateixa patent. Un mirall corb sobre un bloc de material piezoelèctric escombra el feix en un sentit, i un segon mirall, que gira, l'escombra en l'altre. Entre tots dos dibuixen una trama.",
+        alt: "Dibuix en perspectiva: un feix de llum toca el graó corb d'un bloc retolat piezoelectric material, puja fins a un mirall quadrat inclinat i s'obre cap a un marc de traços retolat raster.",
+        year: "1995",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'interferometric-modulator': {
+      'patent-1': {
+        caption: "La cel·la interferomètrica de Mark Miles, de la seva patent del 1998. Una membrana fina s'aguanta sobre pilars per damunt de la superfície, i una tensió entre totes dues l'estira cap avall. La separació entre elles fixa el color que reflecteix la cel·la.",
+        alt: "Dos dibuixos en perspectiva d'una tira de membrana sobre dos pilars, damunt d'una base plana, que s'enfonsa entre ells sota una placa plana. Els cables porten els rètols 0 volts i 7 volts.",
+        year: "1998",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'braille-display': {
+      'patent-1': {
+        caption: "El mecanisme d'una cel·la braille, de la patent d'Oleg i Andree Tretiakoff del 1977. Unes tires piezoelèctriques primes, una per piu, es dobleguen quan reben una tensió i fan pujar i baixar els pius.",
+        alt: "Secció d'una caixa: tres barretes verticals travessen una pila de tires horitzontals primes, i per l'esquerra hi entren uns cables en espiral.",
+        year: "1977",
+        changes: "Imatge retallada i redimensionada",
+      },
+    },
+    'head-mounted': {
+      'patent-1': {
+        caption: "La màscara de televisió de Morton Heilig, de la seva patent del 1960. Davant de cada ull hi ha un petit tub de televisió i una lent gran angular. La patent dona a més a l'usuari auriculars i broquets que bufen aire.",
+        alt: "Dibuixos de línies: un cap vist de costat amb una lent enganxada a l'ull i un tub en forma de con al darrere, i una màscara en forma de caixa amb dos oculars rodons.",
+        year: "1960",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
+      },
+    },
+    stereoscope: {
+      'patent-1': {
+        caption: "Un visor del sistema Teleview, de la patent de Laurens Hammond del 1924. Un petit motor fa girar un obturador davant dels ulls, al mateix pas que el projector, de manera que cada ull només veu les imatges que li toquen.",
+        alt: "Dibuixos de línies: una caixa rodona i plana sobre una tija corba, amb una finestra a la meitat de baix i un disc retallat a dins, i al costat una secció del seu motor.",
+        year: "1924",
+        changes: "Imatge retallada, amb les marques de la resta del full esborrades, i redimensionada",
       },
     },
   },

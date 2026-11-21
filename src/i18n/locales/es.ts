@@ -1093,6 +1093,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Imagen redimensionada',
       },
+      'patent-1': {
+        caption: 'De la patente de Maurice Taylor de 1964 para un letrero accionado magnéticamente. Un panel de aberturas redondas tiene un disco en cada una. El corte muestra un disco en su suspensión, el imán que lleva y la bobina que lo hace girar.',
+        alt: 'Dibujos de líneas: un tablero con filas de aberturas redondas, el corte de un disco con un imán junto a una bobina, y una cuadrícula de puntos claros y oscuros.',
+        year: '1964',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
     },
     'mechanical-television': {
       receiver: {
@@ -1106,6 +1112,12 @@ const locale: Locale = {
         alt: 'Dibujo de líneas con rótulos: lámpara de arco, disco y células fotoeléctricas frente a una cabeza de perfil, antenas de radio, y después una lámpara de neón, un disco y una lente ante una segunda cabeza.',
         year: '1928',
         changes: 'Imagen redimensionada',
+      },
+      'patent-1': {
+        caption: 'Una cadena de televisión completa, de la patente estadounidense de John Logie Baird de 1929. Un disco giratorio explora el objeto, aquí una cruz. Un segundo disco, que gira al mismo paso, reconstruye la imagen en una pantalla con la luz de una lámpara.',
+        alt: 'Dibujo de líneas: una cruz, una lente y un disco perforado llevan a dos cajas. Debajo, otras dos cajas llevan a una lámpara, un segundo disco y una pantalla que muestra la cruz.',
+        year: '1929',
+        changes: 'Imagen recortada y redimensionada',
       },
     },
     'nixie-tube': {
@@ -1127,6 +1139,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Imagen redimensionada',
       },
+      'patent-1': {
+        caption: 'De una patente de Burroughs presentada en 1955 por Leo Landrey. Diez cifras forman una pila, con ánodos en forma de anillo entre ellas. En este diseño las cifras están hechas de alambre fino, no recortadas en chapa metálica.',
+        alt: 'Dibujos de líneas de un tubo de vidrio visto de lado, desde arriba y en sección: cifras marcadas del 0 al 9 apiladas una sobre otra entre anillos, con patillas que salen por la base.',
+        year: '1959',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
     },
     'cathode-ray-tube': {
       'braun-tube': {
@@ -1147,6 +1165,12 @@ const locale: Locale = {
         year: '2023',
         changes: 'Imagen redimensionada',
       },
+      'patent-1': {
+        caption: 'La idea en que se basa el tubo de imagen en color, de la patente de Alfred Schroeder para RCA, presentada en 1947. Tres cañones de electrones apuntan a través de una placa con agujeros situada detrás de la pantalla, de modo que cada haz solo alcanza las zonas de su color.',
+        alt: 'Dibujos de líneas: un tubo de imagen con tres cañones en el cuello y bobinas alrededor, tres haces que se cruzan en una placa ante una pantalla, y una ampliación rotulada con colores.',
+        year: '1952',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
     },
     eidophor: {
       prototype: {
@@ -1166,6 +1190,12 @@ const locale: Locale = {
         alt: 'Un armario alto de color gris azulado con el rótulo Eidophor, un panel de control con interruptores y medidores, un compartimento abierto y un gran objetivo negro a ras de suelo.',
         year: '2024',
         changes: 'Imagen redimensionada',
+      },
+      'patent-1': {
+        caption: 'El Eidophor, de la patente estadounidense de Fritz Fischer de 1945. Un haz de electrones escribe sobre una película de líquido que un plato giratorio lleva consigo, y la luz de una lámpara atraviesa esa película camino de la pantalla.',
+        alt: 'Dibujos de líneas: un recipiente de vidrio con dos cañones de electrones inclinados sobre un plato redondo, un trayecto de luz que sube por él hasta un espejo y una pantalla, y un plato giratorio.',
+        year: '1945',
+        changes: 'Imagen recortada y redimensionada',
       },
     },
     'peppers-ghost': {
@@ -1188,6 +1218,228 @@ const locale: Locale = {
         alt: 'Grabado de un hombre de perfil que acerca al ojo un disco con ranuras montado en un mango. Un espejo delante de él refleja la cara dibujada del disco y sus manos.',
         year: '1884',
         changes: 'Imagen redimensionada',
+      },
+    },
+    'swept-volume': {
+      'patent-1': {
+        caption: 'El generescope de Max Hirsch, de su patente de 1961. Un tubo de imagen situado en la columna proyecta, a través de espejos, sobre una pantalla que gira dentro de la cúpula, de modo que cada punto de luz ocupa un lugar en profundidad.',
+        alt: 'Dibujo de líneas: sección de un mueble con cúpula sobre una columna alta que contiene un tubo y lentes, y debajo un esquema de rayos que pasan entre espejos inclinados.',
+        year: '1961',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+      'patent-2': {
+        caption: 'El interior de la pantalla Perspecta, de la patente de Actuality Systems de 2003. La imagen sube por el eje hueco del motor, y tres espejos la pliegan hasta la pantalla redonda que gira encima.',
+        alt: 'Dibujo en perspectiva: una pantalla redonda puesta de canto sobre un eje vertical, un motor en forma de anillo a su pie y tres espejos planos alrededor, unidos por trayectos de luz en línea discontinua.',
+        year: '2003',
+        changes: 'Imagen recortada, enderezada y redimensionada',
+      },
+    },
+    'parallax-barrier': {
+      'patent-1': {
+        caption: 'El estereograma de paralaje de Frederic Ives, de su patente de 1903. Una cámara con dos aberturas toma las dos vistas a la vez a través de una trama de líneas finas. Una trama igual sobre la imagen terminada las separa para los dos ojos.',
+        alt: 'Dibujos de líneas: una cámara de fuelle vista desde arriba, rayos de una bola y un cubo que se cruzan en su lente, pequeños esquemas de prismas y una placa rayada vista de frente y de lado.',
+        year: '1903',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, enderezada y redimensionada',
+      },
+    },
+    lenticular: {
+      'patent-1': {
+        caption: 'La lámina de nervios de Walter Hess, de su patente presentada en 1912. Los nervios son pequeñas lentes cilíndricas. La segunda figura muestra cómo un nervio lleva la luz de una dirección a una sola línea de la imagen que tiene detrás.',
+        alt: 'Dibujos de líneas: una lámina cubierta de finos nervios verticales, y una vista ampliada de canto de dos nervios, con rayos que convergen a través de uno hasta un punto de la cara plana.',
+        year: '1915',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    holography: {
+      'patent-1': {
+        caption: 'De la patente estadounidense de Dennis Gabor de 1949. La luz de una fuente puntual pasa junto a un objeto pequeño y llega a una placa fotográfica. Allí la luz directa y la dispersada se encuentran y dejan un patrón de anillos.',
+        alt: 'Dibujos de líneas: rayos que se abren desde un punto marcado S, pasan junto a un punto marcado O y llegan a una placa vertical, y al lado una placa cuadrada con anillos concéntricos.',
+        year: '1949',
+        changes: 'Imagen recortada y redimensionada',
+      },
+      'patent-2': {
+        caption: 'Cómo se hace y cómo se mira un holograma, de la patente que Emmett Leith y Juris Upatnieks presentaron en 1964. Un prisma desvía parte del haz como referencia. Iluminada de nuevo, la placa da una imagen real y otra virtual.',
+        alt: 'Dos esquemas con rótulos: una fuente de luz, un objeto y un prisma delante de una placa de registro, y después la placa iluminada por un haz, con una imagen a cada lado.',
+        year: '1970',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'storage-tube': {
+      'patent-1': {
+        caption: 'El tubo de almacenamiento, de la patente de Robert Anderson de 1966 para Tektronix. La segunda vista está cortada para mostrar el interior. La patente trata de la fina capa de la cara que conserva la imagen.',
+        alt: 'Dos dibujos de líneas de un largo tubo de vidrio que se ensancha hasta una cara rectangular, con patillas en el extremo estrecho. En el de abajo, la pared está cortada en parte.',
+        year: '1966',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    gyricon: {
+      'patent-1': {
+        caption: 'La pantalla de bolas giratorias de Nicholas Sheridon, de su patente de 1978. Una lámina llena de bolitas queda entre dos placas de electrodos. La ampliación muestra dos bolitas, cada una oscura por una mitad, que giran libres en su propia cavidad.',
+        alt: 'Dibujos de líneas: una pila de placas separadas, una sección con una fila de bolitas entre dos placas, y una ampliación de dos bolitas medio sombreadas dentro de cavidades redondas.',
+        year: '1978',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'plasma-panel': {
+      'patent-1': {
+        caption: 'El panel de plasma con sus partes separadas, de la patente de Donald Bitzer, Gene Slottow y Robert Willson, presentada en 1966. Una lámina de vidrio perforada queda entre dos láminas exteriores que llevan filas cruzadas de conductores.',
+        alt: 'Dibujos de líneas: tres láminas separadas, la del centro llena de agujeros redondos y las dos exteriores rayadas en ángulo recto, y una sección que atraviesa cuatro celdas.',
+        year: '1971',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+    },
+    electrochromic: {
+      'patent-1': {
+        caption: 'Una celda electrocrómica de capas, de la patente de Satyendra Deb y Robert Shaw de 1970. Unas películas delgadas quedan entre dos electrodos sobre vidrio. Un interruptor envía la corriente en un sentido para colorear la celda y en el otro para aclararla.',
+        alt: 'Dos dibujos de líneas de una losa plana de capas conectada a una batería. En el de abajo, un interruptor lleva los rótulos color y bleach.',
+        year: '1970',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+    },
+    'electrophoretic-ink': {
+      'patent-1': {
+        caption: 'Una cápsula de tinta electrónica entre sus dos electrodos, de la patente de Joseph Jacobson, Barrett Comiskey y Jonathan Albert de 1999. Partículas claras y oscuras flotan en un fluido transparente. En la segunda figura llevan cargas opuestas.',
+        alt: 'Dos esquemas de un círculo entre dos barras. En cada círculo los puntos blancos se reúnen arriba y los negros abajo, con signos más y menos en uno de ellos.',
+        year: '1999',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    electrowetting: {
+      'patent-1': {
+        caption: 'Una celda de electrohumectación en sección, de la patente de Bokke Feenstra, Robert Hayes y Menno Prins, presentada en 2003. Sin voltaje, una capa de aceite coloreado cubre el fondo de la celda. Con voltaje, se rompe en gotas.',
+        alt: 'Dos secciones de capas apiladas. En la de arriba, una fina capa punteada va de lado a lado. En la de abajo se ha recogido en cuatro bultos, junto a una batería.',
+        year: '2008',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'cholesteric-lcd': {
+      'patent-1': {
+        caption: 'Los dos estados estables de una celda colestérica, de una patente de la Universidad Estatal de Kent de 2000. En la textura planar, las gotitas de cristal líquido reflejan luz de color. En la textura cónica focal, la luz las atraviesa y se dispersa hacia delante.',
+        alt: 'Dos secciones de una celda con tres gotitas ovaladas, rotuladas planar texture y focal conic texture. Las flechas muestran la luz devuelta por la primera y atravesando la segunda.',
+        year: '2000',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'fog-screen': {
+      'patent-1': {
+        caption: 'El principio de la pantalla de niebla, de la patente de Karri Palovuori e Ismo Rakkolainen de 2004. Una lámina fina y plana de niebla viaja dentro de una corriente de aire, y un proyector lanza su imagen sobre ella.',
+        alt: 'Dibujo de líneas en perspectiva: una lámina plana punteada tendida entre dos cajas, dentro de un bloque dibujado en contorno, con una pequeña lámpara arriba que le envía rayos.',
+        year: '2004',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'static-volume': {
+      'patent-1': {
+        caption: 'Un solo punto de luz dentro de un bloque de vidrio, de la patente de Elizabeth Downing de 1997. El vidrio solo brilla donde se cruzan los dos haces de láser infrarrojo.',
+        alt: 'Dibujo de líneas de un cubo rotulado 3D display image volume. Dos líneas marcadas laser 1 y laser 2 entran por abajo y se cruzan en una pequeña estrella en su interior.',
+        year: '1997',
+        changes: 'Imagen recortada y redimensionada',
+      },
+      'patent-2': {
+        caption: 'Cómo una pila de pantallas conmutables construye una imagen en profundidad, de la patente de Alan Sullivan de 2000. El proyector muestra una rebanada cada vez, y solo se vuelve turbia la pantalla que debe recogerla.',
+        alt: 'Cuatro pequeños esquemas de un proyector frente a cuatro láminas verticales. En cada uno, una lámina distinta lleva parte de una imagen, entre ellas una montaña y un coche.',
+        year: '2000',
+        changes: 'Imagen recortada, enderezada y redimensionada',
+      },
+    },
+    micromirror: {
+      'patent-1': {
+        caption: 'Uno de los primeros microespejos, de la patente de Larry Hornbeck de 1987. El píxel es una lengüeta cuadrada sostenida sobre un pozo poco profundo por una bisagra en una esquina. Un voltaje aplicado debajo tira de la lengüeta hacia abajo.',
+        alt: 'Tres dibujos de líneas de una placa cuadrada con cuatro agujeritos, unida a su marco por una esquina: en perspectiva sobre un hueco, en sección y desde arriba.',
+        year: '1987',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    lcos: {
+      'patent-1': {
+        caption: 'La válvula de luz de cristal líquido de Hughes en sección, de una patente de 1974. Una imagen llega por un lado, y la luz de proyección se refleja en el otro. La capa de cristal líquido que hay entre ambos copia la imagen en esa luz.',
+        alt: 'Sección de un grueso sándwich de capas rayadas alrededor de una capa central de fluido. Unas flechas entran por la derecha, y a la izquierda hay flechas de doble punta.',
+        year: '1974',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    microled: {
+      'patent-1': {
+        caption: 'LED de tamaño micrométrico, de la patente de la Universidad Estatal de Kansas de 2002. Cada uno es un pequeño disco de nitruro de galio sobre una base común. La ampliación da su anchura: de 5 a 20 milésimas de milímetro.',
+        alt: 'Dibujo en perspectiva de cuatro pequeños discos con anillos y una zona de contacto sobre una losa de capas, con un disco ampliado y marcado de 5 a 20 micrómetros de ancho.',
+        year: '2002',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'liquid-crystal': {
+      'patent-1': {
+        caption: 'La celda con torsión, de la patente de James Fergason de 1973. La segunda figura muestra las dos placas de vidrio frotadas en ángulo recto una respecto de la otra. La tercera muestra la celda entre dos polarizadores, atravesada por la luz.',
+        alt: 'Dibujos de líneas: una celda en sección conectada a una batería, dos placas rayadas en direcciones cruzadas, y una celda cuadrada entre dos discos delante de una fuente de luz.',
+        year: '1973',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+    },
+    oled: {
+      'patent-1': {
+        caption: 'Las capas de un dispositivo orgánico emisor de luz, de la patente de Kodak de 1989, de Ching Tang y Steven VanSlyke. Las cargas positivas y negativas entran por los dos electrodos y se encuentran en las finas capas orgánicas que hay entre ellos.',
+        alt: 'Dos esquemas: una losa conectada a una fuente de voltaje, con una fila de signos menos sobre una fila de signos más en su interior, y una pila de cinco capas rayadas.',
+        year: '1989',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'field-emission': {
+      'patent-1': {
+        caption: 'El cátodo de Spindt, de la patente del Stanford Research Institute de 1973. Un sándwich de metal, aislante y metal está perforado con agujeros, y en cada uno se alza un cono afilado.',
+        alt: 'Dibujo en perspectiva de un bloque de capas con seis agujeros redondos y un pequeño cono puntiagudo en cada uno, conectado a una caja rotulada variable potential source. Debajo, un agujero en sección.',
+        year: '1973',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+      'patent-2': {
+        caption: 'Un tubo plano de cátodo frío, de una patente del Ejército de Estados Unidos presentada en 1967. Los emisores de electrones están repartidos sobre tiras de conductor cruzadas. Al dar un pulso a una tira de cada juego, emiten los que están en su cruce.',
+        alt: 'Dibujos de líneas: la esquina cortada de una placa cubierta de puntitos sobre tiras cruzadas, un tubo redondo y plano visto desde arriba con una parte abierta, y su fina sección.',
+        year: '1970',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'retinal-display': {
+      'patent-1': {
+        caption: 'La pantalla retiniana virtual en un diagrama de bloques, de la patente de la Universidad de Washington de 1995. La luz se modula, se barre a lo ancho y a lo alto y se envía al ojo. Es el propio cristalino el que la enfoca en la retina.',
+        alt: 'Diagramas de bloques: cajas rotuladas photon generator, modulator, scanner y projection optics llevan al dibujo de un ojo, con un eye tracker encima. Un segundo diagrama añade circuitos de vídeo.',
+        year: '1995',
+        changes: 'Imagen recortada, enderezada y redimensionada',
+      },
+      'patent-2': {
+        caption: 'Uno de los escáneres de la misma patente. Un espejo curvo sobre un bloque de material piezoeléctrico barre el haz en un sentido, y un segundo espejo, que gira, lo barre en el otro. Entre los dos dibujan una trama.',
+        alt: 'Dibujo en perspectiva: un haz de luz incide en el escalón curvo de un bloque rotulado piezoelectric material, sube hasta un espejo cuadrado inclinado y se abre hacia un marco de trazos rotulado raster.',
+        year: '1995',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'interferometric-modulator': {
+      'patent-1': {
+        caption: 'La celda interferométrica de Mark Miles, de su patente de 1998. Una membrana fina se sostiene sobre postes por encima de la superficie, y un voltaje entre ambas tira de ella hacia abajo. La separación entre las dos fija el color que refleja la celda.',
+        alt: 'Dos dibujos en perspectiva de una tira de membrana sobre dos postes, encima de una base plana, que se hunde entre ellos bajo una placa plana. Los cables llevan los rótulos 0 volts y 7 volts.',
+        year: '1998',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'braille-display': {
+      'patent-1': {
+        caption: 'El mecanismo de una celda braille, de la patente de Oleg y Andree Tretiakoff de 1977. Unas tiras piezoeléctricas finas, una por varilla, se curvan cuando reciben un voltaje y suben y bajan las varillas.',
+        alt: 'Sección de una caja: tres varillas verticales atraviesan una pila de finas tiras horizontales, y por la izquierda entran unos cables en espiral.',
+        year: '1977',
+        changes: 'Imagen recortada y redimensionada',
+      },
+    },
+    'head-mounted': {
+      'patent-1': {
+        caption: 'La máscara de televisión de Morton Heilig, de su patente de 1960. Delante de cada ojo hay un pequeño tubo de televisión y una lente gran angular. La patente da además al usuario auriculares y boquillas que soplan aire.',
+        alt: 'Dibujos de líneas: una cabeza vista de lado con una lente pegada al ojo y un tubo en forma de cono detrás, y una máscara en forma de caja con dos oculares redondos.',
+        year: '1960',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
+      },
+    },
+    stereoscope: {
+      'patent-1': {
+        caption: 'Un visor del sistema Teleview, de la patente de Laurens Hammond de 1924. Un pequeño motor hace girar un obturador delante de los ojos, al mismo paso que el proyector, de modo que cada ojo solo ve las imágenes destinadas a él.',
+        alt: 'Dibujos de líneas: una caja redonda y plana sobre un tallo curvo, con una ventana en su mitad inferior y un disco recortado dentro, y al lado una sección de su motor.',
+        year: '1924',
+        changes: 'Imagen recortada, con las marcas del resto de la hoja borradas, y redimensionada',
       },
     },
   },

@@ -1506,6 +1506,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Größe geändert',
       },
+      'patent-1': {
+        caption: 'Aus Maurice Taylors Patent von 1964 für ein magnetisch betätigtes Schild. In jeder runden Öffnung einer Tafel sitzt eine Scheibe. Der Ausschnitt zeigt eine Scheibe an ihrer Aufhängung, den Magneten, den sie trägt, und die Spule, die sie dreht.',
+        alt: 'Strichzeichnungen: eine Tafel mit Reihen runder Öffnungen, der Ausschnitt einer Scheibe mit einem Magneten neben einer Spule und ein Raster heller und dunkler Punkte.',
+        year: '1964',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
     },
     'mechanical-television': {
       receiver: {
@@ -1519,6 +1525,12 @@ const locale: Locale = {
         alt: 'Beschriftete Strichzeichnung: Bogenlampe, Scheibe und Fotozellen vor einem Kopf im Profil, Funkmasten, dann Neonlampe, Scheibe und Linse vor einem zweiten Kopf.',
         year: '1928',
         changes: 'Größe geändert',
+      },
+      'patent-1': {
+        caption: 'Eine ganze Fernsehkette, aus John Logie Bairds US-Patent von 1929. Eine rotierende Scheibe tastet das Objekt ab, hier ein Kreuz. Eine zweite Scheibe, die im Gleichlauf dreht, baut das Bild mit dem Licht einer Lampe auf einem Schirm wieder auf.',
+        alt: 'Strichzeichnung: Ein Kreuz, eine Linse und eine gelochte Scheibe führen zu zwei Kästen. Darunter führen zwei weitere Kästen zu einer Lampe, einer zweiten Scheibe und einem Schirm, der das Kreuz zeigt.',
+        year: '1929',
+        changes: 'Zugeschnitten, Größe geändert',
       },
     },
     'nixie-tube': {
@@ -1540,6 +1552,12 @@ const locale: Locale = {
         year: '2016',
         changes: 'Größe geändert',
       },
+      'patent-1': {
+        caption: 'Aus einem Burroughs-Patent, das Leo Landrey 1955 anmeldete. Zehn Ziffern stehen als Stapel, mit ringförmigen Anoden dazwischen. In diesem Entwurf sind die Ziffern aus feinem Draht geformt und nicht aus Blech geätzt.',
+        alt: 'Strichzeichnungen einer Glasröhre von der Seite, von oben und im Schnitt: Ziffern von 0 bis 9, zwischen Ringen übereinandergestapelt, und Stifte, die am Sockel austreten.',
+        year: '1959',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
     },
     'cathode-ray-tube': {
       'braun-tube': {
@@ -1560,6 +1578,12 @@ const locale: Locale = {
         year: '2023',
         changes: 'Größe geändert',
       },
+      'patent-1': {
+        caption: 'Die Idee hinter der Farbbildröhre, aus Alfred Schroeders 1947 angemeldetem Patent für RCA. Drei Elektronenkanonen zielen durch eine Lochplatte hinter dem Schirm, sodass jeder Strahl nur die Stellen seiner eigenen Farbe erreicht.',
+        alt: 'Strichzeichnungen: eine Bildröhre mit drei Kanonen im Hals und Spulen ringsum, drei Strahlen, die sich an einer Platte vor einem Schirm kreuzen, und eine mit Farben beschriftete Vergrößerung.',
+        year: '1952',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
     },
     eidophor: {
       prototype: {
@@ -1579,6 +1603,12 @@ const locale: Locale = {
         alt: 'Ein hoher blaugrauer Schrank mit der Aufschrift Eidophor, einem Bedienfeld mit Schaltern und Messgeräten, einem offenen Fach und einem großen schwarzen Objektivtubus in Bodenhöhe.',
         year: '2024',
         changes: 'Größe geändert',
+      },
+      'patent-1': {
+        caption: 'Der Eidophor, aus Fritz Fischers US-Patent von 1945. Ein Elektronenstrahl schreibt auf einen Flüssigkeitsfilm, den ein drehender Teller mitführt, und das Licht einer Lampe geht auf dem Weg zur Leinwand durch diesen Film.',
+        alt: 'Strichzeichnungen: ein Glasgefäß mit zwei schräg angesetzten Elektronenkanonen über einer runden Schale, ein Lichtweg, der durch es hindurch zu einem Spiegel und einer Leinwand aufsteigt, und ein Drehteller.',
+        year: '1945',
+        changes: 'Zugeschnitten, Größe geändert',
       },
     },
     'peppers-ghost': {
@@ -1601,6 +1631,228 @@ const locale: Locale = {
         alt: 'Stich eines Mannes im Profil, der eine geschlitzte Scheibe an einem Griff ans Auge hält. Ein Spiegel vor ihm zeigt die bebilderte Seite der Scheibe und seine Hände.',
         year: '1884',
         changes: 'Größe geändert',
+      },
+    },
+    'swept-volume': {
+      'patent-1': {
+        caption: 'Max Hirschs Generescope, aus seinem Patent von 1961. Eine Bildröhre in der Säule projiziert über Spiegel auf einen Schirm, der sich unter der Kuppel dreht, sodass jeder Lichtpunkt einen Platz in der Tiefe bekommt.',
+        alt: 'Strichzeichnung: Schnitt durch ein Gehäuse mit Kuppel auf einer hohen Säule, die eine Röhre und Linsen enthält, darunter eine Skizze von Strahlen zwischen schrägen Spiegeln.',
+        year: '1961',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+      'patent-2': {
+        caption: 'Das Innere des Perspecta-Displays, aus dem Patent von Actuality Systems von 2003. Das Bild kommt durch die hohle Welle des Motors nach oben, und drei Spiegel lenken es auf den runden Schirm, der sich darüber dreht.',
+        alt: 'Perspektivische Zeichnung: ein runder Schirm, hochkant auf einer senkrechten Achse, ein ringförmiger Motor an seinem Fuß und drei flache Spiegel ringsum, verbunden durch gestrichelte Lichtwege.',
+        year: '2003',
+        changes: 'Zugeschnitten, aufrecht gedreht, Größe geändert',
+      },
+    },
+    'parallax-barrier': {
+      'patent-1': {
+        caption: 'Das Parallaxstereogramm von Frederic Ives, aus seinem Patent von 1903. Eine Kamera mit zwei Öffnungen nimmt beide Ansichten zugleich durch ein Raster feiner Linien auf. Ein gleiches Raster über dem fertigen Bild trennt sie für die beiden Augen wieder.',
+        alt: 'Strichzeichnungen: eine Balgenkamera von oben, Strahlen von einer Kugel und einem Würfel, die sich am Objektiv kreuzen, kleine Schemata von Prismen und eine linierte Platte von vorn und von der Seite.',
+        year: '1903',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, aufrecht gedreht, Größe geändert',
+      },
+    },
+    lenticular: {
+      'patent-1': {
+        caption: 'Die gerippte Betrachtungsfolie von Walter Hess, aus seinem 1912 angemeldeten Patent. Die Rippen sind kleine Zylinderlinsen. Die zweite Figur zeigt, wie eine Rippe Licht aus einer Richtung auf eine einzige Linie des Bildes dahinter lenkt.',
+        alt: 'Strichzeichnungen: eine Platte voller feiner senkrechter Rippen und eine vergrößerte Kantenansicht zweier Rippen, durch deren eine Strahlen auf einen Punkt der flachen Rückseite zusammenlaufen.',
+        year: '1915',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    holography: {
+      'patent-1': {
+        caption: 'Aus Dennis Gabors US-Patent von 1949. Licht aus einer punktförmigen Quelle läuft an einem kleinen Objekt vorbei und trifft auf eine Fotoplatte. Dort begegnen sich das direkte und das gestreute Licht und hinterlassen ein Muster aus Ringen.',
+        alt: 'Strichzeichnungen: Strahlen, die von einem Punkt S ausgehen, an einem Punkt O vorbeilaufen und eine aufrechte Platte erreichen, daneben eine quadratische Platte mit konzentrischen Ringen.',
+        year: '1949',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+      'patent-2': {
+        caption: 'Wie ein Hologramm entsteht und betrachtet wird, aus dem Patent, das Emmett Leith und Juris Upatnieks 1964 anmeldeten. Ein Prisma lenkt einen Teil des Strahls als Referenz ab. Wird die Platte erneut beleuchtet, liefert sie ein reelles und ein virtuelles Bild.',
+        alt: 'Zwei beschriftete Schemata: eine Lichtquelle, ein Objekt und ein Prisma vor einer Aufnahmeplatte, dann die von einem Strahl beleuchtete Platte mit je einem Bild auf jeder Seite.',
+        year: '1970',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'storage-tube': {
+      'patent-1': {
+        caption: 'Die Speicherröhre, aus Robert Andersons Patent von 1966 für Tektronix. Die zweite Ansicht ist aufgeschnitten und zeigt das Innere. Das Patent selbst betrifft die dünne Schicht auf der Schirmfläche, die das Bild festhält.',
+        alt: 'Zwei Strichzeichnungen einer langen Glasröhre, die sich zu einer rechteckigen Schirmfläche weitet, mit Stiften am schmalen Ende. In der unteren ist die Wand teilweise aufgeschnitten.',
+        year: '1966',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    gyricon: {
+      'patent-1': {
+        caption: 'Nicholas Sheridons Display mit drehbaren Kügelchen, aus seinem Patent von 1978. Eine Folie voller Kügelchen liegt zwischen zwei Elektrodenplatten. Die Vergrößerung zeigt zwei Kügelchen, jedes zur Hälfte dunkel, frei drehbar in ihrem eigenen Hohlraum.',
+        alt: 'Strichzeichnungen: ein auseinandergezogener Stapel von Platten, ein Schnitt mit einer Reihe Kügelchen zwischen zwei Platten und eine Vergrößerung zweier halb schattierter Kügelchen in runden Hohlräumen.',
+        year: '1978',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'plasma-panel': {
+      'patent-1': {
+        caption: 'Der Plasmabildschirm in auseinandergezogener Darstellung, aus dem 1966 angemeldeten Patent von Donald Bitzer, Gene Slottow und Robert Willson. Eine gelochte Glasplatte liegt zwischen zwei äußeren Platten, die gekreuzte Reihen von Leitern tragen.',
+        alt: 'Strichzeichnungen: drei auseinandergezogene Platten, die mittlere voller runder Löcher, die beiden äußeren rechtwinklig zueinander liniert, und ein Schnitt durch vier Zellen.',
+        year: '1971',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+    },
+    electrochromic: {
+      'patent-1': {
+        caption: 'Eine elektrochrome Zelle aus Schichten, aus dem Patent von Satyendra Deb und Robert Shaw von 1970. Dünne Schichten liegen zwischen zwei Elektroden auf Glas. Ein Schalter schickt den Strom in der einen Richtung, um die Zelle zu färben, und in der anderen, um sie zu bleichen.',
+        alt: 'Zwei Strichzeichnungen einer flachen, geschichteten Platte, die an eine Batterie angeschlossen ist. In der unteren trägt ein Schalter die Aufschriften color und bleach.',
+        year: '1970',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+    },
+    'electrophoretic-ink': {
+      'patent-1': {
+        caption: 'Eine Kapsel elektronischer Tinte zwischen ihren beiden Elektroden, aus dem Patent von Joseph Jacobson, Barrett Comiskey und Jonathan Albert von 1999. Helle und dunkle Teilchen schweben in einer klaren Flüssigkeit. In der zweiten Figur tragen sie entgegengesetzte Ladungen.',
+        alt: 'Zwei Schemata eines Kreises zwischen zwei Balken. In jedem Kreis sammeln sich oben weiße und unten schwarze Punkte, in einem davon mit Plus- und Minuszeichen.',
+        year: '1999',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    electrowetting: {
+      'patent-1': {
+        caption: 'Eine Elektrobenetzungszelle im Schnitt, aus dem 2003 angemeldeten Patent von Bokke Feenstra, Robert Hayes und Menno Prins. Ohne Spannung bedeckt eine Schicht gefärbtes Öl den Boden der Zelle. Mit Spannung zerfällt sie in Tropfen.',
+        alt: 'Zwei Schnitte durch gestapelte Schichten. Im oberen läuft eine dünne gepunktete Schicht durchgehend hindurch. Im unteren hat sie sich zu vier Buckeln zusammengezogen, daneben eine Batterie.',
+        year: '2008',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'cholesteric-lcd': {
+      'patent-1': {
+        caption: 'Die beiden stabilen Zustände einer cholesterischen Zelle, aus einem Patent der Kent State University von 2000. In der planaren Textur reflektieren die Flüssigkristalltröpfchen farbiges Licht. In der fokal-konischen Textur geht das Licht hindurch und wird nach vorn gestreut.',
+        alt: 'Zwei Schnitte durch eine Zelle mit drei ovalen Tröpfchen, beschriftet mit planar texture und focal conic texture. Pfeile zeigen Licht, das im ersten zurückgeworfen wird und im zweiten hindurchgeht.',
+        year: '2000',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'fog-screen': {
+      'patent-1': {
+        caption: 'Das Prinzip der Nebelleinwand, aus dem Patent von Karri Palovuori und Ismo Rakkolainen von 2004. Eine dünne, ebene Nebelschicht wird in einem Luftstrom mitgeführt, und ein Projektor wirft sein Bild darauf.',
+        alt: 'Perspektivische Strichzeichnung: eine ebene gepunktete Schicht zwischen zwei Kästen, in einem nur umrissenen Block, darüber eine kleine Lampe, die Strahlen auf sie richtet.',
+        year: '2004',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'static-volume': {
+      'patent-1': {
+        caption: 'Ein einzelner Lichtpunkt in einem Glasblock, aus Elizabeth Downings Patent von 1997. Das Glas leuchtet nur dort, wo sich die beiden Infrarot-Laserstrahlen kreuzen.',
+        alt: 'Strichzeichnung eines Würfels mit der Aufschrift 3D display image volume. Zwei Linien, mit laser 1 und laser 2 bezeichnet, treten von unten ein und kreuzen sich in einem kleinen Stern im Inneren.',
+        year: '1997',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+      'patent-2': {
+        caption: 'Wie ein Stapel schaltbarer Schirme ein Bild in der Tiefe aufbaut, aus Alan Sullivans Patent von 2000. Der Projektor zeigt jeweils eine Scheibe des Bildes, und nur der Schirm, der sie auffangen soll, wird trüb geschaltet.',
+        alt: 'Vier kleine Schemata eines Projektors vor vier aufrechten Scheiben. In jedem trägt eine andere Scheibe einen Teil eines Bildes, darunter ein Berg und ein Auto.',
+        year: '2000',
+        changes: 'Zugeschnitten, aufrecht gedreht, Größe geändert',
+      },
+    },
+    micromirror: {
+      'patent-1': {
+        caption: 'Ein früher Mikrospiegel, aus Larry Hornbecks Patent von 1987. Das Pixel ist eine quadratische Klappe, die ein Gelenk an einer Ecke über einer flachen Mulde hält. Eine Spannung darunter zieht die Klappe nach unten.',
+        alt: 'Drei Strichzeichnungen einer quadratischen Platte mit vier kleinen Löchern, an einer Ecke mit ihrem Rahmen verbunden: perspektivisch über einer Vertiefung, im Schnitt und von oben.',
+        year: '1987',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    lcos: {
+      'patent-1': {
+        caption: 'Das Flüssigkristall-Lichtventil von Hughes im Schnitt, aus einem Patent von 1974. Auf der einen Seite trifft ein Bild ein, auf der anderen wird das Projektionslicht reflektiert. Die Flüssigkristallschicht dazwischen überträgt das Bild auf dieses Licht.',
+        alt: 'Schnitt durch einen dicken Stapel schraffierter Schichten um eine mittlere Flüssigkeitsschicht. Von rechts weisen Pfeile hinein, links stehen Doppelpfeile.',
+        year: '1974',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    microled: {
+      'patent-1': {
+        caption: 'LEDs in Mikrometergröße, aus dem Patent der Kansas State University von 2002. Jede ist ein kleines Scheibchen aus Galliumnitrid auf einem gemeinsamen Träger. Die Vergrößerung nennt die Breite: 5 bis 20\u00a0tausendstel Millimeter.',
+        alt: 'Perspektivische Zeichnung von vier kleinen beringten Scheibchen und einer Kontaktfläche auf einer geschichteten Platte, ein Scheibchen vergrößert und mit 5 bis 20\u00a0Mikrometern Breite bemaßt.',
+        year: '2002',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'liquid-crystal': {
+      'patent-1': {
+        caption: 'Die verdrillte Zelle, aus James Fergasons Patent von 1973. Die zweite Figur zeigt die beiden Glasplatten, im rechten Winkel zueinander gerieben. Die dritte zeigt die Zelle zwischen zwei Polarisatoren, vom Licht durchlaufen.',
+        alt: 'Strichzeichnungen: eine Zelle im Schnitt, an eine Batterie angeschlossen, zwei Platten mit gekreuzter Linierung und eine quadratische Zelle zwischen zwei Scheiben vor einer Lichtquelle.',
+        year: '1973',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+    },
+    oled: {
+      'patent-1': {
+        caption: 'Die Schichten eines organischen Leuchtbauelements, aus dem Kodak-Patent von 1989 von Ching Tang und Steven VanSlyke. Positive und negative Ladungen treten an den beiden Elektroden ein und treffen sich in den dünnen organischen Schichten dazwischen.',
+        alt: 'Zwei Schemata: eine an eine Spannungsquelle angeschlossene Platte, in der eine Reihe Minuszeichen über einer Reihe Pluszeichen steht, und ein Stapel aus fünf schraffierten Schichten.',
+        year: '1989',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'field-emission': {
+      'patent-1': {
+        caption: 'Die Spindt-Kathode, aus dem Patent des Stanford Research Institute von 1973. Ein Stapel aus Metall, Isolator und Metall ist mit Löchern durchsetzt, und in jedem steht ein spitzer Kegel.',
+        alt: 'Perspektivische Zeichnung eines geschichteten Blocks mit sechs runden Löchern, in jedem ein kleiner spitzer Kegel, angeschlossen an einen Kasten mit der Aufschrift variable potential source. Darunter ein Loch im Schnitt.',
+        year: '1973',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+      'patent-2': {
+        caption: 'Eine flache Röhre mit kalter Kathode, aus einem 1967 angemeldeten Patent der US-Armee. Elektronenemitter sind über gekreuzte Leiterstreifen verteilt. Ein Impuls auf je einen Streifen beider Sätze lässt die Emitter an deren Kreuzung feuern.',
+        alt: 'Strichzeichnungen: die aufgeschnittene Ecke einer Platte voller feiner Punkte über gekreuzten Streifen, eine runde flache Röhre von oben, teilweise aufgebrochen, und ihr dünner Schnitt.',
+        year: '1970',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'retinal-display': {
+      'patent-1': {
+        caption: 'Die virtuelle Netzhautanzeige als Blockschaltbild, aus dem Patent der University of Washington von 1995. Licht wird moduliert, waagerecht und senkrecht abgelenkt und ins Auge geschickt. Die Linse des Auges selbst stellt es auf der Netzhaut scharf.',
+        alt: 'Blockschaltbilder: Kästen mit den Aufschriften photon generator, modulator, scanner und projection optics führen zur Zeichnung eines Auges, darüber ein eye tracker. Ein zweites Schaltbild ergänzt Videoschaltungen.',
+        year: '1995',
+        changes: 'Zugeschnitten, aufrecht gedreht, Größe geändert',
+      },
+      'patent-2': {
+        caption: 'Einer der Scanner aus demselben Patent. Ein gewölbter Spiegel auf einem Block aus piezoelektrischem Material lenkt den Strahl in der einen Richtung ab, ein zweiter, schwenkender Spiegel in der anderen. Gemeinsam zeichnen sie ein Raster.',
+        alt: 'Perspektivische Zeichnung: Ein Lichtstrahl trifft die gewölbte Stufe eines Blocks mit der Aufschrift piezoelectric material, steigt zu einem schrägen quadratischen Spiegel auf und fächert sich zu einem gestrichelten Rahmen mit der Aufschrift raster auf.',
+        year: '1995',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'interferometric-modulator': {
+      'patent-1': {
+        caption: 'Mark Miles’ interferometrische Zelle, aus seinem Patent von 1998. Eine dünne Membran ruht auf Stützen über der Fläche darunter, und eine Spannung zwischen beiden zieht sie nach unten. Der Abstand zwischen ihnen legt die Farbe fest, die die Zelle reflektiert.',
+        alt: 'Zwei perspektivische Zeichnungen eines Membranstreifens auf zwei Stützen über einem flachen Sockel, der sich zwischen ihnen unter einer ebenen Platte absenkt. Drähte tragen die Aufschriften 0 volts und 7 volts.',
+        year: '1998',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'braille-display': {
+      'patent-1': {
+        caption: 'Das Werk einer Braillezelle, aus dem Patent von Oleg und Andree Tretiakoff von 1977. Dünne Piezostreifen, einer je Stift, biegen sich unter Spannung und bewegen die Stifte auf und ab.',
+        alt: 'Schnitt durch ein Gehäuse: Drei senkrechte Stäbe führen durch einen Stapel dünner waagerechter Streifen, von links treten gewendelte Drähte ein.',
+        year: '1977',
+        changes: 'Zugeschnitten, Größe geändert',
+      },
+    },
+    'head-mounted': {
+      'patent-1': {
+        caption: 'Morton Heiligs Fernsehmaske, aus seinem Patent von 1960. Vor jedem Auge sitzen eine kleine Fernsehröhre und eine Weitwinkellinse. Das Patent gibt dem Träger außerdem Kopfhörer und Düsen, die Luft ausblasen.',
+        alt: 'Strichzeichnungen: ein Kopf von der Seite mit einer Linse dicht am Auge und einer kegelförmigen Röhre dahinter, und eine kastenförmige Maske mit zwei runden Okularen.',
+        year: '1960',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
+      },
+    },
+    stereoscope: {
+      'patent-1': {
+        caption: 'Ein Betrachter für das Teleview-System, aus Laurens Hammonds Patent von 1924. Ein kleiner Motor dreht eine Blende vor den Augen, im Gleichlauf mit dem Projektor, sodass jedes Auge nur die Bilder sieht, die für es bestimmt sind.',
+        alt: 'Strichzeichnungen: ein rundes flaches Gehäuse an einem gebogenen Stiel, mit einem Fenster in der unteren Hälfte und einer ausgeschnittenen Scheibe darin, daneben ein Schnitt durch seinen Motor.',
+        year: '1924',
+        changes: 'Zugeschnitten, Spuren vom Rest des Blatts entfernt, Größe geändert',
       },
     },
   },
