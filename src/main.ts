@@ -71,9 +71,11 @@ const afterPicture = (img: HTMLImageElement, fn: () => void) => {
   img.addEventListener('error', fn, { once: true });
 };
 /** Whether this device can put a model in the visitor's own room: an iPhone or iPad through Quick Look, others through WebXR. */
+const ROOM_VIEW_BUILT = false; // until src/three/ar.ts does the work, the button stays out of sight
 let roomReady: Promise<boolean> | undefined;
 function canShowInRoom(): Promise<boolean> {
   roomReady ??= (async () => {
+    if (!ROOM_VIEW_BUILT) return false;
     if (document.createElement('a').relList.supports('ar')) return true;
     const xr = (navigator as Navigator & { xr?: { isSessionSupported(mode: string): Promise<boolean> } }).xr;
     try { return !!xr && (await xr.isSessionSupported('immersive-ar')); } catch { return false; }
