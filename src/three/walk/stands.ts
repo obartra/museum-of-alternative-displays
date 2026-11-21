@@ -501,7 +501,11 @@ export class Stands {
       // what is not shown is not in the way, and neither is a glow, which is only light
       for (let o: THREE.Object3D | null = h.object; o; o = o.parent) if (!o.visible) return false;
       const of = (h.object as THREE.Mesh).material, mat = Array.isArray(of) ? of[0] : of;
-      return !mat || (mat.blending === THREE.NormalBlending && mat.opacity > 0.05);
+      if (!mat) return true;
+      // nor is the scene inside a piece, which is drawn only where one of its openings lets it be seen: the sky
+      // inside the headset is sixty metres across and would otherwise be in the way of the whole wall
+      if (!mat.colorWrite || (mat.stencilWrite && mat.stencilFunc === THREE.EqualStencilFunc)) return false;
+      return mat.blending === THREE.NormalBlending && mat.opacity > 0.05;
     });
   }
   /** How many models are on their blocks now, and how many pictures stand in for the rest. */

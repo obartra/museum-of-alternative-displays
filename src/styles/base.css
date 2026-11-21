@@ -228,6 +228,7 @@ h1, h2, h3 { text-wrap: balance; }
 .person__pic { margin: 0; width: 84px; }
 .person__pic img { display: block; width: 84px; height: 105px; object-fit: cover; object-position: 50% 22%; filter: grayscale(1) contrast(1.06); border: 1px solid var(--ink); }
 .person__pic figcaption { font-size: .68rem; line-height: 1.25; margin-top: 3px; overflow-wrap: anywhere; }
+.person__name { display: block; font-weight: 700; font-size: .74rem; margin-bottom: 1px; }
 .people__note { color: var(--ink-2); }
 .who { max-width: var(--measure); break-inside: avoid; }
 .who__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 0 44px; align-items: start; }

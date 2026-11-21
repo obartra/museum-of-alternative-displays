@@ -239,14 +239,18 @@ function hallView(n: number): void {
 }
 
 // ---------- people ----------
-/** A portrait, where one has been added by hand, with the credit that its licence asks for. */
-const portraitHtml = (name: string): string => {
+/**
+ * A portrait, where one has been added by hand, with the credit that its licence asks for. `named` puts the
+ * sitter's name under it: a line that credits several people needs it, or a picture could be taken for the
+ * wrong one of them.
+ */
+const portraitHtml = (name: string, named = false): string => {
   const pic = portraits[name];
-  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption><a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a></figcaption></figure>` : '';
+  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a></figcaption></figure>` : '';
 };
 /** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
 const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {
-  const pics = e.who.map(portraitHtml).join('');
+  const pics = e.who.map((n) => portraitHtml(n, e.who.length > 1)).join('');
   return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${esc(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
 };
 let peopleOnly: '' | 'women' = '';
