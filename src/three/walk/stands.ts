@@ -24,7 +24,7 @@ export const VIEWS = [0, 72, -72].map((deg) => (deg * Math.PI) / 180);
 /** Between which angles one picture gives way to the next. */
 const TURNING = [(30 * Math.PI) / 180, (42 * Math.PI) / 180];
 /** How the small pictures of every piece are laid out in the one sheet used for those far away: once for each side, one set under another. */
-export const SHEET = { cols: 5, rows: 10 };
+export const SHEET = { cols: 5, rows: Math.ceil(places.length / 5) };
 /**
  * Where the pictures are kept: one file a piece for day and for night, and the sheet of small ones.
  * In a piece's own file the three sides are one under another. Every picture is twice as wide as it is: colour, then cover.

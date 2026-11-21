@@ -1,5 +1,5 @@
 import { G, M, NOISE, Swarm, beam, glows, halo, mirror, opening, portal, screen, voxels, THREE, type Built, type V3 } from '../kit';
-import { breadboard, feet, lens, post, screws, vents } from '../parts';
+import { breadboard, feet, jewel, lens, post, screws, tripod, vents } from '../parts';
 import { bigTime, dotMatrix, now } from '../../sims/draw';
 
 /** A draped figure one unit tall with its feet at the origin, facing +z. A single mesh, so that it can be mirrored whole. */
@@ -427,6 +427,87 @@ export function laserPlasma(): Built {
       p.set(pts[hot][0] - 0.48, pts[hot][1], pts[hot][2]).applyMatrix4(spin);
       flash.position.set(p.x + 0.48, p.y, p.z);
       c1.aim([0.32, 0.66, 0], [p.x + 0.48, p.y, p.z]); c2.aim([0.64, 0.66, 0], [p.x + 0.48, p.y, p.z]);
+    },
+  };
+}
+
+/**
+ * A light bulb one unit tall, the tip of its cap at the origin and the glass above. With `image` set it is the
+ * picture of a bulb, made of light alone. `set` takes how bright it burns, from 0 to 1.
+ */
+function lampBulb(image = false): { bulb: THREE.Group; set: (on: number) => void } {
+  const air = new THREE.MeshBasicMaterial({ color: 0xffe2ae, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+  const flame = new THREE.MeshBasicMaterial({ color: 0xfff0c8, transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false });
+  const hot = M.glow(0xffd28a, 2.6);
+  const glass = G.lathe([[0.14, 0.3], [0.17, 0.38], [0.3, 0.54], [0.36, 0.7], [0.33, 0.84], [0.2, 0.96], [0.001, 1]], image ? air : M.bulb(0xd6dedc, 0.62), 40, true);
+  const cap = G.cyl(0.14, 0.3, image ? air : M.brass(1), [0, 0.15, 0], 24);
+  const filament = G.sph(0.075, image ? flame : hot, [0, 0.68, 0], 14);
+  const shine = halo(0xffc878, 0.95, [0, 0.68, 0], 0.8);
+  return {
+    bulb: G.group(glass, cap, filament, shine),
+    set: (on) => {
+      hot.emissiveIntensity = 0.12 + 2.5 * on; air.opacity = 0.1 + 0.42 * on; flame.opacity = 0.08 + 0.87 * on;
+      shine.material.opacity = (image ? 0.7 : 0.85) * on;
+    },
+  };
+}
+
+/**
+ * Valerie Thomas's illusion transmitter. On the left a concave mirror stands a picture of a hidden bulb in an empty
+ * socket, and a camera watches it. On the right a projector, hidden in the same way, is aimed at a second mirror,
+ * and the picture hangs in the air with nothing behind it.
+ */
+export function illusionTransmitter(): Built {
+  const root = G.group();
+  const black = M.black(), dark = M.dark(), oak = M.wood(0x7a5632), walnut = M.wood(0x3a2a1c);
+  // AX: the height of each mirror's axis. C: where its centre of curvature lies. FACE: the middle of the mirror. S: the size of the bulb.
+  const AX = 0.76, C = 0.24, FACE = -0.46, S = 0.36, LEFT = -0.8, RIGHT = 0.8;
+  root.add(G.rbox(3.0, 0.06, 2.6, 0.02, walnut, [0, 0.03, 0.42]));
+  for (const cx of [LEFT, RIGHT]) {
+    root.add(
+      G.box(1.08, 0.04, 1.08, dark, [cx, 0.08, 0], 0), G.box(1.08, 1.36, 0.04, black, [cx, 0.74, -0.54], 0),
+      G.box(0.04, 1.36, 1.08, black, [cx - 0.54, 0.74, 0], 0), G.box(0.04, 1.36, 1.08, black, [cx + 0.54, 0.74, 0], 0),
+      G.box(1.12, 0.04, 1.12, oak, [cx, 1.44, 0]),
+      // the front wall hides whatever stands below the axis: the real bulb on one side, the projector on the other
+      G.box(1.12, AX - 0.1, 0.04, oak, [cx, 0.06 + (AX - 0.1) / 2, 0.54]),
+      G.dish(0.44, -0.13, M.chrome(), [cx, AX, FACE + 0.13]), G.torus(0.45, 0.02, M.brass(), [cx, AX, FACE + 0.13]),
+    );
+  }
+  // the sender: one block of porcelain with a socket on each face. The lower one holds the bulb, the upper one is empty
+  root.add(G.cyl(0.075, 0.07, M.ceramic(), [LEFT, AX, C], 24), G.box(0.5, 0.025, 0.05, dark, [LEFT - 0.29, AX, C], 0));
+  const real = lampBulb(), seen = lampBulb(true), sent = lampBulb(true);
+  real.bulb.scale.setScalar(S); real.bulb.rotation.z = Math.PI; real.bulb.position.set(LEFT, AX - 0.03, C);
+  seen.bulb.scale.setScalar(S); seen.bulb.position.set(LEFT, AX + 0.03, C);
+  sent.bulb.scale.setScalar(S); sent.bulb.position.set(RIGHT, AX + 0.03, C);
+  root.add(real.bulb, seen.bulb, sent.bulb);
+  // the camera that looks at the picture, and the cable that carries what it sees
+  const CAM: V3 = [LEFT, AX + 0.22, 1.42];
+  root.add(tripod([CAM[0], CAM[1] - 0.1, CAM[2]], 0.34, 0.06), G.rbox(0.2, 0.17, 0.34, 0.02, dark, CAM));
+  root.add(G.cyl(0.06, 0.12, M.dark(1), [CAM[0], CAM[1], CAM[2] - 0.22], 28).rotateX(Math.PI / 2), G.cyl(0.048, 0.01, M.glass(0x9fb1ff, 0.5), [CAM[0], CAM[1], CAM[2] - 0.285], 28).rotateX(Math.PI / 2));
+  root.add(jewel(0xff3020, 0.014, [CAM[0] + 0.06, CAM[1] + 0.045, CAM[2] + 0.171]));
+  root.add(G.wire([[CAM[0] - 0.05, CAM[1] - 0.05, CAM[2] + 0.17], [CAM[0] - 0.02, 0.5, CAM[2] + 0.3], [LEFT + 0.3, 0.075, CAM[2] + 0.2], [0, 0.075, 1.0], [RIGHT - 0.2, 0.075, 0.75], [RIGHT, 0.2, 0.58]], 0.013, M.rubber()));
+  // the receiver: a projector below the axis, aimed up at the mirror
+  const beamer = G.group(G.rbox(0.3, 0.15, 0.36, 0.02, M.plastic(0x2a2d30, 0.4), [0, 0, 0]), G.cyl(0.055, 0.1, M.dark(1), [0, 0.01, -0.21], 24).rotateX(Math.PI / 2));
+  const eye = M.glow(0xfff0c8, 2);
+  beamer.add(G.cyl(0.044, 0.01, eye, [0, 0.01, -0.262], 24).rotateX(Math.PI / 2), vents(0.2, 0.06, 6, [0, 0.076, 0.05]));
+  beamer.position.set(RIGHT, 0.36, C + 0.06); beamer.rotation.x = 0.42;
+  root.add(beamer);
+  // the path of the light: from the bulb or the projector to the mirror, and back to the place where the picture stands
+  const rays: { line: THREE.Line; aim: (a: V3, b: V3) => void; side: number }[] = [];
+  for (const [cx, from] of [[LEFT, AX - 0.03 - 0.68 * S], [RIGHT, 0.44]] as [number, number][]) for (const dy of [0.17, -0.12]) {
+    const hit: V3 = [cx, AX + dy, FACE + 0.02], a = beam(0xffd9a0, 0.3), b = beam(0xffd9a0, 0.3);
+    a.aim([cx, from, C], hit); b.aim(hit, [cx, AX + 0.03 + 0.68 * S, C]);
+    rays.push({ ...a, side: cx }, { ...b, side: cx }); root.add(a.line, b.line);
+  }
+  // the bulb burns, fades and comes back. What the far side shows is the same, a moment late
+  const burn = (t: number) => { const u = ((t % 9) + 9) % 9; return u < 6 ? 1 : u < 6.6 ? 1 - (u - 6) / 0.6 : u < 8.4 ? 0 : (u - 8.4) / 0.6; };
+  return {
+    root, inDark: 'better', glow: 0xffd9a0, view: [22, 13],
+    update: ({ t, lights }) => {
+      const here = burn(t), there = burn(t - 0.4), flick = 1 - 0.04 * Math.sin(t * 37);
+      real.set(here); seen.set(here * (1 - 0.3 * lights)); sent.set(there * flick * (1 - 0.3 * lights));
+      eye.emissiveIntensity = 0.2 + 2.2 * there;
+      for (const r of rays) (r.line.material as THREE.LineBasicMaterial).opacity = 0.3 * (r.side === LEFT ? here : there);
     },
   };
 }

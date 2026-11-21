@@ -146,6 +146,10 @@ export const people: Record<string, Credit> = {
       { who: ['John Henry Pepper'], did: 'Staged it at the Royal Polytechnic Institution in London in 1862, and it took his name.' },
     ],
   },
+  'illusion-transmitter': {
+    people: [{ who: ['Valerie Thomas'], she: ['Valerie Thomas'], did: 'Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there.' }],
+    sources: [src('press', 'Valerie Thomas, Biography.com', 'https://www.biography.com/scientists/valerie-thomas')],
+  },
   'fog-screen': {
     people: [{ who: ['Karri Palovuori', 'Ismo Rakkolainen'], did: 'Developed the fog screen that people can walk through, at Tampere University of Technology in 2002.' }],
     note: 'Projection onto fountains and curtains of water is older. A patent for an ornamental fountain screen dates from 1899.',

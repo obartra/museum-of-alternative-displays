@@ -45,6 +45,7 @@ export const builders: Record<string, () => Built> = {
   'electrochromic': h5.electrochromic,
   'peppers-ghost': h6.peppersGhost,
   'fog-screen': h6.fogScreen,
+  'illusion-transmitter': h6.illusionTransmitter,
   'persistence-of-vision': h6.pov,
   'swept-volume': h6.sweptVolume,
   'static-volume': h6.staticVolume,

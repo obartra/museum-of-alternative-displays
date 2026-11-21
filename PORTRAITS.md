@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 99 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
+The labels name 100 people. Each one has a place for a portrait, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture.
 
 ## Adding a portrait
 
@@ -121,6 +121,7 @@ Take the picture from the person's own article or file page, where the caption s
 |---|---|---|---|
 | Henry Dircks | Pepper's ghost | Engineer who devised the illusion. | `public/people/henry-dircks.jpg` |
 | John Henry Pepper | Pepper's ghost | Staged it at the Royal Polytechnic Institution in London in 1862, and it took his name. | `public/people/john-henry-pepper.jpg` |
+| Valerie Thomas | Illusion transmitter | Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there. | `public/people/valerie-thomas.jpg` |
 | Karri Palovuori | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. | `public/people/karri-palovuori.jpg` |
 | Ismo Rakkolainen | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. | `public/people/ismo-rakkolainen.jpg` |
 | Joseph Plateau | Persistence of vision display | Used the effect in his spinning picture discs of 1832. | `public/people/joseph-plateau.jpg` |

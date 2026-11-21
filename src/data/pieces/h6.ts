@@ -18,6 +18,21 @@ export const h6: Piece[] = [
     sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/archive-blog/ghosts-and-pantos-at-the-rpi/'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
   },
   {
+    id: 'illusion-transmitter', hall: 6, name: 'Illusion transmitter', aka: 'Real-image mirror display',
+    year: 1980, origin: 'Valerie Thomas, NASA Goddard Space Flight Center, USA. Patent granted on 21 October 1980',
+    status: 'niche', statusNote: 'The optics society SPIE reports that it is still in use at NASA, and that it has been applied in television and in imaging for surgery.',
+    principle: 'directs', needs: ['depth', 'midair'],
+    lead: 'A curved mirror stands a picture of an object in the air in front of it, and a camera and a second mirror make the picture appear again somewhere else.',
+    how: [
+      'A flat mirror shows a picture that seems to lie behind the glass. A concave mirror, curved like the inside of a bowl, can do the opposite. It sends the light from an object back to a point in front of itself. There the light forms a real image: a picture that hangs in the air, with depth, where a hand can pass through it.',
+      'At an exhibition in 1976, Thomas saw such a mirror make a light bulb seem to glow after it had been taken out of its socket. She asked whether the picture could be sent. In her system a video camera looks at the first mirror. Its signal goes to a projector at the far end, which is aimed at a second concave mirror, and that mirror stands the picture in the air again.',
+    ],
+    good: ['Shows depth without glasses', 'Puts the picture in front of the apparatus, not behind glass', 'Needs only mirrors, a camera and a projector'],
+    bad: ['Can be seen only from inside the cone of light that leaves the mirror', 'The picture cannot be larger than the mirror behind it', 'Any flaw or tilt in the mirror bends the picture'],
+    look: 'On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later. Then switch the daylight off.',
+    sources: [src('patent', 'Thomas, US patent 4,229,761', 'https://patents.google.com/patent/US4229761'), src('archive', 'Valerie Thomas, Lemelson-MIT', 'https://lemelson.mit.edu/resources/valerie-thomas'), src('press', 'Valerie Thomas and Landsat, SPIE Photonics Focus (2022)', 'https://www.spie.org/news/photonics-focus/marapr-2022/valerie-thomas-and-landsat'), wiki('Illusion_transmitter', 'Illusion transmitter')],
+  },
+  {
     id: 'fog-screen', hall: 6, name: 'Fog screen', aka: 'Walk-through screen',
     year: 2002, origin: 'Karri Palovuori and Ismo Rakkolainen, Tampere University of Technology, Finland',
     status: 'niche', statusNote: 'Rented for product launches, exhibitions and stage entrances.',

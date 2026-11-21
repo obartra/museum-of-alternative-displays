@@ -59,6 +59,10 @@ export const factsB: Record<string, Fact> = {
     text: 'Pepper wrote that even Michael Faraday, taken behind the scenes, said he did not understand how the ghost was made. Pepper put Faraday\'s hand on one of the huge glass plates, and only then did Faraday say he understood.',
     source: { label: 'J. H. Pepper, The True History of the Ghost', url: 'https://archive.org/details/truehistoryofgho00pepp', kind: 'archive' },
   },
+  'illusion-transmitter': {
+    text: 'When she invented it, Thomas was managing the image-processing systems for Landsat, the first satellite to send multi-spectral pictures of the Earth\'s resources from space. She had joined NASA as a data analyst.',
+    source: { label: 'Valerie Thomas, Lemelson-MIT', url: 'https://lemelson.mit.edu/resources/valerie-thomas', kind: 'archive' },
+  },
   'fog-screen': {
     text: 'Its developers report that the first thing most people do on seeing one is put their hands into it. The fog feels like slightly cool air, and the picture forms again behind anyone who walks through.',
     source: { label: 'DiVerdi, Olwal, Rakkolainen and Höllerer, An Immaterial Pseudo-3D Display with 3D Interaction (2008)', url: 'https://www.olwal.com/projects/research/immaterial/diverdi_immaterial_3dtv_book_chapter_2008.pdf', kind: 'paper' },

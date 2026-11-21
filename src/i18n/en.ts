@@ -6,7 +6,7 @@
 export const en = {
   'site.name': 'Museum of Alternative Displays',
   'site.skip': 'Skip to content',
-  'site.description': 'A museum of 50 display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.',
+  'site.description': 'A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.',
   'title.page': '{page} | {site}',
   'nav.halls': 'Halls',
   'nav.hall': 'Hall {n}, {name}',

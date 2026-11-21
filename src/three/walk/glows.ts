@@ -23,6 +23,7 @@ export const glows: Record<string, number> = {
   'eidophor': 0xdde8ff,
   'scanned-laser': 0x40ff70,
   'projection-mapping': 0x6a5f55,
+  'illusion-transmitter': 0xffd9a0,
   'fog-screen': 0xcfe8ff,
   'persistence-of-vision': 0x7fd0ff,
   'swept-volume': 0x8fd0ff,

@@ -123,7 +123,7 @@ function shell(inner: string, hall?: number, current?: string): void {
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
-  document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description'));
+  document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description', { n: pieces.length }));
 }
 
 const chip = (s: Status) => `<span class="chip chip--${s}">${esc(said.status(s))}</span>`;
