@@ -3,73 +3,73 @@
   "en": {
    "start": {
     "file": "00-start.mp3",
-    "mark": "175c7f88",
+    "mark": "d6ab8c11",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "braille-display": {
     "file": "01-braille-display.mp3",
-    "mark": "869b4e3e",
+    "mark": "4fb0880b",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "cathode-ray-tube": {
     "file": "02-cathode-ray-tube.mp3",
-    "mark": "5750b002",
+    "mark": "79ab8be6",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "microled": {
     "file": "03-microled.mp3",
-    "mark": "bbe0ff54",
+    "mark": "0ad8497c",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "quantum-dot": {
     "file": "04-quantum-dot.mp3",
-    "mark": "40321bcd",
+    "mark": "1c39b76f",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "scanned-laser": {
     "file": "05-scanned-laser.mp3",
-    "mark": "3c1d8c09",
+    "mark": "80546194",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "projection-mapping": {
     "file": "06-projection-mapping.mp3",
-    "mark": "bb8c2f71",
+    "mark": "0d2d4e1c",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "electrowetting": {
     "file": "07-electrowetting.mp3",
-    "mark": "8eac1477",
+    "mark": "3fff2362",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "illusion-transmitter": {
     "file": "08-illusion-transmitter.mp3",
-    "mark": "91ab078e",
+    "mark": "fa2b10c4",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "static-volume": {
     "file": "09-static-volume.mp3",
-    "mark": "07cde5a2",
+    "mark": "b4f1e184",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "holography": {
     "file": "10-holography.mp3",
-    "mark": "3788530b",
+    "mark": "397f298c",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    },
    "end": {
     "file": "11-end.mp3",
-    "mark": "19a2f9fc",
+    "mark": "58b76397",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4"
    }
