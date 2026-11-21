@@ -199,7 +199,7 @@ export class Gallery {
     const p = plan.placeOf(id);
     if (p) { this.goTo(plan.standing(p, this.back), this.tilt(), cut); this.aimed = p.no; }
   }
-  goHall(n: number, cut = false): void { if (plan.bayOf(n)) this.goTo(plan.arrival(n), 0, cut); }
+  goHall(n: number, cut = false): void { if (plan.bayOf(n)) { const at = plan.arrival(n); this.goTo(at, at.pitch ?? 0, cut); } }
   /** The next piece of the collection, or the one before. From nowhere in particular, the nearest. */
   next(by: 1 | -1): void {
     let no: number;

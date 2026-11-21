@@ -381,6 +381,10 @@ h1, h2, h3 { text-wrap: balance; }
 .walk__goto:has(select:disabled) { opacity: .42; }
 @media (pointer: coarse) { .walk__goto { min-height: 40px; } }
 @media (max-width: 400px) { .walk__bar { gap: 6px; padding: 12px 8px; } .walk__bar .btn { padding: 7px 9px; } }
+/* what the hall the visitor stands in is about */
+.walk__intro { padding: 0 12px 12px; max-width: 70ch; line-height: 1.45; }
+.walk__intro:empty { display: none; }
+.walk.is-full .walk__intro { display: none; }
 .walk__keys { padding: 0 12px 14px; max-width: 76ch; }
 .walk.is-full { position: fixed; inset: 0; z-index: 50; border-radius: 0; display: flex; flex-direction: column; }
 .walk.is-full .walk__view { aspect-ratio: auto; max-height: none; flex: 1; min-height: 0; }

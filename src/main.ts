@@ -574,7 +574,7 @@ function walkView(start?: string): void {
   let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;
   const relight = (on: boolean) => hall?.setLights(on);
   lightListeners.add(relight);
-  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto: wants3d(), switchHtml: switchHtml() }); })
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto: wants3d() && !matchMedia('(pointer: coarse)').matches, switchHtml: switchHtml() }); })
     .catch(() => { host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
   leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); };
 }

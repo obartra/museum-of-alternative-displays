@@ -13,9 +13,11 @@ across a Catalan town to Montserrat. Nothing lights it but those windows. One sw
 day into night. A hall is not a room: it is a group of pieces that make a picture in the
 same way.
 
-The whole collection also stands in one long hall that a visitor can walk through: fifty
-blocks in two rows, seven bays, the same windows down one side. Arrow keys walk and turn,
-a click or a tap on a piece goes to it, and a plan of the hall shows where the visitor is.
+The museum can also be walked through. It is a building of seven halls in a row, one for each
+hall of the collection, with a doorway between each and the next and the same windows down one
+side. Every piece stands in its own hall. Arrow keys walk and turn, a click or a tap on a piece
+goes to it, and a plan of the building shows where the visitor is. On a phone the walk waits to
+be started, and runs a lighter version.
 
 ## Rules of the collection
 

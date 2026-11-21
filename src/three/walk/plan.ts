@@ -2,10 +2,11 @@ import { halls } from '../../data/halls';
 import { inHall } from '../../data/pieces';
 
 /**
- * The plan of the hall, in metres, with nothing drawn in it: where the walls stand, where each piece
+ * The plan of the museum, in metres, with nothing drawn in it: where the walls stand, where each piece
  * stands, where a visitor may walk and how to get from one place to another.
- * The door is at x = 0 and the hall runs towards +x. The windows are at z = -HALF, on the left of
- * someone walking in, and the blind wall is at z = +HALF. The floor is the room's own, at y = FLOOR.
+ * Seven halls stand in a row, one for each hall of the collection, with a wall and a doorway between each
+ * and the next. The door is at x = 0 and the building runs towards +x. The windows are at z = -HALF, on the
+ * left of someone walking in, and the blind wall is at z = +HALF. The floor is at y = FLOOR.
  */
 
 export const FLOOR = -0.95;
@@ -16,8 +17,8 @@ export const PITCH = 4.4;
 /** Half the width of the hall, and how far each row of blocks stands from its centre line. */
 export const HALF = 6.3, ROW = 3.3;
 export const BLOCK = 2.2;
-/** A cross wall: how thick, and how wide and high the opening in it. */
-export const WALL = 0.36, GATE = 5, GATE_H = 4.2;
+/** The wall between two halls: how thick, and how wide and high the doorway in it. A doorway, so that each hall is a room of its own. */
+export const WALL = 0.4, GATE = 3, GATE_H = 3.3;
 /** A window: three panes between two piers. A pier stands behind every block and takes every cross wall. */
 export const WINDOW = 3, PANES = 3;
 /** How much room a visitor takes up. */
@@ -65,9 +66,19 @@ export const bayOf = (hall: number): Bay => bays[hall - 1];
 
 /** Where someone stands who has just come in at the door, and which way they face: down the hall. */
 export const DOOR = { x: 1.7, z: 0, yaw: -Math.PI / 2 };
-/** Where a visitor arrives in a bay: a little way in from its opening, on the centre line, looking down it. */
-export const arrival = (hall: number): { x: number; z: number; yaw: number } =>
-  hall === 1 ? DOOR : { x: bayOf(hall).from + 1.5, z: 0, yaw: -Math.PI / 2 };
+/** How far along the blind wall the name plate of a hall hangs: over the clear floor just inside its doorway, where no block stands in front of it. */
+export const plateAt = (hall: number): number => (hall === 1 ? 5.4 : bayOf(hall).from + 2.2);
+/**
+ * Where a visitor arrives in a hall: just inside its doorway, across the floor from the wall that carries its
+ * name and looking up at it a little, with the first pieces along that wall in view to the right.
+ * The first hall is arrived at by the door, looking down the building through every doorway.
+ */
+export const arrival = (hall: number): { x: number; z: number; yaw: number; pitch?: number } => {
+  if (hall === 1) return DOOR;
+  const x = bayOf(hall).from + 2.0, z = -3.4;
+  // facing the blind wall, the rest of the hall is on the left
+  return { x, z, yaw: Math.atan2(-1.1, -(HALF - z)), pitch: 0.08 };
+};
 /** The place to stand to look at a piece, `back` metres from the middle of its block, on the aisle side. */
 export const standing = (p: Place, back: number): { x: number; z: number; yaw: number } =>
   ({ x: p.x, z: p.z - p.side * back, yaw: p.side < 0 ? 0 : Math.PI });

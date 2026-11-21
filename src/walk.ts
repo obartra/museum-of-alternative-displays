@@ -4,9 +4,10 @@ import { said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
 
 /**
- * Walk the museum: every piece on its block in one long hall, to stroll through or jump across.
- * This is the page round the picture: where the visitor is, the plan of the hall, the buttons that do what the
- * keys do. The hall itself, and the visitor in it, live in `three/walk` and load only when the walk starts.
+ * Walk the museum: seven halls in a row, every piece on its block in the hall it belongs to, to stroll through
+ * or jump across. This is the page round the picture: where the visitor is, what the hall they are in is about,
+ * the plan of the building, the buttons that do what the keys do. The building itself, and the visitor in it,
+ * live in `three/walk` and load only when the walk starts.
  * The address follows the visitor from piece to piece, so the back button of a piece's page returns to its block.
  */
 export interface WalkOptions {
@@ -69,11 +70,14 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <button type="button" class="btn" data-walk="vr" hidden>${tx('walk.vr')}</button>
   <button type="button" class="btn" data-walk="full">${tx('stage.expand')}</button>
 </div>
+<p class="walk__intro" id="walk-intro"></p>
 <p class="walk__keys small muted">${tx(coarse ? 'walk.hint.touch' : 'walk.keys')}</p>`;
 
   const view = document.getElementById('walk-view')!, stillImg = document.getElementById('walk-still') as HTMLImageElement;
   const startBtn = document.getElementById('walk-start') as HTMLButtonElement, hint = document.getElementById('walk-hint')!, note = document.getElementById('walk-note')!;
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
+  const intro = document.getElementById('walk-intro')!;
+  let introFor = 0;
   const btn = (name: string) => host.querySelector<HTMLButtonElement>(`[data-walk="${name}"]`)!;
   const pauseBtn = btn('pause'), fullBtn = btn('full'), vrBtn = btn('vr'), goto = document.getElementById('walk-goto') as HTMLSelectElement;
   const fine = matchMedia('(pointer: fine)').matches;
@@ -96,6 +100,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       ? `<b class="walk__no" aria-hidden="true">${w.hall}</b><span>${tx('nav.hall', { n: w.hall, name: hallName(w.hall) })}</span>${p ? `<a class="btn walk__open" href="#piece-${p.id}">${tx('walk.open', { name: names[p.id] })}</a>` : ''}`
       : '';
     for (const b of planEl.querySelectorAll<HTMLElement>('[data-bay]')) b.setAttribute('aria-current', String(Number(b.dataset.bay) === w.hall));
+    // what the hall the visitor has walked into is about, as its own page says it
+    if (w.hall && w.hall !== introFor) { introFor = w.hall; intro.textContent = said.hall(halls[w.hall - 1]).intro; }
     for (const b of planEl.querySelectorAll<SVGElement>('[data-piece]')) b.classList.toggle('is-here', b.dataset.piece === w.piece);
     goto.value = w.piece ?? '';
     if (w.piece) { last = w.piece; mark(); }

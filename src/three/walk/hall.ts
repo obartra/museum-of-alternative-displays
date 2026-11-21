@@ -2,12 +2,13 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { THREE } from '../kit';
 import { HEAD, SILL, TALL, crease, glazed, mirror, once, polished, sheet, wear } from '../room';
 import { SUN, vista } from '../vista';
-import { FLOOR, GATE, GATE_H, HALF, LENGTH, WALL, WINDOW, bays, walls, windows } from './plan';
+import { FLOOR, GATE, GATE_H, HALF, LENGTH, WALL, WINDOW, bays, plateAt, walls, windows } from './plan';
 
 /**
- * The hall that holds the whole collection: the room of a single piece, drawn out into one long building.
- * The same white walls, the same polished floor, the same tall windows down one side, and seven bays in a
- * row with a cross wall between each and the next. Nothing lights it but the windows.
+ * The museum as a building: seven halls in a row, one for each hall of the collection, with a wall and a
+ * doorway between each and the next. White walls, a polished floor, tall windows down one side. Over every
+ * doorway hangs the plate of the hall it leads to, and each hall carries its own name on its blind wall.
+ * Nothing lights the building but the windows.
  */
 export interface Hall {
   group: THREE.Group;
@@ -167,6 +168,13 @@ export function buildHall(o: HallOptions): Hall {
       m.position.set(x + f * (WALL / 2 + 0.012), FLOOR + (GATE_H + TALL) / 2, 0); m.rotation.y = (f * Math.PI) / 2; m.receiveShadow = true;
       signs.push(m); shell.add(m);
     }
+  });
+
+  // on the blind wall just inside each doorway: the name of the hall you are standing in, large
+  bays.forEach((b) => {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 1), new THREE.MeshStandardMaterial({ map: plate(o.signs[b.hall - 1], o.display), roughness: 0.34, alphaTest: 0.5 }));
+    m.position.set(plateAt(b.hall), FLOOR + 3.1, HALF - 0.014); m.rotation.y = Math.PI; m.receiveShadow = true;
+    signs.push(m); shell.add(m);
   });
 
   // the floor: one slab, polished, the whole length

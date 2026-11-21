@@ -58,12 +58,20 @@ if (!only || only === 'sheets') {
 }
 if (!only || only === 'stills') {
   for (const day of [true, false]) {
-    const page = await open();
-    const [big, small] = await page.evaluate((day) => window.cutouts.still(day), day);
-    save(`${pub}walk-${day ? 'day' : 'night'}-1600.webp`, big);
-    save(`${pub}walk-${day ? 'day' : 'night'}-800.webp`, small);
+    // a picture that comes back black, which a browser drawing in software sometimes gives, is far smaller than a real one
+    let shot;
+    for (let go = 0; go < 6 && !shot; go++) {
+      const page = await open();
+      try {
+        const pair = await page.evaluate((day) => window.cutouts.still(day), day);
+        if (pair[0].length > 12000) shot = pair; else console.log('blank picture, again');
+      } catch (err) { console.log('again:', String(err).slice(0, 120)); }
+      await page.close().catch(() => undefined);
+    }
+    if (!shot) throw new Error(`no picture of the hall by ${day ? 'day' : 'night'}`);
+    save(`${pub}walk-${day ? 'day' : 'night'}-1600.webp`, shot[0]);
+    save(`${pub}walk-${day ? 'day' : 'night'}-800.webp`, shot[1]);
     console.log('still', day ? 'day' : 'night');
-    await page.close();
   }
 }
 await browser.close();

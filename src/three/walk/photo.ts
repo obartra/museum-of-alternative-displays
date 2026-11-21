@@ -147,6 +147,8 @@ export async function still(day: boolean, w = 1600, h = 900): Promise<[string, s
       await new Promise((done) => setTimeout(done, 25));
     }
     g.step(0.05, true);
+    // a browser that draws in software sometimes drops the picture altogether: say so, and let the script try again
+    if (g.renderer.getContext().isContextLost()) throw new Error('the graphics context was lost');
     const big = canvas.toDataURL('image/webp', 0.86);
     const [half, hx] = pad(w / 2, h / 2);
     hx.drawImage(canvas, 0, 0, w / 2, h / 2);
