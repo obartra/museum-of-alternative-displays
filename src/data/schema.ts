@@ -59,7 +59,7 @@ export const STATUS_LABEL: Record<Status, string> = {
 
 export const PRINCIPLE_LABEL: Record<Principle, string> = {
   emits: 'Makes its own light',
-  gates: 'Shapes light from a separate lamp or laser',
+  gates: 'Shapes light from the sun, a lamp or a laser',
   directs: 'Sends light in chosen directions',
   reflects: 'Reflects the light of the room',
   moves: 'Moves real objects',

@@ -1,6 +1,6 @@
 # Museum of Alternative Displays
 
-A museum of fifty display technologies, from split-flap boards to holograms, in seven
+A museum of fifty-five display technologies, from split-flap boards to holograms, in seven
 halls. Each one is a 3D model you can turn and zoom, with its lit surface running live, a
 plain account of how it works, what it is good at, where it fails, and the sources. Nothing
 is for sale.
@@ -311,7 +311,7 @@ iPhone in particular, how the bar at the top of an installed copy looks by night
 
 ## Known gaps
 
-- 28 of the 50 pieces still rest only on encyclopedia articles. Replacing those with primary
+- 28 of the 55 pieces still rest only on encyclopedia articles. Replacing those with primary
   sources is the main open job. `npm run validate` prints the current count.
 - Not yet in the collection: falling-water curtains, aerial imaging plates, grating light
   valves, switchable privacy glass, ferrofluid, light-activated paints.

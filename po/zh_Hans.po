@@ -1329,8 +1329,8 @@ msgstr "自己发光"
 #: interface
 #. How a piece makes its picture. Shown in the table of facts and in the index.
 msgctxt "principle.gates"
-msgid "Shapes light from a separate lamp or laser"
-msgstr "调制单独的灯或激光器发出的光"
+msgid "Shapes light from the sun, a lamp or a laser"
+msgstr "调制来自太阳、灯或激光器的光"
 
 #: interface
 #. How a piece makes its picture. Shown in the table of facts and in the index.
@@ -1473,8 +1473,8 @@ msgstr "光阀"
 #: hall-4
 #. Introduction at the top of the page of a hall.
 msgctxt "hall.4.intro"
-msgid "Nothing in this hall makes its own light. A lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve."
-msgstr "这个展厅里没有一件展品自己发光。光由一盏灯或一台激光器发出，器件把光挡住、偏转或引导，形成画面。能让光通过、也能把光挡住的器件，叫作光阀。"
+msgid "Nothing in this hall makes its own light. The sun, a lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve."
+msgstr "这个展厅里没有一件展品自己发光。光由太阳、一盏灯或一台激光器发出，器件把光挡住、偏转或引导，形成画面。能让光通过、也能把光挡住的器件，叫作光阀。"
 
 #: hall-5
 #. Name of a hall. It must fit a board on a small phone. At most 16 characters.
@@ -4577,6 +4577,336 @@ msgstr "顺着边缘看"
 msgctxt "piece.flexible-display.view.edge.hint"
 msgid "The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below."
 msgstr "这张薄片就是整个显示屏：塑料上的几层薄膜，后面什么也没有。它卷进下面的卷轴里。"
+
+#: hall-4/camera-obscura
+#. Name of a piece.
+msgctxt "piece.camera-obscura.name"
+msgid "Camera obscura"
+msgstr "暗箱"
+
+#: hall-4/camera-obscura
+#. Other names the piece goes by.
+msgctxt "piece.camera-obscura.aka"
+msgid "Dark chamber, pinhole image"
+msgstr "Camera obscura，小孔成像"
+
+#: hall-4/camera-obscura
+#. The date of the piece, as its label gives it.
+msgctxt "piece.camera-obscura.yearText"
+msgid "about 300 BCE"
+msgstr "约公元前300年"
+
+#: hall-4/camera-obscura
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.camera-obscura.origin"
+msgid "One of the earliest known accounts is in the Mohist Canons, compiled in China between the late fourth and the middle of the third century BCE. No inventor is known"
+msgstr "已知最早的记述之一见于《墨经》，这部书于公元前4世纪末至公元前3世纪中叶之间在中国编成。发明者不详"
+
+#: hall-4/camera-obscura
+#. Where this kind of display stands today.
+msgctxt "piece.camera-obscura.statusNote"
+msgid "Built today as a school science project and used by artists. The photographic camera descends from it."
+msgstr "今天，学校把它当作科学课上的手工来做，艺术家也在用它。照相机就是从它演变来的。"
+
+#: hall-4/camera-obscura
+#. First sentence of the label.
+msgctxt "piece.camera-obscura.lead"
+msgid "A small hole in the wall of a dark room lets in light from outside, and the view appears on the opposite wall, upside down."
+msgstr "暗室的墙上开一个小孔，外面的光从小孔进来，外面的景象就出现在对面的墙上，上下颠倒。"
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.camera-obscura.how.1"
+msgid "Light travels in straight lines. Every point of the scene outside sends light in all directions, but only a narrow bundle from each point passes the hole, and it lands on its own spot on the far wall. The spots together are the picture. All the lines cross in the hole. So what is high outside lands low, and what lies to one side of the hole lands on the other."
+msgstr "光沿直线传播。外面景物上的每一点都向四面八方发光，但每一点只有窄窄的一束光能穿过小孔，落在里墙上属于它自己的位置。这些位置合在一起，就是图像。所有的光线都在小孔处交叉。所以外面高处的东西落在低处，在小孔一侧的东西落到另一侧。"
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.camera-obscura.how.2"
+msgid "The size of the hole is a compromise. A small hole gives a sharp picture, because each point outside lights only a small spot, but it lets in little light. A larger hole gives a brighter picture and a more blurred one. A hole that is too small blurs the picture again, because light spreads when it passes a very narrow opening."
+msgstr "小孔的大小是一种折中。孔小，图像清晰，因为外面每一点只照亮一个小斑，但进来的光很少。孔大一些，图像更亮，也更模糊。孔太小，图像又会变模糊，因为光穿过很窄的开口时会散开。"
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.camera-obscura.how.3"
+msgid "A lens in the opening changes the terms. The opening can be wide, and the lens gathers the light from each point into one spot again. In 1568 the Venetian Daniele Barbaro described the convex glass of an old man's spectacles set in the hole, and a cover over part of the lens to make the picture clearer."
+msgstr "在开口上装一片透镜，情况就不同了。开口可以开大，透镜会把每一点发出的光重新聚到一点。1568年，威尼斯人Daniele Barbaro记述了把老人眼镜上的凸透镜装在孔里的做法，还说到遮住透镜的一部分，让图像更清楚。"
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.camera-obscura.how.4"
+msgid "The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. Johannes Kepler used it first, in 1604."
+msgstr "《墨经》说，影之所以颠倒，是因为光在一点交叉，光的行进像射出的箭。11世纪初，在开罗著书的Ibn al-Haytham记述了这样的做法：在通向暗处的开口前摆上几支蜡烛，它们投下的每一个光斑，都正对着其中一支蜡烛。他还研究了日食时太阳透过小孔投下的月牙形。它的拉丁文名字camera obscura，意思是暗室。最早使用这个名字的是Johannes Kepler，时间是1604年。"
+
+#: hall-4/camera-obscura
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.1"
+msgid "Needs no power and has no part that moves or wears out"
+msgstr "不用电，也没有会动或会磨损的零件"
+
+#: hall-4/camera-obscura
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.2"
+msgid "Shows the scene in its own colours and with all its movement"
+msgstr "按景物本来的颜色显示，景物怎么动，它就怎么动"
+
+#: hall-4/camera-obscura
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.3"
+msgid "Shows near and far things equally sharp when the opening is a bare hole"
+msgstr "只开一个小孔时，远近的东西一样清晰"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 1 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.1"
+msgid "Gives a dim picture, because a hole small enough for a sharp picture lets in very little light"
+msgstr "图像暗淡，因为小到足以成清晰图像的孔，只放得进很少的光"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 2 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.2"
+msgid "Works only in a darkened room and only while there is light outside"
+msgstr "只能在遮暗的房间里用，而且外面要有光"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 3 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.3"
+msgid "Turns the picture upside down"
+msgstr "图像上下颠倒"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 4 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.4"
+msgid "Keeps nothing: the picture is there only while the light is"
+msgstr "什么也留不住：光在，图像才在"
+
+#: hall-4/camera-obscura
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.camera-obscura.look"
+msgid "The model is a small chamber of boards, blackened inside. The hole is in the wall that faces the windows, and the wall opposite is a sheet of thin paper. On it is the view from those windows, upside down: the sky at the bottom, the mountain and the town above. From outside, the roof and the nearer side wall are left off so that you can look in. Press the Step inside button to see the chamber closed and dark. A brass disc outside turns from a small hole to a lens and back: with the lens the picture is brighter and sharper. Then switch the daylight off. The chamber makes no light, and the picture goes with the day. Only the lamps of the town stay, as faint points, while the lens is in place."
+msgstr "模型是一间用木板钉成的小室，里面涂成黑色。小孔开在朝着窗户的那面墙上，对面的墙是一张薄纸。纸上是窗外的景色，上下颠倒：天空在下，山和小镇在上。从外面看时，模型去掉了屋顶和靠近你的那面侧墙，好让你看到里面。按“走进去”按钮，可以看到封闭而黑暗的小室。室外有一块黄铜圆盘，从小孔转到透镜，再转回来：用透镜时，图像更亮、更清晰。然后关掉日光。小室自己不发光，图像随着白天一起消失。只有透镜就位的时候，小镇的灯火还留着，是些微弱的光点。"
+
+#: hall-4/camera-obscura
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.camera-obscura.fact"
+msgid "A gap between the leaves of a tree works as the hole of a camera obscura. During a partial eclipse of the sun, the patches of light on the ground under the tree turn into crescents, each one a picture of the sun."
+msgstr "树叶之间的缝隙，作用就像暗箱的小孔。日偏食的时候，树下地面上的光斑会变成一个个月牙，每一个都是太阳的像。"
+
+#: hall-4/camera-obscura
+#. People section: what Mozi did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.1"
+msgid "Taught in China about 430 BCE, and the Mohist school is named after him. Its later members wrote the Canons, which hold an early account of a picture turned over by a small hole."
+msgstr "公元前430年前后在中国讲学，墨家因他得名。墨家后学写成的《墨经》里，有关于小孔使图像颠倒的早期记述。"
+
+#: hall-4/camera-obscura
+#. People section: what Ibn al-Haytham did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.2"
+msgid "Born in Basra about 965, died in Cairo about 1040. In a dark chamber he studied how light passes through an opening, and how the sun in eclipse looks through a small hole."
+msgstr "约965年生于巴士拉，约1040年卒于开罗。他在一间暗室里研究光怎样穿过开口，以及日食时的太阳透过小孔是什么样子。"
+
+#: hall-4/camera-obscura
+#. People section: what Gemma Frisius did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.3"
+msgid "Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one."
+msgstr "医生，也是仪器制作者。1544年1月24日，他在鲁汶一间遮暗的房间里观察了日食。他1545年出版的书里，有已知最早的这种暗室的印刷图。"
+
+#: hall-4/camera-obscura
+#. People section: what Daniele Barbaro did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.4"
+msgid "Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer."
+msgstr "威尼斯贵族。1568年，他记述了装在孔里的眼镜片，以及为了让图像更清楚而遮住透镜一部分的盖片。"
+
+#: hall-4/camera-obscura
+#. People section: what Johannes Kepler did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.5"
+msgid "Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes."
+msgstr "1604年最早使用camera obscura这个名字。他给自己做了一顶带透镜的便携暗帐，用来画风景。"
+
+#: hall-4/camera-obscura
+#. Note under the People section.
+msgctxt "piece.camera-obscura.note"
+msgid "No inventor is known. The Mohist text speaks of the turned shadow and the crossing light, and does not describe a chamber."
+msgstr "发明者不详。墨家的文字讲的是颠倒的影和交叉的光，没有描述暗室。"
+
+#: hall-4/camera-obscura
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.camera-obscura.view.inside.label"
+msgid "Step inside"
+msgstr "走进去"
+
+#: hall-4/camera-obscura
+#. Line shown while the visitor is at that place.
+msgctxt "piece.camera-obscura.view.inside.hint"
+msgid "The chamber is closed and dark. The view from the windows lies on the paper upside down: sky below, town above."
+msgstr "小室封闭而黑暗。窗外的景色上下颠倒地落在纸上：天空在下，小镇在上。"
+
+#: hall-4/camera-obscura
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.camera-obscura.view.hole.label"
+msgid "Go close to the hole"
+msgstr "凑近看小孔"
+
+#: hall-4/camera-obscura
+#. Line shown while the visitor is at that place.
+msgctxt "piece.camera-obscura.view.hole.hint"
+msgid "A brass disc turns between a small hole and a lens. The lens has the wider opening, so it lets in more light."
+msgstr "黄铜圆盘在小孔和透镜之间转动。透镜那边的开口更大，所以进来的光更多。"
+
+#: hall-4/shadow-play
+#. Name of a piece.
+msgctxt "piece.shadow-play.name"
+msgid "Shadow play"
+msgstr "影戏"
+
+#: hall-4/shadow-play
+#. Other names the piece goes by.
+msgctxt "piece.shadow-play.aka"
+msgid "Shadow theatre, shadow puppets"
+msgstr "皮影戏，影子戏"
+
+#: hall-4/shadow-play
+#. The date of the piece, as its label gives it.
+msgctxt "piece.shadow-play.yearText"
+msgid "about 1000 CE or earlier"
+msgstr "约公元1000年或更早"
+
+#: hall-4/shadow-play
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.shadow-play.origin"
+msgid "Recorded in Java and in China about a thousand years ago. Where it began, and how much older it is, are not settled. No inventor is known"
+msgstr "大约一千年前，爪哇和中国已有记载。它起源于何处，实际上还要早多少，尚无定论。发明者不详"
+
+#: hall-4/shadow-play
+#. Where this kind of display stands today.
+msgctxt "piece.shadow-play.statusNote"
+msgid "Performed today in Indonesia, China, Türkiye and other countries. UNESCO lists wayang, Chinese shadow puppetry and Karagöz as intangible cultural heritage."
+msgstr "今天仍在印度尼西亚、中国、土耳其等国演出。联合国教科文组织已把哇扬戏（wayang）、中国皮影戏和卡拉格兹（Karagöz）列入非物质文化遗产名录。"
+
+#: hall-4/shadow-play
+#. First sentence of the label.
+msgctxt "piece.shadow-play.lead"
+msgid "A lamp shines on a cloth screen from behind, and flat figures held between the two cast the shadows that the audience watches."
+msgstr "一盏灯从后面照亮布幕，举在灯和幕之间的扁平影人，投下观众看到的影子。"
+
+#: hall-4/shadow-play
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.shadow-play.how.1"
+msgid "The screen is thin cloth stretched in a frame, and one lamp burns behind it. The puppeteer holds flat figures on rods between the lamp and the cloth. Where a figure blocks the light the cloth stays dark, and the audience on the other side sees its outline. Holes cut through a figure let the light pass and draw an eye, a feather or the pattern of a garment as bright lines."
+msgstr "幕是绷在框架上的一块薄布，幕后只点一盏灯。艺人把装在杆上的扁平影人举在灯和布之间。影人挡住光的地方，布是暗的，另一边的观众就看到它的轮廓。影人上刻出的孔让光透过去，用明亮的线条画出眼睛、羽毛或衣服的花纹。"
+
+#: hall-4/shadow-play
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.shadow-play.how.2"
+msgid "Distance does the rest. A figure held against the cloth casts a shadow of its own size, with a sharp edge. The further it is from the cloth, the larger its shadow. The edge also goes soft, because a flame is not a point: beside the full shadow lies a band that part of the flame still reaches. A flame moves, too, so the shadows are never quite still."
+msgstr "其余的事由距离来做。影人贴着布，投下的影子和它一样大，边缘清晰。离布越远，影子越大。边缘也会变软，因为火焰不是一个点：在全黑的影子旁边，还有一条只被部分火焰照到的带子。火焰还会晃动，所以影子从来不会完全静止。"
+
+#: hall-4/shadow-play
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.shadow-play.how.3"
+msgid "In Java and Bali the theatre is called wayang kulit. Its figures are of buffalo hide, pierced and painted, and one puppeteer, the dalang, works them all by a coconut oil lamp, today usually an electric one. Chinese figures are cut from leather or paper in colour, with twelve to twenty-four moving joints. In the Turkish theatre, named after its hero Karagöz, the hide is worked until light passes through it and is then coloured, so the shadows have colour."
+msgstr "在爪哇和巴厘岛，这种戏叫哇扬皮影戏（wayang kulit）。影人用水牛皮制成，镂空并上色，由一位叫作达朗（dalang）的艺人在椰子油灯下操纵全部影人，如今这盏灯多半是电灯。中国的影人用皮革或纸刻成，施以彩色，有十二到二十四个活动关节。土耳其的影戏以主角卡拉格兹（Karagöz）命名，皮子要加工到能透光，再上色，所以影子也有颜色。"
+
+#: hall-4/shadow-play
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.shadow-play.how.4"
+msgid "Where it began and how old it is are not settled. One encyclopedia names China and the islands of Java and Bali as the likely places. Another names India, or Central Asia and China, more than two thousand years ago. What is recorded is later. A Javanese poem of the eleventh century describes a leather shadow figure, and the first clear mention in China is from the Northern Song dynasty, 960 to 1127. The oldest texts that survive for the Arabic shadow theatre are three plays by Ibn Daniyal, who settled in Cairo and died about 1311. Karagöz is said to have been first played in Egypt for the Ottoman sultan Selim I, who reigned from 1512 to 1520."
+msgstr "它起源于何处、有多古老，尚无定论。一部百科全书认为中国以及爪哇岛和巴厘岛最有可能。另一部则认为是两千多年前的印度，或者中亚和中国。有记载可查的要晚一些。11世纪的一首爪哇诗描写了皮制的影人，中国最早的明确记载见于北宋（960年至1127年）。阿拉伯影戏现存最早的剧本是Ibn Daniyal的三部作品，他定居开罗，约1311年去世。据说卡拉格兹最早是在埃及为奥斯曼苏丹Selim I演出的，这位苏丹1512年至1520年在位。"
+
+#: hall-4/shadow-play
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.1"
+msgid "Needs only a lamp, a cloth and figures that one person can carry"
+msgstr "只需要一盏灯、一块布和一个人就拿得动的影人"
+
+#: hall-4/shadow-play
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.2"
+msgid "Changes the size of a figure in a moment, by moving it between the cloth and the lamp"
+msgstr "把影人在布和灯之间挪一挪，影子的大小立刻改变"
+
+#: hall-4/shadow-play
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.3"
+msgid "Lets one performer work a whole cast of figures"
+msgstr "一位艺人就能操纵全部角色"
+
+#: hall-4/shadow-play
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.1"
+msgid "Shows outlines only: whatever is not cut through the figure is not seen"
+msgstr "只能显示轮廓：影人上没有刻出来的东西，就看不到"
+
+#: hall-4/shadow-play
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.2"
+msgid "Needs darkness on the side of the audience"
+msgstr "观众这一侧必须是暗的"
+
+#: hall-4/shadow-play
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.3"
+msgid "Depends on a living performer, and has to compete with television and video for its audience"
+msgstr "离不开活生生的艺人，还要同电视和录像争夺观众"
+
+#: hall-4/shadow-play
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.shadow-play.look"
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted."
+msgstr "模型里有一个木框，框上绷着布幕，幕后吊着一盏油灯。灯和布之间有三个装在杆上的扁平影人：一棵树、一头鹿和一只鸟。从正面只能看到它们的影子。树和鹿贴着布，所以影子清晰。鸟先贴着布飞过，然后从靠灯的一侧飞回来：它的影子变得又大又软，鹿也抬起了头。留意影子的边缘怎样随着火焰颤动。白天影子很淡，所以请关掉日光。然后按“绕到幕后”按钮，看看镂空并上色的影人本身。"
+
+#: hall-4/shadow-play
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.shadow-play.fact"
+msgid "In Java the lamp has a name of its own, the blencong, and a keeper of its own: a stage assistant tends the flame so that the shadows on the screen stay clear. In many performances today electric light has taken its place."
+msgstr "在爪哇，这盏灯有自己的名字，叫blencong，也有专人照看：一位舞台助手负责看护火焰，好让幕上的影子保持清晰。如今在许多演出里，电灯已经取代了它。"
+
+#: hall-4/shadow-play
+#. People section: what Ibn Daniyal did. The names stand above this line.
+msgctxt "piece.shadow-play.people.1"
+msgid "Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre."
+msgstr "眼科医生，1248年生于摩苏尔。他定居开罗，在那里写了三部影戏剧本，是阿拉伯影戏现存最早的剧本。"
+
+#: hall-4/shadow-play
+#. People section: what François Dominique Séraphin did. The names stand above this line.
+msgctxt "piece.shadow-play.people.2"
+msgid "Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows."
+msgstr "1771年起在凡尔赛演出影戏，1784年把剧场迁到巴黎。在法国，这类演出打出的名号是ombres chinoises，意思是中国影子。"
+
+#: hall-4/shadow-play
+#. People section: what Henri Rivière did. The names stand above this line.
+msgctxt "piece.shadow-play.people.3"
+msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc."
+msgstr "在巴黎的Le Chat Noir卡巴莱，他和多达二十名助手一起制作影戏，这家卡巴莱在1885年至1896年间上演了45部。从1887年起，影人改用锌板制作。"
+
+#: hall-4/shadow-play
+#. Note under the People section.
+msgctxt "piece.shadow-play.note"
+msgid "No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers."
+msgstr "哇扬戏、中国皮影戏和卡拉格兹的发明者都没有记载。在爪哇，这门手艺在艺人、乐师和影人制作者的家族内部代代相传。"
+
+#: hall-4/shadow-play
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.shadow-play.view.audience.label"
+msgid "Sit with the audience"
+msgstr "坐到观众席"
+
+#: hall-4/shadow-play
+#. Line shown while the visitor is at that place.
+msgctxt "piece.shadow-play.view.audience.hint"
+msgid "Only shadows reach this side. Held against the cloth, a figure is small and sharp. Out by the lamp it grows and blurs."
+msgstr "到这一侧来的只有影子。贴着布时，影人的影子小而清晰。靠近灯时，它变大、变模糊。"
+
+#: hall-4/shadow-play
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.shadow-play.view.behind.label"
+msgid "Go behind the screen"
+msgstr "绕到幕后"
+
+#: hall-4/shadow-play
+#. Line shown while the visitor is at that place.
+msgctxt "piece.shadow-play.view.behind.hint"
+msgid "The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still."
+msgstr "影人是扁平的，镂空并上色，各自装在一根杆上。一团火焰照亮全部影人，而它一刻也不安定。"
 
 #: hall-4/liquid-crystal
 #. Name of a piece.

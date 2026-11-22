@@ -31,7 +31,9 @@ for (const p of pieces) {
   if (!/^[a-z0-9-]+$/.test(p.id)) fail(p.id, 'id must be lower case letters, digits and hyphens');
   if (!halls.some((h) => h.id === p.hall)) fail(p.id, `unknown hall ${p.hall}`);
   if (!builders[p.id]) fail(p.id, 'no 3D model registered in src/three/models/index.ts');
-  if (p.year < 1500 || p.year > new Date().getFullYear()) fail(p.id, `implausible year ${p.year}`);
+  if (!Number.isInteger(p.year) || p.year === 0 || p.year > new Date().getFullYear()) fail(p.id, `implausible year ${p.year}`);
+  // an old piece has no date that one number can state: a negative year is a year BCE, kept for sorting, and the label gives the date in words
+  if (p.year < 1500 && !p.yearText) fail(p.id, 'a year before 1500 needs its date in words, in yearText');
   if (p.lead.length < 30 || p.lead.length > 230) fail(p.id, `lead should be one sentence of 30 to 230 characters, got ${p.lead.length}`);
   if (p.how.length < 1) fail(p.id, 'needs at least one paragraph on how it makes an image');
   if (p.good.length < 2) fail(p.id, 'needs at least two things it is good at');

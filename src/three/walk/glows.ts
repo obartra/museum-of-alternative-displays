@@ -20,6 +20,7 @@ export const glows: Record<string, number> = {
   'thin-film-el': 0xffb21a,
   'transparent-display': 0x9fe8ff,
   'flexible-display': 0x7fe0c0,
+  'shadow-play': 0xffb469,
   'liquid-crystal': 0xdde8ff,
   'lcos': 0xffe2b0,
   'eidophor': 0xdde8ff,

@@ -1338,8 +1338,8 @@ msgstr "Faras propran lumon"
 #: interface
 #. How a piece makes its picture. Shown in the table of facts and in the index.
 msgctxt "principle.gates"
-msgid "Shapes light from a separate lamp or laser"
-msgstr "Formas la lumon de aparta lampo aŭ lasero"
+msgid "Shapes light from the sun, a lamp or a laser"
+msgstr "Formas la lumon de la suno, de lampo aŭ de lasero"
 
 #: interface
 #. How a piece makes its picture. Shown in the table of facts and in the index.
@@ -1482,8 +1482,8 @@ msgstr "Lumvalvoj"
 #: hall-4
 #. Introduction at the top of the page of a hall.
 msgctxt "hall.4.intro"
-msgid "Nothing in this hall makes its own light. A lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve."
-msgstr "Nenio en ĉi tiu halo faras propran lumon. Lampo aŭ lasero faras la lumon, kaj la aparato baras ĝin, klinas ĝin aŭ direktas ĝin por formi bildon. Aparato, kiu tralasas aŭ baras lumon, nomiĝas lumvalvo."
+msgid "Nothing in this hall makes its own light. The sun, a lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve."
+msgstr "Nenio en ĉi tiu halo faras propran lumon. La suno, lampo aŭ lasero faras la lumon, kaj la aparato baras ĝin, klinas ĝin aŭ direktas ĝin por formi bildon. Aparato, kiu tralasas aŭ baras lumon, nomiĝas lumvalvo."
 
 #: hall-5
 #. Name of a hall. It must fit a board on a small phone. At most 16 characters.
@@ -4586,6 +4586,336 @@ msgstr "Rigardi laŭ la rando"
 msgctxt "piece.flexible-display.view.edge.hint"
 msgid "The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below."
 msgstr "La folio estas la tuta ekrano: maldikaj filmoj sur plasto, kun nenio malantaŭe. Ĝi volviĝas sur la tamburon sube."
+
+#: hall-4/camera-obscura
+#. Name of a piece.
+msgctxt "piece.camera-obscura.name"
+msgid "Camera obscura"
+msgstr "Malluma kamero"
+
+#: hall-4/camera-obscura
+#. Other names the piece goes by.
+msgctxt "piece.camera-obscura.aka"
+msgid "Dark chamber, pinhole image"
+msgstr "Camera obscura, bildo tra pingla truo"
+
+#: hall-4/camera-obscura
+#. The date of the piece, as its label gives it.
+msgctxt "piece.camera-obscura.yearText"
+msgid "about 300 BCE"
+msgstr "ĉirkaŭ 300 antaŭ nia erao"
+
+#: hall-4/camera-obscura
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.camera-obscura.origin"
+msgid "One of the earliest known accounts is in the Mohist Canons, compiled in China between the late fourth and the middle of the third century BCE. No inventor is known"
+msgstr "Unu el la plej fruaj konataj priskriboj troviĝas en la Mohistaj Kanonoj, kompilitaj en Ĉinio inter la fino de la 4-a kaj la mezo de la 3-a jarcento antaŭ nia erao. Neniu inventinto estas konata"
+
+#: hall-4/camera-obscura
+#. Where this kind of display stands today.
+msgctxt "piece.camera-obscura.statusNote"
+msgid "Built today as a school science project and used by artists. The photographic camera descends from it."
+msgstr "Hodiaŭ oni konstruas ĝin en lernejoj kiel sciencan projekton, kaj artistoj uzas ĝin. La fotilo devenas de ĝi."
+
+#: hall-4/camera-obscura
+#. First sentence of the label.
+msgctxt "piece.camera-obscura.lead"
+msgid "A small hole in the wall of a dark room lets in light from outside, and the view appears on the opposite wall, upside down."
+msgstr "Malgranda truo en la muro de malluma ĉambro enlasas lumon de ekstere, kaj la vidaĵo aperas sur la kontraŭa muro, renversite."
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.camera-obscura.how.1"
+msgid "Light travels in straight lines. Every point of the scene outside sends light in all directions, but only a narrow bundle from each point passes the hole, and it lands on its own spot on the far wall. The spots together are the picture. All the lines cross in the hole. So what is high outside lands low, and what lies to one side of the hole lands on the other."
+msgstr "Lumo iras laŭ rektaj linioj. Ĉiu punkto de la ekstera sceno sendas lumon en ĉiujn direktojn, sed el ĉiu punkto nur mallarĝa fasko trapasas la truon, kaj ĝi trafas sian propran lokon sur la fora muro. Tiuj lokoj kune estas la bildo. Ĉiuj linioj kruciĝas en la truo. Tial tio, kio estas alte ekstere, trafas malalte, kaj tio, kio kuŝas ĉe unu flanko de la truo, trafas ĉe la alia."
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.camera-obscura.how.2"
+msgid "The size of the hole is a compromise. A small hole gives a sharp picture, because each point outside lights only a small spot, but it lets in little light. A larger hole gives a brighter picture and a more blurred one. A hole that is too small blurs the picture again, because light spreads when it passes a very narrow opening."
+msgstr "La grando de la truo estas kompromiso. Malgranda truo donas akran bildon, ĉar ĉiu ekstera punkto lumigas nur malgrandan makulon, sed ĝi enlasas malmulte da lumo. Pli granda truo donas pli helan kaj pli malklaran bildon. Tro malgranda truo denove malklarigas la bildon, ĉar lumo disvastiĝas, kiam ĝi trapasas tre mallarĝan aperturon."
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.camera-obscura.how.3"
+msgid "A lens in the opening changes the terms. The opening can be wide, and the lens gathers the light from each point into one spot again. In 1568 the Venetian Daniele Barbaro described the convex glass of an old man's spectacles set in the hole, and a cover over part of the lens to make the picture clearer."
+msgstr "Lenso en la aperturo ŝanĝas la kondiĉojn. La aperturo povas esti larĝa, kaj la lenso denove kolektas la lumon de ĉiu punkto en unu punkton. En 1568 la veneciano Daniele Barbaro priskribis la konveksan vitron de okulvitroj de maljunulo, metitan en la truon, kaj kovrilon super parto de la lenso por fari la bildon pli klara."
+
+#: hall-4/camera-obscura
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.camera-obscura.how.4"
+msgid "The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. Johannes Kepler used it first, in 1604."
+msgstr "La Mohistaj Kanonoj diras, ke la ombro renversiĝas, ĉar la lumo kruciĝas en punkto kaj iras kiel sagoj pafitaj per arko. Komence de la 11-a jarcento Ibn al-Haytham, kiu verkis en Kairo, priskribis kandelojn starigitajn antaŭ aperturo al malluma loko: ĉiu lummakulo, kiun ili ĵetas, aperas rekte kontraŭ unu kandelo. Li ankaŭ studis la lunarkon, kiun la suno ĵetas tra malgranda truo dum eklipso. La latina nomo, camera obscura, signifas malluma ĉambro. Johannes Kepler uzis ĝin la unua, en 1604."
+
+#: hall-4/camera-obscura
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.1"
+msgid "Needs no power and has no part that moves or wears out"
+msgstr "Bezonas neniun energion kaj havas neniun parton, kiu moviĝas aŭ eluziĝas"
+
+#: hall-4/camera-obscura
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.2"
+msgid "Shows the scene in its own colours and with all its movement"
+msgstr "Montras la scenon en ĝiaj propraj koloroj kaj kun ĝia tuta movo"
+
+#: hall-4/camera-obscura
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.camera-obscura.good.3"
+msgid "Shows near and far things equally sharp when the opening is a bare hole"
+msgstr "Montras proksimajn kaj forajn aĵojn same akre, kiam la aperturo estas nura truo"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 1 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.1"
+msgid "Gives a dim picture, because a hole small enough for a sharp picture lets in very little light"
+msgstr "Donas malhelan bildon, ĉar truo sufiĉe malgranda por akra bildo enlasas tre malmulte da lumo"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 2 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.2"
+msgid "Works only in a darkened room and only while there is light outside"
+msgstr "Funkcias nur en mallumigita ĉambro kaj nur dum ekstere estas lumo"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 3 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.3"
+msgid "Turns the picture upside down"
+msgstr "Renversas la bildon"
+
+#: hall-4/camera-obscura
+#. Where it fails, point 4 of 4. No full stop at the end.
+msgctxt "piece.camera-obscura.bad.4"
+msgid "Keeps nothing: the picture is there only while the light is"
+msgstr "Konservas nenion: la bildo ekzistas nur dum la lumo estas tie"
+
+#: hall-4/camera-obscura
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.camera-obscura.look"
+msgid "The model is a small chamber of boards, blackened inside. The hole is in the wall that faces the windows, and the wall opposite is a sheet of thin paper. On it is the view from those windows, upside down: the sky at the bottom, the mountain and the town above. From outside, the roof and the nearer side wall are left off so that you can look in. Press the Step inside button to see the chamber closed and dark. A brass disc outside turns from a small hole to a lens and back: with the lens the picture is brighter and sharper. Then switch the daylight off. The chamber makes no light, and the picture goes with the day. Only the lamps of the town stay, as faint points, while the lens is in place."
+msgstr "La modelo estas malgranda kamero el tabuloj, nigrigita interne. La truo estas en la muro, kiu frontas al la fenestroj, kaj la kontraŭa muro estas folio de maldika papero. Sur ĝi estas la vidaĵo el tiuj fenestroj, renversite: la ĉielo malsupre, la monto kaj la urbeto supre. De ekstere, la tegmento kaj la pli proksima flanka muro mankas, por ke vi povu rigardi enen. Premu la butonon Eniri por vidi la kameron fermita kaj malluma. Ekstere latuna disko turniĝas de malgranda truo al lenso kaj reen: kun la lenso la bildo estas pli hela kaj pli akra. Poste malŝaltu la taglumon. La kamero faras neniun lumon, kaj la bildo foriras kun la tago. Restas nur la lampoj de la urbeto, kiel malfortaj punktoj, dum la lenso estas en sia loko."
+
+#: hall-4/camera-obscura
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.camera-obscura.fact"
+msgid "A gap between the leaves of a tree works as the hole of a camera obscura. During a partial eclipse of the sun, the patches of light on the ground under the tree turn into crescents, each one a picture of the sun."
+msgstr "Interspaco inter la folioj de arbo funkcias kiel la truo de malluma kamero. Dum parta suna eklipso la lummakuloj sur la tero sub la arbo fariĝas lunarkoj, kaj ĉiu estas bildo de la suno."
+
+#: hall-4/camera-obscura
+#. People section: what Mozi did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.1"
+msgid "Taught in China about 430 BCE, and the Mohist school is named after him. Its later members wrote the Canons, which hold an early account of a picture turned over by a small hole."
+msgstr "Instruis en Ĉinio ĉirkaŭ 430 antaŭ nia erao, kaj la mohista skolo estas nomita laŭ li. Ĝiaj postaj membroj verkis la Kanonojn, kiuj enhavas fruan priskribon de bildo renversita de malgranda truo."
+
+#: hall-4/camera-obscura
+#. People section: what Ibn al-Haytham did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.2"
+msgid "Born in Basra about 965, died in Cairo about 1040. In a dark chamber he studied how light passes through an opening, and how the sun in eclipse looks through a small hole."
+msgstr "Naskiĝis en Basro ĉirkaŭ 965, mortis en Kairo ĉirkaŭ 1040. En malluma kamero li studis, kiel lumo trapasas aperturon kaj kiel la eklipsata suno aspektas tra malgranda truo."
+
+#: hall-4/camera-obscura
+#. People section: what Gemma Frisius did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.3"
+msgid "Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one."
+msgstr "Kuracisto kaj instrumentfaristo. Li observis la sunan eklipson de la 24-a de januaro 1544 en Loveno en mallumigita ĉambro. Lia libro de 1545 enhavas la plej malnovan konatan presitan desegnon de tia kamero."
+
+#: hall-4/camera-obscura
+#. People section: what Daniele Barbaro did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.4"
+msgid "Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer."
+msgstr "Venecia nobelo. En 1568 li priskribis okulvitran lenson metitan en la truon, kaj kovrilon super parto de la lenso por fari la bildon pli klara."
+
+#: hall-4/camera-obscura
+#. People section: what Johannes Kepler did. The names stand above this line.
+msgctxt "piece.camera-obscura.people.5"
+msgid "Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes."
+msgstr "La unua uzis la nomon camera obscura, en 1604. Li faris por si porteblan malluman tendon kun lenso, por desegni pejzaĝojn."
+
+#: hall-4/camera-obscura
+#. Note under the People section.
+msgctxt "piece.camera-obscura.note"
+msgid "No inventor is known. The Mohist text speaks of the turned shadow and the crossing light, and does not describe a chamber."
+msgstr "Neniu inventinto estas konata. La mohista teksto parolas pri la renversita ombro kaj la kruciĝanta lumo, kaj ne priskribas kameron."
+
+#: hall-4/camera-obscura
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.camera-obscura.view.inside.label"
+msgid "Step inside"
+msgstr "Eniri"
+
+#: hall-4/camera-obscura
+#. Line shown while the visitor is at that place.
+msgctxt "piece.camera-obscura.view.inside.hint"
+msgid "The chamber is closed and dark. The view from the windows lies on the paper upside down: sky below, town above."
+msgstr "La kamero estas fermita kaj malluma. La vidaĵo el la fenestroj kuŝas sur la papero renversite: ĉielo malsupre, urbeto supre."
+
+#: hall-4/camera-obscura
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.camera-obscura.view.hole.label"
+msgid "Go close to the hole"
+msgstr "Proksimiĝi al la truo"
+
+#: hall-4/camera-obscura
+#. Line shown while the visitor is at that place.
+msgctxt "piece.camera-obscura.view.hole.hint"
+msgid "A brass disc turns between a small hole and a lens. The lens has the wider opening, so it lets in more light."
+msgstr "Latuna disko turniĝas inter malgranda truo kaj lenso. La lenso havas la pli larĝan aperturon, do ĝi enlasas pli da lumo."
+
+#: hall-4/shadow-play
+#. Name of a piece.
+msgctxt "piece.shadow-play.name"
+msgid "Shadow play"
+msgstr "Ombroteatro"
+
+#: hall-4/shadow-play
+#. Other names the piece goes by.
+msgctxt "piece.shadow-play.aka"
+msgid "Shadow theatre, shadow puppets"
+msgstr "Ombroludo, ombropupoj"
+
+#: hall-4/shadow-play
+#. The date of the piece, as its label gives it.
+msgctxt "piece.shadow-play.yearText"
+msgid "about 1000 CE or earlier"
+msgstr "ĉirkaŭ la jaro 1000 aŭ pli frue"
+
+#: hall-4/shadow-play
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.shadow-play.origin"
+msgid "Recorded in Java and in China about a thousand years ago. Where it began, and how much older it is, are not settled. No inventor is known"
+msgstr "Atestita en Javo kaj en Ĉinio antaŭ ĉirkaŭ mil jaroj. Kie ĝi komenciĝis, kaj kiom pli malnova ĝi estas, ne estas klare. Neniu inventinto estas konata"
+
+#: hall-4/shadow-play
+#. Where this kind of display stands today.
+msgctxt "piece.shadow-play.statusNote"
+msgid "Performed today in Indonesia, China, Türkiye and other countries. UNESCO lists wayang, Chinese shadow puppetry and Karagöz as intangible cultural heritage."
+msgstr "Hodiaŭ ĝi estas ludata en Indonezio, Ĉinio, Turkio kaj aliaj landoj. Unesko listigas wayang, la ĉinan ombroteatron kaj Karagöz kiel nemateriajn kulturajn heredaĵojn."
+
+#: hall-4/shadow-play
+#. First sentence of the label.
+msgctxt "piece.shadow-play.lead"
+msgid "A lamp shines on a cloth screen from behind, and flat figures held between the two cast the shadows that the audience watches."
+msgstr "Lampo lumigas tolan ekranon de malantaŭe, kaj plataj figuroj tenataj inter ambaŭ ĵetas la ombrojn, kiujn la spektantoj rigardas."
+
+#: hall-4/shadow-play
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.shadow-play.how.1"
+msgid "The screen is thin cloth stretched in a frame, and one lamp burns behind it. The puppeteer holds flat figures on rods between the lamp and the cloth. Where a figure blocks the light the cloth stays dark, and the audience on the other side sees its outline. Holes cut through a figure let the light pass and draw an eye, a feather or the pattern of a garment as bright lines."
+msgstr "La ekrano estas maldika tolo streĉita en kadro, kaj malantaŭ ĝi brulas unu lampo. La pupisto tenas platajn figurojn sur stangetoj inter la lampo kaj la tolo. Kie figuro baras la lumon, la tolo restas malhela, kaj la spektantoj ĉe la alia flanko vidas ĝian konturon. Truoj tranĉitaj tra la figuro tralasas la lumon kaj desegnas okulon, plumon aŭ la ornamon de vesto per helaj linioj."
+
+#: hall-4/shadow-play
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.shadow-play.how.2"
+msgid "Distance does the rest. A figure held against the cloth casts a shadow of its own size, with a sharp edge. The further it is from the cloth, the larger its shadow. The edge also goes soft, because a flame is not a point: beside the full shadow lies a band that part of the flame still reaches. A flame moves, too, so the shadows are never quite still."
+msgstr "La distanco faras la reston. Figuro premita al la tolo ĵetas ombron de sia propra grando, kun akra rando. Ju pli for ĝi estas de la tolo, des pli granda estas ĝia ombro. La rando ankaŭ moliĝas, ĉar flamo ne estas punkto: apud la plena ombro kuŝas strio, kiun parto de la flamo ankoraŭ atingas. Flamo krome moviĝas, do la ombroj neniam estas tute senmovaj."
+
+#: hall-4/shadow-play
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.shadow-play.how.3"
+msgid "In Java and Bali the theatre is called wayang kulit. Its figures are of buffalo hide, pierced and painted, and one puppeteer, the dalang, works them all by a coconut oil lamp, today usually an electric one. Chinese figures are cut from leather or paper in colour, with twelve to twenty-four moving joints. In the Turkish theatre, named after its hero Karagöz, the hide is worked until light passes through it and is then coloured, so the shadows have colour."
+msgstr "En Javo kaj Balio ĉi tiu teatro nomiĝas wayang kulit. Ĝiaj figuroj estas el bubala felo, truitaj kaj pentritaj, kaj unu pupisto, la dalang, movas ilin ĉiujn ĉe la lumo de kokosolea lampo, hodiaŭ plej ofte elektra. Ĉinaj figuroj estas tranĉitaj el ledo aŭ papero, kolore, kaj havas dek du ĝis dudek kvar moveblajn artikojn. En la turka teatro, nomata laŭ sia heroo Karagöz, oni prilaboras la felon ĝis ĝi tralasas lumon kaj poste kolorigas ĝin, do la ombroj havas koloron."
+
+#: hall-4/shadow-play
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.shadow-play.how.4"
+msgid "Where it began and how old it is are not settled. One encyclopedia names China and the islands of Java and Bali as the likely places. Another names India, or Central Asia and China, more than two thousand years ago. What is recorded is later. A Javanese poem of the eleventh century describes a leather shadow figure, and the first clear mention in China is from the Northern Song dynasty, 960 to 1127. The oldest texts that survive for the Arabic shadow theatre are three plays by Ibn Daniyal, who settled in Cairo and died about 1311. Karagöz is said to have been first played in Egypt for the Ottoman sultan Selim I, who reigned from 1512 to 1520."
+msgstr "Kie ĝi komenciĝis kaj kiom aĝa ĝi estas, ne estas klare. Unu enciklopedio nomas Ĉinion kaj la insulojn Javo kaj Balio kiel verŝajnajn lokojn. Alia nomas Hindion, aŭ Centran Azion kaj Ĉinion, antaŭ pli ol du mil jaroj. Kio estas atestita, estas pli malfrua. Java poemo de la 11-a jarcento priskribas ledan ombrofiguron, kaj la unua klara mencio en Ĉinio estas el la Norda Song-dinastio, de 960 ĝis 1127. La plej malnovaj konservitaj tekstoj de la araba ombroteatro estas tri teatraĵoj de Ibn Daniyal, kiu ekloĝis en Kairo kaj mortis ĉirkaŭ 1311. Oni diras, ke Karagöz estis unuafoje ludita en Egiptujo antaŭ la otomana sultano Selim la 1-a, kiu regis de 1512 ĝis 1520."
+
+#: hall-4/shadow-play
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.1"
+msgid "Needs only a lamp, a cloth and figures that one person can carry"
+msgstr "Bezonas nur lampon, tolon kaj figurojn, kiujn unu homo povas porti"
+
+#: hall-4/shadow-play
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.2"
+msgid "Changes the size of a figure in a moment, by moving it between the cloth and the lamp"
+msgstr "Ŝanĝas la grandon de figuro en momento, per movo inter la tolo kaj la lampo"
+
+#: hall-4/shadow-play
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.good.3"
+msgid "Lets one performer work a whole cast of figures"
+msgstr "Ebligas al unu ludanto movi tutan rolularon de figuroj"
+
+#: hall-4/shadow-play
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.1"
+msgid "Shows outlines only: whatever is not cut through the figure is not seen"
+msgstr "Montras nur konturojn: kio ne estas tranĉita tra la figuro, tio ne videblas"
+
+#: hall-4/shadow-play
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.2"
+msgid "Needs darkness on the side of the audience"
+msgstr "Bezonas mallumon ĉe la flanko de la spektantoj"
+
+#: hall-4/shadow-play
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.shadow-play.bad.3"
+msgid "Depends on a living performer, and has to compete with television and video for its audience"
+msgstr "Dependas de vivanta ludanto, kaj devas konkuri kun televido kaj video pri siaj spektantoj"
+
+#: hall-4/shadow-play
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.shadow-play.look"
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted."
+msgstr "La modelo montras tolan ekranon en ligna kadro, kun olelampo pendanta malantaŭ ĝi. Tri plataj figuroj staras sur stangetoj inter la lampo kaj la tolo: arbo, cervo kaj birdo. De antaŭe vi vidas nur iliajn ombrojn. La arbo kaj la cervo estas premitaj al la tolo, do iliaj ombroj estas akraj. La birdo pasas proksime de la tolo kaj poste revenas ĉe la flanko de la lampo: ĝia ombro fariĝas granda kaj mola, kaj la cervo levas la kapon. Rigardu, kiel la randoj tremas kun la flamo. Tage la ombroj estas palaj, do malŝaltu la taglumon. Poste premu la butonon Iri malantaŭ la ekranon por vidi la figurojn mem, truitajn kaj pentritajn."
+
+#: hall-4/shadow-play
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.shadow-play.fact"
+msgid "In Java the lamp has a name of its own, the blencong, and a keeper of its own: a stage assistant tends the flame so that the shadows on the screen stay clear. In many performances today electric light has taken its place."
+msgstr "En Javo la lampo havas propran nomon, blencong, kaj propran gardanton: scena helpanto prizorgas la flamon, por ke la ombroj sur la ekrano restu klaraj. En multaj nunaj prezentadoj elektra lumo anstataŭis ĝin."
+
+#: hall-4/shadow-play
+#. People section: what Ibn Daniyal did. The names stand above this line.
+msgctxt "piece.shadow-play.people.1"
+msgid "Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre."
+msgstr "Okulkuracisto, naskita en Mosulo en 1248. Li ekloĝis en Kairo kaj verkis tie tri ombroteatraĵojn, la plej malnovajn konservitajn tekstojn de la araba ombroteatro."
+
+#: hall-4/shadow-play
+#. People section: what François Dominique Séraphin did. The names stand above this line.
+msgctxt "piece.shadow-play.people.2"
+msgid "Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows."
+msgstr "Prezentis ombroludojn en Versajlo ekde 1771 kaj translokis sian teatron al Parizo en 1784. En Francio oni anoncis tiajn spektaklojn kiel ombres chinoises, ĉinaj ombroj."
+
+#: hall-4/shadow-play
+#. People section: what Henri Rivière did. The names stand above this line.
+msgctxt "piece.shadow-play.people.3"
+msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc."
+msgstr "Laboris kun ĝis dudek helpantoj pri la ombroludoj de la kabaredo Le Chat Noir en Parizo, kiu prezentis 45 el ili inter 1885 kaj 1896. Ekde 1887 la figuroj estis el zinko."
+
+#: hall-4/shadow-play
+#. Note under the People section.
+msgctxt "piece.shadow-play.note"
+msgid "No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers."
+msgstr "Neniu inventinto estas registrita por wayang, por la ĉina ombroteatro aŭ por Karagöz. En Javo la metio estis transdonata ene de familioj de pupistoj, muzikistoj kaj figurfaristoj."
+
+#: hall-4/shadow-play
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.shadow-play.view.audience.label"
+msgid "Sit with the audience"
+msgstr "Sidiĝi kun la spektantoj"
+
+#: hall-4/shadow-play
+#. Line shown while the visitor is at that place.
+msgctxt "piece.shadow-play.view.audience.hint"
+msgid "Only shadows reach this side. Held against the cloth, a figure is small and sharp. Out by the lamp it grows and blurs."
+msgstr "Al ĉi tiu flanko venas nur ombroj. Premita al la tolo, figuro estas malgranda kaj akra. Proksime de la lampo ĝi kreskas kaj malklariĝas."
+
+#: hall-4/shadow-play
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.shadow-play.view.behind.label"
+msgid "Go behind the screen"
+msgstr "Iri malantaŭ la ekranon"
+
+#: hall-4/shadow-play
+#. Line shown while the visitor is at that place.
+msgctxt "piece.shadow-play.view.behind.hint"
+msgid "The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still."
+msgstr "La figuroj estas plataj, truitaj kaj pentritaj, ĉiu sur sia stangeto. Unu flamo lumigas ilin ĉiujn, kaj ĝi neniam restas senmova."
 
 #: hall-4/liquid-crystal
 #. Name of a piece.

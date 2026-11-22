@@ -16,7 +16,7 @@ export const halls: Hall[] = [
   },
   {
     id: 4, name: 'Light valves',
-    intro: 'Nothing in this hall makes its own light. A lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve.',
+    intro: 'Nothing in this hall makes its own light. The sun, a lamp or a laser makes the light, and the device blocks it, tilts it or steers it to form a picture. A device that lets light through or blocks it is called a light valve.',
   },
   {
     id: 5, name: 'Paper',

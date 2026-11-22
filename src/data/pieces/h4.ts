@@ -3,6 +3,52 @@ import { src, wiki } from './src';
 
 export const h4: Piece[] = [
   {
+    id: 'camera-obscura', hall: 4, name: 'Camera obscura', aka: 'Dark chamber, pinhole image',
+    year: -300, yearText: 'about 300 BCE', origin: 'One of the earliest known accounts is in the Mohist Canons, compiled in China between the late fourth and the middle of the third century BCE. No inventor is known',
+    status: 'niche', statusNote: 'Built today as a school science project and used by artists. The photographic camera descends from it.',
+    principle: 'gates', needs: ['dark'],
+    lead: 'A small hole in the wall of a dark room lets in light from outside, and the view appears on the opposite wall, upside down.',
+    how: [
+      'Light travels in straight lines. Every point of the scene outside sends light in all directions, but only a narrow bundle from each point passes the hole, and it lands on its own spot on the far wall. The spots together are the picture. All the lines cross in the hole. So what is high outside lands low, and what lies to one side of the hole lands on the other.',
+      'The size of the hole is a compromise. A small hole gives a sharp picture, because each point outside lights only a small spot, but it lets in little light. A larger hole gives a brighter picture and a more blurred one. A hole that is too small blurs the picture again, because light spreads when it passes a very narrow opening.',
+      'A lens in the opening changes the terms. The opening can be wide, and the lens gathers the light from each point into one spot again. In 1568 the Venetian Daniele Barbaro described the convex glass of an old man\'s spectacles set in the hole, and a cover over part of the lens to make the picture clearer.',
+      'The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. Johannes Kepler used it first, in 1604.',
+    ],
+    good: ['Needs no power and has no part that moves or wears out', 'Shows the scene in its own colours and with all its movement', 'Shows near and far things equally sharp when the opening is a bare hole'],
+    bad: ['Gives a dim picture, because a hole small enough for a sharp picture lets in very little light', 'Works only in a darkened room and only while there is light outside', 'Turns the picture upside down', 'Keeps nothing: the picture is there only while the light is'],
+    look: 'The model is a small chamber of boards, blackened inside. The hole is in the wall that faces the windows, and the wall opposite is a sheet of thin paper. On it is the view from those windows, upside down: the sky at the bottom, the mountain and the town above. From outside, the roof and the nearer side wall are left off so that you can look in. Press the Step inside button to see the chamber closed and dark. A brass disc outside turns from a small hole to a lens and back: with the lens the picture is brighter and sharper. Then switch the daylight off. The chamber makes no light, and the picture goes with the day. Only the lamps of the town stay, as faint points, while the lens is in place.',
+    sources: [
+      src('paper', 'Schemmel and Boltz, The Mohist Canon and Alternative Origins of Theoretical Science, in Theoretical Knowledge in the Mohist Canon, Springer (2022)', 'https://link.springer.com/chapter/10.1007/978-3-031-08797-4_2'),
+      src('reference', 'Mohist Canons, Stanford Encyclopedia of Philosophy', 'https://plato.stanford.edu/entries/mohist-canons/'),
+      src('reference', 'Ibn al-Haytham, Encyclopaedia Britannica', 'https://www.britannica.com/biography/Ibn-al-Haytham'),
+      src('reference', 'Camera Obscura, Encyclopaedia Britannica, eleventh edition (1911)', 'https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Camera_Obscura'),
+      wiki('Camera_obscura', 'Camera obscura'), wiki('Pinhole_camera', 'Pinhole camera'),
+    ],
+  },
+  {
+    id: 'shadow-play', hall: 4, name: 'Shadow play', aka: 'Shadow theatre, shadow puppets',
+    year: 1000, yearText: 'about 1000 CE or earlier', origin: 'Recorded in Java and in China about a thousand years ago. Where it began, and how much older it is, are not settled. No inventor is known',
+    status: 'production', statusNote: 'Performed today in Indonesia, China, Türkiye and other countries. UNESCO lists wayang, Chinese shadow puppetry and Karagöz as intangible cultural heritage.',
+    principle: 'gates', needs: ['dark'],
+    lead: 'A lamp shines on a cloth screen from behind, and flat figures held between the two cast the shadows that the audience watches.',
+    how: [
+      'The screen is thin cloth stretched in a frame, and one lamp burns behind it. The puppeteer holds flat figures on rods between the lamp and the cloth. Where a figure blocks the light the cloth stays dark, and the audience on the other side sees its outline. Holes cut through a figure let the light pass and draw an eye, a feather or the pattern of a garment as bright lines.',
+      'Distance does the rest. A figure held against the cloth casts a shadow of its own size, with a sharp edge. The further it is from the cloth, the larger its shadow. The edge also goes soft, because a flame is not a point: beside the full shadow lies a band that part of the flame still reaches. A flame moves, too, so the shadows are never quite still.',
+      'In Java and Bali the theatre is called wayang kulit. Its figures are of buffalo hide, pierced and painted, and one puppeteer, the dalang, works them all by a coconut oil lamp, today usually an electric one. Chinese figures are cut from leather or paper in colour, with twelve to twenty-four moving joints. In the Turkish theatre, named after its hero Karagöz, the hide is worked until light passes through it and is then coloured, so the shadows have colour.',
+      'Where it began and how old it is are not settled. One encyclopedia names China and the islands of Java and Bali as the likely places. Another names India, or Central Asia and China, more than two thousand years ago. What is recorded is later. A Javanese poem of the eleventh century describes a leather shadow figure, and the first clear mention in China is from the Northern Song dynasty, 960 to 1127. The oldest texts that survive for the Arabic shadow theatre are three plays by Ibn Daniyal, who settled in Cairo and died about 1311. Karagöz is said to have been first played in Egypt for the Ottoman sultan Selim I, who reigned from 1512 to 1520.',
+    ],
+    good: ['Needs only a lamp, a cloth and figures that one person can carry', 'Changes the size of a figure in a moment, by moving it between the cloth and the lamp', 'Lets one performer work a whole cast of figures'],
+    bad: ['Shows outlines only: whatever is not cut through the figure is not seen', 'Needs darkness on the side of the audience', 'Depends on a living performer, and has to compete with television and video for its audience'],
+    look: 'The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted.',
+    sources: [
+      src('archive', 'Wayang puppet theatre, UNESCO Intangible Cultural Heritage', 'https://ich.unesco.org/en/RL/wayang-puppet-theatre-00063'),
+      src('archive', 'Chinese shadow puppetry, UNESCO Intangible Cultural Heritage', 'https://ich.unesco.org/en/RL/chinese-shadow-puppetry-00421'),
+      src('archive', 'Karagöz, UNESCO Intangible Cultural Heritage', 'https://ich.unesco.org/en/RL/karagoz-00180'),
+      src('reference', 'Shadow play, Encyclopaedia Britannica', 'https://www.britannica.com/art/shadow-play'),
+      wiki('Shadow_play', 'Shadow play'), wiki('Wayang_kulit', 'Wayang kulit'), wiki('Karag%C3%B6z_and_Hacivat', 'Karagöz and Hacivat'), wiki('Shadow'),
+    ],
+  },
+  {
     id: 'liquid-crystal', hall: 4, name: 'Liquid crystal display', aka: 'LCD, twisted nematic',
     year: 1970, origin: 'Martin Schadt and Wolfgang Helfrich, Hoffmann-La Roche, Switzerland. Patent filed 4 December 1970',
     status: 'production', statusNote: 'In most monitors, televisions and instruments. Liquid crystal televisions overtook cathode ray tube televisions in worldwide sales at the end of 2007.',

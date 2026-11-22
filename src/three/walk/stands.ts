@@ -7,8 +7,8 @@ import { glows } from './glows';
 import type { Sign } from './hall';
 
 /**
- * The fifty blocks and what stands on them. A phone could not run fifty models at once, and nobody can look
- * at fifty at once. So each block carries a still picture of its piece, cut out and stood upright, which
+ * The blocks and what stands on them. A phone could not run every model at once, and nobody can look
+ * at all of them at once. So each block carries a still picture of its piece, cut out and stood upright, which
  * turns to face the visitor. Only the few pieces nearest the visitor are the real models, running.
  * A picture taken from the front would be wrong for someone coming down the hall, who sees every piece ahead
  * from well round its side. So each piece has three pictures, and the one nearest the visitor's angle is shown.

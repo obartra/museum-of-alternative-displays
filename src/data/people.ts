@@ -4,8 +4,8 @@ import { src } from './pieces/src';
 /**
  * One line of a label's People section: the people who share one deed, and the deed.
  * `she` names the women among them, for the trail of the women.
- * `aside` marks a line about what came before the piece: its people did not make the piece, so the plate on
- * its block in the walk does not carry their names.
+ * `aside` marks a line whose people did not make the piece: what came before it, or those who described or
+ * used a thing that has no known maker. The plate on its block in the walk does not carry their names.
  */
 export interface Entry { who: string[]; did: string; she?: string[]; aside?: boolean }
 
@@ -154,6 +154,32 @@ export const people: Record<string, Credit> = {
     ],
   },
   'flexible-display': { people: [{ who: ['Nicholas Sheridon'], did: 'Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.' }] },
+  'camera-obscura': {
+    people: [
+      { who: ['Mozi'], aside: true, did: 'Taught in China about 430 BCE, and the Mohist school is named after him. Its later members wrote the Canons, which hold an early account of a picture turned over by a small hole.' },
+      { who: ['Ibn al-Haytham'], aside: true, did: 'Born in Basra about 965, died in Cairo about 1040. In a dark chamber he studied how light passes through an opening, and how the sun in eclipse looks through a small hole.' },
+      { who: ['Gemma Frisius'], aside: true, did: 'Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one.' },
+      { who: ['Daniele Barbaro'], aside: true, did: 'Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer.' },
+      { who: ['Johannes Kepler'], aside: true, did: 'Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes.' },
+    ],
+    note: 'No inventor is known. The Mohist text speaks of the turned shadow and the crossing light, and does not describe a chamber.',
+    sources: [
+      src('reference', 'Mohism, Stanford Encyclopedia of Philosophy', 'https://plato.stanford.edu/entries/mohism/'),
+      src('archive', 'Ibn al-Haytham and the Legacy of Arabic Optics, International Year of Light 2015', 'https://www.light2015.org/Home/ScienceStories/1000-Years-of-Arabic-Optics.html'),
+    ],
+  },
+  'shadow-play': {
+    people: [
+      { who: ['Ibn Daniyal'], aside: true, did: 'Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre.' },
+      { who: ['François Dominique Séraphin'], aside: true, did: 'Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows.' },
+      { who: ['Henri Rivière'], aside: true, did: 'Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc.' },
+    ],
+    note: 'No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers.',
+    sources: [
+      src('reference', 'Ibn Daniel, World Encyclopedia of Puppetry Arts, UNIMA', 'https://wepa.unima.org/en/?p=773'),
+      src('reference', 'Muḥammad Ibn Dāniyāl (Wikipedia)', 'https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_Ibn_D%C4%81niy%C4%81l'),
+    ],
+  },
   'liquid-crystal': {
     people: [
       { who: ['Martin Schadt', 'Wolfgang Helfrich'], did: 'Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970.' },

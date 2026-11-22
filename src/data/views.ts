@@ -99,6 +99,14 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'edge', kind: 'detail', label: 'Look along the edge', hint: 'The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below.' },
   ],
   // hall 4, light valves
+  'camera-obscura': [
+    { id: 'inside', kind: 'person', label: 'Step inside', hint: 'The chamber is closed and dark. The view from the windows lies on the paper upside down: sky below, town above.' },
+    { id: 'hole', kind: 'detail', label: 'Go close to the hole', hint: 'A brass disc turns between a small hole and a lens. The lens has the wider opening, so it lets in more light.' },
+  ],
+  'shadow-play': [
+    { id: 'audience', kind: 'person', label: 'Sit with the audience', hint: 'Only shadows reach this side. Held against the cloth, a figure is small and sharp. Out by the lamp it grows and blurs.' },
+    { id: 'behind', kind: 'detail', label: 'Go behind the screen', hint: 'The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still.' },
+  ],
   'liquid-crystal': [
     { id: 'layers', kind: 'detail', label: 'Go between the layers', hint: 'The crystal layer alone shows only grey. It sets how far each cell twists the light. The colour comes from the filter.' },
   ],

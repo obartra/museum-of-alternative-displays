@@ -3,6 +3,14 @@ import type { Fact } from './facts';
 /** Worth knowing: one fact per piece for halls 4, 5, 6 and 7. Each comes from the source beside it, which was opened and read. */
 export const factsB: Record<string, Fact> = {
   // Hall 4
+  'camera-obscura': {
+    text: 'A gap between the leaves of a tree works as the hole of a camera obscura. During a partial eclipse of the sun, the patches of light on the ground under the tree turn into crescents, each one a picture of the sun.',
+    source: { label: 'Eclipse in the Shade, Astronomy Picture of the Day, NASA (1999)', url: 'https://science.nasa.gov/image-article/apod-1999-august-13-eclipse-in-the-shade/', kind: 'archive' },
+  },
+  'shadow-play': {
+    text: 'In Java the lamp has a name of its own, the blencong, and a keeper of its own: a stage assistant tends the flame so that the shadows on the screen stay clear. In many performances today electric light has taken its place.',
+    source: { label: 'Blencong: The Traditional Lamp That Brings Shadow Puppets to Life, Museum Sonobudoyo, Yogyakarta', url: 'https://sonobudoyo.jogjaprov.go.id/en/tulisan/read/blencong-cahaya-yang-menghidupkan-bayangan-wayang', kind: 'archive' },
+  },
   'liquid-crystal': {
     text: 'The twist comes from rubbing. Traditionally, a thin plastic film on each glass plate is rubbed in one direction, at right angles to the other plate, and the molecules line up along the strokes. Why this works was debated for most of a century.',
     source: { label: 'Stöhr, Samant and Lüning, From NEXAFS Spectroscopy to New Flat Panel Displays, Stanford Synchrotron Radiation Laboratory', url: 'https://www-ssrl.slac.stanford.edu/stohr/liquidcrystal.htm', kind: 'lab' },

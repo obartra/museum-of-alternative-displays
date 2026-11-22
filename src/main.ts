@@ -133,6 +133,8 @@ function shell(inner: string, hall?: number, current?: string): void {
 }
 
 const chip = (s: Status) => `<span class="chip chip--${s}">${esc(said.status(s))}</span>`;
+/** The date of a piece as a list shows it: its year, or for a piece from before 1500 the words its label gives, since such a year is only kept for sorting. */
+const yearOf = (p: Piece) => esc(p.year < 1500 ? said.piece(p).yearText ?? String(p.year) : String(p.year));
 
 // ---------- entrance ----------
 function entrance(): void {
@@ -218,7 +220,7 @@ lightListeners.add((on) => {
 
 /** The first tiles of a list are in view when the page opens: they load at once, the rest as they come near. */
 function tile(p: Piece, i = 9): string {
-  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta">${p.year} ${chip(p.status)}</div></a>`;
+  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta">${yearOf(p)} ${chip(p.status)}</div></a>`;
 }
 
 function hallView(n: number): void {
@@ -617,7 +619,7 @@ function depot(): void {
     if (s.sort === 'year') list = [...list].sort((a, b) => a.year - b.year);
     if (s.sort === 'name') list = [...list].sort((a, b) => byName(said.piece(a).name, said.piece(b).name));
     document.getElementById('count')!.textContent = list.length === pieces.length ? t('depot.count.all', { n: list.length }) : list.length ? t('depot.count.some', { n: list.length, total: pieces.length }) : t('depot.count.none');
-    document.getElementById('rows')!.innerHTML = list.map((p) => `<a class="row" href="#piece-${p.id}" data-hall="${p.hall}"><span class="row__hall" aria-hidden="true">${p.hall}</span><span><span class="row__name">${esc(said.piece(p).name)}</span><br><span class="small muted">${esc(said.piece(p).lead)}</span></span><span style="text-align:right"><span class="row__year">${p.year}</span><br>${chip(p.status)}</span></a>`).join('');
+    document.getElementById('rows')!.innerHTML = list.map((p) => `<a class="row" href="#piece-${p.id}" data-hall="${p.hall}"><span class="row__hall" aria-hidden="true">${p.hall}</span><span><span class="row__name">${esc(said.piece(p).name)}</span><br><span class="small muted">${esc(said.piece(p).lead)}</span></span><span style="text-align:right"><span class="row__year">${yearOf(p)}</span><br>${chip(p.status)}</span></a>`).join('');
   };
   form.addEventListener('change', draw);
   form.addEventListener('submit', (e) => e.preventDefault());

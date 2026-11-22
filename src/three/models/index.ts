@@ -3,6 +3,7 @@ import * as h1 from './h1';
 import * as h2 from './h2';
 import * as h3 from './h3';
 import * as h4 from './h4';
+import * as h4b from './h4b';
 import * as h5 from './h5';
 import * as h6 from './h6';
 import * as h7 from './h7';
@@ -33,6 +34,8 @@ export const builders: Record<string, () => Built> = {
   'thin-film-el': h3.tfel,
   'transparent-display': h3.transparent,
   'flexible-display': h3.flexible,
+  'camera-obscura': h4b.cameraObscura,
+  'shadow-play': h4b.shadowPlay,
   'liquid-crystal': h4.lcd,
   'micromirror': h4.dmd,
   'lcos': h4.lcos,
