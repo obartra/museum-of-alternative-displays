@@ -837,13 +837,20 @@ function route(): void {
 
 /**
  * The name of a hall is a single long word in some languages, and a plate cannot break a word. Where a plate would
- * be wider than the page, its lettering is made smaller until it fits.
+ * be wider than the page, its lettering is made smaller until it fits. The plate of a piece is as wide as its column
+ * and cannot grow: there a word too long for it would stick out of the plate, and is made smaller in the same way.
  */
 function fitPlates(): void {
   for (const title of document.querySelectorAll<HTMLElement>('.plate .plate__title')) {
     title.style.fontSize = '';
     const plate = title.closest<HTMLElement>('.plate')!, within = plate.parentElement!;
     for (let i = 0; i < 6; i++) {
+      const box = getComputedStyle(title), spill = title.scrollWidth - title.clientWidth;
+      if (spill > 0.5) {
+        const left = parseFloat(box.paddingLeft), room = title.clientWidth - left - parseFloat(box.paddingRight);
+        title.style.fontSize = `${Math.max(15, (parseFloat(box.fontSize) * (room - 1)) / (title.scrollWidth - left))}px`;
+        continue;
+      }
       const over = plate.getBoundingClientRect().right - within.getBoundingClientRect().right, wide = title.getBoundingClientRect().width;
       if (over < 0.5 || wide < 40) break;
       title.style.fontSize = `${Math.max(15, (parseFloat(getComputedStyle(title).fontSize) * (wide - over - 1)) / wide)}px`;

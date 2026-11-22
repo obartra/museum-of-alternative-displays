@@ -113,8 +113,9 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     root.hidden = false;
     for (const el of [root, who]) el.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
     root.dataset.voices = any ? 'some' : 'none';
+    // the line is told how many parts it has: a phone on its side folds it into two rows, and needs the number to do so
     root.innerHTML = `
-<div class="guide__line" role="group" aria-label="${tx('tour.line')}">${tour.parts.map((p) => { const n = stops.indexOf(p) + 1, title = told().parts[p.id].title; return `<button type="button" class="guide__dot${n ? '' : ' guide__dot--cap'}" data-guide="part" data-part="${p.id}" aria-label="${esc(n ? `${n}. ${title}` : title)}" title="${esc(n ? `${n}. ${title}` : title)}"><i></i></button>`; }).join('')}</div>
+<div class="guide__line" role="group" aria-label="${tx('tour.line')}" style="--parts: ${tour.parts.length}">${tour.parts.map((p) => { const n = stops.indexOf(p) + 1, title = told().parts[p.id].title; return `<button type="button" class="guide__dot${n ? '' : ' guide__dot--cap'}" data-guide="part" data-part="${p.id}" aria-label="${esc(n ? `${n}. ${title}` : title)}" title="${esc(n ? `${n}. ${title}` : title)}"><i></i></button>`; }).join('')}</div>
 <div class="guide__now">
   <div class="guide__what">
     <p class="guide__no" aria-live="polite"></p>
@@ -180,8 +181,8 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     key.setAttribute('aria-label', t(on ? 'tour.pause' : 'tour.play')); key.title = t(on ? 'tour.pause' : 'tour.play');
     const long = mine() && Number.isFinite(a.duration) ? a.duration : 0, done = mine() ? a.currentTime : 0;
     $('.guide__time').textContent = long && sound ? `−${clock(Math.max(0, long - done))}` : '';
-    // while she speaks, the line grows from this stop towards the next
-    root.querySelector<HTMLElement>('.guide__dot.is-now')?.style.setProperty('--played', long ? (a.ended ? 1 : Math.min(1, done / long)).toFixed(3) : '0');
+    // while she speaks, the line grows from this stop towards the next. How far is kept on the line itself, where both stops read it
+    root.querySelector<HTMLElement>('.guide__line')?.style.setProperty('--played', long ? (a.ended ? 1 : Math.min(1, done / long)).toFixed(3) : '0');
   };
 
   const say = () => {

@@ -159,7 +159,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   };
   /** Where the tour wants the visitor stood, asked for before the hall was there to stand in. */
   let waiting: { piece: string; stand?: Stand } | undefined, failed = false;
-  const small = () => matchMedia('(max-width: 619px)').matches;
+  /** A phone, held upright or on its side: the screen that a tour is given the whole of. */
+  const small = () => matchMedia('(max-width: 619px), (orientation: landscape) and (max-height: 500px)').matches;
   /** The words on how to walk leave the picture: at once, or after a while. */
   let quieting = 0;
   const quiet = (after = 0) => {
