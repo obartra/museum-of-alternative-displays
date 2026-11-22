@@ -1302,6 +1302,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "En un iPhone o un iPad, toca «Comparteix» al Safari i després «Afegeix a la pantalla d'inici»."
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "Visita breu"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "Tres peces en tres minuts"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "Una pantalla que mou lamel·les de debò, una que fa la seva pròpia llum i una que manlleva la llum de la sala."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "Visita breu, {n} de {of}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "Següent: {name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "Acaba la visita"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "Deixa la visita"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "Aquí res no fa llum. Cada caràcter és un parell de lamel·les de debò, i el panell conserva el missatge sense gens de corrent. El que hi perd: només mostra el que porta imprès a les lamel·les."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "Aquí cada punt fa la seva pròpia llum. Apaga la llum del dia: les parts negres del panell es fonen en la foscor i els colors es queden. El que hi perd: els píxels encesos envelleixen, i una imatge estàtica hi deixa un fantasma."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "Aquesta pàgina no fa llum. Manlleva la llum de la sala, com el paper imprès, i només gasta electricitat per canviar de pàgina. Apaga la llum del dia: la pàgina encara hi és, però no la pots llegir."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "Eren tres de {n}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "Cada peça del museu tria d'on ve la llum de la seva imatge, i renuncia a alguna cosa per aquesta tria. Cada fitxa diu en què és bona la peça i on falla."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "Les altres peces són en set àmbits. Recorre'ls, o busca'n una a l'índex."
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"

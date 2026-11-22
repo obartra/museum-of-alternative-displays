@@ -1306,6 +1306,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "Sur iPhone aŭ iPad, tuŝetu la butonon por kunhavigi en Safari, kaj poste elektu aldoni al la hejmekrano."
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "Mallonga vizito"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "Tri eksponaĵoj en tri minutoj"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "Unu vidigilo, kiu movas verajn klapojn, unu, kiu faras propran lumon, kaj unu, kiu pruntas la lumon de la ĉambro."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "Mallonga vizito, {n} el {of}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "Sekva: {name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "Fini la viziton"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "Forlasi la viziton"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "Ĉi tie nenio faras lumon. Ĉiu signo estas paro da veraj klapoj, kaj la tabulo tenas sian mesaĝon tute sen kurento. Kion ĝi perdas: ĝi montras nur tion, kio estas presita sur ĝiaj klapoj."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "Ĉi tie ĉiu punkto faras propran lumon. Malŝaltu la taglumon: la nigraj partoj de la panelo malaperas en la mallumo, kaj la koloroj restas. Kion ĝi perdas: lumantaj bilderoj maljuniĝas, kaj senmova bildo lasas fantomon."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "Ĉi tiu paĝo ne faras lumon. Ĝi pruntas la lumon de la ĉambro, kiel presaĵo, kaj uzas energion nur por ŝanĝi la paĝon. Malŝaltu la taglumon: la paĝo ankoraŭ estas tie, sed vi ne povas legi ĝin."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "Tio estis tri el {n}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "Ĉiu eksponaĵo de la muzeo elektas, de kie venas la lumo de ĝia bildo, kaj rezignas pri io pro tiu elekto. Ĉiu etikedo diras, pri kio ĝia eksponaĵo estas bona kaj kie ĝi malsukcesas."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "La aliaj eksponaĵoj staras en sep haloj. Promenu tra ili, aŭ serĉu unu en la indekso."
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"

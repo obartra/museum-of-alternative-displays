@@ -1302,6 +1302,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "iPhoneやiPadでは、Safariで「共有」をタップし、続けて「ホーム画面に追加」をタップします。"
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "短い見学"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "3分で見る3つの展示品"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "本物のフラップを動かすもの、自分で光るもの、周囲の光を借りるもの。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "短い見学 {n}/{of}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "次へ: {name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "見学を終える"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "見学をやめる"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "ここでは何も光りません。文字はどれも本物のフラップ2枚でできていて、まったく電力を使わずに表示を保ちます。その代わり、フラップに印刷されたものしか表示できません。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "ここでは点の一つひとつが自分で光ります。日光を消してください。パネルの黒い部分は闇に消え、色だけが残ります。その代わり、点灯した画素は劣化するので、動かない映像は跡を残します。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "このページは光りません。印刷物のように周囲の光を借り、電力を使うのはページを変えるときだけです。日光を消してください。ページはそこにありますが、読めません。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "{n}点のうちの3点でした"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "館内の展示品はどれも、映像の光をどこから得るかを選び、その選択のために何かをあきらめています。どのラベルにも、その展示品の得意なことと苦手なことが書いてあります。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "ほかの展示品は7つの展示室にあります。歩いて見るか、索引で探してください。"
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"

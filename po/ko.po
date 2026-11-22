@@ -1302,6 +1302,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "iPhone이나 iPad에서는 Safari에서 공유를 탭한 다음 홈 화면에 추가를 탭하세요."
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "짧은 관람"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "3분에 보는 전시품 세 점"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "진짜 플랩을 움직이는 것, 스스로 빛을 내는 것, 주변의 빛을 빌리는 것."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "짧은 관람 {n}/{of}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "다음: {name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "관람 마치기"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "관람 그만두기"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "여기서는 아무것도 빛을 내지 않습니다. 글자 하나하나가 진짜 플랩 두 장이고, 표시판은 전력을 전혀 쓰지 않고 내용을 유지합니다. 그 대신 플랩에 인쇄된 것만 보여 줄 수 있습니다."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "여기서는 점 하나하나가 스스로 빛을 냅니다. 햇빛을 끄세요. 패널의 검은 부분은 어둠 속으로 사라지고 색만 남습니다. 그 대신 켜진 화소가 노화하기 때문에 멈춘 그림은 잔상을 남깁니다."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "이 지면은 빛을 내지 않습니다. 인쇄물처럼 주변의 빛을 빌리고, 쪽을 바꿀 때에만 전력을 씁니다. 햇빛을 끄세요. 지면은 그대로 있지만 읽을 수 없습니다."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "{n}점 가운데 세 점이었습니다"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "박물관의 전시품은 저마다 영상의 빛을 어디에서 얻을지 고르고, 그 선택 때문에 무언가를 포기합니다. 라벨마다 그 전시품이 잘하는 것과 못하는 것이 적혀 있습니다."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "다른 전시품들은 일곱 전시실에 있습니다. 걸어서 둘러보거나 색인에서 찾아보세요."
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"

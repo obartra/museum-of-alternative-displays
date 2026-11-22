@@ -12,6 +12,7 @@ import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
+import { visit } from './data/visit';
 import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
@@ -152,6 +153,7 @@ function entrance(): void {
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
   <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
+  <a class="visitcard" href="#visit"><span class="visitcard__kind">${tx('visit.kind')}</span><strong class="visitcard__title">${tx('visit.title')}</strong><span class="visitcard__lead">${tx('visit.lead')}</span></a>
   ${toursNow().map(tourCard).join('')}
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
@@ -354,9 +356,41 @@ function changedOn(): string {
   const date = new Intl.DateTimeFormat(langNow().tag, { dateStyle: 'long', timeZone: 'UTC' }).format(day);
   return `<p class="small muted"><time datetime="${__CHANGED__}">${tx('about.changed', { date })}</time></p>`;
 }
+// ---------- the short visit: three pieces, each with a note above it ----------
+const VISIT_NOTES = ['visit.note.1', 'visit.note.2', 'visit.note.3'] as const;
+/** The band above a piece that is a stop of the short visit: where the visitor is, what to notice, and the way on. */
+function visitBand(step: number): string {
+  const next = visit[step + 1], to = next ? pieceById(next) : undefined;
+  return `<aside class="visit" aria-label="${tx('visit.kind')}">
+  <p class="visit__step">${tx('visit.step', { n: step + 1, of: visit.length })}</p>
+  <p class="visit__note">${tx(VISIT_NOTES[step])}</p>
+  <p class="visit__go"><a class="btn" href="#visit-${to ? to.id : 'end'}">${to ? tx('visit.next', { name: said.piece(to).name }) : tx('visit.finish')}</a><a href="#piece-${visit[step]}">${tx('visit.leave')}</a></p>
+</aside>`;
+}
+/** `#visit` is the first stop, `#visit-<piece>` a stop, and `#visit-end` the page after the last one. */
+function visitView(at?: string): void {
+  if (at === 'end') return visitEnd();
+  const step = at ? visit.indexOf(at) : 0;
+  if (step < 0) return notFound();
+  pieceView(visit[step], step);
+}
+function visitEnd(): void {
+  document.title = titled(t('visit.kind'));
+  shell(`
+<div class="stack">
+  <div class="stack prose" style="--gap: 12px">
+    <h1 class="h-sec">${tx('visit.end.title', { n: pieces.length })}</h1>
+    <p>${tx('visit.end.1')}</p>
+    <p>${tx('visit.end.2')}</p>
+  </div>
+  <p class="ways"><a class="btn btn--go" href="#walk">${tx('walk.title')}</a><a class="btn" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
+  ${toursNow().map(tourCard).join('')}
+</div>`);
+}
+
 /** The hall whose pieces are about depth. Only there does a piece offer red and cyan glasses. */
 const DEPTH = 7;
-function pieceView(id: string): void {
+function pieceView(id: string, step?: number): void {
   const p = pieceById(id);
   if (!p) return notFound();
   const hall = hallById(p.hall), x = said.piece(p);
@@ -372,6 +406,7 @@ function pieceView(id: string): void {
   for (const extra of [...(fact ? [fact.source] : []), ...(credit?.sources ?? [])]) if (!sources.some((src) => src.url === extra.url)) sources.push(extra);
   const row = (k: string, v: string) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
   shell(`
+${step === undefined ? '' : visitBand(step)}
 <article class="piece">
   <div class="stage" id="stage">
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: x.name })}" fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>${tx('stage.start')}</button></div>
@@ -768,7 +803,7 @@ function route(): void {
   leave?.(); leave = null;
   // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
   const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
-  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), words = /^words-([a-z0-9-]+)$/.exec(name), toured = tourAt(name);
+  const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), words = /^words-([a-z0-9-]+)$/.exec(name), visited = /^visit(?:-([a-z0-9-]+))?$/.exec(name), toured = tourAt(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   // the workshop that photographs the pieces for the walk: `scripts/cutouts.mjs` drives it
@@ -782,6 +817,7 @@ function route(): void {
   else if (walk) walkView(walk[1]);
   else if (toured) walkView(undefined, toured);
   else if (words) wordsView(words[1]);
+  else if (visited) visitView(visited[1]);
   else notFound();
   fitPlates();
   window.scrollTo(0, 0);

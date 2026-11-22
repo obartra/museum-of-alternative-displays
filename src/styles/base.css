@@ -561,6 +561,21 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 .tourcard__audio svg { width: 18px; height: 18px; flex: none; fill: currentColor; }
 @media (hover: hover) { .tourcard:hover .tourcard__go { background: var(--trail); color: #06110b; } }
 .tourcard:focus-visible { outline: 3px solid var(--trail); outline-offset: 3px; }
+
+/* the short visit: its card on the entrance, and the band above a piece that is one of its stops */
+.visitcard { display: grid; gap: 2px; padding: 12px 16px 14px; border: 2px solid var(--ink); border-radius: 6px; color: var(--ink); text-decoration: none; }
+.visitcard__kind { font: .78rem/1.3 var(--mono); }
+.visitcard__title { font: 800 clamp(1.3rem, 5vw, 1.7rem)/1.05 var(--display); letter-spacing: .01em; text-transform: uppercase; overflow-wrap: anywhere; }
+.visitcard__lead { max-width: 60ch; margin-top: 4px; font-size: .98rem; line-height: 1.45; }
+@media (hover: hover) { .visitcard:hover { background: var(--ink); color: var(--wash); } }
+.visit { display: grid; gap: 6px; margin-bottom: 18px; padding: 12px 16px 14px; border-radius: 6px; background: #14171a; color: #e8e9e3; }
+.visit p { margin: 0; }
+.visit__step { font: .78rem/1.3 var(--mono); color: #c3c6c0; }
+.visit__note { max-width: 64ch; font-size: 1rem; line-height: 1.45; }
+.visit__go { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin-top: 6px; }
+.visit__go a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; }
+.visit__go .btn { padding: 0 16px; border-color: #e8e9e3; background: #e8e9e3; color: #14171a; font-weight: 700; text-decoration: none; }
+.visit a:focus-visible { outline: 3px solid #e8e9e3; outline-offset: 3px; }
 .guide { --trail: #1f9d55; --band: #14171a; --band-ink: #e8e9e3; }
 .guide[hidden] { display: none; }
 /* a tour is on offer: one quiet row, marked with a length of its line */

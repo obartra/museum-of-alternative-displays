@@ -13,6 +13,7 @@ import { people } from '../src/data/people';
 import { portraits } from '../src/data/portraits';
 import { tourFault, tours } from '../src/data/tours';
 import { trails } from '../src/data/trails';
+import { visit } from '../src/data/visit';
 import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
@@ -72,6 +73,14 @@ for (const [id, c] of Object.entries(people)) {
     try { host = new URL(s.url).hostname; } catch { fail(id, `bad source URL ${s.url}`); }
     if (BANNED_HOSTS.test(host)) fail(id, `shops and video hosts are not sources: ${host}`);
   }
+}
+// the short visit stops at pieces of the collection, in the order of the halls, and has a note for each stop
+{
+  const at = visit.map((id) => pieces.find((p) => p.id === id));
+  for (const [n, p] of at.entries()) if (!p) errors.push(`short visit: ${visit[n]} is not a piece`);
+  for (let n = 1; n < at.length; n++) if (at[n] && at[n - 1] && at[n]!.hall < at[n - 1]!.hall) errors.push(`short visit: ${visit[n]} comes after a piece of a later hall`);
+  if (new Set(visit).size !== visit.length) errors.push('short visit: a piece is a stop twice');
+  if (visit.some((_, n) => !(`visit.note.${n + 1}` in en)) || `visit.note.${visit.length + 1}` in en) errors.push('short visit: there must be one sentence visit.note.N for each stop, and no more');
 }
 // a guided tour stops where its trail stops, and is written without the dashes the site does not use
 for (const tour of tours) {

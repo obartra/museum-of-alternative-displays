@@ -1301,6 +1301,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "Auf einem iPhone oder iPad tippen Sie in Safari auf „Teilen“ und dann auf „Zu Home-Bildschirm hinzufügen“."
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "Kurzer Besuch"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "Drei Exponate in drei Minuten"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "Eine Anzeige, die echte Blätter bewegt, eine, die ihr eigenes Licht macht, und eine, die sich das Licht des Raums leiht."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "Kurzer Besuch, {n} von {of}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "Weiter: {name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "Besuch beenden"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "Besuch verlassen"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "Hier macht nichts Licht. Jedes Zeichen ist ein Paar echter Blätter, und die Anzeige hält ihre Meldung ganz ohne Strom. Was sie dafür aufgibt: Sie zeigt nur, was auf ihren Blättern gedruckt steht."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "Hier macht jeder Punkt sein eigenes Licht. Schalten Sie das Tageslicht aus: Die schwarzen Teile des Bildschirms verschwinden im Dunkeln, und die Farben bleiben. Was er dafür aufgibt: Leuchtende Pixel altern, und ein stehendes Bild hinterlässt ein Geisterbild."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "Diese Seite macht kein Licht. Sie leiht sich das Licht des Raums, wie Gedrucktes, und braucht nur Strom, um die Seite zu wechseln. Schalten Sie das Tageslicht aus: Die Seite ist noch da, aber Sie können sie nicht lesen."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "Das waren drei von {n}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "Jedes Exponat im Museum entscheidet, woher das Licht seines Bildes kommt, und gibt für diese Entscheidung etwas auf. Bei jedem Exponat steht, worin es gut ist und woran es scheitert."
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "Die anderen Exponate stehen in sieben Sälen. Gehen Sie hindurch, oder schlagen Sie eines im Verzeichnis nach."
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"

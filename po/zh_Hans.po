@@ -1297,6 +1297,84 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "在iPhone或iPad上，在Safari里轻点“共享”，再轻点“添加到主屏幕”。"
 
 #: interface
+#. Interface.
+msgctxt "ui.visit.kind"
+msgid "Short visit"
+msgstr "短途参观"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.title"
+msgid "Three pieces in three minutes"
+msgstr "三分钟看三件展品"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.lead"
+msgid "One display that moves real flaps, one that makes its own light and one that borrows the light of the room."
+msgstr "一件翻动真实的页片，一件自己发光，一件借用环境光。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.step"
+msgid "Short visit, {n} of {of}"
+msgstr "短途参观，第 {n} 件，共 {of} 件"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.next"
+msgid "Next: {name}"
+msgstr "下一件：{name}"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.finish"
+msgid "Finish the visit"
+msgstr "结束参观"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.leave"
+msgid "Leave the visit"
+msgstr "离开参观"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.1"
+msgid "Nothing here makes light. Every character is a pair of real flaps, and the board holds its message with no power at all. What it gives up: it shows only what is printed on its flaps."
+msgstr "这里没有任何东西发光。每个字符都是一对真实的页片，完全不用电，也能保持显示的内容。它的代价：只能显示印在页片上的内容。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.2"
+msgid "Here every point makes its own light. Switch the daylight off: the black parts of the panel disappear into the dark and the colours stay. What it gives up: lit pixels age, so a still picture leaves a ghost."
+msgstr "这里每个点都自己发光。关掉日光：面板上黑色的部分融进了黑暗，彩色的部分还在。它的代价：亮着的像素会老化，静止的画面会留下残影。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.note.3"
+msgid "This page makes no light. It borrows the light of the room, like print, and uses power only to change the page. Switch the daylight off: the page is still there, but you cannot read it."
+msgstr "这一页不发光。它像印刷品一样借用环境光，只在换页时耗电。关掉日光：页面还在那里，但你读不了。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.visit.end.title"
+msgid "That was three of {n}"
+msgstr "这是 {n} 件中的三件"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.1"
+msgid "Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails."
+msgstr "博物馆里的每件展品都选择了画面的光从哪里来，也为这个选择放弃了一些东西。每件展品的说明都写着它擅长什么、在哪里不行。"
+
+#: interface
+#. Interface.
+msgctxt "ui.visit.end.2"
+msgid "The other pieces stand in seven halls. Walk through them, or look one up in the index."
+msgstr "其余的展品在七个展厅里。走进去看看，或者在索引里查一件。"
+
+#: interface
 #. About page.
 msgctxt "ui.about.licence"
 msgid "Licence"
