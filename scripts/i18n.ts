@@ -7,6 +7,9 @@
  *                                        PO file up to date. A sentence whose English changed is marked fuzzy,
  *                                        which translation tools show as "needs review".
  *   tsx scripts/i18n.ts import <code>    take a language written as src/i18n/locales/<code>.ts into po/
+ *   tsx scripts/i18n.ts merge <code> <file.po>
+ *                                        take the translations of another PO file into po/, sentence by sentence,
+ *                                        wherever the English is still the one they were made from
  *
  * English is the source and is not in po/: it lives with the data. TRANSLATING.md explains the rest.
  */
@@ -122,8 +125,30 @@ async function take(code: string, from?: string): Promise<void> {
   for (const n of notes) console.log(`    note: ${n}`);
 }
 
+/** Takes what another PO file says into a language's own. A sentence whose English has changed since is left alone and named. */
+function merge(code: string, from: string): void {
+  const list = slots(), stem = stemOf(code), book = read(`${PO}/${stem}.po`), other = read(from);
+  const taken: string[] = [], stale: string[] = [], unknown: string[] = [];
+  for (const [key, e] of other.entries) {
+    const s = list.find((x) => x.key === key);
+    if (!e.str.some((x) => x.trim())) continue;
+    if (!s) { unknown.push(key); continue; }
+    if (e.msgid !== s.en) { stale.push(key); continue; }
+    const was = book.entries.get(key);
+    if (was && !was.fuzzy && was.msgid === s.en && was.str.join('\n') === e.str.join('\n')) continue;
+    book.entries.set(key, { msgid: s.en, str: e.str, fuzzy: false, comment: was?.comment });
+    taken.push(key);
+  }
+  write(`${PO}/${stem}.po`, code, list, { head: book.head || HEAD(code), entries: book.entries });
+  console.log(`  ${stem}: ${taken.length} sentences taken from ${from}`);
+  if (stale.length) console.log(`    left alone, because the English has changed since: ${stale.join(', ')}`);
+  if (unknown.length) console.log(`    not sentences of the site: ${unknown.join(', ')}`);
+  if (stale.length || unknown.length) process.exitCode = 1;
+}
+
 const [cmd, ...rest] = process.argv.slice(2);
 if (cmd === 'build') build(rest.includes('--drafts') || process.env.I18N_DRAFTS === '1');
 else if (cmd === 'sync') sync();
 else if (cmd === 'import' && rest[0]) await take(rest[0], rest[1]);
-else { console.error('usage: tsx scripts/i18n.ts build [--drafts] | sync | import <code> [file]'); process.exit(1); }
+else if (cmd === 'merge' && rest[0] && rest[1]) merge(rest[0], rest[1]);
+else { console.error('usage: tsx scripts/i18n.ts build [--drafts] | sync | import <code> [file] | merge <code> <file.po>'); process.exit(1); }

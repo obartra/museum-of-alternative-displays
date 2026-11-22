@@ -71,5 +71,8 @@ add its code to the `Lang` type and a line to `LANGS` there.
 - After a change to the English, run `npm run i18n:sync`. It writes `po/museum.pot` again
   and brings every PO file up to date. Sentences whose English changed are marked fuzzy.
 - `po/LINGUAS` names the files that are built into the site.
+- `npx tsx scripts/i18n.ts merge <code> <file.po>` takes the translations of another PO
+  file into `po/`, for example a file that a translator sent with part of a language. A
+  sentence whose English has changed since is left alone and named.
 - The layout, one PO file to a language beside one POT file, is the one that Weblate,
   Crowdin and Transifex read. None of them is connected yet.
