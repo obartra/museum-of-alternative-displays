@@ -1138,109 +1138,109 @@ msgstr "Percorrer esta trilha"
 #. Interface.
 msgctxt "ui.tour.label"
 msgid "Guided tour"
-msgstr ""
+msgstr "Visita guiada"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.take"
 msgid "Take the guided tour"
-msgstr ""
+msgstr "Fazer a visita guiada"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.spoken"
 msgid "With a spoken guide, about {n} minutes"
-msgstr ""
+msgstr "Com audioguia, cerca de {n} minutos"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
-msgstr ""
+msgstr "Fazer a visita nas salas"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.start"
 msgid "Start the tour"
-msgstr ""
+msgstr "Começar a visita"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.leave"
 msgid "Leave the tour"
-msgstr ""
+msgstr "Sair da visita"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.prev"
 msgid "Previous stop"
-msgstr ""
+msgstr "Parada anterior"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.next"
 msgid "Next stop"
-msgstr ""
+msgstr "Próxima parada"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.play"
 msgid "Hear the guide"
-msgstr ""
+msgstr "Ouvir a guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.pause"
 msgid "Pause the guide"
-msgstr ""
+msgstr "Pausar a guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.sound"
 msgid "Audio guide"
-msgstr ""
+msgstr "Audioguia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
-msgstr ""
+msgstr "As paradas da visita"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.stop"
 msgid "Stop {n} of {total}"
-msgstr ""
+msgstr "Parada {n} de {total}"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.at"
 msgid "{piece}, hall {n}"
-msgstr ""
+msgstr "{piece}, sala {n}"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.listen"
 msgid "Listen to the guide"
-msgstr ""
+msgstr "Ouvir a guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.words"
 msgid "What the guide says"
-msgstr ""
+msgstr "O que a guia diz"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.whole"
 msgid "The whole tour on one page"
-msgstr ""
+msgstr "A visita inteira em uma página"
 
 #: interface
 #. About page.
 msgctxt "ui.about.tour"
 msgid "The guided tour was written for this museum. It adds no facts to the labels, only the thread from one to the next. Where it can be heard, the voice is synthetic: it is made with ElevenLabs from the words shown beside it."
-msgstr ""
+msgstr "A visita guiada foi escrita para este museu. Ela não acrescenta fatos às etiquetas, só o fio que leva de uma à seguinte. Onde pode ser ouvida, a voz é sintética: é gerada com o ElevenLabs a partir do texto mostrado ao lado."
 
 #: interface
 #. Page shown for an address that does not exist.
@@ -8020,334 +8020,334 @@ msgstr "cerca de {n}"
 #. Title of a guided tour.
 msgctxt "tour.women.title"
 msgid "Women in the museum"
-msgstr ""
+msgstr "Mulheres no museu"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
 msgid "A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Uma visita guiada pelas sete salas. Doze displays, dos pinos do braille a um holograma, cada um com pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.women.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "Antes da primeira parada"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
 msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Boas-vindas ao museu. Esta visita segue a linha verde no chão. Ela passa pelas sete salas e para diante de doze displays. Cada um tem pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
 msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
-msgstr ""
+msgstr "A visita espera você em cada parada. Quando quiser seguir, aperte o botão da próxima parada. A primeira é a linha braille da sala 1, onde a imagem é feita de pinos."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: the title of this part.
 msgctxt "tour.women.braille-display.title"
 msgid "Read by touch"
-msgstr ""
+msgstr "Ler com os dedos"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
 msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
-msgstr ""
+msgstr "Este display se lê pelo tato. Fileiras de pinos sobem e descem para escrever uma linha de braille. O modelo escreve a hora. Observe as células da direita. Elas mudam a cada segundo."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
 msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr ""
+msgstr "Embaixo de cada ponto há um cristal que se curva quando recebe uma tensão, e uma alavanca transforma esse pequeno movimento na subida de um pino. Andrée Tretiakoff e Oleg Tretiakoff patentearam essa maneira de levantar os pontos. Fizeram o primeiro pedido na França, em 1974."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
 msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr ""
+msgstr "É a única peça do museu que não precisa de luz nenhuma. Todas as outras paradas da linha verde funcionam com luz. A próxima é o tubo de raios catódicos da sala 2, onde um feixe de elétrons faz uma tela brilhar."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.women.cathode-ray-tube.title"
 msgid "A beam that draws"
-msgstr ""
+msgstr "Um feixe que desenha"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
-msgstr ""
+msgstr "Olhe para a tela. A faixa clara que desce por ela é onde um único feixe de elétrons acabou de traçar as suas linhas. O modelo torna isso cerca de 60 vezes mais lento. De lado dá para ver as bobinas de cobre que guiam o feixe."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr ""
+msgstr "A placa do bloco traz o nome de Ferdinand Braun, que construiu o primeiro tubo desse tipo em 1897. Trinta anos depois, em São Francisco, Philo Farnsworth transmitiu a primeira imagem de televisão totalmente eletrônica. Elma Farnsworth, conhecida como Pem, trabalhou nos laboratórios dele e fazia os desenhos técnicos dos experimentos. O rosto dela esteve entre os primeiros que o sistema transmitiu."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.3"
 msgid "In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps."
-msgstr ""
+msgstr "Na sala 1 a imagem era feita de pinos. Aqui um único feixe a desenha inteira. A próxima parada é a parede de MicroLED da sala 3, onde a imagem é feita de lâmpadas."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: the title of this part.
 msgctxt "tour.women.microled.title"
 msgid "A question at dinner"
-msgstr ""
+msgstr "Uma pergunta no jantar"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.1"
 msgid "The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time."
-msgstr ""
+msgstr "A parede à sua frente é feita de LEDs, cada um pequeno demais para ser visto. Um módulo está fora da parede, encostado no suporte, ainda com a ventosa presa. Uma parede assim se conserta um quadrado de cada vez."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
 msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr ""
+msgstr "Jingyu Lin e Hongxing Jiang são físicos. Em 2000, na Universidade Estadual do Kansas, eles fizeram os primeiros microLEDs. Também são casados, e a ideia começou como uma pergunta à mesa do jantar: o que aconteceria com um LED reduzido a milésimos de milímetro?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.3"
 msgid "Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps."
-msgstr ""
+msgstr "Fique na sala 3. A próxima parada, o display de pontos quânticos, funciona com cristais muito menores do que estas lâmpadas."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: the title of this part.
 msgctxt "tour.women.quantum-dot.title"
 msgid "Colour from size"
-msgstr ""
+msgstr "A cor vem do tamanho"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.1"
 msgid "This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour."
-msgstr ""
+msgstr "Este é um único pixel, aberto em corte e muito ampliado. A luz azul sobe das lâmpadas da placa. No poço da esquerda, cristais grandes a tornam vermelha. No do meio, cristais pequenos a tornam verde. O poço da direita não tem cristais, e o azul passa direto. É só o tamanho de um cristal que define a sua cor."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
 msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr ""
+msgstr "Os cristais se chamam pontos quânticos. A maioria das telas os usa como este modelo, para transformar luz azul em vermelho e verde. Em 1994, em Berkeley, Vicki Colvin e dois colegas seguiram outro caminho. Fizeram uma camada de pontos brilhar passando uma corrente por ela. Colvin é a primeira autora do artigo."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
 msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
-msgstr ""
+msgstr "O tubo de raios catódicos, a parede de LED e este pixel produzem a própria luz. Na sala 4, uma lâmpada ou um laser produz a luz, e o display lhe dá forma. Vá até o laser de varredura."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
 msgctxt "tour.women.scanned-laser.title"
 msgid "Drawing with a laser"
-msgstr ""
+msgstr "Desenhar com um laser"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.1"
 msgid "Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall."
-msgstr ""
+msgstr "Siga os feixes da esquerda para a direita. Três lasers se fundem em um único feixe branco. Dois pequenos espelhos em motores rápidos o direcionam, e o seu olho une o ponto em movimento em um desenho na parede."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
 msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr ""
+msgstr "A placa traz o nome de Joseph Ostoja-Kotkowski, que apresentou um dos primeiros shows de laser em Adelaide. Elsa Garmire, física do Instituto de Tecnologia da Califórnia, fazia imagens com laser. Elas foram filmadas em 1972 e viraram o modelo do Laserium, o show de laser que estreou no Observatório Griffith, em Los Angeles."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.3"
 msgid "In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes."
-msgstr ""
+msgstr "Na sala 2, um feixe de elétrons desenhava a imagem dentro de um tubo. Este feixe é de luz e pode desenhar em qualquer coisa: nuvens, prédios, fumaça. Alguns passos adiante, na mesma sala, uma imagem foi recortada sob medida para um conjunto de formas brancas de gesso."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.women.projection-mapping.title"
 msgid "A picture cut to fit"
-msgstr ""
+msgstr "Uma imagem sob medida"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.1"
 msgid "Find the switch marked Daylight and turn it off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor."
-msgstr ""
+msgstr "Procure o interruptor que diz “Luz do dia” e desligue-o. De dia esta imagem mal se vê. O projetor no tripé é um projetor comum. O trabalho está na imagem, recortada sob medida para as formas em que ela cai. Cada forma recebe o seu próprio padrão, e nenhuma luz cai no chão."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
 msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr ""
+msgstr "Em 1969, a Haunted Mansion da Disneyland usou isso nos seus bustos cantores. Os rostos de cantores foram filmados, e o filme foi projetado em bustos de gesso dos mesmos rostos. Na mesma casa, uma bola de cristal guarda uma cabeça lisa. Leota Toombs, artista do ateliê de projetos da Disney, deu a ela o seu rosto: o filme projetado nessa cabeça é dela."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
 msgid "Before you go on, turn the daylight back on. The next stop is in hall 5, where the displays behave like print: they need the light of the room. Go to the electrophoretic ink, the page of an e-reader."
-msgstr ""
+msgstr "Antes de seguir, acenda de novo a luz do dia. A próxima parada fica na sala 5, onde os displays se comportam como papel impresso: precisam da luz do ambiente. Vá até a tinta eletroforética, a página de um e-reader."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: the title of this part.
 msgctxt "tour.women.electrophoretic-ink.title"
 msgid "A page that bends"
-msgstr ""
+msgstr "Uma página que se dobra"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.1"
 msgid "This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power."
-msgstr ""
+msgstr "Esta é a página de um e-reader. Ela não produz luz. Milhões de cápsulas contêm pigmento preto e pigmento branco, e uma tensão puxa uma das cores para cima. Observe a página por um momento. A cada 15 segundos ela é refeita, com um clarão preto e depois um branco. Nesse intervalo, mantém a página sem gastar energia."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
 msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr ""
+msgstr "A placa traz os nomes de Barrett Comiskey, J. D. Albert e Joseph Jacobson, que desenvolveram esta tinta no MIT Media Lab em 1996. Cinco anos depois, nos Bell Laboratories, John Rogers e Zhenan Bao a espalharam sobre uma folha de plástico. Bao é uma química que projeta plásticos que conduzem corrente. Com um carimbo de borracha, eles imprimiram na folha 256 transistores de plástico, um para cada ponto da imagem. A página podia ser dobrada."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.3"
 msgid "The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display."
-msgstr ""
+msgstr "A tinta é lenta, e isso basta para uma página. A próxima parada, nesta mesma sala, é um display do mesmo tipo que ficou rápido o bastante para vídeo. Vá até o display de eletromolhamento."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: the title of this part.
 msgctxt "tour.women.electrowetting.title"
 msgid "Oil and water"
-msgstr ""
+msgstr "Óleo e água"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.1"
 msgid "These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher."
-msgstr ""
+msgstr "Estas são 12 células, muito ampliadas. Cada uma contém uma gota de óleo tingido sob a água. Sem tensão, o óleo se espalha e a célula mostra a sua cor. Com tensão, a água empurra o óleo para um canto. Observe uma célula comutar. O óleo não desaparece. Ele se junta no canto e fica mais alto."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
 msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr ""
+msgstr "Na primeira parada, uma tensão curvava um cristal e levantava um pino. Aqui uma tensão faz a água empurrar o óleo para o lado. Susan Hackwood e Gerardo Beni propuseram este display nos Bell Laboratories em 1981 e deram nome ao efeito: eletromolhamento. O ano da placa, 2003, é quando um laboratório dos Países Baixos o tornou rápido o bastante para vídeo."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
 msgid "There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes."
-msgstr ""
+msgstr "Há mais uma parada nesta sala. Vá até o display eletrocrômico, uma etiqueta impressa que mostra os minutos."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.women.electrochromic.title"
 msgid "Layer by layer"
-msgstr ""
+msgstr "Camada por camada"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.1"
 msgid "This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film."
-msgstr ""
+msgstr "Esta etiqueta impressa mostra os minutos depois da hora cheia. Nesta sala uma tensão moveu pigmento, e depois óleo. Aqui ela move átomos. Empurra átomos com carga para dentro do filme impresso, e o filme escurece. Espere o minuto mudar. O dígito antigo some, e o novo escurece ao longo de vários segundos. O vidro atrás da etiqueta tem o mesmo filme."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
 msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr ""
+msgstr "A placa traz o nome de S. K. Deb. O trabalho dele de 1969, sobre filmes de óxido de tungstênio, é onde estes displays começaram. No Instituto de Tecnologia de Massachusetts, Paula Hammond e Dean DeLongchamp construíram esses filmes de outro modo: uma camada molecular de cada vez. Os filmes deles mudavam de cor mais depressa, e com mais contraste, do que os feitos de outras maneiras. A tese que apresenta o trabalho é de 2003 e aponta para um display em cores."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.3"
 msgid "That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
-msgstr ""
+msgstr "Este foi o último display que funciona como papel impresso. Agora vem a sala 6, No ar. Vá até o transmissor de ilusões, onde uma imagem fica suspensa no ar."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.women.illusion-transmitter.title"
 msgid "A bulb that is not there"
-msgstr ""
+msgstr "Uma lâmpada que não está lá"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.1"
 msgid "Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows."
-msgstr ""
+msgstr "Olhe para as duas caixas. À esquerda, uma lâmpada real está pendurada, escondida, embaixo do soquete, e um espelho curvo põe a sua imagem no soquete vazio acima. À direita não há lâmpada, só a imagem, que chega por uma câmera e um segundo espelho. Veja a lâmpada da esquerda se apagar. A imagem da direita acompanha."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
 msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr ""
+msgstr "Na sala 3, uma pergunta foi feita à mesa do jantar. Esta foi feita em uma exposição, em 1976. Valerie Thomas viu um espelho curvo fazer uma lâmpada parecer acesa depois de tirada do soquete, e se perguntou se aquela imagem podia ser enviada. Quando inventou o transmissor de ilusões, ela gerenciava os sistemas de processamento de imagens do Landsat na NASA. A patente lhe foi concedida quatro anos depois daquela exposição."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
 msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
-msgstr ""
+msgstr "Fique na sala 6 para ver o display de volume estático, onde a imagem preenche um bloco de espaço."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: the title of this part.
 msgctxt "tour.women.static-volume.title"
 msgid "Drawing inside glass"
-msgstr ""
+msgstr "Desenhar dentro do vidro"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
 msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
-msgstr ""
+msgstr "Comece pela pilha de lâminas transparentes. A figura dentro dela é um nó. Uma lâmina de cada vez fica leitosa e captura a sua fatia da imagem. Nada se move."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
 msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
-msgstr ""
+msgstr "Agora olhe ao lado da pilha, para o bloco de vidro. Ele só brilha onde dois feixes invisíveis se cruzam, e o modelo os desenha em vermelho. Na sala 2 quem desenhava era um feixe de elétrons, e na sala 4, um laser. Aqui quem desenha é o ponto onde dois feixes se cruzam, em três dimensões."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
 msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr ""
+msgstr "Elizabeth Downing e três colegas desenharam assim pontos de luz coloridos dentro do vidro. O trabalho foi publicado pela Universidade Stanford em 1996, com Downing como primeira autora. O protótipo era um cubo de cerca de 15 milímetros de lado, e o modelo o mostra muitas vezes maior. A última parada é a holografia, na sala 7."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
 msgctxt "tour.women.holography.title"
 msgid "The light itself"
-msgstr ""
+msgstr "A própria luz"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
-msgstr ""
+msgstr "Olhe através da placa de vidro. Uma locomotiva de brinquedo parece estar atrás dela. Vá para o lado, e você vê em volta da locomotiva. Ela não está atrás do vidro. Um holograma registra a própria luz. Na sala 4, um laser desenhava a imagem. Aqui um laser apenas ilumina a placa, e a placa emite as mesmas ondas de luz que a locomotiva emitiu."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr ""
+msgstr "Dennis Gabor inventou a holografia em 1948. Vinte anos depois, Margaret Benyon, pintora, começou a fazer hologramas como arte. Um holograma como este é estático. O primeiro display de vídeo holográfico foi construído no MIT Media Lab em 1989, e a tese que Mary Lou Jepsen escreveu lá naquele ano descreve o seu projeto."
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.women.end.title"
 msgid "The end of the green line"
-msgstr ""
+msgstr "O fim da linha verde"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr ""
+msgstr "Este é o fim da linha verde. Ela começou com pinos que se leem pelo tato. Termina com uma locomotiva de brinquedo que não está lá."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
 msgid "Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr ""
+msgstr "Quatorze mulheres são citadas nestas doze paradas, e você já esteve diante do trabalho de cada uma. Ao todo, as etiquetas destas salas citam mais de cem pessoas."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
 msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
-msgstr ""
+msgstr "No caminho, a linha passou por mais de quarenta outros displays. Saia da visita, e as salas são suas para percorrer. Cada peça tem a sua etiqueta, e nela estão os nomes de quem trabalhou na peça. Obrigada por fazer a visita."
