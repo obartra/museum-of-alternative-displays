@@ -55,6 +55,8 @@ function hall(): Gallery {
 export async function shoot(id: string, day: boolean): Promise<[string, number | null]> {
   const g = hall(), p = plan.placeOf(id), make = builders[id];
   if (!p || !make) throw new Error(`no such piece: ${id}`);
+  // the land outside is painted over several frames: a piece that shows the view, like the camera obscura, waits for it
+  await g.hall.ready;
   const L = day ? 1 : 0, r = g.renderer, anchor = g.stands.models.children[p.no];
   const b = make();
   seat(b);
