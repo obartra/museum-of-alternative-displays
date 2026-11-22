@@ -47,6 +47,10 @@ npm run cutouts    # re-photograph the pieces for the walk, and the hall from it
 
 Node 22 or newer.
 
+The [round 5 portrait review bundle](docs/portraits/v5/README.md) contains 32 selected
+drawings, their source records and prompts, and 29 pending cases. Its offline gallery
+opens from `docs/portraits/v5/index.html`. These review assets do not activate portraits.
+
 ## Where things are
 
 | Path | What |

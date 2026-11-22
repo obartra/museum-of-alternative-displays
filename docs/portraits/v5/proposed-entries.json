@@ -1,0 +1,356 @@
+{
+  "notice": "Review only. Do not apply without museum acceptance and per-person publication decision. Walker excluded pending licence recheck. Copy corresponding exports to public/people only after acceptance.",
+  "portraits": {
+    "Zhenan Bao": {
+      "file": "zhenan-bao.webp",
+      "by": "Christopher Michel",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zhenan_Bao_by_Christopher_Michel_in_2024_01.jpg"
+    },
+    "Paula Hammond": {
+      "file": "paula-hammond.webp",
+      "by": "Christopher Michel",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paula_T._Hammond_in_2023_01.jpg"
+    },
+    "Albert Brown": {
+      "file": "albert-brown.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "The New York Times, 6 December 1969, scanned copy via The American Blackstory",
+          "source": "https://theamericanblackstory.com/2020/02/11/"
+        }
+      ]
+    },
+    "Mark Dean": {
+      "file": "mark-dean.webp",
+      "study": [
+        {
+          "by": "IBM",
+          "source": "https://www.ibm.com/history/mark-dean"
+        },
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/mark-dean"
+        }
+      ]
+    },
+    "John Rogers": {
+      "file": "john-rogers.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Northwestern University",
+          "source": "https://crn.northwestern.edu/people/faculty/john-a-rogers.html"
+        },
+        {
+          "by": "University of Illinois / L. Brian Stauffer, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:Rogers_john2.jpg"
+        }
+      ]
+    },
+    "Dean DeLongchamp": {
+      "file": "dean-delongchamp.webp",
+      "by": "NIST; individual photographer not stated",
+      "licence": "NIST public-information reuse policy",
+      "source": "https://www.nist.gov/people/dean-delongchamp"
+    },
+    "Lewis Latimer": {
+      "file": "lewis-latimer.webp",
+      "small": true,
+      "by": "Unknown photographer, 1882",
+      "licence": "Public domain (Commons historical photograph)",
+      "source": "https://commons.wikimedia.org/wiki/File:Lewis_latimer.jpg"
+    },
+    "Akintunde Akinwande": {
+      "file": "akintunde-akinwande.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "MIT Center for Integrated Circuits and Systems",
+          "source": "https://cis.mit.edu/our-people/akintunde-akinwande"
+        },
+        {
+          "by": "MIT Technology Licensing Office",
+          "source": "https://tlo.mit.edu/industry-entrepreneurs/researchers/akintunde-ibitayo-akinwande"
+        }
+      ]
+    },
+    "Xiaogang Peng": {
+      "file": "xiaogang-peng.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "University of Hamburg, lecture programme 2021",
+          "source": "https://www.chemie.uni-hamburg.de/institute/pc/kolloquium/abstracts/sose2021/abstract-peng.pdf"
+        },
+        {
+          "by": "Nanjing University of Science and Technology, conference programme 2016",
+          "source": "https://hgi.njust.edu.cn/_upload/article/files/11/d2/893c676e465bb805d3bdd2d00a99/b8f65d36-7d8f-4375-98c3-d8dded728026.pdf"
+        }
+      ]
+    },
+    "Yizheng Jin": {
+      "file": "yizheng-jin.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Nanjing University of Science and Technology, conference programme 2016",
+          "source": "https://hgi.njust.edu.cn/_upload/article/files/11/d2/893c676e465bb805d3bdd2d00a99/b8f65d36-7d8f-4375-98c3-d8dded728026.pdf"
+        }
+      ]
+    },
+    "Dawon Kahng": {
+      "file": "dawon-kahng.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/dawon-kahng"
+        }
+      ]
+    },
+    "Mohamed Atalla": {
+      "file": "mohamed-atalla.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://invent.org/inductees/martin-john-m-atalla"
+        },
+        {
+          "by": "History of Semiconductor Engineering, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:Atalla1963.png"
+        }
+      ]
+    },
+    "Sivaramakrishna Chandrasekhar": {
+      "file": "sivaramakrishna-chandrasekhar.webp",
+      "study": [
+        {
+          "by": "Historic signed portrait photographed at CeNS, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:S.Chandrasekhar.jpg"
+        },
+        {
+          "by": "Raman Research Institute",
+          "source": "https://wwws.rri.res.in/htmls/library/raman_era/Bios/chandrasekhar.html"
+        }
+      ]
+    },
+    "B. K. Sadashiva": {
+      "file": "b-k-sadashiva.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Raman Research Institute, lecture photograph Sadashiva15",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof.%20B%20K%20Sadashiva/index.html"
+        },
+        {
+          "by": "Raman Research Institute, lecture photograph Sadashiva12",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof.%20B%20K%20Sadashiva/index.html"
+        }
+      ]
+    },
+    "K. A. Suresh": {
+      "file": "k-a-suresh.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Raman Research Institute, lecture photograph RVP-01",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof%20K%20A%20Suresh/index.html"
+        },
+        {
+          "by": "Raman Research Institute, named biography",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/bios/ka_suresh.html"
+        }
+      ]
+    },
+    "Lanny Smoot": {
+      "file": "lanny-smoot.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/lanny-smoot"
+        },
+        {
+          "by": "The Walt Disney Company",
+          "source": "https://thewaltdisneycompany.com/lanny-smoot-to-be-the-first-disney-imagineer-inducted-into-the-national-inventors-hall-of-fame/"
+        }
+      ]
+    },
+    "Ali Javan": {
+      "file": "ali-javan.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/ali-javan"
+        },
+        {
+          "by": "MIT Physics Annual 2017, in remembrance",
+          "source": "https://physics.mit.edu/wp-content/uploads/2021/01/physicsatmit_17_inremembrance.pdf"
+        }
+      ]
+    },
+    "Nasser Peyghambarian": {
+      "file": "nasser-peyghambarian.webp",
+      "study": [
+        {
+          "by": "University of Arizona, Optical Sciences",
+          "source": "https://optics.arizona.edu/person/nasser-peyghambarian"
+        },
+        {
+          "by": "University of Arizona, Semiconductor Manufacturing",
+          "source": "https://csm.arizona.edu/person/nasser-peyghambarian"
+        }
+      ]
+    },
+    "Pierre-Alexandre Blanche": {
+      "file": "pierre-alexandre-blanche.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "University of Arizona, IEEE author manuscript",
+          "source": "https://wp.optics.arizona.edu/pablanche/wp-content/uploads/sites/37/2016/06/1004_Christenson_IEEE-JDT-6.pdf"
+        },
+        {
+          "by": "University of Arizona, 2021 Optimax award",
+          "source": "https://optics.arizona.edu/news-events/news/quicknews/pierre-alexandre-blanche-selected-2021-optimax-research-grant-winner"
+        }
+      ]
+    },
+    "Charles Harrison": {
+      "file": "charles-harrison.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Cooper Hewitt / Rob Tarpey, 2008",
+          "source": "https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/"
+        },
+        {
+          "by": "The Strong / Tim Klein, 1998, republished by Global Toy News",
+          "source": "https://globaltoynews.com/2021/02/10/charles-harrison-the-black-industrial-designer-who-revamped-view-master/"
+        }
+      ]
+    },
+    "Hank Willis Thomas": {
+      "file": "hank-willis-thomas.webp",
+      "study": [
+        {
+          "by": "New City Arts / Andrea Blanch",
+          "source": "https://newcityarts.org/exhibitions/hank-willis-thomas-i-am-a-man"
+        },
+        {
+          "by": "Ford Foundation",
+          "source": "https://www.fordfoundation.org/news-and-stories/big-ideas/inequalityis/hank-willis-thomas-on-the-role-of-artists-in-fighting-inequality/"
+        }
+      ]
+    },
+    "Samuel Achilefu": {
+      "file": "samuel-achilefu.webp",
+      "study": [
+        {
+          "by": "UT Southwestern",
+          "source": "https://profiles.utsouthwestern.edu/profile/209730/samuel-achilefu.html"
+        },
+        {
+          "by": "Washington University in St. Louis",
+          "source": "https://source.washu.edu/2016/02/washington-people-samuel-achilefu/"
+        }
+      ]
+    },
+    "Horst Hörtner": {
+      "file": "horst-hortner.webp",
+      "study": [
+        {
+          "by": "Ars Electronica / vog.photo",
+          "source": "https://ars.electronica.art/futurelab/de/hoertner-horst/"
+        },
+        {
+          "by": "Ars Electronica",
+          "source": "https://ars.electronica.art/fl25/storyline/virtual-worlds/"
+        }
+      ]
+    },
+    "Elma Farnsworth": {
+      "file": "elma-farnsworth.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Television Academy Foundation, interview 1996",
+          "source": "https://interviews.televisionacademy.com/interviews/elma-farnsworth"
+        }
+      ]
+    },
+    "Tadashi Nakamura": {
+      "file": "tadashi-nakamura.webp",
+      "study": [
+        {
+          "by": "Electronic Design, 15 March 1976, via World Radio History",
+          "source": "https://www.worldradiohistory.com/Archive-Electronic-Design/1976/Electronic-Design-V24-N06-1976-0315.pdf"
+        },
+        {
+          "by": "Noritake Itron",
+          "source": "https://www.noritake-itron.jp/eng/profile/nakamura/"
+        }
+      ]
+    },
+    "Louis Heynick": {
+      "file": "louis-heynick.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Bioelectromagnetics Society, newsletter 183, 2005",
+          "source": "https://maisonsaine.ca/uploads/2014/06/news183.pdf"
+        }
+      ]
+    },
+    "Gerald Pighini": {
+      "file": "gerald-pighini.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Hewlett-Packard Journal, February 1969, via HP Archive",
+          "source": "https://hparchive.com/Journals/HPJ-1969-02.pdf"
+        }
+      ]
+    },
+    "Barrett Comiskey": {
+      "file": "barrett-comiskey.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/barrett-o-comiskey"
+        }
+      ]
+    },
+    "J. D. Albert": {
+      "file": "j-d-albert.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/jonathan-d-albert"
+        }
+      ]
+    },
+    "Joseph Jacobson": {
+      "file": "joseph-jacobson.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/joseph-m-jacobson"
+        }
+      ]
+    },
+    "Gerardo Beni": {
+      "file": "gerardo-beni.webp",
+      "study": [
+        {
+          "by": "University of California, Riverside",
+          "source": "https://cris.ucr.edu/people/gerardo-beni"
+        }
+      ]
+    }
+  }
+}

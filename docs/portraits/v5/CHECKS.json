@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-22",
+  "people_in_brief": 61,
+  "selected_drawings": 32,
+  "first_drawings": 23,
+  "retakes": 9,
+  "pending_no_new_drawing": 29,
+  "label_only": 16,
+  "ordinary_exports": 16,
+  "source_pairing_and_visual_comparison": "Completed for all 32; per-person notes in manifest. Candidates for museum review, not automatic likeness certification.",
+  "all_primary_source_faces_at_least_60_input_pixels": true,
+  "32_webps_decoded_dimensions_and_sha256_verified": true,
+  "prompt_input_hashes_and_max_5_inputs_checked": true,
+  "no_absolute_local_paths_or_embedded_images_in_text": true,
+  "no_source_photos_pdfs_png_masters_or_discarded_variants": true,
+  "browser": {
+    "offline_file_url": true,
+    "all_32_images_loaded": true,
+    "filters": true,
+    "search": true,
+    "label_size_toggle": true,
+    "mobile_no_horizontal_overflow": true,
+    "page_errors": [],
+    "automatic_external_requests": []
+  },
+  "npm_run_check": "passed",
+  "npm_run_build": "passed",
+  "build_note": "Existing Vite future config-loader warning and incomplete translations remain informational; no build errors.",
+  "existing_74_portraits": "No modifications to public/people, src/data/portraits.ts or current portrait inventory.",
+  "rights": "27 studies retain uncertain publication rights; Walker after drawing held pending original licence recheck.",
+  "proportion_method": "MediaPipe 2-D landmark ratios plus visual review. Not face recognition; no calibrated angle or biometric accuracy claim. Charles Harrison drawing had no reliable automatic landmarks and was inspected visually."
+}

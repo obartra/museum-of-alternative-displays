@@ -1,0 +1,1830 @@
+[
+  {
+    "name": "Zhenan Bao",
+    "slug": "zhenan-bao",
+    "selected_master_sha256": "2004bb212755b5c8d2ce9afcf15fef019e9335953fbf5dac36abe27464780501",
+    "export": "people/zhenan-bao.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: style-transfer / identity-preserve. Draw Zhenan Bao, the Stanford chemical engineer who developed flexible electronics at Bell Labs. Image 1 is Christopher Michel's licensed photograph taken 1 October 2024, age 53–54: use it for identity, exact head angle, gaze, long straight dark hair with off-centre part, softly broad cheekbones, gently tapered short chin, no glasses, closed-lip expression and plain black crew-neck top and jacket. Follow this photograph, not a new pose. Crop to head and upper shoulders without arms or hands. Image 2 is approved Jepsen 2.3, STYLE ONLY, never borrow her face, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "zhenan-bao-licensed.jpg",
+            "sha256": "0c7845724d5221e0aeab3049a34cec84a2075942ce4bc2cf177104aa8f7a6a60",
+            "dimensions": [
+              960,
+              1344
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "generation-2.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this Bao pen drawing only to remove ALL short parallel shading strokes on her cheek edges, nose bridge and neck, including beneath her chin. These skin areas must be blank ivory like the broad forehead. Keep the eyebrows, eyelid contours, nostrils, lips and every other identity feature exactly. Do not erase eyebrows. Keep the face proportions, gaze, hair, clothing, framing, fine line weight and background unchanged. No additions. Hair and clothing hatching stays.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "exec-7b450aa0-7b5c-4be7-bc91-6fbd9b01435f.png",
+            "sha256": "bf40a38546fe1d59ba520efac2cf561f941a704a88b4377abbf6cf4cb089254c",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Paula Hammond",
+    "slug": "paula-hammond",
+    "selected_master_sha256": "b06398d3a2bfe59341d340b6f12acccc6c625a05a215f7680b3100f9aa1c9e90",
+    "export": "people/paula-hammond.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / style-transfer. Draw Paula Hammond, MIT chemical engineer. Image 1 is Christopher Michel's licensed 5 October 2023 photograph, age 60: preserve the exact head angle and gaze, close voluminous side-parted short dark hair, broad cheeks and rounded chin, dark upswept rectangular glasses, gentle closed-lip smile, small earrings and the gathered sleeveless tied-neck blouse; depict that blouse in ink. Crop head and upper shoulders without hands. Image 2 is Jepsen STYLE ONLY, never her identity. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Final constraint: leave cheek/forehead/neck skin blank. Depict dark skin using the same open ivory skin convention as every other museum portrait; don't add tonal hatching to the face.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "paula-hammond-commons.jpg",
+            "sha256": "db67ea4e91da8f8692d46782fee3de1a9d71bff8d5906482ffde7b50323ace8e",
+            "dimensions": [
+              960,
+              1280
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Albert Brown",
+    "slug": "albert-brown",
+    "selected_master_sha256": "fd2f9320c476cfe90742d5a339e4c5fe279801d6377e94e41e4525ed383e96f5",
+    "export": "people/albert-brown.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Albert Brown. The first 1 images are named professional reference photographs of this person, for appearance only. Apparent age: the middle-aged adult apparent age in the 6 December 1969 New York Times photograph; birth year not established here. Preserve: very short receding dark hair, high forehead, no glasses, thin dark moustache, broad nose, full closed lips, broad cheek shape and the small dark chin hair visible in the newspaper. Do NOT reproduce a photograph. NEW pose: head only 8 degrees toward VIEWER’S RIGHT, much nearer frontal than the photographed stronger right turn, upright with eyes following. NEW clothing: plain light open-neck collared shirt of the late 1960s, no suit, tie or patterned fabric, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. This is ONLY the electronics technician who stands to Marie’s right holding their home-security patent drawing in the 1969 newspaper photo. The single named source is a halftone scan. No dense beard, no invented facial texture, individual teeth or wrinkles. Full crown is visible in this native crop; do not borrow Marie’s face. Research study with uncertain source publication rights. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "albert-brown-native-crop.png",
+            "sha256": "59dddcac06b5099c7e6985e0cf2afb56098e1221a1e37bfba89a3c675a81dd54",
+            "dimensions": [
+              182,
+              273
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  Preserve his thin moustache and the documented small chin-hair patch. Remove the dark triangular shadow UNDER his chin at the top of the bare neck: that is hatching, not facial hair. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "da676a58dd9e215b8ff308d5260d4e9808e7540a9a0c96de2dfbc2866fedb4da",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mark Dean",
+    "slug": "mark-dean",
+    "selected_master_sha256": "4916171397b9ac00880f40298e028504ccd644b76441f77499933a65e3b790cb",
+    "export": "people/mark-dean.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve, new pose study. Draw Mark Dean, IBM engineer born 1957, NOT a namesake. Inputs 1 and 2 are IBM and NIHF professional portraits. Primary IBM colour photograph controls apparent age (roughly middle age, capture date unknown); older black and white photo supports structural proportions. Keep balding crown and close-cropped side hair, neat documented dark moustache, no beard, broad cheeks, rounded chin, gentle closed-lip smile, no glasses. Draw a NEW head turn about 22 degrees to VIEWER'S LEFT, nose pointing left, eyes follow, both eyes visible; neither supplied photo has this angle. New clothing: a plain dark collarless crew-neck pullover of the same contemporary period, no logos, badges, jewellery or pocket pen. Third image STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. No new facial texture, wrinkles or shading: do not translate photographic shadows into skin hatching. Only the documented moustache has fine hair marks.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "mark-dean-ibm.jpeg",
+            "sha256": "3b0293cdcad7a3fa129d42182f38d3781c12345593aade2c3aca65d75e9b2c2d",
+            "dimensions": [
+              1025,
+              1280
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "mark-dean-nihf.jpg",
+            "sha256": "23575e61660f8f864bbfaf70a14b47bd82a2bd015aa9ec08f37507261a4e3fac",
+            "dimensions": [
+              311,
+              446
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "e5fdef798558b284f006021a04c9a09e5990058aa1961a68e7aae6e3e47e0dc4",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "John Rogers",
+    "slug": "john-rogers",
+    "selected_master_sha256": "f01b4d030141553ca8fa95a16526f2082db5d65abe22eb7ad490a6832bd34643",
+    "export": "people/john-rogers.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw John Rogers. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: about 55 as in the Northwestern portrait labelled 2022; 2014 Illinois photograph is younger structure support only. Preserve: short neatly side-parted greying hair, fine wire oval glasses from the primary 2022 portrait, clean-shaven long oval face, broad natural smile. Do NOT reproduce a photograph. NEW pose: 20 degrees toward the viewer’s LEFT, upright, eyes follow the head, both eyes visible. NEW clothing: plain dark crew-neck sweater, no jacket, shirt collar or tie, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. John A. Rogers, Northwestern bioelectronics professor, previously Bell Labs. Do not borrow the younger photo’s age or remove the glasses. Sources have a small face, export only at label size. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "john-rogers-northwestern.jpg",
+            "sha256": "049df14b90584ab69a861d7517ce879a231d05445a1eb21870cb4a089bb6a06a",
+            "dimensions": [
+              265,
+              309
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "john-rogers-commons.jpg",
+            "sha256": "ff0e62754ff22c2ab4c017503199692bee9ec9572d321d3d1361d48044d9bec2",
+            "dimensions": [
+              960,
+              1440
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dean DeLongchamp",
+    "slug": "dean-delongchamp",
+    "selected_master_sha256": "a3c064cd2d8e41e9ab64604f138074fd3079fdf0c5044138cbfb7d2882f76c16",
+    "export": "people/dean-delongchamp.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: style-transfer / identity-preserve. Draw Dean M. DeLongchamp, NIST polymer scientist, MIT PhD 2003 advised by Paula Hammond. Image 1 is his official NIST staff photograph. Follow the same head angle, gaze, friendly broad tooth-showing smile, close-cropped balding hair, broad cheek proportions and rounded chin, no glasses, clean-shaven face, jacket, shirt and patterned tie. Capture date not supplied, preserve photographed adult apparent age without inventing an age. Crop to head and upper shoulders. Image 2 is Jepsen STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Crucial: no parallel shading strokes or stipple anywhere on forehead, cheeks, jaw or neck; use single precise lines for actual eye and smile folds. Preserve the eyebrows.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "dean-delongchamp-nist.png",
+            "sha256": "675d9758e646a887696694e3bd7e92b477904741de44370c8b54066caa78fdf3",
+            "dimensions": [
+              1416,
+              1440
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "85666520200d5f0148c326f9564e232ec733b0b690ee03dc446f652047f2d8f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lewis Latimer",
+    "slug": "lewis-latimer",
+    "selected_master_sha256": "faacc095bc856fc6271e62ab1aa0551290741f060cef26f8a550acdc35cd6e12",
+    "export": "people/lewis-latimer.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: style-transfer / identity-preserve. Draw Lewis Latimer, following identity photograph 1. Preserve its exact head angle, gaze, clothing and expression. Apparent age: 34, the source photograph is dated 1882. Preserve: short receding dark hair, neat moustache, long oval face, high cheekbones, no glasses, quiet closed mouth, high stiff collar and large cravat and three-piece suit as photographed. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. The source is a historic portrait of Lewis Howard Latimer, not the modern sculpture. No wrinkles or moustache hairs finer than the small grainy source can support. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "lewis-latimer-headshot-native-scale.png",
+            "sha256": "3c6aed514240e400a2a47e9771a140001911412ffad1d5f21a8de871a6cd6996",
+            "dimensions": [
+              300,
+              414
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  The ONLY facial hair to keep is the moustache for Latimer and Suresh; Pighini has NO facial hair. Remove any false chin tuft or soul patch and all marks resembling new stubble. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "727fd8148b63522c9d2afce2c827a15f92bd4b2c7e4422a47c7782e839220707",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Akintunde Akinwande",
+    "slug": "akintunde-akinwande",
+    "selected_master_sha256": "1d8415112cbca3969ce592b660ddf80d36672a2add998bf32d7dedc66955a99c",
+    "export": "people/akintunde-akinwande.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve, new pose study for LABEL SIZE ONLY. Draw Akintunde Ibitayo Akinwande, MIT field emission electronics professor. First two images are his named MIT portraits, the ONLY identity references. Their capture dates are unknown; retain the photographed middle-aged appearance. Keep very short dark hair, high forehead, fine oval metal glasses, broad cheeks, full lips, short rounded chin and documented friendly smile. New pose: turn nose visibly 22 degrees toward VIEWER'S RIGHT; both photographs are near front, eyes follow head. Replace suit/tie with a plain open-neck pale button-down shirt and simple dark V-neck pullover, no pattern, jewellery or logos. Third image STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Source photographs are small and somewhat soft: use only a few reliable contours of eyes, nose and mouth. Do NOT invent wrinkles, individual teeth, pores, cheek texture or a new beard. Do not add detail to compensate for limited source pixels. Bare skin stays entirely blank ivory.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "akintunde-akinwande-mit.jpeg",
+            "sha256": "00ec9ed4db5dcb250b083e351c5ff9d1daf0cf01e31974b04848a7a137ef3092",
+            "dimensions": [
+              250,
+              250
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "akintunde-akinwande-mit2.jpg",
+            "sha256": "776255d4bdc2521b26e71c4606e1ff4a873e6f2a5e154e2be80649d4b6121e81",
+            "dimensions": [
+              300,
+              375
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Xiaogang Peng",
+    "slug": "xiaogang-peng",
+    "selected_master_sha256": "2b8acf0dbd2b2fdfb2668fe5ab3aaa8ec05ff5afa2fc372ef4367648e1be43e0",
+    "export": "people/xiaogang-peng.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Xiaogang Peng. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: adult middle age as in the Hamburg portrait, roughly 45–55; capture date unknown, 2021 is the lecture date, not a confirmed photograph date. Preserve: full medium-length wavy dark hair swept to the side and curling slightly at nape, fine metal oval eyeglasses, long oval face, clean-shaven face, reserved closed-lip expression. Do NOT reproduce a photograph. NEW pose: 20 degrees toward VIEWER’S LEFT, upright and with gaze following, unlike the near-front reference views. NEW clothing: plain dark crew-neck pullover, no shirt collar, tie, jacket, jewellery or logos, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Zhejiang chemistry professor, coauthor of the 2014 solution-processed QLED paper. Both source programmes name him and his university/QD work. Keep the broad high forehead and medium length hair, no generic cropped haircut. No new facial detail from the small second source. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "xiaogang-peng-hamburg-0.jpeg",
+            "sha256": "9b93666348ec6b8f79b660d7dafb77d0503f2706bf328c318b38d7e8ad545873",
+            "dimensions": [
+              620,
+              465
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "xiaogang-peng-conference-native.png",
+            "sha256": "6ce825a941eb2404655c35fc5bc0bbabf5c0ccc8e7c89dd73b1980048d8f2cee",
+            "dimensions": [
+              225,
+              248
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "correction-geometry.json",
+        "tool": "built-in image_gen",
+        "prompt": "Correct only the face proportions and bare-skin shading in this Xiaogang Peng study. Image1 is the drawing to edit, image2 the primary Hamburg professional photo of Peng. The current drawing is too long and narrow. Keep its new 20-degree left-facing pose, gaze, wavy medium-length hair, glasses, neutral mouth, plain dark crew-neck pullover, exact composition and fine varied line style. Restore the source's fuller cheeks and SHORTER lower face: increase cheek-to-cheek width about8 percent relative to forehead-to-chin height, with a broader short rounded chin, not a narrow long jaw. Preserve the source eye spacing and nose/mouth proportions allowing the new turn. Keep age as photographed; do not borrow a generic face. Remove parallel hatch shading and dark shadow patches on the forehead, cheeks, nose, chin and neck. Preserve fine single feature contours and eyebrows; keep all hair and clothing hatching. All bare skin stays blank warm ivory. Source is small: no invented wrinkles, stubble, individual teeth or new detail. 4:5 museum label study.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "exec-334d5245-5802-4f1e-aa07-a68265a9f3ad.png",
+            "sha256": "f709b810cd27808912edcb6a14d5aa6e3df7a9ae081b2913649082d51501937c",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "xiaogang-peng-hamburg-0.jpeg",
+            "sha256": "9b93666348ec6b8f79b660d7dafb77d0503f2706bf328c318b38d7e8ad545873",
+            "dimensions": [
+              620,
+              465
+            ],
+            "role": "identity reference",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Yizheng Jin",
+    "slug": "yizheng-jin",
+    "selected_master_sha256": "c67dcfd7e043bd1bf27b7a5a078e71e912404008f3fe2d8dd3058c342cadcb08",
+    "export": "people/yizheng-jin.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Yizheng Jin. The first 1 images are named professional reference photographs of this person, for appearance only. Apparent age: the younger adult apparent age in the 2016 Nanjing conference programme, roughly 30–40; exact capture year not established. Preserve: straight dense side-swept dark fringe, no glasses, youthful adult broad cheeks and short chin, small natural parted-lip smile, clean-shaven face. Do NOT reproduce a photograph. NEW pose: 15 degrees toward VIEWER’S RIGHT from the photographed slight left turn, both eyes visible and eyes following. NEW clothing: plain dark crew-neck pullover with no shirt collar or tie, jewellery or logos, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Zhejiang chemistry professor and solution-processed QLED coauthor. This source is two embedded horizontal photo strips, stitched at native resolution 225×288 without restoration. Named biography is on PDF page 84. Other author pictures from this long programme must never be substituted. A second university portrait was behind a verification screen and was not acquired. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "yizheng-jin-conference-native.png",
+            "sha256": "3936d09274c0a4e6caf633ac6b933d7f4ac0f3b70a3e505af9fbab47d02c263d",
+            "dimensions": [
+              225,
+              288
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "correction-2.json",
+        "tool": "built-in image_gen",
+        "prompt": "Correct this study portrait's HEAD POSE. Image 1 is the drawing to change; image 2 is its named source photograph for appearance only; final image is Jepsen line style. The current drawing wrongly points LEFT. Redraw the same person's head gently toward the VIEWER'S RIGHT by about 10 degrees. Nose tip must lie to the RIGHT of the midpoint between the pupils on the page, and the cheek on the PAGE LEFT must be wider than the far cheek on the PAGE RIGHT. Eyes look right with head. Do not flip/mirror the drawing or source photograph: construct a new modest right-facing view, preserving the actual hairstyle, glasses if present, face width, apparent age, mouth expression and new plain dark clothing from drawing 1. Do not copy source clothing. Both eyes visible. Keep the face open: remove all parallel hatch shading on nose, cheeks, chin and neck; retain eyebrows, feature contours and documented single folds. No invented details. Thin varied line weight, warm ivory background, 4:5, full crown and upper shoulders.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "01.png",
+            "sha256": "c45051ee3a0910775165222f67b44f14c0ef9ca9fe342e4181ec56fa3a712a44",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "yizheng-jin-conference-native.png",
+            "sha256": "3936d09274c0a4e6caf633ac6b933d7f4ac0f3b70a3e505af9fbab47d02c263d",
+            "dimensions": [
+              225,
+              288
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dawon Kahng",
+    "slug": "dawon-kahng",
+    "selected_master_sha256": "d2320e8f8bc40a792fbc26fa29a799dd4917d82f4d537ed504753e3dc3065c82",
+    "export": "people/dawon-kahng.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Dawon Kahng. The first 1 images are named professional reference photographs of this person, for appearance only. Apparent age: the adult middle-aged apparent age in the National Inventors Hall of Fame photo; capture year unknown. Preserve: short receding slicked-back dark hair, large thin metal glasses with a double bridge, broad cheeks and round chin, gentle smile, clean-shaven face. Do NOT reproduce a photograph. NEW pose: 15 degrees toward viewer’s RIGHT from the photographed slight left turn, both eyes visible, eyes follow. NEW clothing: plain open-neck pale button-down shirt and dark V-neck sweater, no suit or tie, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Kahng is the Bell Labs MOS inventor born 1931, not a namesake. Do not add new wrinkles or teeth details. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "dawon-kahng-nihf.jpg",
+            "sha256": "f614b27d728848671ab2647b9f86607e2e97b1e6be5eeac3280d4abe95b430ad",
+            "dimensions": [
+              311,
+              471
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "correction-2.json",
+        "tool": "built-in image_gen",
+        "prompt": "Correct this study portrait's HEAD POSE. Image 1 is the drawing to change; image 2 is its named source photograph for appearance only; final image is Jepsen line style. The current drawing wrongly points LEFT. Redraw the same person's head gently toward the VIEWER'S RIGHT by about 10 degrees. Nose tip must lie to the RIGHT of the midpoint between the pupils on the page, and the cheek on the PAGE LEFT must be wider than the far cheek on the PAGE RIGHT. Eyes look right with head. Do not flip/mirror the drawing or source photograph: construct a new modest right-facing view, preserving the actual hairstyle, glasses if present, face width, apparent age, mouth expression and new plain dark clothing from drawing 1. Do not copy source clothing. Both eyes visible. Keep the face open: remove all parallel hatch shading on nose, cheeks, chin and neck; retain eyebrows, feature contours and documented single folds. No invented details. Thin varied line weight, warm ivory background, 4:5, full crown and upper shoulders.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "01.png",
+            "sha256": "32848b5d2dcb9e85a516407034880de155281a765783358d24a23aa76a7c8c84",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "dawon-kahng-nihf.jpg",
+            "sha256": "f614b27d728848671ab2647b9f86607e2e97b1e6be5eeac3280d4abe95b430ad",
+            "dimensions": [
+              311,
+              471
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mohamed Atalla",
+    "slug": "mohamed-atalla",
+    "selected_master_sha256": "4d28f3e15cd1e67a12b083f22ac5145afaf29b21f4abc4ff03a4022304bcb33f",
+    "export": "people/mohamed-atalla.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Mohamed Atalla. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the later-life apparent age in the primary NIHF colour portrait, roughly 60–70; secondary photo is 1963 and only structural support. Preserve: short thinning swept-back grey hair, broad upper cheeks, rounded chin, no glasses, clean-shaven face and restrained closed-lip smile. Do NOT reproduce a photograph. NEW pose: 20 degrees toward viewer’s LEFT, upright with eyes following and both eyes visible. NEW clothing: plain dark V-neck sweater over a light shirt with open collar, no suit, tie, boutonniere, pocket square or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Mohamed M. Atalla, also Martin/John Atalla, Bell Labs MOS engineer. Primary NIHF image controls later-life hairline and apparent age. Never blend the two ages. No skin shading. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "mohamed-atalla-nihf.jpg",
+            "sha256": "4c9c3ff2c55b9f86c2944cc0cf716c5188debe26fa3eb9859242f9273bb07d48",
+            "dimensions": [
+              2700,
+              3779
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "mohamed-atalla-commons-native-scale.png",
+            "sha256": "4c1f7c856a240e860adc6a73844949b195cd4ff4e7328e664dd39c4c2952298c",
+            "dimensions": [
+              452,
+              593
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sivaramakrishna Chandrasekhar",
+    "slug": "sivaramakrishna-chandrasekhar",
+    "selected_master_sha256": "b81db3df574b0b91b8788bec8fc13d96a0e3463b2bc092cbb7eab1dbbb9da394",
+    "export": "people/sivaramakrishna-chandrasekhar.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Sivaramakrishna Chandrasekhar. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the middle-aged appearance in the historic professional portrait, roughly 50–60; capture date unknown, the 2020 Commons upload is NOT the photo date. Preserve: short side-parted dark greying hair, high receding temples, very large dark rectangular glasses, broad cheeks, clean-shaven face and reserved closed mouth. Do NOT reproduce a photograph. NEW pose: 15 degrees toward VIEWER’S RIGHT with head upright rather than the slight left-facing pose and inclination of both references. NEW clothing: a plain dark open-neck collared shirt under a light plain cardigan, no tie or suit, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. This is the liquid-crystal physicist at Raman Research Institute, not the astrophysicist Subrahmanyan Chandrasekhar. The two references appear to be versions of the SAME original exposure: do not count them as two independent photos. No invented wrinkles or skin shading.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "sivaramakrishna-chandrasekhar-commons.jpg",
+            "sha256": "98fa367ee34c899b696a8c5cc3f9ead69bf4289cff3d76dbedca184721b29a6e",
+            "dimensions": [
+              960,
+              1452
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "sivaramakrishna-chandrasekhar-rri.jpg",
+            "sha256": "5ed6d1d175743e00591db916f9f603b3454684824a6b7616c01937dc2c36351d",
+            "dimensions": [
+              195,
+              258
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "B. K. Sadashiva",
+    "slug": "b-k-sadashiva",
+    "selected_master_sha256": "655e5790ac0cf68d261824520d24b9100284a104594c1d3bb0f81fd298778b79",
+    "export": "people/b-k-sadashiva.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw B. K. Sadashiva. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the middle-aged apparent age around 50–60 in the named RRI professional lecture photographs; capture dates unstated. Preserve: strongly receding crown with short dark side hair and longish narrow sideburns, thin metal glasses, broad cheeks and rounded chin, clean-shaven face, restrained closed mouth. Do NOT reproduce a photograph. NEW pose: near frontal with chin lowered clearly 22 degrees and gaze following downwards, both eyes visible, different from the upright opposing three-quarter views of both lectures. NEW clothing: plain dark crew-neck pullover, no shirt collar, pocket pen, badge, microphone, papers or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. RRI liquid-crystal chemist Bookinkere Kapanipathaiya Sadashiva. The small 164×225 biography thumbnail has a face under 60 pixels and is excluded; these lecture sources are larger. Do not invent wrinkles or individual teeth. Use a few reliable eye/nose/mouth contours. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "b-k-sadashiva-gallery-Sadashiva15.jpg",
+            "sha256": "ae07fadc2c16a0923c31e081e599d67e92d00e79e5a40c571f0b7a87e53c561e",
+            "dimensions": [
+              900,
+              592
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "b-k-sadashiva-gallery-Sadashiva12.jpg",
+            "sha256": "a25c990c630003a5d5c370be7d5f2455cb6df2a0a949b66de9732a34d6110416",
+            "dimensions": [
+              888,
+              600
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "K. A. Suresh",
+    "slug": "k-a-suresh",
+    "selected_master_sha256": "5b1bf45a348bc2f15661b42f0fe347e90dfb4ccd0592492a1a14f7d4b5335db6",
+    "export": "people/k-a-suresh.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw K. A. Suresh. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the middle-aged apparent age around 50–60 in the primary RRI lecture photograph; capture date unknown. The biography photo is secondary structure only and has no glasses. Preserve: balding crown with short dark hair at sides, dark neat moustache, long oval face and broad high forehead, thin large metal glasses as in the primary lecture photograph. Do NOT reproduce a photograph. NEW pose: 20 degrees toward VIEWER’S LEFT, head upright and eyes following, both eyes visible, new from the near-front upright lecture and biography views. NEW clothing: plain dark open-neck button shirt, no pocket pen, tie, badges, microphone or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Kattera Appanna Suresh, Raman Research Institute liquid-crystal physicist. Do not remove the primary source’s glasses or add beard stubble. Source photographs small/soft: few reliable contours, no fine invented teeth or wrinkles. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "k-a-suresh-gallery-RVP-01.jpg",
+            "sha256": "a019432d4fdb8072546c4a91affef2bc3ba16a97d6d1d4fbcd869b0bb2b81195",
+            "dimensions": [
+              816,
+              600
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "k-a-suresh-rri.jpg",
+            "sha256": "1c73d3670346b27e8f5c342441db05fce6da10e3ffbc1b6c598471d60692683e",
+            "dimensions": [
+              280,
+              363
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  Suresh has ONLY a moustache: retain it and remove any false chin tuft, soul patch or new beard stubble. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "5ec4109cfd46c60b46757a9482c5a8e06ff4390f7c29d89cd21dfaaeee27452d",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lanny Smoot",
+    "slug": "lanny-smoot",
+    "selected_master_sha256": "18d96078f16afff62222a74c602da38dfd0c955087869767de470d7a072f4f04",
+    "export": "people/lanny-smoot.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Lanny Smoot. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: about 68 as in the professional NIHF/Disney portraits published for his 2024 induction; exact capture dates not established. Preserve: very short receding white hair and eyebrows, white moustache and short pointed white goatee, broad cheeks, no glasses, warm natural modest smile. Do NOT reproduce a photograph. NEW pose: nose just 8 degrees toward VIEWER’S RIGHT, chin raised gently 12 degrees and eyes following, unlike the left-facing NIHF portrait and bowed lab work view. NEW clothing: plain dark crew-neck pullover, no jacket, shirt collar, Disney badge, glasses cord or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Disney Research inventor and projection-effects engineer. Keep the WHITE moustache and pointed white goatee, rendered as pale shapes with restrained delicate hair contours, never a black beard. No skin hatching or stipple.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "lanny-smoot-nihf.jpg",
+            "sha256": "6ca15330addc68568df6887f3d8a96b277ec617d339d66e852cecc92fb6d9a63",
+            "dimensions": [
+              850,
+              1240
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "lanny-smoot-disney.jpg",
+            "sha256": "1382dc56dfc3922559316f0bb18c4e7bcbd476ddd688bb6a11a887a6517f39b0",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kara Walker",
+    "slug": "kara-walker",
+    "selected_master_sha256": "b1922c163ff8ac4d58cb15aa1042fcb5ff4d5984a6c5ed413d079b7b42c47708",
+    "export": "people/kara-walker.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: style-transfer / identity-preserve. Draw artist Kara Walker after image 1, the licensed Studio International interview frame filmed by Martin Kennedy at Camden Arts Centre on 10 October 2013, age 43. Preserve her exact leftward head angle and leftward gaze, close-cropped natural hair, no glasses, natural open smile, high cheekbones, rounded nose, and the dark sweater with its simple pale flower motifs and thin necklace. No microphone. Crop head and upper shoulders with the whole crown visible, same source pose. Image 2 is STYLE ONLY, never identity. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Keep skin open: no cheek, forehead or neck hatching. No face shading. Preserve documented fine smile folds as single fine contour strokes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "kara-walker-commons.jpg",
+            "sha256": "c6a0adf6179ac25da17b0bc13c3923effe286895dda2345051408d1472559f7e",
+            "dimensions": [
+              960,
+              1200
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "correction-geometry.json",
+        "tool": "built-in image_gen",
+        "prompt": "Correct this Kara Walker pen portrait against her actual photo. Image 1 is the drawing; image 2 is the source interview frame of Kara Walker. Follow the PHOTO precisely for head turn, gaze and facial geometry. The existing drawing has become too pointed and angular around the lower cheek and chin and changes the photographed head angle. Restore the source's gently rounded fuller lower cheek, short softly rounded chin, actual eyelid shape and natural smile; do not lengthen or narrow her face. Do not exaggerate individual teeth. Keep the source's close-cropped natural hair, neck proportions, sweater flower motifs, thin necklace, apparent age43, and the museum's fine varied pen lines. Erase parallel hatch shading on bare forehead, cheeks, chin and neck, including underneath the chin. Preserve only essential single contour folds and eyebrows. Hatching only in the hair and sweater. Flat warm ivory background, near-black ink, head and shoulders with whole crown, 4:5. No new texture or invented marks. This is still AFTER the source photograph, so its head angle and clothing must match, not a new study pose.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-geometry.png",
+            "sha256": "9f511e203e2132615e7b54b056ef67de1a17cbf90cf6090feaabbbdd4f691987",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "kara-walker-commons.jpg",
+            "sha256": "c6a0adf6179ac25da17b0bc13c3923effe286895dda2345051408d1472559f7e",
+            "dimensions": [
+              960,
+              1200
+            ],
+            "role": "identity reference",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ali Javan",
+    "slug": "ali-javan",
+    "selected_master_sha256": "d0de0ffbc6706fab31e70cd2d0e5c77edfa350bbcbe524976bd51688de6148f9",
+    "export": "people/ali-javan.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Ali Javan. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the older apparent age around 60–70 in the primary NIHF photograph; the much younger MIT obituary photograph is structural support only. Capture dates unknown. Preserve: short side-parted GREY hair, receding temples, large thick square glasses, broad cheek shape and short rounded chin, clean-shaven face, quiet closed-lip expression. Do NOT reproduce a photograph. NEW pose: 15 degrees toward VIEWER’S RIGHT, head upright with eyes following; new from the primary slight left turn and the younger frontal photograph. NEW clothing: plain dark open-neck button shirt, no jacket, tie, checks or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. MIT physicist and Bell Labs gas-laser inventor. Never mix the younger image’s dark fuller hair or age into the primary older portrait. The smaller younger photo is not grounds for extra feature detail. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "ali-javan-nihf.jpg",
+            "sha256": "08509aba436ef5d7f790341494b0267e2ee6665980523ff8c553d20a5d1fb028",
+            "dimensions": [
+              311,
+              446
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "ali-javan-mit-p2-i0.jpeg",
+            "sha256": "e4d51b447ec8b44d19708938621e2e5d613b008457bc202bcfb053a637b0b741",
+            "dimensions": [
+              149,
+              169
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nasser Peyghambarian",
+    "slug": "nasser-peyghambarian",
+    "selected_master_sha256": "7eae113c0ef5d5b9b022d2e0f2a9363d0097eefb90b3b06bd6b8a40b7de184f8",
+    "export": "people/nasser-peyghambarian.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Nasser Peyghambarian. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the older adult appearance in the primary Arizona headshot whose filename dates it 18 December 2019; the smaller second photograph is structural support, capture date unknown. Preserve: short greying salt-and-pepper hair, high temples, dark brows, no glasses or facial hair, broad cheeks and rounded short chin, slight closed-lip smile. Do NOT reproduce a photograph. NEW pose: 20 degrees toward VIEWER’S RIGHT, head upright and eyes following, not the primary left-facing view or the secondary near-front pose. NEW clothing: plain dark crew-neck sweater, no jacket, shirt collar, tie, lanyard or insignia, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. University of Arizona professor of optical sciences and rewritable holographic displays. Keep the broad low cheek shape and actual eye shape, no invented wrinkles or skin shading.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "nasser-peyghambarian-arizona.jpg",
+            "sha256": "700ce375121ace3f4570316e835861ea62f33daea77ee5cd43f5e24933f31c97",
+            "dimensions": [
+              3186,
+              2389
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "nasser-peyghambarian-arizona2.jpg",
+            "sha256": "264146c21bcb0cccc7a031c78b7b23af4569f8abc3e6ac48d808be958b4a6756",
+            "dimensions": [
+              234,
+              412
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pierre-Alexandre Blanche",
+    "slug": "pierre-alexandre-blanche",
+    "selected_master_sha256": "50b8682d74e1b5677cba2355e550ecc86ed7a59b79377f1773cf8bcae0038c6b",
+    "export": "people/pierre-alexandre-blanche.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Pierre-Alexandre Blanche. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: the adult apparent age around 40 in the 2010 IEEE author portrait controls age; the 2021 university award graphic is older structure support only. Preserve: short straight side-parted light-brown hair, fine oval metal glasses, long oval face with broad forehead, clean-shaven face and restrained closed-mouth smile. Do NOT reproduce a photograph. NEW pose: 15 degrees toward VIEWER’S LEFT, chin gently lowered, eyes follow, a new angle from both upright nearly frontal reference views. NEW clothing: plain dark crew-neck pullover, no collared shirt, jacket or tie, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. The first photo is Pierre-Alexandre Blanche named next to it on IEEE article page 6. The other extracted author photographs in that PDF show other scientists and MUST NOT influence this portrait. The second image is a graphic whose SMALL named headshot is him; ignore all red graphic and text. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pierre-alexandre-blanche-pdf-p5-i1.png",
+            "sha256": "3d001359dfdd76c0d1d2e1248460512166d4f10072f787c4dc318e10bb040106",
+            "dimensions": [
+              300,
+              375
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "pierre-alexandre-blanche-arizona.jpeg",
+            "sha256": "896ea825f8b407e1bb7a16a2396b4b5ae789062c2a7d79959f18705fce5790f1",
+            "dimensions": [
+              630,
+              180
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "6d90e40286ed54e2d5010efc082762588e3e2f54f4f655754853f93ef2cbba1d",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Charles Harrison",
+    "slug": "charles-harrison",
+    "selected_master_sha256": "363bf0f2b543aab9bda396cd70d8810a0a50ae94224f9f861ff2bb212c600c9d",
+    "export": "people/charles-harrison.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Charles Harrison. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: 77, the named Rob Tarpey portrait at Cooper Hewitt is dated 2008. Preserve: bald crown and short fine grey side hair, large round-rectangular metal eyeglasses, neat thin grey moustache, broad cheeks, warm restrained smile. Do NOT reproduce a photograph. NEW pose: 15 degrees toward VIEWER’S LEFT from the near-front seated portrait, upright with eyes following. NEW clothing: plain dark crew-neck pullover, no suit, shirt collar, tie, pocket square, watch, ring or props, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. The Chicago industrial designer who redesigned the View-Master in 1958, not a namesake. Photo by Rob Tarpey. The downloadable image is 600×498 but the face is small; export ONLY as an 84×105 label. No invented wrinkles or individual teeth. Do not invent a full beard. LABEL SIZE ONLY because the sources are small or soft. Draw only reliably visible feature shapes, no individual teeth or invented texture, extra wrinkles or new hair details. Additional source 2: Charles Harrison photographed by Tim Klein in 1998, named by the Strong museum article republished by Global Toy News. It is ten years younger and supports structure ONLY. The first Rob Tarpey 2008 portrait controls age77, bald crown, thin grey moustache and glasses. Do not draw the View-Master, hands or table. The source’s generic Creative Commons Attribution caption does not identify a licence version or original grant, so this is a study, not an after drawing.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "charles-harrison-cooper.jpg",
+            "sha256": "4056d1a04def0e81121b43919300f1406fb99497f88975871a6616233372e25a",
+            "dimensions": [
+              600,
+              498
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "charles-harrison-tim-klein.jpg",
+            "sha256": "d5ab20da8d37e2a1a2548407b7ea775e52666de4291178472a7c1322ba716c66",
+            "dimensions": [
+              1025,
+              820
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hank Willis Thomas",
+    "slug": "hank-willis-thomas",
+    "selected_master_sha256": "b0829585d23a2a8c2437e3d7f85bd1e7f9151d3e38f0c113f2a0b9f0f9325698",
+    "export": "people/hank-willis-thomas.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Hank Willis Thomas. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: adult apparent age about 35–40 in the primary Andrea Blanch portrait published with the 2016 New City Arts exhibition; exact capture year unknown. Preserve: close shaved hair, high forehead, alert large eyes, subtle short moustache and short chin goatee with sparse jaw stubble, full lips and relaxed closed mouth. Do NOT reproduce a photograph. NEW pose: 25 degrees toward VIEWER’S RIGHT, upright and eyes following head, clearly different from both near-front reference photographs. NEW clothing: plain dark button-down shirt with a small open collar, different cut from the blue spread-collar shirt in Ford frame and the crew-neck shirt in Blanch portrait, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Conceptual artist and lenticular-print maker. This REPLACES the earlier after drawing, whose source licence was not confirmed. Do not copy pose or clothing from either source. No extra stubble or shading on bare cheeks or neck, and no invented wrinkles.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "hank-willis-thomas-newcity.jpg",
+            "sha256": "8fe1f598ef68065e4e290966d91b711dae2cdf4377479fe8818e151c3d4ac823",
+            "dimensions": [
+              824,
+              844
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "hank-willis-thomas-portrait-native-scale.png",
+            "sha256": "0f64e9c4b902448a0aa354b3c79e64f3877b9130c81f95306c537e28e2e5091f",
+            "dimensions": [
+              508,
+              589
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Samuel Achilefu",
+    "slug": "samuel-achilefu",
+    "selected_master_sha256": "adb43ec08ade4d6f347cec3220b1b3ac4d80496bb2939ef5b16294479e1a5388",
+    "export": "people/samuel-achilefu.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Samuel Achilefu. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: adult appearance in the primary UTSW portrait, roughly 50–60; capture date not established. The WashU article published 2016 is secondary structural support only. Preserve: short dense closely cropped hair, dark rectangular eyeglasses from the primary UTSW portrait, broad cheeks and squared rounded jaw, friendly modest tooth-showing smile, clean-shaven face. Do NOT reproduce a photograph. NEW pose: 20 degrees toward VIEWER’S RIGHT and chin slightly raised, both eyes visible and eyes following head, a new turn from the slight left-facing staff portrait and downward-gaze laboratory photograph. NEW clothing: plain pale open-neck button shirt under a dark crew-neck sweater, no suit, tie, lab coat, lanyard, badges, goggles or props, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. He is the Nigerian-born biomedical engineer who developed cancer-imaging goggles, formerly Washington University and now UT Southwestern. Draw his normal eyeglasses, never the laboratory augmented-reality goggles. All skin blank ivory except single feature contours.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "samuel-achilefu-utsw.JPG",
+            "sha256": "99d8772ccc1b74a1b3e2b47884889736665d9000cbad77591dc3c49bb1fd1c79",
+            "dimensions": [
+              800,
+              800
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "samuel-achilefu-washu.jpg",
+            "sha256": "e519f4c7c0fe72eabd8d0ecc2f312853cc3568bc4fde544e428792fc861fe75c",
+            "dimensions": [
+              600,
+              400
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Horst Hörtner",
+    "slug": "horst-hortner",
+    "selected_master_sha256": "965aabf1e8aab661355462d20a3bae2ad02718ab4c71f9b5c760aa2523392343",
+    "export": "people/horst-hortner.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve, NEW POSE study. Draw Horst Hörtner, Ars Electronica Futurelab director. First two images are named professional photos: use them for his facial proportions, adult apparent age around 55, close grey cropped hair and receding temples, thick rectangular black glasses, very short pale beard/stubble, broad face and restrained friendly smile. NEW POSE is essential: turn his nose clearly toward the VIEWER'S LEFT about 18–20 degrees, both eyes visible, leftward gaze. The nose tip is LEFT of the midpoint between the pupils. Do not mirror either photo. Do not reproduce the right-facing workshop pose. Replace clothing with a plain light button-down shirt over a dark crew-neck undershirt, no jewellery or branding. The third input is Jepsen STYLE ONLY, never identity. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Show white stubble with a few isolated short marks only around mouth and chin; NO hatching on bare forehead, cheeks or neck. Do not turn right. The finished drawing must look left.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "horst-hortner-primary-full.jpg",
+            "sha256": "f46082d3682a0fc51dc7c085f988624f3eeb1b03b6642c9423ac843b484a6932",
+            "dimensions": [
+              643,
+              900
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "horst-hortner-workshop-crop.jpg",
+            "sha256": "cf27b148d30c3b5a13ef99034ce944b4871a61c6d2721f349c5e5816f5619789",
+            "dimensions": [
+              600,
+              750
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  Keep his REAL short beard and moustache stubble. Remove only the hatch shading on BARE neck and nose/upper-cheek areas. Do not erase the stubble. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "79e5c90a12f1f6b5678f14594e11b64f5f3da33f583f48d90cf93b38d488c420",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Elma Farnsworth",
+    "slug": "elma-farnsworth",
+    "selected_master_sha256": "e4cd36bb514a3823d567871717ca164c365d8477a274435c93048eab5f227cef",
+    "export": "people/elma-farnsworth.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose study, LABEL SIZE ONLY. Draw Elma 'Pem' Farnsworth, age 88, as documented in the two Television Academy interview frames from June 1996. Use ONLY these images for her appearance. Keep full soft waved/curl-set grey-white hair including its visible crown, large thin metal eyeglasses, heavy upper eyelids with eyes partly shaded by the lids, broad lower cheeks, short rounded chin, small closed mouth and mature expression. Do not make eyes large or youthful. Do not make her hair a schematic rigid cap. NEW pose: raise her bowed head to upright and turn it gently 15 degrees toward VIEWER'S RIGHT, eyes follow head. New clothing: plain dark high round-neck blouse, no brooch, no jewellery, no patterned shiny fabric. Third image Jepsen STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. The source is soft, so only draw reliable features. Retain real downturned mouth corners and a few essential fine single eye and mouth folds to show the photographed age. DO NOT add hatching, stipple or extra wrinkles to invent detail. Full hair has sparse wavy strands for tone. No individually invented teeth. A restrained elderly documentary portrait, not a generic icon.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "elma-farnsworth-interview-1.jpg",
+            "sha256": "0862473ff6d91dadf820fbe65638f7da83c879a919444d2b84424350aefc746c",
+            "dimensions": [
+              480,
+              360
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "elma-farnsworth-interview-2.jpg",
+            "sha256": "ef0f7bec011c6a3e1aff38ba775290e1492e062449d4e9d529f60e4617039f07",
+            "dimensions": [
+              480,
+              360
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  Preserve her mature heavy eyelids and essential single eye/mouth folds; do not make her look younger. Remove only texture shading, keeping documented age features. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "7e5668c7e3677114e67ee2a9511689f818627b3a5e5f86b5f7f7cc2dd185c6ec",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tadashi Nakamura",
+    "slug": "tadashi-nakamura",
+    "selected_master_sha256": "3580e01d151a04211128c5d444fb1d7b7e7a743ee1ec7e89540e444f9ddb29c9",
+    "export": "people/tadashi-nakamura.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / NEW POSE study. Draw Tadashi Nakamura, Ise Electronics founder and vacuum fluorescent display inventor, at age 53 as explicitly stated in Electronic Design 1976. Image 1 controls the age and swept-back hair; image 2 is a much later Noritake company portrait, only identity and structural support, NOT the age/hair to draw. Keep swept-back short dark greying hair with high temples, large dark browline rectangular glasses, lean cheek proportions and the natural tooth-showing smile. NEW pose: head nearly straight ahead with nose just 3 degrees toward VIEWER'S RIGHT, and chin distinctly lowered by 20 degrees, gaze following head downwards, BOTH eyes visible. This differs from the right-turn raised-chin 1976 photograph and the later upright company portrait. Do not make a left-facing three-quarter view as in the held drawing. New plain dark open-neck button-down shirt with no jacket or tie, no marks or logos. Last image STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. No bare-skin hatch shading, stipple or invented wrinkles. No balding elderly crown from the later photo. Preserve genuine brows and smile folds as fine single lines.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "tadashi-nakamura-1976-native-face.png",
+            "sha256": "9e9a3d658bba78a034c9ecb670e335fe60fa6366fe40d2231cc6f0bfd8f665cc",
+            "dimensions": [
+              310,
+              360
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "tadashi-nakamura-corporate-native-face-crop.png",
+            "sha256": "338ade309969d498abdfb3597ca00c31c011d0da0029a054bcfe9a3a6c4f2d79",
+            "dimensions": [
+              215,
+              225
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "521132be08e419ebfe843491f89891a016e2364a4ae7a9724326df9357cbcb0d",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Louis Heynick",
+    "slug": "louis-heynick",
+    "selected_master_sha256": "178a01fd4bc0ac5feab55a9458a01409c6e2d1d6b6f03a0151c0f02905d2b991",
+    "export": "people/louis-heynick.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit. First image is the pen drawing to correct; second is the named 2005 Bioelectromagnetics Society newsletter photo of Louis Heynick, the SRI scientist, and third is the museum style reference. Correct the drawing by adding his clearly documented full WHITE MOUSTACHE across the upper lip, as seen in photo 2. Use a pale moustache shape with delicate few hair strokes and subtle lower contour, NOT black facial hair. Preserve the drawing's new near-front slight right head turn, gaze, broad cheeks, receding combed white hair, older apparent age and new plain collared shirt. NO jacket. Also remove parallel hatch shading on his forehead, cheeks, nose and bare neck; retain essential single fine eye/smile folds and eyebrows. All bare skin blank ivory. The moustache is critical and must remain readable at label size. Do not copy the photographed pose or shirt. Keep varied fine line weight and composition.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "louis-heynick.png",
+            "sha256": "82ca19176f8909bece4d3fac9d4a25064525479f334740f0a09ba82eafa1ca48",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "louis-heynick-native-p3-i0.jpeg",
+            "sha256": "645186b53689963aaf4a4146f3d6f05cfaf063ed4d61dfe2694723446690ed24",
+            "dimensions": [
+              264,
+              333
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gerald Pighini",
+    "slug": "gerald-pighini",
+    "selected_master_sha256": "70c81718da7551b7fd181e8389c6d87bda7dc1c65d6b9875d9d8802d44120b4a",
+    "export": "people/gerald-pighini.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / NEW POSE study. Draw Gerald Pighini, HP engineer, using the ONLY named photograph from Hewlett-Packard Journal February 1969, image 1. Preserve middle-aged appearance, broad and relatively short cheek shape, high broad forehead, dark close crew-cut hair, dark browline rectangular glasses with thin lower rims, clean-shaven face and parted lips. New pose: only a shallow 15 degree turn toward VIEWER'S LEFT from the near-front photograph, no deeper turn. Eyes follow. New clothing: plain dark open-neck collared shirt, no white shirt or tie and no jacket. Image 2 STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. The printed source is halftone: do NOT turn its dots into freckles/stipple, or invent wrinkles or individual teeth. Keep the broad cheek proportions: do not lengthen the lower face. All bare skin entirely blank apart from essential single feature contours. For label-size review only.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "gerald-pighini-native-face.png",
+            "sha256": "186dc193041fc25297081317cadb3ada96518081040f06ff7d2ebdd1392bfcf9",
+            "dimensions": [
+              365,
+              535
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly.  Pighini is clean-shaven: remove any false chin tuft, soul patch or new stubble. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "369993700e65b49e6b7a6b672b61613ce09bb6d391efb02fbe74051b2b1042c8",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Barrett Comiskey",
+    "slug": "barrett-comiskey",
+    "selected_master_sha256": "f648c3f27a627e69de05bfa73475ccbb6f995c9094dfa1f199c7ffabbb4ac4f3",
+    "export": "people/barrett-comiskey.webp",
+    "steps": [
+      {
+        "step": "generation-final.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Barrett Comiskey. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: about 40–45 as in the primary professional portrait; capture dates unstated. Preserve: balding crown and close side hair, fine oval-rectangular ceremony glasses from source2, clean-shaven broad short face, rounded chin and restrained natural smile. Do NOT reproduce a photograph. NEW pose: near frontal, nose at the midline, chin clearly lowered 25 degrees and head leaned 8 degrees to VIEWER’S RIGHT, eyes looking down with the head while both eyes stay visible; neither supplied source has this pronounced downward inclination. NEW clothing: plain dark collarless crew-neck pullover with no jacket, shirt collar, ties, badges, cap or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Create a FRESH new study from these TWO selected clear professional identity references. The primary portrait controls age and facial-hair length. The second ceremony portrait supports proportions and documented features only. The other event profiles were not selected as identity inputs for this final attempt because they are unnecessary for the requested near-front view and add age/pose ambiguity. Do not reproduce either source pose or clothing. No parallel hatch shading or dark shadow patches anywhere on bare forehead, cheeks, nose, chin or neck. All bare skin is blank ivory. Keep real facial hair only where present; no new wrinkles or skin texture. CLOSED mouth with a gentle smile, no individually drawn teeth.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "barrett-comiskey-primary-full.jpg",
+            "sha256": "4f18bbf4087921d963079726b94acfe7c579148013d94d21142f3b52aacba3e5",
+            "dimensions": [
+              1350,
+              2025
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "barrett-comiskey-professional-4-face.png",
+            "sha256": "95297a6e087f06a389bfd68e7faf1de9336b1203ecb22798eaf5e3292b1b1bfd",
+            "dimensions": [
+              750,
+              1150
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "J. D. Albert",
+    "slug": "j-d-albert",
+    "selected_master_sha256": "5363e16ef512aed3cf0b391e55e19f768fff0cfa7f655f704ec53f89ee4f5518",
+    "export": "people/j-d-albert.webp",
+    "steps": [
+      {
+        "step": "generation-final.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw J. D. Albert. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: about 40–45 as in the primary professional portrait; capture dates unstated. Preserve: receding short hair and close-cropped beard, no glasses, broad cheeks and short rounded chin, restrained natural smile. Do NOT reproduce a photograph. NEW pose: near frontal, nose at the midline, chin clearly lowered 25 degrees and head leaned 8 degrees to VIEWER’S RIGHT, eyes looking down with the head while both eyes stay visible; neither supplied source has this pronounced downward inclination. NEW clothing: plain dark collarless crew-neck pullover with no jacket, shirt collar, ties, badges, cap or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Create a FRESH new study from these TWO selected clear professional identity references. The primary portrait controls age and facial-hair length. The second ceremony portrait supports proportions and documented features only. The other event profiles were not selected as identity inputs for this final attempt because they are unnecessary for the requested near-front view and add age/pose ambiguity. Do not reproduce either source pose or clothing. No parallel hatch shading or dark shadow patches anywhere on bare forehead, cheeks, nose, chin or neck. All bare skin is blank ivory. Keep real facial hair only where present; no new wrinkles or skin texture. CLOSED mouth with a gentle smile, no individually drawn teeth.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "j-d-albert-primary-full.jpg",
+            "sha256": "6ca01c2db4271357b72b1e8ed0614f37d3824bd1a60f4426bc97a4f50f280c64",
+            "dimensions": [
+              1080,
+              1512
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "j-d-albert-professional-4-face.png",
+            "sha256": "523e2fffd81d7582f64e5514381ae4d72ce21ab8c08655b5387a8c3b4becab93",
+            "dimensions": [
+              950,
+              1050
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Joseph Jacobson",
+    "slug": "joseph-jacobson",
+    "selected_master_sha256": "759a4d2c7f7b845adebed0eab05c9237a474b0be7192de513ddc291ea8805f4e",
+    "export": "people/joseph-jacobson.webp",
+    "steps": [
+      {
+        "step": "generation-final.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / new pose STUDY. Draw Joseph Jacobson. The first 2 images are named professional reference photographs of this person, for appearance only. Apparent age: about 50–55 as in the primary professional portrait; capture dates unstated. Preserve: short receding hair and CLOSE TRIMMED beard from PRIMARYsource1, no glasses, broad angular cheeks and rounded chin, relaxed slight smile. Do NOT reproduce a photograph. NEW pose: near frontal, nose at the midline, chin clearly lowered 25 degrees and head leaned 8 degrees to VIEWER’S RIGHT, eyes looking down with the head while both eyes stay visible; neither supplied source has this pronounced downward inclination. NEW clothing: plain dark collarless crew-neck pullover with no jacket, shirt collar, ties, badges, cap or jewellery, no jewellery, badges, logos, props or lettering. The FINAL input is approved Jepsen 2.3, STYLE ONLY, never borrow her identity, proportions, hair, glasses or jewellery. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair with a modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL Jepsen 2.3 STYLE reference: fine economical varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, finer feature lines. Preserve actual face proportions and apparent age. Restrained hatching and dark masses in hair and clothing only. All bare forehead, cheek, jaw and neck skin stays blank ivory. Do NOT translate photographic shadows into hatch shading. No stipple, skin texture, gradients, invented wrinkles, decorative effects, frame, text, signature, hands or props. Essential brows, eyelids, nostrils, lips and documented folds remain as single fine contours. Readable at 84×105 without a thick uniform cartoon outline. Create a FRESH new study from these TWO selected clear professional identity references. The primary portrait controls age and facial-hair length. The second ceremony portrait supports proportions and documented features only. The other event profiles were not selected as identity inputs for this final attempt because they are unnecessary for the requested near-front view and add age/pose ambiguity. Do not reproduce either source pose or clothing. No parallel hatch shading or dark shadow patches anywhere on bare forehead, cheeks, nose, chin or neck. All bare skin is blank ivory. Keep real facial hair only where present; no new wrinkles or skin texture. CLOSED mouth with a gentle smile, no individually drawn teeth.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "joseph-jacobson-primary-full.jpg",
+            "sha256": "055bb8d3e6c1a03f8b414c05ec67d65f7d80537025191e3de2b5bac99b3ad680",
+            "dimensions": [
+              1350,
+              1890
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "joseph-jacobson-professional-6-face.png",
+            "sha256": "361b051a85d2eb2ba3dbb359023ca2abd743b1e1159ef7eb99ea3e2c7ba52eb4",
+            "dimensions": [
+              500,
+              700
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 3,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gerardo Beni",
+    "slug": "gerardo-beni",
+    "selected_master_sha256": "3067543240f64e438c18b35542731cac2d92c16b0f8540fe7b00047440002807",
+    "export": "people/gerardo-beni.webp",
+    "steps": [
+      {
+        "step": "generation.json",
+        "tool": "built-in image_gen",
+        "prompt": "Use case: identity-preserve / NEW POSE study. Draw Gerardo Beni, UC Riverside electrowetting physicist, based on photograph 1. Preserve the photographed apparent age around 55–65 (capture date unknown), broad cheek shape, broad high forehead, VERY THIN RECEDING FRONT HAIRLINE with sparse swept-back strands, short curls ONLY at sides/back, thin metal rectangular glasses, clean-shaven face, natural tooth-showing smile. The former drawing had too much dense curly hair on top; correct this. New head pose: upright with no side lean and nose pointing 5 degrees toward VIEWER'S RIGHT, instead of the photographed left turn and leftward lean. New clothing: plain dark open-collar button shirt, no contrasting polo collar or layered sweatshirt. Final image is Jepsen STYLE ONLY. 4:5 vertical museum catalogue pen portrait, head and upper shoulders, whole hair visible with modest ivory margin. Flat warm ivory #f7f6f0 background and near-black #14171a ink. Match the FINAL style reference's fine economical lines: varied 2–3 px outside contour at 1024 px width, lighter on top and heavier on the shadow side, much finer facial lines. Keep the actual broad proportions, apparent age, hairline, eyewear, facial hair and expression. Restrained hatching for tone in hair and clothing only, with black masses where documented. Skin on forehead, cheeks, chin and neck stays open blank ivory: NO stipple, NO hatch shading, NO invented wrinkles. Essential brows, lids, nose and mouth contours must remain. No photographic gradients, decorative texture, frame, words, signature, props or hands. Readable at 84×105 pixels without a thick uniform cartoon outline. Make the receding front unmistakable and give the front crown low volume. No curled pompadour. All bare skin stays blank ivory; no shading strokes at cheek edges, nose bridge, forehead or neck.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "gerardo-beni-primary-full.jpg",
+            "sha256": "75557b46ebc0685ae5f2fad2023e23aae392ba64f790acd83a15d971fafe9a2b",
+            "dimensions": [
+              499,
+              493
+            ],
+            "role": "identity reference",
+            "included": false
+          },
+          {
+            "position": 2,
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only",
+            "included": false
+          }
+        ]
+      },
+      {
+        "step": "cleanup.json",
+        "tool": "built-in image_gen",
+        "prompt": "Edit this pen drawing ONLY to clean bare skin. Erase parallel hatch shading and dark shadow patches on the forehead, cheeks, nose bridge, chin and BARE neck, particularly beneath the jaw. Replace erased shading with the same flat warm ivory as the broad open forehead. Keep the essential SINGLE feature/crease contours, eyebrows, eyelid edges, nostrils, lips and all documented facial hair exactly. Do not change facial geometry, apparent age, eye spacing, gaze, head direction, expression, hairline, hairstyle, glasses, clothing, composition or fine varied contour weight. Preserve all hair/clothing hatching. Do not erase eyebrows or actual white moustaches. No new marks, no texture, no other changes.",
+        "transparent_background": false,
+        "inputs": [
+          {
+            "position": 1,
+            "file": "pre-cleanup.png",
+            "sha256": "9aed49d266cdd3b067d56ff303e850f2ceb4783278969ec46e3a05a354584166",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "edit target",
+            "included": false
+          }
+        ]
+      }
+    ]
+  }
+]
