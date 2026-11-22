@@ -201,7 +201,7 @@ export function buildHall(o: HallOptions): Hall {
     // where the spur of one trail crosses the line of another, the later trail is the upper coat of paint
     const lift = -4 - 2 * layer;
     const paint = new THREE.MeshStandardMaterial({ color: trail.colour, roughness: 0.5, metalness: 0, polygonOffset: true, polygonOffsetFactor: lift, polygonOffsetUnits: lift });
-    const strip = (x1: number, z1: number, x2: number, z2: number, wide = 0.07) => {
+    const strip = (x1: number, z1: number, x2: number, z2: number, wide = 0.1) => {
       const g = new THREE.PlaneGeometry(Math.hypot(x2 - x1, z2 - z1) + wide, wide);
       g.rotateX(-Math.PI / 2); g.rotateY(-Math.atan2(z2 - z1, x2 - x1)); g.translate((x1 + x2) / 2, FLOOR + 0.014, (z1 + z2) / 2);
       return g;
@@ -211,7 +211,7 @@ export function buildHall(o: HallOptions): Hall {
       // each trail has its own place in front of a block, so that two that stop there lie side by side
       const x = p.x + trail.spur, end = p.z - p.side * (BLOCK / 2 + 0.34);
       parts.push(strip(x, trail.lane, x, end));
-      const dot = new THREE.CircleGeometry(0.16, 28); dot.rotateX(-Math.PI / 2); dot.translate(x, FLOOR + 0.015, end);
+      const dot = new THREE.CircleGeometry(0.21, 32); dot.rotateX(-Math.PI / 2); dot.translate(x, FLOOR + 0.015, end);
       parts.push(dot);
     }
     const line = new THREE.Mesh(mergeGeometries(parts.map((g) => g.toNonIndexed())), paint);

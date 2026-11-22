@@ -51,7 +51,7 @@ export const trails: Trail[] = [
   // the green line: every piece whose People section names a woman
   lay({ id: 'women', colour: '#1f9d55', lane: 0.34, spur: 0, who: (e) => e.she ?? [] }),
   // the blue line: every piece whose People section names someone on the list above. It runs on the window side of the aisle
-  lay({ id: 'black', colour: '#2a86f0', lane: -0.34, spur: -0.9, who: (e) => e.who.filter((n) => listed.has(n)), list: black }),
+  lay({ id: 'black', colour: '#2a86f0', lane: -0.34, spur: -0.6, who: (e) => e.who.filter((n) => listed.has(n)), list: black }),
 ];
 
 export const trailById = (id: string): Trail | undefined => trails.find((t) => t.id === id);
