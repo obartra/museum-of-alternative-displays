@@ -577,10 +577,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "Desenho a partir de um retrato sem crédito. {licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "Estudo a partir de fotografias publicadas por {by}"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "Os retratos são desenhos a bico de pena feitos com um modelo de IA de imagens, a partir da fotografia ou do retrato anterior creditado ao lado de cada um. Um retrato só é mostrado quando essa fonte está em domínio público ou sob licença aberta, e o desenho é oferecido nos mesmos termos. São interpretações, não imagens de arquivo."
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "Os retratos são desenhos a bico de pena feitos com um modelo de IA de imagens, e a linha ao lado de cada um diz de qual dos dois tipos ele é. Um desenho a partir de uma imagem segue uma fotografia ou um retrato anterior que está em domínio público ou sob licença aberta, e é oferecido nos mesmos termos. Um estudo é para uma pessoa cujas fotografias têm todas um dono. Ele toma o rosto de fotografias publicadas por quem é citado ao lado, a pose e a roupa são do próprio desenho, e nenhuma dessas fotografias é mostrada aqui. Todos são interpretações, não imagens de arquivo."
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

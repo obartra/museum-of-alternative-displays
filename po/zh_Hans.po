@@ -571,10 +571,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "据未署名的肖像绘制。{licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "据{by}发布的照片所作的习作"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "这些肖像是用AI图像模型绘制的钢笔画，所依据的照片或早期肖像在每幅旁边注明。只有当原作属于公有领域或采用开放许可时才会展示肖像，画作也按同样的条件提供。它们是对原作的演绎，不是档案图像。"
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "这些肖像是用AI图像模型绘制的钢笔画，分为两类，每幅旁边的一行文字说明它属于哪一类。一类依据一幅图像绘制，所依据的照片或早期肖像属于公有领域或采用开放许可，画作也按同样的条件提供。另一类是习作，用于其照片均归他人所有的人物：面容取自旁边所列机构或个人发布的照片，姿态和衣着则为画作自定，这些照片本身不在此展示。它们都是演绎之作，不是档案图像。"
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

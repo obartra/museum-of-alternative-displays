@@ -245,13 +245,21 @@ function hallView(n: number): void {
 
 // ---------- people ----------
 /**
- * A portrait, where one has been added by hand, with the credit that its licence asks for. `named` puts the
- * sitter's name under it: a line that credits several people needs it, or a picture could be taken for the
- * wrong one of them.
+ * A portrait, where one has been added by hand, with its credit. A drawing after a picture names the picture's
+ * author and its licence, as the licence asks. A study names who published the photographs it was drawn from,
+ * each as a link to the page. `named` puts the sitter's name under it: a line that credits several people needs
+ * it, or a picture could be taken for the wrong one of them.
  */
 const portraitHtml = (name: string, named = false): string => {
   const pic = portraits[name];
-  return pic ? `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a></figcaption></figure>` : '';
+  if (!pic) return '';
+  let credit: string;
+  if ('study' in pic) {
+    // each publisher once, with the first of its pages
+    const once = pic.study.filter((x, i) => pic.study.findIndex((y) => y.by === x.by) === i);
+    credit = tx('people.study', { by: '\u0001' }).replace('\u0001', once.map((x) => `<a href="${esc(x.source)}" rel="noopener">${esc(x.by)}</a>`).join(esc(comma())));
+  } else credit = `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
+  return `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}${credit}</figcaption></figure>`;
 };
 /** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
 const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {

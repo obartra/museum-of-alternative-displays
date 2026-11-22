@@ -82,7 +82,10 @@ for (const tour of tours) {
   for (const [name, pic] of Object.entries(portraits)) {
     if (!named.has(name)) errors.push(`portrait of ${name}: no label spells a name that way`);
     if (!existsSync(new URL(`../public/people/${pic.file}`, import.meta.url))) errors.push(`portrait of ${name}: public/people/${pic.file} is not there`);
-    if (!pic.licence.trim() || !/^https?:\/\//.test(pic.source)) errors.push(`portrait of ${name}: needs its licence and the address of its source page`);
+    if ('study' in pic) {
+      // a study names every page its photographs are on, and who published each
+      if (!pic.study.length || pic.study.some((x) => !x.by.trim() || !/^https?:\/\//.test(x.source))) errors.push(`portrait of ${name}: a study needs the page of each photograph and who published it`);
+    } else if (!pic.licence.trim() || !/^https?:\/\//.test(pic.source)) errors.push(`portrait of ${name}: needs its licence and the address of its source page`);
   }
 }
 

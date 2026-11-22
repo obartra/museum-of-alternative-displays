@@ -576,10 +576,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "作者不明の肖像をもとにした素描。{licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "{by}が公開した写真をもとにした習作"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "肖像は、それぞれの横に出典を示した写真や過去の肖像をもとに、画像生成AIで描いたペン画です。出典がパブリックドメインまたはオープンライセンスの場合に限って掲載し、素描も同じ条件で提供します。これらは解釈であって、記録写真ではありません。"
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "肖像は画像生成AIで描いたペン画で、二つの種類があり、どちらであるかはそれぞれの横の一行に示しています。一つは一枚の絵をもとにした素描で、パブリックドメインまたはオープンライセンスの写真や過去の肖像に従って描き、同じ条件で提供します。もう一つは習作で、写真がすべて誰かの所有物である人物のためのものです。顔は横に名前を挙げた公開元の写真から取り、姿勢と服装は素描独自のもので、それらの写真そのものはここには掲載していません。いずれも解釈であって、記録写真ではありません。"
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

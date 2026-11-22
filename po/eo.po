@@ -578,10 +578,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "Desegnaĵo laŭ portreto sen indikita aŭtoro. {licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "Studo laŭ fotoj publikigitaj de {by}"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "La portretoj estas plumdesegnaĵoj, faritaj per bildmodelo de artefarita inteligenteco laŭ la foto aŭ pli frua portreto, kiu estas indikita apud ĉiu el ili. Portreto estas montrata nur tie, kie tiu fonto estas en la publika havaĵo aŭ sub malferma permesilo, kaj la desegnaĵo estas ofertata laŭ la samaj kondiĉoj. Ili estas interpretoj, ne arkivaj bildoj."
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "La portretoj estas plumdesegnaĵoj, faritaj per bildmodelo de artefarita inteligenteco, kaj la linio apud ĉiu diras, al kiu el du specoj ĝi apartenas. Desegnaĵo laŭ bildo sekvas foton aŭ pli fruan portreton, kiu estas en la publika havaĵo aŭ sub malferma permesilo, kaj ĝi estas ofertata laŭ la samaj kondiĉoj. Studo estas por homo, kies fotoj ĉiuj apartenas al iu. Ĝi prenas la vizaĝon el fotoj publikigitaj de tiuj, kiuj estas nomitaj apude, la pozo kaj la vestoj estas propraj al la desegnaĵo, kaj neniu el tiuj fotoj estas montrata ĉi tie. Ĉiuj estas interpretoj, ne arkivaj bildoj."
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

@@ -575,10 +575,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "Zeichnung nach einem Porträt ohne Urhebernachweis. {licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "Studie nach Fotografien, veröffentlicht von {by}"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "Die Porträts sind Federzeichnungen, die mit einem KI-Bildmodell nach der Fotografie oder dem älteren Porträt entstanden sind, das jeweils daneben genannt ist. Ein Porträt wird nur gezeigt, wenn diese Vorlage gemeinfrei ist oder unter einer offenen Lizenz steht, und die Zeichnung wird zu denselben Bedingungen angeboten. Es sind Interpretationen, keine Archivbilder."
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "Die Porträts sind Federzeichnungen, die mit einem KI-Bildmodell entstanden sind, und die Zeile neben jedem sagt, zu welcher von zwei Arten es gehört. Eine Zeichnung nach einem Bild folgt einer Fotografie oder einem älteren Porträt, das gemeinfrei ist oder unter einer offenen Lizenz steht, und wird zu denselben Bedingungen angeboten. Eine Studie gilt einer Person, deren Fotografien alle jemandem gehören. Sie nimmt das Gesicht aus Fotografien, die von den daneben Genannten veröffentlicht wurden, Haltung und Kleidung sind die der Zeichnung, und keine dieser Fotografien wird hier gezeigt. Alle sind Interpretationen, keine Archivbilder."
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

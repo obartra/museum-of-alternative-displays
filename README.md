@@ -216,10 +216,15 @@ people under the registry card, and `#people` lists everyone, with a filter for 
 The lines are translated in each language file under `people`. Until a language has them, the English
 stands in and `npm run validate` says how many sections are still owed.
 
-Portraits are added by hand, and nothing in the build fetches one. `PORTRAITS.md` lists every name with
-the file name its picture is expected under, and says how to add one: a file in `public/people/` and one
-line in `src/data/portraits.ts` with the author, the licence and the source page. Every portrait is shown
-the same way, cropped alike and in black and white, with its credit beside it.
+Portraits are added by hand, and nothing in the build fetches one. They are pen drawings made with an AI
+image model, of two kinds. A drawing after a picture follows a photograph that is free to reuse, and carries
+its author, licence and source page. A study is for a person whose photographs all belong to somebody: the
+face comes from photographs that named pages published, the pose and the clothing are the drawing's own, and
+the pages are named beside it. `PORTRAITS.md` has the rules and lists every name with the file its picture
+is expected under: a file in `public/people/` and one line in `src/data/portraits.ts`. `PORTRAITS-TODO.md`
+lists who is still waiting and why. Every portrait is shown the same way, cropped alike and in black and
+white, with its credit beside it. One marked `small` is kept to the size of a label and off the walls of
+the walk, because its photographs are small or soft.
 
 ## Known gaps
 

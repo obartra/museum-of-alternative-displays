@@ -577,10 +577,16 @@ msgid "Drawing after an uncredited portrait. {licence}"
 msgstr "Dessin d’après un portrait non crédité. {licence}"
 
 #: interface
+#. People page. Keep the words in curly brackets as they are.
+msgctxt "ui.people.study"
+msgid "Study from photographs published by {by}"
+msgstr "Étude d’après des photographies publiées par {by}"
+
+#: interface
 #. About page.
 msgctxt "ui.about.portraits"
-msgid "The portraits are pen drawings made with an AI image model from the photograph or earlier portrait credited beside each one. A portrait is shown only where that source is in the public domain or under an open licence, and the drawing is offered on the same terms. They are interpretations, not archive pictures."
-msgstr "Les portraits sont des dessins à la plume réalisés avec un modèle d’image par IA d’après la photographie ou le portrait antérieur crédité à côté de chacun. Un portrait n’est montré que si cette source est dans le domaine public ou sous licence ouverte, et le dessin est proposé aux mêmes conditions. Ce sont des interprétations, non des images d’archives."
+msgid "The portraits are pen drawings made with an AI image model, and the line beside each says which of two kinds it is. A drawing after a picture follows a photograph or an earlier portrait that is in the public domain or under an open licence, and is offered on the same terms. A study is for a person whose photographs all belong to somebody. It takes the face from photographs published by those named beside it, the pose and the clothing are the drawing's own, and none of those photographs is shown here. All are interpretations, not archive pictures."
+msgstr "Les portraits sont des dessins à la plume réalisés avec un modèle d’image par IA, et la ligne placée à côté de chacun dit auquel des deux genres il appartient. Un dessin d’après une image suit une photographie ou un portrait antérieur qui est dans le domaine public ou sous licence ouverte, et il est proposé aux mêmes conditions. Une étude concerne une personne dont toutes les photographies ont un propriétaire. Elle prend le visage dans des photographies publiées par ceux qui sont nommés à côté, la pose et les vêtements sont propres au dessin, et aucune de ces photographies n’est montrée ici. Tous sont des interprétations, non des images d’archives."
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.

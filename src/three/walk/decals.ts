@@ -24,7 +24,7 @@ export interface DecalOptions {
  *
  * Only the ink of each drawing is put on the wall: the sheet below holds how much ink there is at every point,
  * and the wall shows through where there is none. The ink is lit as the wall is, so it darkens with it at night.
- * Nothing hangs for a person without a portrait.
+ * Nothing hangs for a person without a portrait, nor a portrait that may only be shown at the size of a label.
  */
 export function buildDecals(o: DecalOptions): { mesh?: THREE.Mesh; hung: Hung[] } {
   // a portrait is four wide to five tall, and its two lines of text take a third of its width more. Up to four hang
@@ -36,7 +36,7 @@ export function buildDecals(o: DecalOptions): { mesh?: THREE.Mesh; hung: Hung[] 
   // the groups, by the stretch of wall each hangs in: a stretch is known by its middle, half way from one block to the next
   const groups = new Map<number, { piece: string; who: string[]; side: number }[]>();
   for (const p of places) {
-    const who = [...new Set((people[p.id]?.people ?? []).flatMap((e) => e.who))].filter((n) => portraits[n]).slice(0, 4);
+    const who = [...new Set((people[p.id]?.people ?? []).flatMap((e) => e.who))].filter((n) => portraits[n] && !portraits[n].small).slice(0, 4);
     if (!who.length) continue;
     const mid = Math.round((p.x + (p.side > 0 ? -PITCH / 2 : PITCH / 2)) * 100) / 100;
     groups.set(mid, [...(groups.get(mid) ?? []), { piece: p.id, who, side: p.side }]);

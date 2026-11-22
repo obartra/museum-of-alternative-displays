@@ -1,23 +1,36 @@
 # Portraits
 
-The labels name 110 people, and 38 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 110 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
-The portraits on the site are pen drawings made with an AI image model from a photograph or an earlier portrait. One is shown only when two things hold: its source is in the public domain or under an open licence, and the check of who it shows and how closely it follows its source has passed. A drawing made from a picture whose rights are not confirmed stays off the site, and so does one that still needs a second look.
+The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
+
+**After a picture.** The drawing follows one photograph or earlier portrait: the same head angle, the same clothing. It is shown only when that picture is in the public domain or under an open licence, and its author and licence stand beside it.
+
+**A study.** For a person whose photographs all belong to somebody. The face is drawn from photographs that named pages have published, at least two where two exist. The pose and the clothing are the drawing's own, so no photograph is reproduced, and none is shown on the site. The pages are named beside the drawing. A study lowers the risk of copying a photograph. It does not settle whether a living person agrees to be shown, which the museum decides for each person.
+
+Either kind is shown only when the check of who it shows has passed: every page used names the person together with a fact from the label. A drawing is also compared with its photographs for hair, glasses, facial hair, age, and for a study a pose and clothing that differ from every one of them. Whether a face is a good likeness is judged by the people who make the drawings, not by that check.
+
+A drawing whose photographs are small or soft is shown only at the size of a label (`small` in the data): it is not hung on the wall of the walk, and its file is no larger than a label needs.
 
 ## Adding a portrait
 
-1. Find a picture that is free to reuse. The person's Wikipedia article usually shows one, and its file page on Wikimedia Commons states the author and the licence.
-2. Check that it is the right person. See the next section.
-3. Save it in `public/people/` under the file name in the table below. A JPEG about 600 pixels wide is enough.
-4. Add one line to `src/data/portraits.ts`, under the name exactly as the table spells it:
+1. Check that the picture shows the right person. See the next section.
+2. Save the drawing in `public/people/` under the file name in the table below.
+3. Add one line to `src/data/portraits.ts`, under the name exactly as the table spells it. After a free picture:
 
    ```ts
-   'Elsa Garmire': { file: 'elsa-garmire.jpg', by: 'Name of the photographer', licence: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Example.jpg' },
+   'Jingyu Lin': { file: 'jingyu-lin.webp', by: 'Name of the photographer', licence: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Example.jpg' },
    ```
 
-The page shows every portrait the same way: one crop, black and white, one frame, with its author, licence and source beside it.
+   A study, with every page a photograph came from:
 
-Not everyone here has a freely licensed portrait. A person without one keeps a label with no picture.
+   ```ts
+   'Elsa Garmire': { file: 'elsa-garmire.webp', study: [{ by: 'Optica', source: 'https://example.org/her-page' }] },
+   ```
+
+The page shows every portrait the same way: one crop, black and white, one frame, with its credit beside it.
+
+Not everyone here has a portrait. A person without one keeps a label with no picture.
 
 ## The right person
 
@@ -29,14 +42,14 @@ Take the picture from the person's own article or file page, where the caption s
 
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
-| Gino Valle | Split-flap board | Designer credited with the form of the boards made by Solari. |  | `public/people/gino-valle.jpg` |
+| Gino Valle | Split-flap board | Designer credited with the form of the boards made by Solari. | yes | `public/people/gino-valle.webp` |
 | John Myer | Split-flap board | The Belgian inventor linked to Solari. A common name. |  | `public/people/john-myer.jpg` |
 | Kenyon Taylor | Flip-disc display | Devised the flip-disc at Ferranti-Packard in Canada, for Trans-Canada Air Lines. |  | `public/people/kenyon-taylor.jpg` |
 | Paul Nipkow | Mechanical television | Patented the scanning disc in Germany in the 1880s. | yes | `public/people/paul-nipkow.webp` |
 | John Logie Baird | Mechanical television | Gave the first public demonstration of television, in London in 1926. | yes | `public/people/john-logie-baird.webp` |
-| Daniel Rozin | Kinetic mirror | Artist, born in Jerusalem. He built Wooden Mirror in 1999 and has since made mirrors of chrome balls, pegs and toy penguins. |  | `public/people/daniel-rozin.jpg` |
-| Daniel Leithinger | Shape display | Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab. |  | `public/people/daniel-leithinger.jpg` |
-| Sean Follmer | Shape display | Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab. |  | `public/people/sean-follmer.jpg` |
+| Daniel Rozin | Kinetic mirror | Artist, born in Jerusalem. He built Wooden Mirror in 1999 and has since made mirrors of chrome balls, pegs and toy penguins. | yes | `public/people/daniel-rozin.webp` |
+| Daniel Leithinger | Shape display | Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab. | yes | `public/people/daniel-leithinger.webp` |
+| Sean Follmer | Shape display | Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab. | yes | `public/people/sean-follmer.webp` |
 | Hiroshi Ishii | Shape display | Leads the Tangible Media Group, where the pin tables Relief and inFORM were built. | yes | `public/people/hiroshi-ishii.webp` |
 | Oleg Tretiakoff | Refreshable braille display | Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974. |  | `public/people/oleg-tretiakoff.jpg` |
 | Andrée Tretiakoff | Refreshable braille display | Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974. |  | `public/people/andree-tretiakoff.jpg` |
@@ -55,17 +68,17 @@ Take the picture from the person's own article or file page, where the caption s
 | Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. |  | `public/people/guillermo-gonzalez-camarena.jpg` |
 | A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/a-frankenstein.jpg` |
 | Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/werner-von-jaworski.jpg` |
-| Peter Goldmark | Colour-wheel television | Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years. |  | `public/people/peter-goldmark.jpg` |
+| Peter Goldmark | Colour-wheel television | Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years. | yes | `public/people/peter-goldmark.webp` |
 | Robert H. Anderson | Storage tube terminal | The Tektronix engineer. A common name. |  | `public/people/robert-h-anderson.jpg` |
-| Andrew Haeff | Storage tube terminal | Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen. |  | `public/people/andrew-haeff.jpg` |
+| Andrew Haeff | Storage tube terminal | Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen. | yes | `public/people/andrew-haeff.webp` |
 | David Hagelbarger | Nixie tube | The engineer most often named as its inventor. |  | `public/people/david-hagelbarger.jpg` |
 | Tadashi Nakamura | Vacuum fluorescent display | The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display. |  | `public/people/tadashi-nakamura.jpg` |
-| Tadashi Sasaki | Vacuum fluorescent display | The engineer of Hayakawa Electric, later Sharp. |  | `public/people/tadashi-sasaki.jpg` |
-| Donald Bitzer | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. |  | `public/people/donald-bitzer.jpg` |
-| Gene Slottow | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. |  | `public/people/gene-slottow.jpg` |
-| Robert Willson | Plasma display panel | The Illinois graduate student of 1964. A common name. |  | `public/people/robert-willson.jpg` |
-| Tsutae Shinoda | Plasma display panel | Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993. |  | `public/people/tsutae-shinoda.jpg` |
-| Charles Spindt | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/charles-spindt.jpg` |
+| Tadashi Sasaki | Vacuum fluorescent display | The engineer of Hayakawa Electric, later Sharp. | yes | `public/people/tadashi-sasaki.webp` |
+| Donald Bitzer | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. | yes | `public/people/donald-bitzer.webp` |
+| Gene Slottow | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. | yes | `public/people/gene-slottow.webp` |
+| Robert Willson | Plasma display panel | The Illinois graduate student of 1964. A common name. | yes | `public/people/robert-willson.webp` |
+| Tsutae Shinoda | Plasma display panel | Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993. | yes | `public/people/tsutae-shinoda.webp` |
+| Charles Spindt | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. | yes | `public/people/charles-spindt.webp` |
 | Kenneth Shoulders | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/kenneth-shoulders.jpg` |
 | Louis Heynick | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/louis-heynick.jpg` |
 
@@ -73,20 +86,20 @@ Take the picture from the person's own article or file page, where the caption s
 
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
-| Howard Borden | LED display | Designed the Hewlett-Packard numeric indicator of 1969. |  | `public/people/howard-borden.jpg` |
+| Howard Borden | LED display | Designed the Hewlett-Packard numeric indicator of 1969. | yes | `public/people/howard-borden.webp` |
 | Gerald Pighini | LED display | Designed the Hewlett-Packard numeric indicator of 1969. |  | `public/people/gerald-pighini.jpg` |
 | Isamu Akasaki | LED display | Made efficient blue LEDs in Japan. Full-colour screens followed, and so did the 2014 Nobel Prize in Physics. | yes | `public/people/isamu-akasaki.webp` |
 | Hiroshi Amano | LED display | Made efficient blue LEDs in Japan. Full-colour screens followed, and so did the 2014 Nobel Prize in Physics. | yes | `public/people/hiroshi-amano.webp` |
 | Shuji Nakamura | LED display | The Nobel laureate of 2014. Not Tadashi Nakamura of Ise Electronics. | yes | `public/people/shuji-nakamura.webp` |
-| Ching Wan Tang | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. |  | `public/people/ching-wan-tang.jpg` |
+| Ching Wan Tang | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. | yes | `public/people/ching-wan-tang.webp` |
 | Steven Van Slyke | OLED | Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells. | yes | `public/people/steven-van-slyke.webp` |
 | Hongxing Jiang | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | yes | `public/people/hongxing-jiang.webp` |
 | Jingyu Lin | MicroLED | Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000. | yes | `public/people/jingyu-lin.webp` |
-| Vicki Colvin | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. |  | `public/people/vicki-colvin.jpg` |
+| Vicki Colvin | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | yes | `public/people/vicki-colvin.webp` |
 | M. C. Schlamp | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. |  | `public/people/m-c-schlamp.jpg` |
 | Paul Alivisatos | Quantum-dot display | Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994. | yes | `public/people/paul-alivisatos.webp` |
 | Aleksey Yekimov | Quantum-dot display | Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour. | yes | `public/people/aleksey-yekimov.webp` |
-| Louis Brus | Quantum-dot display | Proved the same effect in particles floating freely in a liquid. |  | `public/people/louis-brus.jpg` |
+| Louis Brus | Quantum-dot display | Proved the same effect in particles floating freely in a liquid. | yes | `public/people/louis-brus.webp` |
 | Moungi Bawendi | Quantum-dot display | American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry. | yes | `public/people/moungi-bawendi.webp` |
 | Tuomo Suntola | Thin-film electroluminescent panel | Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels. | yes | `public/people/tuomo-suntola.webp` |
 | Nicholas Sheridon | Flexible display | Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center. |  | `public/people/nicholas-sheridon.jpg` |
@@ -97,18 +110,18 @@ Take the picture from the person's own article or file page, where the caption s
 |---|---|---|---|---|
 | Martin Schadt | Liquid crystal display | Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970. | yes | `public/people/martin-schadt.webp` |
 | Wolfgang Helfrich | Liquid crystal display | Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970. | yes | `public/people/wolfgang-helfrich.webp` |
-| James Fergason | Liquid crystal display | Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court. |  | `public/people/james-fergason.jpg` |
+| James Fergason | Liquid crystal display | Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court. | yes | `public/people/james-fergason.webp` |
 | George Heilmeier | Liquid crystal display | Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light. | yes | `public/people/george-heilmeier.webp` |
-| Larry Hornbeck | Digital micromirror device | Invented the mirror chip at Texas Instruments in 1987. |  | `public/people/larry-hornbeck.jpg` |
+| Larry Hornbeck | Digital micromirror device | Invented the mirror chip at Texas Instruments in 1987. | yes | `public/people/larry-hornbeck.webp` |
 | Fritz Fischer | Eidophor | The Swiss engineer at ETH Zurich. A German historian and a biathlete share the name. | yes | `public/people/fritz-fischer.webp` |
-| Joseph Ostoja-Kotkowski | Scanned laser | Staged an early laser show, Sound and Image, at the Adelaide Festival of Arts in 1968. |  | `public/people/joseph-ostoja-kotkowski.jpg` |
-| Elsa Garmire | Scanned laser | Physicist at the California Institute of Technology. Her laser images, filmed in 1972, became the model for Laserium. |  | `public/people/elsa-garmire.jpg` |
-| Ivan Dryer | Scanned laser | Filmmaker who worked with Garmire and opened Laserium at Griffith Observatory in Los Angeles in 1973. |  | `public/people/ivan-dryer.jpg` |
-| Leota Toombs | Projection mapping | Artist at WED Enterprises, the Disney design workshop. Her filmed face is projected onto a blank head inside the crystal ball of the Haunted Mansion. |  | `public/people/leota-toombs.jpg` |
+| Joseph Ostoja-Kotkowski | Scanned laser | Staged an early laser show, Sound and Image, at the Adelaide Festival of Arts in 1968. | yes | `public/people/joseph-ostoja-kotkowski.webp` |
+| Elsa Garmire | Scanned laser | Physicist at the California Institute of Technology. Her laser images, filmed in 1972, became the model for Laserium. | yes | `public/people/elsa-garmire.webp` |
+| Ivan Dryer | Scanned laser | Filmmaker who worked with Garmire and opened Laserium at Griffith Observatory in Los Angeles in 1973. | yes | `public/people/ivan-dryer.webp` |
+| Leota Toombs | Projection mapping | Artist at WED Enterprises, the Disney design workshop. Her filmed face is projected onto a blank head inside the crystal ball of the Haunted Mansion. | yes | `public/people/leota-toombs.webp` |
 | Michael Naimark | Projection mapping | Artist. For Displacements he filmed a room, painted it white and projected the film back onto it. | yes | `public/people/michael-naimark.webp` |
 | Ramesh Raskar | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/ramesh-raskar.webp` |
-| Greg Welch | Projection mapping | The computer scientist, co-author of the 2001 shader lamps paper. A common name. |  | `public/people/greg-welch.jpg` |
-| Kok-Lim Low | Projection mapping | Described the technique in 2001 under the name shader lamps. |  | `public/people/kok-lim-low.jpg` |
+| Greg Welch | Projection mapping | The computer scientist, co-author of the 2001 shader lamps paper. A common name. | yes | `public/people/greg-welch.webp` |
+| Kok-Lim Low | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/kok-lim-low.webp` |
 | Deepak Bandyopadhyay | Projection mapping | Described the technique in 2001 under the name shader lamps. |  | `public/people/deepak-bandyopadhyay.jpg` |
 
 ## Hall 5, Paper
@@ -118,13 +131,13 @@ Take the picture from the person's own article or file page, where the caption s
 | Barrett Comiskey | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/barrett-comiskey.jpg` |
 | J. D. Albert | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/j-d-albert.jpg` |
 | Joseph Jacobson | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/joseph-jacobson.jpg` |
-| Deng-Ke Yang | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. |  | `public/people/deng-ke-yang.jpg` |
-| J. William Doane | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. |  | `public/people/j-william-doane.jpg` |
+| Deng-Ke Yang | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/deng-ke-yang.webp` |
+| J. William Doane | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/j-william-doane.webp` |
 | Gerardo Beni | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. |  | `public/people/gerardo-beni.jpg` |
-| Susan Hackwood | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. |  | `public/people/susan-hackwood.jpg` |
+| Susan Hackwood | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. | yes | `public/people/susan-hackwood.webp` |
 | Robert Hayes | Electrowetting display | The Philips researcher, co-author of the 2003 Nature paper. A common name. |  | `public/people/robert-hayes.jpg` |
-| Johan Feenstra | Electrowetting display | Made it work at video speed at Philips Research in Eindhoven in 2003. |  | `public/people/johan-feenstra.jpg` |
-| Mark Miles | Interferometric modulator | The display engineer who founded Etalon and Iridigm. A motor racing executive shares the name. |  | `public/people/mark-miles.jpg` |
+| Johan Feenstra | Electrowetting display | Made it work at video speed at Philips Research in Eindhoven in 2003. | yes | `public/people/johan-feenstra.webp` |
+| Mark Miles | Interferometric modulator | The display engineer who founded Etalon and Iridigm. A motor racing executive shares the name. | yes | `public/people/mark-miles.webp` |
 | S. K. Deb | Electrochromic display | Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew. |  | `public/people/s-k-deb.jpg` |
 
 ## Hall 6, Mid-air
@@ -134,18 +147,18 @@ Take the picture from the person's own article or file page, where the caption s
 | Henry Dircks | Pepper's ghost | Engineer who devised the illusion. | yes | `public/people/henry-dircks.webp` |
 | John Henry Pepper | Pepper's ghost | Staged it at the Royal Polytechnic Institution in London in 1862, and it took his name. | yes | `public/people/john-henry-pepper.webp` |
 | Valerie Thomas | Illusion transmitter | Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there. | yes | `public/people/valerie-thomas.webp` |
-| Karri Palovuori | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. |  | `public/people/karri-palovuori.jpg` |
-| Ismo Rakkolainen | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. |  | `public/people/ismo-rakkolainen.jpg` |
+| Karri Palovuori | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. | yes | `public/people/karri-palovuori.webp` |
+| Ismo Rakkolainen | Fog screen | Developed the fog screen that people can walk through, at Tampere University of Technology in 2002. | yes | `public/people/ismo-rakkolainen.webp` |
 | Joseph Plateau | Persistence of vision display | Used the effect in his spinning picture discs of 1832. | yes | `public/people/joseph-plateau.webp` |
 | Max Hirsch | Swept-volume display | The holder of the 1961 display patent. A German economist of the 1800s shares the name. |  | `public/people/max-hirsch.jpg` |
 | Gregg Favalora | Swept-volume display | Founder of Actuality Systems, which put the Perspecta display on sale in 2002. |  | `public/people/gregg-favalora.jpg` |
 | Elizabeth Downing | Static-volume display | The first author of the 1996 Science paper from Stanford. A common name. |  | `public/people/elizabeth-downing.jpg` |
-| Lambertus Hesselink | Static-volume display | Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author. |  | `public/people/lambertus-hesselink.jpg` |
+| Lambertus Hesselink | Static-volume display | Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author. | yes | `public/people/lambertus-hesselink.webp` |
 | John Ralston | Static-volume display | A co-author of the 1996 Science paper from Stanford. A common name. |  | `public/people/john-ralston.jpg` |
 | Roger Macfarlane | Static-volume display | Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author. |  | `public/people/roger-macfarlane.jpg` |
-| Daniel Smalley | Optical trap display | The Brigham Young University professor. A common name. |  | `public/people/daniel-smalley.jpg` |
-| Ryuji Hirayama | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. |  | `public/people/ryuji-hirayama.jpg` |
-| Diego Martinez Plasencia | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. |  | `public/people/diego-martinez-plasencia.jpg` |
+| Daniel Smalley | Optical trap display | The Brigham Young University professor. A common name. | yes | `public/people/daniel-smalley.webp` |
+| Ryuji Hirayama | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/ryuji-hirayama.webp` |
+| Diego Martinez Plasencia | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/diego-martinez-plasencia.webp` |
 | Nobuyuki Masuda | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. |  | `public/people/nobuyuki-masuda.jpg` |
 | Sriram Subramanian | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/sriram-subramanian.webp` |
 | Yoichi Ochiai | Laser plasma display | Led the version of 2015, which uses far shorter laser pulses. | yes | `public/people/yoichi-ochiai.webp` |
@@ -162,7 +175,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Dennis Gabor | Holography | Invented holography in 1948 at British Thomson-Houston in Rugby, England. | yes | `public/people/dennis-gabor.webp` |
 | Emmett Leith | Holography | Published the off-axis method of recording holograms in 1962. | yes | `public/people/emmett-leith.webp` |
 | Juris Upatnieks | Holography | Published the off-axis method of recording holograms in 1962. | yes | `public/people/juris-upatnieks.webp` |
-| Margaret Benyon | Holography | Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later. |  | `public/people/margaret-benyon.jpg` |
+| Margaret Benyon | Holography | Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later. | yes | `public/people/margaret-benyon.webp` |
 | Stephen Benton | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. |  | `public/people/stephen-benton.jpg` |
 | Mary Lou Jepsen | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. | yes | `public/people/mary-lou-jepsen.webp` |
 | Ivan Sutherland | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/ivan-sutherland.webp` |
