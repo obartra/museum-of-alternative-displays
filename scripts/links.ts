@@ -14,8 +14,11 @@ const ROOT = new URL('../src/data/', import.meta.url).pathname;
 const files = (dir: string): string[] => readdirSync(dir).flatMap((f) => (statSync(dir + f).isDirectory() ? files(`${dir}${f}/`) : /\.(?:ts|json)$/.test(f) ? [dir + f] : []));
 const where = new Map<string, string>();
 for (const file of files(ROOT)) {
-  for (const m of readFileSync(file, 'utf8').matchAll(/https?:\/\/[^\s'"`)\\<>]+/g)) {
-    const url = m[0].replace(/[.,;]+$/, '');
+  for (const m of readFileSync(file, 'utf8').matchAll(/https?:\/\/[^\s'"`\\<>]+/g)) {
+    let url = m[0].replace(/[.,;]+$/, '');
+    if (url.includes('${')) continue;                       // an address put together in code, not a source
+    // an address may hold brackets of its own: only a closing one with no opening one belongs to the text around it
+    while (url.endsWith(')') && url.split('(').length < url.split(')').length) url = url.slice(0, -1);
     if (!where.has(url)) where.set(url, file.slice(ROOT.length));
   }
 }
