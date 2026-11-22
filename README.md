@@ -407,4 +407,4 @@ its credit. No licence has been chosen yet for the rest of the code, which stays
 reserved by the repository owner until one is added. Typefaces are Sofia Sans and Sofia Sans
 Extra Condensed (Lettersoup) and PT Mono (ParaType), each under the SIL Open Font License.
 
-The People page and piece labels link each of143 names to a checked biography, institutional profile or identifying record.
+The People page and piece labels link each of 143 names to a checked biography, institutional profile or identifying record.

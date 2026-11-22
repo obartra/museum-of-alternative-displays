@@ -27,6 +27,12 @@ import { AUTHOR, LICENCE, REPO } from '../src/site';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+/** A person in the data for a search engine. An encyclopedia article about them says which person of that name is meant. */
+const person = (name: string): Record<string, string> => {
+  const link = personLinks[name];
+  return { '@type': 'Person', name, ...(link && /^https:\/\/[a-z]+\.wikipedia\.org\//.test(link.url) ? { sameAs: link.url } : {}) };
+};
+/** A name in the plain words, as a link to the biography, profile or record that says who the person is. */
 const personName = (name: string): string => {
   const link = personLinks[name];
   return link ? `<a href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
@@ -143,7 +149,7 @@ ${ways}`,
       pictures: [`posters/${p.id}-day-760.webp`, ...stills.map(({ file }) => file)],
       more: {
         about: { '@type': 'Thing', name: x.name, ...(x.aka ? { alternateName: x.aka } : {}), description: x.lead },
-        ...(credit ? { mentions: [...new Set(credit.people.flatMap((e) => e.who))].map((name) => ({ '@type': 'Person', name })) } : {}),
+        ...(credit ? { mentions: [...new Set(credit.people.flatMap((e) => e.who))].map(person) } : {}),
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
         // each archive picture with who made it, its licence and the page it came from: what a picture search shows beside it
         ...(stills.length ? { image: stills.map(({ m, own, file }) => ({ '@type': 'ImageObject', contentUrl: file, caption: own.caption, description: own.alt, width: m.width, height: m.height, creditText: m.credit.author, ...(m.credit.licenceUrl ? { license: m.credit.licenceUrl } : {}), acquireLicensePage: m.credit.source })) } : {}),
@@ -180,7 +186,7 @@ ${ways}`,
   // the people: everyone named on a label, under the piece they worked on
   out.push({
     name: 'people', path: 'people/', title: titled(w.ui('nav.people')), short: w.ui('nav.people'), says: w.ui('people.lead'), kind: 'WebPage', crumbs: [home, [w.ui('nav.people'), 'people/']],
-    more: { mentions: [...new Set(pieces.flatMap((p) => people[p.id]?.people.flatMap((e) => e.who) ?? []))].map((name) => ({ '@type': 'Person', name })) },
+    more: { mentions: [...new Set(pieces.flatMap((p) => people[p.id]?.people.flatMap((e) => e.who) ?? []))].map(person) },
     body: `<h1>${esc(w.ui('nav.people'))}</h1>
 <p>${esc(w.ui('people.lead'))}</p>
 ${pieces.filter((p) => people[p.id]).map((p) => {
