@@ -8,7 +8,8 @@
  * The key is read from the environment, as ELEVENLABS_API_KEY, and is written nowhere.
  * tour/voices.json names the model, the sound format and the voice for each language. "default" is the voice of
  * every language that has none of its own. A language the model cannot speak is left out, and so is a language
- * that does not tell the tour yet.
+ * that does not tell the tour yet. "waiting" holds voices that are chosen and not yet in use: nothing is recorded
+ * with one of them until its id is moved up to "voices".
  *
  * A part is spoken in one piece, so that it is one voice in one mood from its first word to its last. ElevenLabs
  * says when each character was spoken, and the recording is cut where its paragraphs meet, in the pause that is
@@ -51,7 +52,7 @@ interface Delivery {
   /** How loud every part is, in LUFS, and the level no peak passes, in dBFS. */
   loudness: number; peak: number;
 }
-const config = JSON.parse(readFileSync(`${ROOT}tour/voices.json`, 'utf8')) as { model: string; format: string; voices: Record<string, string>; leaveOut?: string[]; delivery: Delivery };
+const config = JSON.parse(readFileSync(`${ROOT}tour/voices.json`, 'utf8')) as { model: string; format: string; voices: Record<string, string>; waiting?: Record<string, string>; leaveOut?: string[]; delivery: Delivery };
 const D = config.delivery;
 /** What ElevenLabs is asked for. It is worked on here and then written in the format the site serves, so it is asked for at a better quality than that. */
 const SOURCE = 'mp3_44100_128';
@@ -107,6 +108,9 @@ let langs = [...new Set(told.map((x) => x.lang))].filter((l) => !wanted || wante
 const left = langs.filter((l) => (config.leaveOut ?? []).includes(l));
 if (left.length) note(`Left out, as tour/voices.json says: ${left.join(', ')}.`);
 langs = langs.filter((l) => !left.includes(l));
+// voices that are chosen and wait: they are named here so that nobody forgets them, and nothing is recorded with them
+const waiting = Object.entries(config.waiting ?? {}).filter(([l, v]) => v && v !== (config.voices[l] || config.voices.default || ''));
+if (waiting.length) note(`Voices waiting in tour/voices.json, not used yet: ${waiting.map(([l]) => l).join(', ')}. One is used once its id is moved up to "voices".`);
 
 // ---------- the sound ----------
 
