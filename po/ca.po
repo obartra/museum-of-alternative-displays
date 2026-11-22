@@ -7976,8 +7976,8 @@ msgstr "cap al {n}"
 #: tour-women
 #. Title of a guided tour.
 msgctxt "tour.women.title"
-msgid "The green line"
-msgstr "La línia verda"
+msgid "Women in the museum"
+msgstr "Dones al museu"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.

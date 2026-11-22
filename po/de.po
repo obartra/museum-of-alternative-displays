@@ -7975,7 +7975,7 @@ msgstr "um {n}"
 #: tour-women
 #. Title of a guided tour.
 msgctxt "tour.women.title"
-msgid "The green line"
+msgid "Women in the museum"
 msgstr ""
 
 #: tour-women

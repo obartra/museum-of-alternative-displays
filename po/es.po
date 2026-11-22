@@ -7976,8 +7976,8 @@ msgstr "hacia {n}"
 #: tour-women
 #. Title of a guided tour.
 msgctxt "tour.women.title"
-msgid "The green line"
-msgstr "La línea verde"
+msgid "Women in the museum"
+msgstr "Mujeres en el museo"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.

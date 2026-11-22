@@ -34,7 +34,7 @@ export interface Tour {
 export const tours: Tour[] = [
   {
     id: 'women',
-    title: 'The green line',
+    title: 'Women in the museum',
     lead: 'A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
