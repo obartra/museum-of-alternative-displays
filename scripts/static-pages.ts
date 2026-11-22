@@ -131,7 +131,7 @@ ${ways}`,
     const held = (media[p.id] ?? []).map((m) => ({ m, own: w.media(p.id, m), file: (m.kind === 'film' ? m.mp4 : m.large).replace(/^\.\//, '') }));
     const stills = held.filter(({ m }) => m.kind !== 'film');
     out.push({
-      name: `piece-${p.id}`, path: `piece/${p.id}/`, title: titled(x.name), short: x.name, says: x.lead, kind: 'ItemPage',
+      name: `piece-${p.id}`, path: `piece/${p.id}/`, title: titled(w.ui('title.piece', { name: x.name })), short: x.name, says: x.lead, kind: 'ItemPage',
       crumbs: [home, [hallName(hall), `hall/${hall.id}/`], [x.name, `piece/${p.id}/`]],
       picture: { file: `og/${p.id}.jpg`, wide: 760, high: 760, alt },
       pictures: [`posters/${p.id}-day-760.webp`, ...stills.map(({ file }) => file)],
@@ -163,7 +163,7 @@ ${ways}`,
 
   // the index: the whole collection in one list
   out.push({
-    name: 'index', path: 'index/', title: titled(w.ui('depot.title')), short: w.ui('depot.title'), says: w.ui('depot.says', { n: pieces.length }), kind: 'CollectionPage', crumbs: [home, [w.ui('depot.title'), 'index/']],
+    name: 'index', path: 'index/', title: titled(w.ui('depot.head', { n: pieces.length })), short: w.ui('depot.title'), says: w.ui('depot.says', { n: pieces.length }), kind: 'CollectionPage', crumbs: [home, [w.ui('depot.title'), 'index/']],
     more: { mainEntity: { '@type': 'ItemList', numberOfItems: pieces.length, itemListElement: pieces.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: w.piece(p).name, url: `${w.pre}piece/${p.id}/` })) } },
     body: `<h1>${esc(w.ui('depot.title'))}</h1>
 <p>${esc(w.ui('depot.says', { n: pieces.length }))}</p>

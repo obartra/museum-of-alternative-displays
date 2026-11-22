@@ -47,6 +47,12 @@ msgid "{page} | {site}"
 msgstr "{page} | {site}"
 
 #: interface
+#. Title of the browser tab. Keep the words in curly brackets as they are.
+msgctxt "ui.title.piece"
+msgid "{name}: how it works"
+msgstr "{name} : comment ça marche"
+
+#: interface
 #. Menu at the top.
 msgctxt "ui.nav.halls"
 msgid "Halls"
@@ -737,6 +743,12 @@ msgstr "Index"
 msgctxt "ui.depot.lead"
 msgid "The whole collection in one list."
 msgstr "Toute la collection en une seule liste."
+
+#: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.head"
+msgid "Index of {n} display technologies"
+msgstr "Index de {n} technologies d’affichage"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.

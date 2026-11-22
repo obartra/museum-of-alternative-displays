@@ -451,7 +451,8 @@ function pieceView(id: string, step?: number): void {
   const all = pieces, i = all.indexOf(p), prev = all[i - 1], next = all[i + 1];
   // a piece made to be looked into or sat in front of gets a button that puts the visitor there, in place of the plain front view
   const places = viewsOf(p.id).map((v) => ({ ...v, ...said.view(p.id, v) }));
-  document.title = titled(x.name);
+  // the name a search engine lists the page under says what the page answers
+  document.title = titled(t('title.piece', { name: x.name }));
   says(x.lead);
   // one thing worth repeating, with the source it rests on. That source joins the list at the foot of the page
   const fact = facts[p.id];
@@ -695,7 +696,7 @@ type Sort = 'hall' | 'year' | 'name';
 const depotState: { principle: Principle | ''; status: Status | ''; needs: Set<Need>; sort: Sort } = { principle: '', status: '', needs: new Set(), sort: 'hall' };
 
 function depot(): void {
-  document.title = titled(t('depot.title'));
+  document.title = titled(t('depot.head', { n: pieces.length }));
   says(t('depot.says', { n: pieces.length }));
   const pill = (group: string, value: string, label: string, type: 'radio' | 'checkbox', checked: boolean) =>
     `<label class="pill"><input type="${type}" name="${group}" value="${value}" id="f-${group}-${value || 'any'}"${checked ? ' checked' : ''}><span>${label}</span></label>`;

@@ -9,6 +9,7 @@ export const en = {
   'site.description': 'A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.',
   'site.title': 'Museum of Alternative Displays | {n} display technologies in 3D',
   'title.page': '{page} | {site}',
+  'title.piece': '{name}: how it works',
   'nav.halls': 'Halls',
   'nav.hall': 'Hall {n}, {name}',
   'nav.depot': 'Index',
@@ -130,6 +131,7 @@ export const en = {
 
   'depot.title': 'Index',
   'depot.lead': 'The whole collection in one list.',
+  'depot.head': 'Index of {n} display technologies',
   'depot.says': 'All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture.',
   'depot.light': 'How it makes the picture',
   'depot.any': 'Any',

@@ -47,6 +47,12 @@ msgid "{page} | {site}"
 msgstr "{page} | {site}"
 
 #: interface
+#. Title of the browser tab. Keep the words in curly brackets as they are.
+msgctxt "ui.title.piece"
+msgid "{name}: how it works"
+msgstr "{name}의 작동 원리"
+
+#: interface
 #. Menu at the top.
 msgctxt "ui.nav.halls"
 msgid "Halls"
@@ -736,6 +742,12 @@ msgstr "색인"
 msgctxt "ui.depot.lead"
 msgid "The whole collection in one list."
 msgstr "컬렉션 전체를 하나의 목록으로."
+
+#: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.head"
+msgid "Index of {n} display technologies"
+msgstr "디스플레이 기술 {n}가지 색인"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.
