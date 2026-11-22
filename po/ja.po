@@ -6578,8 +6578,8 @@ msgstr "一つの方法は、液晶のシートを重ねることです。シー
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "もう一つの方法は、目に見えない二本の赤外線ビームが交わるところでだけ光る、特殊なガラスのかたまりを使います。交点をかたまりの中で動かすと、立体の中に絵が描けます。"
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "もう一つの方法は、目に見えない二本の赤外線ビームが交わるところでだけ光る、特殊なガラスのかたまりを使います。交点をかたまりの中で動かすと、立体の中に絵が描けます。試作品は一辺およそ15ミリの立方体で、三層のガラスでできていました。一層は赤く、一層は緑に、一層は青く光ります。"
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6614,8 +6614,8 @@ msgstr "映像の大きさのわりに、かさばる"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "図形は結び目です。光るシートは手前から奥へ移っていき、モデルはそれを一秒に数段の速さに落としています。重ねたシートを横から見ると、結び目が断面に分かれているのが分かります。"
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "重ねたシートの中の図形は結び目です。光るシートは手前から奥へ移っていき、モデルはそれを一秒に数段の速さに落としています。重ねたシートを横から見ると、結び目が断面に分かれているのが分かります。その横にあるのがガラスのかたまりで、実物の何倍もの大きさにしてあります。二本のビームは、見えるように赤で描いてあります。ビームが交わる点も結び目を描き、通っている層の色で光ります。"
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6640,6 +6640,18 @@ msgstr "シートを横から見る"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "液晶のシートが十二枚。一枚ずつ順に乳白色になり、映像の自分の断面を受け止めます。ほかのシートは透明なままです。"
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "ガラスに近づく"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "三層のガラスで、一層が一色を受け持ちます。二本のビームが交わるところだけが光り、その点が図形を描きます。"
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

@@ -85,12 +85,12 @@ export const h6: Piece[] = [
     lead: 'Any point inside a block of space can be made to give off light or to scatter light, and nothing moves.',
     how: [
       'One approach is a stack of liquid crystal sheets, each of which can switch from clear to milky. A fast projector behind the stack shows one slice of the scene at a time. Only the matching sheet turns milky and catches that slice. DepthCube used 20 sheets.',
-      'Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions.',
+      'Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue.',
     ],
     good: ['Gives true depth with no moving parts', 'Serves several viewers at once, without glasses'],
     bad: ['Has only as many steps of depth as it has sheets', 'Gives a translucent picture, like all displays that fill a volume', 'Is bulky for the size of its picture'],
-    look: 'The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices.',
-    sources: [src('paper', 'Downing and others, Science (1996)', 'https://doi.org/10.1126/science.273.5279.1185'), src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
+    look: 'The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through.',
+    sources: [src('paper', 'Downing and others, Science (1996)', 'https://doi.org/10.1126/science.273.5279.1185'), src('press', 'Drake, An Added Dimension in Display Technology, MIT Technology Review (1997)', 'https://www.technologyreview.com/1997/05/01/237287/an-added-dimension-in-display-technology/amp/'), src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
   },
   {
     id: 'optical-trap', hall: 6, name: 'Optical trap display', aka: 'Photophoretic trap display',

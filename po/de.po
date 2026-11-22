@@ -6577,8 +6577,8 @@ msgstr "Ein Ansatz ist ein Stapel von Flüssigkristallscheiben, von denen jede v
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "Ein anderer Ansatz nutzt einen Block aus Spezialglas, das nur dort leuchtet, wo sich zwei unsichtbare Infrarotstrahlen kreuzen. Wird der Kreuzungspunkt durch den Block gesteuert, zeichnet er in drei Dimensionen."
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "Ein anderer Ansatz nutzt einen Block aus Spezialglas, das nur dort leuchtet, wo sich zwei unsichtbare Infrarotstrahlen kreuzen. Wird der Kreuzungspunkt durch den Block gesteuert, zeichnet er in drei Dimensionen. Der Prototyp war ein Würfel von etwa 15 Millimetern Kantenlänge aus drei Glasschichten: Eine leuchtet rot, eine grün und eine blau."
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6613,8 +6613,8 @@ msgstr "Ist klobig für die Größe seines Bildes"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "Die Figur ist ein Knoten. Die beleuchtete Scheibe wandert von vorn nach hinten, und das Modell verlangsamt sie auf wenige Schritte pro Sekunde. Schauen Sie von der Seite am Stapel entlang, dann sehen Sie den Knoten in Schnittbilder zerlegt."
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "Die Figur im Stapel ist ein Knoten. Die beleuchtete Scheibe wandert von vorn nach hinten, und das Modell verlangsamt sie auf wenige Schritte pro Sekunde. Schauen Sie von der Seite am Stapel entlang, dann sehen Sie den Knoten in Schnittbilder zerlegt. Neben dem Stapel steht der Glasblock, um ein Vielfaches vergrößert. Seine beiden Strahlen sind rot gezeichnet, damit man sie sieht. Der Punkt, an dem sie sich kreuzen, zeichnet ebenfalls einen Knoten, in der Farbe der Schicht, durch die er gerade läuft."
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6639,6 +6639,18 @@ msgstr "Am Stapel entlangsehen"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "Zwölf Flüssigkristallscheiben. Immer nur eine wird milchig und fängt ihre Scheibe des Bildes auf. Die übrigen bleiben klar."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "Nah an das Glas"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "Drei Glasschichten, eine je Farbe. Es leuchtet nur, wo sich die zwei Strahlen kreuzen, und dieser Punkt zeichnet die Figur."
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

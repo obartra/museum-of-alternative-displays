@@ -6582,8 +6582,8 @@ msgstr "Unu aliro estas stako de likvakristalaj folioj, el kiuj ĉiu povas ŝan�
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "Alia aliro uzas blokon de speciala vitro, kiu lumas nur tie, kie du nevideblaj infraruĝaj faskoj kruciĝas. Kiam oni stiras la kruciĝan punkton tra la bloko, ĝi desegnas en tri dimensioj."
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "Alia aliro uzas blokon de speciala vitro, kiu lumas nur tie, kie du nevideblaj infraruĝaj faskoj kruciĝas. Kiam oni stiras la kruciĝan punkton tra la bloko, ĝi desegnas en tri dimensioj. La prototipo estis kubo kun lateroj de ĉirkaŭ 15 milimetroj, farita el tri tavoloj de vitro: unu lumas ruĝe, unu verde kaj unu blue."
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6618,8 +6618,8 @@ msgstr "Estas ampleksa por la grandeco de sia bildo"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "La figuro estas nodo. La lumigata folio moviĝas de antaŭe malantaŭen, kaj la modelo malrapidigas ĝin al kelkaj paŝoj en sekundo. Rigardu laŭ la stako de la flanko por vidi la nodon dividitan en tranĉojn."
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "La figuro en la stako estas nodo. La lumigata folio moviĝas de antaŭe malantaŭen, kaj la modelo malrapidigas ĝin al kelkaj paŝoj en sekundo. Rigardu laŭ la stako de la flanko por vidi la nodon dividitan en tranĉojn. Apud la stako staras la vitra bloko, multoble pli granda ol la vera. Ĝiaj du faskoj estas desegnitaj ruĝe, por ke oni vidu ilin. La punkto, kie ili kruciĝas, ankaŭ desegnas nodon, en la koloro de la tavolo, tra kiu ĝi pasas."
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6644,6 +6644,18 @@ msgstr "Rigardi laŭ la folioj"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "Dek du likvakristalaj folioj. Po unu fariĝas lakteca kaj kaptas sian tranĉon de la bildo. La ceteraj restas klaraj."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "Proksimiĝi al la vitro"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "Tri vitraj tavoloj, po unu por ĉiu koloro. Ĝi lumas nur kie la du faskoj kruciĝas, kaj tiu punkto desegnas la figuron."
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

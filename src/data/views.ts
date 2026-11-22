@@ -149,6 +149,7 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   'static-volume': [
     { id: 'sheets', kind: 'detail', label: 'Look along the sheets', hint: 'Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear.' },
+    { id: 'glass', kind: 'detail', label: 'Go close to the glass', hint: 'Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure.' },
   ],
   'optical-trap': [
     { id: 'speck', kind: 'detail', label: 'Go close to the speck', hint: 'One speck of cellulose, held in a laser beam and dragged round. Three small lasers colour it as it passes.' },

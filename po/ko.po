@@ -6578,8 +6578,8 @@ msgstr "한 가지 방법은 액정 판을 쌓는 것입니다. 판은 저마다
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "다른 방법은, 눈에 보이지 않는 적외선 빔 두 줄기가 엇갈리는 곳에서만 빛나는 특수 유리 덩어리를 씁니다. 교차점을 덩어리 안에서 이리저리 옮기면, 3차원으로 그림을 그립니다."
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "다른 방법은, 눈에 보이지 않는 적외선 빔 두 줄기가 엇갈리는 곳에서만 빛나는 특수 유리 덩어리를 씁니다. 교차점을 덩어리 안에서 이리저리 옮기면, 3차원으로 그림을 그립니다. 시제품은 한 변이 약 15밀리미터인 정육면체로, 유리 세 겹으로 만들었습니다. 한 겹은 빨강, 한 겹은 초록, 한 겹은 파랑으로 빛납니다."
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6614,8 +6614,8 @@ msgstr "그림의 크기에 견주어 덩치가 크다"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "도형은 매듭입니다. 빛이 들어온 판은 앞에서 뒤로 옮겨 가고, 모델은 그것을 1초에 몇 단계로 늦추었습니다. 쌓은 판을 옆에서 보면, 매듭이 단면으로 나뉜 것이 보입니다."
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "쌓은 판 안의 도형은 매듭입니다. 빛이 들어온 판은 앞에서 뒤로 옮겨 가고, 모델은 그것을 1초에 몇 단계로 늦추었습니다. 쌓은 판을 옆에서 보면, 매듭이 단면으로 나뉜 것이 보입니다. 그 옆에는 유리 덩어리가 있는데, 실물보다 여러 배 크게 만들었습니다. 빔 두 줄기는 눈에 보이도록 빨간색으로 그렸습니다. 두 빔이 엇갈리는 점도 매듭을 그리며, 지나가는 층의 색으로 빛납니다."
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6640,6 +6640,18 @@ msgstr "판을 옆에서 보기"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "액정 판 열두 장. 한 번에 한 장씩 뿌옇게 되어 그림의 자기 단면을 받습니다. 나머지는 투명한 채로 있습니다."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "유리 가까이 가기"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "유리 세 겹으로, 한 겹이 한 가지 색을 맡습니다. 두 빔이 엇갈리는 곳에서만 빛나고, 그 점이 도형을 그립니다."
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

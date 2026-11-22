@@ -6579,8 +6579,8 @@ msgstr "Une approche consiste à empiler des feuilles à cristaux liquides, dont
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "Une autre approche utilise un bloc de verre spécial qui ne s’illumine que là où deux faisceaux infrarouges invisibles se croisent. Quand on déplace ce point de croisement dans le bloc, il dessine en trois dimensions."
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "Une autre approche utilise un bloc de verre spécial qui ne s’illumine que là où deux faisceaux infrarouges invisibles se croisent. Quand on déplace ce point de croisement dans le bloc, il dessine en trois dimensions. Le prototype était un cube d’environ 15 millimètres de côté, fait de trois couches de verre : l’une s’illumine en rouge, une autre en vert et la dernière en bleu."
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6615,8 +6615,8 @@ msgstr "Est encombrant pour la taille de son image"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "La figure est un nœud. La feuille éclairée se déplace de l’avant vers l’arrière, et le modèle la ralentit à quelques pas par seconde. Regardez la pile par le côté pour voir le nœud découpé en tranches."
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "La figure dans la pile est un nœud. La feuille éclairée se déplace de l’avant vers l’arrière, et le modèle la ralentit à quelques pas par seconde. Regardez la pile par le côté pour voir le nœud découpé en tranches. À côté de la pile se trouve le bloc de verre, agrandi de nombreuses fois. Ses deux faisceaux sont dessinés en rouge pour qu’on puisse les voir. Le point où ils se croisent dessine lui aussi un nœud, de la couleur de la couche qu’il traverse."
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6641,6 +6641,18 @@ msgstr "Regarder le long de la pile"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "Douze feuilles de cristal liquide. Une seule à la fois devient laiteuse et retient sa tranche de l’image. Les autres restent claires."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "S’approcher du verre"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "Trois couches de verre, une par couleur. Il ne s’illumine qu’au croisement des deux faisceaux, et ce point dessine la figure."
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

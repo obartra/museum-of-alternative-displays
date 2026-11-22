@@ -273,7 +273,10 @@ export function sweptVolume(): Built {
   };
 }
 
-/** Static volume: a stack of liquid crystal sheets. One at a time turns milky and catches its slice of the picture. */
+/**
+ * Static volume, both ways. A stack of liquid crystal sheets: one at a time turns milky and catches its slice of
+ * the picture. And beside it a block of glass in three layers, which glows where two infrared beams cross.
+ */
 export function staticVolume(): Built {
   const root = G.group();
   const LAYERS = 12, S = 1.3, cy = 1.0;
@@ -297,14 +300,61 @@ export function staticVolume(): Built {
   for (const sy of [-1, 1]) root.add(G.box(S + 0.11, 0.05, S + 0.11, M.plastic(0x1d1f22, 0.5), [0, cy + sy * (h + 0.025), 0]));
   root.add(vox.points, G.rbox(S + 0.11, S + 0.16, 0.9, 0.04, M.plastic(0x1d1f22, 0.5), [0, cy, -h - 0.47]), vents(0.9, 0.5, 9, [0, cy, -h - 0.921]), feet(S + 0.11, S + 1.0, 0.07, 0.3, 0).translateZ(-0.45));
   root.add(G.cyl(0.11, 0.05, M.dark(), [0, cy, -h - 0.02], 32).rotateX(Math.PI / 2), G.cyl(0.09, 0.006, M.glow(0xfff2e0, 1.6), [0, cy, -h + 0.008], 28).rotateX(Math.PI / 2));
+
+  // the other way, to the right of the projector: the block of glass of 1996, many times its size. It is built in
+  // three layers, one for each colour. One beam comes up from the cabinet under it and one out of the housing at
+  // its side, and a black card stands behind it, so that the light shows by day. It stands back there so that the
+  // look along the sheets, from the right, has nothing lit behind it
+  const GX = 1.28, GZ = -0.9, C = 0.56, y0 = 0.585, yc = y0 + C / 2, tall = C + 0.14;
+  const tints = [0xdcc3bd, 0xc2d8c4, 0xbfc8de];
+  root.add(G.rbox(0.8, 0.5, 0.74, 0.03, M.plastic(0x1d1f22, 0.5), [GX - 0.08, 0.31, GZ - 0.03]), feet(0.8, 0.74, 0.05, 0.06, 0).translateX(GX - 0.08).translateZ(GZ - 0.03), vents(0.44, 0.2, 5, [GX - 0.08, 0.3, GZ + 0.341]));
+  root.add(G.box(C + 0.06, 0.025, C + 0.06, M.dark(), [GX, 0.5725, GZ]), G.box(C + 0.24, tall, 0.03, M.black(), [GX - 0.06, 0.56 + tall / 2, GZ - C / 2 - 0.06]), G.rbox(0.14, tall, C + 0.12, 0.03, M.plastic(0x1d1f22, 0.5), [GX - C / 2 - 0.11, 0.56 + tall / 2, GZ - 0.02]));
+  const from1: V3 = [GX, y0 + 0.001, GZ], from2: V3 = [GX - C / 2 - 0.038, yc, GZ];
+  root.add(G.cyl(0.04, 0.004, M.glow(0xff4030, 0.9), from1, 20), G.cyl(0.04, 0.004, M.glow(0xff4030, 0.9), from2, 20).rotateZ(Math.PI / 2));
+  tints.forEach((tint, k) => root.add(G.box(C, C / 3 - 0.003, C, M.glass(tint, 0.07, 0.5), [GX, y0 + (k + 0.5) * (C / 3), GZ])));
+  const path = knot(GX, yc + 0.038, GZ, 0.243);
+  const HUE: V3[] = [[1, 0.2, 0.14], [0.22, 1, 0.36], [0.28, 0.48, 1]];
+  const hue = (y: number): V3 => HUE[Math.max(0, Math.min(2, Math.floor((y - y0) / (C / 3))))];
+  const trail = airTrail(340, 0.05, path, (u) => hue(path(u)[1]));
+  const spark = halo(0xffffff, 0.18);
+  const up = ray(0xff3a24, 0.0055, 0.55), across = ray(0xff3a24, 0.0055, 0.55);
+  // from the first moment they lie inside the block, so that the model is measured as it stands
+  up.aim(from1, [GX, y0 + C, GZ]); across.aim(from2, [GX + C / 2, yc, GZ]);
+  spark.position.set(...path(0));
+  root.add(trail.points, spark, up.mesh, across.mesh);
+
   const col = new THREE.Color();
   return {
-    root, views: { sheets: { at: [1.8, 1.25, 0.55], to: [0, 1.0, 0], fov: 32 } }, inDark: 'glows', glow: 0xffb070, view: [32, 12],
+    root, views: { sheets: { at: [1.8, 1.25, 0.55], to: [0, 1.0, 0], fov: 32 }, glass: { at: [GX + 0.5, 1.14, GZ + 1.5], to: [GX - 0.03, yc - 0.02, GZ], fov: 30 } }, inDark: 'glows', glow: 0xffb070, view: [32, 12],
     update: ({ t }) => {
       const live = Math.floor(t * 7) % LAYERS; // slowed far down: the real stack cycles every sheet about fifty times a second
       sheets.forEach((m, k) => { m.opacity = k === live ? 0.3 : 0.025; });
       pts.forEach((_, i) => { const k = layerOf[i] === live ? 1 : 0.3; col.setHSL(0.06 + (layerOf[i] / LAYERS) * 0.12, 1, 0.6); vox.col.set([col.r * k, col.g * k, col.b * k], i * 3); });
       vox.flush();
+      // the crossing point is steered round the figure. Each beam goes on through the block: only the crossing glows
+      const ph = (t * 0.22) % 1, at = path(ph), c = hue(at[1]);
+      trail.trace(ph);
+      spark.position.set(at[0], at[1], at[2]);
+      (spark.material as THREE.SpriteMaterial).color.setRGB(c[0], c[1], c[2]);
+      const k1 = (y0 + C - from1[1]) / (at[1] - from1[1]), k2 = (GX + C / 2 - from2[0]) / (at[0] - from2[0]);
+      up.aim(from1, [from1[0] + (at[0] - from1[0]) * k1, y0 + C, from1[2] + (at[2] - from1[2]) * k1]);
+      across.aim(from2, [GX + C / 2, from2[1] + (at[1] - from2[1]) * k2, from2[2] + (at[2] - from2[2]) * k2]);
+    },
+  };
+}
+
+/** A beam that is turned while it shines: a thin rod of light from one point to another. */
+function ray(color: number, r: number, opacity: number): { mesh: THREE.Mesh; aim: (a: V3, b: V3) => void } {
+  const mesh = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 1, 8, 1, true), M.add(null, color, opacity));
+  const along = new THREE.Vector3(), Y = new THREE.Vector3(0, 1, 0);
+  return {
+    mesh,
+    aim: (a, b) => {
+      along.set(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+      const len = along.length() || 1e-6;
+      mesh.position.set((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2);
+      mesh.scale.set(1, len, 1);
+      mesh.quaternion.setFromUnitVectors(Y, along.divideScalar(len));
     },
   };
 }

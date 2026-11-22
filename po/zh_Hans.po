@@ -6573,8 +6573,8 @@ msgstr "一种做法是把许多液晶片叠在一起，每一片都能从透明
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "另一种做法用一块特殊的玻璃，它只在两束看不见的红外光束交叉的地方发光。操纵这个交叉点在玻璃块里移动，就能画出三维的图形。"
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "另一种做法用一块特殊的玻璃，它只在两束看不见的红外光束交叉的地方发光。操纵这个交叉点在玻璃块里移动，就能画出三维的图形。原型是一个边长约15毫米的立方体，由三层玻璃组成：一层发红光，一层发绿光，一层发蓝光。"
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6609,8 +6609,8 @@ msgstr "相对于画面的大小，机器显得笨重"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "显示的图形是一个绳结。点亮的那一片从前往后移动，模型把它放慢到每秒几步。从侧面顺着叠层看，可以看到绳结被分成了一个个切片。"
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "叠层里显示的图形是一个绳结。点亮的那一片从前往后移动，模型把它放慢到每秒几步。从侧面顺着叠层看，可以看到绳结被分成了一个个切片。叠层旁边是那块玻璃，比实物放大了许多倍。两束光画成红色，好让人看得见。它们交叉的那一点也画出一个绳结，颜色随它经过的那一层而变。"
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6635,6 +6635,18 @@ msgstr "顺着叠层看"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "十二片液晶片。每次只有一片变成乳白色，接住画面中属于它的那一个切片。其余的保持透明。"
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "凑近看玻璃"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "三层玻璃，每层负责一种颜色。它只在两束光交叉的地方发光，这个交叉点画出图形。"
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.

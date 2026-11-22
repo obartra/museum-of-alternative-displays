@@ -6579,8 +6579,8 @@ msgstr "Uma abordagem é uma pilha de lâminas de cristal líquido, cada uma cap
 #: hall-6/static-volume
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.static-volume.how.2"
-msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions."
-msgstr "Outra abordagem usa um bloco de vidro especial que só brilha onde dois feixes infravermelhos invisíveis se cruzam. Quando o ponto de cruzamento é guiado pelo bloco, ele desenha em três dimensões."
+msgid "Another approach uses a block of special glass that glows only where two invisible infrared beams cross. When the crossing point is steered through the block, it draws in three dimensions. The prototype was a cube about 15 millimetres on each side, made of three layers of glass: one glows red, one green and one blue."
+msgstr "Outra abordagem usa um bloco de vidro especial que só brilha onde dois feixes infravermelhos invisíveis se cruzam. Quando o ponto de cruzamento é guiado pelo bloco, ele desenha em três dimensões. O protótipo era um cubo de cerca de 15 milímetros de lado, feito de três camadas de vidro: uma brilha em vermelho, uma em verde e uma em azul."
 
 #: hall-6/static-volume
 #. What it is good at, point 1 of 2. No full stop at the end.
@@ -6615,8 +6615,8 @@ msgstr "É volumoso para o tamanho da sua imagem"
 #: hall-6/static-volume
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.static-volume.look"
-msgid "The figure is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices."
-msgstr "A figura é um nó. A lâmina acesa vai da frente para trás, e o modelo a desacelera para alguns passos por segundo. Olhe a pilha de lado para ver o nó dividido em fatias."
+msgid "The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through."
+msgstr "A figura na pilha é um nó. A lâmina acesa vai da frente para trás, e o modelo a desacelera para alguns passos por segundo. Olhe a pilha de lado para ver o nó dividido em fatias. Ao lado da pilha fica o bloco de vidro, muitas vezes maior que o real. Os dois feixes estão desenhados em vermelho para que possam ser vistos. O ponto onde eles se cruzam também desenha um nó, na cor da camada por onde passa."
 
 #: hall-6/static-volume
 #. A short story about the piece, under the heading Worth knowing.
@@ -6641,6 +6641,18 @@ msgstr "Olhe ao longo das lâminas"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "Doze lâminas de cristal líquido. Uma de cada vez fica leitosa e apanha a sua fatia da imagem. As outras ficam transparentes."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.glass.label"
+msgid "Go close to the glass"
+msgstr "Chegue perto do vidro"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.glass.hint"
+msgid "Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure."
+msgstr "Três camadas de vidro, uma para cada cor. Ele só brilha onde os dois feixes se cruzam, e esse ponto desenha a figura."
 
 #: hall-6/static-volume
 #. Caption of a picture or film from an archive.
