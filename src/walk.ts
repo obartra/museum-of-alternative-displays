@@ -6,6 +6,7 @@ import { openGuide } from './guide';
 import { nearHtml, openNear, type Lent } from './near';
 import { hush, tourName, toursNow, keepStop } from './tour';
 import { goTo, link, nameNow, placeOf, setAddress } from './place';
+import { fullKey, nameFullKey } from './icons';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -112,7 +113,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <span class="gap"></span>
   ${o.switchHtml}
   <button type="button" class="btn" data-walk="vr" hidden>${tx('walk.vr')}</button>
-  <button type="button" class="btn" data-walk="full">${tx('stage.expand')}</button>
+  ${fullKey('data-walk="full"', tx('stage.expand'))}
 </div>
 <p class="walk__intro" id="walk-intro"></p>
 <p class="walk__keys small muted">${tx(coarse ? 'walk.hint.touch' : 'walk.keys')}</p>`;
@@ -303,7 +304,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     else if (stepped) { stepped = false; if (!byBack) { pending = true; history.back(); } }
     host.classList.toggle('is-full', full);
     for (const el of document.querySelectorAll<HTMLElement>('body > .vh, .top, .foot, .walk__lead')) el.inert = full;
-    fullBtn.textContent = t(full ? 'stage.close' : 'stage.expand');
+    nameFullKey(fullBtn, full, t(full ? 'stage.close' : 'stage.expand'));
     document.body.style.overflow = full ? 'hidden' : '';
     gallery?.setFree(full);
     near.setFree(full);

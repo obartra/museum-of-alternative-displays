@@ -24,6 +24,7 @@ import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
 import { AUTHOR, LICENCE, REPO } from './site';
 import { markSvg } from './mark';
+import { GLASSES, daylightKey, fullKey, nameFullKey } from './icons';
 import { calm as lowPower, setCalm, spread, wantsBeyond } from './beyond';
 import type { Stage } from './three/stage';
 
@@ -540,7 +541,7 @@ ${step === undefined ? '' : visitBand(step)}
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
-    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
+    <div class="stage__tools">${daylightKey(lightsOn, tx('switch.daylight'))}<button type="button" class="btn btn--icon" data-act="stereo" aria-pressed="false" aria-label="${tx('stage.stereo')}" title="${tx('stage.stereo')}" disabled${p.hall === DEPTH ? '' : ' hidden'}>${GLASSES}</button>${fullKey('data-act="full"', tx('stage.expand'))}</div>
   </div>
   <div class="stack">
     <p class="crumbs"><a class="crumb" href="${link(`hall-${hall.id}`)}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="${link(`walk-${p.id}`)}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="${link(`piece-${p.id}`)}" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
@@ -600,7 +601,7 @@ ${step === undefined ? '' : visitBand(step)}
     if (full) { try { history.pushState({ full: true }, ''); stepped = true; } catch { stepped = false; } }
     else if (stepped) { stepped = false; if (!byBack) history.back(); }
     wrap.classList.toggle('is-full', full);
-    fullBtn.textContent = t(full ? 'stage.close' : 'stage.expand');
+    nameFullKey(fullBtn, full, t(full ? 'stage.close' : 'stage.expand'));
     document.body.style.overflow = full ? 'hidden' : '';
     // while the stage covers the page, nothing behind it can be reached by key or by screen reader
     for (const el of document.querySelectorAll<HTMLElement>('body > .vh, .top, .piece > :not(.stage), .foot')) el.inert = full;
@@ -910,7 +911,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
     return { stage, canvas: cv, build: (id: string) => builders[id]() };
   };
   void typed();
-  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: switchHtml(), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title, stage: lend }); })
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: daylightKey(lightsOn, t('switch.daylight')), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title, stage: lend }); })
     .catch(() => { hush(); host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
   leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); hush(); };
 }
