@@ -1,0 +1,79 @@
+{
+  "name": "Louis Brus",
+  "new_in_v4": true,
+  "status": "Review only; source grant unverified; no site integration",
+  "kind": "Drawing after the same 2008 photograph, retaining pose, clothing and expression",
+  "credit": "AI-assisted ink drawing after the 2008 Louis Brus portrait credited to AIP Emilio Segrè Visual Archives, reproduced by Rice University. Pose, clothing and expression retained; colour, crop and medium changed. Source reuse grant unverified; private review only.",
+  "rights_note": "Rice independently captions the 2008 AIP portrait and links the sitter to quantum dots. Commons calls the photograph Copyrighted free use, citing an AIP grant conditional on AIP being the copyright holder. The underlying archive record could not be retrieved; the current policy URL redirects and does not reproduce that specific grant. Rights remain unverified, rather than declared invalid. A new same-pose drawing is supplied for private review only.",
+  "commons_claim": "https://commons.wikimedia.org/wiki/File:Louis_E_Brus.jpg",
+  "archive_record_not_verified": "https://repository.aip.org/islandora/object/nbla%3A295619",
+  "current_policy_checked": "https://www.aip.org/library/use-the-collections",
+  "references": [
+    {
+      "reference_filename": "louis-brus-rice-featured.jpg",
+      "page_url": "https://news.rice.edu/news/2026/brus-rice-alumnus-and-nobel-laureate-passes-away-82",
+      "image_url": "https://news.rice.edu/sites/g/files/bxs2656/files/2026-01/brus_featured_image_775x525.jpg",
+      "publisher": "Rice University",
+      "credit": "Not named; credit AIP Emilio Segrè Visual Archives",
+      "photo_year": 2008,
+      "photo_year_basis": "Rice caption explicitly states 2008; not inferred from EXIF digitisation date.",
+      "same_exposure": true,
+      "native_dimensions": [
+        775,
+        525
+      ],
+      "face_width_px": 242.1,
+      "ratios": {
+        "face_width_to_height": 0.83,
+        "pupil_distance_to_face_width": 0.42,
+        "nose_length_to_face_height": 0.32,
+        "mouth_width_to_pupil_distance": 1.06
+      },
+      "sha256_of_tool_input": "144e7c3e41b9530accbf99f5f8ed4abce4be151a38b2be7fe996f7bdd516cfd2"
+    },
+    {
+      "reference_filename": "louis-brus-aip-via-rice.jpg",
+      "page_url": "https://news.rice.edu/news/2026/brus-rice-alumnus-and-nobel-laureate-passes-away-82",
+      "image_url": "https://news.rice.edu/sites/g/files/bxs2656/files/inline-images/Brus%20vertical.jpg",
+      "publisher": "Rice University",
+      "credit": "Not named; credit AIP Emilio Segrè Visual Archives",
+      "photo_year": 2008,
+      "photo_year_basis": "Rice caption explicitly states 2008; not inferred from EXIF digitisation date.",
+      "same_exposure": true,
+      "native_dimensions": [
+        320,
+        410
+      ],
+      "face_width_px": 109.8,
+      "ratios": {
+        "face_width_to_height": 0.84,
+        "pupil_distance_to_face_width": 0.42,
+        "nose_length_to_face_height": 0.31,
+        "mouth_width_to_pupil_distance": 1.04
+      },
+      "sha256_of_tool_input": "af25e35b85171c96183f09a38525a964e8b4677de86e1790b0880141d7122a1d"
+    }
+  ],
+  "style_reference": "Existing approved Mary Lou Jepsen 2.3 design; the tool input was the original PNG, rather than the website WebP.",
+  "image_generation_tool": "Built-in image_gen.imagegen",
+  "likeness_review": "Broad proportions, high bald crown, fine metal glasses, closed smile and documented clothing agree with the named photograph. The first draft’s skin hatching was removed and its eyebrows restored. Editorial comparison only; final museum likeness review remains pending.",
+  "drawing_ratios": {
+    "face_width_to_height": 0.84,
+    "pupil_distance_to_face_width": 0.43,
+    "nose_length_to_face_height": 0.31,
+    "mouth_width_to_pupil_distance": 1.13
+  },
+  "measurement_limits": "Rough screening only: soft images, hairline, glasses, expression and changed yaw can shift anchors. Hairline uses forehead landmark10 as a repeatable proxy, not a known hairline. Inspect overlays. Never treat ratio agreement as identity proof.",
+  "files": [
+    {
+      "file": "louis-brus.jpg",
+      "bytes": 159259,
+      "sha256": "e182be90a37c623e39acc256e4c9e188dc1e66afb80e5affb6dede7c07571578"
+    },
+    {
+      "file": "louis-brus-master.png",
+      "bytes": 2542382,
+      "sha256": "a5fe1d45a08c98d116a69d0e9ffb0363a3b4f36c5215b384d61fb58d6b7efee5"
+    }
+  ]
+}

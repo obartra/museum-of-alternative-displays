@@ -1,0 +1,34 @@
+{
+  "tool": "Built-in image_gen.imagegen",
+  "note": "Exact prompt text; local absolute paths replaced with reference filenames. Photographs and discarded drafts are not bundled. Source URLs and hashes are in louis-brus.json.",
+  "steps": [
+    {
+      "step": 1,
+      "prompt": "Use case: style-transfer. Make ONE individual museum portrait of Louis E. Brus, the physical chemist. This is a private review drawing after the supplied 2008 AIP photograph, NOT a new study pose. Input image 1 (775x525 Rice/AIP crop) is the primary identity/face detail reference; input image 2 (320x410) is the SAME exposure at a wider crop and controls documented shoulders/clothes. Input image 3 (Mary Lou Jepsen 2.3 ink drawing) is STYLE ONLY; never borrow her face, hair, glasses, teeth, clothes, or proportions. Preserve Brus's exact source head angle, gaze, small closed-mouth smile, apparent age about 65, high bald crown with sparse short side hair, fine metal rectangular glasses, broad cheeks and chin, ear shapes. Copy his actual proportions, including projected face width/height about 0.83, pupil separation/face width 0.42, nose length/face height 0.32, mouth width/pupil separation 1.06. These are rough 2D guide ratios, not permission to change perspective. Keep the same suit jacket, white pointed collar and dark patterned necktie as the wider photograph. Do not redesign clothing, turn the head, reveal teeth, invent moles, or add wrinkles absent from the photo. Composition 4:5 portrait, whole documented crown, head and upper shoulders fully inside a generous ivory field, centered like the approved set. Precise museum pen-and-ink style: flat warm pale enamel #f7f6f0 background and open blank skin; near-black #14171a ink; gently varying thin silhouette around 2–3 pixels at 1024 width, slightly heavier on shadow side and lighter on top; much finer eyes/nose/mouth lines. Sparse contour-following hatching only in hair and jacket, with deep black masses for clothes' deepest shadows. NO forehead, cheek, chin or neck hatching, stipple, skin texture, photographic gradients, decorative paper texture, text, signature or frame. The skin should remain as open as the approved Jepsen feedback requires. Keep subtle asymmetry and actual face breadth; do not lengthen or idealize him. Use only visible documented face features; no imagined far-side structures. Output a single finished raster portrait, not a contact sheet.",
+      "reference_filenames_at_generation": [
+        "louis-brus-rice-featured.jpg",
+        "louis-brus-aip-via-rice.jpg",
+        "approved-style-jepsen-v2.3.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "step": 2,
+      "prompt": "Edit the supplied Louis Brus drawing (image 1). Preserve the face proportions, exact head angle, gaze, glasses, small closed smile, hairline, silhouette, jacket, collar, tie, frame and background. Change ONLY the SKIN MARKS: remove all hatching, stipple, cross-lines, and little decorative strokes on cheeks, forehead, nose planes, under the mouth, chin, inside ears and neck. Leave those skin areas flat blank ivory. Keep only the fine essential eye contours and a single necessary under-eye fold, the nostril and nose outline, the mouth outline, a single source-supported smile fold on either side, the ear outline and outer jaw/neck contours. No invented whiskers, stubble, dimples, freckles or wrinkles. Do not change his apparent age or smooth his actual facial silhouette. Preserve existing fine varied outer line weight. Keep hair and jacket hatching exactly as they are. Image 2 is the reference photograph: preserve its broad cheeks, bald crown and actual expression. Output one 4:5 drawing, no text.",
+      "reference_filenames_at_generation": [
+        "louis-brus-v4-draft-1.png",
+        "louis-brus-rice-featured.jpg"
+      ],
+      "transparent_background": false
+    },
+    {
+      "step": 3,
+      "prompt": "Edit image 1 (the Louis Brus ink portrait) with one precise repair: RESTORE HIS TWO EYEBROWS, which were accidentally erased. Use photo image 2 for their real position and shape: sparse low light-brown/grey brows above the glasses, slightly arched and finer at the ends. Depict each with a few delicate near-black hair strokes; they must be clearly present but not thick or dark. Keep absolutely everything else unchanged: open blank ivory skin on forehead, cheeks, chin and neck; actual bald crown, hair, thin metal glasses, eye shapes/gaze, closed smile, facial proportions, variable thin outer contour, jacket hatching, tie and crop. Do not add any other skin marks or shadows. Eyebrow hair strokes are the ONLY added marks. One individual 4:5 raster portrait, no text.",
+      "reference_filenames_at_generation": [
+        "louis-brus-v4-draft-2.png",
+        "louis-brus-rice-featured.jpg"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

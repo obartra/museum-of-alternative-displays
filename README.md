@@ -247,6 +247,10 @@ lists who is still waiting and why. Every portrait is shown the same way, croppe
 white, with its credit beside it. One marked `small` is kept to the size of a label and off the walls of
 the walk, because its photographs are small or soft.
 
+The [v4 portrait review bundle](docs/portraits/v4/README.md) keeps its new Brus drawing, source notes
+and prompts outside the live portrait folder. Its audit used an earlier brief; the current status stays
+in `PORTRAITS.md` and `PORTRAITS-TODO.md`.
+
 ## Known gaps
 
 - 28 of the 50 pieces still rest only on encyclopedia articles. Replacing those with primary

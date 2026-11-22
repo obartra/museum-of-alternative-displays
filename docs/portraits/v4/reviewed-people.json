@@ -1,0 +1,2641 @@
+{
+  "scope": "Historical v4 source-rights audit of 72 names from the older 38-portrait brief. Not the current site lookup or to-do list.",
+  "imported_on": "2026-11-22",
+  "repository_base_commit": "a4c8ade1fe7504fca5a7388310098add0afab3c9",
+  "current_site_portraits_at_import": 74,
+  "current_site_pending_at_import": 36,
+  "query_count": 97,
+  "query_errors": 0,
+  "search_limitations": "Targeted search, not exhaustive. Many hits are objects or namesakes. Queries can return only the first 25 matches; more_results_available flags truncated results. Openverse filtered searches were unavailable and were not counted as successful negatives.",
+  "people": [
+    {
+      "name": "Andrée Tretiakoff",
+      "piece": "Refreshable braille display",
+      "hall": 1,
+      "context": "Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "No named portrait tied to the braille co-inventor was found in this pass. Exact-name and unaccented-name Commons searches returned no files. The ACL author page has no portrait; it does not identify an otherwise anonymous sitter.",
+      "commons_queries": [
+        {
+          "query": "\"Andrée Tretiakoff\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Andree Tretiakoff\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4044350",
+        "https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/",
+        "https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm",
+        "https://en.wikipedia.org/wiki/Refreshable_Braille_display",
+        "https://en.wikipedia.org/wiki/History_of_display_technology"
+      ]
+    },
+    {
+      "name": "Elma Farnsworth",
+      "piece": "Cathode ray tube",
+      "hall": 2,
+      "context": "Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The named Television Academy interview still establishes identity, but its dim, soft frames remain insufficient for a convincing larger portrait. No open licence was verified for those frames or a replacement photo.",
+      "commons_queries": [
+        {
+          "query": "\"Elma Farnsworth\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://www.nbcnews.com/id/wbna12596707",
+        "https://en.wikipedia.org/wiki/Cathode_ray_tube",
+        "https://en.wikipedia.org/wiki/Shadow_mask",
+        "https://interviews.televisionacademy.com/people/elma-farnsworth",
+        "https://interviews.televisionacademy.com/interviews/elma-farnsworth"
+      ]
+    },
+    {
+      "name": "Vicki Colvin",
+      "piece": "Quantum-dot display",
+      "hall": 3,
+      "context": "Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Commons/Brown chronology conflict remains unresolved. A CC label from the uploader is not proof that the photographer or Brown authorised it. A separate Sandia photograph credited to Bill Doty was located, but no applicable open grant was verified. The round 3 study does not clear either photograph.",
+      "commons_queries": [
+        {
+          "query": "\"Vicki Colvin\"",
+          "total_hits": 4,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Vicki Colvin Picture.jpg",
+        "File:THE SOCIETAL IMPLICATIONS OF NANOTECHNOLOGY (IA gov.gpo.fdsys.CHRG-108hhrg86340).pdf",
+        "File:RL34332 (IA RL34332-crs).pdf",
+        "File:RESEARCH ON ENVIRONMENTAL AND SAFETY IMPACTS OF NANOTECHNOLOGY- CURRENT STATUS OF PLANNING AND IMPLEMENTATION UNDER THE NATIONAL NANOTECHNOLOGY INITIATIVE (IA gov.gpo.fdsys.CHRG-110hhrg38534).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "vicki-colvin.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/",
+        "https://doi.org/10.1038/370354a0",
+        "https://www.nobelprize.org/prizes/chemistry/2023/press-release/",
+        "https://en.wikipedia.org/wiki/Quantum_dot_display",
+        "https://commons.wikimedia.org/wiki/File:Vicki_Colvin_Picture.jpg",
+        "https://archive2.news.brown.edu/2007-2015/articles/2014/05/colvin.html",
+        "https://ibeam.brown.edu/news/2019-02-01/spotlight-vicki-colvin"
+      ]
+    },
+    {
+      "name": "Elsa Garmire",
+      "piece": "Scanned laser",
+      "hall": 4,
+      "context": "Physicist at the California Institute of Technology. Her laser images, filmed in 1972, became the model for Laserium.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Dartmouth Engineering Flickr photograph names her and places her in the Caltech laser laboratory circa 1970, but the photo page explicitly says All rights reserved. The Optica and Dartmouth professional portraits used in round 3 also have no verified open photograph licence.",
+      "commons_queries": [
+        {
+          "query": "\"Elsa Garmire\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "elsa-garmire.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows",
+        "https://en.wikipedia.org/wiki/Laser_lighting_display",
+        "https://en.wikipedia.org/wiki/Laser_projector",
+        "https://en.wikipedia.org/wiki/International_Laser_Display_Association",
+        "https://www.optica.org/history/biographies/bios/elsa-garmire/",
+        "https://engineering.dartmouth.edu/community/faculty/elsa-garmire"
+      ]
+    },
+    {
+      "name": "Leota Toombs",
+      "piece": "Projection mapping",
+      "hall": 4,
+      "context": "Artist at WED Enterprises, the Disney design workshop. Her filmed face is projected onto a blank head inside the crystal ball of the Haunted Mansion.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Commons results show attraction memorials and a Disney Legends plaque, rather than a usable documentary portrait of Toombs. Their photo licences do not establish permission to redraw the underlying attraction artwork. The D23 professional photo remains uncleared and its face is small.",
+      "commons_queries": [
+        {
+          "query": "\"Leota Toombs\"",
+          "total_hits": 4,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Leota Thomas\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Sweet Leota - 52215695198.jpg",
+        "File:Disney Legends Plaza - Walt Disney Studios (Burbank).jpg",
+        "File:Sweet Leota Disney World.jpg",
+        "File:Disney Legends Plaza - Walt Disney Studios (Burbank) (Leota Toombs).jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "leota-toombs.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://d23.com/walt-disney-legend/leota-toombs-thomas/",
+        "https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf",
+        "https://projection-mapping.org/the-history-of-projection-mapping/",
+        "https://en.wikipedia.org/wiki/Projection_mapping",
+        "https://d23.com/walt-disney-legend/leota-toombs/"
+      ]
+    },
+    {
+      "name": "Susan Hackwood",
+      "piece": "Electrowetting display",
+      "hall": 5,
+      "context": "Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Round 3 found a larger UCR copy of the same professional portrait and revised the face breadth. Neither the UCR image page nor the new source search supplied a verified open photograph licence. That larger photo and its revised drawing remain private review material.",
+      "commons_queries": [
+        {
+          "query": "\"Susan Hackwood\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:EXAMINING COMPETITIVENESS THROUGH SCIENCE, TECHNOLOGY, ENGINEERING AND MATH (IA gov.gpo.fdsys.CHRG-110hhrg37693).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "susan-hackwood.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://patents.google.com/patent/US4417786",
+        "https://en.wikipedia.org/wiki/Susan_Hackwood",
+        "https://www.wikidata.org/wiki/Q5550233",
+        "https://doi.org/10.1038/nature01988",
+        "https://doi.org/10.1063/1.92322",
+        "https://insideucr.ucr.edu/media/image/susan-hackwood",
+        "https://ccst.us/womens-history-month-a-conversation-with-dr-susan-hackwood/"
+      ]
+    },
+    {
+      "name": "Elizabeth Downing",
+      "piece": "Static-volume display",
+      "hall": 6,
+      "context": "The first author of the 1996 Science paper from Stanford. A common name.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "No verified portrait of the Stanford three-dimensional-display researcher was found. Search results for a naval aviator, student athlete, marketing manager and sculptor were excluded. The 1996 display articles identify the researcher but did not supply an accepted face.",
+      "commons_queries": [
+        {
+          "query": "\"Elizabeth Downing\"",
+          "total_hits": 26,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:The Suffragette Handkerchief.jpg",
+        "File:Victoria Lidiard (Simmons) sinadura The Suffragette Handkerchief (cropped).jpg",
+        "File:The Brewster genealogy, 1566-1907; a record of the descendants of William Brewster of the \"Mayflower.\" ruling elder of the Pilgrim church which founded Plymouth colony in 1620; (IA brewstergenealog 22jone).pdf",
+        "File:Historical and genealogical researches and recorder of passing events of Marrimack Valley (IA historicalgeneal00poor).pdf",
+        "File:The grave of Elizabeth Downing Toy - geograph.org.uk - 6120218.jpg",
+        "File:1906-05-07, La Ilustración Artística, Música, busto en bronce de Edita Downing.jpg",
+        "File:Vital records of Lynn, Massachusetts, to the end of the year 1849 .. (IA vitalrecordsofly01lynn).pdf",
+        "File:A docvmentary history of het (the) Nederdvytsche gemeente. Dutch congregation, of Oyster Bay (IA docvmentaryhisto02stout).pdf",
+        "File:Smith College yearbook 1916.djvu",
+        "File:The Glendale Evening News 1921-03-05 (IA cgl 004322).pdf",
+        "File:Friends intelligencer (IA friendsintellige21unse).pdf",
+        "File:Medical jurisprudence (IA b20443432 0001).pdf",
+        "File:Cornwall parish registers. Marriages (IA cornwallparishre08phil).pdf",
+        "File:Minutes of the- session of the Detroit Annual Conference of the Methodist Episcopal Church (microform) (IA 31178631.1866.emory.edu).pdf",
+        "File:The trial of Robert Sawle Donnall, surgeon and apothecary, late of Falmouth, in the county of Cornwall, for the wilful murder by poison, of Mrs. Elizabeth Downing, widow, his mother-in-l (IA b29298659).pdf",
+        "File:The streets of London - anecdotes of their more celebrated residents (IA b24861285).pdf",
+        "File:Jacobs family - as descended from \"John Jacobs of Perkiomen\" to the ninth generation in America (IA jacobsfamilyasde00davi).pdf",
+        "File:George Washington University yearbook 1904.djvu",
+        "File:Minutes of the- session of the Detroit Annual Conference of the Methodist Episcopal Church (microform) (IA 31178631.1861.emory.edu).pdf",
+        "File:Medical jurisprudence (IA b20443432 0004).pdf",
+        "File:AN ASSESSMENT OF FEDERAL FUNDING FOR PRIVATE RESEARCH AND DEVELOPMENT (IA gov.gpo.fdsys.CHRG-109shrg21826).pdf",
+        "File:A list of some of the descendants of Mr. Edward Woodman - who settled at Newbury Mass., 1635 (IA listofsomeofdesc00coff).pdf",
+        "File:Vital records of Lynn, Massachusetts, to the end of the year 1849 (IA cu31924092203086).pdf",
+        "File:Genealogy of the Downing family and immediate collateral relations- (IA genealogyofdowni00down).pdf",
+        "File:Annual report, Henniker, New Hampshire (IA annualreporthenn00henn 12).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1126/science.273.5279.1185",
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display"
+      ]
+    },
+    {
+      "name": "Margaret Benyon",
+      "piece": "Holography",
+      "hall": 7,
+      "context": "Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later.",
+      "priority_woman": true,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The obituary publication supplied a larger, named professional portrait and round 3 revised the squared aviator glasses. No open photograph licence was established. The larger reference improves likeness checking but does not clear publication.",
+      "commons_queries": [
+        {
+          "query": "\"Margaret Benyon\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "margaret-benyon.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "http://hdl.handle.net/1721.1/14173",
+        "https://www.media.mit.edu/spi/HVmark1.htm",
+        "https://holocenter.org/margaret-benyon",
+        "https://en.wikipedia.org/wiki/Margaret_Benyon",
+        "https://doi.org/10.1038/161777a0",
+        "https://nottinghamwomenshistory.org.uk/wp-content/uploads/2020/12/Margaret-Benyon.pdf",
+        "https://hologram.se/wp-content/uploads/2018/06/Margaret_Benyon_Obituary_2016.pdf"
+      ]
+    },
+    {
+      "name": "Gino Valle",
+      "piece": "Split-flap board",
+      "hall": 1,
+      "context": "Designer credited with the form of the boards made by Solari.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Commons results are chiefly architecture and clocks. Architectuul labels photographs CC BY-SA 3.0, but points to a newspaper source without establishing the portrait photographer’s grant. That is an unresolved provenance lead. The named ADI/Fulbright references from round 3 remain limited in detail and uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"Gino Valle\"",
+          "total_hits": 13,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Cittadella dello studente, Psicologia, Gino Valle, Padova.jpg",
+        "File:Cifra 5 digital flip clock designed by Gino Valle (1957).jpg",
+        "File:Paolo Monti - Servizio fotografico (Udine, 1960) - BEIC 6355711.jpg",
+        "File:Paolo Monti - Servizio fotografico (Udine, 1960) - BEIC 6365446.jpg",
+        "File:Orologio Solari Cifra 3.jpg",
+        "File:Paolo Monti - Servizio fotografico - BEIC 6355521.jpg",
+        "File:Milano - piazza Gino Valle.jpg",
+        "File:Cotonificio Veneziano, sede dei corsi di architettura dell'Università Iuav di Venezia.jpg",
+        "File:IBA-87-Berlin-084-Gino-Valle-Mario-Broggi-Michael-Burckhardt-Schule-ETA-Hoffman-Promenade-b.jpg",
+        "File:Paolo Monti - Servizio fotografico - BEIC 6355502.jpg",
+        "File:IBA-87-Berlin-084-Gino-Valle-Mario-Broggi-Michael-Burckhardt-Schule-ETA-Hoffman-Promenade-a.jpg",
+        "File:Square Gino Valle seen from the Alfa Romeo industrial park, Portello district, Milan, Italy.jpg",
+        "File:Casa Milan facciata.jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "gino-valle.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Split-flap_display",
+        "https://en.wikipedia.org/wiki/Solari_di_Udine",
+        "https://www.adidesignmuseum.org/en/schede/cifra-5-clock/",
+        "https://www.pnud.camcom.it/allegati/up/up_2003/UE_10_03.pdf",
+        "https://www.adi-design.org/upl/CdO_STORICO/CdO%20storico%20MOTIVAZIONI/Motivazioni_1994.pdf",
+        "https://www.fulbright.it/wp-content/uploads/2025/05/2024n_FULBRIGHT-compresso.pdf"
+      ]
+    },
+    {
+      "name": "John Myer",
+      "piece": "Split-flap board",
+      "hall": 1,
+      "context": "The Belgian inventor linked to Solari. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Solari sources identify a Belgian inventor/designer. Commons and web portraits of a US Marine, minister, architect and other Myer namesakes do not establish that identity. No face was accepted.",
+      "commons_queries": [
+        {
+          "query": "\"John Myer\"",
+          "total_hits": 73,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:USMC-100724-M-4756O-015.jpg",
+        "File:David Roe of Flushing, Long Island, and some of his descendants; a record of six generations (IA davidroeofflushi00torr).pdf",
+        "File:A copy of the poll list (IA copyofpolllist00ne).pdf",
+        "File:Charter of the Society of the New-York Hospital and the laws relating thereto - with the by-laws and regulations of the institution, and those of the Bloomingdale Asylum for the Insane (IA 68140580R.nlm.nih.gov).pdf",
+        "File:Public documents (IA publicdocuments1871newt).pdf",
+        "File:Pennsylvania archives .. (IA pennsylvaniaarch19penn).pdf",
+        "File:Register of officers and members of the Society of Colonial Wars, 1897-1898; constitution of the General Society (IA registerofoffice00gene).pdf",
+        "File:Collections of the New York Historical Society for the year .. (IA collectionsofnewv35newy).pdf",
+        "File:July 1 1972 to October 31 1973 (IA cfaminutes17oct1973).pdf",
+        "File:A copy of the poll list (IA copyofpolllist00newy).pdf",
+        "File:Papers and proceedings of the Bergen County Historical Society (IA papersproceeding1013berg).pdf",
+        "File:Register of officers and members of the Society of Colonial Wars, 1897-1898 - constitution of the General Society (IA colonialwars00generich).pdf",
+        "File:The Pennsylvania magazine of history and biography (IA pennsylvaniamaga31hist 0).pdf",
+        "File:Phi Psi Cli (electronic resource) (IA phipsicli1996elon).pdf",
+        "File:Public documents (IA publicdocuments1872newt).pdf",
+        "File:Proceedings of the New Jersey Historical Society (IA proceedingsofnew06newj 0).pdf",
+        "File:By-laws and regulations of the New-York Hospital and Bloomingdale Lunatic Asylum - ordained and established by the governors of the institution (IA 101603242.nlm.nih.gov).pdf",
+        "File:Names of persons for whom marriage licenses were issued by the secretary of the province of New York, previous to 1784 (IA namesofpersonsfo00newy 0).pdf",
+        "File:Account of the New York hospital. (IA accountofnewyork00newy).pdf",
+        "File:Cornell University Library digitization (IA cu31924024887089).pdf",
+        "File:The Pennsylvania magazine of history and biography (IA pennsylvaniamaga31hist).pdf",
+        "File:Annual report .. (IA annualreport06berg).pdf",
+        "File:John Myer, Phoenix (7496125564).jpg",
+        "File:A brief account of the New-York Hospital (IA 2572040R.nlm.nih.gov).pdf",
+        "File:Prominent families of New York; index (IA cu31924093597312).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Split-flap_display",
+        "https://en.wikipedia.org/wiki/Solari_di_Udine",
+        "https://www.adidesignmuseum.org/en/schede/cifra-5-clock/"
+      ]
+    },
+    {
+      "name": "Kenyon Taylor",
+      "piece": "Flip-disc display",
+      "hall": 1,
+      "context": "Devised the flip-disc at Ferranti-Packard in Canada, for Trans-Canada Air Lines.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Ferranti-Packard engineering records and interviews identify Maurice Kenyon Taylor, but the searches supplied no accepted, captioned portrait with a verified reuse grant. An archive catalogue entry is not itself a downloadable licensed portrait.",
+      "commons_queries": [
+        {
+          "query": "\"Kenyon Taylor\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Maurice Kenyon Taylor\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Flip-disc_display"
+      ]
+    },
+    {
+      "name": "Daniel Rozin",
+      "piece": "Kinetic mirror",
+      "hall": 1,
+      "context": "Artist, born in Jerusalem. He built Wooden Mirror in 1999 and has since made mirrors of chrome balls, pegs and toy penguins.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Commons results show his mirrors, rather than a verified portrait. The Ars Electronica Wooden Mirror image is licensed for restricted press use, not as an unrestricted portrait adaptation source. The named foundation workshop photograph remains small at the face and uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"Daniel Rozin\"",
+          "total_hits": 3,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Danny Rozin\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Weave Mirror (4237851505).jpg",
+        "File:“Trash Mirror No. 3” (2011) by Daniel Rozin.webm",
+        "File:New York Daniel Rozin \"The Wooden Mirror\" (5060453987).jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "daniel-rozin.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://www.wikidata.org/wiki/Q5220788",
+        "https://www.smoothware.com/danny/woodenmirror.html",
+        "http://www.smoothware.com/danny/newshinyballsmirror.html",
+        "https://ullens-foundation.com/artists/daniel-rozin"
+      ]
+    },
+    {
+      "name": "Daniel Leithinger",
+      "piece": "Shape display",
+      "hall": 1,
+      "context": "Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Ars Electronica 2016 archive explicitly names the Tangible Media researcher and photographer Florian Voggeneder. Its access terms prohibit modification and restrict reuse to non-commercial reporting on Ars Electronica. It does not clear a museum portrait adaptation.",
+      "commons_queries": [
+        {
+          "query": "\"Daniel Leithinger\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "daniel-leithinger.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "http://tangible.media.mit.edu/project/inform/",
+        "https://trackr-media.tangiblemedia.org/publishedmedia/Papers/527-inFORM%20Dynamic%20Physical%20Affordances/Published/PDF",
+        "https://www.colorado.edu/atlas/daniel-leithinger"
+      ]
+    },
+    {
+      "name": "Sean Follmer",
+      "piece": "Shape display",
+      "hall": 1,
+      "context": "Built the pin table inFORM in the Tangible Media Group at the MIT Media Lab.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "MIT Media Lab pages with Creative Commons notices were checked, but a licence on an article/project does not establish a grant for the separate profile photograph. No portrait-specific open grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Sean Follmer\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "sean-follmer.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "http://tangible.media.mit.edu/project/inform/",
+        "https://trackr-media.tangiblemedia.org/publishedmedia/Papers/527-inFORM%20Dynamic%20Physical%20Affordances/Published/PDF",
+        "https://www.cs.stanford.edu/people/sean-follmer"
+      ]
+    },
+    {
+      "name": "Oleg Tretiakoff",
+      "piece": "Refreshable braille display",
+      "hall": 1,
+      "context": "Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The cadet portrait remains unverified as the braille inventor. Neither its uploader’s name nor its 2025 upload date supplies the missing biography or archival provenance. It remains stopped at the identity gate.",
+      "commons_queries": [
+        {
+          "query": "\"Oleg Tretiakoff\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Oleg Tretiakov\" \"braille\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Oleg Tretiakoff.jpg"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4044350",
+        "https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/",
+        "https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm",
+        "https://en.wikipedia.org/wiki/Refreshable_Braille_display",
+        "https://en.wikipedia.org/wiki/History_of_display_technology",
+        "https://commons.wikimedia.org/wiki/File:Oleg_Tretiakoff.jpg"
+      ]
+    },
+    {
+      "name": "Klaus Peter Schönherr",
+      "piece": "Refreshable braille display",
+      "hall": 1,
+      "context": "Invented a piezoelectric braille module in Germany in 1975.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Exact, hyphenated and transliterated spellings did not produce a portrait tied to the braille-module inventor. Unrelated local-community namesakes were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Klaus Peter Schönherr\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Klaus-Peter Schönherr\" OR \"Klaus Peter Schoenherr\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4044350",
+        "https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/",
+        "https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm",
+        "https://en.wikipedia.org/wiki/Refreshable_Braille_display",
+        "https://en.wikipedia.org/wiki/History_of_display_technology"
+      ]
+    },
+    {
+      "name": "James Bryce",
+      "piece": "Refreshable braille display",
+      "hall": 1,
+      "context": "The IBM engineer. A British statesman, Viscount Bryce, shares the name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NEW LEAD: The National Museum of Bermuda publication The Sphinx of Inverurie (2018), printed pp. 26–27 / PDF pp. 28–29, captions a self-portrait of James Wares Bryce and identifies him as IBM chief scientist. Its exact embedded photograph is 556×833; the native face measures about 49.6 px across. It is too small for a drawing. The book has a copyright notice and the specific historical photograph’s publication/rights history was not established. A larger archive scan and a documented rights basis are needed.",
+      "commons_queries": [
+        {
+          "query": "\"James Bryce\"",
+          "total_hits": 1905,
+          "error": null,
+          "more_results_available": true
+        },
+        {
+          "query": "\"James W. Bryce\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:James Bryce, 1st Viscount Bryce cph.3b16400.jpg",
+        "File:James Bryce, 1st Viscount Bryce & Andrew Carnegie - Project Gutenberg eText 17976.jpg",
+        "File:1907 Sept George Sterling Wine of Wizardry first page Cosmopolitan v.53 n.5 p.551.tif",
+        "File:1st Viscount Bryce 1902b.jpg",
+        "File:1st Viscount Bryce by Ernest Moore.jpg",
+        "File:1st Viscount Bryce 1913.jpg",
+        "File:1st Viscount Bryce 1893.jpg",
+        "File:James Bryce.jpg",
+        "File:Picture of James Bryce, 1st Viscount Bryce.jpg",
+        "File:Bryce James.jpg",
+        "File:Miami Heat Championship Parade 2012 3.jpg",
+        "File:Collier's 1921 Bryce, James, Viscount.jpg",
+        "File:Autograph Collection - Bryce Viscount of Dechmont, James, 1826-1958 - DPLA - 047b26b0732839402ab578d749d3d199 (page 7).jpg",
+        "File:Portrait of James Bryce, 1st Viscount Bryce.jpg",
+        "File:Impressions of South Africa (IA impressionsofso00bryc).pdf",
+        "File:The Rt Hon James Bryce and Prof Goldwin Smith (HS85-10-18301) original.tif",
+        "File:Autograph Collection - Bryce Viscount of Dechmont, James, 1826-1958 - DPLA - 047b26b0732839402ab578d749d3d199 (page 10).jpg",
+        "File:Review of reviews and world's work (1890) (14597772498).jpg",
+        "File:James Bryce - American Commonwealth vol 2.djvu",
+        "File:ROSTRON, ARTHUR H., CAPT. OF CUNARD LINER, 'CARPATHIA;' BRYCE, JAMES, AMBASSADOR FROM GREAT BRITAIN. TITANIC MEDAL TO ROSTRON LCCN2016864364.jpg",
+        "File:BADEN-POWELL, SIR ROBERT, (WILLIAM H. TAFT), BUTT, ARCHIBALD WILLINGHAM FOUNDER OF BOY SCOUTS (WITH TAFT) LCCN2016863533.jpg",
+        "File:James Bryce, ante 1922 - Accademia delle Scienze di Torino 0143 B.jpg",
+        "File:Autograph Collection - Bryce Viscount of Dechmont, James, 1826-1958 - DPLA - 047b26b0732839402ab578d749d3d199 (page 2).jpg",
+        "File:Memorial to Viscount Bryce, Grange Cemetery, Edinburgh.jpg",
+        "File:Autograph Collection - Bryce Viscount of Dechmont, James, 1826-1958 - DPLA - 047b26b0732839402ab578d749d3d199 (page 11).jpg",
+        "File:Information selection systems retrieval replica copies; a-state-of-the-art report (IA informationselec157bagg).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4044350",
+        "https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/",
+        "https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm",
+        "https://en.wikipedia.org/wiki/Refreshable_Braille_display",
+        "https://en.wikipedia.org/wiki/History_of_display_technology"
+      ]
+    },
+    {
+      "name": "Horst Hörtner",
+      "piece": "Drone light show",
+      "hall": 1,
+      "context": "Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Named Ars Electronica Flickr and archive photographs were checked. The tested Flickr image uses CC BY-NC-ND 2.0 and the archive restricts modification. These do not clear a redrawn portrait. The vog.photo headshot remains uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"Horst Hörtner\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Horst Hoertner\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Networkdiagram Sam Auinger.pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://guinnessworldrecords.com/news/2016/1/intel-stuns-during-ces-keynote-with-record-for-most-drones-airborne-simultaneousl-411677",
+        "https://ars.electronica.art/aeblog/?p=20615",
+        "https://en.wikipedia.org/wiki/Drone_art",
+        "https://ars.electronica.art/futurelab/de/hoertner-horst/",
+        "https://ars.electronica.art/fl25/storyline/virtual-worlds/"
+      ]
+    },
+    {
+      "name": "Guillermo González Camarena",
+      "piece": "Colour-wheel television",
+      "hall": 2,
+      "context": "Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Commons portraits are scans uploaded as own work long after the inventor died. No photographer or archive release was found to substantiate those grants. The INEHRM photograph names the inventor but remains uncleared; its catalogue date also conflicts with the apparent age selected in round 3.",
+      "commons_queries": [
+        {
+          "query": "\"Guillermo González Camarena\"",
+          "total_hits": 9,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Ing. Guillermo González Camarena.jpg",
+        "File:González camarena guillermo ing, EN SU DESPACHO.jpg",
+        "File:ING. GUILLERMO GONZÁLEZ CAMARENA, INVENTOR MEXICANO DE LA TELEVISIÓN A COLORES.jpg",
+        "File:GuillermoGonzalezCamarena.jpg",
+        "File:Cruz en el aire.jpg",
+        "File:González camarena guillermo ing, con agustín lara, ultima foto.jpg",
+        "File:La Cruz y el ocaso.jpg",
+        "File:Levantamos la Cruz.jpg",
+        "File:Cargando la Cruz.jpg"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US2296019",
+        "https://artsandculture.google.com/story/qQVxulIPRfmyJw",
+        "https://en.wikipedia.org/wiki/Field-sequential_color_system",
+        "https://en.wikipedia.org/wiki/Guillermo_Gonz%C3%A1lez_Camarena",
+        "https://repositorio-inehrm.cultura.gob.mx/fototeca/guillermo-gonzalez-camarena/",
+        "https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg"
+      ]
+    },
+    {
+      "name": "A. Frankenstein",
+      "piece": "Colour-wheel television",
+      "hall": 2,
+      "context": "Applied in Germany in 1904 for a patent on a colour system with a filter wheel.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The colour-wheel patent context is identifiable, but no captioned portrait of this inventor was found. Illustrations of the fictional Frankenstein and photographs of actors were excluded. Initial A. was not expanded by guessing.",
+      "commons_queries": [
+        {
+          "query": "\"A. Frankenstein\"",
+          "total_hits": 193,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:The dance; (IA dance01kinn).pdf",
+        "File:The writings of Mark Twain (pseud.) (IA cu31924014317832).pdf",
+        "File:The Agitator Volume 1 Issue 08.djvu",
+        "File:Contract audit followup- its impact on defense contracting. (IA contractauditfol00smit).pdf",
+        "File:In maiden meditation (IA inmaidenmeditati00treziala).pdf",
+        "File:Everybody's Magazine, Volume 14 (1906).pdf",
+        "File:Insekten-Börse. Jg. 08, No. 20, 1891 (IA CAT89899854010).pdf",
+        "File:Ballads & sonnets (IA balladssonnets00rossrich).pdf",
+        "File:The earth; a modern play in four acts (IA cu31924013610872).pdf",
+        "File:McClellan's military career reviewed and exposed- the military policy of the administration set forth and vindicated (IA mcclellansmilita00swin).pdf",
+        "File:The Billboard 1905-03-25- Vol 17 Iss 12 (IA sim billboard 1905-03-25 17 12).pdf",
+        "File:In the temple of arts.jpg",
+        "File:The autocrat of the breakfast table (IA 06autocratbreak00holmrich).pdf",
+        "File:Insekten-Börse. Jg. 08, No. 06, 1891 (IA CAT89899854009).pdf",
+        "File:Nonsenseorship (IA nonsenseorship00brourich).pdf",
+        "File:The throat and nose and their diseases (IA b28139999).pdf",
+        "File:The \"Breakfast-table\" series- The autocrat of the breakfast-table, The professor at the breakfast-table, The poet at the breakfast-table (IA breakfasttablese00holmiala).pdf",
+        "File:The parsonage porch; seven stories from a clergyman's note-book (IA parsonageporchsex00gilm).pdf",
+        "File:The autocrat of the breakfast-table .. (IA autocratofbreakf02holm).pdf",
+        "File:Our machine civilization (IA ourmachinecivili00fosdrich).pdf",
+        "File:Insekten-Börse. Jg. 14, No. 01-45 & 47-52, 1897 (IA insektenborse141897leip).pdf",
+        "File:Loyalty (microform) - an address delivered to the Toronto Young Men' s Liberal Club, January 19th, 1885 (IA cihm 02881).pdf",
+        "File:The writings of Mark Twain (pseud) (IA workswritingmark22twairich).pdf",
+        "File:The Militant Volume 2 No. 1.pdf",
+        "File:The larger life- a book of the heart (IA largerlifebookof00huck).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US2296019",
+        "https://artsandculture.google.com/story/qQVxulIPRfmyJw",
+        "https://en.wikipedia.org/wiki/Field-sequential_color_system",
+        "https://en.wikipedia.org/wiki/Guillermo_Gonz%C3%A1lez_Camarena"
+      ]
+    },
+    {
+      "name": "Werner von Jaworski",
+      "piece": "Colour-wheel television",
+      "hall": 2,
+      "context": "Applied in Germany in 1904 for a patent on a colour system with a filter wheel.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The colour-wheel patent context is identifiable, but no named portrait of this inventor was found. No face was supplied from a namesake or an uncaptioned group.",
+      "commons_queries": [
+        {
+          "query": "\"Werner von Jaworski\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US2296019",
+        "https://artsandculture.google.com/story/qQVxulIPRfmyJw",
+        "https://en.wikipedia.org/wiki/Field-sequential_color_system",
+        "https://en.wikipedia.org/wiki/Guillermo_Gonz%C3%A1lez_Camarena"
+      ]
+    },
+    {
+      "name": "Peter Goldmark",
+      "piece": "Colour-wheel television",
+      "hall": 2,
+      "context": "Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "A Commons file labelled Goldmark Peter Carl.jpg shows the CBS engineer and declares CC0, but names an unknown photographer and cites an HTE article that does not establish authority for that release. Public-domain Ford White House photographs instead identify the New York state budget director Peter Goldmark, a different person; those were rejected.",
+      "commons_queries": [
+        {
+          "query": "\"Peter Goldmark\"",
+          "total_hits": 5,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Peter Carl Goldmark\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Ford A4522 NLGRF photo contact sheet (1975-05-13)(Gerald Ford Library).jpg",
+        "File:Mount St. Helens long-term sediment management plan- Final supplemental environmental impact statement- Appendix F- Responses to public comment - USACE-p16021coll7-7636.pdf",
+        "File:OPPORTUNITITES TO IMPROVE THE ORGANIZATIONAL RESPONSE OF THE FEDERAL AGENCIES IN THE MANAGEMENT OF WILDLAND FIRES (IA gov.gpo.fdsys.CHRG-114shrg98908).pdf",
+        "File:The Radio Annual, 1947 (IA radioannual194700radi).pdf",
+        "File:Photograph of President Gerald R. Ford and His Advisers Meeting with Governor Hugh Carey and New York Officials in the Cabinet Room to Discuss the Financial Situation in New York City - NARA - 7582447.jpg",
+        "File:Goldmark Peter Carl.jpg",
+        "File:Principales descubrimientos del hombre.pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "peter-goldmark.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://patents.google.com/patent/US2296019",
+        "https://artsandculture.google.com/story/qQVxulIPRfmyJw",
+        "https://en.wikipedia.org/wiki/Field-sequential_color_system",
+        "https://en.wikipedia.org/wiki/Guillermo_Gonz%C3%A1lez_Camarena",
+        "https://static1.squarespace.com/static/5c65dd81af46834afd07e40a/t/605a6c095e85b77df0f0910e/1616538638242/lives%2Bretold%2Bgoldmark%2Bpeter%2Bpt1.pdf"
+      ]
+    },
+    {
+      "name": "Robert H. Anderson",
+      "piece": "Storage tube terminal",
+      "hall": 2,
+      "context": "The Tektronix engineer. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Tektronix storage-tube engineer is established by technical sources. Military, medical and RAND namesake portraits were excluded. No verified open portrait of this engineer was found.",
+      "commons_queries": [
+        {
+          "query": "\"Robert H. Anderson\"",
+          "total_hits": 50,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:GenRHAndersonColor.jpg",
+        "File:Brig. Gen. Robert Houstoun Anderson.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 3.jpg",
+        "File:MajorRobertHAndersongrave.jpg",
+        "File:MajRobertHAndersonGraveFront.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 8.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 10.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 5.jpg",
+        "File:Brigadier General Robert Houstoun Anderson.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 4.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 7.jpg",
+        "File:BrigGenRAH.jpg",
+        "File:AndersonFamilyGravesite.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 2.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 6.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery.jpg",
+        "File:Robert Houstoun Anderson and Family at Bonaventure Cemetery 9.jpg",
+        "File:GenRHAnderson.jpg",
+        "File:RHAndersonJR.jpg",
+        "File:RAHhussars.jpg",
+        "File:KennesawMountainBattlefieldMonument.jpg",
+        "File:Annual report of the Yorkshire Philosophical Society (IA annualreportofyo50york).pdf",
+        "File:A century of biological research (IA centuryofbiologi27mill).pdf",
+        "File:Jefferson County, Indiana marriage records, 1811-1831 (IA jeffersoncountyi00ritc).pdf",
+        "File:List of residents. (title varies) (IA listofresidentst190918bost).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Direct-View_Bistable_Storage_Tube",
+        "https://en.wikipedia.org/wiki/Tektronix_4014"
+      ]
+    },
+    {
+      "name": "Andrew Haeff",
+      "piece": "Storage tube terminal",
+      "hall": 2,
+      "context": "Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "ETHW establishes the memory-tube inventor and supplies the professional historical photograph. No open photograph grant was verified; a later filmmaker with the same name was excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Andrew Haeff\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "andrew-haeff.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Direct-View_Bistable_Storage_Tube",
+        "https://en.wikipedia.org/wiki/Tektronix_4014",
+        "https://ethw.org/Andrew_V._Haeff"
+      ]
+    },
+    {
+      "name": "David Hagelbarger",
+      "piece": "Nixie tube",
+      "hall": 2,
+      "context": "The engineer most often named as its inventor.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Bell Labs sources establish David W. Hagelbarger, but no captioned face with an applicable open grant was accepted. A portrait or diagram of Claude Shannon is not a substitute for Hagelbarger.",
+      "commons_queries": [
+        {
+          "query": "\"David Hagelbarger\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Nixie_tube"
+      ]
+    },
+    {
+      "name": "Tadashi Nakamura",
+      "piece": "Vacuum fluorescent display",
+      "hall": 2,
+      "context": "The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Ise founder is identified in Electronic Design and Noritake corporate history. Commons portraits concern the Seido karate founder, not the display inventor. They were excluded. The correct 1976 portrait remains uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"Tadashi Nakamura\"",
+          "total_hits": 3,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Tadashi Nakamura in Poland.jpg",
+        "File:Seido-logo-1024x1024.png",
+        "File:Dr.Tadashi nakamura.JPG"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Vacuum_fluorescent_display",
+        "https://www.worldradiohistory.com/Archive-Electronic-Design/1976/Electronic-Design-V24-N06-1976-0315.pdf",
+        "https://www.noritake-itron.jp/eng/profile/nakamura/"
+      ]
+    },
+    {
+      "name": "Tadashi Sasaki",
+      "piece": "Vacuum fluorescent display",
+      "hall": 2,
+      "context": "The engineer of Hayakawa Electric, later Sharp.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "SHMJ identifies the Sharp/Hayakawa engineer. Commons results for a guitarist, historical figures or unrelated similarly named people do not identify him. No cleared replacement portrait was found.",
+      "commons_queries": [
+        {
+          "query": "\"Tadashi Sasaki\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Monna Tadashi, Sasaki Masanori, Naito Takaharu.png",
+        "File:066 December 16-31 1971 - DPLA - a67410b020c57c0bd258888d37645ee0.pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "tadashi-sasaki.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Vacuum_fluorescent_display",
+        "https://www.shmj.or.jp/english/pioneers/pnr16.html"
+      ]
+    },
+    {
+      "name": "Donald Bitzer",
+      "piece": "Plasma display panel",
+      "hall": 2,
+      "context": "Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "REJECTED LEAD: Astrotheme’s CC BY 2.0 image points to Jason Scott’s Flickr photograph Seattle Visit 2018. Inspection of the actual image shows a PLATO terminal and no person. It cannot supply Bitzer’s face. The named NIHF/Illinois portraits remain uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"Donald Bitzer\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Don Bitzer\" OR \"Donald L. Bitzer\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:A guideline for the planning and system requirement determination of a computer based educational system. (IA guidelineforplan00john).pdf",
+        "File:RIT NandE 1977 Feb28 Complete.pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "donald-bitzer.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://ethw.org/Milestones:Color_Plasma_Television,_1993",
+        "https://en.wikipedia.org/wiki/Plasma_display",
+        "https://en.wikipedia.org/wiki/PLATO_(computer_system)",
+        "https://www.invent.org/inductees/donald-l-bitzer",
+        "https://uiaa.org/2023/12/14/2023-alumni-awards/"
+      ]
+    },
+    {
+      "name": "Gene Slottow",
+      "piece": "Plasma display panel",
+      "hall": 2,
+      "context": "Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NIHF and the Illinois Archives identify Hiram Gene Slottow. No open photograph licence was verified for their portraits. Alternate-name Commons searches supplied no usable face.",
+      "commons_queries": [
+        {
+          "query": "\"Gene Slottow\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Hiram Slottow\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "gene-slottow.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://ethw.org/Milestones:Color_Plasma_Television,_1993",
+        "https://en.wikipedia.org/wiki/Plasma_display",
+        "https://en.wikipedia.org/wiki/PLATO_(computer_system)",
+        "https://www.invent.org/inductees/h-gene-slottow"
+      ]
+    },
+    {
+      "name": "Robert Willson",
+      "piece": "Plasma display panel",
+      "hall": 2,
+      "context": "The Illinois graduate student of 1964. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NIHF explicitly identifies the Illinois plasma-display co-inventor. Commons results for a bishop and historical namesakes were excluded. No cleared photograph of the co-inventor was found.",
+      "commons_queries": [
+        {
+          "query": "\"Robert Willson\"",
+          "total_hits": 51,
+          "error": null,
+          "more_results_available": true
+        },
+        {
+          "query": "\"Robert H. Willson\"",
+          "total_hits": 5,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Journal of the council of censors at their sessions at Montpelier and Burlington in June, October, and November, 1827 (IA JCC1827 vtrbms).pdf",
+        "File:Daytime and evening exercises in astronomy, for schools and colleges (IA cu31924031322104).pdf",
+        "File:An historical sketch of Troy (N.H.) and her inhabitants, from the first settlement of the town, in 1764, to 1855 (IA historicalsketch00cav).pdf",
+        "File:Robert Willson bishop.jpg",
+        "File:A copy of the poll list (IA copyofpolllist00ne).pdf",
+        "File:Publications of the Scottish History Society (IA publicationsofsc3819scot).pdf",
+        "File:The registers of Terrington, Co. York. Christenings, 1600-1812. Marriages, burials, 1599-1812 (IA registersofterri29terr).pdf",
+        "File:Heads of families at the first census of the United States taken in the year 1790 .. (IA headsoffamiliesa09unit).pdf",
+        "File:The Doane family - I. Deacon John Doane, of Plymouth, II. Doctor John Done, of Maryland, and their descendants - with notes upon English families of the name (IA doanefamilyideac00doan).pdf",
+        "File:The Doane family- (IA doanefamily00doan).pdf",
+        "File:Catalogue of a small collection of English coins, the property of a gentleman in Somersetshire; a collection of naval and military medals (IA catalogueofsmall00soth 0).pdf",
+        "File:The case and proceedings of at least sixty gentlemen, ... 1656 (IA bim early-english-books-1641-1700 the-case-and-proceedings 1656).pdf",
+        "File:A volume of records relating to the early history of Boston - containing Boston marriages, from 1752 to 1809 (IA volumeofrecordsr3017bost).pdf",
+        "File:An historical sketch of Troy (N.H.) and her inhabitants, from the first settlement of the town, in 1764, to 1855 (IA historicalsketch1764cave).pdf",
+        "File:Historical sketch of the town of Troy, New Hampshire, and her inhabitants from the first settlement of the territory now within the limits of the town in 1764-1897 (IA cu31924028836803).pdf",
+        "File:The maniac, a tale; or, A view of Bethlem Hospital; and The merits of women, a poem from the French; with poetical pieces on various subjects, original and translated (IA maniactaleorview00brisiala).pdf",
+        "File:A Volume of records relating to the early history of Boston - containing miscellaneous papers (IA volumeofrecordsr30bost).pdf",
+        "File:Correspondence of Lord Burghersh (IA correspondenceof00west).pdf",
+        "File:Early stages of the Quaker movement in Lancashire (IA earlystagesofqua00nigh).pdf",
+        "File:Historical sketch of the town of Troy, New Hampshire, and her inhabitants from the first settlement of the territory now within the limits of the town in 1764-1897 (IA historicalsketch1764ston).pdf",
+        "File:The registers of the parish church of Whittington in the County of Lancaster. Christenings, burials, and weddings, 1538 to 1764 (IA registersofparis00whit).pdf",
+        "File:A souvenir history of the parish of St. Paul's, Kent County, Maryland (IA souvenirhistoryo00denr).pdf",
+        "File:A Desk Book on the Etiquette of Social Stationary.djvu",
+        "File:Eighteenth Annual Report of the Associated Charities of Cambridge. November, 1900 (IA eighteenthannual18asso).pdf",
+        "File:Ulster Roll of Gaol Delivery, 1613-1618 (IA jstor-20563471).pdf",
+        "File:(Appletons') annual cyclopaedia and register of important events of the year- 1896-1902. Series 3 (IA s3appletonsannu07newyuoft).pdf",
+        "File:Architect and engineer (1935) (14595821097).jpg",
+        "File:The New-York Evangelist 1891-01-22- Vol 62 Iss 4 (IA sim evangelist-and-religious-review 1891-01-22 62 4).pdf",
+        "File:(Appletons') annual cyclopaedia and register of important events of the year- 1896-1902. Series 3 (IA s3appletonsannu06newyuoft).pdf",
+        "File:The Glendale News 1910-02-05 (IA cgl 000867).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "robert-willson.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://ethw.org/Milestones:Color_Plasma_Television,_1993",
+        "https://en.wikipedia.org/wiki/Plasma_display",
+        "https://en.wikipedia.org/wiki/PLATO_(computer_system)",
+        "https://www.invent.org/inductees/robert-h-willson"
+      ]
+    },
+    {
+      "name": "Tsutae Shinoda",
+      "piece": "Plasma display panel",
+      "hall": 2,
+      "context": "Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Professional sources at ETHW, the SID journal and IIT Kanpur identify the plasma-display engineer. No open portrait licence was verified. A publicly available journal PDF is not itself permission to adapt its author photograph.",
+      "commons_queries": [
+        {
+          "query": "\"Tsutae Shinoda\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "tsutae-shinoda.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://ethw.org/Milestones:Color_Plasma_Television,_1993",
+        "https://en.wikipedia.org/wiki/Plasma_display",
+        "https://en.wikipedia.org/wiki/PLATO_(computer_system)",
+        "https://ethw.org/Tsutae_Shinoda"
+      ]
+    },
+    {
+      "name": "Charles Spindt",
+      "piece": "Field emission display",
+      "hall": 2,
+      "context": "Patented the way of making the microscopic tips, at Stanford Research Institute.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "SRI identifies the field-emission inventor in a work photograph, and the society profile supplies a later portrait. No open photograph grant was verified for either.",
+      "commons_queries": [
+        {
+          "query": "\"Charles Spindt\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "charles-spindt.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Field-emission_display",
+        "https://www.sri.com/hoi/spindt-cold-cathode-for-displays/",
+        "https://www.sirinc2.org/branch35/wp-content/uploads/2016/02/Member-Profile-Jun-2015.pages.pdf"
+      ]
+    },
+    {
+      "name": "Kenneth Shoulders",
+      "piece": "Field emission display",
+      "hall": 2,
+      "context": "Patented the way of making the microscopic tips, at Stanford Research Institute.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The SRI memorial supports identity. No sharper, openly licensed portrait was verified. The earlier drawing’s face breadth and apparent age still require review; a likeness change would not resolve the source rights.",
+      "commons_queries": [
+        {
+          "query": "\"Kenneth Shoulders\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Field-emission_display",
+        "https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf"
+      ]
+    },
+    {
+      "name": "Louis Heynick",
+      "piece": "Field emission display",
+      "hall": 2,
+      "context": "Patented the way of making the microscopic tips, at Stanford Research Institute.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Round 3 removed the unsupported dark jacket and retained a shirt. The BEMS obituary names him and the field-emission patents, but courtesy of Sheila Johnston is not a verified open grant from the photograph’s rights holder.",
+      "commons_queries": [
+        {
+          "query": "\"Louis Heynick\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Field-emission_display",
+        "https://maisonsaine.ca/uploads/2014/06/news183.pdf"
+      ]
+    },
+    {
+      "name": "Howard Borden",
+      "piece": "LED display",
+      "hall": 3,
+      "context": "Designed the Hewlett-Packard numeric indicator of 1969.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The native HP Journal author photograph supports identity; round 3 corrected the white shirt and black tie. No open photograph grant was verified, so the corrected drawing stays off the site.",
+      "commons_queries": [
+        {
+          "query": "\"Howard Borden\"",
+          "total_hits": 14,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Newhart show cast 1977.JPG",
+        "File:5901 N Sheridan Rd crop.jpg",
+        "File:Peter Bonerz 1973.JPG",
+        "File:5901 N Sheridan Rd.jpg",
+        "File:Newhart Building.jpg",
+        "File:Bob Newhart Show Suzanne Pleshette Bill Daily 1973.JPG",
+        "File:Bob Newhart Show Carols Wedding 1975.JPG",
+        "File:Report (IA 1897report05harvuoft).pdf",
+        "File:Andrew Newcomb, 1618-1686, and his descendants; (IA andrewnewcomb16100newc).pdf",
+        "File:Welcome home, a dinner to Theodore Roosevelt, June twenty second, nineteen hundred and ten, at Sherry's New York (IA welcomehomedinne00gugg).pdf",
+        "File:Report (IA 1897report02harvuoft).pdf",
+        "File:Bill Daily \"The Bob Newhart Show\" (1972 CBS press photo).JPG",
+        "File:Report (IA 1897report07harvuoft).pdf",
+        "File:Report (IA 1897report04harvuoft).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "howard-borden.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://www.nobelprize.org/prizes/physics/2014/summary/",
+        "https://en.wikipedia.org/wiki/LED_display",
+        "http://hparchive.com/Journals/HPJ-1969-02.pdf",
+        "https://en.wikipedia.org/wiki/Light-emitting_diode",
+        "https://hparchive.com/Journals/HPJ-1969-02.pdf"
+      ]
+    },
+    {
+      "name": "Gerald Pighini",
+      "piece": "LED display",
+      "hall": 3,
+      "context": "Designed the Hewlett-Packard numeric indicator of 1969.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The native HP Journal author photograph supports identity and the shirt/tie correction. Source rights remain uncleared; round 3 also held the newly turned pose and proportion screen. A faithful replacement needs a cleared photograph.",
+      "commons_queries": [
+        {
+          "query": "\"Gerald Pighini\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://www.nobelprize.org/prizes/physics/2014/summary/",
+        "https://en.wikipedia.org/wiki/LED_display",
+        "http://hparchive.com/Journals/HPJ-1969-02.pdf",
+        "https://en.wikipedia.org/wiki/Light-emitting_diode",
+        "https://hparchive.com/Journals/HPJ-1969-02.pdf"
+      ]
+    },
+    {
+      "name": "Ching Wan Tang",
+      "piece": "OLED",
+      "hall": 3,
+      "context": "Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Commons source is openly licensed CC BY-SA 3.0, but the actual original is only 190×209, with a face about 76.4 px across. The 121×179 crop adds no information. Round 3 made a few-mark label-only draft; this brief asks for a better picture, so that same small source is not counted as solving the request.",
+      "commons_queries": [
+        {
+          "query": "\"Ching Wan Tang\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Ching W Tang\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Ching W Tang.jpg",
+        "File:Ching W Tang (cropped).jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "ching-wan-tang.webp",
+        "kind": "after",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Organic_light-emitting_diode",
+        "https://commons.wikimedia.org/wiki/File:Ching_W_Tang.jpg"
+      ]
+    },
+    {
+      "name": "M. C. Schlamp",
+      "piece": "Quantum-dot display",
+      "hall": 3,
+      "context": "Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The earlier research corroborates Michael C. Schlamp as the Berkeley co-author. Current exact-name and fuller-name searches supplied no verified portrait. A name on a patent or paper does not identify a face in a group photo.",
+      "commons_queries": [
+        {
+          "query": "\"M. C. Schlamp\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Michael Schlamp\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/",
+        "https://doi.org/10.1038/370354a0",
+        "https://www.nobelprize.org/prizes/chemistry/2023/press-release/",
+        "https://en.wikipedia.org/wiki/Quantum_dot_display"
+      ]
+    },
+    {
+      "name": "Louis Brus",
+      "piece": "Quantum-dot display",
+      "hall": 3,
+      "context": "Proved the same effect in particles floating freely in a liquid.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Rice independently captions the 2008 AIP portrait and links the sitter to quantum dots. Commons calls the photograph Copyrighted free use, citing an AIP grant conditional on AIP being the copyright holder. The underlying archive record could not be retrieved; the current policy URL redirects and does not reproduce that specific grant. Rights remain unverified, rather than declared invalid. A new same-pose drawing is supplied for private review only.",
+      "commons_queries": [
+        {
+          "query": "\"Louis Brus\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Louis E Brus.jpg",
+        "File:Bill Wilson.jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "louis-brus.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/",
+        "https://doi.org/10.1038/370354a0",
+        "https://www.nobelprize.org/prizes/chemistry/2023/press-release/",
+        "https://en.wikipedia.org/wiki/Quantum_dot_display",
+        "https://www.nobelprize.org/prizes/chemistry/2023/brus/facts/",
+        "https://magazine.columbia.edu/article/professor-louis-brus-wins-nobel-prize-chemistry",
+        "https://news.rice.edu/news/2026/brus-rice-alumnus-and-nobel-laureate-passes-away-82"
+      ]
+    },
+    {
+      "name": "Nicholas Sheridon",
+      "piece": "Flexible display",
+      "hall": 3,
+      "context": "Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Searches under Nicholas, Nicholas K. and Nick did not produce a new accepted open portrait. The HNF face remains too small, and the larger TFOT portrait URLs found in round 3 were unavailable.",
+      "commons_queries": [
+        {
+          "query": "\"Nicholas Sheridon\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Nick Sheridon\" OR \"Nicholas K. Sheridon\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Rollable_display",
+        "https://blog.hnf.de/wenn-das-papier-den-dreh-raushat/"
+      ]
+    },
+    {
+      "name": "James Fergason",
+      "piece": "Liquid crystal display",
+      "hall": 4,
+      "context": "Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "A Smithsonian group photo explicitly identifies Fergason and the liquid-crystal work. Its record says Copyright Not Evaluated / Usage Conditions Apply, so it was not treated as Smithsonian CC0. NIHF and Optica portraits remain uncleared.",
+      "commons_queries": [
+        {
+          "query": "\"James Fergason\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:De avondbode - algemeen nieuwsblad voor staatkunde, handel, nijverheid, landbouw, kunsten, wetenschappen, enz. - door Ch.G. Withuys 05-11-1839 (IA ddd 010246607 mpeg21).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "james-fergason.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Liquid-crystal_display",
+        "https://en.wikipedia.org/wiki/Twisted_nematic_field_effect",
+        "https://www.invent.org/inductees/james-l-fergason"
+      ]
+    },
+    {
+      "name": "Larry Hornbeck",
+      "piece": "Digital micromirror device",
+      "hall": 4,
+      "context": "Invented the mirror chip at Texas Instruments in 1987.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "SMU’s Texas Instruments archive names Hornbeck with the DMD Emmy, but a downloadable institutional record does not itself grant open reuse. No applicable open photograph grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Larry Hornbeck\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Navy additive manufacturing- adding parts, subtracting steps (IA navydditivemanuf1094545834).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "larry-hornbeck.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Digital_Light_Processing",
+        "https://en.wikipedia.org/wiki/Digital_micromirror_device",
+        "https://mse.utdallas.edu/ourteam/faculty/hornbeck-l/",
+        "https://case.edu/news/triple-alum-larry-j-hornbeck-presented-2014-academy-award-merit"
+      ]
+    },
+    {
+      "name": "Joseph Ostoja-Kotkowski",
+      "piece": "Scanned laser",
+      "hall": 4,
+      "context": "Staged an early laser show, Sound and Image, at the Adelaide Festival of Arts in 1968.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The MDPI article’s open-article licence does not automatically clear the separately credited State Library photograph reproduced by permission. No portrait-specific open grant or documented public-domain replacement was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Joseph Ostoja-Kotkowski\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Ostoja-Kotkowski\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Amtsblatt zur Lemberger Zeitung = Dziennik Urzędowy do Gazety Lwowskiej. 1860, nr 131 (IA jbc.bj.uj.edu pl.DIGCZAS002001 1860 131 DODATEK06).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "joseph-ostoja-kotkowski.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows",
+        "https://en.wikipedia.org/wiki/Laser_lighting_display",
+        "https://en.wikipedia.org/wiki/Laser_projector",
+        "https://en.wikipedia.org/wiki/International_Laser_Display_Association",
+        "https://www.mdpi.com/2076-0752/8/1/23",
+        "https://mdpi-res.com/d_attachment/arts/arts-08-00023/article_deploy/arts-08-00023.pdf",
+        "https://adb.anu.edu.au/biography/ostojakotkowski-joseph-stanislaw--stan-21621"
+      ]
+    },
+    {
+      "name": "Ivan Dryer",
+      "piece": "Scanned laser",
+      "hall": 4,
+      "context": "Filmmaker who worked with Garmire and opened Laserium at Griffith Observatory in Los Angeles in 1973.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "ILDA’s professional photographs provide another, clearer identity reference and avoid the medical-neck-support problem in the older award picture. No open photograph grant was verified for a replacement.",
+      "commons_queries": [
+        {
+          "query": "\"Ivan Dryer\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "ivan-dryer.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows",
+        "https://en.wikipedia.org/wiki/Laser_lighting_display",
+        "https://en.wikipedia.org/wiki/Laser_projector",
+        "https://en.wikipedia.org/wiki/International_Laser_Display_Association",
+        "https://www.inparkmagazine.com/legacies-marty-sklar-ivan-dryer-ira-west-george-casey/",
+        "https://www.ilda.com/ivandryer.html"
+      ]
+    },
+    {
+      "name": "Greg Welch",
+      "piece": "Projection mapping",
+      "hall": 4,
+      "context": "The computer scientist, co-author of the 2001 shader lamps paper. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The UCF professional portrait identifies the computer scientist. No open photograph grant was verified. Commons material about Kalman filters is work context, not a portrait.",
+      "commons_queries": [
+        {
+          "query": "\"Greg Welch\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Kalman ex3.PNG"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "greg-welch.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://d23.com/walt-disney-legend/leota-toombs-thomas/",
+        "https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf",
+        "https://projection-mapping.org/the-history-of-projection-mapping/",
+        "https://en.wikipedia.org/wiki/Projection_mapping",
+        "https://www.ucf.edu/news/ucf-professor-greg-welch-named-to-the-national-academy-of-inventors/",
+        "https://nursing.ucf.edu/people/gregory-welch/"
+      ]
+    },
+    {
+      "name": "Kok-Lim Low",
+      "piece": "Projection mapping",
+      "hall": 4,
+      "context": "Described the technique in 2001 under the name shader lamps.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NUS identifies the computer-graphics researcher, but the portrait page has no verified open photograph grant. No cleared replacement was accepted.",
+      "commons_queries": [
+        {
+          "query": "\"Kok-Lim Low\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "kok-lim-low.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://d23.com/walt-disney-legend/leota-toombs-thomas/",
+        "https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf",
+        "https://projection-mapping.org/the-history-of-projection-mapping/",
+        "https://en.wikipedia.org/wiki/Projection_mapping",
+        "https://www.comp.nus.edu.sg/cs/people/lowkl/"
+      ]
+    },
+    {
+      "name": "Deepak Bandyopadhyay",
+      "piece": "Projection mapping",
+      "hall": 4,
+      "context": "Described the technique in 2001 under the name shader lamps.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The UNC shader-lamps co-author is identifiable in the paper and thesis context. The searches supplied no accepted portrait and open licence for that person.",
+      "commons_queries": [
+        {
+          "query": "\"Deepak Bandyopadhyay\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://d23.com/walt-disney-legend/leota-toombs-thomas/",
+        "https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf",
+        "https://projection-mapping.org/the-history-of-projection-mapping/",
+        "https://en.wikipedia.org/wiki/Projection_mapping"
+      ]
+    },
+    {
+      "name": "Barrett Comiskey",
+      "piece": "Electrophoretic ink",
+      "hall": 5,
+      "context": "Developed the ink in capsules at the MIT Media Lab in 1996.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NIHF identifies the E Ink co-inventor. Its headshot and event photographs remain uncleared. The round 3 study also failed the required new-pose comparison; it is not counted as a publication-ready portrait.",
+      "commons_queries": [
+        {
+          "query": "\"Barrett Comiskey\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1038/28349",
+        "https://en.wikipedia.org/wiki/E_Ink",
+        "https://en.wikipedia.org/wiki/Electrophoretic_display",
+        "https://www.invent.org/inductees/barrett-o-comiskey"
+      ]
+    },
+    {
+      "name": "J. D. Albert",
+      "piece": "Electrophoretic ink",
+      "hall": 5,
+      "context": "Developed the ink in capsules at the MIT Media Lab in 1996.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NIHF identifies Jonathan D. Albert and the E Ink work. Its headshot and event photographs remain uncleared. Historical J. D. Albert namesakes were excluded. Round 3 also left the pose comparison unresolved.",
+      "commons_queries": [
+        {
+          "query": "\"J. D. Albert\"",
+          "total_hits": 11,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Jonathan Albert\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Jonathan D. Albert\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Tableaux de Societe; ou, Fanchette et Honorine, Vol. II (IA dli.granth.18289).pdf",
+        "File:De la mort subite dans l'etat puerperal par coagulums sanguins dans le coeur droit et l'artere pulmonaire (IA b21707364).pdf",
+        "File:W.A. Norton's directory of Dowagiac, Cassopolis and La Grange, Pokagon, Silver Creek and Wayne Townships. 1899 (IA 3256376.0001.001.umich.edu).pdf",
+        "File:Zeitschrift für die Geschichte des Oberrheins. Bd. 054, 1900 (IA zeitschriftfurdi5419unse).pdf",
+        "File:Announcement (IA announcement1889coll).pdf",
+        "File:Wilson, N.C. Directory (1908-1909) (IA wilsonncdirector01hill).pdf",
+        "File:Vital records of Westborough, Massachusetts, to the end of the year 1849 (IA vitalrecordsofwe01west).pdf",
+        "File:D. Albert Rizäus Hardenberg - ein Theologenleben aus der Reformationszeit (IA bub gb VVavF7LcRIMC).pdf",
+        "File:Vital records of Westborough, Massachusetts, to the end of the year 1849 (IA vitalrecordsofwe03west).pdf",
+        "File:027 May 1-15 1970 - DPLA - 729efa3bac2b70db0529b02a355d6a10.pdf",
+        "File:Vital records of Randolph, Maine, to the year 1892 (IA vitalrecordsofra00rand).pdf",
+        "File:Patten genealogy (IA pattengenealogy00bald).pdf",
+        "File:Books from the Library of Congress (IA ogdenfamilyhisto00lcverm).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1038/28349",
+        "https://en.wikipedia.org/wiki/E_Ink",
+        "https://en.wikipedia.org/wiki/Electrophoretic_display",
+        "https://www.invent.org/inductees/jonathan-d-albert"
+      ]
+    },
+    {
+      "name": "Joseph Jacobson",
+      "piece": "Electrophoretic ink",
+      "hall": 5,
+      "context": "Developed the ink in capsules at the MIT Media Lab in 1996.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "NIHF identifies the MIT E Ink co-inventor. Its headshot and event photographs remain uncleared. Military, legal and other namesake portraits were excluded. Round 3 also left the pose comparison unresolved.",
+      "commons_queries": [
+        {
+          "query": "\"Joseph Jacobson\"",
+          "total_hits": 12,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:APBA Hall Of Champions 50th Anniversary.pdf",
+        "File:Algemeen Handelsblad 08-12-1862 (IA ddd 010137411 mpeg21).pdf",
+        "File:Resident list (IA residentlist1917belm 0).pdf",
+        "File:Died in The New York Times of New York City, New York on September 14, 1874.jpg",
+        "File:Special report on tenement house fires in New York. Prepared for theTenement House Commission of 1900 (IA cu31924015346335).pdf",
+        "File:United States Naval Medical Bulletin Vol. 46 Nos. 1-6, 1946 (IA NavalMedicalBulletin46161946).pdf",
+        "File:Ashland County, Wisconsin, in the World War, 1917-1919 (IA ashlandcountywis00ruth).pdf",
+        "File:Identification of At-Risk Drinking and Intervention with Women of Childbearing Age- A Guide for Primary-Care Providers (IA identificationo00nati).pdf",
+        "File:Abendpost 1895-01-11- Vol 7 Iss 9 (IA sim abendpost-sonntagpost 1895-01-11 7 9).pdf",
+        "File:Algemeen Handelsblad 04-12-1860 (IA ddd 010240594 mpeg21).pdf",
+        "File:Ida Silverman presents scroll.jpg",
+        "File:Catalog of Copyright Entries 1939 Dramatic Compositions Motion Pictures New Series Vol 12 Pt 1 (IA catalogofcopyrig121libr).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1038/28349",
+        "https://en.wikipedia.org/wiki/E_Ink",
+        "https://en.wikipedia.org/wiki/Electrophoretic_display",
+        "https://www.invent.org/inductees/joseph-m-jacobson"
+      ]
+    },
+    {
+      "name": "Deng-Ke Yang",
+      "piece": "Cholesteric display",
+      "hall": 5,
+      "context": "Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Kent State identifies the liquid-crystal researcher. No open photograph grant was verified for its professional portrait or the new institutional lecture-photo lead.",
+      "commons_queries": [
+        {
+          "query": "\"Deng-Ke Yang\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "deng-ke-yang.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://patents.google.com/patent/US6061107",
+        "https://laserfocusworld.com/test-measurement/research/article/16547241/cholesteric-lcds-show-images-after-power-is-turned-off",
+        "https://archive.aps.org/mar/2017/v29/4",
+        "https://www.kent.edu/materials-science/profile/deng-ke-yang"
+      ]
+    },
+    {
+      "name": "J. William Doane",
+      "piece": "Cholesteric display",
+      "hall": 5,
+      "context": "Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Kent State identifies the liquid-crystal researcher. No open portrait licence was verified. Historical catalogue results for the fuller name do not identify a usable portrait of this researcher.",
+      "commons_queries": [
+        {
+          "query": "\"J. William Doane\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"John William Doane\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:History of the town of Hawley, Franklin County, Massachusetts, from its first settlement in 1771 to 1887. With family records and biographical sketches (IA historyoftownofh01atkia).pdf",
+        "File:Annual catalog .. (IA annualcatalog18ober 2).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "j-william-doane.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://patents.google.com/patent/US6061107",
+        "https://laserfocusworld.com/test-measurement/research/article/16547241/cholesteric-lcds-show-images-after-power-is-turned-off",
+        "https://archive.aps.org/mar/2017/v29/4",
+        "https://www.kent.edu/physics/j-william-doane"
+      ]
+    },
+    {
+      "name": "Gerardo Beni",
+      "piece": "Electrowetting display",
+      "hall": 5,
+      "context": "Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "UCR identifies the roboticist/electrowetting co-inventor. Its photograph remains uncleared. Round 3 also held the drawing because it made the receding crown too dense and curly; that likeness issue remains distinct from rights.",
+      "commons_queries": [
+        {
+          "query": "\"Gerardo Beni\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:AUTONOMOUS CUEING WITHIN HETEROGENEOUS ROBOT SWARMS (IA autonomouscueing1094562758).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4417786",
+        "https://en.wikipedia.org/wiki/Susan_Hackwood",
+        "https://www.wikidata.org/wiki/Q5550233",
+        "https://doi.org/10.1038/nature01988",
+        "https://doi.org/10.1063/1.92322",
+        "https://cris.ucr.edu/people/gerardo-beni"
+      ]
+    },
+    {
+      "name": "Robert Hayes",
+      "piece": "Electrowetting display",
+      "hall": 5,
+      "context": "The Philips researcher, co-author of the 2003 Nature paper. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The correct researcher is Robert A. Hayes of Philips, co-author of the electrowetting paper. The public-domain US Coast Guard admiral and other Robert Hayes portraits were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Robert Hayes\"",
+          "total_hits": 143,
+          "error": null,
+          "more_results_available": true
+        },
+        {
+          "query": "\"Robert A. Hayes\" \"electrowetting\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Robert Hayes Gore.jpg",
+        "File:100m dash 1964 Olympics.jpg",
+        "File:FAMU athlete Robert Hayes practices running on the track.jpg",
+        "File:Bob hayes cowboys.jpg",
+        "File:Veach, Boston, 1924 LOC npcc.11182.jpg",
+        "File:Bobby Veach (crop).JPG",
+        "File:Bobby Veach 1925 ORIGINAL.jpg",
+        "File:Bobby Veach 1925 CROP.jpg",
+        "File:Veach, Wash. LCCN2016840527.jpg",
+        "File:Bobby Veach 1925 ORIGINAL.tif",
+        "File:(Bobby Veach, Detroit AL (baseball)) LOC 18735185192.jpg",
+        "File:Crawford, Veach, and Cobb.jpg",
+        "File:\"Deacon\" McGuire, Donie Bush, Bobby Veach, Del Gainer, Detroit AL (baseball) LCCN2014692679.jpg",
+        "File:Veach, Wash. LCCN2016840528.jpg",
+        "File:Veach, Boston, 1924 LOC npcc.11183.jpg",
+        "File:Liebold, Jeanes, Veach, Wash. LCCN2016840579.jpg",
+        "File:Veach, Wash. LCCN2016840526.jpg",
+        "File:Bobby Veach 1918.jpeg",
+        "File:\"Deacon\" McGuire, Donie Bush, Bobby Veach, Del Gainor, Detroit AL (baseball) LCCN2014692679 (cropped).jpg",
+        "File:Bob Hayes 1964.jpg",
+        "File:Bob Hayes 1964b.jpg",
+        "File:Bob Hayes 1964c.jpg",
+        "File:An index to the ancient manuscripts of the Borough of Leicester, preserved in the Muniment Room of the Leicester town hall (IA cu31924029566217).pdf",
+        "File:The cry of the innocent & oppressed for justice- ... 1664 (IA bim early-english-books-1641-1700 the-cry-of-the-innocent- 1664).pdf",
+        "File:Calendar of applications and recommendations for office during the presidency of George Washington (IA calendarofapplic00unit).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://patents.google.com/patent/US4417786",
+        "https://en.wikipedia.org/wiki/Susan_Hackwood",
+        "https://www.wikidata.org/wiki/Q5550233",
+        "https://doi.org/10.1038/nature01988",
+        "https://doi.org/10.1063/1.92322"
+      ]
+    },
+    {
+      "name": "Johan Feenstra",
+      "piece": "Electrowetting display",
+      "hall": 5,
+      "context": "Made it work at video speed at Philips Research in Eindhoven in 2003.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Round 3 located a larger TNO portrait. Its identity and clearer face do not establish an open photograph licence. No newly cleared replacement was found.",
+      "commons_queries": [
+        {
+          "query": "\"Johan Feenstra\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "johan-feenstra.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://patents.google.com/patent/US4417786",
+        "https://en.wikipedia.org/wiki/Susan_Hackwood",
+        "https://www.wikidata.org/wiki/Q5550233",
+        "https://doi.org/10.1038/nature01988",
+        "https://doi.org/10.1063/1.92322",
+        "https://fasttrack.tno.nl/en/@8454/johan-feenstra/"
+      ]
+    },
+    {
+      "name": "Mark Miles",
+      "piece": "Interferometric modulator",
+      "hall": 5,
+      "context": "The display engineer who founded Etalon and Iridigm. A motor racing executive shares the name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Green City Force explicitly links its portrait to iMoD; OakTREE supplies a larger professional photograph credited to Ruvan Wijesooriya. Neither has a verified open grant. Commons pictures of a bishop and the IndyCar executive were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Mark Miles\"",
+          "total_hits": 26,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Mark Miles (cropped).jpg",
+        "File:Pope Francis Malacanang 43.jpg",
+        "File:Pope Francis Malacanang 4.jpg",
+        "File:Pope Francis Malacanang 44.jpg",
+        "File:Pope Francis Palo 9.jpg",
+        "File:Pope Francis Malacanang 46.jpg",
+        "File:Pope Francis Malacanang 30.jpg",
+        "File:Pope Francis Malacanang 20.jpg",
+        "File:Pope Francis Tacloban Mass.jpg",
+        "File:Pope Francis and President Obama.jpg",
+        "File:Pope Francis Malacanang 21.jpg",
+        "File:Pope Francis blesses bible with Congress.jpg",
+        "File:Secretary Kerry Guides Pope Francis Towards a Receiving Line at Andrews Air Force Base.jpg",
+        "File:Pope Francis Arrival Villamor Airbase 1.jpg",
+        "File:Pope Francis Arrival Villamor Airbase 3.jpg",
+        "File:Coat of arms of Mark Gerard Miles.svg",
+        "File:Mark Miles IndyCar CEO.jpg",
+        "File:Farm Progress Show, 1985 - DPLA - ef879ef4a4ca655493e26b616957c0dc.jpg",
+        "File:Optoelectronics and optomechanics manufacturing- an ATP focused program development workshop proceedings, February 15, 1995 (IA optoelectronicso5715lett).pdf",
+        "File:The New York Times 1895-03-30- Vol 44 Iss 13605 (IA per new-york-times-magazine the-new-york-times 1895-03-30 44 13605).pdf",
+        "File:Pendulum (IA pendulum1971aver).pdf",
+        "File:Goodrich more mileage message.pdf",
+        "File:Books from the Library of Congress (IA proceedingsofcon00penn).pdf",
+        "File:Annual report of the town officers of the town of Cape Elizabeth (IA annualreportofto00cape 1).pdf",
+        "File:Mark Miles IndyCar CEO (cropped).jpg"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "mark-miles.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Interferometric_modulator_display",
+        "https://worldwide.espacenet.com/textdoc?DB=EPODOC&IDX=US5835255",
+        "https://greencityforce.org/person/mark-miles/",
+        "https://www.oaktree.eco/about/who-we-are/"
+      ]
+    },
+    {
+      "name": "S. K. Deb",
+      "piece": "Electrochromic display",
+      "hall": 5,
+      "context": "Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The conference biography correctly identifies Satyendra/Satyen K. Deb. The available face is below the detail threshold. Commons results for a defence ministry official with the same initials were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"S. K. Deb\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Satyendra Deb\"",
+          "total_hits": 2,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Satyen Deb\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Satyen K. Deb\" OR \"Satyendra K. Deb\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:High-temperature superconductivity (IA hightemperatures826dewe).pdf",
+        "File:The Special Secretary, Shri PK Rastogi presenting the Defence Minister’s, running trophy to Under Secretary, Defence (R&D), Shri S.K. Deb, for the best organised section in the Ministry, in New Delhi on July 10, 2008.jpg",
+        "File:Behar Herald 31-05-2017.pdf",
+        "File:Behar Herald 30-05-2018.pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Electrochromic",
+        "https://doi.org/10.1146/annurev-matsci-062910-100344",
+        "https://ime-15.sci-meet.net/plenary-speakers"
+      ]
+    },
+    {
+      "name": "Karri Palovuori",
+      "piece": "Fog screen",
+      "hall": 6,
+      "context": "Developed the fog screen that people can walk through, at Tampere University of Technology in 2002.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "SoC Hub and Tampere identify the electronics professor. The recorded professional photograph remains uncleared; the fog-screen invention needs its companion work source. No new open portrait was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Karri Palovuori\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "karri-palovuori.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "http://www.olwal.com/projects/research/immaterial/diverdi_immaterial_3dtv_book_chapter_2008.pdf",
+        "https://en.wikipedia.org/wiki/Fog_display",
+        "https://sochub.fi/people/"
+      ]
+    },
+    {
+      "name": "Ismo Rakkolainen",
+      "piece": "Fog screen",
+      "hall": 6,
+      "context": "Developed the fog screen that people can walk through, at Tampere University of Technology in 2002.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Round 3 found a larger native Tampere portrait, resolving the earlier small-copy problem. The named academic and fog-screen work are documented, but no open portrait grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Ismo Rakkolainen\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "ismo-rakkolainen.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "http://www.olwal.com/projects/research/immaterial/diverdi_immaterial_3dtv_book_chapter_2008.pdf",
+        "https://en.wikipedia.org/wiki/Fog_display",
+        "https://homepages.tuni.fi/ismo.rakkolainen/",
+        "https://www.tuni.fi/en/people/ismo-rakkolainen"
+      ]
+    },
+    {
+      "name": "Max Hirsch",
+      "piece": "Swept-volume display",
+      "hall": 6,
+      "context": "The holder of the 1961 display patent. A German economist of the 1800s shares the name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "No portrait tied to the 1961 generescope inventor was accepted. Commons results for historical politicians, memorials and other Max Hirsch namesakes do not identify the display inventor.",
+      "commons_queries": [
+        {
+          "query": "\"Max Hirsch\"",
+          "total_hits": 84,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Der arme Obdachlose (Max Hirsch) - Der wahre Jacob, 1884.jpg",
+        "File:Stolperstein Hirsch, Max.jpg",
+        "File:Stolpersteine Bad Lausick Familie Hirsch.jpg",
+        "File:Stolperstein für Max Hirsch (Lieberose).jpg",
+        "File:Stolpersteine in Lieberose 3 (Lieberose).jpg",
+        "File:Stolpersteine in Lieberose (Lieberose).jpg",
+        "File:Stolpersteine in Lieberose 2 (Lieberose).jpg",
+        "File:Stolpersteinlage, 1, Rottstraße 7-9, Burgsteinfurt, Steinfurt, Landkreis Steinfurt.jpg",
+        "File:Stolperstein Max Hirsch, 1, Rottstraße 7-9, Burgsteinfurt, Steinfurt, Landkreis Steinfurt.jpg",
+        "File:Stolpersteinlage, 2, Rottstraße 7-9, Burgsteinfurt, Steinfurt, Landkreis Steinfurt.jpg",
+        "File:Stolpersteine in Oranienburg 14 (Oranienburg).jpg",
+        "File:Assault conformation image.jpeg",
+        "File:The new socialism, an impartial inquiry (IA newsocialismimpa00stod).pdf",
+        "File:Marie Alexandra of Baden.jpg",
+        "File:Stolperstein für Max Hirsch (Göppingen).jpg",
+        "File:Radeberger Blätter zur Stadtgeschichte, Artikel-Verzeichnis Hefte 1 - 20.pdf",
+        "File:MaxHirsch-memorial-portrait.jpg",
+        "File:Maria Luísa de Hanôver.jpg",
+        "File:Irish journal of medical science (IA s3irishjournalof115373roya).pdf",
+        "File:Reichwein-leopold-foto-gebr-hirsch-karlsruhe-1913-04-25-schwaebisches-bilderblatt-jg06-nr17-s02.jpg",
+        "File:Stolperstein Gervinusstr 11 (Charl) Max Hirsch.jpg",
+        "File:Abendpost 1891-07-09- Vol 3 Iss 161 (IA sim abendpost-sonntagpost 1891-07-09 3 161).pdf",
+        "File:Jahresberichte für neuere deutsche Literaturgeschichte (IA jahresberichtef13berluoft).pdf",
+        "File:145570 Taiwan Major U.S. Arms Sales Since 1990 (IA 145570TaiwanMajorUSArmsSalesSince1990-crs).pdf",
+        "File:Democracy versus socialism, a critical examination of socialism as a remedy for social injustice and an exposition of the single tax doctrine (IA democracyversuss00hirsrich).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display"
+      ]
+    },
+    {
+      "name": "Gregg Favalora",
+      "piece": "Swept-volume display",
+      "hall": 6,
+      "context": "Founder of Actuality Systems, which put the Perspecta display on sale in 2002.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The MIT and Yale professional images establish identity but remain small/soft and uncleared. The new Boston Globe lead credits photographer Josh Reynolds; it is not an open licence. No larger, cleared reference was accepted.",
+      "commons_queries": [
+        {
+          "query": "\"Gregg Favalora\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"Gregory Favalora\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:PerspectaRAD mouse Phantom.JPG"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display",
+        "https://www.mtl.mit.edu/events-seminars/events/electroholographic-3-d-display-technologies-based-surface-acoustic-wave",
+        "https://bulletin.yale.edu/sites/default/files/scienceengineeringviewbook-2011-2012.pdf"
+      ]
+    },
+    {
+      "name": "Lambertus Hesselink",
+      "piece": "Static-volume display",
+      "hall": 6,
+      "context": "Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Stanford identifies the optics researcher. The professional portrait remains uncleared; no new portrait-specific open grant was found.",
+      "commons_queries": [
+        {
+          "query": "\"Lambertus Hesselink\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "lambertus-hesselink.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://doi.org/10.1126/science.273.5279.1185",
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display",
+        "https://profiles.stanford.edu/lambertus-hesselink"
+      ]
+    },
+    {
+      "name": "John Ralston",
+      "piece": "Static-volume display",
+      "hall": 6,
+      "context": "A co-author of the 1996 Science paper from Stanford. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The SDL laser researcher remains the target. Results for an actor, artist, author and university business-development contact were excluded. A modern industry biography mentioning SDL is a possible identity lead, but no source sufficiently tied its portrait to the 1996 paper and granted open reuse.",
+      "commons_queries": [
+        {
+          "query": "\"John Ralston\"",
+          "total_hits": 124,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:John Ralston Saul in 2006 (cropped).jpg",
+        "File:John Ralston Saul.jpg",
+        "File:William Sadler - John Ralston - B1977.14.12778 - Yale Center for British Art.jpg",
+        "File:Albany - DPLA - 7ffe85b138ee43920791fb25fbc362a9.jpg",
+        "File:Annual report of the board of managers of the House of Refuge ... (IA annualreportofbo00hous 22).pdf",
+        "File:Official reports of the town of Wayland (IA officialreportso1915wayl).pdf",
+        "File:City of Memphis, Shelby county, Tennessee (IA cityofmemphisshe00aver).pdf",
+        "File:Pennsylvania archives .. (IA pennsylvaniaarch30penn).pdf",
+        "File:The New York Times 1897-09-25- Vol 46 Iss 14385 (IA per new-york-times-magazine the-new-york-times 1897-09-25 46 14385).pdf",
+        "File:Debates of the Senate (IA 31761118910330).pdf",
+        "File:John Ralston LCCN2003688578.jpg",
+        "File:Lineage book (IA lineagebook25daug).pdf",
+        "File:Ghost Stories 1926-10.pdf",
+        "File:Pennsylvania archives .. (IA pennsylvaniaarch32penn).pdf",
+        "File:John Ralston Mill, Ralston, Morris County, NJ HABS NJ,14-RAL,1- (sheet 5 of 8).tif",
+        "File:Historic American Buildings Survey Nathaniel R. Ewan, Photographer October 27, 1936 EXTERIOR - VIEW FROM WEST - John Ralston Mill, Ralston, Morris County, NJ HABS NJ,14-RAL,1-2.tif",
+        "File:Glendale Daily Press 1921-08-10 (IA cgl 001585).pdf",
+        "File:Directory of the borough of West Chester for 1857 - containing a complete history of the borough .. (IA cu31924028864183).pdf",
+        "File:John Ralston Mill, Ralston, Morris County, NJ HABS NJ,14-RAL,1- (sheet 5 of 8).png",
+        "File:John Ralston Mill, Ralston, Morris County, NJ HABS NJ,14-RAL,1- (sheet 3 of 8).png",
+        "File:Albany - DPLA - 87780fbebeb7d2d530e7a5eb683f5339.jpg",
+        "File:Cornell University Library digitization (IA cu31924008642252).pdf",
+        "File:RALSTON HISTORIC DISTRICT.jpg",
+        "File:Memorial volume of the American field service in France, \"Friends of France\", 1914-1917; (IA memorialvolumeof00seym).pdf",
+        "File:Relics of old Manchester & Salford - including drawings, portraits, prints and curiosities (IA relicsofoldmanch00unse).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1126/science.273.5279.1185",
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display"
+      ]
+    },
+    {
+      "name": "Roger Macfarlane",
+      "piece": "Static-volume display",
+      "hall": 6,
+      "context": "Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The AIP laboratory caption names the IBM scientist at left, but goggles and shadow hide the eyes. The photograph’s IBM credit is not an open grant. No adequate second view or cleared replacement was accepted.",
+      "commons_queries": [
+        {
+          "query": "\"Roger Macfarlane\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1126/science.273.5279.1185",
+        "http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf",
+        "https://en.wikipedia.org/wiki/Volumetric_display",
+        "https://www.aip.org/library/beat-the-heat-with-liquid-nitrogen"
+      ]
+    },
+    {
+      "name": "Daniel Smalley",
+      "piece": "Optical trap display",
+      "hall": 6,
+      "context": "The Brigham Young University professor. A common name.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "BYU and EurekAlert identify the optical-trap-display researcher. The EurekAlert entry says Usage Restrictions: None but describes the asset only as Licensed content, without an explicit adaptation grant. Related publication credits say © BYU Photo / All Rights Reserved. No open portrait grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Daniel Smalley\"",
+          "total_hits": 1,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Pioneer days on Puget Sound (IA pioneerdaysonpug00denn).pdf"
+      ],
+      "repository_snapshot_2026_11_22": {
+        "file": "daniel-smalley.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://doi.org/10.1038/nature25176",
+        "https://physics.byu.edu/department/news/2018-12-byu-study-produces-3d-images",
+        "https://www.smalleyholography.org/contact-us"
+      ]
+    },
+    {
+      "name": "Ryuji Hirayama",
+      "piece": "Acoustic levitation display",
+      "hall": 6,
+      "context": "Built the display at the University of Sussex and published it in 2019.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The professional research website identifies the acoustic-display researcher. A public GitHub-hosted page is not itself a licence for its portrait. No portrait-specific open grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Ryuji Hirayama\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "ryuji-hirayama.webp",
+        "kind": "study",
+        "label_only": true
+      },
+      "source_pages": [
+        "https://doi.org/10.1038/s41586-019-1739-5",
+        "https://sro.sussex.ac.uk/id/eprint/86930/",
+        "https://ryujihirayama.github.io/web/"
+      ]
+    },
+    {
+      "name": "Diego Martinez Plasencia",
+      "piece": "Acoustic levitation display",
+      "hall": 6,
+      "context": "Built the display at the University of Sussex and published it in 2019.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The ACM VRST professional page has the whole-head version of the cropped UCL exposure. Round 3 used it to avoid inventing the crown and jacket. No open photograph grant was verified.",
+      "commons_queries": [
+        {
+          "query": "\"Diego Martinez Plasencia\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": {
+        "file": "diego-martinez-plasencia.webp",
+        "kind": "study",
+        "label_only": false
+      },
+      "source_pages": [
+        "https://doi.org/10.1038/s41586-019-1739-5",
+        "https://sro.sussex.ac.uk/id/eprint/86930/",
+        "https://www.ucl.ac.uk/uclic/people/academics",
+        "https://vrst.acm.org/vrst2021/keynotes/"
+      ]
+    },
+    {
+      "name": "Nobuyuki Masuda",
+      "piece": "Acoustic levitation display",
+      "hall": 6,
+      "context": "Built the display at the University of Sussex and published it in 2019.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The acoustic-display researcher’s author photo remains too small. Public-domain Navy photographs name a Mikasa-preservation-association president, and business results name a gas-company executive. Neither source ties its face to the acoustic-display researcher, so both were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Nobuyuki Masuda\"",
+          "total_hits": 3,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Photo Presentation DVIDS199687.jpg",
+        "File:US Navy 090827-N-3038W-005 Rear Adm. John W. Miller, commander of Carrier Strike Group (CSG) 11, presents Nobuyuki Masuda, president of the Mikasa preservation association, a framed photo montage.jpg",
+        "File:Partnership celebration 090827-N-TP834-006.jpg"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://doi.org/10.1038/s41586-019-1739-5",
+        "https://sro.sussex.ac.uk/id/eprint/86930/",
+        "https://aces-society.org/includes/downloadpaper.php?nf=5e1b5e2aba3cd7bcfa50c523ce935436&of=ACES_Journal_December_2010_Paper_07"
+      ]
+    },
+    {
+      "name": "Auguste Berthier",
+      "piece": "Parallax barrier",
+      "hall": 7,
+      "context": "Described the principle in 1896.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Commons has the 1896 stereoscopic diagrams, not a validated portrait of their author. Historical photographs credited to Auguste Berthier are not automatically photographs of him. Napoleonic military portraits were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"Auguste Berthier\"",
+          "total_hits": 4,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Louis-Alexandre Berthier.png",
+        "File:1896-05 a. berthier - Fabrication d'une photographie composite à partir d'une vue stéréoscopique (cosmos p. 231).jpg",
+        "File:1896 a. berthier - cosmos illustration - img-2.jpg",
+        "File:1896-05 A. Berthier - (le cosmos p. 229).jpg"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Parallax_barrier",
+        "https://zenodo.org/record/2075045"
+      ]
+    },
+    {
+      "name": "Stephen Benton",
+      "piece": "Holography",
+      "hall": 7,
+      "context": "The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "Bentonheadshot.jpg claims own work with a date after Benton died, without a photographer or release. Its RGB derivative explicitly reports retouching and replacement of missing areas. Neither was treated as a newly cleared source. The MIT Arts photo used in round 3 clips the crown and has no verified open grant.",
+      "commons_queries": [
+        {
+          "query": "\"Stephen Benton\"",
+          "total_hits": 2222,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Bentonheadshot.jpg",
+        "File:Bentonheadshot (RGB).jpg",
+        "File:Stephen Benton “Smooth Steve” Elkins.jpg",
+        "File:S.B. Elkins, portrait bust.jpg",
+        "File:ELKINS, S.B. SENATOR LCCN2016856185 (resized).jpg",
+        "File:Stephen Benton Elkins Crop.jpg",
+        "File:Stephen Benton Elkins Restore.jpg",
+        "File:Stephen Benton Elkins, Brady-Handy bw photo portrait, ca1865-1880.jpg",
+        "File:Stephen Benton Elkins, 38th United States Secretary of War.jpg",
+        "File:A herculean task - J.S. Pughe. LCCN2011645689.jpg",
+        "File:Stephen Benton Elkins Restore (3x4 cropped).jpg",
+        "File:Mr. and Mrs. S.B. Elkins.jpg",
+        "File:PuckMagazine5Apr1905.jpg",
+        "File:Stephen B. Elkins (10507053623) (1).jpg",
+        "File:S.B. Elkins & wife LCCN2014682730.jpg",
+        "File:Stephen Benton Elkins Original.jpg",
+        "File:ELKINS, S.B. SENATOR LCCN2016856185.jpg",
+        "File:The Royal Feast of Belshazzar Blaine and the Money Kings (1884).jpg",
+        "File:The Royal Feast of Belshazzar Blaine and the Money Kings (1884) 2.jpg",
+        "File:Elkins, Hon. S.B. of New Mexico.jpg",
+        "File:Stephen Benton Elkins, Library of Congress.jpg",
+        "File:\"The Mulligan guard lies, but - surrenders\" LCCN2011661847.jpg",
+        "File:Senator Stephen Benton Elkins as a Member of the 55th US Congress.jpeg",
+        "File:Stephen B. Elkins (10507053623).jpg",
+        "File:Signature of Stephen Benton Elkins (1841–1911).png"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "http://hdl.handle.net/1721.1/14173",
+        "https://www.media.mit.edu/spi/HVmark1.htm",
+        "https://holocenter.org/margaret-benyon",
+        "https://en.wikipedia.org/wiki/Margaret_Benyon",
+        "https://doi.org/10.1038/161777a0",
+        "https://arts.mit.edu/camit/awards/kepes/"
+      ]
+    },
+    {
+      "name": "Kazuo Yoshinaka",
+      "piece": "Virtual retinal display",
+      "hall": 7,
+      "context": "Proposed the display at Nippon Electric in Japan in 1986.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "No named portrait tied to the NEC virtual-retinal-display proposal was found. No identity was inferred from Japanese-name similarity.",
+      "commons_queries": [
+        {
+          "query": "\"Kazuo Yoshinaka\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        }
+      ],
+      "commons_candidate_titles": [],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Virtual_retinal_display",
+        "https://spectrum.ieee.org/in-the-eye-of-the-beholder"
+      ]
+    },
+    {
+      "name": "J. M. Naish",
+      "piece": "Head-up display",
+      "hall": 7,
+      "context": "Worked out the system first called a head-up display, at Farnborough from 1956.",
+      "priority_woman": false,
+      "v4_review_date": "2026-11-21",
+      "v4_decision": "No new publication clearance",
+      "v4_findings": "The Farnborough head-up-display technical work is documented. No portrait with a matching identity and open licence was accepted; physician and artist namesakes were excluded.",
+      "commons_queries": [
+        {
+          "query": "\"J. M. Naish\"",
+          "total_hits": 0,
+          "error": null,
+          "more_results_available": false
+        },
+        {
+          "query": "\"John Naish\"",
+          "total_hits": 35,
+          "error": null,
+          "more_results_available": true
+        }
+      ],
+      "commons_candidate_titles": [
+        "File:Main Building, Clongowes Wood College - Kildare, Ireland.JPG",
+        "File:John George Naish - Mooring up signed and dated 'J.jpg",
+        "File:ApXai (Archai) or, The evenings of Southill (IA apxaiarchaioreve00salmiala).pdf",
+        "File:The reminiscences of the Right Hon. Lord O'Brien (of Kilfenora) lord chief justice of Ireland (IA cu31924024626727).pdf",
+        "File:John George Naish - up4pv82cqa.jpg",
+        "File:John George Naish - Racing Down the Wind Oil on Canvas 39x49cm.jpg",
+        "File:Bryan's dictionary of painters and engravers (IA bryansdiction04brya).pdf",
+        "File:Outline of the plan of education to be pursued in the Bristol College (IA outlineofplanofe00bris).pdf",
+        "File:John George Naish - , PUCK - A SCENE FROM A MIDSUMMER NIGHT'S DREAM, ACT II, SCENE II Signed with initials l.jpg",
+        "File:John George Naish (1824-1905) - Boulders at Rest - WAG 2703 - Walker Art Gallery.jpg",
+        "File:Notes on St. Martin's church and parish (IA notesonstmartins00bake).pdf",
+        "File:Dublin castle and the Irish people (IA dublincastleiris00obriiala).pdf",
+        "File:Letter to) My dear Old friend (manuscript (IA lettertomydearol00nais).pdf",
+        "File:Hampshire parish registers. Marriages (IA hampshireparishr13phil).pdf",
+        "File:Post-medieval token, Newbury trade token (FindID 531227).jpg",
+        "File:Isaac Ingall, aged 118. Mezzotint by I. Yeatherd, 1797, afte Wellcome V0007135.jpg",
+        "File:The charters and letters patent granted by the kings and queens of England to the town and city of Bristol. Newly translated, and accompanied by the original Latin (IA cu31924028093304).pdf",
+        "File:Catalogue of books (IA catalogueofbooks06wigaiala).pdf",
+        "File:Post-medieval token, Newbury trade token (FindID 607065).jpg",
+        "File:Ackworth School catalogue - being a list of all the boys and girls educated at that institution, from its commencement in 1779, to the present period (IA ackworthschoolca00ackw).pdf",
+        "File:John George Naish - PUCK - FAST THROUGH THE FLOWER THERE.jpg",
+        "File:The reminiscences of the Right Hon. Lord O'Brien (of Kilfenora) lord chief justice of Ireland; (IA reminiscencesofr00obri).pdf",
+        "File:Bristol lists- municipal and miscellaneous (IA bristollistsmuni00inbeav).pdf",
+        "File:The reminiscences of the Right Hon. Lord O'Brien (of Kilfenora) - Lord chief justice of Ireland (IA reminiscencesofr01obri).pdf",
+        "File:Dublin castle and the Irish people (IA dublincastleandi00obriiala).pdf"
+      ],
+      "repository_snapshot_2026_11_22": null,
+      "source_pages": [
+        "https://en.wikipedia.org/wiki/Heads-up_display"
+      ]
+    }
+  ]
+}
