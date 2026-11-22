@@ -336,11 +336,11 @@ GitHub Actions.
 
 ## Licence
 
-The museum's own texts and models are under
+The museum's own texts and models are by Os Bartra, under
 [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/):
 the labels, hall texts and tour in `src/data` and `po`, and the models in `src/three/models`.
-Credit the Museum of Alternative Displays with a link, say what you changed, and share your
-version under the same licence.
+Credit Os Bartra and the Museum of Alternative Displays with a link, say what you changed, and
+share your version under the same licence.
 
 The licence does not cover the portraits in `public/people`, the recordings in `public/tour`,
 or the archive pictures and films in `public/media`, each of which keeps the licence named in

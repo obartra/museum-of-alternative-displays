@@ -250,9 +250,10 @@ export const en = {
   'visit.end.1': 'Every piece in the museum chooses where the light of its picture comes from, and gives something up for that choice. Each label says what its piece is good at and where it fails.',
   'visit.end.2': 'The other pieces stand in seven halls. Walk through them, or look one up in the index.',
   'about.licence': 'Licence',
-  'about.licence.1': "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence.",
+  'about.licence.1': "The museum's own texts and models are by {name}. They may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit {name} and the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence.",
   'about.licence.2': 'The licence does not cover the portraits, the recordings of the tour or the archive pictures and films. Each archive picture keeps the licence named in its credit.',
   'about.changed': 'Last changed on {date}.',
+  'about.author': 'Made by {name}.',
 } as const;
 
 export type UiKey = keyof typeof en;

@@ -348,6 +348,8 @@ function wordsView(id: string): void {
 }
 
 // ---------- piece ----------
+/** Who made the museum: named on the About page and in its licence. */
+const AUTHOR = 'Os Bartra';
 /** The day of the last change to the museum, put in by the build. Empty when the build could not tell. */
 declare const __CHANGED__: string;
 /** That day in the visitor's language, as a line for the About page. */
@@ -707,9 +709,10 @@ function about(): void {
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
       <h2 class="h-sec">${tx('about.licence')}</h2>
-      <p>${rich('about.licence.1', { a: 'https://creativecommons.org/licenses/by-sa/4.0/' })}</p>
+      <p>${rich('about.licence.1', { a: 'https://creativecommons.org/licenses/by-sa/4.0/' }, { name: AUTHOR })}</p>
       <p>${tx('about.licence.2')}</p>
       <p class="small muted">${rich('about.thanks', { a: 'https://blair-neal.gitbook.io/survey-of-alternative-displays' })}</p>
+      <p class="small muted">${tx('about.author', { name: AUTHOR })}</p>
       ${changedOn()}
     </section>
     <section class="stack prose" style="--gap: 12px">

@@ -1430,7 +1430,7 @@ msgstr ""
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.licence.1"
-msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgid "The museum's own texts and models are by {name}. They may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit {name} and the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
 msgstr ""
 
 #: interface
@@ -1443,6 +1443,12 @@ msgstr ""
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.changed"
 msgid "Last changed on {date}."
+msgstr ""
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.author"
+msgid "Made by {name}."
 msgstr ""
 
 #: interface

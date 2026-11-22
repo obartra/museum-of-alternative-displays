@@ -1435,8 +1435,8 @@ msgstr "Lizenz"
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.licence.1"
-msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
-msgstr "Die eigenen Texte und Modelle des Museums dürfen unter {a}Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0{/a} geteilt und bearbeitet werden. Nennen Sie das Museum of Alternative Displays mit einem Link, geben Sie an, was Sie geändert haben, und geben Sie Ihre Fassung unter derselben Lizenz weiter."
+msgid "The museum's own texts and models are by {name}. They may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit {name} and the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgstr "Die eigenen Texte und Modelle des Museums sind von {name}. Sie dürfen unter {a}Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0{/a} geteilt und bearbeitet werden. Nennen Sie {name} und das Museum of Alternative Displays mit einem Link, geben Sie an, was Sie geändert haben, und geben Sie Ihre Fassung unter derselben Lizenz weiter."
 
 #: interface
 #. About page.
@@ -1449,6 +1449,12 @@ msgstr "Die Lizenz gilt nicht für die Porträts, die Aufnahmen der Führung und
 msgctxt "ui.about.changed"
 msgid "Last changed on {date}."
 msgstr "Zuletzt geändert am {date}."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.author"
+msgid "Made by {name}."
+msgstr "Gemacht von {name}."
 
 #: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.

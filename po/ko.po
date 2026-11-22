@@ -1436,8 +1436,8 @@ msgstr "라이선스"
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.licence.1"
-msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
-msgstr "이 박물관이 직접 만든 글과 모형은 {a}크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0{/a}에 따라 공유하고 고쳐 쓸 수 있습니다. Museum of Alternative Displays의 이름과 링크를 밝히고, 무엇을 바꾸었는지 알리고, 새 판도 같은 라이선스로 공유해 주세요."
+msgid "The museum's own texts and models are by {name}. They may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit {name} and the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgstr "이 박물관이 직접 만든 글과 모형은 {name}이(가) 만들었습니다. {a}크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0{/a}에 따라 공유하고 고쳐 쓸 수 있습니다. {name} 및 Museum of Alternative Displays의 이름과 링크를 밝히고, 무엇을 바꾸었는지 알리고, 새 판도 같은 라이선스로 공유해 주세요."
 
 #: interface
 #. About page.
@@ -1450,6 +1450,12 @@ msgstr "초상화, 가이드 투어 녹음, 자료 사진과 영상에는 이 �
 msgctxt "ui.about.changed"
 msgid "Last changed on {date}."
 msgstr "{date}에 마지막으로 고쳤습니다."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.author"
+msgid "Made by {name}."
+msgstr "만든 사람은 {name}입니다."
 
 #: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.

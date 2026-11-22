@@ -2,7 +2,7 @@
 
 ## Texts and models
 
-The museum's own texts and models are licensed under
+The museum's own texts and models are by Os Bartra, copyright 2026, and are licensed under
 [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 (CC BY-SA 4.0). The full terms are at https://creativecommons.org/licenses/by-sa/4.0/legalcode.
 
@@ -11,7 +11,7 @@ This covers:
 - the labels, hall texts and guided tour in `src/data`, and their translations in `po`
 - the models in `src/three/models`
 
-To reuse them, credit the Museum of Alternative Displays with a link to
+To reuse them, credit Os Bartra and the Museum of Alternative Displays with a link to
 https://obartra.github.io/museum-of-alternative-displays/, say what you changed, and share
 your version under the same licence.
 

@@ -1436,8 +1436,8 @@ msgstr "ライセンス"
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.licence.1"
-msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
-msgstr "この博物館が独自に作った文章と模型は、{a}クリエイティブ・コモンズ 表示 - 継承 4.0{/a} のもとで共有し、改変することができます。Museum of Alternative Displays の名前とリンクを示し、変更した点を明らかにし、新しい版も同じライセンスで公開してください。"
+msgid "The museum's own texts and models are by {name}. They may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit {name} and the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgstr "この博物館が独自に作った文章と模型の作者は {name} です。{a}クリエイティブ・コモンズ 表示 - 継承 4.0{/a} のもとで共有し、改変することができます。{name} と Museum of Alternative Displays の名前とリンクを示し、変更した点を明らかにし、新しい版も同じライセンスで公開してください。"
 
 #: interface
 #. About page.
@@ -1450,6 +1450,12 @@ msgstr "肖像画、ガイドツアーの録音、資料の写真と映像には
 msgctxt "ui.about.changed"
 msgid "Last changed on {date}."
 msgstr "{date}に最後の変更を行いました。"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.author"
+msgid "Made by {name}."
+msgstr "制作は {name} です。"
 
 #: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
