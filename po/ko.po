@@ -242,14 +242,14 @@ msgstr "건물"
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.alt"
-msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show the ridge of Montserrat above a town."
-msgstr "박물관 전시실의 받침대 위에 놓인 전시품 하나. 빛나는 숫자 표시관이 한 줄로 늘어서 있습니다. 높은 창 너머로 마을 위에 솟은 몬세라트 산등성이가 보입니다."
+msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show a mountain ridge above a town."
+msgstr "박물관 전시실의 받침대 위에 놓인 전시품 하나. 빛나는 숫자 표시관이 한 줄로 늘어서 있습니다. 높은 창 너머로 마을 위에 솟은 산등성이가 보입니다."
 
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "박물관은 일곱 개의 전시실이 차례로 이어지는 한 채의 건물입니다. 벽은 희고 바닥은 광을 낸 콘크리트이며, 높은 창으로는 카탈루냐의 마을과 그 너머 몬세라트산이 보입니다. 전시품은 저마다 콘크리트를 부어 만든 받침대 위에 놓여 있고, 받침대에는 전시실 번호가 새겨져 있습니다."
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "박물관은 일곱 개의 전시실이 차례로 이어지는 한 채의 건물입니다. 벽은 희고 바닥은 광을 낸 콘크리트이며, 높은 창으로는 마을과 그 너머의 산이 보입니다. 전시품은 저마다 콘크리트를 부어 만든 받침대 위에 놓여 있고, 받침대에는 전시실 번호가 새겨져 있습니다."
 
 #: interface
 #. Entrance page.
@@ -956,8 +956,8 @@ msgstr "건물"
 #: interface
 #. About page.
 msgctxt "ui.about.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "박물관은 일곱 개의 전시실이 차례로 이어지는 한 채의 건물입니다. 벽은 희고, 광을 낸 콘크리트 바닥은 그 위에 선 것을 비추며, 높은 창으로는 카탈루냐의 마을과 그 너머 몬세라트산이 보입니다. 전시품은 저마다 콘크리트를 부어 만든 받침대 위에 놓여 있고, 받침대에는 전시실 번호가 새겨져 있습니다."
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "박물관은 일곱 개의 전시실이 차례로 이어지는 한 채의 건물입니다. 벽은 희고, 광을 낸 콘크리트 바닥은 그 위에 선 것을 비추며, 높은 창으로는 마을과 그 너머의 산이 보입니다. 전시품은 저마다 콘크리트를 부어 만든 받침대 위에 놓여 있고, 받침대에는 전시실 번호가 새겨져 있습니다."
 
 #: interface
 #. About page.

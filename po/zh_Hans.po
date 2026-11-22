@@ -237,14 +237,14 @@ msgstr "这座建筑"
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.alt"
-msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show the ridge of Montserrat above a town."
-msgstr "博物馆的一个展厅里，一件展品立在台座上：一排发光的数码管。高窗外，蒙特塞拉特山的山脊耸立在小镇上方。"
+msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show a mountain ridge above a town."
+msgstr "博物馆的一个展厅里，一件展品立在台座上：一排发光的数码管。高窗外，一道山脊耸立在小镇上方。"
 
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "博物馆是一座建筑，里面有七个展厅，一个连着一个。建筑有白色的墙、抛光的混凝土地面和高高的窗户，窗外隔着一座加泰罗尼亚小镇，可以望见蒙特塞拉特山。每件展品立在一块浇筑的混凝土台座上，台座上铸着所属展厅的编号。"
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "博物馆是一座建筑，里面有七个展厅，一个连着一个。建筑有白色的墙、抛光的混凝土地面和高高的窗户，窗外隔着一座小镇，可以望见一座山。每件展品立在一块浇筑的混凝土台座上，台座上铸着所属展厅的编号。"
 
 #: interface
 #. Entrance page.
@@ -951,8 +951,8 @@ msgstr "这座建筑"
 #: interface
 #. About page.
 msgctxt "ui.about.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "博物馆是一座建筑，里面有七个展厅，一个连着一个。建筑有白色的墙和高高的窗户，抛光的混凝土地面映出立在上面的东西。窗外隔着一座加泰罗尼亚小镇，可以望见蒙特塞拉特山。每件展品立在一块浇筑的混凝土台座上，台座上铸着所属展厅的编号。"
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "博物馆是一座建筑，里面有七个展厅，一个连着一个。建筑有白色的墙和高高的窗户，抛光的混凝土地面映出立在上面的东西。窗外隔着一座小镇，可以望见一座山。每件展品立在一块浇筑的混凝土台座上，台座上铸着所属展厅的编号。"
 
 #: interface
 #. About page.

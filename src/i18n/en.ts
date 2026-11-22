@@ -43,8 +43,8 @@ export const en = {
   'board.clock': 'Time now',
   'board.row': 'Hall {n}, {name}, {count}',
   'entrance.room': 'The building',
-  'entrance.room.alt': 'One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show the ridge of Montserrat above a town.',
-  'entrance.room.1': 'The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block.',
+  'entrance.room.alt': 'One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show a mountain ridge above a town.',
+  'entrance.room.1': 'The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block.',
   'entrance.room.2': 'Nothing lights the halls but the windows. Switch the daylight off and it is night. Only the moon and the lights of the town are left, and you can see which pieces still show a picture.',
 
   'hall.title': 'Hall {n}, {name}',
@@ -167,7 +167,7 @@ export const en = {
   'about.corrections.1': 'If something on a label is wrong, or you hold a better source, {a}report it{/a}.',
   'about.thanks': "The idea of surveying alternative displays is Blair Neal's, whose {a}guide of that name{/a} has run since 2015. Typefaces: Sofia Sans and Sofia Sans Extra Condensed by Lettersoup, PT Mono by ParaType.",
   'about.room': 'The building',
-  'about.room.1': 'The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block.',
+  'about.room.1': 'The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block.',
   'about.room.2': 'Nothing lights the halls but the windows: the sun by day, and the moon and the town by night. One switch, marked Daylight, turns day into night.',
   'about.room.3': 'The building is imagined and the view from its windows is painted, not photographed. The mountain is real.',
 

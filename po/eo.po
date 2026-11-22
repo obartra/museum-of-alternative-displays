@@ -244,14 +244,14 @@ msgstr "La konstruaĵo"
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.alt"
-msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show the ridge of Montserrat above a town."
-msgstr "Unu eksponaĵo sur sia bloko en halo de la muzeo: vico da lumantaj cifertuboj. Altaj fenestroj montras la kreston de Montserrat super urbeto."
+msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show a mountain ridge above a town."
+msgstr "Unu eksponaĵo sur sia bloko en halo de la muzeo: vico da lumantaj cifertuboj. Altaj fenestroj montras montokreston super urbeto."
 
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "La muzeo estas unu konstruaĵo kun sep haloj, el kiuj ĉiu malfermiĝas al la sekva. Ĝi havas blankajn murojn, poluritan betonan plankon kaj altajn fenestrojn, kiuj rigardas trans katalunan urbeton al la monto Montserrat. Ĉiu eksponaĵo staras sur bloko el muldita betono, kun la numero de sia halo muldita en la blokon."
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "La muzeo estas unu konstruaĵo kun sep haloj, el kiuj ĉiu malfermiĝas al la sekva. Ĝi havas blankajn murojn, poluritan betonan plankon kaj altajn fenestrojn, kiuj rigardas trans urbeton al monto. Ĉiu eksponaĵo staras sur bloko el muldita betono, kun la numero de sia halo muldita en la blokon."
 
 #: interface
 #. Entrance page.
@@ -958,8 +958,8 @@ msgstr "La konstruaĵo"
 #: interface
 #. About page.
 msgctxt "ui.about.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "La muzeo estas unu konstruaĵo kun sep haloj, el kiuj ĉiu malfermiĝas al la sekva. Ĝi havas blankajn murojn, poluritan betonan plankon, kiu spegulas tion, kio staras sur ĝi, kaj altajn fenestrojn, kiuj rigardas trans katalunan urbeton al la monto Montserrat. Ĉiu eksponaĵo staras sur bloko el muldita betono, kun la numero de sia halo muldita en la blokon."
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "La muzeo estas unu konstruaĵo kun sep haloj, el kiuj ĉiu malfermiĝas al la sekva. Ĝi havas blankajn murojn, poluritan betonan plankon, kiu spegulas tion, kio staras sur ĝi, kaj altajn fenestrojn, kiuj rigardas trans urbeton al monto. Ĉiu eksponaĵo staras sur bloko el muldita betono, kun la numero de sia halo muldita en la blokon."
 
 #: interface
 #. About page.

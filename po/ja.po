@@ -242,14 +242,14 @@ msgstr "建物"
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.alt"
-msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show the ridge of Montserrat above a town."
-msgstr "博物館の展示室で、台座に載った展示品。光る数字表示管が一列に並んでいます。高い窓の向こうには、町の上にモンセラートの稜線が見えます。"
+msgid "One piece on its block in a hall of the museum: a row of glowing number tubes. Tall windows show a mountain ridge above a town."
+msgstr "博物館の展示室で、台座に載った展示品。光る数字表示管が一列に並んでいます。高い窓の向こうには、町の上に山の稜線が見えます。"
 
 #: interface
 #. Entrance page.
 msgctxt "ui.entrance.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "博物館は、七つの展示室が順につながる一棟の建物です。壁は白く、床は磨いたコンクリートで、高い窓からはカタルーニャの町とその向こうのモンセラートの山が見えます。展示品はどれも打ち放しコンクリートの台座に載っていて、台座には展示室の番号が型で刻まれています。"
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "博物館は、七つの展示室が順につながる一棟の建物です。壁は白く、床は磨いたコンクリートで、高い窓からは町とその向こうの山が見えます。展示品はどれも打ち放しコンクリートの台座に載っていて、台座には展示室の番号が型で刻まれています。"
 
 #: interface
 #. Entrance page.
@@ -956,8 +956,8 @@ msgstr "建物"
 #: interface
 #. About page.
 msgctxt "ui.about.room.1"
-msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a Catalan town to the mountain of Montserrat. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
-msgstr "博物館は、七つの展示室が順につながる一棟の建物です。壁は白く、磨いたコンクリートの床はその上に立つものを映し、高い窓からはカタルーニャの町とその向こうのモンセラートの山が見えます。展示品はどれも打ち放しコンクリートの台座に載っていて、台座には展示室の番号が型で刻まれています。"
+msgid "The museum is one building of seven halls, each opening into the next. It has white walls, a polished concrete floor that mirrors what stands on it, and tall windows that look across a town to a mountain. Each piece stands on a block of cast concrete, with the number of its hall cast into the block."
+msgstr "博物館は、七つの展示室が順につながる一棟の建物です。壁は白く、磨いたコンクリートの床はその上に立つものを映し、高い窓からは町とその向こうの山が見えます。展示品はどれも打ち放しコンクリートの台座に載っていて、台座には展示室の番号が型で刻まれています。"
 
 #: interface
 #. About page.

@@ -9,7 +9,7 @@ Live at https://obartra.github.io/museum-of-alternative-displays/
 
 Every piece is shown in the same room. It has a polished concrete floor that mirrors what
 stands on it, white walls, a cast concrete block for a stand, and tall windows that look
-across a Catalan town to Montserrat. Nothing lights it but those windows. One switch turns
+across a town to a mountain. Nothing lights it but those windows. One switch turns
 day into night. A hall is not a room: it is a group of pieces that make a picture in the
 same way.
 
@@ -75,7 +75,7 @@ latest missing-portrait list. The repository now connects 128 of 143 people, inc
 | `src/three/walk/` | The long hall and the visitor in it. `plan.ts` is the floor plan and the way round the blocks, `hall.ts` the building, `stands.ts` the blocks and what stands on them, `gallery.ts` the renderer and the walking, `vr.ts` the headset. |
 | `public/cutouts/` | Each piece photographed alone on its block from three sides, by day and by night, and a sheet of the same pictures small. In the walk only the few pieces nearest the visitor are models. The rest are these pictures, stood upright and turned to the visitor. Made by `scripts/cutouts.mjs`, with `public/walk-*.webp`, the hall from its door. |
 | `src/three/ar.ts` | A piece in the visitor's own room: built again at table size and shown through the browser's own room view (WebXR), where there is one. |
-| `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
+| `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of a mountain ridge over a town, by day and by night. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
 | `src/place.ts` | The addresses of the museum: which place an address stands for, the address of each place, and following a link without loading a page. |
