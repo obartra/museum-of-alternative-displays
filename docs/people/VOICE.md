@@ -72,8 +72,8 @@ as much as for an account.
   out for everyone, by the same rule.
 - **No identity without a source.** The museum states nobody's race, ethnicity, religion, nationality, disability,
   sexuality or gender identity unless a cited source states it, and never infers one from a name, a face or a
-  place. A birthplace is given where a source gives it and it bears on the story. A "first" of identity needs its
-  witness like any other first.
+  place. A birthplace is given where a reliable source gives it, and left out where none does. A "first" of
+  identity needs its witness like any other first.
 - **Nothing private about the living.** Health, family and belief stay out unless they bear on the work and the
   person has made them public.
 - **Names as their bearers write them.** Marks and hyphens are kept for every language alike. A name from outside

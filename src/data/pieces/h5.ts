@@ -64,7 +64,7 @@ export const h5: Piece[] = [
   },
   {
     id: 'interferometric-modulator', hall: 5, name: 'Interferometric modulator', aka: 'IMOD, Mirasol',
-    year: 1998, origin: 'Mark Miles, Etalon and later Iridigm, USA. First patent granted in 1998',
+    year: 1998, origin: 'Mark Miles, Etalon and later Iridigm, USA. Patent US 5,835,255, assigned to Etalon, granted in 1998',
     status: 'extinct', statusNote: 'Sold in a few e-readers from 2011 and in a smartwatch, then discontinued.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'Colour without pigment: a tiny mirror on springs sits a precise distance behind glass, and that distance sets the colour.',
@@ -79,7 +79,7 @@ export const h5: Piece[] = [
   },
   {
     id: 'electrochromic', hall: 5, name: 'Electrochromic display', aka: 'Printed indicator, smart glass',
-    year: 1969, origin: 'S. K. Deb, work on tungsten oxide films',
+    year: 1969, yearText: '1969 to 1974', origin: 'S. K. Deb, work on tungsten oxide films. Sources date it 1969, 1973 and 1974',
     status: 'niche', statusNote: 'Common as dimming mirrors and windows. As a display it is a printed label, not a screen.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'This film changes colour when a small voltage pushes charged atoms into it, and it keeps the new colour with the power off.',

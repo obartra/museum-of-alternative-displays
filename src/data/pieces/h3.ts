@@ -4,7 +4,7 @@ import { src, wiki } from './src';
 export const h3: Piece[] = [
   {
     id: 'led-display', hall: 3, name: 'LED display',
-    year: 1968, origin: 'Hewlett-Packard, USA. The 5082-7000 numeric indicator of 1969 was designed by Howard Borden and Gerald Pighini',
+    year: 1968, yearText: 'about 1968', origin: 'Hewlett-Packard, USA. The 5082-7000 numeric indicator, described in the Hewlett-Packard Journal of February 1969 by Howard Borden and Gerald Pighini',
     status: 'production', statusNote: 'The standard for outdoor signs, stadium screens and video walls.',
     principle: 'emits', needs: ['daylight'],
     lead: 'Each pixel is one light-emitting diode, or three for colour, and the picture is bright enough to read in direct sunlight.',
@@ -34,7 +34,7 @@ export const h3: Piece[] = [
   },
   {
     id: 'microled', hall: 3, name: 'MicroLED',
-    year: 2000, origin: 'Hongxing Jiang and Jingyu Lin, Kansas State University, USA',
+    year: 1999, yearText: 'first light 1999, published 2000', origin: 'Hongxing Jiang and Jingyu Lin, Kansas State University, USA',
     status: 'niche', statusNote: 'Sold as large tiled video walls. Small consumer screens remain out of reach: Apple reportedly cancelled a microLED watch in 2024.',
     principle: 'emits', needs: ['daylight'],
     lead: 'An LED wall is shrunk until each lamp is too small to see, which keeps the brightness and avoids the ghost pictures called burn-in.',
@@ -94,13 +94,13 @@ export const h3: Piece[] = [
   },
   {
     id: 'flexible-display', hall: 3, name: 'Flexible display', aka: 'Rollable, foldable',
-    year: 1974, yearText: 'the 1970s', origin: 'Flexible electronic paper at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019',
+    year: 1974, yearText: 'the 1970s', origin: 'Electronic paper on a sheet of silicone rubber at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019',
     status: 'production', statusNote: 'Curved and folding phones are on sale. Screens that roll up completely are much rarer.',
     principle: 'emits', needs: [],
     lead: 'The thin films of a flat panel sit on plastic instead of glass, so that the sheet can bend.',
     how: [
       'A display is a stack of layers a few thousandths of a millimetre thick. On glass, the stack is rigid. On a plastic film, the same stack can curve, fold or roll, as long as nothing in it cracks and nothing lets air in.',
-      'Electronic paper was the first display to bend, in the laboratory in the 1970s and in products in the 2000s. OLED followed, with curved phone screens in 2013 and folding screens in 2019.',
+      'Gyricon, an electronic paper on a rubbery sheet, was made in the laboratory in the 1970s, though the board that drove it was rigid. Electronic paper that bends reached products in the 2000s. OLED followed, with curved phone screens in 2013 and folding screens in 2019.',
     ],
     good: ['Packs a large screen into a small space', 'Is light and hard to shatter', 'Can follow a curved surface'],
     bad: ['Wears with every fold, so makers specify how tightly and how many times it may bend', 'Scratches where glass would not, because the surface is plastic', 'Is hard to seal, because the sheet moves'],

@@ -871,7 +871,7 @@ export const bios: Record<string, Bio> = {
     born: 1969, about: [
       "From Stockton, California, she took a bachelor's degree at the Atlanta College of Art and a master's degree at the Rhode Island School of Design. In 1994 the Drawing Center in New York showed Gone, her wall installation of black paper silhouettes.",
       "The Walker Art Center says her work exposes the ongoing psychological injury caused by the legacy of slavery and examines racial and gender stereotypes. She received a MacArthur Fellowship in 1997 and represented the United States at the Bienal de São Paulo in 2002.",
-      "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners.",
+      "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners.",
       "In 2014 she showed A Subtlety, a sphinx-like woman of polystyrene coated with white sugar, in a warehouse on the former Domino Sugar site in Brooklyn. The Walker Art Center ties it to sugar harvested by enslaved people on Caribbean plantations.",
     ],
     sources: [
@@ -1269,7 +1269,7 @@ export const bios: Record<string, Bio> = {
   "John Henry Pepper": {
     born: 1821, died: 1900, about: [
       "A chemist and lecturer on popular science, he joined the staff of the Royal Polytechnic Institution in 1848 and was its director within ten years. He also wrote books, among them The Playbook of Metals.",
-      "Around 1862 he acquired one of Henry Dircks's models and adapted it, hiding the second actor in the orchestra pit. By his own account he took out a provisional patent the day after his first showing, naming them both at his request.",
+      "Around 1862 he acquired one of Henry Dircks's models and adapted it, hiding the second actor in the orchestra pit. By his own account he took out a provisional patent the day after his first showing, and at his own request it named them both.",
       "The letters patent were dated 5 February 1863. The Linda Hall Library dates the first showing to late 1862 or early 1863. It says the two agreed that Pepper would take the profits and Dircks the credit.",
       "The library says Pepper used only his own name in public. Pepper wrote that he named Dircks as co-inventor every morning and evening. Dircks protested, the library says, and in 1863 published a book in his own defence.",
     ],

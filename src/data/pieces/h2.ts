@@ -4,7 +4,7 @@ import { src, wiki } from './src';
 export const h2: Piece[] = [
   {
     id: 'cathode-ray-tube', hall: 2, name: 'Cathode ray tube', aka: 'CRT, picture tube',
-    year: 1897, origin: 'Ferdinand Braun, Germany. Electronic television demonstrated by Takayanagi (1926) and Farnsworth (1927)',
+    year: 1897, origin: 'Cathode ray oscillograph by Ferdinand Braun, Strasbourg, 1897. Television received on a cathode ray tube by Kenjiro Takayanagi (1926) and sent by the all-electronic system of Philo Farnsworth (1927)',
     status: 'extinct', statusNote: 'Sales of cathode ray tube televisions peaked in 2005 at about 130 million sets. The last large maker stopped production in 2015.',
     principle: 'emits', needs: [],
     lead: 'One beam of electrons, steered by magnets, paints the whole picture on a glowing screen many times a second.',
@@ -25,7 +25,7 @@ export const h2: Piece[] = [
     lead: 'A black-and-white picture tube shows the red, green and blue parts of a picture one after another, and a spinning wheel of filters gives each part its colour.',
     how: [
       'The tube itself makes only white light. In front of it turns a disc of red, green and blue filters. While the red filter passes, the tube shows the red part of the picture. The green part follows behind the green filter, and then the blue. A second wheel turns in step in front of the camera. The eye cannot follow the changes and sees one picture in full colour.',
-      'González Camarena patented his adapter in Mexico in 1940, at the age of 23. He designed it to be fitted to the black-and-white cameras and receivers already in use. The idea of a colour wheel was older: a German patent application of 1904 already described one. Television later settled on tubes that show the three colours at the same time.',
+      'González Camarena patented his adapter in Mexico in 1940, at the age of 23. He designed it to be fitted to the black-and-white cameras and receivers already in use. Colour television had been proposed long before. A German patent of 1904 already named three colour filters, with selenium cells and mirrors. Television later settled on tubes that show the three colours at the same time.',
     ],
     good: ['Adds colour to a black-and-white system with one moving part', 'Needs no pattern of coloured dots, so the picture is as sharp as the tube', 'Puts all three colours in exactly the same place'],
     bad: ['The wheel has to be much larger than the picture', 'A fast-moving object breaks up into flashes of red, green and blue', 'The tube must show three pictures in the time of one, or the picture flickers'],
@@ -80,7 +80,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'vacuum-fluorescent', hall: 2, name: 'Vacuum fluorescent display', aka: 'VFD',
-    year: 1959, yearText: '1957 to 1959', origin: 'Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967',
+    year: 1959, yearText: '1957 to 1959', origin: 'Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First single digit tube by Ise Electronics, Japan, 1967, which the IEEE counts as the invention of the display',
     status: 'niche', statusNote: 'Lost most of its markets to liquid crystal and OLED displays, but is still in production.',
     principle: 'emits', needs: [],
     lead: 'A flat glass box holds bars and symbols that glow blue-green, as on the video recorders and microwave ovens of its time.',

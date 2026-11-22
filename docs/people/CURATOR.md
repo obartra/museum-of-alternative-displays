@@ -150,7 +150,72 @@ Ibn al-Haytham's plate, emptied because both his years are "about" and the plate
 The reviewers' findings, the verdict on every paragraph and each editor's decisions are kept outside the
 repository with the research notes.
 
-### Ideas kept for later
+## 22 November 2026, night: the labels audited
+
+The review of the accounts showed that many label lines said more than any cited page carries. Three auditors then
+took 61 lines, the ones the reviewers and editors had marked, and tested each against the sources on the piece and
+any they could find. Their verdicts: 10 stand, 40 are true and needed rewording, 8 differ from their source, and 3
+had no source at all. The curator decided each line. 51 lines changed, with 26 sentences in the piece texts that
+said the same things, and about 80 sources were added to 31 pieces.
+
+**What the labels no longer say on their own authority**
+
+- **Firsts.** A first now stands only with its witness. Britannica calls Braun's tube the first oscilloscope.
+  California Historical Landmark 941 calls Farnsworth's picture the first all-electronic television image. The ACM
+  calls Sutherland's headset the first of its kind and the Computer History Museum calls it an early one, and the
+  label gives both. MIT News calls Javan's laser the first gas laser. Gyricon, the Eidophor, Tang and Van Slyke's
+  diode, the microLED of Kansas State and the holographic video display of 1989 are told by what was made and when.
+- **Dates that were one source's, or nobody's.** The flip-disc is dated by its patent application of 1960. The
+  Trans-Canada Air Lines story is gone, because only a Wikipedia article and a collector's site carry it, and they
+  disagree. The Eidophor prototype ran in 1944 by an account of 1953, not in 1943. Kepler's 1604 is gone, and the
+  1911 Britannica is named for his use of the words camera obscura. Séraphin's 1771 is gone, and Britannica's 1776
+  for Paris is set beside the move of 1784. Gabor conceived holography in 1947 by his Nobel lecture and published
+  it in 1948. The microLED gave light in August 1999 by its makers' account and was published in 2000. Nine pieces
+  carry a line under the year that says which kind of date it is.
+- **Deeds that were someone else's.** Elma Farnsworth's line now says what she did in the laboratory. Jepsen's
+  thesis and Benton's supervision of it are one sentence. Hammond supervised and DeLongchamp built. Jiang and Lin
+  are two physicists, not a married couple. Sheridon's line on the flexible display piece is now an aside, because
+  the board that drove Gyricon was rigid.
+- **Birthplaces.** A birthplace stays where a reliable source gives it: Hong Kong, Seoul, Port Said, Tehran,
+  Nigeria, Paris. Three that no source read carries are gone: Florence, England and Jerusalem. `VOICE.md` now
+  says so.
+
+**Still open on the labels**
+
+- The Trans-Canada Air Lines commission for the flip-disc, and whether the airline was by then Air Canada.
+- Schönherr's braille element of 1975: whether it was piezoelectric, and the later history of his firm.
+- The text of German patent 172 376, which the museum cites from two histories and has not read.
+- The witness for Fergason's settlement with Kent State, which is so far a preprint.
+- A source for the name Mohamed Atalla. The Hewlett-Packard Journal calls him John.
+- Whether the split-flap board at Liège in 1956 is the earliest on record, given a mention of Solari numerals at
+  Florence in the 1930s.
+- Whether Naish belongs on the head-up display piece as an aside.
+- One source on the Pepper's ghost piece, a Westminster archive page, does not mention the ghost.
+
+## 22 November 2026, night: nine translations of the reviewed text
+
+The 472 paragraphs of the accounts and 91 label strings went to nine translators after the review, not before. The
+brief told each to keep every named witness, to keep each person as the subject of their own deed, and to carry
+over no claim the English had dropped. The curator read their reports and ruled on what they raised.
+
+- **Words for people.** Each language uses its current respectful terms: persones esclavitzades, personas
+  esclavizadas, pessoas escravizadas, versklavte Menschen, 被奴役的人. Where the English had "masters and slaves"
+  for the story of Kara Walker's film Testimony, in the Walker Art Center's words, five translators wrote enslaved
+  people. The English now says "masters and enslaved people" as well.
+- **"Person of colour"**, the Science History Institute's words about Paula Hammond, is persona racialitzada in
+  Catalan, persona racializada in Spanish, pessoa não branca in Portuguese, Person of Color in German and
+  有色人种 in Chinese. These are the translators' choices of the term in use in each language. Readers who know
+  better are asked to say so.
+- **No sex is stated** for A. Frankenstein, M. C. Schlamp, Kazuo Yoshinaka or Berthier in any language. The name,
+  the patent or the listing carries the sentence.
+- **Cities take the name the language uses** (Lovaina, Löwen, Louvain, Estrasburgo, Straßburg). Institutions keep
+  their own names.
+- **Names in other scripts.** Chinese gives the established Chinese names of people who have one (邓青云, 彭笑刚,
+  中村修二). Japanese keeps the kanji the earlier pages used and writes no given name in kanji that a source has
+  not shown: a translator's reading of Tadashi Nakamura's given name was taken out. Korean writes Japanese names
+  in Hangul by sound. Everyone else stays in Latin script.
+
+## Ideas kept for later
 
 Two guided lines were proposed and set aside for now: **The move east**, on how the making of screens moved from
 American and European laboratories to Japan, then Korea, Taiwan and China, and **Before electricity**, from the

@@ -4,7 +4,7 @@ import { src, wiki } from './src';
 export const h4: Piece[] = [
   {
     id: 'camera-obscura', hall: 4, name: 'Camera obscura', aka: 'Dark chamber, pinhole image',
-    year: -300, yearText: 'about 300 BCE', origin: 'One of the earliest known accounts is in the Mohist Canons, compiled in China between the late fourth and the middle of the third century BCE. No inventor is known',
+    year: -300, yearText: 'about 300 BCE', origin: 'One of the earliest known accounts is in the Mohist Canons, compiled in China, by one dating between the late fourth and the middle of the third century BCE. No inventor is known',
     status: 'niche', statusNote: 'Built today as a school science project and used by artists. The photographic camera descends from it.',
     principle: 'gates', needs: ['dark'],
     lead: 'A small hole in the wall of a dark room lets in light from outside, and the view appears on the opposite wall, upside down.',
@@ -12,7 +12,7 @@ export const h4: Piece[] = [
       'Light travels in straight lines. Every point of the scene outside sends light in all directions, but only a narrow bundle from each point passes the hole, and it lands on its own spot on the far wall. The spots together are the picture. All the lines cross in the hole. So what is high outside lands low, and what lies to one side of the hole lands on the other.',
       'The size of the hole is a compromise. A small hole gives a sharp picture, because each point outside lights only a small spot, but it lets in little light. A larger hole gives a brighter picture and a more blurred one. A hole that is too small blurs the picture again, because light spreads when it passes a very narrow opening.',
       'A lens in the opening changes the terms. The opening can be wide, and the lens gathers the light from each point into one spot again. In a book dated 1568 or 1569, the Venetian Daniele Barbaro described the convex glass of an old man\'s spectacles set in the hole, and a cover over part of the lens to make the picture clearer.',
-      'The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. Johannes Kepler used it first, in 1604.',
+      'The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. The 1911 Encyclopaedia Britannica says Johannes Kepler was the first to use it.',
     ],
     good: ['Needs no power and has no part that moves or wears out', 'Shows the scene in its own colours and with all its movement', 'Shows near and far things equally sharp when the opening is a bare hole'],
     bad: ['Gives a dim picture, because a hole small enough for a sharp picture lets in very little light', 'Works only in a darkened room and only while there is light outside', 'Turns the picture upside down', 'Keeps nothing: the picture is there only while the light is'],
@@ -96,10 +96,10 @@ export const h4: Piece[] = [
   },
   {
     id: 'eidophor', hall: 4, name: 'Eidophor', aka: 'Oil film projector',
-    year: 1939, origin: 'Fritz Fischer, ETH Zurich, Switzerland. Prototype shown in 1943',
+    year: 1939, origin: 'Fritz Fischer, ETH Zurich, Switzerland. First prototype running in 1944',
     status: 'extinct', statusNote: 'Used for arena screens and control rooms until liquid crystal and micromirror projectors replaced it in the 1990s.',
     principle: 'gates', needs: ['dark'],
-    lead: 'The first television projector bright enough for a cinema screen used an electron beam to write ripples into a film of oil.',
+    lead: 'The Eidophor, a television projector bright enough for a cinema screen, used an electron beam to write ripples into a film of oil.',
     how: [
       'A powerful lamp shines onto a grille of mirrored bars. The bars reflect the light down onto a slowly turning mirror with a thin coat of oil. If the oil is smooth, the light returns straight to the bars and never leaves the machine.',
       'An electron beam scans the oil and leaves a pattern of electric charge, which ripples the surface. Rippled oil bends the light slightly. On its way back, that light passes between the bars, through the lens and onto the screen. The deeper the ripple, the brighter the spot.',

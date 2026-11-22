@@ -19,7 +19,7 @@ export const h1: Piece[] = [
   },
   {
     id: 'flip-disc', hall: 1, name: 'Flip-disc display', aka: 'Flip-dot',
-    year: 1961, origin: 'Kenyon Taylor, Ferranti-Packard, Canada, for Trans-Canada Air Lines',
+    year: 1960, yearText: 'patent applied for in 1960', origin: 'Kenyon Taylor, Ferranti-Packard, Canada. Patent application filed in Canada in 1960',
     status: 'niche', statusNote: 'LED signs have replaced it in new installations. Flip-disc boards remain in service, and some are hybrids with an LED in every dot.',
     principle: 'moves', needs: ['daylight', 'unpowered'],
     lead: 'A pulse of magnetism flips each small disc on the board to show its bright face or its dark face.',
@@ -34,7 +34,7 @@ export const h1: Piece[] = [
   },
   {
     id: 'mechanical-television', hall: 1, name: 'Mechanical television', aka: 'Nipkow disc, televisor',
-    year: 1926, origin: 'Disc patented by Paul Nipkow, Germany, in the 1880s. First public demonstration by John Logie Baird, London',
+    year: 1926, origin: 'Disc patented by Paul Nipkow, Germany, in the 1880s. Shown by John Logie Baird in London in 1926, after a showing of silhouettes at Selfridges in 1925',
     status: 'extinct', statusNote: 'Abandoned for electronic systems in the 1930s. The BBC replaced the system made by Baird with an all-electronic one in early 1937.',
     principle: 'gates', needs: ['dark'],
     lead: 'Early television was mechanical: a spinning disc with a spiral of holes cuts the picture into lines.',
@@ -79,7 +79,7 @@ export const h1: Piece[] = [
   },
   {
     id: 'braille-display', hall: 1, name: 'Refreshable braille display',
-    year: 1974, origin: 'Oleg and Andrée Tretiakoff, France: braille dots raised by piezoelectric reeds. Klaus Peter Schönherr built a piezoelectric module in Germany in 1975',
+    year: 1974, yearText: 'French application 1974, United States patent 1977', origin: 'Oleg and Andrée Tretiakoff, France: braille dots raised by piezoelectric reeds. The firm of Klaus Peter Schönherr built a braille terminal in use in Germany from 1976',
     status: 'production', statusNote: 'In daily use. Still expensive, because every dot is a separate moving part that must survive years of touch.',
     principle: 'moves', needs: ['daylight'],
     lead: 'This display is read by touch: rows of pins rise and fall to spell a line of braille.',

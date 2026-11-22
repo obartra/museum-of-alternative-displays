@@ -10,7 +10,7 @@ export const h6: Piece[] = [
     lead: 'A tilted sheet of glass reflects something bright that the audience cannot see directly.',
     how: [
       'Glass lets most light through and reflects a little. A large, clean sheet of glass stands across a dim stage at a tilt. A lamp lights a figure that is hidden below or to the side. The audience looks through the glass at the stage. It also sees the faint reflection of the hidden figure, which seems to stand among the furniture.',
-      'The effect was described in the 1500s. Dircks developed a version for the theatre from 1858. Pepper made it practical and first showed it in December 1862, in a scene from Dickens. The two men patented it the following year. The stage shows of today replace the hidden actor with a video screen and the glass with stretched film.',
+      'The effect was described in the 1500s. Dircks developed a version for the theatre from 1858. Pepper adapted it and, by his own account, first showed it to invited friends just before Christmas 1862. The two men patented it the following year. The stage shows of today replace the hidden actor with a video screen and the glass with stretched film.',
     ],
     good: ['Shows a bright, full-colour figure that seems to stand in real space', 'Needs no special glasses, and a whole audience can see it', 'Mixes with real actors and scenery'],
     bad: ['Gives a flat reflection at one fixed depth, not a three-dimensional picture', 'Needs a dark stage, a hidden bright area and careful control of what the audience can see', 'Is not a hologram, although concerts that use it are advertised as holograms'],
@@ -34,7 +34,7 @@ export const h6: Piece[] = [
   },
   {
     id: 'fog-screen', hall: 6, name: 'Fog screen', aka: 'Walk-through screen',
-    year: 2002, origin: 'Karri Palovuori and Ismo Rakkolainen, Tampere University of Technology, Finland',
+    year: 2002, yearText: 'prototypes in the 1990s, first shown 2002', origin: 'Karri Palovuori and Ismo Rakkolainen, Tampere University of Technology, Finland',
     status: 'niche', statusNote: 'Rented for product launches, exhibitions and stage entrances.',
     principle: 'gates', needs: ['seethrough', 'midair', 'dark'],
     lead: 'A thin sheet of fog, held flat by curtains of moving air, serves as a projection screen that you can walk through.',
@@ -64,7 +64,7 @@ export const h6: Piece[] = [
   },
   {
     id: 'swept-volume', hall: 6, name: 'Swept-volume display',
-    year: 1961, origin: 'Swept-screen system by Hirsch, 1961. Best known product: Perspecta, Actuality Systems, USA, 2002',
+    year: 1961, origin: 'Swept-screen system patented by Hirsch, granted 1961. Perspecta, Actuality Systems, USA, priced 2002, first sales reported 2003',
     status: 'niche', statusNote: 'A few specialist products.',
     principle: 'gates', needs: ['depth', 'dark'],
     lead: 'A screen spins through a volume of space while a fast projector lights each point as the screen passes it.',
@@ -109,7 +109,7 @@ export const h6: Piece[] = [
   },
   {
     id: 'acoustic-levitation', hall: 6, name: 'Acoustic levitation display', aka: 'Multimodal acoustic trap display',
-    year: 2019, origin: 'Ryuji Hirayama, Diego Martinez Plasencia, Nobuyuki Masuda and Sriram Subramanian, University of Sussex, UK',
+    year: 2019, origin: 'Ryuji Hirayama, Diego Martinez Plasencia, Nobuyuki Masuda and Sriram Subramanian, University of Sussex, UK, and Tokyo University of Science, Japan',
     status: 'lab', statusNote: 'A laboratory demonstration.',
     principle: 'moves', needs: ['depth', 'midair'],
     lead: 'Ultrasound, sound too high to hear, holds a small bead in mid-air and moves it around a shape faster than the eye can follow.',

@@ -1956,9 +1956,15 @@ msgid "Flip-dot"
 msgstr ""
 
 #: hall-1/flip-disc
+#. The date of the piece, as its label gives it.
+msgctxt "piece.flip-disc.yearText"
+msgid "patent applied for in 1960"
+msgstr ""
+
+#: hall-1/flip-disc
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.flip-disc.origin"
-msgid "Kenyon Taylor, Ferranti-Packard, Canada, for Trans-Canada Air Lines"
+msgid "Kenyon Taylor, Ferranti-Packard, Canada. Patent application filed in Canada in 1960"
 msgstr ""
 
 #: hall-1/flip-disc
@@ -2036,7 +2042,7 @@ msgstr ""
 #: hall-1/flip-disc
 #. People section: what Kenyon Taylor did. The names stand above this line.
 msgctxt "piece.flip-disc.people.1"
-msgid "Devised the flip-disc at Ferranti-Packard in Canada, for Trans-Canada Air Lines."
+msgid "Devised the flip-disc at Ferranti-Packard in Canada, as John Vardalas tells it in a history for IEEE Canada. His first patent on it claims a Canadian application of 1960."
 msgstr ""
 
 #: hall-1/flip-disc
@@ -2126,7 +2132,7 @@ msgstr ""
 #: hall-1/mechanical-television
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.mechanical-television.origin"
-msgid "Disc patented by Paul Nipkow, Germany, in the 1880s. First public demonstration by John Logie Baird, London"
+msgid "Disc patented by Paul Nipkow, Germany, in the 1880s. Shown by John Logie Baird in London in 1926, after a showing of silhouettes at Selfridges in 1925"
 msgstr ""
 
 #: hall-1/mechanical-television
@@ -2204,7 +2210,7 @@ msgstr ""
 #: hall-1/mechanical-television
 #. People section: what John Logie Baird did. The names stand above this line.
 msgctxt "piece.mechanical-television.people.2"
-msgid "Gave the first public demonstration of television, in London in 1926."
+msgid "Showed television to members of the Royal Institution at his laboratory in Soho, London, on 26 January 1926. IEEE Spectrum notes an earlier showing of silhouettes at Selfridges in March 1925."
 msgstr ""
 
 #: hall-1/mechanical-television
@@ -2360,7 +2366,7 @@ msgstr ""
 #: hall-1/kinetic-mirror
 #. People section: what Daniel Rozin did. The names stand above this line.
 msgctxt "piece.kinetic-mirror.people.1"
-msgid "Artist, born in Jerusalem. He built Wooden Mirror in 1999 and has since made mirrors of chrome balls, pegs and toy penguins."
+msgid "Artist. He built Wooden Mirror in 1999, the first of his mechanical mirrors by his own account, and has since made them of chrome balls, wooden pegs and plush penguins."
 msgstr ""
 
 #: hall-1/kinetic-mirror
@@ -2514,9 +2520,15 @@ msgid "Refreshable braille display"
 msgstr ""
 
 #: hall-1/braille-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.braille-display.yearText"
+msgid "French application 1974, United States patent 1977"
+msgstr ""
+
+#: hall-1/braille-display
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.braille-display.origin"
-msgid "Oleg and Andrée Tretiakoff, France: braille dots raised by piezoelectric reeds. Klaus Peter Schönherr built a piezoelectric module in Germany in 1975"
+msgid "Oleg and Andrée Tretiakoff, France: braille dots raised by piezoelectric reeds. The firm of Klaus Peter Schönherr built a braille terminal in use in Germany from 1976"
 msgstr ""
 
 #: hall-1/braille-display
@@ -2594,13 +2606,13 @@ msgstr ""
 #: hall-1/braille-display
 #. People section: what Oleg Tretiakoff, Andrée Tretiakoff did. The names stand above this line.
 msgctxt "piece.braille-display.people.1"
-msgid "Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974."
+msgid "Patented braille dots raised by bending piezoelectric reeds, in a United States patent filed in 1975 and granted in 1977. A later patent of theirs claims a French application of August 1974."
 msgstr ""
 
 #: hall-1/braille-display
 #. People section: what Klaus Peter Schönherr did. The names stand above this line.
 msgctxt "piece.braille-display.people.2"
-msgid "Invented a piezoelectric braille module in Germany in 1975."
+msgid "A collector's history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm's braille terminal in use at the University of Tübingen from December 1976."
 msgstr ""
 
 #: hall-1/braille-display
@@ -2774,7 +2786,7 @@ msgstr ""
 #: hall-2/cathode-ray-tube
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.cathode-ray-tube.origin"
-msgid "Ferdinand Braun, Germany. Electronic television demonstrated by Takayanagi (1926) and Farnsworth (1927)"
+msgid "Cathode ray oscillograph by Ferdinand Braun, Strasbourg, 1897. Television received on a cathode ray tube by Kenjiro Takayanagi (1926) and sent by the all-electronic system of Philo Farnsworth (1927)"
 msgstr ""
 
 #: hall-2/cathode-ray-tube
@@ -2852,7 +2864,7 @@ msgstr ""
 #: hall-2/cathode-ray-tube
 #. People section: what Ferdinand Braun did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.1"
-msgid "Built the first cathode ray tube, in Germany in 1897."
+msgid "Built a cathode ray oscillograph at Strasbourg in 1897, the Braun tube. Britannica calls it the first oscilloscope."
 msgstr ""
 
 #: hall-2/cathode-ray-tube
@@ -2864,13 +2876,13 @@ msgstr ""
 #: hall-2/cathode-ray-tube
 #. People section: what Philo Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.3"
-msgid "Sent the first all-electronic television picture, in San Francisco in 1927."
+msgid "His team at 202 Green Street, San Francisco, sent its first television picture on 7 September 1927. California Historical Landmark 941 calls it the first all-electronic television image."
 msgstr ""
 
 #: hall-2/cathode-ray-tube
 #. People section: what Elma Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.4"
-msgid "Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent."
+msgid "Known as Pem. On the laboratory team in San Francisco she kept the logbooks, made technical drawings and spot welded the tube elements. Hers was among the first faces the system sent."
 msgstr ""
 
 #: hall-2/cathode-ray-tube
@@ -3008,7 +3020,7 @@ msgstr ""
 #: hall-2/colour-wheel-television
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.colour-wheel-television.how.2"
-msgid "González Camarena patented his adapter in Mexico in 1940, at the age of 23. He designed it to be fitted to the black-and-white cameras and receivers already in use. The idea of a colour wheel was older: a German patent application of 1904 already described one. Television later settled on tubes that show the three colours at the same time."
+msgid "González Camarena patented his adapter in Mexico in 1940, at the age of 23. He designed it to be fitted to the black-and-white cameras and receivers already in use. Colour television had been proposed long before. A German patent of 1904 already named three colour filters, with selenium cells and mirrors. Television later settled on tubes that show the three colours at the same time."
 msgstr ""
 
 #: hall-2/colour-wheel-television
@@ -3068,7 +3080,7 @@ msgstr ""
 #: hall-2/colour-wheel-television
 #. People section: what A. Frankenstein, W. von Jaworski did. The names stand above this line.
 msgctxt "piece.colour-wheel-television.people.2"
-msgid "Applied in Germany in 1904 for a patent on a colour system with three colour filters. The listing the museum has read names selenium cells and mirrors, and no wheel."
+msgid "Named on German patent 172 376, for seeing pictures at a distance by selenium cells, three colour filters and mirrors. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
 msgstr ""
 
 #: hall-2/colour-wheel-television
@@ -3404,7 +3416,7 @@ msgstr ""
 #: hall-2/nixie-tube
 #. People section: what David Hagelbarger did. The names stand above this line.
 msgctxt "piece.nixie-tube.people.1"
-msgid "Engineer at Bell Laboratories. He gave The Computer Museum a prototype tube and its patent papers, and the museum's report of 1987 calls him its inventor. Other records credit Burroughs."
+msgid "Researcher at Bell Laboratories. The Computer Museum Report of winter 1987 to 1988 names him the inventor of a prototype Nixie tube he gave it with its patent papers. Other records credit Burroughs."
 msgstr ""
 
 #: hall-2/nixie-tube
@@ -3494,7 +3506,7 @@ msgstr ""
 #: hall-2/vacuum-fluorescent
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.vacuum-fluorescent.origin"
-msgid "Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967"
+msgid "Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First single digit tube by Ise Electronics, Japan, 1967, which the IEEE counts as the invention of the display"
 msgstr ""
 
 #: hall-2/vacuum-fluorescent
@@ -3572,13 +3584,13 @@ msgstr ""
 #: hall-2/vacuum-fluorescent
 #. People section: what Tadashi Nakamura did. The names stand above this line.
 msgctxt "piece.vacuum-fluorescent.people.1"
-msgid "Founder of Ise Electronics in Japan. He invented the display and put it on sale in 1967."
+msgid "Founder of Ise Electronics in Japan. The IEEE credits him with inventing the display in 1967, a single digit tube for Hayakawa Electric calculators. The Philips DM160 indicator was registered in 1957."
 msgstr ""
 
 #: hall-2/vacuum-fluorescent
 #. People section: what Tadashi Sasaki did. The names stand above this line.
 msgctxt "piece.vacuum-fluorescent.people.2"
-msgid "Led calculator development at Hayakawa Electric, now Sharp, and asked Nakamura for a low-voltage display."
+msgid "Led calculator development at Hayakawa Electric, now Sharp, and urged Tadashi Nakamura, who had worked under him at Kobe Industry, to develop a low voltage display tube."
 msgstr ""
 
 #: hall-2/vacuum-fluorescent
@@ -3770,7 +3782,7 @@ msgstr ""
 #: hall-2/plasma-panel
 #. People section: what Donald Bitzer, Gene Slottow, Robert Willson did. The names stand above this line.
 msgctxt "piece.plasma-panel.people.1"
-msgid "Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student."
+msgid "The University of Illinois credits them with inventing the panel there in 1964, for the PLATO teaching system. By Bitzer's account, Willson, their graduate student, worked out how to build the original panels."
 msgstr ""
 
 #: hall-2/plasma-panel
@@ -3902,13 +3914,13 @@ msgstr ""
 #: hall-2/field-emission
 #. People section: what Charles Spindt, Kenneth Shoulders, Louis Heynick did. The names stand above this line.
 msgctxt "piece.field-emission.people.1"
-msgid "Patented the way of making the microscopic tips, at Stanford Research Institute."
+msgid "Patented the microscopic tip arrays at Stanford Research Institute, and in a second patent, granted in 1974, the way of making them. Both rest on an application of February 1970."
 msgstr ""
 
 #: hall-2/field-emission
 #. People section: what Akintunde Akinwande did. The names stand above this line.
 msgctxt "piece.field-emission.people.2"
-msgid "Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one."
+msgid "Educated in Nigeria and at Stanford. At Honeywell from 1986 he worked on thin-film field emission and displays, and at MIT, with Luis Fernando Velásquez-García, on emitters each controlled by its own transistor."
 msgstr ""
 
 #: hall-2/field-emission
@@ -4068,9 +4080,15 @@ msgid "LED display"
 msgstr ""
 
 #: hall-3/led-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.led-display.yearText"
+msgid "about 1968"
+msgstr ""
+
+#: hall-3/led-display
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.led-display.origin"
-msgid "Hewlett-Packard, USA. The 5082-7000 numeric indicator of 1969 was designed by Howard Borden and Gerald Pighini"
+msgid "Hewlett-Packard, USA. The 5082-7000 numeric indicator, described in the Hewlett-Packard Journal of February 1969 by Howard Borden and Gerald Pighini"
 msgstr ""
 
 #: hall-3/led-display
@@ -4148,7 +4166,7 @@ msgstr ""
 #: hall-3/led-display
 #. People section: what Howard Borden, Gerald Pighini did. The names stand above this line.
 msgctxt "piece.led-display.people.1"
-msgid "Designed the Hewlett-Packard numeric indicator of 1969."
+msgid "Managed solid-state displays at HP Associates and described the Hewlett-Packard numeric indicator in the company's journal in February 1969. The journal credits its development to John Atalla's laboratory and others."
 msgstr ""
 
 #: hall-3/led-display
@@ -4274,7 +4292,7 @@ msgstr ""
 #: hall-3/oled
 #. People section: what Ching Wan Tang, Steven Van Slyke did. The names stand above this line.
 msgctxt "piece.oled.people.1"
-msgid "Made the first efficient OLED at Eastman Kodak, published in 1987. Tang, born in Hong Kong, had set out to make solar cells."
+msgid "Made at Eastman Kodak a diode of two thin organic layers that gave light efficiently at low voltage, published in 1987. Tang, born in Hong Kong, had been assigned to work on solar cells."
 msgstr ""
 
 #: hall-3/oled
@@ -4305,6 +4323,12 @@ msgstr ""
 #. Name of a piece.
 msgctxt "piece.microled.name"
 msgid "MicroLED"
+msgstr ""
+
+#: hall-3/microled
+#. The date of the piece, as its label gives it.
+msgctxt "piece.microled.yearText"
+msgid "first light 1999, published 2000"
 msgstr ""
 
 #: hall-3/microled
@@ -4388,7 +4412,7 @@ msgstr ""
 #: hall-3/microled
 #. People section: what Hongxing Jiang, Jingyu Lin did. The names stand above this line.
 msgctxt "piece.microled.people.1"
-msgid "Physicists and a married couple. They made the first microLEDs at Kansas State University in 2000."
+msgid "Physicists at Kansas State University. With their team they saw blue light from a gallium nitride microLED in August 1999, by their own account, and published it in 2000."
 msgstr ""
 
 #: hall-3/microled
@@ -4526,7 +4550,7 @@ msgstr ""
 #: hall-3/quantum-dot
 #. People section: what Moungi Bawendi did. The names stand above this line.
 msgctxt "piece.quantum-dot.people.4"
-msgid "American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry."
+msgid "Chemist at MIT, born in Paris. In 1993 he and his students found how to make quantum dots that the Nobel announcement called almost perfect. The three shared the 2023 Nobel Prize in Chemistry."
 msgstr ""
 
 #: hall-3/quantum-dot
@@ -4634,13 +4658,13 @@ msgstr ""
 #: hall-3/thin-film-el
 #. People section: what Tuomo Suntola did. The names stand above this line.
 msgctxt "piece.thin-film-el.people.1"
-msgid "Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels."
+msgid "Finnish physicist. He filed a patent on atomic layer deposition, which grows a film one layer of atoms at a time, in 1974. His one goal then, he said, was flat electroluminescent panels."
 msgstr ""
 
 #: hall-3/thin-film-el
 #. People section: what Dawon Kahng did. The names stand above this line.
 msgctxt "piece.thin-film-el.people.2"
-msgid "Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way."
+msgid "Born in Seoul. At Bell Laboratories in 1968 he reported light from molecules of rare earth and transition metals set in compounds such as zinc sulphide, excited by the impact of electrons."
 msgstr ""
 
 #: hall-3/thin-film-el
@@ -4772,7 +4796,7 @@ msgstr ""
 #: hall-3/flexible-display
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.flexible-display.origin"
-msgid "Flexible electronic paper at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019"
+msgid "Electronic paper on a sheet of silicone rubber at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019"
 msgstr ""
 
 #: hall-3/flexible-display
@@ -4796,7 +4820,7 @@ msgstr ""
 #: hall-3/flexible-display
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.flexible-display.how.2"
-msgid "Electronic paper was the first display to bend, in the laboratory in the 1970s and in products in the 2000s. OLED followed, with curved phone screens in 2013 and folding screens in 2019."
+msgid "Gyricon, an electronic paper on a rubbery sheet, was made in the laboratory in the 1970s, though the board that drove it was rigid. Electronic paper that bends reached products in the 2000s. OLED followed, with curved phone screens in 2013 and folding screens in 2019."
 msgstr ""
 
 #: hall-3/flexible-display
@@ -4850,7 +4874,7 @@ msgstr ""
 #: hall-3/flexible-display
 #. People section: what Nicholas Sheridon did. The names stand above this line.
 msgctxt "piece.flexible-display.people.1"
-msgid "Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center."
+msgid "Made Gyricon at the Xerox Palo Alto Research Center in the 1970s, a sheet of tiny turning balls. MIT Technology Review says the circuit board that drove it was rigid."
 msgstr ""
 
 #: hall-3/flexible-display
@@ -4886,7 +4910,7 @@ msgstr ""
 #: hall-4/camera-obscura
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.camera-obscura.origin"
-msgid "One of the earliest known accounts is in the Mohist Canons, compiled in China between the late fourth and the middle of the third century BCE. No inventor is known"
+msgid "One of the earliest known accounts is in the Mohist Canons, compiled in China, by one dating between the late fourth and the middle of the third century BCE. No inventor is known"
 msgstr ""
 
 #: hall-4/camera-obscura
@@ -4922,7 +4946,7 @@ msgstr ""
 #: hall-4/camera-obscura
 #. How it works, paragraph 4 of 4.
 msgctxt "piece.camera-obscura.how.4"
-msgid "The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. Johannes Kepler used it first, in 1604."
+msgid "The Mohist Canons say that the shadow is turned over because the light crosses at a point, travelling like arrows shot from a bow. Early in the eleventh century Ibn al-Haytham, writing in Cairo, described candles set in front of an opening into a dark place: each spot of light they cast appears directly opposite one candle. He also studied the crescent that the sun casts through a small hole during an eclipse. The Latin name means dark chamber. The 1911 Encyclopaedia Britannica says Johannes Kepler was the first to use it."
 msgstr ""
 
 #: hall-4/camera-obscura
@@ -4994,7 +5018,7 @@ msgstr ""
 #: hall-4/camera-obscura
 #. People section: what Gemma Frisius did. The names stand above this line.
 msgctxt "piece.camera-obscura.people.3"
-msgid "Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one."
+msgid "Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room, and described the method in his book of 1545, with a drawing."
 msgstr ""
 
 #: hall-4/camera-obscura
@@ -5006,7 +5030,7 @@ msgstr ""
 #: hall-4/camera-obscura
 #. People section: what Johannes Kepler did. The names stand above this line.
 msgctxt "piece.camera-obscura.people.5"
-msgid "Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes."
+msgid "The 1911 Encyclopaedia Britannica calls him the first to use the name camera obscura. A letter of 1620 tells of his portable dark tent with a lens, for sketching landscapes."
 msgstr ""
 
 #: hall-4/camera-obscura
@@ -5150,13 +5174,13 @@ msgstr ""
 #: hall-4/shadow-play
 #. People section: what Ibn Daniyal did. The names stand above this line.
 msgctxt "piece.shadow-play.people.1"
-msgid "Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre."
+msgid "Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there. A study in Muqarnas calls them the only plays of that era to survive in writing."
 msgstr ""
 
 #: hall-4/shadow-play
 #. People section: what François Dominique Séraphin did. The names stand above this line.
 msgctxt "piece.shadow-play.people.2"
-msgid "Opened a shadow theatre at Versailles and moved it to Paris in 1784, by one account. Britannica has Paris in 1776, then Versailles. In France such shows were advertised as ombres chinoises, Chinese shadows."
+msgid "Opened a shadow theatre at Versailles and moved it to Paris in 1784, though Britannica starts him in Paris in 1776. His French plays were billed as ombres chinoises, Chinese shadows, a trade name."
 msgstr ""
 
 #: hall-4/shadow-play
@@ -5312,7 +5336,7 @@ msgstr ""
 #: hall-4/liquid-crystal
 #. People section: what George Heilmeier did. The names stand above this line.
 msgctxt "piece.liquid-crystal.people.3"
-msgid "Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light."
+msgid "With a group at RCA Laboratories, he built liquid crystal displays in the 1960s that worked by scattering light. Its members included Nunzio Luce, Louis Zanoni, Joel Goldmacher, Joseph Castellano and Lucian Barton."
 msgstr ""
 
 #: hall-4/liquid-crystal
@@ -5324,7 +5348,7 @@ msgstr ""
 #: hall-4/liquid-crystal
 #. People section: what Mohamed Atalla, Dawon Kahng did. The names stand above this line.
 msgctxt "piece.liquid-crystal.people.5"
-msgid "Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul."
+msgid "Made the MOS transistor at Bell Laboratories in 1959, the Computer History Museum says, and announced it in 1960. Every cell's thin-film transistor works alike. Atalla was born in Port Said, Kahng in Seoul."
 msgstr ""
 
 #: hall-4/liquid-crystal
@@ -5444,7 +5468,7 @@ msgstr ""
 #: hall-4/micromirror
 #. People section: what Larry Hornbeck did. The names stand above this line.
 msgctxt "piece.micromirror.people.1"
-msgid "Invented the mirror chip at Texas Instruments in 1987."
+msgid "The National Inventors Hall of Fame says he invented the mirror chip at Texas Instruments in 1987, after a decade on analogue mirrors. A team he led from 1977 built it."
 msgstr ""
 
 #: hall-4/micromirror
@@ -5600,7 +5624,7 @@ msgstr ""
 #: hall-4/eidophor
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.eidophor.origin"
-msgid "Fritz Fischer, ETH Zurich, Switzerland. Prototype shown in 1943"
+msgid "Fritz Fischer, ETH Zurich, Switzerland. First prototype running in 1944"
 msgstr ""
 
 #: hall-4/eidophor
@@ -5612,7 +5636,7 @@ msgstr ""
 #: hall-4/eidophor
 #. First sentence of the label.
 msgctxt "piece.eidophor.lead"
-msgid "The first television projector bright enough for a cinema screen used an electron beam to write ripples into a film of oil."
+msgid "The Eidophor, a television projector bright enough for a cinema screen, used an electron beam to write ripples into a film of oil."
 msgstr ""
 
 #: hall-4/eidophor
@@ -5672,7 +5696,7 @@ msgstr ""
 #: hall-4/eidophor
 #. People section: what Fritz Fischer did. The names stand above this line.
 msgctxt "piece.eidophor.people.1"
-msgid "Conceived the projector at ETH Zurich in 1939. A prototype was shown in 1943."
+msgid "Applied for a patent on the projector at ETH Zurich in November 1939. An account of 1953 has the first prototype running in 1944."
 msgstr ""
 
 #: hall-4/eidophor
@@ -5828,7 +5852,7 @@ msgstr ""
 #: hall-4/scanned-laser
 #. People section: what Elsa Garmire did. The names stand above this line.
 msgctxt "piece.scanned-laser.people.2"
-msgid "Physicist at the California Institute of Technology. Her laser images, filmed in 1972, became the model for Laserium."
+msgid "Physicist at the California Institute of Technology. Ivan Dryer filmed her laser images from late 1970, and the two started the company that made Laserium, with her as its president."
 msgstr ""
 
 #: hall-4/scanned-laser
@@ -6062,7 +6086,7 @@ msgstr ""
 #: hall-5/gyricon
 #. People section: what Nicholas Sheridon did. The names stand above this line.
 msgctxt "piece.gyricon.people.1"
-msgid "Invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s."
+msgid "By his own account he invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s."
 msgstr ""
 
 #: hall-5/gyricon
@@ -6182,7 +6206,7 @@ msgstr ""
 #: hall-5/electrophoretic-ink
 #. People section: what Barrett Comiskey, J. D. Albert, Joseph Jacobson did. The names stand above this line.
 msgctxt "piece.electrophoretic-ink.people.1"
-msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. Their first capsule worked on 23 January 1997."
+msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey's account, he and Albert moved particles inside a capsule."
 msgstr ""
 
 #: hall-5/electrophoretic-ink
@@ -6416,7 +6440,7 @@ msgstr ""
 #: hall-5/electrowetting
 #. People section: what Gerardo Beni, Susan Hackwood did. The names stand above this line.
 msgctxt "piece.electrowetting.people.1"
-msgid "Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England."
+msgid "Proposed electrowetting displays at Bell Laboratories in a paper of 1981, the year they filed their patent. Cambridge's Centre for Science and Policy credits Hackwood with naming the effect."
 msgstr ""
 
 #: hall-5/electrowetting
@@ -6464,7 +6488,7 @@ msgstr ""
 #: hall-5/interferometric-modulator
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.interferometric-modulator.origin"
-msgid "Mark Miles, Etalon and later Iridigm, USA. First patent granted in 1998"
+msgid "Mark Miles, Etalon and later Iridigm, USA. Patent US 5,835,255, assigned to Etalon, granted in 1998"
 msgstr ""
 
 #: hall-5/interferometric-modulator
@@ -6542,7 +6566,7 @@ msgstr ""
 #: hall-5/interferometric-modulator
 #. People section: what Mark Miles did. The names stand above this line.
 msgctxt "piece.interferometric-modulator.people.1"
-msgid "Invented the modulator. He founded Etalon and in 1997 co-founded Iridigm to develop it. Qualcomm bought Iridigm in 2004."
+msgid "By his speaker biography of 2006 he invented the modulator. He founded Etalon, co-founded Iridigm in 1997 to develop it, and Qualcomm bought Iridigm in 2004."
 msgstr ""
 
 #: hall-5/interferometric-modulator
@@ -6582,9 +6606,15 @@ msgid "Printed indicator, smart glass"
 msgstr ""
 
 #: hall-5/electrochromic
+#. The date of the piece, as its label gives it.
+msgctxt "piece.electrochromic.yearText"
+msgid "1969 to 1974"
+msgstr ""
+
+#: hall-5/electrochromic
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.electrochromic.origin"
-msgid "S. K. Deb, work on tungsten oxide films"
+msgid "S. K. Deb, work on tungsten oxide films. Sources date it 1969, 1973 and 1974"
 msgstr ""
 
 #: hall-5/electrochromic
@@ -6662,13 +6692,13 @@ msgstr ""
 #: hall-5/electrochromic
 #. People section: what S. K. Deb did. The names stand above this line.
 msgctxt "piece.electrochromic.people.1"
-msgid "Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew."
+msgid "Showed, in work begun in the 1960s, that thin films of tungsten oxide colour and bleach under a voltage alone. His NREL biography calls this the discovery of electrochromism in such oxides."
 msgstr ""
 
 #: hall-5/electrochromic
 #. People section: what Paula Hammond, Dean DeLongchamp did. The names stand above this line.
 msgctxt "piece.electrochromic.people.2"
-msgid "At MIT they built electrochromic films one molecular layer at a time, which switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
+msgid "At MIT, Hammond supervised DeLongchamp, who built electrochromic films one molecular layer at a time. His thesis of 2003 found them generally better in contrast and switching than films made otherwise."
 msgstr ""
 
 #: hall-5/electrochromic
@@ -6728,7 +6758,7 @@ msgstr ""
 #: hall-6/peppers-ghost
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.peppers-ghost.how.2"
-msgid "The effect was described in the 1500s. Dircks developed a version for the theatre from 1858. Pepper made it practical and first showed it in December 1862, in a scene from Dickens. The two men patented it the following year. The stage shows of today replace the hidden actor with a video screen and the glass with stretched film."
+msgid "The effect was described in the 1500s. Dircks developed a version for the theatre from 1858. Pepper adapted it and, by his own account, first showed it to invited friends just before Christmas 1862. The two men patented it the following year. The stage shows of today replace the hidden actor with a video screen and the glass with stretched film."
 msgstr ""
 
 #: hall-6/peppers-ghost
@@ -6902,7 +6932,7 @@ msgstr ""
 #: hall-6/illusion-transmitter
 #. People section: what Valerie Thomas did. The names stand above this line.
 msgctxt "piece.illusion-transmitter.people.1"
-msgid "Born in Maryland in 1943. One of only two women to major in physics at Morgan State University, she joined NASA as a data analyst and invented the illusion transmitter there."
+msgid "Majored in physics at Morgan State University, by Lemelson-MIT's account one of only two women in her class to do so. She joined NASA as a data analyst and patented the illusion transmitter."
 msgstr ""
 
 #: hall-6/fog-screen
@@ -6915,6 +6945,12 @@ msgstr ""
 #. Other names the piece goes by.
 msgctxt "piece.fog-screen.aka"
 msgid "Walk-through screen"
+msgstr ""
+
+#: hall-6/fog-screen
+#. The date of the piece, as its label gives it.
+msgctxt "piece.fog-screen.yearText"
+msgid "prototypes in the 1990s, first shown 2002"
 msgstr ""
 
 #: hall-6/fog-screen
@@ -6992,7 +7028,7 @@ msgstr ""
 #: hall-6/fog-screen
 #. People section: what Karri Palovuori, Ismo Rakkolainen did. The names stand above this line.
 msgctxt "piece.fog-screen.people.1"
-msgid "Developed the fog screen that people can walk through, at Tampere University of Technology in 2002."
+msgid "Developed the fog screen that people can walk through, at Tampere University of Technology. Rakkolainen built early prototypes at home in the 1990s, and Lemelson-MIT dates its first showing to 2002."
 msgstr ""
 
 #: hall-6/fog-screen
@@ -7172,7 +7208,7 @@ msgstr ""
 #: hall-6/swept-volume
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.swept-volume.origin"
-msgid "Swept-screen system by Hirsch, 1961. Best known product: Perspecta, Actuality Systems, USA, 2002"
+msgid "Swept-screen system patented by Hirsch, granted 1961. Perspecta, Actuality Systems, USA, priced 2002, first sales reported 2003"
 msgstr ""
 
 #: hall-6/swept-volume
@@ -7256,7 +7292,7 @@ msgstr ""
 #: hall-6/swept-volume
 #. People section: what Gregg Favalora did. The names stand above this line.
 msgctxt "piece.swept-volume.people.2"
-msgid "Founder of Actuality Systems, which put the Perspecta display on sale in 2002."
+msgid "Co-founded Actuality Systems with two Harvard students. Its Perspecta display was priced at 40,000 dollars in 2002, and NASA Ames bought one early in 2003."
 msgstr ""
 
 #: hall-6/swept-volume
@@ -7376,7 +7412,7 @@ msgstr ""
 #: hall-6/static-volume
 #. People section: what Elizabeth Downing, Lambertus Hesselink, John Ralston, Roger Macfarlane did. The names stand above this line.
 msgctxt "piece.static-volume.people.1"
-msgid "Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author."
+msgid "Drew coloured points of light inside a block of glass with crossed infrared beams. Downing, the first author, and Hesselink of Stanford, Ralston of SDL and Macfarlane of IBM published in Science in 1996."
 msgstr ""
 
 #: hall-6/static-volume
@@ -7550,7 +7586,7 @@ msgstr ""
 #: hall-6/acoustic-levitation
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.acoustic-levitation.origin"
-msgid "Ryuji Hirayama, Diego Martinez Plasencia, Nobuyuki Masuda and Sriram Subramanian, University of Sussex, UK"
+msgid "Ryuji Hirayama, Diego Martinez Plasencia, Nobuyuki Masuda and Sriram Subramanian, University of Sussex, UK, and Tokyo University of Science, Japan"
 msgstr ""
 
 #: hall-6/acoustic-levitation
@@ -7622,7 +7658,7 @@ msgstr ""
 #: hall-6/acoustic-levitation
 #. People section: what Ryuji Hirayama, Diego Martinez Plasencia, Nobuyuki Masuda, Sriram Subramanian did. The names stand above this line.
 msgctxt "piece.acoustic-levitation.people.1"
-msgid "Built the display at the University of Sussex and published it in 2019."
+msgid "Published the display in Nature in 2019. Hirayama, Martinez Plasencia and Subramanian developed it at the University of Sussex, and Masuda was at Tokyo University of Science."
 msgstr ""
 
 #: hall-6/acoustic-levitation
@@ -7866,9 +7902,15 @@ msgid "Parallax barrier"
 msgstr ""
 
 #: hall-7/parallax-barrier
+#. The date of the piece, as its label gives it.
+msgctxt "piece.parallax-barrier.yearText"
+msgid "shown 1901, patent filed 1902"
+msgstr ""
+
+#: hall-7/parallax-barrier
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.parallax-barrier.origin"
-msgid "Frederic Ives, USA, after a description by Auguste Berthier in 1896"
+msgid "Frederic Ives, Philadelphia, USA. Auguste Berthier had suggested the principle in 1896"
 msgstr ""
 
 #: hall-7/parallax-barrier
@@ -7940,13 +7982,13 @@ msgstr ""
 #: hall-7/parallax-barrier
 #. People section: what Frederic Ives did. The names stand above this line.
 msgctxt "piece.parallax-barrier.people.1"
-msgid "Made the first parallax stereogram, in the United States in 1901."
+msgid "Made parallax stereograms in Philadelphia. His United States patent was filed in 1902 and granted in 1903. An encyclopedia, citing his paper of 1902, has him showing one in 1901."
 msgstr ""
 
 #: hall-7/parallax-barrier
 #. People section: what Auguste Berthier did. The names stand above this line.
 msgctxt "piece.parallax-barrier.people.2"
-msgid "Described the principle in 1896."
+msgid "Suggested the principle in 1896, in the French journal Cosmos. A paper of 1952 says the parallax barrier is generally attributed to him."
 msgstr ""
 
 #: hall-7/parallax-barrier
@@ -8208,6 +8250,12 @@ msgid "Holography"
 msgstr ""
 
 #: hall-7/holography
+#. The date of the piece, as its label gives it.
+msgctxt "piece.holography.yearText"
+msgid "conceived 1947, published 1948"
+msgstr ""
+
+#: hall-7/holography
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.holography.origin"
 msgid "Dennis Gabor, British Thomson-Houston, Rugby, England"
@@ -8240,7 +8288,7 @@ msgstr ""
 #: hall-7/holography
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.holography.how.3"
-msgid "Gabor invented the method in 1948 to improve electron microscopes, and he won the Nobel Prize for it in 1971. The method needed the laser. In 1962, Leith and Upatnieks in the United States and Denisyuk in the Soviet Union made the first practical holograms of solid objects."
+msgid "Gabor conceived the method in 1947 to improve electron microscopes and published it in 1948. The Nobel Prize of 1971 was for its invention and development. The method needed the laser. In 1962, Leith and Upatnieks in the United States and Denisyuk in the Soviet Union made the first practical holograms of solid objects."
 msgstr ""
 
 #: hall-7/holography
@@ -8288,7 +8336,7 @@ msgstr ""
 #: hall-7/holography
 #. People section: what Dennis Gabor did. The names stand above this line.
 msgctxt "piece.holography.people.1"
-msgid "Invented holography in 1948 at British Thomson-Houston in Rugby, England."
+msgid "Conceived holography at Easter 1947 at British Thomson-Houston in Rugby, England, by his Nobel lecture, and published it in 1948. The Nobel Prize credits him with its invention."
 msgstr ""
 
 #: hall-7/holography
@@ -8306,13 +8354,13 @@ msgstr ""
 #: hall-7/holography
 #. People section: what Stephen Benton, Mary Lou Jepsen did. The names stand above this line.
 msgctxt "piece.holography.people.4"
-msgid "The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design."
+msgid "Jepsen's master's thesis of 1989, supervised by Benton at the MIT Media Lab, set out the design and implementation of a holographic video display."
 msgstr ""
 
 #: hall-7/holography
 #. People section: what Ali Javan did. The names stand above this line.
 msgctxt "piece.holography.people.5"
-msgid "Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with."
+msgid "Born in Tehran. With William Bennett and Don Herriott he ran a helium neon laser at Bell Laboratories in 1960, by MIT News the first gas laser. Holograms are recorded with laser light."
 msgstr ""
 
 #: hall-7/holography
@@ -8372,7 +8420,7 @@ msgstr ""
 #: hall-7/head-mounted
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.head-mounted.origin"
-msgid "Ivan Sutherland and Bob Sproull, Harvard University, USA: the first driven by computer graphics"
+msgid "Ivan Sutherland and Bob Sproull, Harvard University, USA"
 msgstr ""
 
 #: hall-7/head-mounted
@@ -8396,7 +8444,7 @@ msgstr ""
 #: hall-7/head-mounted
 #. How it works, paragraph 2 of 2.
 msgctxt "piece.head-mounted.how.2"
-msgid "A half-silvered mirror, which reflects part of the light and passes the rest, can let the outside world in. Cameras can also film the outside world and mix it into the picture. Picture tubes mounted on helmets existed by 1961. The 1968 system by Sutherland and Sproull was the first to show graphics drawn by a computer."
+msgid "A half-silvered mirror, which reflects part of the light and passes the rest, can let the outside world in. Cameras can also film the outside world and mix it into the picture. Picture tubes mounted on helmets existed by 1961. The 1968 system by Sutherland and Sproull showed graphics drawn by a computer. The ACM calls it the first virtual reality headset."
 msgstr ""
 
 #: hall-7/head-mounted
@@ -8444,13 +8492,13 @@ msgstr ""
 #: hall-7/head-mounted
 #. People section: what Ivan Sutherland, Bob Sproull did. The names stand above this line.
 msgctxt "piece.head-mounted.people.1"
-msgid "Built the first headset driven by computer graphics, at Harvard University in 1968."
+msgid "Built a headset that showed graphics drawn by a computer, at Harvard University in 1968. The ACM calls it the first virtual reality headset, the Computer History Museum an early one."
 msgstr ""
 
 #: hall-7/head-mounted
 #. People section: what Samuel Achilefu did. The names stand above this line.
 msgctxt "piece.head-mounted.people.2"
-msgid "Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014."
+msgid "Born in Nigeria. A team he led at Washington University in St. Louis built goggles that show surgeons cancer cells glowing with a dye. The university dates their first use in surgery to 2014."
 msgstr ""
 
 #: hall-7/head-mounted
@@ -8484,9 +8532,15 @@ msgid "Retinal scan display"
 msgstr ""
 
 #: hall-7/retinal-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.retinal-display.yearText"
+msgid "filed 1985, published 1986"
+msgstr ""
+
+#: hall-7/retinal-display
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.retinal-display.origin"
-msgid "Kazuo Yoshinaka, Nippon Electric, Japan. Developed further at the University of Washington from 1991"
+msgid "Kazuo Yoshinaka, NEC, Japan, in a patent application. A similar system followed at the University of Washington from 1991"
 msgstr ""
 
 #: hall-7/retinal-display
@@ -8564,7 +8618,7 @@ msgstr ""
 #: hall-7/retinal-display
 #. People section: what Kazuo Yoshinaka did. The names stand above this line.
 msgctxt "piece.retinal-display.people.1"
-msgid "Proposed the display at Nippon Electric in Japan in 1986."
+msgid "Named as inventor on a Japanese patent application for a display that scans light onto the retina, filed by NEC in 1985 and published in 1986."
 msgstr ""
 
 #: hall-7/retinal-display
@@ -8696,7 +8750,7 @@ msgstr ""
 #: hall-7/head-up
 #. People section: what J. M. Naish did. The names stand above this line.
 msgctxt "piece.head-up.people.1"
-msgid "Worked out the system first called a head-up display, at Farnborough from 1956."
+msgid "Worked out at Farnborough from 1956 the system that, by his own account of 1979, was first called a head-up display."
 msgstr ""
 
 #: hall-7/head-up
@@ -10892,7 +10946,7 @@ msgstr ""
 #: people
 #. About Kara Walker, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.kara-walker.about.3"
-msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
+msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
 msgstr ""
 
 #: people
@@ -11576,7 +11630,7 @@ msgstr ""
 #: people
 #. About John Henry Pepper, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.john-henry-pepper.about.2"
-msgid "Around 1862 he acquired one of Henry Dircks's models and adapted it, hiding the second actor in the orchestra pit. By his own account he took out a provisional patent the day after his first showing, naming them both at his request."
+msgid "Around 1862 he acquired one of Henry Dircks's models and adapted it, hiding the second actor in the orchestra pit. By his own account he took out a provisional patent the day after his first showing, and at his own request it named them both."
 msgstr ""
 
 #: people

@@ -19,7 +19,7 @@ export const h7: Piece[] = [
   },
   {
     id: 'parallax-barrier', hall: 7, name: 'Parallax barrier',
-    year: 1901, origin: 'Frederic Ives, USA, after a description by Auguste Berthier in 1896',
+    year: 1901, yearText: 'shown 1901, patent filed 1902', origin: 'Frederic Ives, Philadelphia, USA. Auguste Berthier had suggested the principle in 1896',
     status: 'niche', statusNote: 'In a hand-held games console, some phones and car screens that show the driver and the passenger different pictures.',
     principle: 'directs', needs: ['depth'],
     lead: 'A mask of fine slits stands in front of the pixels, so that each eye, from its own angle, sees a different set of columns.',
@@ -64,14 +64,14 @@ export const h7: Piece[] = [
   },
   {
     id: 'holography', hall: 7, name: 'Holography',
-    year: 1948, origin: 'Dennis Gabor, British Thomson-Houston, Rugby, England',
+    year: 1948, yearText: 'conceived 1947, published 1948', origin: 'Dennis Gabor, British Thomson-Houston, Rugby, England',
     status: 'niche', statusNote: 'Static holograms are everyday objects, for example on bank cards. A holographic video display is still a research problem.',
     principle: 'directs', needs: ['depth'],
     lead: 'A hologram records the light itself, not a picture: lit correctly, the plate sends out the same light waves that the object did.',
     how: [
       'A laser beam is split in two. One part lights the object and scatters onto a photographic plate. The other part goes straight to the plate. Where the two parts meet, they interfere: their waves add together or cancel. The plate records the microscopic pattern of stripes that results.',
       'When the laser shines on the developed plate, the stripes bend the light back into the original waves. Looking through the plate is then optically the same as looking at the object. The object has depth, it shifts as you move, and your eye focuses on it at its real distance.',
-      'Gabor invented the method in 1948 to improve electron microscopes, and he won the Nobel Prize for it in 1971. The method needed the laser. In 1962, Leith and Upatnieks in the United States and Denisyuk in the Soviet Union made the first practical holograms of solid objects.',
+      'Gabor conceived the method in 1947 to improve electron microscopes and published it in 1948. The Nobel Prize of 1971 was for its invention and development. The method needed the laser. In 1962, Leith and Upatnieks in the United States and Denisyuk in the Soviet Union made the first practical holograms of solid objects.',
     ],
     good: ['Gives the eye every sign of depth that it uses, all of them correct at once', 'Works as a window, not a picture: you can look around the object and look closer'],
     bad: ['Needs pixels almost as small as light waves, and very much data, for a moving version', 'Usually shows one colour, with a grainy pattern called speckle', 'Shares its name with almost any picture that seems to float'],
@@ -80,13 +80,13 @@ export const h7: Piece[] = [
   },
   {
     id: 'head-mounted', hall: 7, name: 'Head-mounted display', aka: 'HMD, headset',
-    year: 1968, origin: 'Ivan Sutherland and Bob Sproull, Harvard University, USA: the first driven by computer graphics',
+    year: 1968, origin: 'Ivan Sutherland and Bob Sproull, Harvard University, USA',
     status: 'production', statusNote: 'Consumer products since the 1990s, sold in large numbers since the 2010s.',
     principle: 'directs', needs: [],
     lead: 'The wearer has a small screen and a lens in front of each eye, and the picture changes as the head turns.',
     how: [
       'It is a stereoscope with screens instead of cards. A lens in front of each eye magnifies a small screen and makes its picture appear at a comfortable distance. Sensors report where the head is pointing, and the pictures are redrawn to match. The scene therefore seems to stay still while you look around it.',
-      'A half-silvered mirror, which reflects part of the light and passes the rest, can let the outside world in. Cameras can also film the outside world and mix it into the picture. Picture tubes mounted on helmets existed by 1961. The 1968 system by Sutherland and Sproull was the first to show graphics drawn by a computer.',
+      'A half-silvered mirror, which reflects part of the light and passes the rest, can let the outside world in. Cameras can also film the outside world and mix it into the picture. Picture tubes mounted on helmets existed by 1961. The 1968 system by Sutherland and Sproull showed graphics drawn by a computer. The ACM calls it the first virtual reality headset.',
     ],
     good: ['Fills the field of view and follows the head', 'Gives a private display that can appear to be any size'],
     bad: ['Sits on the face', 'Makes the eyes focus at one fixed distance while they turn inward for another', 'The wearer feels any delay between head and picture immediately'],
@@ -95,7 +95,7 @@ export const h7: Piece[] = [
   },
   {
     id: 'retinal-display', hall: 7, name: 'Virtual retinal display', aka: 'Retinal scan display',
-    year: 1986, origin: 'Kazuo Yoshinaka, Nippon Electric, Japan. Developed further at the University of Washington from 1991',
+    year: 1986, yearText: 'filed 1985, published 1986', origin: 'Kazuo Yoshinaka, NEC, Japan, in a patent application. A similar system followed at the University of Washington from 1991',
     status: 'niche', statusNote: 'A few products, including eyewear aimed at people with low vision.',
     principle: 'directs', needs: ['seethrough'],
     lead: 'There is no screen: a beam of light scanned through the pupil draws the picture directly on the retina, at the back of the eye.',
