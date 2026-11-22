@@ -60,7 +60,7 @@ export const h6: Piece[] = [
     good: ['Makes a large, bright picture from very few lights', 'Is see-through, so the picture seems to float in the air', 'Costs little'],
     bad: ['Has a fast spinning blade, which needs a guard and makes noise', 'Flickers on camera and at the edge of your vision', 'Is flat, although it is often advertised as a hologram'],
     look: 'Watch the rotor speed up and slow down, again and again. At low speed you can see that it is only a bar with lamps on it. As it speeds up, the bar disappears and the picture appears.',
-    sources: [wiki('Persistence_of_vision', 'Persistence of vision'), wiki('Flicker_fusion', 'Flicker fusion')],
+    sources: [wiki('Persistence_of_vision', 'Persistence of vision'), wiki('Flicker_fusion', 'Flicker fusion'), src('archive', 'Joseph Plateau, Science Museum Group Collection', 'https://collection.sciencemuseumgroup.org.uk/people/cp100187/joseph-plateau'), src('archive', 'Copy of first Phenakistoscope disc (1832), Science Museum Group Collection', 'https://collection.sciencemuseumgroup.org.uk/objects/co18295/copy-of-first-phenakistoscope-disc')],
   },
   {
     id: 'swept-volume', hall: 6, name: 'Swept-volume display',

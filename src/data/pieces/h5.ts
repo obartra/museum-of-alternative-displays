@@ -15,7 +15,7 @@ export const h5: Piece[] = [
     good: ['Looks like print and is readable in sunlight', 'Keeps its picture with no power', 'Was flexible from the start'],
     bad: ['Shows two colours only', 'Needed a cheap grid of electronics behind it, which did not yet exist'],
     look: 'The model shows the sheet greatly enlarged. Watch the beads turn over as the seconds change. Then look from the side to see that they are spheres.',
-    sources: [wiki('Gyricon'), wiki('Electronic_paper', 'Electronic paper')],
+    sources: [wiki('Gyricon'), wiki('Electronic_paper', 'Electronic paper'), src('press', 'The Future of Electronic Paper, an interview with Nicholas Sheridon, The Future of Things', 'https://thefutureofthings.com/3081-the-future-of-electronic-paper/'), src('press', 'Electronic Paper Turns the Page, MIT Technology Review (2001)', 'https://www.technologyreview.com/s/400901/electronic-paper-turns-the-page/')],
   },
   {
     id: 'electrophoretic-ink', hall: 5, name: 'Electrophoretic ink', aka: 'E Ink, electronic paper',

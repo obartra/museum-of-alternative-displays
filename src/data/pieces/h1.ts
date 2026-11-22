@@ -30,7 +30,7 @@ export const h1: Piece[] = [
     good: ['Is easy to read in direct sun, because it reflects light and makes none', 'Uses power only when the picture changes', 'Is simple and rugged enough for buses and roadsides'],
     bad: ['Shows each dot in one colour or the other, with nothing in between', 'Is invisible at night unless a lamp lights it', 'Discs can stick, and a stuck disc stays a wrong pixel until someone repairs it'],
     look: 'The bottom row counts the seconds and fills one disc at a time. Watch the columns flip one after another when the minute changes. Then switch the daylight off: the board still shows the time, but you cannot see it.',
-    sources: [wiki('Flip-disc_display')],
+    sources: [wiki('Flip-disc_display'), src('patent', 'Taylor and Winrow, US patent 3,303,494, Magnetically operated signs, Ferranti-Packard', 'https://patents.google.com/patent/US3303494'), src('patent', 'US patent 3,140,553, Magnetically operated sign, Ferranti (priority date 1960)', 'https://patents.google.com/patent/US3140553'), src('archive', 'Ferranti-Packard brochures and manuals, Roll Sign Gallery', 'https://rollsigngallery.com/SignBrochures-Manuals/Ferranti-Packard/sbm-FP.html')],
   },
   {
     id: 'mechanical-television', hall: 1, name: 'Mechanical television', aka: 'Nipkow disc, televisor',
@@ -90,7 +90,7 @@ export const h1: Piece[] = [
     good: ['Works in complete darkness and in full sun', 'Is silent, private and precise', 'Rewrites its one line again and again, so that line can carry a whole book'],
     bad: ['Costs a lot for every cell', 'Usually shows one line at a time, so it has no page layout and no graphics', 'Is mechanical, and the fingers that read it wear it out'],
     look: 'The model spells the time as braille writes it: first the sign that announces numbers, then the digits, with that sign repeated after each colon. Watch the cells on the right, which change every second.',
-    sources: [wiki('Refreshable_Braille_display', 'Refreshable braille display'), wiki('History_of_display_technology', 'History of display technology')],
+    sources: [wiki('Refreshable_Braille_display', 'Refreshable braille display'), wiki('History_of_display_technology', 'History of display technology'), src('patent', 'Tretiakoff and Tretiakoff, US patent 4,044,350', 'https://patents.google.com/patent/US4044350'), src('archive', 'A Brief History of the Refreshable Braille Display, American Printing House for the Blind', 'https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/')],
   },
   {
     id: 'drone-show', hall: 1, name: 'Drone light show',
@@ -105,6 +105,6 @@ export const h1: Piece[] = [
     good: ['Makes a picture hundreds of metres across with no screen and no structure', 'Is three-dimensional and visible from a whole city', 'Is quieter and cleaner than fireworks, which it has started to replace'],
     bad: ['Has very few pixels: the record show had 10,197', 'Rain and strong wind cancel the show', 'Flies for only minutes on each battery, and the fleet needs maintenance'],
     look: 'The model is a small scene: a painted sky at dusk, a take-off grid on a field and 300 aircraft. They write the time inside a ring, then regroup into a turning globe. Zoom in to see that each light hangs under a small aircraft with four rotors. Then switch the daylight off, because drone shows need the dark.',
-    sources: [wiki('Drone_art', 'Drone art')],
+    sources: [wiki('Drone_art', 'Drone art'), src('press', 'KMel Robotics Uses Vicon System for Live Robotic Light Show, Computer Graphics World (2012)', 'https://cgw.com/Press-Center/Web-Exclusives/2012/KMel-Robotics-Uses-Vicon-System-for-Live-Robotic.aspx'), src('maker', 'Meet your creator (2012), Memo Akten', 'https://www.memo.tv/?p=73172'), src('lab', 'Drone 100: A World Record with 100 Points, Ars Electronica', 'https://ars.electronica.art/aeblog/?p=20615')],
   },
 ];

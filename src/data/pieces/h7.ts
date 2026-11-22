@@ -45,7 +45,7 @@ export const h7: Piece[] = [
     good: ['Gives depth or motion from a printed card, with no power and no glasses', 'Is brighter than a barrier of slits', 'Offers several views, so you can look around an object a little'],
     bad: ['Divides its detail among the views', 'Repeats its views, with a visible jump from one zone to the next', 'Works at one viewing distance only'],
     look: 'The card shows an eye, printed in nine views. Turn the model: the eye follows you across the room and jumps from one view to the next.',
-    sources: [wiki('Lenticular_printing', 'Lenticular printing'), wiki('Lenticular_lens', 'Lenticular lens')],
+    sources: [wiki('Lenticular_printing', 'Lenticular printing'), wiki('Lenticular_lens', 'Lenticular lens'), src('patent', 'Hess, US patent 1,128,979', 'https://patents.google.com/patent/US1128979')],
   },
   {
     id: 'integral-imaging', hall: 7, name: 'Integral imaging', aka: 'Light field display, fly\'s eye lens',
@@ -60,7 +60,7 @@ export const h7: Piece[] = [
     good: ['Gives depth both up and down and from side to side, with no glasses', 'Lets several people look at once'],
     bad: ['Needs a very large number of pixels for a modest picture', 'Shows depth sharply only near the sheet', 'Changes its view in steps unless the lenses are very fine'],
     look: 'Turn the model to look at the panel from the side and from above. The three layers of the picture shift against each other in small steps, vertically as well as horizontally.',
-    sources: [wiki('Integral_imaging', 'Integral imaging')],
+    sources: [wiki('Integral_imaging', 'Integral imaging'), src('paper', 'Lippmann, Épreuves réversibles donnant la sensation du relief, Journal de Physique Théorique et Appliquée (1908)', 'https://doi.org/10.1051/jphystap:019080070082100'), src('paper', 'Ng and others, Light Field Photography with a Hand-held Plenoptic Camera, Stanford Tech Report CTSR 2005-02', 'https://graphics.stanford.edu/papers/lfcamera/lfcamera-150dpi.pdf')],
   },
   {
     id: 'holography', hall: 7, name: 'Holography',
@@ -91,7 +91,7 @@ export const h7: Piece[] = [
     good: ['Fills the field of view and follows the head', 'Gives a private display that can appear to be any size'],
     bad: ['Sits on the face', 'Makes the eyes focus at one fixed distance while they turn inward for another', 'The wearer feels any delay between head and picture immediately'],
     look: 'The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. The picture on that screen bulges outward, because the lens squeezes it back into shape. Press the Put it on button to see what the wearer sees.',
-    sources: [wiki('Head-mounted_display', 'Head-mounted display')],
+    sources: [wiki('Head-mounted_display', 'Head-mounted display'), src('paper', 'Sutherland, A head-mounted three dimensional display, AFIPS Fall Joint Computer Conference (1968)', 'https://www.cise.ufl.edu/research/lok/teaching/ve-s07/papers/sutherland-headmount.pdf')],
   },
   {
     id: 'retinal-display', hall: 7, name: 'Virtual retinal display', aka: 'Retinal scan display',
@@ -121,6 +121,6 @@ export const h7: Piece[] = [
     good: ['Gives information without the need to look down or refocus', 'Can line its symbols up with real objects outside'],
     bad: ['Is visible only from a small range of head positions', 'Covers only a narrow field of view', 'Must be bright enough to read against the sky'],
     look: 'The projector sits in the top of the cover over the instruments, and the combiner leans over it. Press the Sit down button to take the seat of the pilot. The green symbols are focused far away, so they stay still against the background when you move your head. From any other position you see part of them or nothing.',
-    sources: [wiki('Heads-up_display', 'Head-up display')],
+    sources: [wiki('Heads-up_display', 'Head-up display'), src('maker', 'The evolution of the Head-Up Display, BAE Systems (2016)', 'https://www.baesystems.com/en/story/our-innovations-hud'), src('archive', 'Blackburn Buccaneer, BAE Systems Heritage', 'https://www.baesystems.com/heritage/page/blackburn-buccaneer')],
   },
 ];

@@ -62,7 +62,7 @@ export const h4: Piece[] = [
     good: ['Is thin and cheap, and comes in every size', 'Uses very little power when it works with room light instead of a backlight', 'Lasts a long time'],
     bad: ['Shows black by blocking the backlight, so black is never fully dark', 'Changes in contrast and colour when viewed from an angle', 'Smears motion, because the liquid takes time to turn'],
     look: 'The model pulls the panel apart into its layers. From the back they are: the lamp, a polariser, the liquid crystal between glass, the colour filter and the second polariser. Look from the side to see the layers, then from the front, where they combine into a picture.',
-    sources: [wiki('Liquid-crystal_display', 'Liquid-crystal display'), wiki('Twisted_nematic_field_effect', 'Twisted nematic field effect')],
+    sources: [wiki('Liquid-crystal_display', 'Liquid-crystal display'), wiki('Twisted_nematic_field_effect', 'Twisted nematic field effect'), src('paper', 'Schadt, How we made the liquid crystal display, Nature Electronics (2018)', 'https://www.nature.com/articles/s41928-018-0119-8'), src('paper', 'Schadt and Helfrich, Voltage-dependent optical activity of a twisted nematic liquid crystal, Applied Physics Letters (1971)', 'https://doi.org/10.1063/1.1653593')],
   },
   {
     id: 'micromirror', hall: 4, name: 'Digital micromirror device', aka: 'DMD, DLP',
@@ -77,7 +77,7 @@ export const h4: Piece[] = [
     good: ['Reflects light, so it wastes little of it and withstands a powerful lamp', 'Switches in microseconds', 'Is a sealed chip with nothing in it that fades'],
     bad: ['Is a projector part, not a screen: it needs a lamp, a lens and a dark room', 'Can break colour into rainbow fringes in the single-chip kind', 'Comes from a single maker'],
     look: 'The chip sits on the stand. Above it, the model shows a patch of its mirrors greatly enlarged, counting seconds. Turn the model: the mirrors that tip toward you look bright. Then switch the daylight off. The chip makes no light, so at night it disappears.',
-    sources: [wiki('Digital_Light_Processing', 'Digital Light Processing'), wiki('Digital_micromirror_device', 'Digital micromirror device')],
+    sources: [wiki('Digital_Light_Processing', 'Digital Light Processing'), wiki('Digital_micromirror_device', 'Digital micromirror device'), src('archive', 'The Digital Micromirror Device: A Historic Mechanical Engineering Landmark, American Society of Mechanical Engineers (2008)', 'https://www.asme.org/wwwasmeorg/media/ResourceFiles/AboutASME/Who%20We%20Are/Engineering%20History/Landmarks/DMD_Brochure.pdf')],
   },
   {
     id: 'lcos', hall: 4, name: 'Liquid crystal on silicon', aka: 'LCoS',
@@ -92,7 +92,7 @@ export const h4: Piece[] = [
     good: ['Fits a very large number of pixels on a small chip', 'Gives a smooth picture with almost no visible pixel grid', 'Is small and uses little power'],
     bad: ['Needs polarised light and a splitter cube, which reduces brightness', 'Held ghost pictures in early panels', 'Is only as good as its lamp, like every device that makes no light of its own'],
     look: 'Follow the light. It goes from the lamp to the cube, down to the chip and back up. It then leaves through the lens and lands on the card as a picture.',
-    sources: [wiki('Liquid_crystal_on_silicon', 'Liquid crystal on silicon')],
+    sources: [wiki('Liquid_crystal_on_silicon', 'Liquid crystal on silicon'), src('patent', 'US patent 3,824,002, Alternating current liquid crystal light valve, Hughes Aircraft (filed 1972)', 'https://patents.google.com/patent/US3824002'), src('paper', 'Jacobson, Optical-to-Optical Interface Device, Hughes Research Laboratories for NASA (1975)', 'https://ntrs.nasa.gov/api/citations/19760007828/downloads/19760007828.pdf')],
   },
   {
     id: 'eidophor', hall: 4, name: 'Eidophor', aka: 'Oil film projector',
@@ -107,7 +107,7 @@ export const h4: Piece[] = [
     good: ['Takes its brightness from a lamp, not a glowing tube, which is enough for a cinema or a stadium', 'Was decades ahead of any alternative for large-screen video'],
     bad: ['Was the size of a wardrobe and needed a vacuum pump', 'Needed engineers to set it up, and industrial three-phase power', 'Showed any dust or contamination in the oil on the screen'],
     look: 'The model shows the machine with its panels off. Follow the light from the lamp house at the left across to the bars. It goes down to the dish of oil, which turns under a glass bell, and back up through the lens. The top mirror then sends it to the small screen.',
-    sources: [wiki('Eidophor')],
+    sources: [wiki('Eidophor'), src('paper', 'Baumann, The Fischer Large-Screen Projection System, Journal of the SMPTE (1953)', 'https://lantern.mediahist.org/catalog/journalofsociety60socirich_0353'), src('archive', 'Eidophor, Early Television Museum', 'https://earlytelevision.org/yanczer_eidophor.html')],
   },
   {
     id: 'scanned-laser', hall: 4, name: 'Scanned laser', aka: 'Laser show projector, galvanometer scanner',
@@ -122,7 +122,7 @@ export const h4: Piece[] = [
     good: ['Gives pure, strong colour and a beam that stays sharp at any distance', 'Draws on anything, including clouds, buildings and smoke'],
     bad: ['Makes line drawings only, and flickers more as the drawing gains lines', 'Must obey eye safety rules, which decide where the beam may go and for how long', 'Is useless in daylight'],
     look: 'Follow the beams from left to right. Three lasers at the left merge into one white beam, which goes to the pair of mirrors at the right. The beam that leaves the mirrors jumps from place to place. The figure on the wall shows where the beam has been.',
-    sources: [wiki('Laser_lighting_display', 'Laser lighting display'), wiki('Laser_projector', 'Laser projector'), wiki('International_Laser_Display_Association', 'International Laser Display Association')],
+    sources: [wiki('Laser_lighting_display', 'Laser lighting display'), wiki('Laser_projector', 'Laser projector'), wiki('International_Laser_Display_Association', 'International Laser Display Association'), src('archive', 'Josef Stanislaus Ostoja-Kotkowski, SA History Hub, History Trust of South Australia', 'https://sahistoryhub.history.sa.gov.au/?p=18782'), src('archive', 'Sound and Image 68, Adelaide Festival of Arts 1968, AusStage', 'https://ausstage.edu.au/pages/event/86033')],
   },
   {
     id: 'projection-mapping', hall: 4, name: 'Projection mapping', aka: 'Spatial augmented reality',

@@ -30,7 +30,7 @@ export const h3: Piece[] = [
     good: ['Shows true black, because an unlit pixel gives off no light', 'Responds very fast', 'Is thin and light, and can bend'],
     bad: ['Static pictures leave a ghost, called burn-in, because lit pixels age', 'Blue wears out first', 'Needs a seal against air and moisture'],
     look: 'Switch the daylight off. The black parts of this panel disappear into the dark while the colours stay. No screen in the museum that has a backlight can do that.',
-    sources: [wiki('Organic_light-emitting_diode', 'Organic light-emitting diode')],
+    sources: [wiki('Organic_light-emitting_diode', 'Organic light-emitting diode'), src('paper', 'Tang and VanSlyke, Organic electroluminescent diodes, Applied Physics Letters (1987)', 'https://doi.org/10.1063/1.98799'), src('press', 'Homage for a humble icon of science, University of Rochester (2019)', 'https://www.hajim.rochester.edu/che/news-events/news/archive/2019/2019_06_25_tang_reception.html')],
   },
   {
     id: 'microled', hall: 3, name: 'MicroLED',
@@ -45,7 +45,7 @@ export const h3: Piece[] = [
     good: ['Is very bright and lasts a very long time', 'Does not burn in', 'Comes in modules, so a wall can be any size'],
     bad: ['Needs millions of tiny chips moved into place, which is slow and costly', 'Needs every faulty chip found and replaced', 'Has a price for companies, not for homes'],
     look: 'One tile is out of the wall. Look at it: it leans against the stand, dark, with the suction lifter still on it. The empty place in the wall shows the circuit board behind the tiles and the magnets that hold a tile. A wall is repaired in this way, one square at a time.',
-    sources: [wiki('MicroLED')],
+    sources: [wiki('MicroLED'), src('paper', 'Jiang and Lin, How we made the microLED, Nature Electronics (2023)', 'https://www.depts.ttu.edu/ece/Nanophotonics/papers/2023How%20we%20made%20the%20microLED_Nature%20electronics.pdf')],
   },
   {
     id: 'quantum-dot', hall: 3, name: 'Quantum-dot display', aka: 'QLED, QD-OLED',
@@ -75,7 +75,7 @@ export const h3: Piece[] = [
     good: ['Works from deep cold to the heat of an engine compartment', 'Is sharp, fast and readable at any angle', 'Lasts for decades', 'Can be made transparent'],
     bad: ['Shows one colour only, in practice', 'Needs a high voltage to drive it', 'Is dimmer and costlier than the liquid crystal panels that took over its markets'],
     look: 'The model is an instrument panel, complete with its frame. Look at the colour of the display. No filter makes that colour: it is the light that manganese in zinc sulphide gives off.',
-    sources: [wiki('Electroluminescent_display', 'Electroluminescent display'), wiki('Electroluminescence'), wiki('History_of_display_technology', 'History of display technology')],
+    sources: [wiki('Electroluminescent_display', 'Electroluminescent display'), wiki('Electroluminescence'), wiki('History_of_display_technology', 'History of display technology'), src('archive', '50 Years of SID Symposia: Nurturing Progress in EL and OLED Technologies, Society for Information Display', 'https://sid.org/Portals/sid/Files/DisplayHistory/EL-OLED_History.pdf'), src('paper', 'Takeda and others, Inherent Memory Effects in ZnS:Mn Thin-Film EL Devices, Conference on Solid State Devices, Sharp Central Research Laboratory (1974)', 'https://doi.org/10.7567/SSDM.1974.A3-4')],
   },
   {
     id: 'transparent-display', hall: 3, name: 'Transparent display', aka: 'See-through display',
@@ -90,7 +90,7 @@ export const h3: Piece[] = [
     good: ['Puts information on the object itself, not beside it', 'Emissive types glow against a dark scene'],
     bad: ['Emissive types cannot show black, and they look pale against a bright background', 'Absorptive types make no light of their own', 'Is never as clear as plain glass'],
     look: 'The model is a shop case whose front pane is the screen. An alarm clock stands inside, and the pane draws the same time in figures over the clock. Switch the daylight off and on. The graphics are strong in the dark and faint in daylight, and the clock behind them stays visible all the time.',
-    sources: [wiki('See-through_display', 'See-through display')],
+    sources: [wiki('See-through_display', 'See-through display'), src('press', 'Sony Ericsson demos transparent handset, The Register (2009)', 'https://www.theregister.co.uk/2009/09/09/sony_ericsson_transparent_phone/')],
   },
   {
     id: 'flexible-display', hall: 3, name: 'Flexible display', aka: 'Rollable, foldable',
@@ -105,6 +105,6 @@ export const h3: Piece[] = [
     good: ['Packs a large screen into a small space', 'Is light and hard to shatter', 'Can follow a curved surface'],
     bad: ['Wears with every fold, so makers specify how tightly and how many times it may bend', 'Scratches where glass would not, because the surface is plastic', 'Is hard to seal, because the sheet moves'],
     look: 'The sheet rises out of a roller housing in an S-shaped curve. Turn the model to see the back: there is nothing there but film.',
-    sources: [wiki('Rollable_display', 'Rollable display')],
+    sources: [wiki('Rollable_display', 'Rollable display'), src('press', 'The Future of Electronic Paper, an interview with Nicholas Sheridon, The Future of Things', 'https://thefutureofthings.com/3081-the-future-of-electronic-paper/'), src('maker', 'Samsung Announces GALAXY ROUND in Korea, Samsung Newsroom (2013)', 'https://news.samsung.com/global/introducing-galaxy-round-in-korea')],
   },
 ];

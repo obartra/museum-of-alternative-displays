@@ -15,7 +15,7 @@ export const h2: Piece[] = [
     good: ['Gives off its light at the surface you look at, so the picture is clear from any angle', 'Responds faster than the eye can follow', 'Has no fixed grid of pixels in a one-colour tube'],
     bad: ['Becomes deeper and heavier, with more vacuum to hold, as the screen grows', 'Needs a high voltage, and its glass bulb is under pressure from the air outside', 'Redraws its picture constantly and does not hold it, so the picture flickers'],
     look: 'Press the Sit in front button. The bright band that moves down the screen is where the beam has just drawn its lines. The model slows this about 60 times. Then turn the model and look from the side at the copper coils on the neck, which steer the beam.',
-    sources: [wiki('Cathode_ray_tube', 'Cathode ray tube'), wiki('Shadow_mask', 'Shadow mask')],
+    sources: [wiki('Cathode_ray_tube', 'Cathode ray tube'), wiki('Shadow_mask', 'Shadow mask'), src('archive', 'Ferdinand Braun, Biographical, The Nobel Prize', 'https://www.nobelprize.org/prizes/physics/1909/braun/biographical/')],
   },
   {
     id: 'colour-wheel-television', hall: 2, name: 'Colour-wheel television', aka: 'Field-sequential colour, chromoscopic adapter',
@@ -46,7 +46,7 @@ export const h2: Piece[] = [
     good: ['Draws lines with no jagged edges at any angle', 'Draws very bright strokes on a fully black background'],
     bad: ['Flickers more as the picture gains lines', 'Draws outlines only, with no filled shapes and only crude text', 'Made colour difficult'],
     look: 'The screen shows a clock, drawn stroke by stroke, and a bouncing ball. Watch the trail behind the ball: it is the screen coating, the phosphor, still glowing where the beam has been. On the shelf lies a light pen on its cord, a tool for pointing at the screen.',
-    sources: [wiki('Vector_monitor', 'Vector monitor')],
+    sources: [wiki('Vector_monitor', 'Vector monitor'), src('archive', 'Circular monitor display for Whirlwind, Computer History Museum', 'https://www.computerhistory.org/revolution/input-output/14/349/1544'), src('archive', 'Whirlwind: the first in many ways, Heinz Nixdorf MuseumsForum', 'https://www.hnf.de/en/permanent-exhibition/exhibition-areas/computers-in-science-and-technology-1950-to-1970/computers-in-the-usa-a-new-tool-for-science-the-military-and-space-research/translate-to-english-whirlwind-in-vielem-der-erste.html')],
   },
   {
     id: 'storage-tube', hall: 2, name: 'Storage tube terminal', aka: 'DVST, direct-view bistable storage tube',
@@ -61,7 +61,7 @@ export const h2: Piece[] = [
     good: ['Shows dense, steady line drawings with no flicker', 'Needed no memory for the picture at a time when memory was the expensive part'],
     bad: ['Cannot erase one part: to change one thing, it must redraw everything', 'Shows no animation and no colour', 'Gives a dim picture on a glowing green background'],
     look: 'Watch one full cycle. The graph is drawn once and then stays. Next the screen flashes, which erases it, and the drawing starts again. The two wheels beside the keys move a crosshair, two crossed lines that mark a point.',
-    sources: [wiki('Direct-View_Bistable_Storage_Tube', 'Direct-view bistable storage tube'), wiki('Tektronix_4014', 'Tektronix 4010 series')],
+    sources: [wiki('Direct-View_Bistable_Storage_Tube', 'Direct-view bistable storage tube'), wiki('Tektronix_4014', 'Tektronix 4010 series'), src('press', 'Robert H. Anderson: Putting The "Storage" In Oscilloscopes, Electronic Design (2011)', 'https://www.electronicdesign.com/technologies/displays/article/21795615/robert-h-anderson-putting-the-storage-in-oscilloscopes'), src('press', 'Screen History: The Haeff Memory and Graphics Tube of 1940s Opened a New Era of Computing, IEEE Computer Society (2017)', 'https://www.computer.org/publications/tech-news/research/the-haeff-memory-and-graphics-tube')],
   },
   {
     id: 'nixie-tube', hall: 2, name: 'Nixie tube', aka: 'Cold cathode numeric indicator',
@@ -76,7 +76,7 @@ export const h2: Piece[] = [
     good: ['Shows fully formed numerals with real depth', 'Is clear in a dim room, in a colour unlike that of other displays'],
     bad: ['Shows only the ten shapes inside it', 'Needs about 170 volts', 'The numerals at the back show through the ones in front'],
     look: 'Turn the model until you see a tube from the side. The ten numerals stand in a stack inside the mesh, and the lit one moves forward and back as the seconds count. Then switch the daylight off and watch the orange glow appear on the glass.',
-    sources: [wiki('Nixie_tube', 'Nixie tube')],
+    sources: [wiki('Nixie_tube', 'Nixie tube'), src('press', 'The Nixie Tube Story: The Neon Display Tech That Engineers Can\'t Quit, IEEE Spectrum (2018)', 'https://spectrum.ieee.org/nixie-tube')],
   },
   {
     id: 'vacuum-fluorescent', hall: 2, name: 'Vacuum fluorescent display', aka: 'VFD',
@@ -91,7 +91,7 @@ export const h2: Piece[] = [
     good: ['Is bright, with high contrast, and readable at a wide angle', 'Works from a few tens of volts', 'Can have segments of any shape that the maker prints'],
     bad: ['Shows only the fixed shapes built into it', 'Needs a vacuum and a heated wire', 'Dims first where its phosphor has glowed the most'],
     look: 'Zoom in on the front of the glass. The thin horizontal wires are the heated wires, called filaments, and the fine mesh behind them is the grid. Every connecting wire leaves the glass along the bottom edge.',
-    sources: [wiki('Vacuum_fluorescent_display', 'Vacuum fluorescent display')],
+    sources: [wiki('Vacuum_fluorescent_display', 'Vacuum fluorescent display'), src('archive', 'DM160, first source the Philips Bulletin of January 1959, Radiomuseum', 'https://www.radiomuseum.org/tubes/tube_dm160.html'), src('archive', 'Milestones: Vacuum Fluorescent Displays, 1967, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Vacuum_Fluorescent_Displays,_1967')],
   },
   {
     id: 'numitron', hall: 2, name: 'Numitron', aka: 'Incandescent filament display',
@@ -105,7 +105,7 @@ export const h2: Piece[] = [
     good: ['Contains nothing more unusual than a lamp filament', 'Gives a warm white light that filters can turn into any colour'],
     bad: ['Shows numerals only', 'Has filaments that burn out', 'Arrived just as LEDs made it unnecessary'],
     look: 'Compare it with the Nixie tube in this hall. Both are glass bulbs that show numerals. Here, however, each numeral consists of seven bars, and the light comes from a hot wire.',
-    sources: [wiki('Numitron')],
+    sources: [wiki('Numitron'), src('press', 'Wood, Numitron Readout, Popular Electronics, March 1970', 'https://www.worldradiohistory.com/Archive-Poptronics/70s/1970/Poptronics-1970-03.pdf')],
   },
   {
     id: 'plasma-panel', hall: 2, name: 'Plasma display panel',
@@ -120,7 +120,7 @@ export const h2: Piece[] = [
     good: ['Makes its own light in each cell, so blacks are deep and viewing angles are wide', 'Was flat and large long before liquid crystal panels could be'],
     bad: ['Uses a lot of power and is heavy', 'Keeps a lasting mark of a picture that stays on screen for a long time, called burn-in', 'Has cells that cannot be made very small, so small panels with fine detail are not possible'],
     look: 'The model shows the early kind: a square orange panel in a classroom terminal. A frame of invisible infrared beams around the screen lets the terminal detect where a finger is. Press the Go close to the dots button to see the individual dots.',
-    sources: [wiki('Plasma_display', 'Plasma display'), wiki('PLATO_(computer_system)', 'PLATO')],
+    sources: [wiki('Plasma_display', 'Plasma display'), wiki('PLATO_(computer_system)', 'PLATO'), src('lab', 'Plasma Display, Hall of Fame, Electrical and Computer Engineering, University of Illinois', 'https://ece.illinois.edu/about/history/hall-of-fame/plasmas'), src('paper', 'Arora, Bitzer, Slottow and Willson, The Plasma Display Panel: A New Device for Information Display and Storage, Coordinated Science Laboratory Report R-346 (1967)', 'https://core.ac.uk/download/158320107.pdf')],
   },
   {
     id: 'field-emission', hall: 2, name: 'Field emission display', aka: 'FED, the flat CRT',
@@ -135,7 +135,7 @@ export const h2: Piece[] = [
     good: ['Gives the fast, wide-angle picture of a tube and makes its own light', 'Is only a few millimetres deep'],
     bad: ['Has tips that wear under the voltages it needs', 'Needs spacers to hold a wide, thin vacuum gap open, and the vacuum must stay clean for years', 'Lost on cost to liquid crystal panels before it was ever sold in volume'],
     look: 'The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Glass spacers hold up the front plate, which has the phosphor on its underside. The lit dots count seconds.',
-    sources: [wiki('Field-emission_display', 'Field-emission display')],
+    sources: [wiki('Field-emission_display', 'Field-emission display'), src('lab', 'Final report of CRADA TSB-0731-93, Lawrence Livermore National Laboratory with Silicon Video Corporation (later Candescent Technologies)', 'https://www.osti.gov/servlets/purl/1418940'), src('paper', 'AVS 46th International Symposium (1999), paper FP+VT-MoM10, on the Candescent ThinCRT', 'https://www2.avs.org/symposium1999/Papers/Paper_FP+VT-MoM10.html'), src('patent', 'Spindt, Shoulders and Heynick, US patent 3,755,704', 'https://patents.google.com/patent/US3755704A/en')],
   },
   {
     id: 'eggcrate', hall: 2, name: 'Eggcrate display', aka: 'Lamp matrix',
