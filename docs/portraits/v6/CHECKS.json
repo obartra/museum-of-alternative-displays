@@ -1,0 +1,1317 @@
+{
+  "checked_at": "2026-11-22",
+  "repository_base": "c130715",
+  "people": 143,
+  "connected_portraits": 128,
+  "pending": 15,
+  "incoming_cases": 69,
+  "selected_in_round6": 54,
+  "already_in_current_main": 12,
+  "new_asset_files_vs_current_main": 42,
+  "original_assets": {
+    "6b182ac": {
+      "unchanged_portrait_files": 74
+    },
+    "origin/main": {
+      "unchanged_portrait_files": 86
+    }
+  },
+  "image_integrity": {
+    "decoded": 128,
+    "distinct_files": 128,
+    "distinct_sha256": 128,
+    "selected_manifest_hashes_match": 54,
+    "all_native_label_files_respect_small_flag": true
+  },
+  "checks": {
+    "npm run check": "passed",
+    "npm run build": "passed",
+    "npm run crawl": "674 pages,10 languages,0 things wrong",
+    "browser": "People desktop/mobile, all image loads,143 linked names,credits,no overflow,no JS/HTTP errors;walk WebGL canvas;offline gallery69/54/15,no external requests"
+  },
+  "identity_review": "54 newly selected drawings checked against named source/context and visible reference features. Earlier74 portraits are byte-for-byte unchanged; not all were re-researched in this pass. Not automated face recognition or a guarantee of perfect likeness.",
+  "rights": "Source rights recorded individually; reference-only study publication rights remain uncertain. User authorization to use those references is not copyright clearance. Source photos are private and omitted.",
+  "packaging": "128 WebP exports once each plus compact records; no original source photos,PDF scans,PNG masters,discarded art,software environments,models or earlier bundles",
+  "assets": [
+    {
+      "name": "Gino Valle",
+      "file": "people/gino-valle.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 3756,
+      "sha256": "a8f1afc42062d25f49d84f328ad4e298d008facfd7878dd13dc0b078a2c5fa99"
+    },
+    {
+      "name": "Paul Nipkow",
+      "file": "people/paul-nipkow.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15274,
+      "sha256": "b7b9beb293588c165c8ba5fc9205e574100d283cc2b0850c3e4146f6991fcd02"
+    },
+    {
+      "name": "John Logie Baird",
+      "file": "people/john-logie-baird.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 33764,
+      "sha256": "7acced3061df430d622098acf0e2590ae955222efb8a8892c933ced8b3361fa3"
+    },
+    {
+      "name": "Daniel Rozin",
+      "file": "people/daniel-rozin.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 3660,
+      "sha256": "9303d8644b86fe2eda487e0e59807d77a12daa5abc3b0f53853b04db35cd7c8e"
+    },
+    {
+      "name": "Daniel Leithinger",
+      "file": "people/daniel-leithinger.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19972,
+      "sha256": "b41c210c1da37447bc743f37318b5f5298c38efc2e1c651973b6ffa23f46c30c"
+    },
+    {
+      "name": "Sean Follmer",
+      "file": "people/sean-follmer.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20340,
+      "sha256": "9a8d0ab294294179917242253c95e58c89252496686ad347a347ae9c52677f02"
+    },
+    {
+      "name": "Hiroshi Ishii",
+      "file": "people/hiroshi-ishii.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 23560,
+      "sha256": "f5a990ce19d2504b5d145da9b4af570040468d0edd6ee1bb582cf3426f4bba94"
+    },
+    {
+      "name": "Klaus Peter Schönherr",
+      "file": "people/klaus-peter-schonherr.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2020,
+      "sha256": "228b0202fcb323f61b334a7cdc59823e6130ba56fc432a93785b92a5e42156f5"
+    },
+    {
+      "name": "James Bryce",
+      "file": "people/james-bryce.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 77338,
+      "sha256": "289fa6f848b6f4c1eb04886d6b40a280cd3977099aa7f8e94dc2388e26550c74"
+    },
+    {
+      "name": "Horst Hörtner",
+      "file": "people/horst-hortner.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 50272,
+      "sha256": "e31965086e92b1c2290703bf5cc038d4535e461cd190418d456d8489d83f0b5b"
+    },
+    {
+      "name": "Ferdinand Braun",
+      "file": "people/ferdinand-braun.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 28022,
+      "sha256": "e05f78fc1eebb1342f70f740a9b306d15ae2c071ad1ae6323d94353d314deb6c"
+    },
+    {
+      "name": "Kenjiro Takayanagi",
+      "file": "people/kenjiro-takayanagi.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 17148,
+      "sha256": "49e9c89c5ada6248ddf4ec9d63a6c9a9efae03f7e474d72f907a1654938bd803"
+    },
+    {
+      "name": "Philo Farnsworth",
+      "file": "people/philo-farnsworth.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19886,
+      "sha256": "6de890c35f0a14784f84216a452bc89b6acd5cf0ca4e3bdde7a99c4a33fb2242"
+    },
+    {
+      "name": "Elma Farnsworth",
+      "file": "people/elma-farnsworth.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2236,
+      "sha256": "cc48fdb8a51ad10365ffaf38df6d4408e794e89aad93915693d5dba87c06aa59"
+    },
+    {
+      "name": "Marie Van Brittan Brown",
+      "file": "people/marie-van-brittan-brown.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2218,
+      "sha256": "260c0c40b700bbf9be93e3a221e441746b0bf0ad9d90be651ef8327f8f023808"
+    },
+    {
+      "name": "Albert Brown",
+      "file": "people/albert-brown.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1900,
+      "sha256": "ddeffc8b19603003c74ce0de86a7be18288b93a24147eee66ebc3dbb328ba831"
+    },
+    {
+      "name": "Mark Dean",
+      "file": "people/mark-dean.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 63336,
+      "sha256": "76f5facfe6de42c85035a86aa8dffd7886f466540b1182723031888b71c6fa58"
+    },
+    {
+      "name": "Guillermo González Camarena",
+      "file": "people/guillermo-gonzalez-camarena.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2144,
+      "sha256": "5a36004363baf6fbc1fc154a7387736e761d8e86d37f46e910d2660238492e66"
+    },
+    {
+      "name": "Peter Goldmark",
+      "file": "people/peter-goldmark.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5138,
+      "sha256": "035cfcb8997dea74914d30950246b43ae6b699f037aa40fd3d2a8b344f352edb"
+    },
+    {
+      "name": "Robert H. Anderson",
+      "file": "people/robert-h-anderson.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 63272,
+      "sha256": "ad2ea9ba22ba4695f09b3ebb29bef89b4128df82d46829bfd47cd76de3ceca92"
+    },
+    {
+      "name": "Andrew Haeff",
+      "file": "people/andrew-haeff.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 16060,
+      "sha256": "e2e5b8ea788b284184b524eaf22a1ab944fb49e04cbc68bad7aa19e058453a78"
+    },
+    {
+      "name": "David Hagelbarger",
+      "file": "people/david-hagelbarger.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1964,
+      "sha256": "f60438ced0942152705daad810a204734a878c75d3dc663121db85370abc604a"
+    },
+    {
+      "name": "Tadashi Nakamura",
+      "file": "people/tadashi-nakamura.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 82256,
+      "sha256": "38ccb718648da0e07e41e24a2f0be6c5d320df3488dfce32581bb4e9fa85da69"
+    },
+    {
+      "name": "Tadashi Sasaki",
+      "file": "people/tadashi-sasaki.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5412,
+      "sha256": "3bfba20b4742a89411f64ed0847198aa376b5a1bf26d040fbf1967ec80703e56"
+    },
+    {
+      "name": "Lewis Latimer",
+      "file": "people/lewis-latimer.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2046,
+      "sha256": "8a3dfffb5271babe18fa2fb131e66d68b6061eb54fa48871c31fd5a9e567dade"
+    },
+    {
+      "name": "Donald Bitzer",
+      "file": "people/donald-bitzer.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 17984,
+      "sha256": "3cd3711d18da0cfee29a2375b1748dfc999dd3102d0c6590def094b24623162c"
+    },
+    {
+      "name": "Gene Slottow",
+      "file": "people/gene-slottow.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 21472,
+      "sha256": "6cfd71d42b2f16dbd9943512faa064e15c0e4428222feb57e11d20f11869106a"
+    },
+    {
+      "name": "Robert Willson",
+      "file": "people/robert-willson.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18638,
+      "sha256": "a3d9eecce356487d1338141093a769a2f93ea4f64fb6f50ac68b897610eabf27"
+    },
+    {
+      "name": "Tsutae Shinoda",
+      "file": "people/tsutae-shinoda.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5138,
+      "sha256": "59fe47626cfce18f253f435c977a175c16b36667f52ca4517b0d78c99b89e29b"
+    },
+    {
+      "name": "Charles Spindt",
+      "file": "people/charles-spindt.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15442,
+      "sha256": "8b6c1c7f973885ed309cd219a8d525249e08c5ef85c7da1013de6b647596ab67"
+    },
+    {
+      "name": "Kenneth Shoulders",
+      "file": "people/kenneth-shoulders.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 69180,
+      "sha256": "55e61573870698cc686a0fcafe0f5dd030d7de7b478c51a691c275cdbe7bce76"
+    },
+    {
+      "name": "Louis Heynick",
+      "file": "people/louis-heynick.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1542,
+      "sha256": "3f4043d696d06e42d1ffc7f94cfa8e08c8652fa4859d92031eaab8bb84a39f47"
+    },
+    {
+      "name": "Akintunde Akinwande",
+      "file": "people/akintunde-akinwande.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1912,
+      "sha256": "7a6b7ae4d3563414d554629efcef98315d6acd0f58825bab0d8d5cf354fea246"
+    },
+    {
+      "name": "Howard Borden",
+      "file": "people/howard-borden.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 12914,
+      "sha256": "dca2ccf136216b9a146e5326219762d59415fd4df7162a106bf8b6251f4f6357"
+    },
+    {
+      "name": "Gerald Pighini",
+      "file": "people/gerald-pighini.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2000,
+      "sha256": "dbe275baa06b3f88f0eb97580ac850de36c675fc506e35c994e69531130e1854"
+    },
+    {
+      "name": "Isamu Akasaki",
+      "file": "people/isamu-akasaki.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 23152,
+      "sha256": "7a2ef9836673bd605cc1decf6c0a59a9463741a099d59b6812702bae69811eb7"
+    },
+    {
+      "name": "Hiroshi Amano",
+      "file": "people/hiroshi-amano.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 22180,
+      "sha256": "88c305e5660088ae807e93f7e7eaf0c7969cde9bf2d6979271c28d91dfbd2543"
+    },
+    {
+      "name": "Shuji Nakamura",
+      "file": "people/shuji-nakamura.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18226,
+      "sha256": "32a0f4fa18ccebe23736742f49f0bb78dbb277b40ba5d12273006b63c01660fb"
+    },
+    {
+      "name": "Ching Wan Tang",
+      "file": "people/ching-wan-tang.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5556,
+      "sha256": "99c3d97cce663e52660a85fe32c2e5af44ec51ae86140935fc934d0d39f92bd7"
+    },
+    {
+      "name": "Steven Van Slyke",
+      "file": "people/steven-van-slyke.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18398,
+      "sha256": "d7067ed9a3b99b3a1ece119e2ae4ab979600e53847be105043af69529f413863"
+    },
+    {
+      "name": "Hongxing Jiang",
+      "file": "people/hongxing-jiang.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20812,
+      "sha256": "21f927d254259209e0d38eca5920ab5b5172a042b8fff29fc7841b472ad85645"
+    },
+    {
+      "name": "Jingyu Lin",
+      "file": "people/jingyu-lin.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20954,
+      "sha256": "b4b13652556d3360747a7f4740e8a7eff836a74db9d4924141dd70bf32b02099"
+    },
+    {
+      "name": "Vicki Colvin",
+      "file": "people/vicki-colvin.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 25228,
+      "sha256": "4c8b3c9822b36b7cdd8859cb66ca6231cbae5770d0ef82e4d1d6062193becfb4"
+    },
+    {
+      "name": "Paul Alivisatos",
+      "file": "people/paul-alivisatos.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19076,
+      "sha256": "63e4057eb861bdea5709db6a21d44eb23622b91fad6bdf70ad3ae1720cd783db"
+    },
+    {
+      "name": "Aleksey Yekimov",
+      "file": "people/aleksey-yekimov.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20244,
+      "sha256": "afecb5dfa59baf7ddacb7054727e33d88fead1c57f1acb8c75d0dd70f1eda0c2"
+    },
+    {
+      "name": "Louis Brus",
+      "file": "people/louis-brus.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 17620,
+      "sha256": "86ca8caafc2dcd97e9380266861e65d472c21d67d7f05b435a23f704de8aa809"
+    },
+    {
+      "name": "Moungi Bawendi",
+      "file": "people/moungi-bawendi.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19080,
+      "sha256": "08f36998efa3f4ebb6451997755e7f01bc4249177e5fa994b0e290b963059d27"
+    },
+    {
+      "name": "Xiaogang Peng",
+      "file": "people/xiaogang-peng.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2150,
+      "sha256": "7d0e9e880ce22085ed65919b73b10e3cd97ed718e240030bdc85de63132af0dc"
+    },
+    {
+      "name": "Yizheng Jin",
+      "file": "people/yizheng-jin.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1904,
+      "sha256": "831ae9b6aaba99df37d2b63f923f28428defd543d74850987acf38897bdc7888"
+    },
+    {
+      "name": "Tuomo Suntola",
+      "file": "people/tuomo-suntola.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19582,
+      "sha256": "e4d17581330580e91c98209a3b2a1a58f840a8a88cd18d87d3e560da6011106e"
+    },
+    {
+      "name": "Dawon Kahng",
+      "file": "people/dawon-kahng.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1982,
+      "sha256": "e8716262ee7ad8dc47579a4bf642e5afd99c2e1bcb903a905a405c0af07beb5f"
+    },
+    {
+      "name": "Nicholas Sheridon",
+      "file": "people/nicholas-sheridon.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2004,
+      "sha256": "deb6823adf74d1aa6f0aaa2dae91b1cddb066aa9e4c084cfea1788ce10ee78b6"
+    },
+    {
+      "name": "Gemma Frisius",
+      "file": "people/gemma-frisius.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 112640,
+      "sha256": "b5bbe25b576172234dc45636ecdd802a399c22a292714803ffd6f05fff7adf7b"
+    },
+    {
+      "name": "Daniele Barbaro",
+      "file": "people/daniele-barbaro.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 112550,
+      "sha256": "7bfb0f362fe4ff71bf34dacd7f60076f7873da2a7dd828367c642ce89934c472"
+    },
+    {
+      "name": "Johannes Kepler",
+      "file": "people/johannes-kepler.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 91246,
+      "sha256": "4db2f58ee5694efaab220ddbbd0db3060d83eb281f9916d64839b33854fec016"
+    },
+    {
+      "name": "François Dominique Séraphin",
+      "file": "people/francois-dominique-seraphin.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 88900,
+      "sha256": "1e28e997995d725bb78ccccc3dbba6b43d2881d5760303a98ff60abc091065b7"
+    },
+    {
+      "name": "Henri Rivière",
+      "file": "people/henri-riviere.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2034,
+      "sha256": "275f982b045189794d4c29c4e80163286f7e4cf8a459989d277103ef26653c7d"
+    },
+    {
+      "name": "Kara Walker",
+      "file": "people/kara-walker.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 62404,
+      "sha256": "d43242ddfe388f1e760b2ab4a3a3fe219cb779a9b8ce7aa864b6078eb583a8b9"
+    },
+    {
+      "name": "Martin Schadt",
+      "file": "people/martin-schadt.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 22104,
+      "sha256": "729da6878558c60480f7155e9ef19ae4fedb20e27b177593907ea3c6cf087b9b"
+    },
+    {
+      "name": "Wolfgang Helfrich",
+      "file": "people/wolfgang-helfrich.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 24832,
+      "sha256": "029af87fa3b491e88814be34fd2d6274407f174d2baeb4737980a27abc720526"
+    },
+    {
+      "name": "James Fergason",
+      "file": "people/james-fergason.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 23394,
+      "sha256": "e52e9a8dca05e8cb5761b8f42590ec65332c30d0b88b1d4b7674c29f329c3271"
+    },
+    {
+      "name": "George Heilmeier",
+      "file": "people/george-heilmeier.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20114,
+      "sha256": "8ae773d748fd3adb57749696becce5e635fe3267fbf5eed693eda6f6b47fe11e"
+    },
+    {
+      "name": "Sivaramakrishna Chandrasekhar",
+      "file": "people/sivaramakrishna-chandrasekhar.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 62870,
+      "sha256": "41c3ece3ecb158ee05a79ac4eb47cf4bf050f2813958ef43418fbcafc11bccc8"
+    },
+    {
+      "name": "B. K. Sadashiva",
+      "file": "people/b-k-sadashiva.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1816,
+      "sha256": "99b29d5e30f4a414059c05f71677b6c7132c98f7f71b2708690ece39609c6719"
+    },
+    {
+      "name": "K. A. Suresh",
+      "file": "people/k-a-suresh.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1970,
+      "sha256": "ef1859ca31caf2a4d5aa1731b30ce48c11787ebc6e21f32be9d2128ca384d6be"
+    },
+    {
+      "name": "Mohamed Atalla",
+      "file": "people/mohamed-atalla.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1868,
+      "sha256": "e0a0ad7f5cca3046aa0f4e30ea8c0c700fbb3fa150d6bf456f407c39c84c2bab"
+    },
+    {
+      "name": "Larry Hornbeck",
+      "file": "people/larry-hornbeck.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 4704,
+      "sha256": "83b8cf946d7aa74696496a9e426595a88403e97ce23fcce1d2ddb6e78ea4f348"
+    },
+    {
+      "name": "Fritz Fischer",
+      "file": "people/fritz-fischer.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 31394,
+      "sha256": "51636e76a31248a4fd3fb1e964184abde20a33babb5726b91a18f3c8761ba3e2"
+    },
+    {
+      "name": "Joseph Ostoja-Kotkowski",
+      "file": "people/joseph-ostoja-kotkowski.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5116,
+      "sha256": "03b70450f0b6c4cd10acad418cd89a9910c7d58b9ab6447db000c8aa510ec668"
+    },
+    {
+      "name": "Elsa Garmire",
+      "file": "people/elsa-garmire.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18952,
+      "sha256": "765f880807c791bf19f2f17fd7b5e711996e0ab66aa05003832835412df3ffc5"
+    },
+    {
+      "name": "Ivan Dryer",
+      "file": "people/ivan-dryer.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5648,
+      "sha256": "3c12ba1b427ffac5b21dbaa93aeb1efa51e7f1bf5ed7f4e14305787c82bc9722"
+    },
+    {
+      "name": "Leota Toombs",
+      "file": "people/leota-toombs.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5614,
+      "sha256": "50fc84ba554fdaa39bc970e518baefc92e2be5f13ff350fc7809147c0f347f5a"
+    },
+    {
+      "name": "Michael Naimark",
+      "file": "people/michael-naimark.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 24414,
+      "sha256": "ab947e8a2597fead42e143877cc2fca5b606c362895cf3acf7523931b88bb709"
+    },
+    {
+      "name": "Ramesh Raskar",
+      "file": "people/ramesh-raskar.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 21998,
+      "sha256": "7ed97a589469156ff3403dc2e26e58be6296be933b14ad00ba8bdb6d37325f27"
+    },
+    {
+      "name": "Greg Welch",
+      "file": "people/greg-welch.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 22514,
+      "sha256": "b27d7f07c0c431d173487d566992de5828fd5d83ced5a9c9575904cb6cb7d742"
+    },
+    {
+      "name": "Kok-Lim Low",
+      "file": "people/kok-lim-low.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5538,
+      "sha256": "ea935354aea61e594125d002336f6f210fbbcdeed4a4aaf504b47a081feeec40"
+    },
+    {
+      "name": "Deepak Bandyopadhyay",
+      "file": "people/deepak-bandyopadhyay.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 70894,
+      "sha256": "5b69cf3d53f65f20114b60a7d616b0e03d5766216c07a865f40cfb9179c6053c"
+    },
+    {
+      "name": "Lanny Smoot",
+      "file": "people/lanny-smoot.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 76926,
+      "sha256": "447586c7f650b6fb89556769a8219463c993b244c78686b3ae9c3a34c1fd3105"
+    },
+    {
+      "name": "Barrett Comiskey",
+      "file": "people/barrett-comiskey.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 69500,
+      "sha256": "8732c06e513b61abf7c4082ddb376b853c0adbd9ec079fb6461aa5f45c1b6c43"
+    },
+    {
+      "name": "J. D. Albert",
+      "file": "people/j-d-albert.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 82612,
+      "sha256": "cac8f3f175023dc6c900e71e90575f6e37201113c48415938d4bf913855861ef"
+    },
+    {
+      "name": "Joseph Jacobson",
+      "file": "people/joseph-jacobson.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 91618,
+      "sha256": "1ff874d45e3948a6ddc6b0b9cb53a7b234737e26f82a78cf39929decc62d5c41"
+    },
+    {
+      "name": "John Rogers",
+      "file": "people/john-rogers.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1878,
+      "sha256": "740ada93b681d2ea59633425431cc779e60b7d60d6eb32e3ea32a8826db50346"
+    },
+    {
+      "name": "Zhenan Bao",
+      "file": "people/zhenan-bao.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 84840,
+      "sha256": "d175e7de190b0c5902cf0bf7eb66a53b085dd82324464bbd892ae484f7cbfd28"
+    },
+    {
+      "name": "Deng-Ke Yang",
+      "file": "people/deng-ke-yang.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 17360,
+      "sha256": "bf831a10f3188188f00e9e387567e258a54547b6165fad7c07b40a796dc7a7f9"
+    },
+    {
+      "name": "J. William Doane",
+      "file": "people/j-william-doane.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18660,
+      "sha256": "e7c87eef721a918b9230cc059f90499cb01b15c19c9937b5f32b7c4e87b26d35"
+    },
+    {
+      "name": "Gerardo Beni",
+      "file": "people/gerardo-beni.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 74610,
+      "sha256": "d5cca3de68be2698f196c38e8557cceb52f5990262381b33258e4e3e2692f288"
+    },
+    {
+      "name": "Susan Hackwood",
+      "file": "people/susan-hackwood.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 22668,
+      "sha256": "70fa496cef3cc3de68c9567b379290496203ab05c3e6339f2c1ed6cff089fbb7"
+    },
+    {
+      "name": "Robert Hayes",
+      "file": "people/robert-hayes.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2288,
+      "sha256": "fdedd931e949496d6c8313af9e3faccefad07a2405d96b852dbb5ed745f62a9e"
+    },
+    {
+      "name": "Johan Feenstra",
+      "file": "people/johan-feenstra.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18118,
+      "sha256": "4378f736cc44a06957f02bc0d25487046ccbf9ceb740e3ea514252a8ab71ac52"
+    },
+    {
+      "name": "Mark Miles",
+      "file": "people/mark-miles.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18446,
+      "sha256": "4cf3bd08fb6efc95cc5527004b65972e2c6f9bd2198f0a0965bf49954772c9bc"
+    },
+    {
+      "name": "S. K. Deb",
+      "file": "people/s-k-deb.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1948,
+      "sha256": "576510fea883be026c970b8e13225dd7fc520125d812be27161307574be9c789"
+    },
+    {
+      "name": "Paula Hammond",
+      "file": "people/paula-hammond.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 75590,
+      "sha256": "820d0216b499501dc3d0752bf2bdbcfde69cfeebc6a4d153c61ea2430ffe9727"
+    },
+    {
+      "name": "Dean DeLongchamp",
+      "file": "people/dean-delongchamp.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 62956,
+      "sha256": "ee7229140f829abd9b6565ba03e820ab061ce2d69932c908f062164442cee808"
+    },
+    {
+      "name": "Henry Dircks",
+      "file": "people/henry-dircks.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19546,
+      "sha256": "fd1cbc4c39fc058851b01b621d846ccdcfe8b184efd3c3c3eec09c52b3d98805"
+    },
+    {
+      "name": "John Henry Pepper",
+      "file": "people/john-henry-pepper.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15934,
+      "sha256": "0676e64b8c7901f7c002ccc0c6d7504816a8faf011bdfe4d15fa023ac770ea2a"
+    },
+    {
+      "name": "Valerie Thomas",
+      "file": "people/valerie-thomas.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 25640,
+      "sha256": "ef63a6c46351c3c63a702c270b0e1bb4bced2432eae1846af560d1ad86bdc3dd"
+    },
+    {
+      "name": "Karri Palovuori",
+      "file": "people/karri-palovuori.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15276,
+      "sha256": "391ef415a186f4d8d714654179eb1493aa73921f4205b2b20a1c7886b0fca7ef"
+    },
+    {
+      "name": "Ismo Rakkolainen",
+      "file": "people/ismo-rakkolainen.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15900,
+      "sha256": "c9b186cd94245f544d15f1ed817ea9794a43e0eb3cb03c225e105ccae634b7e4"
+    },
+    {
+      "name": "Joseph Plateau",
+      "file": "people/joseph-plateau.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 18386,
+      "sha256": "47c2fc302170996f3199ddcb2f5ba922f5e2f46b129bce703ee1a9b98c577692"
+    },
+    {
+      "name": "Gregg Favalora",
+      "file": "people/gregg-favalora.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 74618,
+      "sha256": "5bf490fc10e3981f64827640443b416b5d5baa099b631c83f53a15828b7eb91b"
+    },
+    {
+      "name": "Elizabeth Downing",
+      "file": "people/elizabeth-downing.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2218,
+      "sha256": "219713184d2a0e179017f55efcf98d15c4bed5eeb0c1193aa70e45b360600ea2"
+    },
+    {
+      "name": "Lambertus Hesselink",
+      "file": "people/lambertus-hesselink.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19882,
+      "sha256": "a94d14c909e11b06d10cfc281d95340010f71ad54f2b8bc1e7962cfc370c6df8"
+    },
+    {
+      "name": "John Ralston",
+      "file": "people/john-ralston.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 88040,
+      "sha256": "148912441b6a2315c62117fd05993bf304dbd61df1460f1a682483b88031dad7"
+    },
+    {
+      "name": "Roger Macfarlane",
+      "file": "people/roger-macfarlane.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1972,
+      "sha256": "f4ad174aace12a2935beb6db8d528aed6b17eb2ad2e82e1aae3ba832023d98a5"
+    },
+    {
+      "name": "Daniel Smalley",
+      "file": "people/daniel-smalley.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 22584,
+      "sha256": "f006fbfa951d4e28bc391f418e19e5634d04588272e3a0ba37e4f357422e38c9"
+    },
+    {
+      "name": "Ryuji Hirayama",
+      "file": "people/ryuji-hirayama.webp",
+      "dimensions": [
+        168,
+        210
+      ],
+      "bytes": 5854,
+      "sha256": "c946281336e8fe2e14335439a684476be2b009e769a6e1b34cb69599a0f72982"
+    },
+    {
+      "name": "Diego Martinez Plasencia",
+      "file": "people/diego-martinez-plasencia.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 14212,
+      "sha256": "4f92017ca766d57bd748587ef3ebcbac0d8d8955f03dd0941540020b76adfa21"
+    },
+    {
+      "name": "Nobuyuki Masuda",
+      "file": "people/nobuyuki-masuda.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 80814,
+      "sha256": "89087950af1f27b58e3eaf029992990b7b04f5579f700c75636c8e4d25db16dd"
+    },
+    {
+      "name": "Sriram Subramanian",
+      "file": "people/sriram-subramanian.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20374,
+      "sha256": "ca53230816c8d04876ba91d64cb4c025b2c22ad3a28985773b2233ceaaabb073"
+    },
+    {
+      "name": "Yoichi Ochiai",
+      "file": "people/yoichi-ochiai.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 15634,
+      "sha256": "6657aa7d5fb150e0983c79c5160499ea8c6f80e1b2d7e8a49dcc94eb3ca54e69"
+    },
+    {
+      "name": "Charles Wheatstone",
+      "file": "people/charles-wheatstone.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 17778,
+      "sha256": "7b690d3e20d9477e03bd31cf6d42430f3ef4771ac8b233e96d2b7c0bb455c181"
+    },
+    {
+      "name": "Charles Harrison",
+      "file": "people/charles-harrison.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1798,
+      "sha256": "9fcce26eca8eab19d83e5337c179401dd6fb64c6b1ac956de13f4e2c3ec619d4"
+    },
+    {
+      "name": "Frederic Ives",
+      "file": "people/frederic-ives.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19836,
+      "sha256": "90361d0045997e4ff3d8e502242a869bcd56f4422be3ecf7587e997040a8fc61"
+    },
+    {
+      "name": "Walter Hess",
+      "file": "people/walter-hess.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20310,
+      "sha256": "35b6ceb3079082cfcd40e587833b315d72d517dd0b7a9779d5294a9493a8b46d"
+    },
+    {
+      "name": "Hank Willis Thomas",
+      "file": "people/hank-willis-thomas.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 84010,
+      "sha256": "516be01aaba9be34c8335c246237f1b1353ab6427cf1e5ac01ea812890aa2b9c"
+    },
+    {
+      "name": "Gabriel Lippmann",
+      "file": "people/gabriel-lippmann.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20924,
+      "sha256": "e72e17540d314c84229a1b34203192a00b0904a9c27dff4c28a38677d3bb93ed"
+    },
+    {
+      "name": "Dennis Gabor",
+      "file": "people/dennis-gabor.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 36998,
+      "sha256": "17b44a226ebb852dc66d1fe9789f388d6a7df4569046acec759026bac01079e2"
+    },
+    {
+      "name": "Emmett Leith",
+      "file": "people/emmett-leith.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 27318,
+      "sha256": "e9db1cd38eb5dffe05a532e851e81472d193d80375ff1a9e7dc3c2c5aa11c371"
+    },
+    {
+      "name": "Juris Upatnieks",
+      "file": "people/juris-upatnieks.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 26386,
+      "sha256": "356a7fb29c48fcb4bd7db8dae523b939453f616430b9eed551bc28db7e4ac008"
+    },
+    {
+      "name": "Margaret Benyon",
+      "file": "people/margaret-benyon.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19980,
+      "sha256": "68a37dc9ccce4f65386e2abfc4a08096a7e3296dafc560bdda05f5d5998e362f"
+    },
+    {
+      "name": "Stephen Benton",
+      "file": "people/stephen-benton.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 101008,
+      "sha256": "c7f56e027f5660139322e348d864f1a688c7625330f6547f3a4de683e0a69fa1"
+    },
+    {
+      "name": "Mary Lou Jepsen",
+      "file": "people/mary-lou-jepsen.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 20776,
+      "sha256": "636f0acd4ab7ea3992d7a405917323b40ffeadce5d2b26f1483f89c545aa1447"
+    },
+    {
+      "name": "Ali Javan",
+      "file": "people/ali-javan.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 1920,
+      "sha256": "bca8651cc82732b43ed1ef1ace9a322aee25163292e48aa33bed2762244022fb"
+    },
+    {
+      "name": "Nasser Peyghambarian",
+      "file": "people/nasser-peyghambarian.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 82548,
+      "sha256": "764dcab7008834e194947759a7543500bba98e32294a9d9a2025d4b720044626"
+    },
+    {
+      "name": "Pierre-Alexandre Blanche",
+      "file": "people/pierre-alexandre-blanche.webp",
+      "dimensions": [
+        84,
+        105
+      ],
+      "bytes": 2068,
+      "sha256": "700dc9a203b385ffc9e2cf4af39d5f827e8ca878b62ef7a3cf50383ec3da0302"
+    },
+    {
+      "name": "Ivan Sutherland",
+      "file": "people/ivan-sutherland.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 21246,
+      "sha256": "b4396e5dba451db723f57e42cdfdbd3a1a4ab297fd8b3353bd0e291daec2e039"
+    },
+    {
+      "name": "Bob Sproull",
+      "file": "people/bob-sproull.webp",
+      "dimensions": [
+        336,
+        420
+      ],
+      "bytes": 19916,
+      "sha256": "fca2e2c77d6943f03cd09d12f5e971a00d9302f528977b565c1d5942c7dea97b"
+    },
+    {
+      "name": "Samuel Achilefu",
+      "file": "people/samuel-achilefu.webp",
+      "dimensions": [
+        600,
+        750
+      ],
+      "bytes": 79258,
+      "sha256": "ead41e2c2179284e624c1e61552b47b59d1d0d34d044d16789c2691d9c11e23e"
+    }
+  ]
+}
