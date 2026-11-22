@@ -15,7 +15,7 @@ export const h1: Piece[] = [
     good: ['Is as easy to read as print, even in full daylight and across a station hall', 'Holds its message with no power at all', 'Announces every change by its sound'],
     bad: ['Shows only what is printed on its flaps', 'Takes seconds, not milliseconds, to change a row', 'Has moving parts that wear and need maintenance by hand'],
     look: 'Look down into the open top of the case. On each drum, the waiting flaps fan out behind the two that face you. The last two positions count seconds, so one flap falls every second.',
-    sources: [wiki('Split-flap_display'), wiki('Solari_di_Udine'), src('archive', 'Cifra 5 clock, ADI Design Museum', 'https://www.adidesignmuseum.org/en/schede/cifra-5-clock/')],
+    sources: [wiki('Split-flap_display'), wiki('Solari_di_Udine'), src('archive', 'Cifra 5 electro-mechanical clock, ADI Design Museum', 'https://www.adidesignmuseum.org/en/collection/cifra-5-electro-mechanical-clock/')],
   },
   {
     id: 'flip-disc', hall: 1, name: 'Flip-disc display', aka: 'Flip-dot',
