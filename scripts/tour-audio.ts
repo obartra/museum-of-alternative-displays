@@ -22,6 +22,9 @@
  *   - every part is brought to the same loudness, with its peaks held under a limit.
  * A part is recorded again only when its words, its voice, the model or this delivery changed.
  *
+ * With each recording goes a list of times, one for each caption of its words (src/data/captions.ts), worked out
+ * from where its paragraphs were put and from the pauses of the voice inside them (scripts/tour/cues.ts).
+ *
  * The recordings go to public/tour/<tour>/<language>/ and the list of them to src/data/tour-audio.json, with the
  * length of each, from which the site says how long a tour is. The site offers a recording only beside the very
  * words it was made from.
@@ -32,6 +35,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { mark, spoken, tours } from '../src/data/tours';
 import { LANGS, type Locale } from '../src/i18n/types';
+import { cuesOf, listText } from './tour/cues';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 // ELEVENLABS_API_URL is for an account kept in another region, and for trying the script against a stand-in
@@ -61,7 +65,7 @@ if (!served) { console.error(`tour/voices.json: the format ${config.format} is n
 /** A mark of the way the paragraphs are put together. When it changes, every part is made again. */
 const recipe = mark(`4 ${SOURCE} ${JSON.stringify(D)}`);
 const listFile = `${ROOT}src/data/tour-audio.json`;
-type Kept = { file: string; mark: string; voice: string; model: string; recipe?: string; seconds?: number };
+type Kept = { file: string; mark: string; voice: string; model: string; recipe?: string; seconds?: number; cues?: number[]; rests?: number[] };
 const list = (existsSync(listFile) ? JSON.parse(readFileSync(listFile, 'utf8')) : {}) as Record<string, Record<string, Record<string, Kept>>>;
 /** The code ElevenLabs uses for a language of the site. */
 const spokenAs = (code: string) => (code === 'zh-hant' ? 'zh' : code);
@@ -141,10 +145,11 @@ const TRIM = 'silenceremove=start_periods=1:start_duration=0:start_threshold=-50
  * Put the paragraphs of one part together: each cut back to the voice, slowed if it ran, brought to the loudness
  * asked for, and set between the silences. Returns what was made, for the report.
  */
-async function assemble(raw: string[], texts: string[], stop: boolean, out: string, work: string): Promise<{ long: number; spoken: number; pace: number; tempo: number; loud: number; peak: number }> {
+async function assemble(raw: string[], texts: string[], stop: boolean, out: string, work: string): Promise<{ long: number; spoken: number; pace: number; tempo: number; loud: number; peak: number; spans: [number, number][] }> {
   const cut: string[] = [], clean: string[] = [], gains: number[] = [];
   const count = texts.reduce((n, t) => n + words(t), 0);
   let before = 0, speech = 0;
+  const lengths: number[] = [];
   for (const [i, file] of raw.entries()) {
     cut.push(`${work}/cut-${i}.wav`);
     await tool('ffmpeg', ['-i', file, '-af', `aformat=channel_layouts=mono,aresample=${served![1]},${TRIM},areverse,${TRIM},areverse,highpass=f=70`, cut[i]]);
@@ -158,7 +163,8 @@ async function assemble(raw: string[], texts: string[], stop: boolean, out: stri
     const heard = (await level(done)).loud;
     if (!Number.isFinite(heard) || heard < -60) throw new Error(`paragraph ${i + 1} came back silent`);
     clean.push(done); gains.push(D.loudness - heard);
-    speech += await seconds(done);
+    lengths.push(await seconds(done));
+    speech += lengths[i];
   }
   const limit = (10 ** (D.peak / 20)).toFixed(4);
   const build = async (more: number) => {
@@ -170,7 +176,11 @@ async function assemble(raw: string[], texts: string[], stop: boolean, out: stri
   // holding the peaks down takes a little loudness away: what is missing is put back, once
   let got = await build(0);
   if (Math.abs(got.loud - D.loudness) > 0.4) got = await build(Math.max(-3, Math.min(3, D.loudness - got.loud)));
-  return { long: await seconds(out), spoken: spokenAt, pace: (count / speech) * 60, tempo: tempo < 0.985 ? tempo : 1, loud: got.loud, peak: got.peak };
+  // where each paragraph is spoken in what was made: the captions are timed from this
+  const spans: [number, number][] = [];
+  let at = D.lead;
+  lengths.forEach((long, i) => { spans.push([at, at + long]); at += long + gap(i, lengths.length, stop); });
+  return { long: await seconds(out), spoken: spokenAt, pace: (count / speech) * 60, tempo: tempo < 0.985 ? tempo : 1, loud: got.loud, peak: got.peak, spans };
 }
 
 if (!dry) {
@@ -319,8 +329,12 @@ for (const lang of langs) {
     try { got = await assemble(raw, x.text, x.stop, `${dir}/${file}`, work); }
     catch (err) { note(`${lang}, ${x.part}: ${(err as Error).message}`); refusedFor.push(lang); rmSync(`${dir}/${file}`, { force: true }); continue; }
     if (was && was.file !== file) rmSync(`${dir}/${was.file}`, { force: true });
-    ((list[x.tour] ??= {})[lang] ??= {})[x.part] = { file, mark: m, voice, model: config.model, recipe, seconds: Math.round(got.long * 10) / 10 };
-    writeFileSync(listFile, JSON.stringify(list, null, 1) + '\n');
+    // when each caption of these words begins. A recording without the times is still a recording: it plays without captions
+    let times: { cues?: number[]; rests?: number[] } = {};
+    try { const c = await cuesOf(`${dir}/${file}`, x.text, got.long, got.spans); times = { cues: c.cues, rests: c.rests }; }
+    catch (err) { note(`${lang}, ${x.part}: no times for its captions (${(err as Error).message})`); }
+    ((list[x.tour] ??= {})[lang] ??= {})[x.part] = { file, mark: m, voice, model: config.model, recipe, seconds: Math.round(got.long * 10) / 10, ...times };
+    writeFileSync(listFile, listText(list));
     made++;
     rows.push(`| ${lang} | ${x.part} | ${x.text.length} | ${got.long.toFixed(1)} s | ${Math.round(got.spoken)} | ${got.tempo < 1 ? got.tempo.toFixed(2) : ''} | ${Math.round(got.pace)} | ${got.loud.toFixed(1)} | ${got.peak.toFixed(1)} |`);
     total += got.long;

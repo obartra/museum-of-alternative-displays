@@ -164,6 +164,13 @@ most. Every part is brought to the same loudness, with its peaks under a limit. 
 `ffmpeg`, which the workflow installs. Where the times cannot be had, each paragraph is
 spoken by itself.
 
+With each recording the script keeps the time at which each caption of its words begins
+(`cues`) and the time at which the voice ends each paragraph (`rests`). The captions are the
+sentences of a part, a long one in pieces that fit on two lines (`src/data/captions.ts`). The
+times come from where the script put the paragraphs and from the pauses of the voice inside
+them (`scripts/tour/cues.ts`). `npx tsx scripts/tour-cues.ts` works them out for recordings
+that are already there. It needs `ffmpeg` and no key.
+
 The site offers a recording only beside the very words it was made from. When a part is
 reworded it falls silent until the workflow is run again, and only that part is recorded
 again. A change to the voice, the model or the delivery records every part again. The words
