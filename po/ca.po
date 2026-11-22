@@ -1119,103 +1119,109 @@ msgstr "Segueix aquest recorregut"
 #. Interface.
 msgctxt "ui.tour.label"
 msgid "Guided tour"
-msgstr ""
+msgstr "Visita guiada"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.take"
 msgid "Take the guided tour"
-msgstr ""
+msgstr "Fes la visita guiada"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.tour.spoken"
+msgid "With a spoken guide, about {n} minutes"
+msgstr "Amb audioguia, uns {n} minuts"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
-msgstr ""
+msgstr "Fes la visita pels àmbits"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.start"
 msgid "Start the tour"
-msgstr ""
+msgstr "Comença la visita"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.leave"
 msgid "Leave the tour"
-msgstr ""
+msgstr "Surt de la visita"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.prev"
 msgid "Previous stop"
-msgstr ""
+msgstr "Parada anterior"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.next"
 msgid "Next stop"
-msgstr ""
+msgstr "Parada següent"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.play"
 msgid "Hear the guide"
-msgstr ""
+msgstr "Escolta la guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.pause"
 msgid "Pause the guide"
-msgstr ""
+msgstr "Posa la guia en pausa"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.sound"
 msgid "Audio guide"
-msgstr ""
+msgstr "Audioguia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
-msgstr ""
+msgstr "Les parades de la visita"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.stop"
 msgid "Stop {n} of {total}"
-msgstr ""
+msgstr "Parada {n} de {total}"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.at"
 msgid "{piece}, hall {n}"
-msgstr ""
+msgstr "{piece}, àmbit {n}"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.listen"
 msgid "Listen to the guide"
-msgstr ""
+msgstr "Escolta la guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.words"
 msgid "What the guide says"
-msgstr ""
+msgstr "El que diu la guia"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.whole"
 msgid "The whole tour on one page"
-msgstr ""
+msgstr "Tota la visita en una pàgina"
 
 #: interface
 #. About page.
 msgctxt "ui.about.tour"
 msgid "The guided tour was written for this museum. It adds no facts to the labels, only the thread from one to the next. Where it can be heard, the voice is synthetic: it is made with ElevenLabs from the words shown beside it."
-msgstr ""
+msgstr "La visita guiada s'ha escrit per a aquest museu. No afegeix cap dada a les fitxes, només el fil que va de l'una a l'altra. Allà on es pot escoltar, la veu és sintètica: es genera amb ElevenLabs a partir del text que es mostra al costat."
 
 #: interface
 #. Page shown for an address that does not exist.
@@ -7971,286 +7977,286 @@ msgstr "cap al {n}"
 #. Title of a guided tour.
 msgctxt "tour.women.title"
 msgid "The green line"
-msgstr ""
+msgstr "La línia verda"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
 msgid "A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Una visita guiada pels set àmbits. Deu pantalles, dels punts del braille a un holograma, cadascuna amb almenys una dona entre les persones que la van inventar o hi van contribuir."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.women.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "Abans de la primera parada"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
 msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Benvinguts al museu. Aquesta visita segueix la línia verda del terra. Passa pels set àmbits i s'atura davant de deu pantalles. Cadascuna té almenys una dona entre les persones que la van inventar o hi van contribuir."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
 msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
-msgstr ""
+msgstr "La visita t'espera a cada parada. Quan vulguis continuar, prem la tecla de la parada següent. La primera és la línia braille de l'àmbit 1, on la imatge és feta de pius."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: the title of this part.
 msgctxt "tour.women.braille-display.title"
 msgid "Read by touch"
-msgstr ""
+msgstr "Llegir amb els dits"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
 msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
-msgstr ""
+msgstr "Aquesta pantalla es llegeix amb el tacte. Unes fileres de pius pugen i baixen per escriure una línia de braille. El model escriu l'hora. Fixa't en les cel·les de la dreta. Canvien cada segon."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
 msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr ""
+msgstr "Sota cada punt hi ha un cristall que es doblega quan rep una tensió, i una palanca converteix aquest petit moviment en la pujada d'un piu. Andrée Tretiakoff i Oleg Tretiakoff van patentar aquesta manera d'aixecar els punts. Van presentar la primera sol·licitud a França, el 1974."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
 msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr ""
+msgstr "És l'única peça del museu que no necessita gens de llum. Totes les altres parades de la línia verda funcionen amb llum. La següent és el tub de raigs catòdics de l'àmbit 2, on un feix d'electrons fa brillar una pantalla."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.women.cathode-ray-tube.title"
 msgid "A beam that draws"
-msgstr ""
+msgstr "Un feix que dibuixa"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
-msgstr ""
+msgstr "Mira la pantalla. La franja lluminosa que hi baixa és on un sol feix d'electrons acaba de dibuixar les seves línies. El model ho alenteix unes 60 vegades. De costat es veuen les bobines de coure que guien el feix."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr ""
+msgstr "La placa del bloc porta el nom de Ferdinand Braun, que va construir el primer tub d'aquesta mena el 1897. Trenta anys després, a San Francisco, Philo Farnsworth va transmetre la primera imatge de televisió totalment electrònica. Elma Farnsworth, coneguda com a Pem, va treballar als seus laboratoris i hi feia els dibuixos tècnics dels experiments. La seva cara va ser una de les primeres que el sistema va transmetre."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.3"
 msgid "In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps."
-msgstr ""
+msgstr "A l'àmbit 1 la imatge era feta de pius. Aquí un sol feix la dibuixa tota. La parada següent és el mur de microleds de l'àmbit 3, on la imatge és feta de llums."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: the title of this part.
 msgctxt "tour.women.microled.title"
 msgid "A question at dinner"
-msgstr ""
+msgstr "Una pregunta a l'hora de sopar"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.1"
 msgid "The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time."
-msgstr ""
+msgstr "El mur que tens al davant és fet de leds, cadascun massa petit per veure'l. Hi ha un mòdul fora del mur, recolzat al suport, encara amb la ventosa posada. Un mur així es repara quadrat a quadrat."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
 msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr ""
+msgstr "Jingyu Lin i Hongxing Jiang són físics. L'any 2000, a la Universitat Estatal de Kansas, van fer els primers microleds. També són matrimoni, i la idea va començar com una pregunta a l'hora de sopar: què li passaria a un led reduït a mil·lèsimes de mil·límetre?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.3"
 msgid "Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps."
-msgstr ""
+msgstr "Queda't a l'àmbit 3. La parada següent, la pantalla de punts quàntics, funciona amb cristalls molt més petits que aquests llums."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: the title of this part.
 msgctxt "tour.women.quantum-dot.title"
 msgid "Colour from size"
-msgstr ""
+msgstr "El color ve de la mida"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.1"
 msgid "This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour."
-msgstr ""
+msgstr "Això és un sol píxel, obert i molt ampliat. La llum blava puja des dels llums de la placa. Al pou de l'esquerra, els cristalls grans la tornen vermella. Al del mig, els petits la tornen verda. El pou de la dreta no té cristalls, i el blau hi passa de llarg. El color d'un cristall només depèn de la seva mida."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
 msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr ""
+msgstr "Aquests cristalls s'anomenen punts quàntics. La majoria de pantalles els fan servir com aquest model, per convertir la llum blava en vermell i verd. El 1994, a Berkeley, Vicki Colvin i dos col·legues van prendre un altre camí. Van fer brillar una capa de punts fent-hi passar un corrent. Colvin és la primera autora de l'article."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
 msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
-msgstr ""
+msgstr "El tub de raigs catòdics, el mur de leds i aquest píxel fan la seva pròpia llum. A l'àmbit 4 la llum la fa una làmpada o un làser, i la pantalla li dona forma. Ves al làser d'escombratge."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
 msgctxt "tour.women.scanned-laser.title"
 msgid "Drawing with a laser"
-msgstr ""
+msgstr "Dibuixar amb un làser"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.1"
 msgid "Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall."
-msgstr ""
+msgstr "Segueix els feixos d'esquerra a dreta. Tres làsers es fonen en un sol feix blanc. Dos miralls petits muntats en motors ràpids el dirigeixen, i el teu ull uneix el punt en moviment en un dibuix a la paret."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
 msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr ""
+msgstr "La placa porta el nom de Joseph Ostoja-Kotkowski, que va presentar un espectacle de làser primerenc a Adelaida. Elsa Garmire, física de l'Institut de Tecnologia de Califòrnia, feia imatges amb làser. Es van filmar el 1972 i van ser el model de Laserium, l'espectacle de làser que es va estrenar a l'Observatori Griffith de Los Angeles."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.3"
 msgid "In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes."
-msgstr ""
+msgstr "A l'àmbit 2 un feix d'electrons dibuixava la imatge dins d'un tub. Aquest feix és de llum, i pot dibuixar sobre qualsevol cosa: núvols, edificis, fum. Unes passes més enllà, al mateix àmbit, una imatge s'ha retallat a la mida d'unes formes de guix blanc."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.women.projection-mapping.title"
 msgid "A picture cut to fit"
-msgstr ""
+msgstr "Una imatge feta a mida"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.1"
 msgid "Find the switch marked Daylight and turn it off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor."
-msgstr ""
+msgstr "Busca l'interruptor que diu «Llum del dia» i apaga'l. De dia aquesta imatge gairebé no es veu. El projector del trípode és un projector corrent. La feina és a la imatge, que s'ha retallat a la mida de les formes on cau. Cada forma rep el seu propi dibuix, i no cau gens de llum a terra."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
 msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr ""
+msgstr "El 1969, la Haunted Mansion de Disneyland ho va fer servir per als seus busts cantaires. Es van filmar les cares d'uns cantants, i la pel·lícula es va projectar sobre busts de guix de les mateixes cares. A la mateixa casa hi ha una bola de vidre amb un cap llis a dins. Leota Toombs, artista del taller de disseny de Disney, hi va posar la cara: la pel·lícula que es projecta sobre aquell cap és la seva."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
 msgid "Before you go on, turn the daylight back on. The next stop is the electrowetting display in hall 5. The displays there behave like print: they need the light of the room."
-msgstr ""
+msgstr "Abans de continuar, torna a encendre la llum del dia. La parada següent és la pantalla d'electrohumectació de l'àmbit 5. Les pantalles d'allà es comporten com el paper imprès: necessiten la llum de la sala."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: the title of this part.
 msgctxt "tour.women.electrowetting.title"
 msgid "Oil and water"
-msgstr ""
+msgstr "Oli i aigua"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.1"
 msgid "These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher."
-msgstr ""
+msgstr "Això són 12 cel·les, molt ampliades. Cadascuna conté una gota d'oli tenyit sota aigua. Sense tensió, l'oli s'estén i la cel·la mostra el seu color. Amb tensió, l'aigua empeny l'oli cap a un racó. Fixa't en una cel·la quan commuta. L'oli no desapareix. S'arreplega al racó i hi queda més alt."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
 msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr ""
+msgstr "A la primera parada, una tensió doblegava un cristall i aixecava un piu. Aquí una tensió fa que l'aigua aparti l'oli. Susan Hackwood i Gerardo Beni van proposar aquesta pantalla als Laboratoris Bell el 1981, i van donar nom a l'efecte: electrohumectació. L'any de la placa, el 2003, és quan un laboratori dels Països Baixos la va fer prou ràpida per al vídeo."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
 msgid "Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
-msgstr ""
+msgstr "Ara ve l'àmbit 6, A mig aire. Ves al transmissor d'il·lusions, on una imatge queda suspesa a l'aire."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.women.illusion-transmitter.title"
 msgid "A bulb that is not there"
-msgstr ""
+msgstr "Una bombeta que no hi és"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.1"
 msgid "Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows."
-msgstr ""
+msgstr "Mira les dues caixes. A l'esquerra, una bombeta real penja amagada sota el portalàmpades, i un mirall corb en posa la imatge al portalàmpades buit de dalt. A la dreta no hi ha cap bombeta, només la imatge, que hi arriba per una càmera i un segon mirall. Mira com s'apaga la bombeta de l'esquerra. La imatge de la dreta la segueix."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
 msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr ""
+msgstr "A l'àmbit 3, una pregunta es va fer a l'hora de sopar. Aquesta es va fer en una exposició, el 1976. Valerie Thomas va veure com un mirall corb feia que una bombeta semblés encesa després de treure-la del portalàmpades, i es va preguntar si aquella imatge es podia enviar. Quan va inventar el transmissor d'il·lusions, dirigia els sistemes de processament d'imatges de Landsat a la NASA. La patent li van concedir quatre anys després d'aquella exposició."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
 msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
-msgstr ""
+msgstr "Queda't a l'àmbit 6 per veure la pantalla de volum estàtic, on la imatge omple un bloc d'espai."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: the title of this part.
 msgctxt "tour.women.static-volume.title"
 msgid "Drawing inside glass"
-msgstr ""
+msgstr "Dibuixar dins del vidre"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
 msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
-msgstr ""
+msgstr "Comença per la pila de làmines transparents. La figura que hi ha a dins és un nus. Les làmines es tornen lletoses d'una en una, i cadascuna atrapa la seva llesca de la imatge. No es mou res."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
 msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
-msgstr ""
+msgstr "Ara mira el bloc de vidre que hi ha al costat de la pila. Només brilla allà on s'encreuen dos feixos invisibles, que el model dibuixa en vermell. A l'àmbit 2 dibuixava un feix d'electrons, i a l'àmbit 4, un làser. Aquí dibuixa el punt on s'encreuen dos feixos, i ho fa en tres dimensions."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
 msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr ""
+msgstr "Elizabeth Downing i tres col·legues van dibuixar així punts de llum de colors dins del vidre. El treball es va publicar des de la Universitat de Stanford el 1996, amb Downing com a primera autora. El prototip era un cub d'uns 15 mil·límetres de costat, i el model el mostra moltes vegades més gran. L'última parada és l'holografia, a l'àmbit 7."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
 msgctxt "tour.women.holography.title"
 msgid "The light itself"
-msgstr ""
+msgstr "La llum mateixa"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
-msgstr ""
+msgstr "Mira a través de la placa de vidre. Sembla que al darrere hi hagi una locomotora de joguina. Mou-te cap a un costat, i veuràs la locomotora pels costats. No és darrere el vidre. Un holograma enregistra la llum mateixa. A l'àmbit 4 un làser dibuixava la imatge. Aquí un làser només il·lumina la placa, i la placa emet les mateixes ones de llum que enviava la locomotora."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr ""
+msgstr "Dennis Gabor va inventar l'holografia el 1948. Vint anys després, Margaret Benyon, pintora, va començar a fer hologrames com a obra d'art. Un holograma com aquest és estàtic. La primera pantalla de vídeo hologràfic es va construir al MIT Media Lab el 1989, i la tesi que Mary Lou Jepsen hi va escriure aquell mateix any en descriu el disseny."
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.women.end.title"
 msgid "The end of the green line"
-msgstr ""
+msgstr "El final de la línia verda"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr ""
+msgstr "Aquí s'acaba la línia verda. Ha començat amb uns pius que es llegeixen amb el tacte. Acaba amb una locomotora de joguina que no hi és."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Eleven women are named on the labels in these halls, one in ten of all the people named there. You have now stood at the work of all eleven."
-msgstr ""
+msgid "Eleven women are named at these ten stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "En aquestes deu parades hi surten onze dones, i ara ja has estat davant la feina de cadascuna. En total, les fitxes d'aquests àmbits anomenen més de cent persones."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
-msgid "The line passed 43 other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
-msgstr ""
+msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
+msgstr "Pel camí, la línia ha passat de llarg de més de quaranta pantalles. Surt de la visita, i els àmbits són teus per recórrer-los. Cada peça té la seva fitxa, amb el nom de les persones que hi van treballar. Gràcies per haver fet la visita."

@@ -6,84 +6,96 @@
     "mark": "de26991b",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 27.6
    },
    "braille-display": {
     "file": "01-braille-display.634385.mp3",
     "mark": "fd8ce920",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 50.2
    },
    "cathode-ray-tube": {
     "file": "02-cathode-ray-tube.674aee.mp3",
     "mark": "885f3e72",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 58.1
    },
    "microled": {
     "file": "03-microled.eb9c0b.mp3",
     "mark": "0340355b",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 46.5
    },
    "quantum-dot": {
     "file": "04-quantum-dot.3fc5e6.mp3",
     "mark": "b380b161",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 60.7
    },
    "scanned-laser": {
     "file": "05-scanned-laser.4e49ea.mp3",
     "mark": "75dd644d",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 55.7
    },
    "projection-mapping": {
     "file": "06-projection-mapping.52595c.mp3",
     "mark": "1a78b444",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 61.4
    },
    "electrowetting": {
     "file": "07-electrowetting.47c71e.mp3",
     "mark": "7357b6ba",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 57.3
    },
    "illusion-transmitter": {
     "file": "08-illusion-transmitter.d86d71.mp3",
     "mark": "f60d303c",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 62.5
    },
    "static-volume": {
     "file": "09-static-volume.99d799.mp3",
     "mark": "9a25f3e0",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 59.3
    },
    "holography": {
     "file": "10-holography.9718a0.mp3",
     "mark": "d4b89f92",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 49.8
    },
    "end": {
     "file": "11-end.82a2fb.mp3",
     "mark": "0230e0c3",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
-    "recipe": "d78e16c3"
+    "recipe": "d78e16c3",
+    "seconds": 35.1
    }
   }
  }

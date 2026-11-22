@@ -1128,6 +1128,12 @@ msgid "Take the guided tour"
 msgstr ""
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.tour.spoken"
+msgid "With a spoken guide, about {n} minutes"
+msgstr ""
+
+#: interface
 #. Interface.
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
@@ -8246,11 +8252,11 @@ msgstr ""
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Eleven women are named on the labels in these halls, one in ten of all the people named there. You have now stood at the work of all eleven."
+msgid "Eleven women are named at these ten stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
 msgstr ""
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
-msgid "The line passed 43 other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
+msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
 msgstr ""

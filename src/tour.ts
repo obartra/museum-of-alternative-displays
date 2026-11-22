@@ -10,7 +10,7 @@ import { langNow, said, tx } from './i18n';
  * tour's words nothing plays by itself. In the walk the guide speaks when the visitor asks for a stop, and the
  * visitor can switch her voice off.
  */
-type Recorded = Record<string, Record<string, Record<string, { file: string; mark: string }>>>;
+type Recorded = Record<string, Record<string, Record<string, { file: string; mark: string; seconds?: number }>>>;
 
 /** Whether this visitor has opened a tour that is not announced yet. Kept for the visit only. */
 const previewing = (): boolean => { try { return sessionStorage.getItem('tour-preview') === '1'; } catch { return false; } };
@@ -22,6 +22,22 @@ export const toursNow = (): Tour[] => tours.filter((tour) => said.tour(tour) && 
 export function recording(tour: Tour, partId: string, text: string[]): string {
   const code = langNow().code, kept = (audio as Recorded)[tour.id]?.[code]?.[partId];
   return kept && kept.mark === mark(spoken(text)) ? `./tour/${tour.id}/${code}/${kept.file}` : '';
+}
+
+/**
+ * How long the guide speaks for the whole of a tour in the language in use, in minutes. Nothing, unless every part
+ * has a recording of the words as they now stand.
+ */
+export function spokenMinutes(tour: Tour): number {
+  const own = said.tour(tour), kept = (audio as Recorded)[tour.id]?.[langNow().code];
+  if (!own || !kept) return 0;
+  let seconds = 0;
+  for (const part of tour.parts) {
+    const k = kept[part.id];
+    if (!k || !k.seconds || k.mark !== mark(spoken(own.parts[part.id].text))) return 0;
+    seconds += k.seconds;
+  }
+  return Math.max(1, Math.round(seconds / 60));
 }
 
 /**

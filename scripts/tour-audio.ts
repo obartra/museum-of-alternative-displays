@@ -21,8 +21,9 @@
  *   - every part is brought to the same loudness, with its peaks held under a limit.
  * A part is recorded again only when its words, its voice, the model or this delivery changed.
  *
- * The recordings go to public/tour/<tour>/<language>/ and the list of them to src/data/tour-audio.json. The site
- * offers a recording only beside the very words it was made from.
+ * The recordings go to public/tour/<tour>/<language>/ and the list of them to src/data/tour-audio.json, with the
+ * length of each, from which the site says how long a tour is. The site offers a recording only beside the very
+ * words it was made from.
  */
 import { appendFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { execFile } from 'node:child_process';
@@ -59,7 +60,7 @@ if (!served) { console.error(`tour/voices.json: the format ${config.format} is n
 /** A mark of the way the paragraphs are put together. When it changes, every part is made again. */
 const recipe = mark(`4 ${SOURCE} ${JSON.stringify(D)}`);
 const listFile = `${ROOT}src/data/tour-audio.json`;
-type Kept = { file: string; mark: string; voice: string; model: string; recipe?: string };
+type Kept = { file: string; mark: string; voice: string; model: string; recipe?: string; seconds?: number };
 const list = (existsSync(listFile) ? JSON.parse(readFileSync(listFile, 'utf8')) : {}) as Record<string, Record<string, Record<string, Kept>>>;
 /** The code ElevenLabs uses for a language of the site. */
 const spokenAs = (code: string) => (code === 'zh-hant' ? 'zh' : code);
@@ -310,7 +311,7 @@ for (const lang of langs) {
     try { got = await assemble(raw, x.text, x.stop, `${dir}/${file}`, work); }
     catch (err) { note(`${lang}, ${x.part}: ${(err as Error).message}`); refusedFor.push(lang); rmSync(`${dir}/${file}`, { force: true }); continue; }
     if (was && was.file !== file) rmSync(`${dir}/${was.file}`, { force: true });
-    ((list[x.tour] ??= {})[lang] ??= {})[x.part] = { file, mark: m, voice, model: config.model, recipe };
+    ((list[x.tour] ??= {})[lang] ??= {})[x.part] = { file, mark: m, voice, model: config.model, recipe, seconds: Math.round(got.long * 10) / 10 };
     writeFileSync(listFile, JSON.stringify(list, null, 1) + '\n');
     made++;
     rows.push(`| ${lang} | ${x.part} | ${x.text.length} | ${got.long.toFixed(1)} s | ${Math.round(got.spoken)} | ${got.tempo < 1 ? got.tempo.toFixed(2) : ''} | ${Math.round(got.pace)} | ${got.loud.toFixed(1)} | ${got.peak.toFixed(1)} |`);

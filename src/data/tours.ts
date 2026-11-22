@@ -34,7 +34,6 @@ export interface Tour {
 export const tours: Tour[] = [
   {
     id: 'women',
-    draft: true,
     title: 'The green line',
     lead: 'A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
     parts: [
@@ -93,8 +92,8 @@ export const tours: Tour[] = [
       ] },
       { id: 'end', title: 'The end of the green line', text: [
         'That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there.',
-        'Eleven women are named on the labels in these halls, one in ten of all the people named there. You have now stood at the work of all eleven.',
-        'The line passed 43 other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour.',
+        'Eleven women are named at these ten stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
+        'The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour.',
       ] },
     ],
   },

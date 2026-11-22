@@ -10,9 +10,9 @@ import { langMenu, wireLangMenu } from './langmenu';
 import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
-import { trails } from './data/trails';
+import { trailById, trails } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
-import { greet, hush, justAsked, keepTrail, preview, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
+import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import type { Stage } from './three/stage';
@@ -148,7 +148,8 @@ function entrance(): void {
 <div class="stack">
   <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
   <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a>${toursNow().map((tour) => `<a class="btn" href="${tourHash(tour)}">${tx('tour.label')}: ${esc(said.tour(tour)!.title)}</a>`).join('')}</p>
+  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
+  ${toursNow().map(tourCard).join('')}
   <div class="split">
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -299,6 +300,26 @@ function peopleView(): void {
   document.getElementById('who-walk')!.addEventListener('click', keepTrail);
   document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = (ev.target as HTMLInputElement).value as '' | 'women'; draw(); });
   draw();
+}
+
+// ---------- a guided tour on the main page ----------
+
+const HEADPHONES = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v5a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H6a6 6 0 0 1 12 0h-1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h1a2 2 0 0 0 2-2v-5a8 8 0 1 0-16 0z"/></svg>';
+
+/**
+ * A guided tour, offered on the main page in every language that tells it: the band of the walk, with the line
+ * and its stops, what the tour is, and how long the guide speaks where she has been recorded in that language.
+ * The whole of it is one link. Following it is the click that lets the guide begin.
+ */
+function tourCard(tour: Tour): string {
+  const own = said.tour(tour)!, minutes = spokenMinutes(tour);
+  return `<a class="tourcard" href="${tourHash(tour)}" style="--trail: ${trailById(tour.id)?.colour ?? '#1f9d55'}; --stops: ${tourStops(tour).length}">
+    <span class="tourcard__line" aria-hidden="true"></span>
+    <span class="tourcard__kind">${tx('tour.label')}</span>
+    <strong class="tourcard__title">${esc(own.title)}</strong>
+    <span class="tourcard__lead">${esc(own.lead)}</span>
+    <span class="tourcard__foot"><span class="tourcard__go">${tx('tour.take')}</span>${minutes ? `<span class="tourcard__audio">${HEADPHONES}${tx('tour.spoken', { n: minutes })}</span>` : ''}</span>
+  </a>`;
 }
 
 // ---------- the words of a guided tour, on one page ----------

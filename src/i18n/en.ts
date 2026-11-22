@@ -197,6 +197,7 @@ export const en = {
   'trail.walk': 'Walk this trail',
   'tour.label': 'Guided tour',
   'tour.take': 'Take the guided tour',
+  'tour.spoken': 'With a spoken guide, about {n} minutes',
   'tour.follow': 'Take the tour in the halls',
   'tour.start': 'Start the tour',
   'tour.leave': 'Leave the tour',

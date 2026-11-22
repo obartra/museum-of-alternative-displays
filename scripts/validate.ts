@@ -78,20 +78,20 @@ for (const tour of tours) {
   // whoever a stop is said to be about is named on the label of that piece, spelled as the label spells them
   for (const part of tour.parts) for (const name of part.who ?? []) if (!people[part.id]?.people.some((e) => e.who.includes(name))) errors.push(`tour ${tour.id}, ${part.id}: ${name} is not named on the label of the piece`);
 }
-// what the green line says in numbers about the collection is counted here, and not remembered
+// what the green line says in numbers about the collection is counted here, and not remembered. It is said so that
+// it stays true while people and pieces are added elsewhere in the halls
 {
   const tour = tours.find((t) => t.id === 'women'), said = tour ? tour.parts.flatMap((p) => p.text).join(' ') : '';
+  const stops = tour ? tour.parts.map((p) => p.id).filter((id) => people[id]) : [];
   const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
-  const women = new Map<string, string[]>();
-  for (const [id, c] of Object.entries(people)) for (const e of c.people) for (const name of e.she ?? []) women.set(name, [...(women.get(name) ?? []), id]);
-  const stops = tour ? tour.parts.map((p) => p.id) : [];
-  const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'];
-  const count = /\b([A-Za-z]+) women are named on the labels\b/.exec(said)?.[1].toLowerCase();
-  if (count && WORDS[women.size] !== count) errors.push(`tour women: it says ${count} women are named on the labels, and there are ${women.size}`);
-  if (/\bone in ten\b/.test(said) && Math.round(named.size / women.size) !== 10) errors.push(`tour women: it says one in ten of the people named is a woman, and it is ${women.size} of ${named.size}`);
-  if (/\ball eleven\b|\ball of them\b/.test(said)) for (const [name, at] of women) if (!at.some((id) => stops.includes(id))) errors.push(`tour women: it says the line stops at the work of every woman named, and ${name} is not at a stop`);
-  const passed = /\bpassed (\d+) other displays\b/.exec(said)?.[1];
-  if (passed && tour && Number(passed) !== pieces.length - (tour.parts.length - 2)) errors.push(`tour women: it says the line passed ${passed} other displays, and it is ${pieces.length - (tour.parts.length - 2)}`);
+  const women = new Set(stops.flatMap((id) => people[id].people.flatMap((e) => e.she ?? [])));
+  const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'];
+  const at = /\b([A-Za-z]+) women are named at these ([a-z]+) stops\b/.exec(said);
+  if (tour && !at) errors.push('tour women: its closing words no longer count the women at its stops, so nothing here holds them to the labels');
+  if (at && WORDS[women.size] !== at[1].toLowerCase()) errors.push(`tour women: it says ${at[1].toLowerCase()} women are named at its stops, and the labels there name ${women.size}`);
+  if (at && WORDS[stops.length] !== at[2]) errors.push(`tour women: it says it has ${at[2]} stops, and it has ${stops.length}`);
+  if (/\bmore than a hundred people\b/.test(said) && named.size <= 100) errors.push(`tour women: it says the labels name more than a hundred people, and they name ${named.size}`);
+  if (/\bmore than forty other displays\b/.test(said) && pieces.length - stops.length <= 40) errors.push(`tour women: it says the line passed more than forty other displays, and it is ${pieces.length - stops.length}`);
 }
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in
 {
