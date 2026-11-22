@@ -871,7 +871,7 @@ export const bios: Record<string, Bio> = {
     born: 1969, about: [
       "From Stockton, California, she took a bachelor's degree at the Atlanta College of Art and a master's degree at the Rhode Island School of Design. In 1994 the Drawing Center in New York showed Gone, her wall installation of black paper silhouettes.",
       "The Walker Art Center says her work exposes the ongoing psychological injury caused by the legacy of slavery and examines racial and gender stereotypes. She received a MacArthur Fellowship in 1997 and represented the United States at the Bienal de São Paulo in 2002.",
-      "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners.",
+      "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners.",
       "In 2014 she showed A Subtlety, a sphinx-like woman of polystyrene coated with white sugar, in a warehouse on the former Domino Sugar site in Brooklyn. The Walker Art Center ties it to sugar harvested by enslaved people on Caribbean plantations.",
     ],
     sources: [

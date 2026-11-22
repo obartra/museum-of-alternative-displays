@@ -10952,8 +10952,8 @@ msgstr "El Walker Art Center diu que la seva obra posa al descobert la ferida ps
 #: people
 #. About Kara Walker, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.kara-walker.about.3"
-msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
-msgstr "El 2004 va fer Testimony, una pel·lícula muda en 16 mm en què titelles d'ombres i rètols expliquen una història d'amos i persones esclavitzades. El Museu d'Art Modern en conserva un titella, de paper negre retallat amb llapis, cinta adhesiva i fixacions metàl·liques."
+msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
+msgstr "El 2004 va fer Testimony, una pel·lícula muda en 16 mm en què titelles d'ombres i rètols expliquen una història d'amos i esclaus. El Museu d'Art Modern en conserva un titella, de paper negre retallat amb llapis, cinta adhesiva i fixacions metàl·liques."
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11583,7 +11583,7 @@ msgstr "El 2002 va cofundar l'Institute for Soldier Nanotechnologies del MIT. La
 #. About Paula Hammond, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.paula-hammond.about.4"
 msgid "She was appointed head of MIT's Department of Chemical Engineering in 2015. The Science History Institute says she was the first woman and the first person of colour to hold that post. It gave her its Othmer Gold Medal in 2024."
-msgstr "El 2015 va ser nomenada cap del Departament d'Enginyeria Química del MIT. El Science History Institute diu que va ser la primera dona i la primera persona racialitzada a ocupar aquest càrrec. El 2024 li va concedir la seva Othmer Gold Medal."
+msgstr "El 2015 va ser nomenada cap del Departament d'Enginyeria Química del MIT. El Science History Institute diu que va ser la primera dona i la primera persona no blanca a ocupar aquest càrrec. El 2024 li va concedir la seva Othmer Gold Medal."
 
 #: people
 #. About Dean DeLongchamp, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

@@ -10951,8 +10951,8 @@ msgstr "Das Walker Art Center schreibt, ihre Arbeit lege die andauernde seelisch
 #: people
 #. About Kara Walker, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.kara-walker.about.3"
-msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
-msgstr "2004 schuf sie Testimony, einen Stummfilm auf 16 mm, in dem Schattenfiguren und Zwischentitel eine Geschichte von Sklavenhaltern und Versklavten erzählen. Das Museum of Modern Art besitzt eine Figur daraus, aus geschnittenem schwarzem Papier mit Bleistift, Klebeband und Metallklammern."
+msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
+msgstr "2004 schuf sie Testimony, einen Stummfilm auf 16 mm, in dem Schattenfiguren und Zwischentitel eine Geschichte von Herren und Sklaven erzählen. Das Museum of Modern Art besitzt eine Figur daraus, aus geschnittenem schwarzem Papier mit Bleistift, Klebeband und Metallklammern."
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

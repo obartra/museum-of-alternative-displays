@@ -198,14 +198,17 @@ The 472 paragraphs of the accounts and 91 label strings went to nine translators
 brief told each to keep every named witness, to keep each person as the subject of their own deed, and to carry
 over no claim the English had dropped. The curator read their reports and ruled on what they raised.
 
-- **Words for people.** Each language uses its current respectful terms: persones esclavitzades, personas
-  esclavizadas, pessoas escravizadas, versklavte Menschen, 被奴役的人. Where the English had "masters and slaves"
-  for the story of Kara Walker's film Testimony, in the Walker Art Center's words, five translators wrote enslaved
-  people. The English now says "masters and enslaved people" as well.
-- **"Person of colour"**, the Science History Institute's words about Paula Hammond, is persona racialitzada in
-  Catalan, persona racializada in Spanish, pessoa não branca in Portuguese, Person of Color in German and
-  有色人种 in Chinese. These are the translators' choices of the term in use in each language. Readers who know
-  better are asked to say so.
+- **Words for people.** Each language uses its current respectful terms in the museum's own sentences: persones
+  esclavitzades, personas esclavizadas, pessoas escravizadas, versklavte Menschen, 被奴役的人.
+- **A work is described as it is.** The story of Kara Walker's film Testimony is "masters and slaves" in every
+  language, in the Walker Art Center's words. Five translators had written enslaved people there, and the curator
+  had changed the English to match. The owner asked that the description of the work be left unaltered, and it
+  is. `VOICE.md` now says so.
+- **"Person of colour"**, the Science History Institute's words about Paula Hammond, is persona no blanca in
+  Catalan and Spanish, pessoa não branca in Portuguese, personne non blanche in French, Person of Color in German
+  and 有色人种 in Chinese. Three translators had first written racialitzada, racializada and racisée. The owner,
+  a Catalan speaker, pointed out that those words say a person is marked by racism, which is not what the
+  source says. Readers who know a better term are asked to say so.
 - **No sex is stated** for A. Frankenstein, M. C. Schlamp, Kazuo Yoshinaka or Berthier in any language. The name,
   the patent or the listing carries the sentence.
 - **A sentence the English left open.** Pepper's account said the patent named both men "at his request". Three

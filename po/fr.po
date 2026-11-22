@@ -10953,8 +10953,8 @@ msgstr "Selon le Walker Art Center, son œuvre met au jour la blessure psycholog
 #: people
 #. About Kara Walker, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.kara-walker.about.3"
-msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
-msgstr "En 2004, elle a réalisé Testimony, un film muet en 16 mm dans lequel des marionnettes d’ombre et des intertitres racontent une histoire de maîtres et de personnes réduites en esclavage. Le Museum of Modern Art conserve l’une de ses marionnettes, en papier noir découpé, avec crayon, ruban adhésif et attaches métalliques."
+msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
+msgstr "En 2004, elle a réalisé Testimony, un film muet en 16 mm dans lequel des marionnettes d’ombre et des intertitres racontent une histoire de maîtres et d’esclaves. Le Museum of Modern Art conserve l’une de ses marionnettes, en papier noir découpé, avec crayon, ruban adhésif et attaches métalliques."
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11584,7 +11584,7 @@ msgstr "En 2002, elle a cofondé l’Institute for Soldier Nanotechnologies du M
 #. About Paula Hammond, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.paula-hammond.about.4"
 msgid "She was appointed head of MIT's Department of Chemical Engineering in 2015. The Science History Institute says she was the first woman and the first person of colour to hold that post. It gave her its Othmer Gold Medal in 2024."
-msgstr "Elle a été nommée à la tête du département de génie chimique du MIT en 2015. Le Science History Institute indique qu’elle a été la première femme et la première personne racisée à occuper ce poste. Il lui a décerné sa médaille d’or Othmer en 2024."
+msgstr "Elle a été nommée à la tête du département de génie chimique du MIT en 2015. Le Science History Institute indique qu’elle a été la première femme et la première personne non blanche à occuper ce poste. Il lui a décerné sa médaille d’or Othmer en 2024."
 
 #: people
 #. About Dean DeLongchamp, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

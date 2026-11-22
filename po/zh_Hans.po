@@ -10947,8 +10947,8 @@ msgstr "沃克艺术中心称，她的作品揭示了奴隶制遗留下来的、
 #: people
 #. About Kara Walker, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.kara-walker.about.3"
-msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and enslaved people. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
-msgstr "2004年，她创作了Testimony，这是一部16毫米无声影片，影片中的影偶和字幕卡讲述了一个奴隶主与被奴役者的故事。纽约现代艺术博物馆收藏了其中的一个影偶，用黑纸剪成，带有铅笔痕迹、胶带和金属扣件。"
+msgid "In 2004 she made Testimony, a silent film on 16mm in which shadow puppets and title cards tell a story of masters and slaves. The Museum of Modern Art holds a puppet from it, of cut black paper with pencil, tape and metal fasteners."
+msgstr "2004年，她创作了Testimony，这是一部16毫米无声影片，影片中的影偶和字幕卡讲述了一个奴隶主与奴隶的故事。纽约现代艺术博物馆收藏了其中的一个影偶，用黑纸剪成，带有铅笔痕迹、胶带和金属扣件。"
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

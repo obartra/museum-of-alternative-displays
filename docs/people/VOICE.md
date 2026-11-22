@@ -74,6 +74,8 @@ as much as for an account.
   sexuality or gender identity unless a cited source states it, and never infers one from a name, a face or a
   place. A birthplace is given where a reliable source gives it, and left out where none does. A "first" of
   identity needs its witness like any other first.
+- **A work is described as it is.** What a film, a play or a print shows is told in the words of its maker or of
+  the museum that holds it, and those words are not updated. The museum's own sentences use the terms of today.
 - **Nothing private about the living.** Health, family and belief stay out unless they bear on the work and the
   person has made them public.
 - **Names as their bearers write them.** Marks and hyphens are kept for every language alike. A name from outside
