@@ -1297,6 +1297,30 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "在iPhone或iPad上，在Safari里轻点“共享”，再轻点“添加到主屏幕”。"
 
 #: interface
+#. About page.
+msgctxt "ui.about.licence"
+msgid "Licence"
+msgstr "许可协议"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.licence.1"
+msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgstr "本馆自己撰写的文字和制作的模型，可以按照{a}知识共享 署名-相同方式共享 4.0{/a}许可协议分享和改编。请注明 Museum of Alternative Displays 并附上链接，说明你改动了什么，并以同一许可协议分享你的版本。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.licence.2"
+msgid "The licence does not cover the portraits, the recordings of the tour or the archive pictures and films. Each archive picture keeps the licence named in its credit."
+msgstr "该许可协议不包括肖像、导览的录音以及档案图片和影片。每张档案图片仍适用其署名中写明的许可协议。"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.changed"
+msgid "Last changed on {date}."
+msgstr "最后修改于 {date}。"
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

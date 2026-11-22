@@ -228,6 +228,10 @@ export const en = {
   'about.app.1': 'The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one.',
   'about.app.install': 'Install the app',
   'about.app.ios': 'On an iPhone or iPad, tap Share in Safari, then Add to Home Screen.',
+  'about.licence': 'Licence',
+  'about.licence.1': "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence.",
+  'about.licence.2': 'The licence does not cover the portraits, the recordings of the tour or the archive pictures and films. Each archive picture keeps the licence named in its credit.',
+  'about.changed': 'Last changed on {date}.',
 } as const;
 
 export type UiKey = keyof typeof en;

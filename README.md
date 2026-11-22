@@ -336,6 +336,14 @@ GitHub Actions.
 
 ## Licence
 
-No licence has been chosen yet. Until one is added, the code and text are all rights reserved
-by the repository owner. Typefaces are Sofia Sans and Sofia Sans Extra Condensed (Lettersoup)
-and PT Mono (ParaType), each under the SIL Open Font License.
+The museum's own texts and models are under
+[Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/):
+the labels, hall texts and tour in `src/data` and `po`, and the models in `src/three/models`.
+Credit the Museum of Alternative Displays with a link, say what you changed, and share your
+version under the same licence.
+
+The licence does not cover the portraits in `public/people`, the recordings in `public/tour`,
+or the archive pictures and films in `public/media`, each of which keeps the licence named in
+its credit. No licence has been chosen yet for the rest of the code, which stays all rights
+reserved by the repository owner until one is added. Typefaces are Sofia Sans and Sofia Sans
+Extra Condensed (Lettersoup) and PT Mono (ParaType), each under the SIL Open Font License.

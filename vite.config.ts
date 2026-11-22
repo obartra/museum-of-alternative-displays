@@ -1,3 +1,4 @@
+import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, type Plugin } from 'vite';
@@ -72,9 +73,15 @@ function keeper(): Plugin {
   };
 }
 
+/** The day of the last change, as the repository records it. Empty where the files are not in a repository. */
+const changed = ((): string => {
+  try { return execSync('git log -1 --format=%cs', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch { return ''; }
+})();
+
 // Relative base so the same build works at any GitHub Pages path.
 export default defineConfig({
   base: './',
+  define: { __CHANGED__: JSON.stringify(changed) },
   build: { target: 'es2022', chunkSizeWarningLimit: 900 },
   plugins: [firstInHall(), inlineCss(), keeper()],
 });

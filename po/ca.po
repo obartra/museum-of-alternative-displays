@@ -1302,6 +1302,30 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "En un iPhone o un iPad, toca «Comparteix» al Safari i després «Afegeix a la pantalla d'inici»."
 
 #: interface
+#. About page.
+msgctxt "ui.about.licence"
+msgid "Licence"
+msgstr "Llicència"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.licence.1"
+msgid "The museum's own texts and models may be shared and adapted under {a}Creative Commons Attribution-ShareAlike 4.0{/a}. Credit the Museum of Alternative Displays with a link, say what you changed, and share your version under the same licence."
+msgstr "Els textos i els models propis del museu es poden compartir i adaptar sota la llicència {a}Creative Commons Reconeixement-CompartirIgual 4.0{/a}. Cal citar el Museum of Alternative Displays amb un enllaç, dir què s'ha canviat i compartir la versió nova amb la mateixa llicència."
+
+#: interface
+#. About page.
+msgctxt "ui.about.licence.2"
+msgid "The licence does not cover the portraits, the recordings of the tour or the archive pictures and films. Each archive picture keeps the licence named in its credit."
+msgstr "La llicència no cobreix els retrats, les gravacions de la visita guiada ni les imatges i pel·lícules d'arxiu. Cada imatge d'arxiu manté la llicència que diu el seu crèdit."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.changed"
+msgid "Last changed on {date}."
+msgstr "Darrer canvi: {date}."
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

@@ -345,6 +345,15 @@ function wordsView(id: string): void {
 }
 
 // ---------- piece ----------
+/** The day of the last change to the museum, put in by the build. Empty when the build could not tell. */
+declare const __CHANGED__: string;
+/** That day in the visitor's language, as a line for the About page. */
+function changedOn(): string {
+  const day = typeof __CHANGED__ === 'string' && /^\d{4}-\d\d-\d\d$/.test(__CHANGED__) ? new Date(`${__CHANGED__}T12:00:00Z`) : null;
+  if (!day) return '';
+  const date = new Intl.DateTimeFormat(langNow().tag, { dateStyle: 'long', timeZone: 'UTC' }).format(day);
+  return `<p class="small muted"><time datetime="${__CHANGED__}">${tx('about.changed', { date })}</time></p>`;
+}
 /** The hall whose pieces are about depth. Only there does a piece offer red and cyan glasses. */
 const DEPTH = 7;
 function pieceView(id: string): void {
@@ -661,7 +670,11 @@ function about(): void {
       ${held ? `<h2 class="h-sec">${tx('about.credits')}</h2><p>${tx('about.credits.1', { n: held })}</p>${creditsList()}` : ''}
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
+      <h2 class="h-sec">${tx('about.licence')}</h2>
+      <p>${rich('about.licence.1', { a: 'https://creativecommons.org/licenses/by-sa/4.0/' })}</p>
+      <p>${tx('about.licence.2')}</p>
       <p class="small muted">${rich('about.thanks', { a: 'https://blair-neal.gitbook.io/survey-of-alternative-displays' })}</p>
+      ${changedOn()}
     </section>
     <section class="stack prose" style="--gap: 12px">
       <h2 class="h-sec">${tx('about.room')}</h2>
