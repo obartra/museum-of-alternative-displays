@@ -18,6 +18,7 @@ import { halls } from '../src/data/halls';
 import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
 import { people, type Credit } from '../src/data/people';
+import { personLinks } from '../src/data/person-links';
 import type { Hall, Piece } from '../src/data/schema';
 import { tours, type Tour } from '../src/data/tours';
 import { en, type UiKey } from '../src/i18n/en';
@@ -25,6 +26,11 @@ import { LANGS, type CreditText, type HallText, type Lang, type Locale, type Pie
 import { AUTHOR, LICENCE, REPO } from '../src/site';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const personName = (name: string): string => {
+  const link = personLinks[name];
+  return link ? `<a href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
+};
 
 /** The words of one language, as the museum's own pages find them: where a language lacks something, the English stands in. */
 interface Speech {
@@ -153,7 +159,7 @@ ${x.aka ? `<p>${esc(w.ui('piece.aka', { names: x.aka }))}</p>` : ''}
 <h2>${esc(w.ui('piece.good'))}</h2>${list(x.good)}
 <h2>${esc(w.ui('piece.bad'))}</h2>${list(x.bad)}
 <p>${esc(x.statusNote)}</p>
-${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${esc(e.who.join(', '))}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
+${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${e.who.map(personName).join(', ')}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
 ${held.length ? `<h2>${esc(w.ui('archive.title'))}</h2><ul>${held.map(({ m, own, file }) => `<li><a href="${esc(file)}">${esc(own.caption)}</a>${own.year ? ` ${esc(own.year)}.` : ''} ${esc(w.ui(`archive.kind.${m.kind}`))}, ${esc(w.ui('archive.by', { author: m.credit.author }))}. ${esc(m.credit.licence)}. <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.archive ?? w.ui('archive.commons'))}</a></li>`).join('')}</ul>` : ''}
 <h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
 <p>${near.map((q) => `<a href="${w.pre}piece/${q.id}/">${esc(w.piece(q).name)}</a>`).join(' / ')}</p>
@@ -179,7 +185,7 @@ ${ways}`,
 <p>${esc(w.ui('people.lead'))}</p>
 ${pieces.filter((p) => people[p.id]).map((p) => {
     const credit = people[p.id], did = w.credit(p.id, credit);
-    return `<h2><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a></h2><ul>${credit.people.map((e, k) => `<li><strong>${esc(e.who.join(', '))}.</strong> ${esc(did.did[k])}</li>`).join('')}</ul>`;
+    return `<h2><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a></h2><ul>${credit.people.map((e, k) => `<li><strong>${e.who.map(personName).join(', ')}.</strong> ${esc(did.did[k])}</li>`).join('')}</ul>`;
   }).join('\n')}
 ${ways}`,
   });

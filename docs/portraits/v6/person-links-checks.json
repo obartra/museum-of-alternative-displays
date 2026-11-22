@@ -1,0 +1,1289 @@
+[
+  {
+    "name": "Gino Valle",
+    "url": "https://en.wikipedia.org/wiki/Gino_Valle",
+    "label": "Gino Valle, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kenyon Taylor",
+    "url": "https://en.wikipedia.org/wiki/Kenyon_Taylor",
+    "label": "Kenyon Taylor, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Paul Nipkow",
+    "url": "https://en.wikipedia.org/wiki/Paul_Nipkow",
+    "label": "Paul Gottlieb Nipkow, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "John Logie Baird",
+    "url": "https://en.wikipedia.org/wiki/John_Logie_Baird",
+    "label": "John Logie Baird, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Daniel Rozin",
+    "url": "https://en.wikipedia.org/wiki/Daniel_Rozin",
+    "label": "Danny Rozin, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Hiroshi Ishii",
+    "url": "https://en.wikipedia.org/wiki/Hiroshi_Ishii_%28computer_scientist%29",
+    "label": "Hiroshi Ishii (computer scientist), Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "James Bryce",
+    "url": "https://en.wikipedia.org/wiki/James_Wares_Bryce",
+    "label": "James W. Bryce, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ferdinand Braun",
+    "url": "https://en.wikipedia.org/wiki/Karl_Ferdinand_Braun",
+    "label": "K. Ferdinand Braun, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kenjiro Takayanagi",
+    "url": "https://en.wikipedia.org/wiki/Kenjiro_Takayanagi",
+    "label": "Kenjiro Takayanagi, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Philo Farnsworth",
+    "url": "https://en.wikipedia.org/wiki/Philo_Farnsworth",
+    "label": "Philo Farnsworth, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Marie Van Brittan Brown",
+    "url": "https://en.wikipedia.org/wiki/Marie_Van_Brittan_Brown",
+    "label": "Marie Van Brittan Brown and Albert L. Brown, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Mark Dean",
+    "url": "https://en.wikipedia.org/wiki/Mark_Dean_%28computer_scientist%29",
+    "label": "Mark Dean (computer scientist), Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Guillermo González Camarena",
+    "url": "https://en.wikipedia.org/wiki/Guillermo_Gonz%C3%A1lez_Camarena",
+    "label": "Guillermo González Camarena, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Andrew Haeff",
+    "url": "https://en.wikipedia.org/wiki/Andrew_V._Haeff",
+    "label": "Andrew V. Haeff, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Lewis Latimer",
+    "url": "https://en.wikipedia.org/wiki/Lewis_Latimer",
+    "label": "Lewis Howard Latimer, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Donald Bitzer",
+    "url": "https://en.wikipedia.org/wiki/Donald_Bitzer",
+    "label": "Donald Bitzer, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gene Slottow",
+    "url": "https://en.wikipedia.org/wiki/H._Gene_Slottow",
+    "label": "H. Gene Slottow, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kenneth Shoulders",
+    "url": "https://en.wikipedia.org/wiki/Kenneth_R._Shoulders",
+    "label": "Kenneth R. Shoulders, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Akintunde Akinwande",
+    "url": "https://en.wikipedia.org/wiki/Akintunde_Akinwande",
+    "label": "Akintunde Akinwande, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Isamu Akasaki",
+    "url": "https://en.wikipedia.org/wiki/Isamu_Akasaki",
+    "label": "Isamu Akasaki, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Hiroshi Amano",
+    "url": "https://en.wikipedia.org/wiki/Hiroshi_Amano",
+    "label": "Hiroshi Amano, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Shuji Nakamura",
+    "url": "https://en.wikipedia.org/wiki/Shuji_Nakamura",
+    "label": "Shuji Nakamura, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ching Wan Tang",
+    "url": "https://en.wikipedia.org/wiki/Ching_W._Tang",
+    "label": "Ching Wan Tang, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Steven Van Slyke",
+    "url": "https://en.wikipedia.org/wiki/Steven_Van_Slyke",
+    "label": "Steven Van Slyke, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Hongxing Jiang",
+    "url": "https://en.wikipedia.org/wiki/Hongxing_Jiang",
+    "label": "Hongxing Jiang, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Jingyu Lin",
+    "url": "https://en.wikipedia.org/wiki/Jingyu_Lin",
+    "label": "Jingyu Lin, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Vicki Colvin",
+    "url": "https://en.wikipedia.org/wiki/Vicki_Colvin",
+    "label": "Vicki Colvin, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Paul Alivisatos",
+    "url": "https://en.wikipedia.org/wiki/Paul_Alivisatos",
+    "label": "Paul Alivisatos, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Aleksey Yekimov",
+    "url": "https://en.wikipedia.org/wiki/Alexey_Ekimov",
+    "label": "Alexey Ekimov, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Louis Brus",
+    "url": "https://en.wikipedia.org/wiki/Louis_Brus",
+    "label": "Louis E. Brus, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Moungi Bawendi",
+    "url": "https://en.wikipedia.org/wiki/Moungi_Bawendi",
+    "label": "Moungi Bawendi, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Tuomo Suntola",
+    "url": "https://en.wikipedia.org/wiki/Tuomo_Suntola",
+    "label": "Tuomo Suntola, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Dawon Kahng",
+    "url": "https://en.wikipedia.org/wiki/Dawon_Kahng",
+    "label": "Dawon Kahng, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Mozi",
+    "url": "https://plato.stanford.edu/entries/mohism/",
+    "label": "Mohism, Stanford Encyclopedia of Philosophy",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ibn al-Haytham",
+    "url": "https://en.wikipedia.org/wiki/Ibn_al-Haytham",
+    "label": "Ibn al-Haytham, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gemma Frisius",
+    "url": "https://en.wikipedia.org/wiki/Gemma_Frisius",
+    "label": "Gemma Frisius, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Daniele Barbaro",
+    "url": "https://en.wikipedia.org/wiki/Daniele_Barbaro",
+    "label": "Daniele Barbaro, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Johannes Kepler",
+    "url": "https://en.wikipedia.org/wiki/Johannes_Kepler",
+    "label": "Johannes Kepler, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "François Dominique Séraphin",
+    "url": "https://en.wikipedia.org/wiki/Dominique_S%C3%A9raphin",
+    "label": "François Dominique Séraphin, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Henri Rivière",
+    "url": "https://en.wikipedia.org/wiki/Henri_Rivi%C3%A8re_%28painter%29",
+    "label": "Henri Rivière (painter), Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kara Walker",
+    "url": "https://en.wikipedia.org/wiki/Kara_Walker",
+    "label": "Kara Walker, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Martin Schadt",
+    "url": "https://en.wikipedia.org/wiki/Martin_Schadt",
+    "label": "Martin Schadt, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Wolfgang Helfrich",
+    "url": "https://en.wikipedia.org/wiki/Wolfgang_Helfrich",
+    "label": "Wolfgang Helfrich, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "James Fergason",
+    "url": "https://en.wikipedia.org/wiki/James_Fergason",
+    "label": "James Fergason, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "George Heilmeier",
+    "url": "https://en.wikipedia.org/wiki/George_H._Heilmeier",
+    "label": "George H. Heilmeier, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Sivaramakrishna Chandrasekhar",
+    "url": "https://en.wikipedia.org/wiki/Sivaramakrishna_Chandrasekhar",
+    "label": "Sivaramakrishna Chandrasekhar, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Mohamed Atalla",
+    "url": "https://en.wikipedia.org/wiki/Mohamed_M._Atalla",
+    "label": "Mohamed M. Atalla, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Larry Hornbeck",
+    "url": "https://en.wikipedia.org/wiki/Larry_Hornbeck",
+    "label": "Larry Hornbeck, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Fritz Fischer",
+    "url": "https://en.wikipedia.org/wiki/Fritz_Fischer_%28physicist%29",
+    "label": "Fritz Fischer (physicist), Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Elsa Garmire",
+    "url": "https://en.wikipedia.org/wiki/Elsa_Garmire",
+    "label": "Elsa M. Garmire, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ivan Dryer",
+    "url": "https://en.wikipedia.org/wiki/Ivan_Dryer",
+    "label": "Ivan Dryer, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Leota Toombs",
+    "url": "https://en.wikipedia.org/wiki/Leota_Toombs",
+    "label": "Leota Toombs, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Michael Naimark",
+    "url": "https://en.wikipedia.org/wiki/Michael_Naimark",
+    "label": "Michael Naimark, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ramesh Raskar",
+    "url": "https://en.wikipedia.org/wiki/Ramesh_Raskar",
+    "label": "Ramesh Raskar, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Lanny Smoot",
+    "url": "https://en.wikipedia.org/wiki/Lanny_Smoot",
+    "label": "Lanny Smoot, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Barrett Comiskey",
+    "url": "https://en.wikipedia.org/wiki/Barrett_Comiskey",
+    "label": "Barrett Comiskey, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Joseph Jacobson",
+    "url": "https://en.wikipedia.org/wiki/Joseph_Jacobson",
+    "label": "Joseph Jacobson, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "John Rogers",
+    "url": "https://en.wikipedia.org/wiki/John_A._Rogers",
+    "label": "John A. Rogers, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Zhenan Bao",
+    "url": "https://en.wikipedia.org/wiki/Zhenan_Bao",
+    "label": "Zhenan Bao, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gerardo Beni",
+    "url": "https://en.wikipedia.org/wiki/Gerardo_Beni",
+    "label": "Gerardo Beni, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Susan Hackwood",
+    "url": "https://en.wikipedia.org/wiki/Susan_Hackwood",
+    "label": "Susan Hackwood, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Henry Dircks",
+    "url": "https://en.wikipedia.org/wiki/Henry_Dircks",
+    "label": "Henry Dircks, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "John Henry Pepper",
+    "url": "https://en.wikipedia.org/wiki/John_Henry_Pepper",
+    "label": "John Henry Pepper, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Valerie Thomas",
+    "url": "https://en.wikipedia.org/wiki/Valerie_Thomas",
+    "label": "Valerie Thomas, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Joseph Plateau",
+    "url": "https://en.wikipedia.org/wiki/Joseph_Plateau",
+    "label": "Joseph Plateau, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Lambertus Hesselink",
+    "url": "https://en.wikipedia.org/wiki/Lambertus_Hesselink",
+    "label": "Lambertus Hesselink, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Yoichi Ochiai",
+    "url": "https://en.wikipedia.org/wiki/Yoichi_Ochiai",
+    "label": "Yoichi Ochiai, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Charles Wheatstone",
+    "url": "https://en.wikipedia.org/wiki/Charles_Wheatstone",
+    "label": "Charles Wheatstone, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kenneth Dunkley",
+    "url": "https://en.wikipedia.org/wiki/Kenneth_Dunkley",
+    "label": "Kenneth J. Dunkley, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Frederic Ives",
+    "url": "https://en.wikipedia.org/wiki/Frederic_Ives",
+    "label": "Frederic Eugene Ives, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Walter Hess",
+    "url": "https://en.wikipedia.org/wiki/Walter_Rudolf_Hess",
+    "label": "Walter Rudolf Hess, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Hank Willis Thomas",
+    "url": "https://en.wikipedia.org/wiki/Hank_Willis_Thomas",
+    "label": "Hank Willis Thomas, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gabriel Lippmann",
+    "url": "https://en.wikipedia.org/wiki/Gabriel_Lippmann",
+    "label": "Gabriel Lippmann, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Dennis Gabor",
+    "url": "https://en.wikipedia.org/wiki/Dennis_Gabor",
+    "label": "Dennis Gabor, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Juris Upatnieks",
+    "url": "https://en.wikipedia.org/wiki/Juris_Upatnieks",
+    "label": "Juris Upatnieks, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Margaret Benyon",
+    "url": "https://en.wikipedia.org/wiki/Margaret_Benyon",
+    "label": "Margaret Benyon, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Stephen Benton",
+    "url": "https://en.wikipedia.org/wiki/Stephen_Benton",
+    "label": "Stephen Benton, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Mary Lou Jepsen",
+    "url": "https://en.wikipedia.org/wiki/Mary_Lou_Jepsen",
+    "label": "Mary Lou Jepsen, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ali Javan",
+    "url": "https://en.wikipedia.org/wiki/Ali_Javan",
+    "label": "Ali Javan, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ivan Sutherland",
+    "url": "https://en.wikipedia.org/wiki/Ivan_Sutherland",
+    "label": "Ivan Sutherland, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Bob Sproull",
+    "url": "https://en.wikipedia.org/wiki/Bob_Sproull",
+    "label": "Bob Sproull, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Samuel Achilefu",
+    "url": "https://en.wikipedia.org/wiki/Samuel_Achilefu",
+    "label": "Samuel Achilefu, Wikipedia",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Daniel Leithinger",
+    "url": "https://www.colorado.edu/atlas/daniel-leithinger",
+    "label": "Daniel Leithinger, University of Colorado Boulder",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Sean Follmer",
+    "url": "https://www.cs.stanford.edu/people/sean-follmer",
+    "label": "Sean Follmer, Stanford University",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Klaus Peter Schönherr",
+    "url": "https://www.helptech.de/firmengeschichte",
+    "label": "Klaus Peter Schönherr, Help Tech, company history",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Horst Hörtner",
+    "url": "https://ars.electronica.art/futurelab/de/hoertner-horst/",
+    "label": "Horst Hörtner, Ars Electronica / vog.photo",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Elma Farnsworth",
+    "url": "https://interviews.televisionacademy.com/interviews/elma-farnsworth",
+    "label": "Elma Farnsworth, Television Academy Foundation, interview 1996",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Albert Brown",
+    "url": "https://patents.google.com/patent/US3482037A/en",
+    "label": "Marie and Albert Brown, home security system patent",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Peter Goldmark",
+    "url": "https://en.wikipedia.org/wiki/Peter_Carl_Goldmark",
+    "label": "Peter Carl Goldmark, Wikipedia",
+    "kind": "biography",
+    "http_status": null,
+    "checked_at": "2026-11-22",
+    "context_review": "Corrected Wikipedia page checked through browser after excluding disambiguation or access throttling"
+  },
+  {
+    "name": "David Hagelbarger",
+    "url": "https://quello.msu.edu/divi/wp-content/uploads/2015/08/Memories-Noll.pdf#page=77",
+    "label": "David Hagelbarger in A. Michael Noll’s Memories, printed p67",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Tadashi Nakamura",
+    "url": "https://www.noritake-itron.jp/eng/profile/nakamura/",
+    "label": "Tadashi Nakamura biography, Noritake Itron",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Tadashi Sasaki",
+    "url": "https://www.shmj.or.jp/english/pioneers/pnr16.html",
+    "label": "Tadashi Sasaki, Semiconductor History Museum of Japan",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Robert Willson",
+    "url": "https://www.invent.org/inductees/robert-h-willson",
+    "label": "Robert H. Willson, National Inventors Hall of Fame",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Tsutae Shinoda",
+    "url": "https://ethw.org/Tsutae_Shinoda",
+    "label": "Tsutae Shinoda, Engineering and Technology History Wiki",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Charles Spindt",
+    "url": "https://www.sirinc2.org/branch35/wp-content/uploads/2016/02/Member-Profile-Jun-2015.pages.pdf",
+    "label": "Charles Spindt, Sons in Retirement, Branch 35",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Louis Heynick",
+    "url": "https://maisonsaine.ca/uploads/2014/06/news183.pdf",
+    "label": "Louis N. Heynick obituary, Bioelectromagnetics Society newsletter183",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Howard Borden",
+    "url": "https://hparchive.com/Journals/HPJ-1969-02.pdf",
+    "label": "Howard C. Borden contributed-author biography, HP Journal February 1969",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gerald Pighini",
+    "url": "https://hparchive.com/Journals/HPJ-1969-02.pdf",
+    "label": "Gerald P. Pighini contributed-author biography, HP Journal February 1969",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Xiaogang Peng",
+    "url": "https://www.chemie.uni-hamburg.de/institute/pc/kolloquium/abstracts/sose2021/abstract-peng.pdf",
+    "label": "Xiaogang Peng, University of Hamburg, lecture programme 2021",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Yizheng Jin",
+    "url": "https://hgi.njust.edu.cn/_upload/article/files/11/d2/893c676e465bb805d3bdd2d00a99/b8f65d36-7d8f-4375-98c3-d8dded728026.pdf",
+    "label": "Yizheng Jin, Nanjing University of Science and Technology, conference programme 2016",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Nicholas Sheridon",
+    "url": "https://thefutureofthings.com/3081-the-future-of-electronic-paper/",
+    "label": "Nicholas Sheridon, TFOT, Nicholas K. Sheridon interview; photograph Deanna Horvath / Xerox",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "B. K. Sadashiva",
+    "url": "https://wwws.rri.res.in/htmls/library/imprints_collection/bios/sadashiva.html",
+    "label": "B. K.Sadashiva biography, Raman Research Institute",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "K. A. Suresh",
+    "url": "https://wwws.rri.res.in/htmls/library/imprints_collection/bios/ka_suresh.html",
+    "label": "K. A.Suresh, Raman Research Institute",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Joseph Ostoja-Kotkowski",
+    "url": "https://en.wikipedia.org/wiki/Joseph_Stanislaus_Ostoja-Kotkowski",
+    "label": "Joseph Stanislaus Ostoja-Kotkowski, Wikipedia",
+    "kind": "biography",
+    "http_status": null,
+    "checked_at": "2026-11-22",
+    "context_review": "Corrected Wikipedia page checked through browser after excluding disambiguation or access throttling"
+  },
+  {
+    "name": "Greg Welch",
+    "url": "https://nursing.ucf.edu/people/gregory-welch/",
+    "label": "Gregory Welch, University of Central Florida",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kok-Lim Low",
+    "url": "https://www.comp.nus.edu.sg/cs/people/lowkl/",
+    "label": "Kok-Lim Low, National University of Singapore",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Deepak Bandyopadhyay",
+    "url": "https://domino.ai/resources/videos/one-stop-for-data-drive-quality-and-compliance",
+    "label": "Deepak Bandyopadhyay, Domino Data Lab / Johnson & Johnson, named speaker portrait",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "J. D. Albert",
+    "url": "https://www.invent.org/inductees/jonathan-d-albert",
+    "label": "J. D. Albert, National Inventors Hall of Fame",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Deng-Ke Yang",
+    "url": "https://www.kent.edu/materials-science/profile/deng-ke-yang",
+    "label": "Deng-Ke Yang, Kent State University",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "J. William Doane",
+    "url": "https://www.kent.edu/physics/j-william-doane",
+    "label": "J. William Doane, Kent State University",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Robert Hayes",
+    "url": "https://aoe.scnu.edu.cn/a/20130314/133.html",
+    "label": "Robert Andrew Hayes, South China Normal University faculty biography",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Johan Feenstra",
+    "url": "https://fasttrack.tno.nl/en/@8454/johan-feenstra/",
+    "label": "Johan Feenstra, TNO",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Mark Miles",
+    "url": "https://greencityforce.org/person/mark-miles/",
+    "label": "Mark Miles, Green City Force",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "S. K. Deb",
+    "url": "https://ime-15.sci-meet.net/plenary-speakers",
+    "label": "S. K. Deb, IME-15 conference, Satyendra (Satyen) K. Deb biography",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Karri Palovuori",
+    "url": "https://sochub.fi/people/",
+    "label": "Karri Palovuori, SoC Hub",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ismo Rakkolainen",
+    "url": "https://www.tuni.fi/en/people/ismo-rakkolainen",
+    "label": "Ismo Rakkolainen, Tampere University",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Gregg Favalora",
+    "url": "https://www.boston.com/news/jobs/2011/01/18/optics_inventor_has_eye_for_ne/",
+    "label": "Gregg Favalora, Josh Reynolds / The Boston Globe",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Elizabeth Downing",
+    "url": "https://web.archive.org/web/20090615052750/http://www.3dtl.com:80/page9.php",
+    "label": "Elizabeth Downing, 3DTL, archived Our CEO & Founder biography",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "John Ralston",
+    "url": "https://neursantys.com/about/",
+    "label": "John Ralston, Neursantys founder biography",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Roger Macfarlane",
+    "url": "https://geoffreyburr.org/papers/IBMR%26D_y2kpaper.pdf#page=27",
+    "label": "Roger M. Macfarlane contributed-author biography, IBM Journal 2000 p367",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Daniel Smalley",
+    "url": "https://www.smalleyholography.org/contact-us",
+    "label": "Daniel Smalley, Future Display Group",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ryuji Hirayama",
+    "url": "https://ryujihirayama.github.io/web/",
+    "label": "Ryuji Hirayama, Ryuji Hirayama",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Diego Martinez Plasencia",
+    "url": "https://vrst.acm.org/vrst2021/keynotes/",
+    "label": "Diego Martinez Plasencia, ACM VRST 2021",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Nobuyuki Masuda",
+    "url": "https://www.rs.tus.ac.jp/ae/lab_computer.html",
+    "label": "Nobuyuki Masuda, Tokyo University of Science, computer engineering laboratory",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Japanese name 増田信之 and computer-engineering laboratory matched to TUS faculty record"
+  },
+  {
+    "name": "Charles Harrison",
+    "url": "https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/",
+    "label": "Charles Harrison, Cooper Hewitt remembrance",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Nasser Peyghambarian",
+    "url": "https://optics.arizona.edu/person/nasser-peyghambarian",
+    "label": "Nasser Peyghambarian, University of Arizona",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Pierre-Alexandre Blanche",
+    "url": "https://optics.arizona.edu/news-events/news/quicknews/pierre-alexandre-blanche-selected-2021-optimax-research-grant-winner",
+    "label": "Pierre-Alexandre Blanche, University of Arizona",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "John Myer",
+    "url": "https://www.adidesignmuseum.org/en/collection/cifra-5-electro-mechanical-clock/",
+    "label": "Cifra 5 design credits, ADI Design Museum",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Oleg Tretiakoff",
+    "url": "https://patents.google.com/patent/US4044350A/en",
+    "label": "Tretiakoff and Tretiakoff, US patent 4,044,350",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Andrée Tretiakoff",
+    "url": "https://patents.google.com/patent/US4044350A/en",
+    "label": "Tretiakoff and Tretiakoff, US patent 4,044,350",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "A. Frankenstein",
+    "url": "https://www.histv.net/1900-1909",
+    "label": "1900–1909 colour-television history, Histoire de la télévision",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Werner von Jaworski",
+    "url": "https://www.histv.net/1900-1909",
+    "label": "1900–1909 colour-television history, Histoire de la télévision",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Robert H. Anderson",
+    "url": "https://vintagetek.org/bob-anderson/",
+    "label": "Bob Anderson biography, vintageTEK Museum",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "M. C. Schlamp",
+    "url": "https://www.nature.com/articles/370354a0",
+    "label": "Colvin, Schlamp and Alivisatos, quantum-dot LED paper, Nature 1994",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Ibn Daniyal",
+    "url": "https://wepa.unima.org/en/?p=773",
+    "label": "Ibn Daniel, World Encyclopedia of Puppetry Arts, UNIMA",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "UNIMA uses Ibn Daniel / Ibn Daniyal transliteration"
+  },
+  {
+    "name": "Paula Hammond",
+    "url": "https://www.sciencehistory.org/education/scientific-biographies/paula-hammond/",
+    "label": "Paula Hammond, Science History Institute",
+    "kind": "biography",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Max Hirsch",
+    "url": "https://patents.google.com/patent/US2967905A/en",
+    "label": "Max Hirsch, generescope patent",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Auguste Berthier",
+    "url": "https://commons.wikimedia.org/wiki/File:1896-05_A._Berthier_-_(le_cosmos_p._229).jpg",
+    "label": "A.Berthier’s 1896 Le Cosmos parallax-barrier article diagram",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Kazuo Yoshinaka",
+    "url": "https://patents.google.com/patent/JPS61198892A/en",
+    "label": "Kazuo Yoshinaka, NEC retinal display patent 1986",
+    "kind": "record",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "J. M. Naish",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14190022/",
+    "label": "J. M.Naish, Combination of information in superimposed visual fields, Nature 1964",
+    "kind": "record",
+    "http_status": 203,
+    "checked_at": "2026-11-22",
+    "context_review": "PubMed metadata verified through browser search; local client received203 interstitial"
+  },
+  {
+    "name": "Emmett Leith",
+    "url": "https://en.wikipedia.org/wiki/Emmett_Leith",
+    "label": "Emmett Leith, Wikipedia",
+    "kind": "biography",
+    "http_status": null,
+    "checked_at": "2026-11-22",
+    "context_review": "Corrected Wikipedia page checked through browser after excluding disambiguation or access throttling"
+  },
+  {
+    "name": "Sriram Subramanian",
+    "url": "https://www.ucl.ac.uk/engineering/news/2025/sep/professor-sriram-subramanian-elected-fellow-royal-academy-engineering",
+    "label": "Sriram Subramanian, University College London",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  },
+  {
+    "name": "Dean DeLongchamp",
+    "url": "https://www.nist.gov/people/dean-delongchamp",
+    "label": "Dean DeLongchamp, National Institute of Standards and Technology",
+    "kind": "profile",
+    "http_status": 200,
+    "checked_at": "2026-11-22",
+    "context_review": "Person and field checked in named source; full biography not inferred for record links"
+  }
+]

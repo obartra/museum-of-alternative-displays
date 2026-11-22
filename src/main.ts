@@ -10,6 +10,7 @@ import { langMenu, wireLangMenu } from './langmenu';
 import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
+import { personLinks } from './data/person-links';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
@@ -300,10 +301,14 @@ const portraitHtml = (name: string, named = false): string => {
   } else credit = `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
   return `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}${credit}</figcaption></figure>`;
 };
+const personNameHtml = (name: string): string => {
+  const link = personLinks[name];
+  return link ? `<a class="person__bio" href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
+};
 /** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
 const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {
   const pics = e.who.map((n) => portraitHtml(n, e.who.length > 1)).join('');
-  return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${esc(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
+  return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${personNameHtml(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
 };
 /** The trail whose people the People page is narrowed to, or nothing for everyone. */
 let peopleOnly: '' | Trail['id'] = '';

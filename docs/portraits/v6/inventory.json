@@ -1,0 +1,2065 @@
+[
+  {
+    "name": "Gino Valle",
+    "connected": true,
+    "entry": {
+      "file": "gino-valle.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Associazione per il Disegno Industriale",
+          "source": "https://www.adi-design.org/upl/CdO_STORICO/CdO%20storico%20MOTIVAZIONI/Motivazioni_1994.pdf"
+        },
+        {
+          "by": "US-Italy Fulbright Commission",
+          "source": "https://www.fulbright.it/wp-content/uploads/2025/05/2024n_FULBRIGHT-compresso.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "John Myer",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Identity unresolved: split-flap sources describe a Belgian inventor. A portrait of MIT architect John Randolph Myer was not accepted without confirming they are the same person."
+  },
+  {
+    "name": "Kenyon Taylor",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Ferranti engineer identified, but no confidently captioned downloadable portrait found."
+  },
+  {
+    "name": "Paul Nipkow",
+    "connected": true,
+    "entry": {
+      "file": "paul-nipkow.webp",
+      "by": "",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Paul-nipkow.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "John Logie Baird",
+    "connected": true,
+    "entry": {
+      "file": "john-logie-baird.webp",
+      "by": "",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:John_Logie_Baird_in_1917.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Daniel Rozin",
+    "connected": true,
+    "entry": {
+      "file": "daniel-rozin.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Fondation Guy & Myriam Ullens",
+          "source": "https://ullens-foundation.com/artists/daniel-rozin"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Daniel Leithinger",
+    "connected": true,
+    "entry": {
+      "file": "daniel-leithinger.webp",
+      "study": [
+        {
+          "by": "University of Colorado Boulder",
+          "source": "https://www.colorado.edu/atlas/daniel-leithinger"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Sean Follmer",
+    "connected": true,
+    "entry": {
+      "file": "sean-follmer.webp",
+      "study": [
+        {
+          "by": "Stanford University",
+          "source": "https://www.cs.stanford.edu/people/sean-follmer"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Hiroshi Ishii",
+    "connected": true,
+    "entry": {
+      "file": "hiroshi-ishii.webp",
+      "by": "Joi",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hiroshi_Ishii_cropped_2_Hiroshi_Ishii_20130406_1.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Oleg Tretiakoff",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Commons labels this historical cadet portrait Oleg Tretiakoff, but supplies no biography or archival provenance tying the sitter to the braille inventor. The 2025 upload date is not the photograph date. Independent identification remains unresolved."
+  },
+  {
+    "name": "Andrée Tretiakoff",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Targeted French/accented and unaccented portrait search again finds braille and computational linguistics records, no named adequate photograph. No invented face."
+  },
+  {
+    "name": "Klaus Peter Schönherr",
+    "connected": true,
+    "entry": {
+      "file": "klaus-peter-schonherr.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Help Tech, company history",
+          "source": "https://www.helptech.de/firmengeschichte"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "James Bryce",
+    "connected": true,
+    "entry": {
+      "file": "james-bryce.webp",
+      "study": [
+        {
+          "by": "IBM Archives",
+          "source": "https://web.archive.org/web/20050124032627/http://www-03.ibm.com/ibm/history/exhibits/markI/markI_team2.html"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in expanded archive search",
+    "reason": null
+  },
+  {
+    "name": "Horst Hörtner",
+    "connected": true,
+    "entry": {
+      "file": "horst-hortner.webp",
+      "study": [
+        {
+          "by": "Ars Electronica / vog.photo",
+          "source": "https://ars.electronica.art/futurelab/de/hoertner-horst/"
+        },
+        {
+          "by": "Ars Electronica",
+          "source": "https://ars.electronica.art/fl25/storyline/virtual-worlds/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Ferdinand Braun",
+    "connected": true,
+    "entry": {
+      "file": "ferdinand-braun.webp",
+      "by": "",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ferdinand_Braun.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Kenjiro Takayanagi",
+    "connected": true,
+    "entry": {
+      "file": "kenjiro-takayanagi.webp",
+      "by": "朝日新聞社",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Takayanagi_Kenjiro_1953.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Philo Farnsworth",
+    "connected": true,
+    "entry": {
+      "file": "philo-farnsworth.webp",
+      "by": "Harris & Ewing",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Philo_T_Farnsworth.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Elma Farnsworth",
+    "connected": true,
+    "entry": {
+      "file": "elma-farnsworth.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Television Academy Foundation, interview 1996",
+          "source": "https://interviews.televisionacademy.com/interviews/elma-farnsworth"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Marie Van Brittan Brown",
+    "connected": true,
+    "entry": {
+      "file": "marie-van-brittan-brown.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "The New York Times, 6 December 1969, scan via The American Blackstory",
+          "source": "https://theamericanblackstory.com/2020/02/11/"
+        },
+        {
+          "by": "Wikipedia provenance for the same NYT couple photograph",
+          "source": "https://en.wikipedia.org/wiki/File:Marie_Van_Brittan_Brown_and_Albert_L._Brown.png"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Albert Brown",
+    "connected": true,
+    "entry": {
+      "file": "albert-brown.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "The New York Times, 6 December 1969, scanned copy via The American Blackstory",
+          "source": "https://theamericanblackstory.com/2020/02/11/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Mark Dean",
+    "connected": true,
+    "entry": {
+      "file": "mark-dean.webp",
+      "study": [
+        {
+          "by": "IBM",
+          "source": "https://www.ibm.com/history/mark-dean"
+        },
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/mark-dean"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Guillermo González Camarena",
+    "connected": true,
+    "entry": {
+      "file": "guillermo-gonzalez-camarena.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "El Economista, captioned 1955 workshop photograph",
+          "source": "https://www.eleconomista.com.mx/opinion/Guillermo-Gonzalez-Camarena-un-geek-en-el-pais-de-la-desigualdad-20180722-0021.html"
+        },
+        {
+          "by": "JORGETERREOLIVA upload, via Commons; underlying photographer unknown",
+          "source": "https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "A. Frankenstein",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "German patent1904 and field-sequential colour system sources searched, including full/initial-name portrait queries. No named professional portrait tied to this applicant; namesakes excluded."
+  },
+  {
+    "name": "Werner von Jaworski",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Patent1904, colour-TV histories, exact-name and variant-name portrait searches. No identified portrait tied to the patent applicant; no substitution from namesake results."
+  },
+  {
+    "name": "Peter Goldmark",
+    "connected": true,
+    "entry": {
+      "file": "peter-goldmark.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Academy of Sciences",
+          "source": "https://static1.squarespace.com/static/5c65dd81af46834afd07e40a/t/605a6c095e85b77df0f0910e/1616538638242/lives%2Bretold%2Bgoldmark%2Bpeter%2Bpt1.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Robert H. Anderson",
+    "connected": true,
+    "entry": {
+      "file": "robert-h-anderson.webp",
+      "small": false,
+      "study": [
+        {
+          "by": "vintageTEK Museum",
+          "source": "https://vintagetek.org/bob-anderson/"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Andrew Haeff",
+    "connected": true,
+    "entry": {
+      "file": "andrew-haeff.webp",
+      "study": [
+        {
+          "by": "Engineering and Technology History Wiki",
+          "source": "https://ethw.org/Andrew_V._Haeff"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "David Hagelbarger",
+    "connected": true,
+    "entry": {
+      "file": "david-hagelbarger.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Nokia Bell Labs, historical image archive",
+          "source": "https://www.nokia.com/about-us/newsroom/media-resources/media-library/nokia-bell-labs-future-site-and-historical-images/"
+        },
+        {
+          "by": "A. Michael Noll, Memories, printed page 67 / PDF page 77",
+          "source": "https://quello.msu.edu/divi/wp-content/uploads/2015/08/Memories-Noll.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Tadashi Nakamura",
+    "connected": true,
+    "entry": {
+      "file": "tadashi-nakamura.webp",
+      "study": [
+        {
+          "by": "Electronic Design, 15 March 1976, via World Radio History",
+          "source": "https://www.worldradiohistory.com/Archive-Electronic-Design/1976/Electronic-Design-V24-N06-1976-0315.pdf"
+        },
+        {
+          "by": "Noritake Itron",
+          "source": "https://www.noritake-itron.jp/eng/profile/nakamura/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Tadashi Sasaki",
+    "connected": true,
+    "entry": {
+      "file": "tadashi-sasaki.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Semiconductor History Museum of Japan",
+          "source": "https://www.shmj.or.jp/english/pioneers/pnr16.html"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Lewis Latimer",
+    "connected": true,
+    "entry": {
+      "file": "lewis-latimer.webp",
+      "small": true,
+      "by": "Unknown photographer, 1882",
+      "licence": "Public domain (Commons historical photograph)",
+      "source": "https://commons.wikimedia.org/wiki/File:Lewis_latimer.jpg"
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Donald Bitzer",
+    "connected": true,
+    "entry": {
+      "file": "donald-bitzer.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/donald-l-bitzer"
+        },
+        {
+          "by": "University of Illinois Alumni Association",
+          "source": "https://uiaa.org/2023/12/14/2023-alumni-awards/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Gene Slottow",
+    "connected": true,
+    "entry": {
+      "file": "gene-slottow.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/h-gene-slottow"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Robert Willson",
+    "connected": true,
+    "entry": {
+      "file": "robert-willson.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/robert-h-willson"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Tsutae Shinoda",
+    "connected": true,
+    "entry": {
+      "file": "tsutae-shinoda.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Engineering and Technology History Wiki",
+          "source": "https://ethw.org/Tsutae_Shinoda"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Charles Spindt",
+    "connected": true,
+    "entry": {
+      "file": "charles-spindt.webp",
+      "study": [
+        {
+          "by": "Sons in Retirement, Branch 35",
+          "source": "https://www.sirinc2.org/branch35/wp-content/uploads/2016/02/Member-Profile-Jun-2015.pages.pdf"
+        },
+        {
+          "by": "SRI International",
+          "source": "https://www.sri.com/hoi/spindt-cold-cathode-for-displays/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Kenneth Shoulders",
+    "connected": true,
+    "entry": {
+      "file": "kenneth-shoulders.webp",
+      "study": [
+        {
+          "by": "Science History Institute",
+          "source": "https://www.sciencehistory.org/stories/magazine/the-frontiersman/"
+        },
+        {
+          "by": "SRI Alumni Association, December 2013 obituary",
+          "source": "https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Louis Heynick",
+    "connected": true,
+    "entry": {
+      "file": "louis-heynick.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Bioelectromagnetics Society, newsletter 183, 2005",
+          "source": "https://maisonsaine.ca/uploads/2014/06/news183.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "v6 moustache readability correction",
+    "reason": null
+  },
+  {
+    "name": "Akintunde Akinwande",
+    "connected": true,
+    "entry": {
+      "file": "akintunde-akinwande.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "MIT Center for Integrated Circuits and Systems",
+          "source": "https://cis.mit.edu/our-people/akintunde-akinwande"
+        },
+        {
+          "by": "MIT Technology Licensing Office",
+          "source": "https://tlo.mit.edu/industry-entrepreneurs/researchers/akintunde-ibitayo-akinwande"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Howard Borden",
+    "connected": true,
+    "entry": {
+      "file": "howard-borden.webp",
+      "study": [
+        {
+          "by": "Hewlett-Packard Journal",
+          "source": "https://hparchive.com/Journals/HPJ-1969-02.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Gerald Pighini",
+    "connected": true,
+    "entry": {
+      "file": "gerald-pighini.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Hewlett-Packard Journal, February 1969, via HP Archive",
+          "source": "https://hparchive.com/Journals/HPJ-1969-02.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Isamu Akasaki",
+    "connected": true,
+    "entry": {
+      "file": "isamu-akasaki.webp",
+      "by": "大臣官房人事課",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Isamu_Akasaki_201111.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Hiroshi Amano",
+    "connected": true,
+    "entry": {
+      "file": "hiroshi-amano.webp",
+      "by": "研究振興局振興企画課",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hiroshi_Amano_20141211.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Shuji Nakamura",
+    "connected": true,
+    "entry": {
+      "file": "shuji-nakamura.webp",
+      "by": "文部科学省",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shuji_Nakamura_Nobel.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ching Wan Tang",
+    "connected": true,
+    "entry": {
+      "file": "ching-wan-tang.webp",
+      "by": "Xiakunlun",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ching_W_Tang.jpg",
+      "small": true
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Steven Van Slyke",
+    "connected": true,
+    "entry": {
+      "file": "steven-van-slyke.webp",
+      "by": "SylviaL",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Steven_Van_Slyke.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Hongxing Jiang",
+    "connected": true,
+    "entry": {
+      "file": "hongxing-jiang.webp",
+      "by": "Santasgift",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hongxing_Jiang.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Jingyu Lin",
+    "connected": true,
+    "entry": {
+      "file": "jingyu-lin.webp",
+      "by": "Santasgift",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jingyu_Lin_%28MOCVD%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Vicki Colvin",
+    "connected": true,
+    "entry": {
+      "file": "vicki-colvin.webp",
+      "study": [
+        {
+          "by": "Brown University",
+          "source": "https://archive2.news.brown.edu/2007-2015/articles/2014/05/colvin.html"
+        },
+        {
+          "by": "Brown University",
+          "source": "https://ibeam.brown.edu/news/2019-02-01/spotlight-vicki-colvin"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "M. C. Schlamp",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "Berkeley paper/royalty/patent records searched; full name Michael C. Schlamp corroborated. No named professional portrait located. Unlabelled group photographs were not used."
+  },
+  {
+    "name": "Paul Alivisatos",
+    "connected": true,
+    "entry": {
+      "file": "paul-alivisatos.webp",
+      "by": "The University of Chicago Office of Communications",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paul_Alivisatos_University_of_Chicago_President_September_2021.png"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Aleksey Yekimov",
+    "connected": true,
+    "entry": {
+      "file": "aleksey-yekimov.webp",
+      "by": "US Embassy Sweden",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Embassy_Sweden_2023_Nobel_Reception_%2853390424929%29_%28cropped%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Louis Brus",
+    "connected": true,
+    "entry": {
+      "file": "louis-brus.webp",
+      "study": [
+        {
+          "by": "Nobel Prize Outreach",
+          "source": "https://www.nobelprize.org/prizes/chemistry/2023/brus/facts/"
+        },
+        {
+          "by": "Columbia Magazine",
+          "source": "https://magazine.columbia.edu/article/professor-louis-brus-wins-nobel-prize-chemistry"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Moungi Bawendi",
+    "connected": true,
+    "entry": {
+      "file": "moungi-bawendi.webp",
+      "by": "US Embassy Sweden",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Embassy_Sweden_2023_Nobel_Reception_%2853390424864%29_%28cropped%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Xiaogang Peng",
+    "connected": true,
+    "entry": {
+      "file": "xiaogang-peng.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "University of Hamburg, lecture programme 2021",
+          "source": "https://www.chemie.uni-hamburg.de/institute/pc/kolloquium/abstracts/sose2021/abstract-peng.pdf"
+        },
+        {
+          "by": "Nanjing University of Science and Technology, conference programme 2016",
+          "source": "https://hgi.njust.edu.cn/_upload/article/files/11/d2/893c676e465bb805d3bdd2d00a99/b8f65d36-7d8f-4375-98c3-d8dded728026.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Yizheng Jin",
+    "connected": true,
+    "entry": {
+      "file": "yizheng-jin.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Nanjing University of Science and Technology, conference programme 2016",
+          "source": "https://hgi.njust.edu.cn/_upload/article/files/11/d2/893c676e465bb805d3bdd2d00a99/b8f65d36-7d8f-4375-98c3-d8dded728026.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Tuomo Suntola",
+    "connected": true,
+    "entry": {
+      "file": "tuomo-suntola.webp",
+      "by": "Riikka Puurunen",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuomo_Suntola%2C_2014_%28cropped%29.JPG"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Dawon Kahng",
+    "connected": true,
+    "entry": {
+      "file": "dawon-kahng.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/dawon-kahng"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Nicholas Sheridon",
+    "connected": true,
+    "entry": {
+      "file": "nicholas-sheridon.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Deanna Horvath / Xerox, via TFOT",
+          "source": "https://thefutureofthings.com/3081-the-future-of-electronic-paper/"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Mozi",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "intentionally empty",
+    "reason": "No documented likeness known. Familiar modern images were imagined centuries later; they cannot establish what this person looked like."
+  },
+  {
+    "name": "Ibn al-Haytham",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "intentionally empty",
+    "reason": "No documented likeness known. Familiar modern images were imagined centuries later; they cannot establish what this person looked like."
+  },
+  {
+    "name": "Gemma Frisius",
+    "connected": true,
+    "entry": {
+      "file": "gemma-frisius.webp",
+      "by": "Philips Galle, 1572; Wellcome Collection",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gemma_Reinier_Phrysius._Line_engraving_by_P._Galle,_1572._Wellcome_V0004650.jpg"
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Daniele Barbaro",
+    "connected": true,
+    "entry": {
+      "file": "daniele-barbaro.webp",
+      "by": "Titian; Museo del Prado",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Daniele_Barbaro_by_Titian.jpg"
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Johannes Kepler",
+    "connected": true,
+    "entry": {
+      "file": "johannes-kepler.webp",
+      "by": "Unknown artist; Smithsonian Libraries",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Johannes_Kepler.jpg"
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Ibn Daniyal",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "intentionally empty",
+    "reason": "No documented likeness known. Familiar modern images were imagined centuries later; they cannot establish what this person looked like."
+  },
+  {
+    "name": "François Dominique Séraphin",
+    "connected": true,
+    "entry": {
+      "file": "francois-dominique-seraphin.webp",
+      "by": "Unknown artist; BnF / Gallica",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_de_S%C3%A9raphin.jpg"
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Henri Rivière",
+    "connected": true,
+    "entry": {
+      "file": "henri-riviere.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Xavier Sébillot; INHA / Revue des peintres bretons",
+          "source": "https://agorha.inha.fr/detail/730"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Kara Walker",
+    "connected": true,
+    "entry": {
+      "file": "kara-walker.webp",
+      "study": [
+        {
+          "by": "Studio International / Martin Kennedy",
+          "source": "https://www.studiointernational.com/kara-walker/"
+        },
+        {
+          "by": "Studio International interview frame, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:Kara_Walker_Interview_Camden_Arts_Centre_01.47_(cropped).jpg"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Martin Schadt",
+    "connected": true,
+    "entry": {
+      "file": "martin-schadt.webp",
+      "by": "Martin Schadt",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Martin_Schadt.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Wolfgang Helfrich",
+    "connected": true,
+    "entry": {
+      "file": "wolfgang-helfrich.webp",
+      "by": "Girweiki",
+      "licence": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wolfgang_Helfrich_%282012%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "James Fergason",
+    "connected": true,
+    "entry": {
+      "file": "james-fergason.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/james-l-fergason"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "George Heilmeier",
+    "connected": true,
+    "entry": {
+      "file": "george-heilmeier.webp",
+      "by": "IEEE Global History Network",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:George_H._Heilmeier.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Sivaramakrishna Chandrasekhar",
+    "connected": true,
+    "entry": {
+      "file": "sivaramakrishna-chandrasekhar.webp",
+      "study": [
+        {
+          "by": "Historic signed portrait photographed at CeNS, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:S.Chandrasekhar.jpg"
+        },
+        {
+          "by": "Raman Research Institute",
+          "source": "https://wwws.rri.res.in/htmls/library/raman_era/Bios/chandrasekhar.html"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "B. K. Sadashiva",
+    "connected": true,
+    "entry": {
+      "file": "b-k-sadashiva.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Raman Research Institute, lecture photograph Sadashiva15",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof.%20B%20K%20Sadashiva/index.html"
+        },
+        {
+          "by": "Raman Research Institute, lecture photograph Sadashiva12",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof.%20B%20K%20Sadashiva/index.html"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "K. A. Suresh",
+    "connected": true,
+    "entry": {
+      "file": "k-a-suresh.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Raman Research Institute, lecture photograph RVP-01",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/album/Prof%20K%20A%20Suresh/index.html"
+        },
+        {
+          "by": "Raman Research Institute, named biography",
+          "source": "https://wwws.rri.res.in/htmls/library/imprints_collection/bios/ka_suresh.html"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Mohamed Atalla",
+    "connected": true,
+    "entry": {
+      "file": "mohamed-atalla.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://invent.org/inductees/martin-john-m-atalla"
+        },
+        {
+          "by": "History of Semiconductor Engineering, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:Atalla1963.png"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Larry Hornbeck",
+    "connected": true,
+    "entry": {
+      "file": "larry-hornbeck.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "University of Texas at Dallas",
+          "source": "https://mse.utdallas.edu/ourteam/faculty/hornbeck-l/"
+        },
+        {
+          "by": "Case Western Reserve University",
+          "source": "https://case.edu/news/triple-alum-larry-j-hornbeck-presented-2014-academy-award-merit"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Fritz Fischer",
+    "connected": true,
+    "entry": {
+      "file": "fritz-fischer.webp",
+      "by": "Angela Blattner",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_Fritz_Fischer.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Joseph Ostoja-Kotkowski",
+    "connected": true,
+    "entry": {
+      "file": "joseph-ostoja-kotkowski.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Arts (MDPI), from the State Library of South Australia",
+          "source": "https://mdpi-res.com/d_attachment/arts/arts-08-00023/article_deploy/arts-08-00023.pdf"
+        },
+        {
+          "by": "Australian Dictionary of Biography",
+          "source": "https://adb.anu.edu.au/biography/ostojakotkowski-joseph-stanislaw--stan-21621"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Elsa Garmire",
+    "connected": true,
+    "entry": {
+      "file": "elsa-garmire.webp",
+      "study": [
+        {
+          "by": "Optica",
+          "source": "https://www.optica.org/history/biographies/bios/elsa-garmire/"
+        },
+        {
+          "by": "Dartmouth Engineering",
+          "source": "https://engineering.dartmouth.edu/community/faculty/elsa-garmire"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ivan Dryer",
+    "connected": true,
+    "entry": {
+      "file": "ivan-dryer.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "International Laser Display Association",
+          "source": "https://www.ilda.com/ivandryer.html"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Leota Toombs",
+    "connected": true,
+    "entry": {
+      "file": "leota-toombs.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "D23",
+          "source": "https://d23.com/walt-disney-legend/leota-toombs/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Michael Naimark",
+    "connected": true,
+    "entry": {
+      "file": "michael-naimark.webp",
+      "by": "Marie Sester",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Naimark_2010.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ramesh Raskar",
+    "connected": true,
+    "entry": {
+      "file": "ramesh-raskar.webp",
+      "by": "Joi Ito",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ramesh_Raskar_%2811539797465%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Greg Welch",
+    "connected": true,
+    "entry": {
+      "file": "greg-welch.webp",
+      "study": [
+        {
+          "by": "University of Central Florida",
+          "source": "https://nursing.ucf.edu/people/gregory-welch/"
+        },
+        {
+          "by": "University of Central Florida",
+          "source": "https://www.ucf.edu/news/ucf-professor-greg-welch-named-to-the-national-academy-of-inventors/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Kok-Lim Low",
+    "connected": true,
+    "entry": {
+      "file": "kok-lim-low.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National University of Singapore",
+          "source": "https://www.comp.nus.edu.sg/cs/people/lowkl/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Deepak Bandyopadhyay",
+    "connected": true,
+    "entry": {
+      "file": "deepak-bandyopadhyay.webp",
+      "study": [
+        {
+          "by": "Domino Data Lab / Johnson & Johnson",
+          "source": "https://domino.ai/resources/videos/one-stop-for-data-drive-quality-and-compliance"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Lanny Smoot",
+    "connected": true,
+    "entry": {
+      "file": "lanny-smoot.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/lanny-smoot"
+        },
+        {
+          "by": "The Walt Disney Company",
+          "source": "https://thewaltdisneycompany.com/lanny-smoot-to-be-the-first-disney-imagineer-inducted-into-the-national-inventors-hall-of-fame/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Barrett Comiskey",
+    "connected": true,
+    "entry": {
+      "file": "barrett-comiskey.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/barrett-o-comiskey"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "J. D. Albert",
+    "connected": true,
+    "entry": {
+      "file": "j-d-albert.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/jonathan-d-albert"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Joseph Jacobson",
+    "connected": true,
+    "entry": {
+      "file": "joseph-jacobson.webp",
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/joseph-m-jacobson"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "John Rogers",
+    "connected": true,
+    "entry": {
+      "file": "john-rogers.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Northwestern University",
+          "source": "https://crn.northwestern.edu/people/faculty/john-a-rogers.html"
+        },
+        {
+          "by": "University of Illinois / L. Brian Stauffer, via Commons",
+          "source": "https://commons.wikimedia.org/wiki/File:Rogers_john2.jpg"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Zhenan Bao",
+    "connected": true,
+    "entry": {
+      "file": "zhenan-bao.webp",
+      "by": "Christopher Michel",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zhenan_Bao_by_Christopher_Michel_in_2024_01.jpg"
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Deng-Ke Yang",
+    "connected": true,
+    "entry": {
+      "file": "deng-ke-yang.webp",
+      "study": [
+        {
+          "by": "Kent State University",
+          "source": "https://www.kent.edu/materials-science/profile/deng-ke-yang"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "J. William Doane",
+    "connected": true,
+    "entry": {
+      "file": "j-william-doane.webp",
+      "study": [
+        {
+          "by": "Kent State University",
+          "source": "https://www.kent.edu/physics/j-william-doane"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Gerardo Beni",
+    "connected": true,
+    "entry": {
+      "file": "gerardo-beni.webp",
+      "study": [
+        {
+          "by": "University of California, Riverside",
+          "source": "https://cris.ucr.edu/people/gerardo-beni"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Susan Hackwood",
+    "connected": true,
+    "entry": {
+      "file": "susan-hackwood.webp",
+      "study": [
+        {
+          "by": "California Council on Science and Technology",
+          "source": "https://ccst.us/womens-history-month-a-conversation-with-dr-susan-hackwood/"
+        },
+        {
+          "by": "University of California, Riverside",
+          "source": "https://insideucr.ucr.edu/media/image/susan-hackwood"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Robert Hayes",
+    "connected": true,
+    "entry": {
+      "file": "robert-hayes.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "South China Normal University",
+          "source": "https://aoe.scnu.edu.cn/a/20160416/1325.html"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Johan Feenstra",
+    "connected": true,
+    "entry": {
+      "file": "johan-feenstra.webp",
+      "study": [
+        {
+          "by": "TNO",
+          "source": "https://fasttrack.tno.nl/en/@8454/johan-feenstra/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Mark Miles",
+    "connected": true,
+    "entry": {
+      "file": "mark-miles.webp",
+      "study": [
+        {
+          "by": "Green City Force",
+          "source": "https://greencityforce.org/person/mark-miles/"
+        },
+        {
+          "by": "OakTREE",
+          "source": "https://www.oaktree.eco/about/who-we-are/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "S. K. Deb",
+    "connected": true,
+    "entry": {
+      "file": "s-k-deb.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "IME-15 conference",
+          "source": "https://ime-15.sci-meet.net/plenary-speakers"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Paula Hammond",
+    "connected": true,
+    "entry": {
+      "file": "paula-hammond.webp",
+      "by": "Christopher Michel",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paula_T._Hammond_in_2023_01.jpg"
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Dean DeLongchamp",
+    "connected": true,
+    "entry": {
+      "file": "dean-delongchamp.webp",
+      "by": "NIST; individual photographer not stated",
+      "licence": "NIST public-information reuse policy",
+      "source": "https://www.nist.gov/people/dean-delongchamp"
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Henry Dircks",
+    "connected": true,
+    "entry": {
+      "file": "henry-dircks.webp",
+      "by": "",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Henry_Dircks_portrait.png"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "John Henry Pepper",
+    "connected": true,
+    "entry": {
+      "file": "john-henry-pepper.webp",
+      "by": "Henry Maull",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Prod_24630.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Valerie Thomas",
+    "connected": true,
+    "entry": {
+      "file": "valerie-thomas.webp",
+      "by": "NASA",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Valerie_L._Thomas_standing_with_a_stack_of_early_Landsat_Computer_Compatible_Tapes_-_Original.png"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Karri Palovuori",
+    "connected": true,
+    "entry": {
+      "file": "karri-palovuori.webp",
+      "study": [
+        {
+          "by": "SoC Hub",
+          "source": "https://sochub.fi/people/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ismo Rakkolainen",
+    "connected": true,
+    "entry": {
+      "file": "ismo-rakkolainen.webp",
+      "study": [
+        {
+          "by": "Tampere University",
+          "source": "https://www.tuni.fi/en/people/ismo-rakkolainen"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Joseph Plateau",
+    "connected": true,
+    "entry": {
+      "file": "joseph-plateau.webp",
+      "by": "Albert Callisto",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Joseph_Plateau_-_clean.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Max Hirsch",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "No portrait confidently tied to the swept-volume inventor; namesake politician portraits excluded."
+  },
+  {
+    "name": "Gregg Favalora",
+    "connected": true,
+    "entry": {
+      "file": "gregg-favalora.webp",
+      "study": [
+        {
+          "by": "Josh Reynolds / The Boston Globe",
+          "source": "https://www.boston.com/news/jobs/2011/01/18/optics_inventor_has_eye_for_ne/"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Elizabeth Downing",
+    "connected": true,
+    "entry": {
+      "file": "elizabeth-downing.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "3DTL",
+          "source": "https://web.archive.org/web/20090615052750/http://www.3dtl.com:80/page9.php"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Lambertus Hesselink",
+    "connected": true,
+    "entry": {
+      "file": "lambertus-hesselink.webp",
+      "study": [
+        {
+          "by": "Stanford University",
+          "source": "https://profiles.stanford.edu/lambertus-hesselink"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "John Ralston",
+    "connected": true,
+    "entry": {
+      "file": "john-ralston.webp",
+      "study": [
+        {
+          "by": "Neursantys",
+          "source": "https://neursantys.com/about/"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Roger Macfarlane",
+    "connected": true,
+    "entry": {
+      "file": "roger-macfarlane.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Mike Reid / University of Canterbury",
+          "source": "https://spcs.canterbury.ac.nz/~mfr24/electronicstructure/Reid_making_sense_Chongqing_2024.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing, recovered in targeted modern-researcher search",
+    "reason": null
+  },
+  {
+    "name": "Daniel Smalley",
+    "connected": true,
+    "entry": {
+      "file": "daniel-smalley.webp",
+      "study": [
+        {
+          "by": "Future Display Group",
+          "source": "https://www.smalleyholography.org/contact-us"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ryuji Hirayama",
+    "connected": true,
+    "entry": {
+      "file": "ryuji-hirayama.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Ryuji Hirayama",
+          "source": "https://ryujihirayama.github.io/web/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Diego Martinez Plasencia",
+    "connected": true,
+    "entry": {
+      "file": "diego-martinez-plasencia.webp",
+      "study": [
+        {
+          "by": "ACM VRST 2021",
+          "source": "https://vrst.acm.org/vrst2021/keynotes/"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Nobuyuki Masuda",
+    "connected": true,
+    "entry": {
+      "file": "nobuyuki-masuda.webp",
+      "study": [
+        {
+          "by": "Tokyo University of Science",
+          "source": "https://www.rs.tus.ac.jp/ae/lab_computer.html"
+        },
+        {
+          "by": "Tokyo University of Science",
+          "source": "https://www.tus.ac.jp/ridai/doc/ji/RIJIA01Detail.php?act=&diu=698d&kin=ken"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Sriram Subramanian",
+    "connected": true,
+    "entry": {
+      "file": "sriram-subramanian.webp",
+      "by": "Danny Hope",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sriram_Subramanian_-_UX_Brighton_2012_%288366699397%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Yoichi Ochiai",
+    "connected": true,
+    "entry": {
+      "file": "yoichi-ochiai.webp",
+      "by": "Craft x Tech",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yoichi_Ochiai_%28Craft_x_Tech_Tohoku_Project_2024%29_%28cropped%29.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Charles Wheatstone",
+    "connected": true,
+    "entry": {
+      "file": "charles-wheatstone.webp",
+      "by": "Samuel Laurence",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Wheatstone_Charles_drawing_1868.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Kenneth Dunkley",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "The National Business League page uses a modern illustration, with no documentary photo provenance. Seattle Peace Chorus credits an EOC Nassau photo, but the original EOC page is now unavailable. His first-person Stereo World article verifies the inventor and patent, but the attempted PDF download returned a challenge HTML page, not a viewable PDF; no portrait was extracted from it."
+  },
+  {
+    "name": "Charles Harrison",
+    "connected": true,
+    "entry": {
+      "file": "charles-harrison.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "Cooper Hewitt / Rob Tarpey, 2008",
+          "source": "https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/"
+        },
+        {
+          "by": "The Strong / Tim Klein, 1998, republished by Global Toy News",
+          "source": "https://globaltoynews.com/2021/02/10/charles-harrison-the-black-industrial-designer-who-revamped-view-master/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Frederic Ives",
+    "connected": true,
+    "entry": {
+      "file": "frederic-ives.webp",
+      "by": "",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Frederic_E._Ives.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Auguste Berthier",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "No portrait confidently tied to the parallax-barrier inventor."
+  },
+  {
+    "name": "Walter Hess",
+    "connected": true,
+    "entry": {
+      "file": "walter-hess.webp",
+      "by": "Nobel Foundation",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Walter_Hess.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Hank Willis Thomas",
+    "connected": true,
+    "entry": {
+      "file": "hank-willis-thomas.webp",
+      "study": [
+        {
+          "by": "New City Arts / Andrea Blanch",
+          "source": "https://newcityarts.org/exhibitions/hank-willis-thomas-i-am-a-man"
+        },
+        {
+          "by": "Ford Foundation",
+          "source": "https://www.fordfoundation.org/news-and-stories/big-ideas/inequalityis/hank-willis-thomas-on-the-role-of-artists-in-fighting-inequality/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Gabriel Lippmann",
+    "connected": true,
+    "entry": {
+      "file": "gabriel-lippmann.webp",
+      "by": "Nobel Foundation",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Gabriel_Lippmann2.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Dennis Gabor",
+    "connected": true,
+    "entry": {
+      "file": "dennis-gabor.webp",
+      "by": "Keystone",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dennis_Gabor_1971b.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Emmett Leith",
+    "connected": true,
+    "entry": {
+      "file": "emmett-leith.webp",
+      "by": "University of Michigan News and Information Services",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Professor_Emmett_Leith_1963.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Juris Upatnieks",
+    "connected": true,
+    "entry": {
+      "file": "juris-upatnieks.webp",
+      "by": "University of Michigan News and Information Services",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Professor_Juris_Upatnieks_1963.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Margaret Benyon",
+    "connected": true,
+    "entry": {
+      "file": "margaret-benyon.webp",
+      "study": [
+        {
+          "by": "hologram.se",
+          "source": "https://hologram.se/wp-content/uploads/2018/06/Margaret_Benyon_Obituary_2016.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Stephen Benton",
+    "connected": true,
+    "entry": {
+      "file": "stephen-benton.webp",
+      "study": [
+        {
+          "by": "MIT Arts, Kepes Award",
+          "source": "https://arts.mit.edu/camit/awards/kepes/"
+        },
+        {
+          "by": "Gallery286, Real / Virtual catalogue, page 5",
+          "source": "https://www.gallery286.com/wp-content/uploads/RealVirtual-catalogue-D4.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "new v6 drawing",
+    "reason": null
+  },
+  {
+    "name": "Mary Lou Jepsen",
+    "connected": true,
+    "entry": {
+      "file": "mary-lou-jepsen.webp",
+      "by": "Maryloujepsen",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mary_Lou_Jepsen_Headshot_April_2022.png"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Ali Javan",
+    "connected": true,
+    "entry": {
+      "file": "ali-javan.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "National Inventors Hall of Fame",
+          "source": "https://www.invent.org/inductees/ali-javan"
+        },
+        {
+          "by": "MIT Physics Annual 2017, in remembrance",
+          "source": "https://physics.mit.edu/wp-content/uploads/2021/01/physicsatmit_17_inremembrance.pdf"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Nasser Peyghambarian",
+    "connected": true,
+    "entry": {
+      "file": "nasser-peyghambarian.webp",
+      "study": [
+        {
+          "by": "University of Arizona, Optical Sciences",
+          "source": "https://optics.arizona.edu/person/nasser-peyghambarian"
+        },
+        {
+          "by": "University of Arizona, Semiconductor Manufacturing",
+          "source": "https://csm.arizona.edu/person/nasser-peyghambarian"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Pierre-Alexandre Blanche",
+    "connected": true,
+    "entry": {
+      "file": "pierre-alexandre-blanche.webp",
+      "small": true,
+      "study": [
+        {
+          "by": "University of Arizona, IEEE author manuscript",
+          "source": "https://wp.optics.arizona.edu/pablanche/wp-content/uploads/sites/37/2016/06/1004_Christenson_IEEE-JDT-6.pdf"
+        },
+        {
+          "by": "University of Arizona, 2021 Optimax award",
+          "source": "https://optics.arizona.edu/news-events/news/quicknews/pierre-alexandre-blanche-selected-2021-optimax-research-grant-winner"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Ivan Sutherland",
+    "connected": true,
+    "entry": {
+      "file": "ivan-sutherland.webp",
+      "by": "Dick Lyon",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ivan_Sutherland_at_CHM.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Bob Sproull",
+    "connected": true,
+    "entry": {
+      "file": "bob-sproull.webp",
+      "by": "Marcin Wichary",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bob_Sproull_in_2008.jpg"
+    },
+    "round6_outcome": "previously connected",
+    "reason": null
+  },
+  {
+    "name": "Samuel Achilefu",
+    "connected": true,
+    "entry": {
+      "file": "samuel-achilefu.webp",
+      "study": [
+        {
+          "by": "UT Southwestern",
+          "source": "https://profiles.utsouthwestern.edu/profile/209730/samuel-achilefu.html"
+        },
+        {
+          "by": "Washington University in St. Louis",
+          "source": "https://source.washu.edu/2016/02/washington-people-samuel-achilefu/"
+        }
+      ]
+    },
+    "round6_outcome": "accepted v5 drawing connected in round 6",
+    "reason": null
+  },
+  {
+    "name": "Kazuo Yoshinaka",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "No portrait confidently tied to the virtual-retinal-display inventor."
+  },
+  {
+    "name": "J. M. Naish",
+    "connected": false,
+    "entry": null,
+    "round6_outcome": "pending",
+    "reason": "No portrait confidently tied to the head-up-display researcher; physician namesake excluded."
+  }
+]
