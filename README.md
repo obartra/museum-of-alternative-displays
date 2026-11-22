@@ -273,6 +273,15 @@ Without a network the worker opens the museum at the same place.
 These pages are in English, and the address bar still shows the `#` form once the museum is
 running.
 
+For an address the server does not have, the build writes `404.html`. It finds the museum's
+folder, opens the museum there and says that nothing is at that address.
+
+## Sources that go away
+
+`npx tsx scripts/links.ts` asks every address cited in `src/data` whether it is still there.
+`.github/workflows/links.yml` runs it every Monday and opens an issue, or adds to the open
+one, when a source answers 404 or 410. Sources that only refuse a script are listed in the run.
+
 ## The museum as an app
 
 The site can be installed, on a phone and on a desk machine. `public/manifest.webmanifest` gives the app

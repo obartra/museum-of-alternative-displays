@@ -75,6 +75,20 @@ function swap(page: string, find: RegExp, put: string): string {
 }
 
 /**
+ * The page the server sends for an address it does not have, at whatever depth that address lies. It finds the
+ * museum's folder for itself: the address the museum is published at if the page is under it, and otherwise the
+ * first folder of the address, where a project's pages live. Then it is the museum's own page, at the place that
+ * says a page is missing. A reader without scripts gets one sentence and the way to the entrance.
+ */
+function missing(page: string, site: string): string {
+  const find = `<script>(function(){var site=${JSON.stringify(site)},root=location.href.indexOf(site)===0?site:location.origin+'/'+(location.pathname.split('/')[1]||'')+'/';if(root.slice(-2)==='//')root=location.origin+'/';document.write('<base href="'+root+'">');try{history.replaceState(null,'',root+'#missing')}catch(e){}document.documentElement.classList.add('js')})()</script><style>.js [data-plain]{visibility:hidden}</style><meta name="robots" content="noindex">`;
+  let html = swap(page, /<meta charset="utf-8">/, `<meta charset="utf-8">\n${find}`);
+  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(en['title.page'].replace('{page}', en['missing.title']).replace('{site}', NAME))}</title>`);
+  html = swap(html, /<link rel="canonical" href="[^"]*">/, '');
+  return swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px"><h1>${esc(en['missing.title'])}</h1><p><a href="${site}">${esc(NAME)}</a></p></main></div>`);
+}
+
+/**
  * The pages, made from the museum's own page as the build leaves it, and the sitemap. `page` is that page.
  * The address of the museum is read from its canonical link.
  */
@@ -109,5 +123,5 @@ export function staticPages(page: string): { fileName: string; source: string }[
 ${[site, ...own().map((o) => site + o.path)].map((url) => `  <url><loc>${esc(url)}</loc></url>`).join('\n')}
 </urlset>
 `;
-  return [...files, { fileName: 'sitemap.xml', source: sitemap }];
+  return [...files, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }];
 }

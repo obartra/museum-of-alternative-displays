@@ -1,0 +1,36 @@
+name: Source links
+
+# Once a week, ask every source the museum cites whether it is still there. A source that is gone opens an issue,
+# or adds to the one that is open. Sources that only refuse a script are listed in the run, and open nothing.
+on:
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Ask every source
+        id: ask
+        run: |
+          if npx tsx scripts/links.ts > links.md; then echo "gone=no" >> "$GITHUB_OUTPUT"; else echo "gone=yes" >> "$GITHUB_OUTPUT"; fi
+          cat links.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Say which sources are gone
+        if: steps.ask.outputs.gone == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "Sources that are gone in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$open" ]; then gh issue comment "$open" --repo "$GITHUB_REPOSITORY" --body-file links.md
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "Sources that are gone" --body-file links.md; fi
