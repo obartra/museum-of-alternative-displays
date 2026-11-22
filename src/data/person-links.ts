@@ -413,8 +413,8 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "biography"
   },
   "Daniel Leithinger": {
-    "url": "https://www.colorado.edu/atlas/daniel-leithinger",
-    "label": "Daniel Leithinger, University of Colorado Boulder",
+    "url": "https://www.aap.cornell.edu/people/daniel-leithinger",
+    "label": "Daniel Leithinger, Cornell University",
     "kind": "profile"
   },
   "Sean Follmer": {
@@ -592,11 +592,6 @@ export const personLinks: Record<string, PersonLink> = {
     "label": "Elizabeth Downing, 3DTL, archived Our CEO & Founder biography",
     "kind": "profile"
   },
-  "John Ralston": {
-    "url": "https://neursantys.com/about/",
-    "label": "John Ralston, Neursantys founder biography",
-    "kind": "biography"
-  },
   "Roger Macfarlane": {
     "url": "https://geoffreyburr.org/papers/IBMR%26D_y2kpaper.pdf#page=27",
     "label": "Roger M. Macfarlane contributed-author biography, IBM Journal 2000 p367",
@@ -640,6 +635,11 @@ export const personLinks: Record<string, PersonLink> = {
   "John Myer": {
     "url": "https://www.adidesignmuseum.org/en/collection/cifra-5-electro-mechanical-clock/",
     "label": "Cifra 5 design credits, ADI Design Museum",
+    "kind": "record"
+  },
+  "John Ralston": {
+    "url": "https://research.ibm.com/publications/a-three-color-solid-state-three-dimensional-display",
+    "label": "A three-color, solid-state, three-dimensional display, Science (1996), listed by IBM Research",
     "kind": "record"
   },
   "Oleg Tretiakoff": {

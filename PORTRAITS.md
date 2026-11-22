@@ -180,7 +180,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Gregg Favalora | Swept-volume display | Founder of Actuality Systems, which put the Perspecta display on sale in 2002. | yes | `public/people/gregg-favalora.webp` |
 | Elizabeth Downing | Static-volume display | The first author of the 1996 Science paper from Stanford. A common name. | yes | `public/people/elizabeth-downing.webp` |
 | Lambertus Hesselink | Static-volume display | Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author. | yes | `public/people/lambertus-hesselink.webp` |
-| John Ralston | Static-volume display | A co-author of the 1996 Science paper from Stanford. A common name. | yes | `public/people/john-ralston.webp` |
+| John Ralston | Static-volume display | A co-author of the 1996 Science paper from Stanford. A common name. | withdrawn on 22 November 2026: no source read ties the man in the study photograph to the author at SDL | none |
 | Roger Macfarlane | Static-volume display | Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author. | yes | `public/people/roger-macfarlane.webp` |
 | Daniel Smalley | Optical trap display | The Brigham Young University professor. A common name. | yes | `public/people/daniel-smalley.webp` |
 | Ryuji Hirayama | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/ryuji-hirayama.webp` |
