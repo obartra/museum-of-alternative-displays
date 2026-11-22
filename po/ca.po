@@ -967,6 +967,12 @@ msgstr "S'està obrint el recorregut."
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.fail.graphics"
+msgid "This browser could not start 3D graphics, so the hall stays a picture. Every hall is also a page: the numbers at the top lead to them."
+msgstr "Aquest navegador no ha pogut engegar els gràfics 3D, i per això la sala es queda en una imatge. Cada àmbit també és una pàgina: els números de dalt hi porten."
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.fail"
 msgid "The hall did not load. Check the connection and reload. Every piece is also in the index."
 msgstr "El recorregut no s'ha carregat. Comprova la connexió i torna a carregar la pàgina. Totes les peces també són a l'índex."
@@ -1312,6 +1318,18 @@ msgstr "En un iPhone o un iPad, toca «Comparteix» al Safari i després «Afege
 msgctxt "ui.piece.share"
 msgid "Share"
 msgstr "Comparteix"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.line"
+msgid "Trail: {name}"
+msgstr "Recorregut: {name}"
+
+#: interface
+#. People page.
+msgctxt "ui.people.jump"
+msgid "Go to hall"
+msgstr "Ves a l'àmbit"
 
 #: interface
 #. Headings on the page of a piece.

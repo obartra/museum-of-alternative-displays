@@ -4,7 +4,7 @@ import { trailById, trails } from './data/trails';
 import type { Stand } from './data/tours';
 import { openGuide } from './guide';
 import { nearHtml, openNear, type Lent } from './near';
-import { hush, tourHash, toursNow } from './tour';
+import { hush, tourHash, toursNow, keepStop } from './tour';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -136,6 +136,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
    * full view has to land on this very page: `anyway` is for the moment that step has been taken.
    */
   const mark = (anyway = false) => {
+    if (guide.tour && !closed) keepStop(guide.tour, guide.part);
     if (closed || (!anyway && host.classList.contains('is-full')) || !/^#(walk|tour)/.test(location.hash)) return;
     const to = guide.tour ? tourHash(guide.tour, guide.part) : last ? `#walk-${last}` : location.hash.startsWith('#tour') ? '#walk' : '';
     if (!to || location.hash === to) return;
@@ -261,7 +262,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
         });
       } catch {
         canvas.remove(); canvas = null;
-        return fail(t('stage.fail.graphics'));
+        return fail(t('walk.fail.graphics'));
       }
       for (const b of planEl.querySelectorAll<HTMLButtonElement>('[data-bay]')) b.disabled = false;
       planEl.classList.add('is-live'); goto.disabled = false;

@@ -968,6 +968,12 @@ msgstr "Ouverture de la visite."
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.fail.graphics"
+msgid "This browser could not start 3D graphics, so the hall stays a picture. Every hall is also a page: the numbers at the top lead to them."
+msgstr "Ce navigateur n’a pas pu démarrer les graphismes 3D, la salle reste donc une image. Chaque galerie est aussi une page : les numéros en haut y mènent."
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.fail"
 msgid "The hall did not load. Check the connection and reload. Every piece is also in the index."
 msgstr "La visite ne s’est pas chargée. Vérifiez la connexion et rechargez la page. Toutes les pièces sont aussi dans l’index."
@@ -1313,6 +1319,18 @@ msgstr "Sur un iPhone ou un iPad, touchez « Partager » dans Safari, puis �
 msgctxt "ui.piece.share"
 msgid "Share"
 msgstr "Partager"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.line"
+msgid "Trail: {name}"
+msgstr "Parcours : {name}"
+
+#: interface
+#. People page.
+msgctxt "ui.people.jump"
+msgid "Go to hall"
+msgstr "Aller à la galerie"
 
 #: interface
 #. Headings on the page of a piece.

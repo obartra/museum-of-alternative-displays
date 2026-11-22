@@ -13,7 +13,7 @@ import { portraits } from './data/portraits';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
-import { findKept, greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
+import { findKept, greet, hush, justAsked, keepTrail, preview, resumed, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import { appFoot, appHtml, wireApp } from './app';
@@ -129,7 +129,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#people"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${appFoot()}</footer>
+<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${current === 'about' ? '' : appFoot()}</footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -305,6 +305,7 @@ function peopleView(): void {
 <div class="stack">
   <div class="pagehead"><h1 class="title">${tx('nav.people')}</h1><p class="lead">${tx('people.lead')}</p></div>
   <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend><div class="filters__keys">${pill('', tx('people.all'))}${trails.map((tr) => pill(tr.id, tx(`trail.${tr.id}`))).join('')}</div></fieldset></form>
+  <p class="ways jump" id="who-jump" role="group" aria-label="${tx('people.jump')}"><span class="jump__word" aria-hidden="true">${tx('people.jump')}</span>${halls.map((h) => `<button type="button" class="btn" data-jump="${h.id}" aria-label="${tx('nav.hall', { n: h.id, name: said.hall(h).name })}">${h.id}</button>`).join('')}</p>
   <p class="count" id="who-count" role="status"></p>
   <p class="ways" id="who-walk" hidden></p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
@@ -327,16 +328,23 @@ function peopleView(): void {
       return blocks ? `<section class="stack" style="--gap: 4px" data-hall="${h.id}"><h2 class="h-sec who__hall"><b class="who__no" aria-hidden="true">${h.id}</b><span>${tx('hall.title', { n: h.id, name: said.hall(h).name })}</span></h2><div class="who__grid">${blocks}</div></section>` : '';
     }).join('');
     tally.textContent = t('people.count', { n: names.size });
+    // a hall with nobody to show under this choice cannot be gone to
+    for (const b of document.querySelectorAll<HTMLButtonElement>('#who-jump [data-jump]')) b.disabled = !rows.querySelector(`[data-hall="${b.dataset.jump}"]`);
     // the way into the halls along the trail: its guided tour where the language tells one, or the trail itself
     const tour = tr ? toursNow().find((x) => x.id === tr.id) : undefined;
     walk.hidden = !tr;
-    walk.innerHTML = !tr ? '' : tour ? `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a>` : `<a class="btn btn--go" href="#walk-${tr.stops[0] ?? ''}" data-trail="${tr.id}">${tx('trail.walk')}</a>`;
+    walk.innerHTML = !tr ? '' : tour ? `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a><a class="btn" href="#words-${tour.id}">${tx('tour.whole')}</a>` : `<a class="btn btn--go" href="#walk-${tr.stops[0] ?? ''}" data-trail="${tr.id}">${tx('trail.walk')}</a>`;
     // a trail whose people are written down by name shows the source that each name rests on
     const list = tr?.list?.filter((x) => names.has(x.name)) ?? [];
     written.hidden = !list.length;
     written.innerHTML = list.length ? `<h2 class="h-sec">${tx('trail.list')}</h2><p class="prose">${tr?.id === 'black' ? tx('trail.list.black') : ''}</p><ol class="sources">${list.map((x) => `<li><span class="kind">${esc(x.name)}</span><a href="${esc(x.source.url)}" rel="noopener">${esc(x.source.label)}</a></li>`).join('')}</ol>` : '';
   };
   walk.addEventListener('click', keepTrail);
+  document.getElementById('who-jump')!.addEventListener('click', (ev) => {
+    const to = (ev.target as Element).closest<HTMLElement>('[data-jump]')?.dataset.jump;
+    const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (to) rows.querySelector(`[data-hall="${to}"]`)?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+  });
   document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = trailById((ev.target as HTMLInputElement).value)?.id ?? ''; draw(); });
   draw();
 }
@@ -358,7 +366,8 @@ function tourCard(tour: Tour): string {
     <strong class="tourcard__title">${esc(own.title)}</strong>
     <span class="tourcard__lead">${esc(own.lead)}</span>
     <span class="tourcard__foot"><span class="tourcard__go">${tx('tour.take')}</span>${minutes ? `<span class="tourcard__audio">${HEADPHONES}${tx('tour.spoken', { n: minutes })}</span>` : ''}</span>
-  </a>`;
+  </a>
+  <p class="tourcard__more"><a href="#words-${tour.id}">${tx('tour.whole')}</a></p>`;
 }
 
 // ---------- the words of a guided tour, on one page ----------
@@ -383,6 +392,16 @@ function changedOn(): string {
   const date = new Intl.DateTimeFormat(langNow().tag, { dateStyle: 'long', timeZone: 'UTC' }).format(day);
   return `<p class="small muted"><time datetime="${__CHANGED__}">${tx('about.changed', { date })}</time></p>`;
 }
+/** The trails a piece is a stop of, each with the colour of its line on the floor and the way onto it: its guided tour where the language tells one, or the walk. */
+function linesHtml(id: string): string {
+  const on = trails.filter((tr) => tr.stops.includes(id));
+  if (!on.length) return '';
+  return `<p class="lines">${on.map((tr) => {
+    const tour = toursNow().find((x) => x.id === tr.id);
+    return `<a class="line" style="--trail: ${tr.colour}" href="${tour ? tourHash(tour, id) : `#walk-${id}`}" data-trail="${tr.id}"><span class="line__mark" aria-hidden="true"></span>${tx('piece.line', { name: t(`trail.${tr.id}`) })}</a>`;
+  }).join('')}</p>`;
+}
+
 // ---------- the short visit: three pieces, each with a note above it ----------
 const VISIT_NOTES = ['visit.note.1', 'visit.note.2', 'visit.note.3'] as const;
 /** The band above a piece that is a stop of the short visit: where the visitor is, what to notice, and the way on. */
@@ -457,7 +476,7 @@ ${step === undefined ? '' : visitBand(step)}
       ${row(tx('card.principle'), esc(said.principle(p.principle)))}
       ${p.needs.length ? row(tx('card.properties'), esc(p.needs.map((n) => said.need(n)).join('. '))) : ''}
     </dl>
-    ${credit && told ? `<section class="people stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.people')}</h2><ul class="people__list">${credit.people.map((e, k) => entryHtml(p.id, e, told.did[k])).join('')}</ul>${told.note ? `<p class="people__note"${standIn.people(p.id)}>${esc(told.note)}</p>` : ''}<p class="small"><a href="#people">${tx('people.more')}</a></p></section>` : ''}
+    ${credit && told ? `<section class="people stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.people')}</h2><ul class="people__list">${credit.people.map((e, k) => entryHtml(p.id, e, told.did[k])).join('')}</ul>${linesHtml(p.id)}${told.note ? `<p class="people__note"${standIn.people(p.id)}>${esc(told.note)}</p>` : ''}<p class="small"><a href="#people">${tx('people.more')}</a></p></section>` : ''}
     ${archiveSection(p.id)}
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.how')}</h2><div class="prose">${x.how.map((par) => `<p>${esc(par)}</p>`).join('')}</div></section>
     <div class="duo">
@@ -830,6 +849,14 @@ async function sheet(q: URLSearchParams): Promise<void> {
 }
 
 // ---------- router ----------
+/**
+ * The visitor's place. Each entry of the browser's history that the museum has drawn carries a number, its seat,
+ * and how far down the page was scrolled is kept by seat while the page stays open.
+ */
+let seat = 0, newest = Date.now();
+const places = new Map<number, number>();
+window.addEventListener('scroll', () => { places.set(seat, window.scrollY); }, { passive: true });
+
 function route(): void {
   leave?.(); leave = null;
   // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
@@ -846,7 +873,7 @@ function route(): void {
   else if (name === 'about') about();
   else if (name === 'people') peopleView();
   else if (walk) walkView(walk[1]);
-  else if (toured) walkView(undefined, toured);
+  else if (toured) walkView(undefined, resumed(toured));
   else if (words) wordsView(words[1]);
   else if (visited) visitView(visited[1]);
   else notFound();
@@ -855,7 +882,15 @@ function route(): void {
   const canon = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (canon) canon.href = new URL(piece && pieceById(piece[1]) ? `piece/${piece[1]}/` : hall && hallOk(Number(hall[1])) ? `hall/${hall[1]}/` : './', document.baseURI).href;
   fitPlates();
-  window.scrollTo(0, 0);
+  // A new place opens at its top. A place the visitor comes back to, with Back or Forward, or that is drawn again
+  // in another language, opens where they left it.
+  const st = history.state as { seat?: number } | null;
+  if (typeof st?.seat === 'number') { seat = st.seat; window.scrollTo(0, places.get(seat) ?? 0); }
+  else {
+    seat = ++newest;
+    try { history.replaceState({ ...(history.state as object | null ?? {}), seat }, ''); } catch { /* the place is not kept */ }
+    window.scrollTo(0, 0);
+  }
   document.body.dataset.ready = '1';
   shown = location.hash;
 }
@@ -909,6 +944,8 @@ root.dataset.lights = lightsOn ? 'on' : 'off';
 // the museum as an app: wired before the router, so that a newer build can answer a change of page before the router does
 wireApp();
 wireKeep();
+// a link onto a trail takes the trail with it, wherever the link stands
+document.addEventListener('click', keepTrail);
 // Share: the address of a piece's own page goes to the device's share sheet, or to the clipboard where there is none
 document.addEventListener('click', (e) => {
   const btn = (e.target as Element).closest<HTMLButtonElement>('[data-share]');

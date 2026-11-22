@@ -967,6 +967,12 @@ msgstr "展示室を開いています。"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.fail.graphics"
+msgid "This browser could not start 3D graphics, so the hall stays a picture. Every hall is also a page: the numbers at the top lead to them."
+msgstr "このブラウザでは3Dグラフィックスを開始できなかったため、展示室は静止画のままです。どの展示室もページとして見られます。上の番号から進んでください。"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.fail"
 msgid "The hall did not load. Check the connection and reload. Every piece is also in the index."
 msgstr "展示室を読み込めませんでした。接続を確かめて、再読み込みしてください。展示品はすべて索引にもあります。"
@@ -1312,6 +1318,18 @@ msgstr "iPhoneやiPadでは、Safariで「共有」をタップし、続けて�
 msgctxt "ui.piece.share"
 msgid "Share"
 msgstr "共有"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.line"
+msgid "Trail: {name}"
+msgstr "順路: {name}"
+
+#: interface
+#. People page.
+msgctxt "ui.people.jump"
+msgid "Go to hall"
+msgstr "展示室へ"
 
 #: interface
 #. Headings on the page of a piece.

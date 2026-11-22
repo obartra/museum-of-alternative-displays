@@ -962,6 +962,12 @@ msgstr "正在打开漫游。"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.fail.graphics"
+msgid "This browser could not start 3D graphics, so the hall stays a picture. Every hall is also a page: the numbers at the top lead to them."
+msgstr "这个浏览器无法启动 3D 图形，所以展厅只显示为一张图片。每个展厅也都有自己的页面：点上方的数字就能进去。"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.fail"
 msgid "The hall did not load. Check the connection and reload. Every piece is also in the index."
 msgstr "漫游没有加载成功。请检查网络连接，然后重新加载。所有展品也都列在索引里。"
@@ -1307,6 +1313,18 @@ msgstr "在iPhone或iPad上，在Safari里轻点“共享”，再轻点“添�
 msgctxt "ui.piece.share"
 msgid "Share"
 msgstr "分享"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.line"
+msgid "Trail: {name}"
+msgstr "路线：{name}"
+
+#: interface
+#. People page.
+msgctxt "ui.people.jump"
+msgid "Go to hall"
+msgstr "前往展厅"
 
 #: interface
 #. Headings on the page of a piece.

@@ -46,6 +46,23 @@ export function spokenMinutes(tour: Tour): number {
  * The opening words have the plain address.
  */
 export const tourHash = (tour: Tour, partId = 'start'): string => `#tour-${tour.id}${partId === 'start' ? '' : `-${partId}`}`;
+/**
+ * In full view the address of a tour stays as it was when the visitor entered, so that the step back out lands on
+ * the same page. A phone tours in full view, and a reload there would begin the tour again. So the stop is also
+ * kept for the visit, and a page that is loaded again at the tour's own address goes on at that stop.
+ */
+export const keepStop = (tour: Tour, partId: string): void => { try { sessionStorage.setItem('tour-at', tourHash(tour, partId)); } catch { /* a reload begins again */ } };
+export function resumed(to: { tour: Tour; part: string }): { tour: Tour; part: string } {
+  if (to.part !== 'start') return to;
+  try {
+    const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    const kept = sessionStorage.getItem('tour-at') ?? '';
+    if (nav?.type !== 'reload' || again) return to;
+    again = true;                                   // once: after that, the tour's own address means its beginning
+    return tourAt(kept.slice(1))?.tour === to.tour ? tourAt(kept.slice(1))! : to;
+  } catch { return to; }
+}
+let again = false;
 /** The tour and the part that the name of an address stands for, if it stands for one. */
 export function tourAt(name: string): { tour: Tour; part: string } | undefined {
   for (const tour of tours) {
