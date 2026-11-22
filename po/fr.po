@@ -156,12 +156,6 @@ msgstr "La vue d’ensemble puis chacune des vues, dans l’ordre des boutons"
 
 #: interface
 #. List of keyboard shortcuts.
-msgctxt "ui.keys.pause"
-msgid "Pause or play"
-msgstr "Pause ou lecture"
-
-#: interface
-#. List of keyboard shortcuts.
 msgctxt "ui.keys.full"
 msgid "Expand or close"
 msgstr "Agrandir ou fermer"
@@ -175,16 +169,16 @@ msgstr[0] "{n} pièce"
 msgstr[1] "{n} pièces"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.lead"
-msgid "{n} ways to make a picture. The screen in front of you uses one of them."
-msgstr "{n} façons de faire une image. L’écran que vous avez devant vous en utilise une."
+msgid "Welcome to the Museum of Alternative Displays"
+msgstr "Bienvenue au Musée des afficheurs alternatifs"
 
 #: interface
-#. Entrance page.
+#. Entrance page. Keep the words in curly brackets as they are.
 msgctxt "ui.entrance.intro"
-msgid "Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "Toutes les pièces du musée fonctionnent. Faites tourner chacune, regardez à l’intérieur, puis éteignez la lumière du jour pour voir lesquelles montrent encore une image la nuit."
+msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "La collection réunit {n} afficheurs dans sept galeries, de l’afficheur à palettes à l’hologramme. Toutes les pièces du musée fonctionnent. Faites tourner chacune, regardez à l’intérieur, puis éteignez la lumière du jour pour voir lesquelles montrent encore une image la nuit."
 
 #: interface
 #. Entrance page.
@@ -323,18 +317,6 @@ msgstr "Vue d’ensemble"
 msgctxt "ui.stage.front"
 msgid "Front"
 msgstr "De face"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.pause"
-msgid "Pause"
-msgstr "Pause"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.play"
-msgid "Play"
-msgstr "Lecture"
 
 #: interface
 #. The 3D viewer of a piece.

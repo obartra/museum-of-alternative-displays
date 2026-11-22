@@ -151,12 +151,6 @@ msgstr "全貌和各个视角，顺序与按钮相同"
 
 #: interface
 #. List of keyboard shortcuts.
-msgctxt "ui.keys.pause"
-msgid "Pause or play"
-msgstr "暂停或播放"
-
-#: interface
-#. List of keyboard shortcuts.
 msgctxt "ui.keys.full"
 msgid "Expand or close"
 msgstr "全屏或关闭"
@@ -169,16 +163,16 @@ msgid_plural "{n} pieces"
 msgstr[0] "{n}件展品"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.lead"
-msgid "{n} ways to make a picture. The screen in front of you uses one of them."
-msgstr "{n}种显示画面的方法。你眼前这块屏幕用的是其中一种。"
+msgid "Welcome to the Museum of Alternative Displays"
+msgstr "欢迎来到另类显示博物馆"
 
 #: interface
-#. Entrance page.
+#. Entrance page. Keep the words in curly brackets as they are.
 msgctxt "ui.entrance.intro"
-msgid "Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "馆里的每件展品都在运行。把它转着看一看，往里面瞧一瞧，再关掉日光，看哪些展品到了夜里还能显示画面。"
+msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "馆藏共有{n}件展品，分布在七个展厅，从翻页显示屏到全息图。馆里的每件展品都在运行。把它转着看一看，往里面瞧一瞧，再关掉日光，看哪些展品到了夜里还能显示画面。"
 
 #: interface
 #. Entrance page.
@@ -317,18 +311,6 @@ msgstr "全貌"
 msgctxt "ui.stage.front"
 msgid "Front"
 msgstr "正面"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.pause"
-msgid "Pause"
-msgstr "暂停"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.play"
-msgid "Play"
-msgstr "播放"
 
 #: interface
 #. The 3D viewer of a piece.

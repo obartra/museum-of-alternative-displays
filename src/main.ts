@@ -72,7 +72,7 @@ document.addEventListener('click', (e) => {
   box.setAttribute('aria-labelledby', 'keys-h');
   box.innerHTML = `<div class="keys__head"><h2 class="h-sec" id="keys-h">${tx('keys.title')}</h2><button type="button" class="btn" autofocus>${tx('stage.close')}</button></div>
 <h3>${tx('keys.anywhere')}</h3><dl>${row(['\u2190', '\u2192'], tx('keys.step'))}${row(['Tab'], tx('keys.tab'))}${row(['Esc'], tx('keys.esc'))}</dl>
-<h3>${tx('keys.model')}</h3><dl>${row(['\u2190', '\u2192', '\u2191', '\u2193'], tx('keys.turn'))}${row(['+', '-'], tx('keys.zoom'))}${row(['R'], tx('stage.home'))}${row(['1', '2', '3'], tx('keys.views'))}${row(['D'], tx('switch.daylight'))}${row(['P'], tx('keys.pause'))}${row(['G'], tx('stage.stereo'))}${row(['F'], tx('keys.full'))}</dl>`;
+<h3>${tx('keys.model')}</h3><dl>${row(['\u2190', '\u2192', '\u2191', '\u2193'], tx('keys.turn'))}${row(['+', '-'], tx('keys.zoom'))}${row(['R'], tx('stage.home'))}${row(['1', '2', '3'], tx('keys.views'))}${row(['D'], tx('switch.daylight'))}${row(['G'], tx('stage.stereo'))}${row(['F'], tx('keys.full'))}</dl>`;
   document.body.append(box);
   box.addEventListener('click', (ev) => { if (ev.target === box || (ev.target as HTMLElement).closest('button')) box.close(); });
   box.addEventListener('close', () => { box.remove(); opener.focus(); });
@@ -165,8 +165,8 @@ function entrance(): void {
   <div class="hero">
     <figure class="roompic hero__pic"><img data-room src="${room(1200)}" srcset="${roomSet()}" sizes="${ROOM_SIZES}" width="1200" height="800" alt="${tx('entrance.room.alt')}" fetchpriority="high" decoding="async"><div class="hero__switch">${switchHtml()}</div></figure>
     <div class="hero__words">
-      <h1 class="hero__line">${tx('entrance.lead', { n: pieces.length })}</h1>
-      <p class="prose">${tx('entrance.intro')}</p>
+      <h1 class="hero__line">${tx('entrance.lead')}</h1>
+      <p class="prose">${tx('entrance.intro', { n: pieces.length })}</p>
     </div>
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -475,7 +475,7 @@ ${step === undefined ? '' : visitBand(step)}
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
-    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
+    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
     <p class="crumbs"><a class="crumb" href="${link(`hall-${hall.id}`)}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="${link(`walk-${p.id}`)}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="${link(`piece-${p.id}`)}" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
@@ -507,7 +507,7 @@ ${step === undefined ? '' : visitBand(step)}
   const note = document.getElementById('stage-note')!, hint = document.getElementById('stage-hint')!;
   const views = document.getElementById('stage-views')!, still = document.getElementById('stage-poster') as HTMLImageElement;
   const act = (name: string) => wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`)!;
-  const startBtn = act('start'), fullBtn = act('full'), pauseBtn = act('pause'), stereoBtn = act('stereo'), arBtn = act('ar');
+  const startBtn = act('start'), fullBtn = act('full'), stereoBtn = act('stereo'), arBtn = act('ar');
   const HINT = { turn: t('stage.hint.turn'), person: t('stage.hint.person'), detail: t('stage.hint.detail') };
   // alive: this page is still the one on screen. live: its model is running. seen: the stage is in the window.
   let alive = true, live = false, begun = false, seen = true, wantFocus = false;
@@ -554,7 +554,7 @@ ${step === undefined ? '' : visitBand(step)}
     if (inStage) {
       // with the stage in focus, one key does what its button does. Only there, so that typing elsewhere is never hijacked
       const key = e.key.toLowerCase();
-      const act = ({ d: 'daylight', f: 'full', p: 'pause', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
+      const act = ({ d: 'daylight', f: 'full', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
       if (act === 'daylight') setLights(!lightsOn); else if (act) press(act);
       else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled)[Number(key) - 1]?.click();
       return;
@@ -605,11 +605,10 @@ ${step === undefined ? '' : visitBand(step)}
       for (const b of views.querySelectorAll<HTMLButtonElement>('button')) b.disabled = !!b.dataset.view && !stage.hasView(b.dataset.view);
       arBtn.hidden = !(await canShowInRoom());
       if (import.meta.env.DEV) for (const v of places) if (!stage.hasView(v.id)) console.warn(`${p.id}: the view "${v.id}" has words but the model gives it no place`);
-      pauseBtn.disabled = stereoBtn.disabled = false;
+      stereoBtn.disabled = false;
       // the glasses are offered in the hall about depth only: a stage that comes from there with them on takes them off
       if (p.hall !== DEPTH && stage.isStereo) stage.setStereo(false);
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
-      pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause');
       tell(HINT.turn);
       say(lightsOn);
       if (askedFor === '@front') stage.goFront(); else if (askedFor && stage.hasView(askedFor)) setView(askedFor);
@@ -638,7 +637,6 @@ ${step === undefined ? '' : visitBand(step)}
     if ((name === 'front' || name === 'home') && !live) { askedFor = name === 'front' ? '@front' : null; void go(); }
     else if (name === 'front') { setView(null); stage?.goFront(); }
     else if (name === 'home') setView(null);
-    if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause'); }
     if (name === 'stereo' && stage && live && p.hall === DEPTH) {
       stage.setStereo(!stage.isStereo);
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
@@ -666,6 +664,25 @@ ${step === undefined ? '' : visitBand(step)}
   });
   watch.observe(box);
 
+  // The still picture stands for a scene that can be turned, and nothing on it says so. Until the model runs,
+  // whatever a hand or a mouse does to the picture brings the model up and does nothing else: a press, the start
+  // of a drag, a tap, or a mouse that comes to rest on it. A mouse that only crosses the picture starts nothing,
+  // and neither does one on a device that has asked to save data: there a press is what asks.
+  let resting = 0;
+  const wake = (e: Event) => {
+    if (begun || !alive || (e.target as Element).closest('button')) return;
+    e.preventDefault();
+    void go();
+  };
+  still.draggable = false;
+  box.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'touch') wake(e); });
+  box.addEventListener('click', wake);
+  box.addEventListener('pointerenter', (e) => {
+    if (e.pointerType !== 'mouse' || begun || (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return;
+    resting = window.setTimeout(() => void go(), 160);
+  });
+  box.addEventListener('pointerleave', () => window.clearTimeout(resting));
+
   // The still picture comes first. The model follows by itself where the device draws 3D with its graphics chip
   // and the visitor has not asked to save data. Anywhere else it waits for the button.
   if (stage) void go();
@@ -685,6 +702,7 @@ ${step === undefined ? '' : visitBand(step)}
 
   leave = () => {
     alive = false; live = false;
+    window.clearTimeout(resting);
     unwire();
     window.removeEventListener('popstate', onBack);
     setFull(false, true);

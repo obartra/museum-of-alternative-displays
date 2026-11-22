@@ -111,7 +111,6 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <label class="pickbox walk__goto"><span aria-hidden="true">${tx('walk.goto')}</span><select id="walk-goto" aria-label="${tx('walk.goto')}" disabled><option value="">${tx('walk.goto')}</option>${halls.map((h) => `<optgroup label="${tx('nav.hall', { n: h.id, name: hallName(h.id) })}">${plan.places.filter((p) => p.hall === h.id).map((p) => `<option value="${p.id}">${names[p.id]}</option>`).join('')}</optgroup>`).join('')}</select></label>
   <span class="gap"></span>
   ${o.switchHtml}
-  <button type="button" class="btn" data-walk="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button>
   <button type="button" class="btn" data-walk="vr" hidden>${tx('walk.vr')}</button>
   <button type="button" class="btn" data-walk="full">${tx('stage.expand')}</button>
 </div>
@@ -120,11 +119,17 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
 
   const view = document.getElementById('walk-view')!, stillImg = document.getElementById('walk-still') as HTMLImageElement;
   const startBtn = document.getElementById('walk-start') as HTMLButtonElement, hint = document.getElementById('walk-hint')!, note = document.getElementById('walk-note')!;
+  // The still picture stands for the hall. Where the hall waits to be asked for, a tap on the picture or a press
+  // of the mouse asks, as the key over it does, and does nothing else.
+  const wake = (e: Event) => { if (begun || closed || startBtn.hidden) return; e.preventDefault(); startBtn.click(); };
+  stillImg.draggable = false;
+  stillImg.addEventListener('click', wake);
+  stillImg.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'touch') wake(e); });
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
   const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement, look = document.getElementById('walk-look') as HTMLButtonElement;
   let introFor = 0;
   const btn = (name: string) => host.querySelector<HTMLButtonElement>(`[data-walk="${name}"]`)!;
-  const pauseBtn = btn('pause'), fullBtn = btn('full'), vrBtn = btn('vr'), goto = document.getElementById('walk-goto') as HTMLSelectElement;
+  const fullBtn = btn('full'), vrBtn = btn('vr'), goto = document.getElementById('walk-goto') as HTMLSelectElement;
   const fine = matchMedia('(pointer: fine)').matches;
 
   type Gallery = import('./three/walk/gallery').Gallery;
@@ -274,7 +279,6 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       track();
       requestAnimationFrame(() => { canvas!.classList.add('is-live'); window.setTimeout(() => { if (!closed) stillImg.hidden = true; }, 500); });
       for (const b of host.querySelectorAll<HTMLButtonElement>('[data-walk]')) b.disabled = false;
-      pauseBtn.textContent = t(gallery.isPaused ? 'stage.play' : 'stage.pause');
       layPad();
       hint.textContent = t(coarse ? 'walk.hint.touch' : 'walk.hint.keys');
       if (guide.tour) quiet(4500);
@@ -359,7 +363,6 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     }
     if (name === 'prev') gallery?.next(-1);
     if (name === 'next') gallery?.next(1);
-    if (name === 'pause' && gallery) { gallery.setPaused(!gallery.isPaused); near.setPaused(gallery.isPaused); pauseBtn.textContent = t(gallery.isPaused ? 'stage.play' : 'stage.pause'); }
     if (name === 'full') setFull(!host.classList.contains('is-full'));
     if (name === 'vr' && gallery) {
       vrBtn.disabled = true;

@@ -238,7 +238,8 @@ becomes a pool of light on the floor in front of it.
 
 A piece page shows its still picture first and starts the model by itself only where the
 device draws 3D with its graphics chip and the visitor has not asked to save data. Anywhere
-else it waits for the Start 3D button. `?gl=force` or `?gl=off` before the `#` overrides that,
+else it waits to be asked: by the Start 3D button, or by anything done to the still picture itself, a press,
+the start of a drag, a tap, or a mouse that comes to rest on it. `?gl=force` or `?gl=off` before the `#` overrides that,
 which is how the software-rendered test browser is made to run the model.
 
 Models are built from code, with no mesh files. What makes them read as objects is in the

@@ -156,12 +156,6 @@ msgstr "全体と各視点。ボタンの並び順"
 
 #: interface
 #. List of keyboard shortcuts.
-msgctxt "ui.keys.pause"
-msgid "Pause or play"
-msgstr "一時停止、再生"
-
-#: interface
-#. List of keyboard shortcuts.
 msgctxt "ui.keys.full"
 msgid "Expand or close"
 msgstr "拡大表示、閉じる"
@@ -174,16 +168,16 @@ msgid_plural "{n} pieces"
 msgstr[0] "{n}点"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.lead"
-msgid "{n} ways to make a picture. The screen in front of you uses one of them."
-msgstr "映像をつくる{n}通りの方法。目の前の画面も、そのうちの一つを使っています。"
+msgid "Welcome to the Museum of Alternative Displays"
+msgstr "オルタナティブ・ディスプレイ博物館へようこそ"
 
 #: interface
-#. Entrance page.
+#. Entrance page. Keep the words in curly brackets as they are.
 msgctxt "ui.entrance.intro"
-msgid "Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "館内の展示品はすべて動いています。一つひとつを回し、中をのぞき、日光を消して、夜になっても映像が見えるのはどれかを確かめてください。"
+msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "コレクションは、七つの展示室に{n}点のディスプレイを収めています。反転フラップ式表示機からホログラムまであります。館内の展示品はすべて動いています。一つひとつを回し、中をのぞき、日光を消して、夜になっても映像が見えるのはどれかを確かめてください。"
 
 #: interface
 #. Entrance page.
@@ -322,18 +316,6 @@ msgstr "全体"
 msgctxt "ui.stage.front"
 msgid "Front"
 msgstr "正面"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.pause"
-msgid "Pause"
-msgstr "一時停止"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.play"
-msgid "Play"
-msgstr "再生"
 
 #: interface
 #. The 3D viewer of a piece.

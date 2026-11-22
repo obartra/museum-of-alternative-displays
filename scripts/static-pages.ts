@@ -115,7 +115,7 @@ function pagesOf(w: Speech): Own[] {
     name: '', path: '', title: w.ui('site.title', { n: pieces.length }), short: w.ui('site.name'), says: w.ui('site.description', { n: pieces.length }), kind: 'CollectionPage', crumbs: [],
     body: `<h1>${esc(w.ui('site.name'))}</h1>
 <p>${esc(w.ui('site.description', { n: pieces.length }))}</p>
-<p>${esc(w.ui('entrance.intro'))}</p>
+<p>${esc(w.ui('entrance.intro', { n: pieces.length }))}</p>
 ${halls.map((hall) => `<h2><a href="${w.pre}hall/${hall.id}/">${esc(hallName(hall))}</a></h2>
 <p>${esc(w.hall(hall).intro)}</p>
 <ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}</li>`).join('')}</ul>`).join('\n')}

@@ -155,12 +155,6 @@ msgstr "La peça sencera i cadascuna de les seves vistes, en l'ordre dels botons
 
 #: interface
 #. List of keyboard shortcuts.
-msgctxt "ui.keys.pause"
-msgid "Pause or play"
-msgstr "Pausa o reprodueix"
-
-#: interface
-#. List of keyboard shortcuts.
 msgctxt "ui.keys.full"
 msgid "Expand or close"
 msgstr "Amplia o tanca"
@@ -174,16 +168,16 @@ msgstr[0] "{n} peça"
 msgstr[1] "{n} peces"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.lead"
-msgid "{n} ways to make a picture. The screen in front of you uses one of them."
-msgstr "{n} maneres de fer una imatge. La pantalla que tens al davant en fa servir una."
+msgid "Welcome to the Museum of Alternative Displays"
+msgstr "Benvinguts al Museu de Pantalles Alternatives"
 
 #: interface
-#. Entrance page.
+#. Entrance page. Keep the words in curly brackets as they are.
 msgctxt "ui.entrance.intro"
-msgid "Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "Totes les peces del museu funcionen. Fes girar cadascuna, mira-hi a dins i apaga la llum del dia per veure quines encara mostren una imatge de nit."
+msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "La col·lecció reuneix {n} pantalles en set àmbits, del panell de lamel·les a l'holograma. Totes les peces del museu funcionen. Fes girar cadascuna, mira-hi a dins i apaga la llum del dia per veure quines encara mostren una imatge de nit."
 
 #: interface
 #. Entrance page.
@@ -322,18 +316,6 @@ msgstr "Peça sencera"
 msgctxt "ui.stage.front"
 msgid "Front"
 msgstr "De cara"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.pause"
-msgid "Pause"
-msgstr "Pausa"
-
-#: interface
-#. The 3D viewer of a piece.
-msgctxt "ui.stage.play"
-msgid "Play"
-msgstr "Reprodueix"
 
 #: interface
 #. The 3D viewer of a piece.
