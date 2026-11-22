@@ -1193,57 +1193,55 @@ msgstr "Fari la gvidatan viziton"
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.spoken"
 msgid "With a spoken guide, about {n} minutes"
-msgstr ""
+msgstr "Kun parolata gvidado, ĉirkaŭ {n} minutoj"
 
 #: interface
 #. Interface.
-#, fuzzy
-#| msgid "Follow it in the halls"
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
-msgstr "Sekvi ĝin en la haloj"
+msgstr "Fari la viziton en la haloj"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.start"
 msgid "Start the tour"
-msgstr ""
+msgstr "Komenci la viziton"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.leave"
 msgid "Leave the tour"
-msgstr ""
+msgstr "Forlasi la gvidatan viziton"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.prev"
 msgid "Previous stop"
-msgstr ""
+msgstr "Antaŭa haltejo"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.next"
 msgid "Next stop"
-msgstr ""
+msgstr "Sekva haltejo"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.play"
 msgid "Hear the guide"
-msgstr ""
+msgstr "Aŭdi la gvidiston"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.pause"
 msgid "Pause the guide"
-msgstr ""
+msgstr "Paŭzigi la gvidiston"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.sound"
 msgid "Audio guide"
-msgstr ""
+msgstr "Sona gvidado"
 
 #: interface
 #. Interface.
@@ -1255,7 +1253,7 @@ msgstr "Subtekstoj"
 #. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
-msgstr ""
+msgstr "La haltejoj de la vizito"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -8689,658 +8687,658 @@ msgstr "ĉirkaŭ {n}"
 #. Title of a guided tour.
 msgctxt "tour.women.title"
 msgid "Women in the museum"
-msgstr ""
+msgstr "Virinoj en la muzeo"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
 msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Gvidata vizito tra ĉiuj sep haloj. Dek tri vidigiloj, de brajlaj stiftoj ĝis hologramo, ĉiu kun almenaŭ unu virino inter siaj inventintoj aŭ kontribuintoj."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.women.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "Antaŭ la unua haltejo"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
 msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "Bonvenon al la muzeo. Ĉi tiu vizito sekvas la verdan linion sur la planko. Ĝi iras tra ĉiuj sep haloj kaj haltas ĉe dek tri vidigiloj. Ĉiu havas almenaŭ unu virinon inter siaj inventintoj aŭ kontribuintoj."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
 msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
-msgstr ""
+msgstr "La vizito atendas ĉe ĉiu haltejo. Premu la butonon por la sekva haltejo, kiam vi estas preta. La unua estas la brajla montrilo en halo 1, kie la bildo konsistas el stiftoj."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: the title of this part.
 msgctxt "tour.women.braille-display.title"
 msgid "Read by touch"
-msgstr ""
+msgstr "Legata per tuŝo"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
 msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
-msgstr ""
+msgstr "Ĉi tiun montrilon oni legas per tuŝo. Vicoj de stiftoj leviĝas kaj malleviĝas por literumi linion de brajlo. La modelo literumas la horon. Rigardu la ĉelojn dekstre. Ili ŝanĝiĝas ĉiun sekundon."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
 msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr ""
+msgstr "Sub ĉiu punkto estas kristalo, kiu fleksiĝas, kiam tensio atingas ĝin, kaj levilo ŝanĝas tiun malgrandan fleksiĝon en la leviĝon de stifto. Andrée Tretiakoff kaj Oleg Tretiakoff patentis ĉi tiun manieron levi la punktojn. Ili unue petis patenton en Francio, en 1974."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
 msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr ""
+msgstr "Ĝi estas la sola eksponaĵo en la muzeo, kiu bezonas neniun lumon. Ĉiu alia haltejo de la verda linio funkcias per lumo. La sekva estas la katodradia tubo en halo 2, kie fasko da elektronoj briligas ekranon."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.women.cathode-ray-tube.title"
 msgid "A beam that draws"
-msgstr ""
+msgstr "Fasko, kiu desegnas"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
-msgstr ""
+msgstr "Rigardu la ekranon. La hela strio, kiu moviĝas malsupren sur ĝi, estas la loko, kie unu fasko da elektronoj ĵus desegnis siajn liniojn. La modelo malrapidigas tion ĉirkaŭ 60-oble. De la flanko vi vidas la kuprajn bobenojn, kiuj direktas la faskon."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr ""
+msgstr "La ŝildo sur la bloko nomas Ferdinand Braun, kiu konstruis la unuan tubon de ĉi tiu speco en 1897. Tridek jarojn poste, en San-Francisko, Philo Farnsworth sendis la unuan plene elektronikan televidan bildon. Elma Farnsworth, konata kiel Pem, laboris en liaj laboratorioj kaj faris la teknikajn desegnojn por la eksperimentoj. Ŝia vizaĝo estis inter la unuaj, kiujn la sistemo sendis."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.3"
 msgid "In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps."
-msgstr ""
+msgstr "En halo 1 la bildo konsistis el stiftoj. Ĉi tie unu fasko desegnas ĝin tutan. La sekva haltejo estas la MikroLED-muro en halo 3, kie la bildo konsistas el lampoj."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: the title of this part.
 msgctxt "tour.women.microled.title"
 msgid "A question at dinner"
-msgstr ""
+msgstr "Demando ĉe la vespermanĝo"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.1"
 msgid "The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time."
-msgstr ""
+msgstr "La muro antaŭ vi konsistas el LED-oj, ĉiu tro malgranda por esti vidata. Unu kahelo estas ekster la muro kaj apogiĝas al la soklo, kun la suĉlevilo ankoraŭ sur ĝi. Tian muron oni riparas po unu kvadrato."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
 msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr ""
+msgstr "Jingyu Lin kaj Hongxing Jiang estas fizikistoj. En 2000, ĉe la Ŝtata Universitato de Kansaso, ili faris la unuajn mikroLED-ojn. Ili estas ankaŭ geedzoj, kaj la ideo komenciĝis kiel demando ĉe ilia vespermanĝa tablo: kio okazus al LED ŝrumpigita al milonoj de milimetro?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.3"
 msgid "Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps."
-msgstr ""
+msgstr "Restu en halo 3. La sekva haltejo, la kvantumpunkta ekrano, funkcias per kristaloj multe pli malgrandaj ol ĉi tiuj lampoj."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: the title of this part.
 msgctxt "tour.women.quantum-dot.title"
 msgid "Colour from size"
-msgstr ""
+msgstr "Koloro el grandeco"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.1"
 msgid "This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour."
-msgstr ""
+msgstr "Ĉi tio estas unu bildero, tranĉita kaj tre pligrandigita. Blua lumo leviĝas de la lampoj sur la plato. En la maldekstra puto grandaj kristaloj ŝanĝas ĝin en ruĝon. En la meza puto malgrandaj ŝanĝas ĝin en verdon. La dekstra puto havas neniujn kristalojn, kaj la bluo trapasas. La grandeco de kristalo sola difinas ĝian koloron."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
 msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr ""
+msgstr "La kristaloj nomiĝas kvantumaj punktoj. La plej multaj ekranoj uzas ilin kiel ĉi tiu modelo, por ŝanĝi bluan lumon en ruĝan kaj verdan. En 1994, en Berkeley, Vicki Colvin kaj du kolegoj iris alian vojon. Ili briligis tavolon de punktoj, sendante kurenton tra ĝi. Colvin estas la unua aŭtoro de la artikolo."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
 msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth."
-msgstr ""
+msgstr "La katodradia tubo, la LED-muro kaj ĉi tiu bildero ĉiuj faras sian propran lumon. En halo 4 la suno, lampo aŭ lasero faras la lumon, kaj la vidigilo formas ĝin. Iru al la ombroteatro, kie la lampo estas flamo malantaŭ tolo."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: the title of this part.
 msgctxt "tour.women.shadow-play.title"
 msgid "A flame and a cloth"
-msgstr ""
+msgstr "Flamo kaj tolo"
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.1"
 msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft."
-msgstr ""
+msgstr "Rigardu la tolon. Flamo brulas malantaŭ ĝi, kaj tri plataj figuroj staras inter la flamo kaj la tolo: arbo, cervo kaj birdo. Kion vi vidas, estas iliaj ombroj. Rigardu la birdon. Kiam ĝi flugas al la lampo, ĝia ombro kreskas kaj ĝia rando moliĝas."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
 msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr ""
+msgstr "Neniu scias, kiu unue faris tion. Ĝi estas registrita en Javo kaj en Ĉinio antaŭ ĉirkaŭ mil jaroj, kaj oni prezentas ĝin hodiaŭ. Truoj tranĉitaj tra figuro lasas la lumon pasi kaj desegnas okulon aŭ plumon ene de la ombro. Kara Walker, usona artistino konata pro siluetoj tonditaj el nigra papero, faras filmojn tiel ekde 2004. Ŝiaj artikaj paperaj pupoj, movataj permane per stangetoj, ludas rakontojn pri la sklaveco en Usono."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.3"
 msgid "The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser."
-msgstr ""
+msgstr "La unua haltejo bezonis neniun lumon. Ĉi tiu bezonas nur flamon. La sekva haltejo, en ĉi tiu halo, desegnas per fasko de lumo. Iru al la skananta lasero."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
 msgctxt "tour.women.scanned-laser.title"
 msgid "Drawing with a laser"
-msgstr ""
+msgstr "Desegni per lasero"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.1"
 msgid "Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall."
-msgstr ""
+msgstr "Sekvu la faskojn de maldekstre dekstren. Tri laseroj kuniĝas en unu blankan faskon. Du malgrandaj speguloj sur rapidaj motoroj direktas ĝin, kaj via okulo kunigas la moviĝantan punkton en desegnon sur la muro."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
 msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr ""
+msgstr "La ŝildo nomas Joseph Ostoja-Kotkowski, kiu prezentis fruan laserspektaklon en Adelajdo. Elsa Garmire, fizikistino ĉe la Kalifornia Instituto de Teknologio, faris laserajn bildojn. Oni filmis ilin en 1972, kaj ili fariĝis la modelo por Laserium, la laserspektaklo, kiu malfermiĝis en la Observatorio Griffith en Los-Anĝeleso."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.3"
 msgid "In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes."
-msgstr ""
+msgstr "En halo 2 fasko da elektronoj desegnis la bildon ene de tubo. Ĉi tiu fasko estas lumo, kaj ĝi povas desegni sur io ajn: nuboj, konstruaĵoj, fumo. Kelkajn paŝojn plu, en la sama halo, bildo estas tondita laŭ aro da blankaj gipsaj formoj."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.women.projection-mapping.title"
 msgid "A picture cut to fit"
-msgstr ""
+msgstr "Bildo tondita laŭmezure"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.1"
 msgid "Find the switch marked Daylight and turn it off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor."
-msgstr ""
+msgstr "Trovu la ŝaltilon markitan Taglumo kaj malŝaltu ĝin. Tage ĉi tiu bildo estas apenaŭ videbla. La projekciilo sur la tripiedo estas ordinara. La laboro estas en la bildo, kiu estas tondita laŭ la formoj, sur kiujn ĝi falas. Ĉiu formo ricevas propran desegnon, kaj neniu lumo falas sur la plankon."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
 msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr ""
+msgstr "En 1969 la Haunted Mansion en Disneyland uzis tion por siaj kantantaj bustoj. Oni filmis la vizaĝojn de kantistoj, kaj la filmo estis projekciata sur gipsajn bustojn de la samaj vizaĝoj. En la sama domo kristala globo enhavas senvizaĝan kapon. Leota Toombs, artistino ĉe la dezajna laborejo de Disney, donis al ĝi sian vizaĝon: la filmo projekciata sur tiun kapon montras ŝin."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
 msgid "Before you go on, turn the daylight back on. The next stop is in hall 5, where the displays behave like print: they need the light of the room. Go to the electrophoretic ink, the page of an e-reader."
-msgstr ""
+msgstr "Antaŭ ol vi iros plu, reŝaltu la taglumon. La sekva haltejo estas en halo 5, kie la vidigiloj kondutas kiel presaĵo: ili bezonas la lumon de la ĉambro. Iru al la elektroforeza inko, la paĝo de e-legilo."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: the title of this part.
 msgctxt "tour.women.electrophoretic-ink.title"
 msgid "A page that bends"
-msgstr ""
+msgstr "Paĝo, kiu fleksiĝas"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.1"
 msgid "This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power."
-msgstr ""
+msgstr "Ĉi tio estas la paĝo de e-legilo. Ĝi faras neniun lumon. Milionoj da kapsuloj enhavas nigran kaj blankan pigmenton, kaj tensio tiras unu koloron supren. Rigardu la paĝon dum momento. Ĉiujn 15 sekundojn ĝi renoviĝas, kun ekbrilo de nigro kaj poste de blanko. Intertempe ĝi tenas la paĝon sen ia kurento."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
 msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr ""
+msgstr "La ŝildo nomas Barrett Comiskey, J. D. Albert kaj Joseph Jacobson, kiuj evoluigis ĉi tiun inkon ĉe la MIT Media Lab en 1996. Kvin jarojn poste, ĉe Bell Laboratories, John Rogers kaj Zhenan Bao sternis ĝin sur folion el plasto. Bao estas kemiisto, kiu dezajnas konduktivajn plastojn. Per kaŭĉuka stampilo ili presis 256 plastajn transistorojn sur la folion, po unu por ĉiu punkto de la bildo. La paĝo povis fleksiĝi."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.3"
 msgid "The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display."
-msgstr ""
+msgstr "La inko estas malrapida, kio taŭgas por paĝo. La sekva haltejo, en ĉi tiu halo, estas vidigilo de la sama speco, kiu fariĝis sufiĉe rapida por video. Iru al la elektromalsekiga vidigilo."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: the title of this part.
 msgctxt "tour.women.electrowetting.title"
 msgid "Oil and water"
-msgstr ""
+msgstr "Oleo kaj akvo"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.1"
 msgid "These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher."
-msgstr ""
+msgstr "Ĉi tio estas 12 ĉeloj, multe pligrandigitaj. Ĉiu enhavas guton da kolora oleo sub akvo. Sen tensio la oleo disvastiĝas kaj la ĉelo montras sian koloron. Kun tensio la akvo puŝas la oleon en angulon. Rigardu, kiel unu ĉelo ŝaltiĝas. La oleo ne malaperas. Ĝi kolektiĝas en la angulo kaj staras pli alte."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
 msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr ""
+msgstr "Ĉe la unua haltejo tensio fleksis kristalon kaj levis stifton. Ĉi tie tensio igas akvon puŝi oleon flanken. Susan Hackwood kaj Gerardo Beni proponis ĉi tiun vidigilon ĉe Bell Laboratories en 1981, kaj ili donis al la efiko ĝian nomon: elektromalsekigo. La jaro sur la ŝildo, 2003, estas tiu, en kiu laboratorio en Nederlando faris ĝin sufiĉe rapida por video."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
 msgid "There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes."
-msgstr ""
+msgstr "Restas unu plia haltejo en ĉi tiu halo. Iru al la elektrokroma vidigilo, presita etikedo, kiu montras la minutojn."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.women.electrochromic.title"
 msgid "Layer by layer"
-msgstr ""
+msgstr "Tavolon post tavolo"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.1"
 msgid "This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film."
-msgstr ""
+msgstr "Ĉi tiu presita etikedo montras la minutojn post la plena horo. En ĉi tiu halo tensio movis pigmenton, kaj poste oleon. Ĉi tie ĝi movas atomojn. Ĝi puŝas ŝargitajn atomojn en la presitan filmon, kaj la filmo malheliĝas. Atendu, ĝis la minuto ŝanĝiĝas. La malnova cifero paliĝas, kaj la nova malheliĝas dum pluraj sekundoj. La vitra plato malantaŭ la etikedo portas la saman filmon."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
 msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr ""
+msgstr "La ŝildo nomas S. K. Deb, kies laboro pri filmoj el volframa oksido, en 1969, estas la komenco de ĉi tiuj vidigiloj. Ĉe la Masaĉuseca Instituto de Teknologio, Paula Hammond kaj Dean DeLongchamp konstruis tiajn filmojn alimaniere: po unu molekula tavolo. Iliaj filmoj ŝanĝis koloron pli rapide, kaj kun pli da kontrasto, ol filmoj faritaj alimaniere. La tezo, kiu prezentas la laboron, estas de 2003, kaj ĝi montras al plenkolora vidigilo."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.3"
 msgid "That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
-msgstr ""
+msgstr "Tio estis la lasta vidigilo, kiu funkcias kiel presaĵo. Sekvas halo 6, En la aero. Iru al la transsendilo de iluzioj, kie bildo pendas en la aero."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.women.illusion-transmitter.title"
 msgid "A bulb that is not there"
-msgstr ""
+msgstr "Ampolo, kiu ne estas tie"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.1"
 msgid "Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows."
-msgstr ""
+msgstr "Rigardu la du skatolojn. Maldekstre reala ampolo pendas kaŝite sub la ingo, kaj kurba spegulo starigas ĝian bildon en la malplena ingo supre. Dekstre estas neniu ampolo, nur la bildo, sendita de kamerao kaj dua spegulo. Rigardu, kiel la maldekstra ampolo malheliĝas. La bildo dekstre sekvas."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
 msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr ""
+msgstr "En halo 3 demando estis farita ĉe vespermanĝa tablo. Ĉi tiu estis farita en ekspozicio, en 1976. Valerie Thomas vidis, kiel kurba spegulo ŝajnigis ampolon lumi, post kiam ĝi estis elprenita el sia ingo, kaj ŝi demandis, ĉu oni povus sendi la bildon. Kiam ŝi inventis la transsendilon de iluzioj, ŝi estris ĉe NASA la sistemojn de bildprilaborado por Landsat. La patento estis donita al ŝi kvar jarojn post tiu ekspozicio."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
 msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
-msgstr ""
+msgstr "Restu en halo 6 por la statika volumena vidigilo, kie la bildo plenigas blokon de spaco."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: the title of this part.
 msgctxt "tour.women.static-volume.title"
 msgid "Drawing inside glass"
-msgstr ""
+msgstr "Desegni ene de vitro"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
 msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
-msgstr ""
+msgstr "Komencu per la stako de klaraj folioj. La figuro en ĝi estas nodo. Po unu folio fariĝas lakteca kaj kaptas sian tranĉon de la bildo. Nenio moviĝas."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
 msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
-msgstr ""
+msgstr "Nun rigardu apud la stako, al la bloko de vitro. Ĝi lumas nur tie, kie du nevideblaj faskoj kruciĝas, kaj la modelo desegnas ilin ruĝe. Fasko da elektronoj desegnis en halo 2, kaj lasero en halo 4. Ĉi tie la punkto, kie du faskoj kruciĝas, desegnas, en tri dimensioj."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
 msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr ""
+msgstr "Elizabeth Downing kaj tri kolegoj tiel desegnis kolorajn lumpunktojn ene de vitro. Ilia laboro estis publikigita el la Universitato Stanford en 1996, kun Downing kiel unua aŭtoro. La prototipo estis kubo de ĉirkaŭ 15 milimetroj ĉiuflanke, kaj la modelo montras ĝin multoble pli granda. La lasta haltejo estas la holografio, en halo 7."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
 msgctxt "tour.women.holography.title"
 msgid "The light itself"
-msgstr ""
+msgstr "La lumo mem"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
-msgstr ""
+msgstr "Rigardu tra la vitra plato. Ludila lokomotivo ŝajnas stari malantaŭ ĝi. Moviĝu flanken, kaj vi vidas ĉirkaŭ la lokomotivo. Ĝi ne estas malantaŭ la vitro. Hologramo registras la lumon mem. En halo 4 lasero desegnis la bildon. Ĉi tie lasero nur lumigas la platon, kaj la plato elsendas la samajn lumondojn, kiujn elsendis la lokomotivo."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr ""
+msgstr "Dennis Gabor inventis la holografion en 1948. Dudek jarojn poste Margaret Benyon, pentristino, komencis fari hologramojn kiel arton. Hologramo kiel ĉi tiu estas senmova. La unua holografia videovidigilo estis konstruita ĉe la MIT Media Lab en 1989, kaj la tezo, kiun Mary Lou Jepsen verkis tie en tiu jaro, prezentas ĝian dezajnon."
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.women.end.title"
 msgid "The end of the green line"
-msgstr ""
+msgstr "La fino de la verda linio"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr ""
+msgstr "Tio estas la fino de la verda linio. Ĝi komenciĝis per stiftoj, kiujn oni legas per tuŝo. Ĝi finiĝas per ludila lokomotivo, kiu ne estas tie."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
 msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr ""
+msgstr "Dek kvin virinoj estas nomataj ĉe ĉi tiuj dek tri haltejoj, kaj vi nun staris ĉe la laboro de ĉiu. Entute la etikedoj en ĉi tiuj haloj nomas pli ol cent homojn."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
 msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
-msgstr ""
+msgstr "La linio preterpasis pli ol kvardek aliajn vidigilojn survoje. Forlasu la viziton, kaj la haloj estas viaj por promeni. Ĉiu eksponaĵo havas sian etikedon, kaj ĝiaj homoj estas nomataj sur ĝi. Dankon, ke vi faris la viziton."
 
 #: tour-black
 #. Title of a guided tour.
 msgctxt "tour.black.title"
 msgid "Black inventors and artists"
-msgstr ""
+msgstr "Nigraj inventistoj kaj artistoj"
 
 #: tour-black
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.black.lead"
 msgid "A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label."
-msgstr ""
+msgstr "Gvidata vizito tra kvin haloj. Dek vidigiloj, de televida tubo ĝis kasko, ĉiu kun nigra inventisto aŭ artisto sur sia etikedo."
 
 #: tour-black
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.black.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "Antaŭ la unua haltejo"
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.1"
 msgid "This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist."
-msgstr ""
+msgstr "Ĉi tiu vizito sekvas la bluan linion sur la planko. Ĝi haltas ĉe dek vidigiloj en kvin haloj. Ĉe ĉiu la etikedo nomas nigran inventiston aŭ nigran artiston."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.2"
 msgid "Some of them made the display. Some made a part that it could not do without. Some put it to a new use, or made art with it. At each stop I will say which."
-msgstr ""
+msgstr "Kelkaj el ili faris la vidigilon. Kelkaj faris parton, sen kiu ĝi ne povus funkcii. Kelkaj donis al ĝi novan uzon, aŭ faris arton per ĝi. Ĉe ĉiu haltejo mi diros, kiu el tiuj."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.3"
 msgid "The first stop is in hall 2. Go to the cathode ray tube."
-msgstr ""
+msgstr "La unua haltejo estas en halo 2. Iru al la katodradia tubo."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.black.cathode-ray-tube.title"
 msgid "A camera at the door"
-msgstr ""
+msgstr "Kamerao ĉe la pordo"
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times."
-msgstr ""
+msgstr "Rigardu la ekranon. La hela strio, kiu moviĝas malsupren sur ĝi, estas la loko, kie unu fasko da elektronoj ĵus desegnis siajn liniojn. La modelo malrapidigas tion ĉirkaŭ 60-oble."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr ""
+msgstr "La ŝildo sur la bloko nomas Ferdinand Braun, kiu konstruis la unuan tubon de ĉi tiu speco en 1897. Du homoj sur ĉi tiu etikedo igis la tubon labori. Marie Van Brittan Brown estis flegistino en Novjorko, kaj ŝia edzo Albert estis elektronika teknikisto. En 1966 ili konstruis sekurecan sistemon por sia hejmo. Kamerao ŝoviĝis inter kvar gvattruoj en la pordo, kaj televida ekrano montris, kiu vizitas. Ili patentis ĝin en 1969. Mark Dean estis inĝeniero ĉe IBM. Du el liaj tri patentoj pri la persona komputilo de IBM temas pri la adaptiloj, kiuj regis ĝiajn ekranojn, unu unukoloran kaj unu koloran."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.3"
 msgid "The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments."
-msgstr ""
+msgstr "Ankaŭ la sekva haltejo estas en ĉi tiu halo. Iru al la Numitron, la vitra balono kun sep malgrandaj filamentoj."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: the title of this part.
 msgctxt "tour.black.numitron.title"
 msgid "The filament came first"
-msgstr ""
+msgstr "Unue venis la filamento"
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.1"
 msgid "Look at the glass bulb. Inside are seven tiny lamp filaments, arranged as the seven bars that form a digit. Current through the right filaments makes them glow in the shape of a numeral."
-msgstr ""
+msgstr "Rigardu la vitran balonon. Ene estas sep etaj lampaj filamentoj, aranĝitaj kiel la sep strekoj, kiuj formas ciferon. Kurento tra la ĝustaj filamentoj briligas ilin en la formo de cifero."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.2"
 msgid "Lewis Latimer did not make this display. It is from 1970, and he worked nearly ninety years earlier. But a display made of filaments needs filaments that last. In 1882 Latimer patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
-msgstr ""
+msgstr "Lewis Latimer ne faris ĉi tiun vidigilon. Ĝi estas de 1970, kaj li laboris preskaŭ naŭdek jarojn pli frue. Sed vidigilo farita el filamentoj bezonas filamentojn, kiuj daŭras. En 1882 Latimer patentis manieron fari la karbajn filamentojn de fruaj elektraj lampoj tiel, ke malpli multaj rompiĝis en la forno."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.3"
 msgid "Here the filament is the light. At the next stop, also in this hall, the light comes from a coating that is struck by electrons. Go to the field emission display."
-msgstr ""
+msgstr "Ĉi tie la filamento estas la lumo. Ĉe la sekva haltejo, ankaŭ en ĉi tiu halo, la lumo venas de tegaĵo, kiun trafas elektronoj. Iru al la kampemisia ekrano."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: the title of this part.
 msgctxt "tour.black.field-emission.title"
 msgid "A tube made flat"
-msgstr ""
+msgstr "Tubo platigita"
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.1"
 msgid "The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Above them is the front plate with its glowing coating. The lit dots count seconds."
-msgstr ""
+msgstr "La modelo montras unu angulon de panelo, malfermitan kaj tre pligrandigitan. Sekvu la tavolojn supren. Unue venas la pintoj, poste la pordo kun truo super ĉiu pinto. Super ili estas la antaŭa plato kun sia lumanta tegaĵo. La lumantaj punktoj kalkulas sekundojn."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.2"
 msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one."
-msgstr ""
+msgstr "Ĉi tiu ekrano estas katodradia tubo platigita al kelkaj milimetroj, kun eta fonto de elektronoj malantaŭ ĉiu punkto. La maniero fari la pintojn estis patentita ĉe Stanford Research Institute. Akintunde Akinwande estis edukita en Niĝerio kaj ĉe Stanford. Li eklaboris ĉe Honeywell en 1986 kaj tie laboris pri maldikfilmaj kampemisiiloj kaj ekranoj. Ĉe MIT li laboris pri aroj de emisiiloj ŝaltataj unuope."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.3"
 msgid "These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play."
-msgstr ""
+msgstr "Ĉi tiuj tri vidigiloj faris sian propran lumon. La sekva bezonas nur flamon. Iru plu al halo 4 kaj al la ombroteatro."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: the title of this part.
 msgctxt "tour.black.shadow-play.title"
 msgid "Cut from black paper"
-msgstr ""
+msgstr "Tondita el nigra papero"
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.1"
 msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well."
-msgstr ""
+msgstr "Rigardu la tolon. Flamo brulas malantaŭ ĝi, kaj tri plataj figuroj staras inter la flamo kaj la tolo: arbo, cervo kaj birdo. Kion vi vidas, estas iliaj ombroj. Malŝaltu la taglumon por bone vidi ilin."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.2"
 msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr ""
+msgstr "Neniu scias, kiu unue faris tion. Ĝi estas registrita en Javo kaj en Ĉinio antaŭ ĉirkaŭ mil jaroj. Kara Walker estas usona artistino, konata pro siluetoj tonditaj el nigra papero. Ekde 2004 ŝi faras filmojn tiel. Ŝiaj artikaj paperaj pupoj, movataj permane per stangetoj, ludas rakontojn pri la sklaveco en Usono."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.3"
 msgid "A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping."
-msgstr ""
+msgstr "Ombro estas bildo farita per retenado de lumo. La sekva haltejo, en ĉi tiu halo, sendas bildon kun la lumo. Iru al la projekcia mapado."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.black.projection-mapping.title"
 msgid "A head in a crystal ball"
-msgstr ""
+msgstr "Kapo en kristala globo"
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.1"
 msgid "Look at the white plaster shapes and the projector on its tripod. Each shape receives its own pattern, and no light falls on the floor. By day the picture is barely visible, so switch the daylight off."
-msgstr ""
+msgstr "Rigardu la blankajn gipsajn formojn kaj la projekciilon sur ĝia tripiedo. Ĉiu formo ricevas propran desegnon, kaj neniu lumo falas sur la plankon. Tage la bildo estas apenaŭ videbla, do malŝaltu la taglumon."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.2"
 msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room."
-msgstr ""
+msgstr "La jaro sur la ŝildo, 1969, apartenas al la Haunted Mansion en Disneyland. Tie filmita vizaĝo estas projekciata sur senvizaĝan kapon ene de kristala globo. La kapo nomiĝas Madame Leota. Lanny Smoot estas altranga esploristo ĉe Disney kun pli ol 100 patentoj. Oni atribuas al li, ke Madame Leota ŝvebas en sia seanca ĉambro."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.3"
 msgid "So far every picture needed a lamp or a flame, or made its own light. In hall 5 the pictures use the light of the room. Go to the electrochromic display."
-msgstr ""
+msgstr "Ĝis nun ĉiu bildo bezonis lampon aŭ flamon, aŭ faris sian propran lumon. En halo 5 la bildoj uzas la lumon de la ĉambro. Iru al la elektrokroma vidigilo."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.black.electrochromic.title"
 msgid "One layer at a time"
-msgstr ""
+msgstr "Po unu tavolo"
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.1"
 msgid "Look at the printed label that shows the minutes in bars. Wait for the minute to change. The old digit fades and the new digit darkens slowly, over several seconds. The window pane behind the label is the same film on glass."
-msgstr ""
+msgstr "Rigardu la presitan etikedon, kiu montras la minutojn per strekoj. Atendu, ĝis la minuto ŝanĝiĝas. La malnova cifero paliĝas kaj la nova cifero malheliĝas malrapide, dum pluraj sekundoj. La fenestra vitro malantaŭ la etikedo estas la sama filmo sur vitro."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.2"
 msgid "The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
-msgstr ""
+msgstr "La ŝildo nomas S. K. Deb. En 1969 li publikigis la laboron pri filmoj el volframa oksido, el kiu elkreskis ĉi tiuj vidigiloj. Paula Hammond laboris ĉe MIT kun Dean DeLongchamp. Ili konstruis elektrokromajn filmojn po unu molekula tavolo. Iliaj filmoj ŝaltiĝis pli rapide kaj kun pli da kontrasto ol filmoj faritaj alimaniere. La tezo de DeLongchamp de 2003 montras al plenkolora vidigilo."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.3"
 msgid "This film keeps its colour with the power off. The next picture is not on a surface at all. Go to hall 6 and find the illusion transmitter."
-msgstr ""
+msgstr "Ĉi tiu filmo konservas sian koloron sen kurento. La sekva bildo estas sur neniu surfaco. Iru al halo 6 kaj trovu la transsendilon de iluzioj."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.black.illusion-transmitter.title"
 msgid "A picture standing in the air"
-msgstr ""
+msgstr "Bildo staranta en la aero"
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.1"
 msgid "On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later."
-msgstr ""
+msgstr "Maldekstre reala ampolo pendas kaŝite sub la ingo, kaj ĝia bildo staras en la malplena ingo supre. Dekstre estas neniu ampolo. Rigardu, kiel la maldekstra ampolo malheliĝas: la bildo dekstre sekvas momenton poste."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
 msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr ""
+msgstr "Ĉi tie la ŝildo nomas la homon, por kiu ĉi tiu vizito venis. Valerie Thomas naskiĝis en Marilando en 1943. Ŝi estis unu el nur du virinoj, kiuj studis fizikon kiel ĉefan fakon ĉe la Ŝtata Universitato Morgan. Ŝi aliĝis al NASA kiel datumanalizistino kaj inventis tie la transsendilon de iluzioj. La ŝildo donas la jaron 1980."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.3"
 msgid "A curved mirror gave that picture its depth. In hall 7 depth comes from giving each eye its own picture. Go to the stereoscope."
-msgstr ""
+msgstr "Kurba spegulo donis al tiu bildo ĝian profundon. En halo 7 la profundo venas el tio, ke ĉiu okulo ricevas sian propran bildon. Iru al la stereoskopo."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: the title of this part.
 msgctxt "tour.black.stereoscope.title"
 msgid "Two pictures, two eyes"
-msgstr ""
+msgstr "Du bildoj, du okuloj"
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.1"
 msgid "A hand-held viewer stands on a post, with a stereo card in its holder. Press the Look in button to put an eye to the lens: the flat card becomes a scene with depth. The red and cyan glasses in front do the same job with colour."
-msgstr ""
+msgstr "Mantenebla rigardilo staras sur fosto, kun stereokarto en sia tenilo. Premu la butonon Rigardi enen por meti okulon al la lenso: la plata karto fariĝas sceno kun profundo. La ruĝa kaj cejana okulvitroj antaŭe faras la saman laboron per koloro."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
 msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr ""
+msgstr "La ŝildo nomas Charles Wheatstone, kiu publikigis la stereoskopon en Londono en 1838. Du homoj sur ĉi tiu etikedo venis multe pli poste. Charles Harrison estis industria dezajnisto en Ĉikago. En 1958 li redezajnis la View-Master, stereoskopon por la mano, el malpeza muldita plasto. El akcesoraĵo de fotistoj ĝi fariĝis ludilo por infanoj. Kenneth Dunkley estas fizikisto en Pensilvanio. Lia patento de 1989 temas pri okulvitroj sen lensoj: du pinglotruoj kaj du malplenaj kadroj. La patento diras, ke ili donas al ordinara plata bildo la aspekton de profundo."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.3"
 msgid "The stereoscope needs a viewer in front of the eyes. The next stop does without one. Stay in this hall and go to the lenticular display."
-msgstr ""
+msgstr "La stereoskopo bezonas rigardilon antaŭ la okuloj. La sekva haltejo ne bezonas ĝin. Restu en ĉi tiu halo kaj iru al la lentikula vidigilo."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: the title of this part.
 msgctxt "tour.black.lenticular.title"
 msgid "Words that change as you walk"
-msgstr ""
+msgstr "Vortoj, kiuj ŝanĝiĝas, dum vi paŝas"
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.1"
 msgid "Look at the card. It shows an eye, printed in nine views. Turn the model: the eye follows you across the room and jumps from one view to the next."
-msgstr ""
+msgstr "Rigardu la karton. Ĝi montras okulon, presitan en naŭ vidoj. Turnu la modelon: la okulo sekvas vin tra la ĉambro kaj saltas de unu vido al la sekva."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.2"
 msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
-msgstr ""
+msgstr "Folio de etaj ripaj lensoj kuŝas super bildo farita el strioj, kaj ĉiu ripo montras alian strion laŭ tio, kie vi staras. La ŝildo nomas Walter Hess, kiu petis sian patenton en 1912. Hank Willis Thomas estas artisto en Novjorko. Liaj lentikulaj presaĵoj portas tekston, kiu ŝanĝiĝas, kiam la vizitanto preterpaŝas. En unu, Black Imitates White (nigro imitas blankon) fariĝas White Imitates Black (blanko imitas nigron)."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.3"
 msgid "One stop is left, in this hall. Go to the head-mounted display."
-msgstr ""
+msgstr "Restas unu haltejo, en ĉi tiu halo. Iru al la surkapa vidigilo."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: the title of this part.
 msgctxt "tour.black.head-mounted.title"
 msgid "Goggles for a surgeon"
-msgstr ""
+msgstr "Okulvitroj por kirurgo"
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.1"
 msgid "The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. Press the Put it on button to see what the wearer sees."
-msgstr ""
+msgstr "La modelo montras kaskon sur manekena kapo. Apud ĝi estas la partoj por unu okulo: lenso kaj la malgranda ekrano malantaŭ ĝi. Premu la butonon Surmeti ĝin por vidi, kion vidas la portanto."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
 msgid "The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr ""
+msgstr "La ŝildo nomas Ivan Sutherland kaj Bob Sproull, kiuj konstruis la unuan surkapan vidigilon stiratan de komputila grafiko, ĉe la Universitato Harvard en 1968. Samuel Achilefu naskiĝis en Niĝerio. Lia teamo ĉe la Universitato Washington en Sankta Luiso konstruis okulvitrojn kun ekrano por kirurgoj. Tinkturo igas kancerajn ĉelojn lumi sur tiu ekrano. La okulvitroj estis unuafoje portitaj dum operacio en 2014."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.3"
 msgid "That was the last stop of the blue line."
-msgstr ""
+msgstr "Tio estis la lasta haltejo de la blua linio."
 
 #: tour-black
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.black.end.title"
 msgid "The end of the blue line"
-msgstr ""
+msgstr "La fino de la blua linio"
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.1"
 msgid "That is the end of the blue line. It began with a camera at a front door. It ends with goggles in an operating theatre."
-msgstr ""
+msgstr "Tio estas la fino de la blua linio. Ĝi komenciĝis per kamerao ĉe la pordo de domo. Ĝi finiĝas per okulvitroj en operaciejo."
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.2"
 msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
-msgstr ""
+msgstr "Dek du homoj estas nomataj ĉe ĉi tiuj dek haltejoj. Ĉiu el ili estas sur ĉi tiu linio, ĉar fonto priskribas tiun homon kiel nigran, kiel afrik-usonan aŭ kiel naskitan kaj kreskintan en afrika lando. La paĝo Homoj donas la fonton por ĉiu nomo."
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.3"
 msgid "The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it."
-msgstr ""
+msgstr "La verda linio sur la planko estas alia vizito, pri la virinoj en la muzeo. Forlasu ĉi tiun viziton, kaj la haloj estas viaj por promeni. Dankon, ke vi faris ĝin."

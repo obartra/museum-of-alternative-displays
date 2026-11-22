@@ -1179,67 +1179,67 @@ msgstr "이 동선은 이름을 하나씩 적어 만든 사람들의 목록입�
 #. Interface.
 msgctxt "ui.tour.label"
 msgid "Guided tour"
-msgstr ""
+msgstr "가이드 투어"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.take"
 msgid "Take the guided tour"
-msgstr ""
+msgstr "가이드 투어 시작하기"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.spoken"
 msgid "With a spoken guide, about {n} minutes"
-msgstr ""
+msgstr "음성 가이드와 함께, 약 {n}분"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
-msgstr ""
+msgstr "전시실에서 투어 따라가기"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.start"
 msgid "Start the tour"
-msgstr ""
+msgstr "투어 시작"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.leave"
 msgid "Leave the tour"
-msgstr ""
+msgstr "투어 그만두기"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.prev"
 msgid "Previous stop"
-msgstr ""
+msgstr "이전 지점"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.next"
 msgid "Next stop"
-msgstr ""
+msgstr "다음 지점"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.play"
 msgid "Hear the guide"
-msgstr ""
+msgstr "가이드 듣기"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.pause"
 msgid "Pause the guide"
-msgstr ""
+msgstr "가이드 일시 정지"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.sound"
 msgid "Audio guide"
-msgstr ""
+msgstr "음성 가이드"
 
 #: interface
 #. Interface.
@@ -1251,43 +1251,43 @@ msgstr "자막"
 #. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
-msgstr ""
+msgstr "투어의 지점들"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.stop"
 msgid "Stop {n} of {total}"
-msgstr ""
+msgstr "{total}곳 중 {n}번째 지점"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.at"
 msgid "{piece}, hall {n}"
-msgstr ""
+msgstr "{piece}, 제{n}전시실"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.listen"
 msgid "Listen to the guide"
-msgstr ""
+msgstr "가이드 음성 듣기"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.words"
 msgid "What the guide says"
-msgstr ""
+msgstr "가이드가 하는 말"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.whole"
 msgid "The whole tour on one page"
-msgstr ""
+msgstr "투어 전체를 한 쪽에서 보기"
 
 #: interface
 #. About page.
 msgctxt "ui.about.tour"
 msgid "The guided tour was written for this museum. It adds no facts to the labels, only the thread from one to the next. Where it can be heard, the voice is synthetic: it is made with ElevenLabs from the words shown beside it."
-msgstr ""
+msgstr "가이드 투어는 이 박물관을 위해 쓴 것입니다. 라벨에 없는 사실을 더하지 않고, 한 전시품에서 다음 전시품으로 이어지는 실마리만 더합니다. 들을 수 있는 경우 그 음성은 합성 음성입니다. 옆에 보이는 글을 가지고 ElevenLabs로 만들었습니다."
 
 #: interface
 #. Page shown for an address that does not exist.
@@ -8685,658 +8685,658 @@ msgstr "{n}년경"
 #. Title of a guided tour.
 msgctxt "tour.women.title"
 msgid "Women in the museum"
-msgstr ""
+msgstr "박물관의 여성들"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
 msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "일곱 전시실을 모두 도는 가이드 투어입니다. 점자 핀에서 홀로그램까지 디스플레이 열세 점을 봅니다. 저마다 발명자나 기여자 가운데 여성이 적어도 한 명 있습니다."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.women.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "첫 지점에 앞서"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
 msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "박물관에 오신 것을 환영합니다. 이 투어는 바닥의 초록 선을 따라갑니다. 일곱 전시실을 모두 지나며 디스플레이 열세 점 앞에 멈춥니다. 저마다 발명자나 기여자 가운데 여성이 적어도 한 명 있습니다."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
 msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
-msgstr ""
+msgstr "투어는 지점마다 기다립니다. 준비가 되면 다음 지점 버튼을 누르세요. 첫 지점은 제1전시실의 점자 디스플레이입니다. 그곳에서는 그림이 핀으로 이루어집니다."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: the title of this part.
 msgctxt "tour.women.braille-display.title"
 msgid "Read by touch"
-msgstr ""
+msgstr "손끝으로 읽기"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
 msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
-msgstr ""
+msgstr "이 디스플레이는 손끝으로 읽습니다. 핀의 줄이 오르내리며 점자 한 줄을 씁니다. 모델은 시각을 쓰고 있습니다. 오른쪽 셀들을 보세요. 1초마다 바뀝니다."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
 msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr ""
+msgstr "점마다 그 아래에 전압이 닿으면 휘는 결정이 있고, 지렛대가 그 작은 휨을 핀이 올라오는 움직임으로 바꿉니다. 앙드레 트레티아코프와 올레그 트레티아코프가 점을 들어 올리는 이 방법의 특허를 받았습니다. 첫 출원은 1974년 프랑스에서 했습니다."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
 msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr ""
+msgstr "박물관에서 빛이 전혀 필요 없는 전시품은 이것 하나뿐입니다. 초록 선의 다른 지점은 모두 빛으로 작동합니다. 다음은 제2전시실의 음극선관입니다. 그곳에서는 전자 빔이 화면을 빛나게 합니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.women.cathode-ray-tube.title"
 msgid "A beam that draws"
-msgstr ""
+msgstr "그림을 그리는 빔"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
-msgstr ""
+msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 빔 한 줄기가 방금 선을 그린 자리입니다. 모델은 이것을 약 60분의 1 속도로 늦추었습니다. 옆에서 보면 빔의 방향을 바꾸는 구리 코일이 보입니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr ""
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년에 이런 관을 처음 만든 사람입니다. 30년 뒤 샌프란시스코에서 필로 판즈워스가 완전한 전자식 텔레비전 영상을 처음으로 보냈습니다. 펨이라는 이름으로 알려진 엘마 판즈워스는 그의 연구실에서 일하며 실험에 쓸 기술 도면을 그렸습니다. 그 방식이 처음 보낸 얼굴 가운데 하나가 그녀의 얼굴이었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.3"
 msgid "In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps."
-msgstr ""
+msgstr "제1전시실에서는 그림이 핀으로 이루어졌습니다. 여기서는 빔 한 줄기가 그림 전체를 그립니다. 다음 지점은 제3전시실의 마이크로 LED 벽입니다. 그곳에서는 그림이 램프로 이루어집니다."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: the title of this part.
 msgctxt "tour.women.microled.title"
 msgid "A question at dinner"
-msgstr ""
+msgstr "저녁 식탁의 질문"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.1"
 msgid "The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time."
-msgstr ""
+msgstr "앞에 있는 벽은 LED로 이루어져 있고, 하나하나는 너무 작아서 보이지 않습니다. 타일 하나가 빠져서, 흡착식 분리 도구가 붙은 채로 받침대에 기대어 있습니다. 이런 벽은 네모 한 장씩 고칩니다."
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
 msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr ""
+msgstr "징위 린과 훙싱 장은 물리학자입니다. 2000년 캔자스 주립 대학교에서 두 사람은 최초의 마이크로 LED를 만들었습니다. 두 사람은 부부이기도 하고, 이 생각은 저녁 식탁에서 나온 질문에서 시작되었습니다. LED를 천분의 몇 밀리미터로 줄이면 어떻게 될까요?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.3"
 msgid "Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps."
-msgstr ""
+msgstr "제3전시실에 머무르세요. 다음 지점인 양자점 디스플레이는 이 램프들보다 훨씬 작은 결정으로 작동합니다."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: the title of this part.
 msgctxt "tour.women.quantum-dot.title"
 msgid "Colour from size"
-msgstr ""
+msgstr "크기가 정하는 색"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.1"
 msgid "This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour."
-msgstr ""
+msgstr "이것은 잘라 열어 크게 확대한 화소 하나입니다. 기판의 램프에서 파란빛이 올라옵니다. 왼쪽 우물에서는 큰 결정이 그 빛을 빨강으로 바꿉니다. 가운데 우물에서는 작은 결정이 초록으로 바꿉니다. 오른쪽 우물에는 결정이 없어서 파란빛이 그대로 지나갑니다. 결정의 크기만으로 색이 정해집니다."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
 msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr ""
+msgstr "이 결정을 양자점이라고 합니다. 대부분의 화면은 이 모델처럼, 파란빛을 빨강과 초록으로 바꾸는 데 양자점을 씁니다. 1994년 버클리에서 비키 콜빈과 두 동료는 다른 길을 택했습니다. 양자점의 층에 전류를 흘려 빛나게 한 것입니다. 콜빈은 그 논문의 제1저자입니다."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
 msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth."
-msgstr ""
+msgstr "음극선관, LED 벽, 그리고 이 화소는 모두 스스로 빛을 냅니다. 제4전시실에서는 해나 램프나 레이저가 빛을 내고, 디스플레이는 그 빛을 다듬습니다. 그림자극으로 가세요. 그곳의 램프는 천 뒤의 불꽃입니다."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: the title of this part.
 msgctxt "tour.women.shadow-play.title"
 msgid "A flame and a cloth"
-msgstr ""
+msgstr "불꽃과 천"
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.1"
 msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft."
-msgstr ""
+msgstr "천을 보세요. 그 뒤에서 불꽃이 타고, 불꽃과 천 사이에 납작한 인형 셋이 서 있습니다. 나무와 사슴과 새입니다. 보이는 것은 그 그림자입니다. 새를 지켜보세요. 새가 등불 쪽으로 날아가면 그림자가 커지고 가장자리가 흐려집니다."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
 msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr ""
+msgstr "이것을 누가 처음 했는지는 아무도 모릅니다. 약 천 년 전의 자바와 중국에 기록이 있고, 오늘날에도 공연됩니다. 인형에 뚫은 구멍은 빛을 통과시켜 그림자 안에 눈이나 깃털을 그립니다. 검은 종이를 오려 만든 실루엣으로 알려진 미국의 미술가 카라 워커는 2004년부터 이 방식으로 영상 작품을 만들고 있습니다. 막대에 달린 관절 있는 종이 인형을 손으로 움직여 미국 노예제의 이야기를 펼칩니다."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.3"
 msgid "The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser."
-msgstr ""
+msgstr "첫 지점에는 빛이 전혀 필요 없었습니다. 이 지점에는 불꽃 하나면 됩니다. 이 전시실에 있는 다음 지점은 빛줄기로 그림을 그립니다. 주사 레이저로 가세요."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
 msgctxt "tour.women.scanned-laser.title"
 msgid "Drawing with a laser"
-msgstr ""
+msgstr "레이저로 그리기"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.1"
 msgid "Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall."
-msgstr ""
+msgstr "빔을 왼쪽에서 오른쪽으로 따라가 보세요. 레이저 세 대가 한 줄기의 흰 빔으로 합쳐집니다. 빠른 모터에 달린 작은 거울 두 장이 그 방향을 바꾸고, 눈은 움직이는 점을 이어 벽 위의 그림으로 봅니다."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
 msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr ""
+msgstr "명판에는 요제프 오스토야코트코프스키의 이름이 있습니다. 애들레이드에서 초기의 레이저 쇼를 올린 사람입니다. 캘리포니아 공과대학교의 물리학자 엘사 가마이어는 레이저 영상을 만들었습니다. 그 영상은 1972년에 촬영되었고, 로스앤젤레스의 그리피스 천문대에서 문을 연 레이저 쇼인 레이저리움의 본보기가 되었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.3"
 msgid "In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes."
-msgstr ""
+msgstr "제2전시실에서는 전자 빔이 관 안에서 그림을 그렸습니다. 이 빔은 빛이고, 구름이든 건물이든 연기든 어디에나 그릴 수 있습니다. 같은 전시실에서 몇 걸음만 가면, 흰 석고 입체들에 맞게 오려 낸 그림이 있습니다."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.women.projection-mapping.title"
 msgid "A picture cut to fit"
-msgstr ""
+msgstr "꼭 맞게 오려 낸 그림"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.1"
 msgid "Find the switch marked Daylight and turn it off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor."
-msgstr ""
+msgstr "햇빛이라고 적힌 스위치를 찾아 끄세요. 낮에는 이 그림이 거의 보이지 않습니다. 삼각대 위의 프로젝터는 평범한 프로젝터입니다. 공은 그림에 들어 있습니다. 그림은 빛이 닿는 입체에 맞게 오려 낸 것입니다. 입체마다 자기 무늬를 받고, 바닥에는 빛이 떨어지지 않습니다."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
 msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr ""
+msgstr "1969년 디즈니랜드의 헌티드 맨션은 노래하는 흉상에 이 방법을 썼습니다. 가수들의 얼굴을 촬영하고, 그 필름을 같은 얼굴을 본뜬 석고 흉상에 비추었습니다. 같은 저택에는 민얼굴 머리가 든 수정 구슬이 있습니다. 디즈니의 설계 공방에서 일한 미술가 리오타 툼스가 그 머리에 자기 얼굴을 주었습니다. 그 머리에 비치는 필름은 그녀를 찍은 것입니다."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
 msgid "Before you go on, turn the daylight back on. The next stop is in hall 5, where the displays behave like print: they need the light of the room. Go to the electrophoretic ink, the page of an e-reader."
-msgstr ""
+msgstr "다음으로 가기 전에 햇빛을 다시 켜세요. 다음 지점은 제5전시실에 있습니다. 그곳의 디스플레이들은 인쇄물처럼 행동해서, 주변의 빛이 필요합니다. 전기 영동 잉크로 가세요. 전자책 단말기의 지면입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: the title of this part.
 msgctxt "tour.women.electrophoretic-ink.title"
 msgid "A page that bends"
-msgstr ""
+msgstr "휘어지는 지면"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.1"
 msgid "This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power."
-msgstr ""
+msgstr "이것은 전자책 단말기의 지면입니다. 스스로 빛을 내지 않습니다. 수백만 개의 캡슐에 검은 안료와 흰 안료가 들어 있고, 전압이 한 색을 위로 끌어올립니다. 지면을 잠시 지켜보세요. 15초마다 검은색, 이어서 흰색으로 번쩍이며 새로 그려집니다. 그 사이에는 전력 없이 지면을 유지합니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
 msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr ""
+msgstr "명판에는 배럿 코미스키, J. D. 앨버트, 조지프 제이컵슨의 이름이 있습니다. 1996년 MIT 미디어랩에서 이 잉크를 개발한 사람들입니다. 5년 뒤 벨 연구소에서 존 로저스와 제난 바오가 이 잉크를 플라스틱 시트 위에 입혔습니다. 바오는 전기가 통하는 플라스틱을 설계하는 화학자입니다. 두 사람은 고무도장으로 시트 위에 플라스틱 트랜지스터 256개를 찍었습니다. 화면의 점 하나에 하나씩입니다. 지면은 휘어질 수 있었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.3"
 msgid "The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display."
-msgstr ""
+msgstr "이 잉크는 느리지만, 지면에는 그것이 어울립니다. 이 전시실의 다음 지점은 같은 종류이면서 동영상을 보여 줄 만큼 빨라진 디스플레이입니다. 전기 습윤 디스플레이로 가세요."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: the title of this part.
 msgctxt "tour.women.electrowetting.title"
 msgid "Oil and water"
-msgstr ""
+msgstr "기름과 물"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.1"
 msgid "These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher."
-msgstr ""
+msgstr "크게 확대한 셀 12개입니다. 셀마다 물 아래에 색을 입힌 기름방울이 들어 있습니다. 전압이 없으면 기름이 퍼져서 셀이 그 색을 보입니다. 전압이 걸리면 물이 기름을 구석으로 밀어냅니다. 셀 하나가 전환하는 모습을 보세요. 기름은 사라지지 않습니다. 구석에 모여 더 높이 솟습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
 msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr ""
+msgstr "첫 지점에서는 전압이 결정을 휘게 해서 핀을 들어 올렸습니다. 여기서는 전압이 걸리면 물이 기름을 옆으로 밀어냅니다. 수전 해크우드와 제라르도 베니는 1981년 벨 연구소에서 이 디스플레이를 제안하고, 이 효과에 전기 습윤이라는 이름을 붙였습니다. 명판의 연도인 2003년은 네덜란드의 한 연구소가 이것을 동영상을 보여 줄 만큼 빠르게 만든 해입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
 msgid "There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes."
-msgstr ""
+msgstr "이 전시실에 지점이 하나 더 있습니다. 전기 변색 디스플레이로 가세요. 분을 보여 주는 인쇄 라벨입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.women.electrochromic.title"
 msgid "Layer by layer"
-msgstr ""
+msgstr "한 층씩"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.1"
 msgid "This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film."
-msgstr ""
+msgstr "이 인쇄 라벨은 정시에서 몇 분이 지났는지를 보여 줍니다. 이 전시실에서 전압은 안료를 움직였고, 그다음에는 기름을 움직였습니다. 여기서는 원자를 움직입니다. 전하를 띤 원자를 인쇄된 막 안으로 밀어 넣으면 막이 짙어집니다. 분이 바뀌기를 기다리세요. 앞의 숫자가 옅어지고, 새 숫자가 몇 초에 걸쳐 짙어집니다. 라벨 뒤의 유리판에도 같은 막이 입혀져 있습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
 msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr ""
+msgstr "명판에는 S. K. 데브의 이름이 있습니다. 산화 텅스텐 막에 관한 그의 1969년 연구에서 이런 디스플레이가 시작되었습니다. 매사추세츠 공과대학교에서 폴라 해먼드와 딘 들롱샴은 그런 막을 다른 방법으로 만들었습니다. 분자층을 한 층씩 쌓은 것입니다. 두 사람의 막은 다른 방법으로 만든 막보다 더 빠르게, 더 높은 대비로 색이 바뀌었습니다. 이 연구를 담은 학위 논문은 2003년에 나왔고, 풀컬러 디스플레이로 가는 길을 가리킵니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.3"
 msgid "That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
-msgstr ""
+msgstr "인쇄물처럼 작동하는 디스플레이는 이것이 마지막이었습니다. 다음은 제6전시실, 공중입니다. 환영 전송기로 가세요. 그곳에서는 그림이 허공에 떠 있습니다."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.women.illusion-transmitter.title"
 msgid "A bulb that is not there"
-msgstr ""
+msgstr "거기에 없는 전구"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.1"
 msgid "Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows."
-msgstr ""
+msgstr "상자 두 개를 보세요. 왼쪽에는 진짜 전구가 소켓 아래에 숨어 매달려 있고, 굽은 거울이 그 상을 위의 빈 소켓에 세웁니다. 오른쪽에는 전구가 없고 상만 있습니다. 카메라와 두 번째 거울이 보내온 상입니다. 왼쪽 전구가 꺼지는 모습을 보세요. 오른쪽의 상도 따라 꺼집니다."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
 msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr ""
+msgstr "제3전시실에서는 저녁 식탁에서 질문이 나왔습니다. 이번 질문은 1976년, 어느 전시회에서 나왔습니다. 밸러리 토머스는 굽은 거울이 소켓에서 빼낸 전구를 아직 빛나는 것처럼 보이게 하는 것을 보고, 그 상을 보낼 수 있을지 물었습니다. 환영 전송기를 발명할 때 토머스는 NASA에서 랜드샛의 영상 처리 시스템을 관리하고 있었습니다. 특허는 그 전시회로부터 4년 뒤에 그녀에게 등록되었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
 msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
-msgstr ""
+msgstr "제6전시실에 머물러 정적 체적 디스플레이를 보세요. 그곳에서는 그림이 공간 한 덩어리를 채웁니다."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: the title of this part.
 msgctxt "tour.women.static-volume.title"
 msgid "Drawing inside glass"
-msgstr ""
+msgstr "유리 안에 그리기"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
 msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
-msgstr ""
+msgstr "투명한 판을 쌓은 것부터 보세요. 그 안의 도형은 매듭입니다. 판이 한 번에 한 장씩 뿌옇게 변하며 그림의 단면 하나를 받습니다. 움직이는 것은 아무것도 없습니다."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
 msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
-msgstr ""
+msgstr "이제 쌓은 판 옆의 유리 덩어리를 보세요. 유리는 보이지 않는 두 빔이 엇갈리는 곳에서만 빛나고, 모델은 그 빔을 빨갛게 그려 보입니다. 제2전시실에서는 전자 빔이, 제4전시실에서는 레이저가 그림을 그렸습니다. 여기서는 두 빔이 엇갈리는 점이 3차원으로 그림을 그립니다."
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
 msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr ""
+msgstr "엘리자베스 다우닝과 세 동료는 이 방법으로 유리 안에 색이 있는 빛점을 그렸습니다. 이 연구는 1996년 스탠퍼드 대학교에서 발표되었고, 다우닝이 제1저자였습니다. 시제품은 한 변이 약 15밀리미터인 정육면체였고, 모델은 그것을 여러 배 크게 보여 줍니다. 마지막 지점은 제7전시실의 홀로그래피입니다."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
 msgctxt "tour.women.holography.title"
 msgid "The light itself"
-msgstr ""
+msgstr "빛 그 자체"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
-msgstr ""
+msgstr "유리 건판 너머를 보세요. 장난감 기관차가 그 뒤에 서 있는 것처럼 보입니다. 옆으로 움직이면 기관차의 둘레가 보입니다. 기관차는 유리 뒤에 있지 않습니다. 홀로그램은 빛 그 자체를 기록합니다. 제4전시실에서는 레이저가 그림을 그렸습니다. 여기서 레이저는 건판을 비추기만 하고, 건판은 기관차가 내보냈던 것과 같은 빛의 파동을 내보냅니다."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr ""
+msgstr "데니스 가보르는 1948년에 홀로그래피를 발명했습니다. 20년 뒤 화가 마거릿 베니언이 홀로그램을 미술로 만들기 시작했습니다. 이런 홀로그램은 움직이지 않습니다. 최초의 홀로그래피 동영상 디스플레이는 1989년 MIT 미디어랩에서 만들어졌고, 그해에 메리 루 젭슨이 그곳에서 쓴 학위 논문이 그 설계를 담고 있습니다."
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.women.end.title"
 msgid "The end of the green line"
-msgstr ""
+msgstr "초록 선의 끝"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr ""
+msgstr "초록 선은 여기서 끝납니다. 손끝으로 읽는 핀에서 시작했습니다. 거기에 없는 장난감 기관차에서 끝납니다."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
 msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr ""
+msgstr "이 열세 지점에는 여성 열다섯 명의 이름이 있고, 여러분은 이제 그 한 사람 한 사람의 작업 앞에 서 보았습니다. 이 전시실들의 라벨에는 모두 백 명이 넘는 사람의 이름이 있습니다."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
 msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
-msgstr ""
+msgstr "오는 길에 초록 선은 마흔 점이 넘는 다른 디스플레이를 지나왔습니다. 투어를 그만두면 전시실을 자유롭게 걸을 수 있습니다. 전시품마다 라벨이 있고, 거기에 그 일을 한 사람들의 이름이 있습니다. 투어에 함께해 주셔서 고맙습니다."
 
 #: tour-black
 #. Title of a guided tour.
 msgctxt "tour.black.title"
 msgid "Black inventors and artists"
-msgstr ""
+msgstr "흑인 발명가와 예술가"
 
 #: tour-black
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.black.lead"
 msgid "A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label."
-msgstr ""
+msgstr "다섯 전시실을 도는 가이드 투어입니다. 텔레비전 브라운관에서 헤드셋까지 디스플레이 열 점을 봅니다. 저마다 라벨에 흑인 발명가나 예술가의 이름이 있습니다."
 
 #: tour-black
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.black.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "첫 지점에 앞서"
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.1"
 msgid "This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist."
-msgstr ""
+msgstr "이 투어는 바닥의 파란 선을 따라갑니다. 다섯 전시실에서 디스플레이 열 점 앞에 멈춥니다. 어느 디스플레이든 라벨에 흑인 발명가나 흑인 예술가의 이름이 있습니다."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.2"
 msgid "Some of them made the display. Some made a part that it could not do without. Some put it to a new use, or made art with it. At each stop I will say which."
-msgstr ""
+msgstr "그 디스플레이를 만든 사람도 있습니다. 그것 없이는 디스플레이가 작동할 수 없는 부품을 만든 사람도 있습니다. 새로운 쓰임새를 찾아낸 사람도, 그것으로 미술 작품을 만든 사람도 있습니다. 어느 쪽인지는 지점마다 말씀드리겠습니다."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.3"
 msgid "The first stop is in hall 2. Go to the cathode ray tube."
-msgstr ""
+msgstr "첫 지점은 제2전시실에 있습니다. 음극선관으로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.black.cathode-ray-tube.title"
 msgid "A camera at the door"
-msgstr ""
+msgstr "현관의 카메라"
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times."
-msgstr ""
+msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 빔 한 줄기가 방금 선을 그린 자리입니다. 모델은 이것을 약 60분의 1 속도로 늦추었습니다."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr ""
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년에 이런 관을 처음 만든 사람입니다. 이 라벨에 있는 두 사람은 이 관을 일에 썼습니다. 마리 밴 브리턴 브라운은 뉴욕의 간호사였고, 남편 앨버트는 전자 기술자였습니다. 1966년에 두 사람은 자기 집을 위한 보안 장치를 만들었습니다. 카메라가 현관문에 뚫린 네 개의 구멍 사이를 오르내리고, 텔레비전 모니터가 찾아온 사람을 비추었습니다. 두 사람은 1969년에 특허를 받았습니다. 마크 딘은 IBM의 기술자였습니다. IBM 개인용 컴퓨터에 관한 그의 특허 세 건 가운데 두 건은 모니터를 구동하는 어댑터에 관한 것입니다. 하나는 흑백용이고 하나는 컬러용입니다."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.3"
 msgid "The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments."
-msgstr ""
+msgstr "다음 지점도 이 전시실에 있습니다. 누미트론으로 가세요. 작은 필라멘트 일곱 개가 든 유리구입니다."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: the title of this part.
 msgctxt "tour.black.numitron.title"
 msgid "The filament came first"
-msgstr ""
+msgstr "먼저 있었던 필라멘트"
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.1"
 msgid "Look at the glass bulb. Inside are seven tiny lamp filaments, arranged as the seven bars that form a digit. Current through the right filaments makes them glow in the shape of a numeral."
-msgstr ""
+msgstr "유리구를 보세요. 안에는 아주 작은 전구 필라멘트 일곱 개가, 숫자를 이루는 일곱 개의 막대 모양으로 놓여 있습니다. 알맞은 필라멘트에 전류가 흐르면 숫자 모양으로 빛납니다."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.2"
 msgid "Lewis Latimer did not make this display. It is from 1970, and he worked nearly ninety years earlier. But a display made of filaments needs filaments that last. In 1882 Latimer patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
-msgstr ""
+msgstr "루이스 래티머는 이 디스플레이를 만든 사람이 아닙니다. 이것은 1970년에 나왔고, 래티머는 그보다 거의 90년 앞서 일했습니다. 하지만 필라멘트로 만든 디스플레이에는 오래가는 필라멘트가 필요합니다. 1882년에 래티머는 초기 전구의 탄소 필라멘트를 가마 안에서 덜 부러지게 만드는 방법의 특허를 받았습니다."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.numitron.text.3"
 msgid "Here the filament is the light. At the next stop, also in this hall, the light comes from a coating that is struck by electrons. Go to the field emission display."
-msgstr ""
+msgstr "여기서는 필라멘트가 곧 빛입니다. 이 전시실에 있는 다음 지점에서는 전자가 때린 막에서 빛이 나옵니다. 전계 방출 디스플레이로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: the title of this part.
 msgctxt "tour.black.field-emission.title"
 msgid "A tube made flat"
-msgstr ""
+msgstr "납작하게 만든 관"
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.1"
 msgid "The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Above them is the front plate with its glowing coating. The lit dots count seconds."
-msgstr ""
+msgstr "모델은 패널의 한 귀퉁이를 열어 크게 확대해 보여 줍니다. 층을 아래에서 위로 따라가 보세요. 먼저 돌기가 있고, 그 위에 돌기마다 구멍이 뚫린 게이트가 있습니다. 그 위가 앞판이고, 빛나는 막이 입혀져 있습니다. 불이 들어온 점은 초를 셉니다."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.2"
 msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one."
-msgstr ""
+msgstr "이 디스플레이는 몇 밀리미터 두께로 납작하게 누른 음극선관으로, 점마다 뒤에 아주 작은 전자원이 있습니다. 돌기를 만드는 방법은 스탠퍼드 연구소에서 특허를 받았습니다. 아킨툰데 아킨완데는 나이지리아와 스탠퍼드 대학교에서 공부했습니다. 1986년에 허니웰에 들어가 그곳에서 박막 전계 방출 소자와 디스플레이를 연구했습니다. MIT에서는 하나씩 따로 켜고 끄는 방출 소자의 배열을 연구했습니다."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.3"
 msgid "These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play."
-msgstr ""
+msgstr "이 세 디스플레이는 스스로 빛을 냈습니다. 다음 디스플레이에는 불꽃 하나면 됩니다. 제4전시실로 걸어가 그림자극으로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: the title of this part.
 msgctxt "tour.black.shadow-play.title"
 msgid "Cut from black paper"
-msgstr ""
+msgstr "검은 종이를 오려서"
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.1"
 msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well."
-msgstr ""
+msgstr "천을 보세요. 그 뒤에서 불꽃이 타고, 불꽃과 천 사이에 납작한 인형 셋이 서 있습니다. 나무와 사슴과 새입니다. 보이는 것은 그 그림자입니다. 잘 보이도록 햇빛을 끄세요."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.2"
 msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr ""
+msgstr "이것을 누가 처음 했는지는 아무도 모릅니다. 약 천 년 전의 자바와 중국에 기록이 있습니다. 카라 워커는 미국의 미술가이고, 검은 종이를 오려 만든 실루엣으로 알려져 있습니다. 2004년부터 이 방식으로 영상 작품을 만들고 있습니다. 막대에 달린 관절 있는 종이 인형을 손으로 움직여 미국 노예제의 이야기를 펼칩니다."
 
 #: tour-black
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.shadow-play.text.3"
 msgid "A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping."
-msgstr ""
+msgstr "그림자는 빛을 가로막아 만드는 그림입니다. 이 전시실에 있는 다음 지점은 빛에 그림을 실어 보냅니다. 프로젝션 매핑으로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.black.projection-mapping.title"
 msgid "A head in a crystal ball"
-msgstr ""
+msgstr "수정 구슬 속의 머리"
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.1"
 msgid "Look at the white plaster shapes and the projector on its tripod. Each shape receives its own pattern, and no light falls on the floor. By day the picture is barely visible, so switch the daylight off."
-msgstr ""
+msgstr "흰 석고 입체들과 삼각대 위의 프로젝터를 보세요. 입체마다 자기 무늬를 받고, 바닥에는 빛이 떨어지지 않습니다. 낮에는 그림이 거의 보이지 않으니 햇빛을 끄세요."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.2"
 msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room."
-msgstr ""
+msgstr "명판의 연도인 1969년은 디즈니랜드 헌티드 맨션의 연도입니다. 그곳에서는 촬영한 얼굴이 수정 구슬 안의 민얼굴 머리에 비칩니다. 그 머리를 마담 리오타라고 부릅니다. 래니 스무트는 100건이 넘는 특허를 가진 디즈니의 리서치 펠로입니다. 마담 리오타를 강령회 방에서 떠다니게 만든 사람으로 꼽힙니다."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.3"
 msgid "So far every picture needed a lamp or a flame, or made its own light. In hall 5 the pictures use the light of the room. Go to the electrochromic display."
-msgstr ""
+msgstr "지금까지는 그림마다 램프나 불꽃이 필요했거나, 그림이 스스로 빛을 냈습니다. 제5전시실에서는 그림이 주변의 빛을 씁니다. 전기 변색 디스플레이로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.black.electrochromic.title"
 msgid "One layer at a time"
-msgstr ""
+msgstr "한 번에 한 층씩"
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.1"
 msgid "Look at the printed label that shows the minutes in bars. Wait for the minute to change. The old digit fades and the new digit darkens slowly, over several seconds. The window pane behind the label is the same film on glass."
-msgstr ""
+msgstr "분을 막대로 보여 주는 인쇄 라벨을 보세요. 분이 바뀌기를 기다리세요. 앞의 숫자가 옅어지고, 새 숫자가 몇 초에 걸쳐 천천히 짙어집니다. 라벨 뒤의 창유리는 같은 막을 유리에 입힌 것입니다."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.2"
 msgid "The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
-msgstr ""
+msgstr "명판에는 S. K. 데브의 이름이 있습니다. 1969년에 그는 산화 텅스텐 막에 관한 연구를 발표했고, 이런 디스플레이는 거기에서 자라났습니다. 폴라 해먼드는 MIT에서 딘 들롱샴과 함께 연구했습니다. 두 사람은 전기 변색 막을 분자층을 한 층씩 쌓아 만들었습니다. 이 막은 다른 방법으로 만든 막보다 더 빠르게, 더 높은 대비로 바뀌었습니다. 들롱샴의 2003년 학위 논문은 풀컬러 디스플레이로 가는 길을 가리킵니다."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.3"
 msgid "This film keeps its colour with the power off. The next picture is not on a surface at all. Go to hall 6 and find the illusion transmitter."
-msgstr ""
+msgstr "이 막은 전원을 꺼도 색을 유지합니다. 다음 그림은 어떤 표면 위에도 있지 않습니다. 제6전시실로 가서 환영 전송기를 찾으세요."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.black.illusion-transmitter.title"
 msgid "A picture standing in the air"
-msgstr ""
+msgstr "허공에 서 있는 그림"
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.1"
 msgid "On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later."
-msgstr ""
+msgstr "왼쪽에는 진짜 전구가 소켓 아래에 숨어 매달려 있고, 그 상이 위의 빈 소켓에 서 있습니다. 오른쪽에는 전구가 아예 없습니다. 왼쪽 전구가 꺼지는 모습을 보세요. 오른쪽의 상도 한순간 뒤에 따라 꺼집니다."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
 msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr ""
+msgstr "여기 명판에는 이 투어가 찾아온 사람의 이름이 있습니다. 밸러리 토머스는 1943년 메릴랜드에서 태어났습니다. 모건 주립 대학교에서 물리학을 전공한 여성은 그녀를 포함해 단 두 명이었습니다. 데이터 분석가로 NASA에 들어가, 그곳에서 환영 전송기를 발명했습니다. 명판에 적힌 연도는 1980년입니다."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.3"
 msgid "A curved mirror gave that picture its depth. In hall 7 depth comes from giving each eye its own picture. Go to the stereoscope."
-msgstr ""
+msgstr "그 그림에 깊이를 준 것은 굽은 거울이었습니다. 제7전시실에서는 두 눈에 서로 다른 그림을 보여 주는 데서 깊이가 생깁니다. 입체경으로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: the title of this part.
 msgctxt "tour.black.stereoscope.title"
 msgid "Two pictures, two eyes"
-msgstr ""
+msgstr "그림 두 장, 눈 두 개"
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.1"
 msgid "A hand-held viewer stands on a post, with a stereo card in its holder. Press the Look in button to put an eye to the lens: the flat card becomes a scene with depth. The red and cyan glasses in front do the same job with colour."
-msgstr ""
+msgstr "손에 드는 뷰어가 기둥 위에 서 있고, 입체 카드가 꽂혀 있습니다. 들여다보기 버튼을 눌러 렌즈에 눈을 대 보세요. 평평한 카드가 깊이 있는 장면이 됩니다. 앞에 놓인 빨강과 청록 안경은 같은 일을 색으로 합니다."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
 msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr ""
+msgstr "명판에는 찰스 휘트스톤의 이름이 있습니다. 1838년 런던에서 입체경을 발표한 사람입니다. 이 라벨에 있는 두 사람은 훨씬 뒤의 사람입니다. 찰스 해리슨은 시카고의 산업 디자이너였습니다. 1958년에 손에 드는 입체경인 View-Master를 가벼운 성형 플라스틱으로 다시 디자인했습니다. 사진가의 부속품이던 것이 어린이의 장난감이 되었습니다. 케네스 던클리는 펜실베이니아의 물리학자입니다. 1989년의 특허는 렌즈가 없는 안경에 관한 것입니다. 작은 구멍 두 개와 빈 틀 두 개가 전부입니다. 특허는 이 안경이 평범한 평면 그림을 깊이가 있는 것처럼 보이게 한다고 밝힙니다."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.3"
 msgid "The stereoscope needs a viewer in front of the eyes. The next stop does without one. Stay in this hall and go to the lenticular display."
-msgstr ""
+msgstr "입체경에는 눈앞에 대는 뷰어가 필요합니다. 다음 지점에는 그것이 필요 없습니다. 이 전시실에 머물러 렌티큘러 디스플레이로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: the title of this part.
 msgctxt "tour.black.lenticular.title"
 msgid "Words that change as you walk"
-msgstr ""
+msgstr "걸으면 바뀌는 글"
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.1"
 msgid "Look at the card. It shows an eye, printed in nine views. Turn the model: the eye follows you across the room and jumps from one view to the next."
-msgstr ""
+msgstr "카드를 보세요. 아홉 시점으로 인쇄한 눈이 있습니다. 모델을 돌려 보세요. 눈이 방을 가로지르는 여러분을 따라오고, 한 시점에서 다음 시점으로 뜁니다."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.2"
 msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
-msgstr ""
+msgstr "골이 진 아주 작은 렌즈의 판이 띠로 이루어진 그림 위에 놓여 있고, 서 있는 자리에 따라 골마다 다른 띠를 보여 줍니다. 명판에는 발터 헤스의 이름이 있습니다. 1912년에 특허를 출원한 사람입니다. 행크 윌리스 토머스는 뉴욕의 미술가입니다. 그의 렌티큘러 인쇄 작품에는 관람객이 앞을 지나가면 바뀌는 글이 들어 있습니다. 한 작품에서는 Black Imitates White(검정이 하양을 흉내 낸다)가 White Imitates Black(하양이 검정을 흉내 낸다)으로 바뀝니다."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.3"
 msgid "One stop is left, in this hall. Go to the head-mounted display."
-msgstr ""
+msgstr "남은 지점은 하나이고, 이 전시실에 있습니다. 헤드 마운트 디스플레이로 가세요."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: the title of this part.
 msgctxt "tour.black.head-mounted.title"
 msgid "Goggles for a surgeon"
-msgstr ""
+msgstr "외과 의사를 위한 고글"
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.1"
 msgid "The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. Press the Put it on button to see what the wearer sees."
-msgstr ""
+msgstr "모델은 마네킹 머리에 씌운 헤드셋을 보여 줍니다. 그 옆에는 한쪽 눈의 부품, 곧 렌즈와 그 뒤의 작은 화면이 있습니다. 써 보기 버튼을 누르면 쓴 사람에게 보이는 것을 볼 수 있습니다."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
 msgid "The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr ""
+msgstr "명판에는 아이번 서덜랜드와 밥 스프롤의 이름이 있습니다. 1968년 하버드 대학교에서 컴퓨터 그래픽으로 구동하는 최초의 헤드셋을 만든 사람들입니다. 새뮤얼 아칠레푸는 나이지리아에서 태어났습니다. 세인트루이스 워싱턴 대학교의 그의 연구진은 외과 의사를 위해 화면이 달린 고글을 만들었습니다. 염료가 암세포를 그 화면에서 빛나게 합니다. 이 고글은 2014년에 처음으로 수술에서 쓰였습니다."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.3"
 msgid "That was the last stop of the blue line."
-msgstr ""
+msgstr "이것이 파란 선의 마지막 지점이었습니다."
 
 #: tour-black
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.black.end.title"
 msgid "The end of the blue line"
-msgstr ""
+msgstr "파란 선의 끝"
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.1"
 msgid "That is the end of the blue line. It began with a camera at a front door. It ends with goggles in an operating theatre."
-msgstr ""
+msgstr "파란 선은 여기서 끝납니다. 어느 집 현관의 카메라에서 시작했습니다. 수술실의 고글에서 끝납니다."
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.2"
 msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
-msgstr ""
+msgstr "이 열 지점에는 열두 사람의 이름이 있습니다. 저마다 이 선에 들어 있는 까닭은, 출처가 그 사람을 흑인, 아프리카계 미국인, 또는 아프리카의 나라에서 태어나 자란 사람이라고 적고 있기 때문입니다. 인물 페이지에 이름마다 그 출처가 있습니다."
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.3"
 msgid "The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it."
-msgstr ""
+msgstr "바닥의 초록 선은 박물관의 여성들을 다루는 또 다른 투어입니다. 이 투어를 그만두면 전시실을 자유롭게 걸을 수 있습니다. 투어에 함께해 주셔서 고맙습니다."
