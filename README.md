@@ -47,6 +47,11 @@ npm run cutouts    # re-photograph the pieces for the walk, and the hall from it
 
 Node 22 or newer.
 
+The [round 6 portrait records](docs/portraits/v6/README.md) cover all 69 names from the
+latest missing-portrait list. The repository now connects 128 of 143 people, including
+54 added drawings. Its offline gallery opens from docs/portraits/v6/index.html;
+15 unresolved cases remain documented in PORTRAITS-TODO.md.
+
 ## Where things are
 
 | Path | What |
@@ -363,3 +368,5 @@ or the archive pictures and films in `public/media`, each of which keeps the lic
 its credit. No licence has been chosen yet for the rest of the code, which stays all rights
 reserved by the repository owner until one is added. Typefaces are Sofia Sans and Sofia Sans
 Extra Condensed (Lettersoup) and PT Mono (ParaType), each under the SIL Open Font License.
+
+The People page and piece labels link each of143 names to a checked biography, institutional profile or identifying record.

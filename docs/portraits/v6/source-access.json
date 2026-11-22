@@ -1,0 +1,255 @@
+{
+  "checked_at": "2026-11-22",
+  "notice": "Access checks do not establish a sitter or licence. Prior accepted v5 URLs were separately checked: 55 responses HTTP 200. Access failures here retain named evidence previously downloaded or viewed with the browser tool; they do not imply no source exists.",
+  "new_source_pages": [
+    {
+      "url": "https://www.helptech.de/firmengeschichte",
+      "http_status": 200,
+      "final_url": "https://www.helptech.de/firmengeschichte",
+      "bytes": 1093137,
+      "sha256": "126b74ff4064560fef0dd8c01e7664667b6128bb16a297c6502835981091155b"
+    },
+    {
+      "url": "https://theamericanblackstory.com/2020/02/11/",
+      "http_status": 200,
+      "final_url": "https://theamericanblackstory.com/2020/02/11/",
+      "bytes": 131876,
+      "sha256": "c898710a590e505800d9195d6dfd496d560f99e8c7f6b58138c5b8341cc0376b"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/File:Marie_Van_Brittan_Brown_and_Albert_L._Brown.png",
+      "http_status": 200,
+      "final_url": "https://en.wikipedia.org/wiki/File:Marie_Van_Brittan_Brown_and_Albert_L._Brown.png",
+      "bytes": 77060,
+      "sha256": "5d7ffaaad576d2a81f21e792f1224d6505dbe24158323b634fdaa63ecda45db8"
+    },
+    {
+      "url": "https://www.eleconomista.com.mx/opinion/Guillermo-Gonzalez-Camarena-un-geek-en-el-pais-de-la-desigualdad-20180722-0021.html",
+      "http_status": 200,
+      "final_url": "https://www.eleconomista.com.mx/opinion/Guillermo-Gonzalez-Camarena-un-geek-en-el-pais-de-la-desigualdad-20180722-0021.html",
+      "bytes": 235598,
+      "sha256": "bc0de2e431e831da06a64a54d0c8936055b11bffe3adfad8829a6f24a6640afe"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg",
+      "bytes": 106980,
+      "sha256": "47cbfb91f9bbdc97ec6c922bd78842d5c690f0f18ed128ecfc630095670c6f4f"
+    },
+    {
+      "url": "https://elpais.com/mexico/2022-02-17/guillermo-gonzalez-camarena-el-genio-que-da-vida-al-dia-del-inventor-mexicano.html",
+      "http_status": 200,
+      "final_url": "https://elpais.com/mexico/2022-02-17/guillermo-gonzalez-camarena-el-genio-que-da-vida-al-dia-del-inventor-mexicano.html",
+      "bytes": 333572,
+      "sha256": "a7c0a40abfd4c5eec8d25688c70fbd5e9ad772eed6a17c1def57b00c65f12e91"
+    },
+    {
+      "url": "https://www.nokia.com/about-us/newsroom/media-resources/media-library/nokia-bell-labs-future-site-and-historical-images/",
+      "http_status": 200,
+      "final_url": "https://www.nokia.com/about-us/newsroom/media-resources/media-library/nokia-bell-labs-future-site-and-historical-images/",
+      "bytes": 203990,
+      "sha256": "536a64e8d658ea51f7495be557838fdb28d43c5df2cf788389f62d0017765b8f"
+    },
+    {
+      "url": "https://quello.msu.edu/divi/wp-content/uploads/2015/08/Memories-Noll.pdf",
+      "http_status": 200,
+      "final_url": "https://quello.msu.edu/divi/wp-content/uploads/2015/08/Memories-Noll.pdf",
+      "bytes": 6317391,
+      "sha256": "3ec0baf011486e036b1a1e7013a28ec266deaba9e85113ed7b0c55885d82ef7a"
+    },
+    {
+      "url": "https://www.sciencehistory.org/stories/magazine/the-frontiersman/",
+      "http_status": 200,
+      "final_url": "https://www.sciencehistory.org/stories/magazine/the-frontiersman/",
+      "bytes": 204738,
+      "sha256": "d2a7dbf7cd763fe03e16938e3064fed5917ef1adf6512b6db0025ec06d6868d4"
+    },
+    {
+      "url": "https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf",
+      "http_status": 200,
+      "final_url": "https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf",
+      "bytes": 1852816,
+      "sha256": "378196758e4b1aedbd6b16ff5d6f5d131dd5accb90595f13e8ec1f452aa027aa"
+    },
+    {
+      "url": "https://maisonsaine.ca/uploads/2014/06/news183.pdf",
+      "http_status": 200,
+      "final_url": "https://maisonsaine.ca/uploads/2014/06/news183.pdf",
+      "bytes": 180723,
+      "sha256": "3c372f6350c0a4ae0c3f0ead1e50104ab447a46a3d224c0045c76d397f7a0e83"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Gemma_Reinier_Phrysius._Line_engraving_by_P._Galle,_1572._Wellcome_V0004650.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Gemma_Reinier_Phrysius._Line_engraving_by_P._Galle,_1572._Wellcome_V0004650.jpg",
+      "bytes": 97619,
+      "sha256": "57db9ba655610b0b2d21cbe1754250da29a5cd501ac3589f72bf24ecf7de1c91"
+    },
+    {
+      "url": "https://wellcomecollection.org/works/gefacu54",
+      "http_status": 200,
+      "final_url": "https://wellcomecollection.org/works/gefacu54",
+      "bytes": 120135,
+      "sha256": "a5ad6a8525612755ce5dc55247047f260565711e41bde7018b99eb3d85f5fd34"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Daniele_Barbaro_by_Titian.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Daniele_Barbaro_by_Titian.jpg",
+      "bytes": 151888,
+      "sha256": "11abf50ac3cfc3b6716c8740ef4918b3cd1666e491d1304b5f614a4c536f20b4"
+    },
+    {
+      "url": "https://www.cini.it/en/eventi/portraits-of-daniele-barbaro-by-titian-and-veronese-at-the-palazzo-cini/",
+      "http_status": 200,
+      "final_url": "https://www.cini.it/en/eventi/portraits-of-daniele-barbaro-by-titian-and-veronese-at-the-palazzo-cini/",
+      "bytes": 132294,
+      "sha256": "c27f3d4cfe561391a15162f2eee157fb6e2c849bcd0d7c9591629342b283c38b"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Johannes_Kepler.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Johannes_Kepler.jpg",
+      "bytes": 91676,
+      "sha256": "1ef2b9978d34e2a00083c9a1f792e8a0479b6e3fc9fd8b003ab5299e2f6332eb"
+    },
+    {
+      "url": "https://library.si.edu/image-gallery/72833",
+      "error": "HTTPSConnectionPool(host='library.si.edu', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "url": "https://physicstoday.aip.org/letters/how-a-fake-kepler-portrait-became-iconic",
+      "http_status": 200,
+      "final_url": "https://physicstoday.aip.org/letters/how-a-fake-kepler-portrait-became-iconic",
+      "bytes": 198193,
+      "sha256": "2aa9eb957da744d56bf0f931a054a03be8fea3cf1740a4db778e6d501f43a320"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Portrait_de_S%C3%A9raphin.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Portrait_de_S%C3%A9raphin.jpg",
+      "bytes": 97340,
+      "sha256": "4bf6e2aa85c1a9deb5a09316dffb1461cfcdaf046d13d6eae86115280735eae8"
+    },
+    {
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b84527897/f31",
+      "http_status": 403,
+      "final_url": "https://gallica.bnf.fr/ark:/12148/btv1b84527897/f31",
+      "bytes": 5663,
+      "sha256": "1d7192569fea88e705d88df16bad3e2f1d30258aff5b9d6eb8a4f171dd84f89e"
+    },
+    {
+      "url": "https://agorha.inha.fr/detail/730",
+      "http_status": 200,
+      "final_url": "https://agorha.inha.fr/detail/730",
+      "bytes": 41521,
+      "sha256": "c5018b727c335bece26b1f57a0e540b6bbfeeabc2f5913edd286c57d76dd85cb"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Henri.riviere.jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Henri.riviere.jpg",
+      "bytes": 98423,
+      "sha256": "2f3c84aa6f422f00ce36e4ca0b9b9ff780039dfad25f299f9074c8a81fc1ab72"
+    },
+    {
+      "url": "https://www.studiointernational.com/kara-walker/",
+      "http_status": 200,
+      "final_url": "https://www.studiointernational.com/kara-walker/",
+      "bytes": 111641,
+      "sha256": "de0c004e41f6d983ed113ba99692737f946a5db91869b2a25d14d3284f987386"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Kara_Walker_Interview_Camden_Arts_Centre_01.47_(cropped).jpg",
+      "http_status": 200,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Kara_Walker_Interview_Camden_Arts_Centre_01.47_(cropped).jpg",
+      "bytes": 107685,
+      "sha256": "2aba5ef81019ba2b47390387c2b69d4089acf647e9671a077ef990730e6ec313"
+    },
+    {
+      "url": "https://domino.ai/resources/videos/one-stop-for-data-drive-quality-and-compliance",
+      "http_status": 200,
+      "final_url": "https://domino.ai/resources/videos/one-stop-for-data-drive-quality-and-compliance",
+      "bytes": 763250,
+      "sha256": "e6fd38577ff2a9dfb02be5fc7d8cda4069dacbd3248aa2e8cac33ae1233c3eac"
+    },
+    {
+      "url": "https://www.linkedin.com/in/deepakbandyopadhyay",
+      "http_status": 200,
+      "final_url": "https://www.linkedin.com/in/deepakbandyopadhyay",
+      "bytes": 566572,
+      "sha256": "c157bc4e784a4540ede7e20b162a905b91d5d14ff1ba747671916ad0bfd9aca3"
+    },
+    {
+      "url": "https://www.merl.com/publications/docs/TR2001-21.pdf",
+      "http_status": 200,
+      "final_url": "https://www.merl.com/publications/docs/TR2001-21.pdf",
+      "bytes": 1113998,
+      "sha256": "b2ca679109f8e7fb38e2cc5858e71f782a481788bb07b3794858450b8e37e8c4"
+    },
+    {
+      "url": "https://www.boston.com/news/jobs/2011/01/18/optics_inventor_has_eye_for_ne/",
+      "http_status": 200,
+      "final_url": "https://www.boston.com/news/jobs/2011/01/18/optics_inventor_has_eye_for_ne/",
+      "bytes": 245136,
+      "sha256": "ff886d9dc0e01d81aca42c83588ff33b4bc1930898502c2b59be6cb77f29ceb5"
+    },
+    {
+      "url": "https://neursantys.com/about/",
+      "http_status": 200,
+      "final_url": "https://neursantys.com/about/",
+      "bytes": 123319,
+      "sha256": "d4a2a8e21f829d45da2266ccbbf3138b84cf61a90ccf5c5dc96fdede65cc4ae6"
+    },
+    {
+      "url": "https://www.linkedin.com/in/johndralston/",
+      "http_status": 999,
+      "final_url": "https://www.linkedin.com/in/johndralston",
+      "bytes": 1530,
+      "sha256": "644031a68bde879af85bcc9cb3e6fa1e9a6b0f61d49307581974b5dbc09d3de8"
+    },
+    {
+      "url": "https://www.cbinsights.com/company/droplet-technology/people",
+      "http_status": 200,
+      "final_url": "https://www.cbinsights.com/company/droplet-technology/people",
+      "bytes": 98197,
+      "sha256": "8c5f1c7a7080549325b70c2651af0c30890702fc6007d8ac69bd70383b516bc2"
+    },
+    {
+      "url": "https://www.scribd.com/document/733982268/Software-Defined-Radio-2002",
+      "http_status": 200,
+      "final_url": "https://www.scribd.com/document/733982268/Software-Defined-Radio-2002",
+      "bytes": 3038,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+    },
+    {
+      "url": "https://www.rs.tus.ac.jp/ae/lab_computer.html",
+      "http_status": 200,
+      "final_url": "https://www.rs.tus.ac.jp/ae/lab_computer.html",
+      "bytes": 16187,
+      "sha256": "a2c6c92593e4c97322570212ba3005e4d95e3bffef334fe7c550adf48a994199"
+    },
+    {
+      "url": "https://www.tus.ac.jp/ridai/doc/ji/RIJIA01Detail.php?act=&diu=698d&kin=ken",
+      "http_status": 200,
+      "final_url": "https://www.tus.ac.jp/ridai/doc/ji/RIJIA01Detail.php?act=&diu=698d&kin=ken",
+      "bytes": 7063,
+      "sha256": "7f61c0974fa90fffb3bd9dc7c0bd6fce5082624d129f0e5020aef2dad8cf2ae8"
+    },
+    {
+      "url": "https://arts.mit.edu/camit/awards/kepes/",
+      "http_status": 200,
+      "final_url": "https://arts.mit.edu/camit/awards/kepes/",
+      "bytes": 117483,
+      "sha256": "b7c334a1e8bae3f71a02111e44e7d6b998490c452275434ec8a115d9e017ef49"
+    },
+    {
+      "url": "https://www.gallery286.com/wp-content/uploads/RealVirtual-catalogue-D4.pdf",
+      "http_status": 200,
+      "final_url": "https://www.gallery286.com/wp-content/uploads/RealVirtual-catalogue-D4.pdf",
+      "bytes": 1084535,
+      "sha256": "a697d34c9d782f216c4804e6bb5eb9aa7a880dc638721ce34432462c1e4a29a5"
+    }
+  ]
+}

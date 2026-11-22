@@ -17,11 +17,16 @@
 import { halls } from '../src/data/halls';
 import { inHall, pieces } from '../src/data/pieces';
 import { people } from '../src/data/people';
+import { personLinks } from '../src/data/person-links';
 import type { Piece } from '../src/data/schema';
 import { en } from '../src/i18n/en';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const NAME = en['site.name'];
+const personName = (name: string): string => {
+  const link = personLinks[name];
+  return link ? `<a href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
+};
 
 interface Own { path: string; route: string; title: string; says: string; picture?: { file: string; wide: number; high: number; alt: string }; body: string }
 
@@ -40,7 +45,7 @@ function label(p: Piece): string {
 <h2>${esc(en['piece.good'])}</h2>${list(p.good)}
 <h2>${esc(en['piece.bad'])}</h2>${list(p.bad)}
 <p>${esc(p.statusNote)}</p>
-${credit ? `<h2>${esc(en['piece.people'])}</h2>${credit.people.map((e) => `<p><strong>${esc(e.who.join(', '))}.</strong> ${esc(e.did)}</p>`).join('')}${credit.note ? `<p>${esc(credit.note)}</p>` : ''}` : ''}
+${credit ? `<h2>${esc(en['piece.people'])}</h2>${credit.people.map((e) => `<p><strong>${e.who.map(personName).join(', ')}.</strong> ${esc(e.did)}</p>`).join('')}${credit.note ? `<p>${esc(credit.note)}</p>` : ''}` : ''}
 <h2>${esc(en['piece.sources'])}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
 </main>`;
 }

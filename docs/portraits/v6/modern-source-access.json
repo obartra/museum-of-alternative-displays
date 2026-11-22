@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://aoe.scnu.edu.cn/a/20130314/133.html",
+    "resolved_url": "https://aoe.scnu.edu.cn/a/20130314/133.html",
+    "status": 200,
+    "names": [
+      "Robert Hayes"
+    ]
+  },
+  {
+    "url": "https://geoffreyburr.org/papers/IBMR%26D_y2kpaper.pdf",
+    "resolved_url": "https://geoffreyburr.org/papers/IBMR%26D_y2kpaper.pdf",
+    "status": 200,
+    "names": [
+      "Roger Macfarlane"
+    ],
+    "format": "pdf",
+    "pages": 28
+  },
+  {
+    "url": "https://ime-15.sci-meet.net/plenary-speakers",
+    "resolved_url": "https://ime-15.sci-meet.net/plenary-speakers",
+    "status": 200,
+    "names": [
+      "S. K. Deb"
+    ]
+  },
+  {
+    "url": "https://thefutureofthings.com/3081-the-future-of-electronic-paper/",
+    "resolved_url": "https://thefutureofthings.com/3081-the-future-of-electronic-paper/",
+    "status": 200,
+    "names": [
+      "Nicholas Sheridon"
+    ]
+  },
+  {
+    "url": "https://vintagetek.org/bob-anderson/",
+    "resolved_url": "https://vintagetek.org/bob-anderson/",
+    "status": 200,
+    "names": [
+      "Robert H. Anderson"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20090615052750/http://www.3dtl.com:80/page9.php",
+    "resolved_url": "https://web.archive.org/web/20090615052750/http://www.3dtl.com:80/page9.php",
+    "status": 200,
+    "names": [
+      "Elizabeth Downing"
+    ]
+  }
+]

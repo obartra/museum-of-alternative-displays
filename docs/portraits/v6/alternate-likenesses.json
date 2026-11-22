@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-11-22",
+  "approaches": [
+    "named conference-speaker biographies",
+    "Wayback recovery of exact dead image URLs",
+    "archived company team and founder pages",
+    "colleague lecture slides and native embedded PDF images",
+    "contributed-author biographies and career chains",
+    "university event captions in Chinese",
+    "nicknames and initials expanded only from named records",
+    "Japanese patent names and institutional searches",
+    "oral histories and paper-archive leads"
+  ],
+  "recovered_in_targeted_modern_pass": [
+    "S. K. Deb",
+    "Nicholas Sheridon",
+    "Elizabeth Downing",
+    "Roger Macfarlane",
+    "Robert Hayes",
+    "Robert H. Anderson"
+  ],
+  "earlier_archive_recovery": "James Bryce, named IBM Archives portrait",
+  "remaining": 15,
+  "limitation": "No additional verified usable likeness obtained for the remaining15 in this pass; this is not proof that none exist. Three ancient figures have no documented likeness established. Publication rights for modern reference photos remain uncertain.",
+  "pending_updates": {
+    "Kenyon Taylor": "Searched the engineer’s full name Maurice Kenyon Taylor and nickname; IEEE DATAR history and Computer History Museum oral histories confirm the person. Ferranti-Packard archive autobiographical notes dated15February1970 are a concrete lead, not an obtained portrait. No captioned adequate face accepted.",
+    "Oleg Tretiakoff": "Recovered C.A.Technology’s archived company and P2RD pages (2007–2008); they describe assistive-reading devices and contain no usable named portrait. Patent records establish inventor Oleg B.Tretiakoff; the old cadet image remains unconnected to him.",
+    "Andrée Tretiakoff": "Expanded to accented/unaccented forms, maiden surname Asseo from patent4,305,067, company archives and computational-linguistics author records. Goodreads namesake page contains only a default placeholder. No named adequate portrait accepted; no biography inferred from genealogical namesakes.",
+    "M. C. Schlamp": "Full name Michael C.Schlamp appears on Berkeley nanocrystal patents and royalty lists. MIT Tech Talk26May1993 p12 lists a chemistry senior of that exact name, an additional university lead. MIT Technique1993 senior portraits may be a paper-archive route; no public1993 image obtained. No hockey, dentist, chiropractor or unlabelled lab-group face substituted.",
+    "Kenneth Dunkley": "Tried EOC Nassau through Wayback, school image endpoints, holography records and a2021 Dear Fathers retrospective. The last is not an interview and gives no photographic provenance; its broad claims conflate different3D methods. EOC archive replay gives a generic welcome page. No independently tied, adequate documentary face accepted.",
+    "Auguste Berthier": "Expanded to Swiss/Confignon civic and photographic records, local-history journal9 and the Nicéphore Niépce exhibition. A photograph credited to Berthier does not establish that the sitter is Berthier. The1896 diagram proves authorship, not facial appearance. No image accepted.",
+    "Kazuo Yoshinaka": "Confirmed Japanese spelling 吉中一夫 in NEC retinal display patentJPS61198892A; searched Japanese institutional records. Named photographs of the Yoshinaka Seiko executive lack a career link to NEC and are excluded. No unsupported birth/death dates asserted.",
+    "J. M. Naish": "Rechecked the author of the1964 superimposed-fields paper (PubMed14190022; Nature10.1038/202641a0), RAE technical-note citations and head-up-display history. Same-initial physician and modern financial-record namesakes excluded; expanded name still unverified."
+  }
+}

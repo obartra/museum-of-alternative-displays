@@ -11,6 +11,7 @@ import { existsSync, readdirSync, statSync } from 'node:fs';
 import { facts } from '../src/data/facts';
 import { people } from '../src/data/people';
 import { portraits } from '../src/data/portraits';
+import { personLinks } from '../src/data/person-links';
 import { tourFault, tours } from '../src/data/tours';
 import { trails } from '../src/data/trails';
 import { visit } from '../src/data/visit';
@@ -134,6 +135,11 @@ for (const tour of tours) {
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in
 {
   const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
+  for (const name of named) if (!personLinks[name]) errors.push(`person ${name}: needs a biography, profile or identifying record`);
+  for (const [name, link] of Object.entries(personLinks)) {
+    if (!named.has(name)) errors.push(`person link ${name}: no label spells a name that way`);
+    if (!/^https:\/\//.test(link.url) || !link.label.trim() || !['biography', 'profile', 'record'].includes(link.kind)) errors.push(`person link ${name}: needs an HTTPS source, description and valid kind`);
+  }
   for (const [name, pic] of Object.entries(portraits)) {
     if (!named.has(name)) errors.push(`portrait of ${name}: no label spells a name that way`);
     if (!existsSync(new URL(`../public/people/${pic.file}`, import.meta.url))) errors.push(`portrait of ${name}: public/people/${pic.file} is not there`);
