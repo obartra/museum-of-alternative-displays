@@ -1220,6 +1220,12 @@ msgstr "Audioguia"
 
 #: interface
 #. Interface.
+msgctxt "ui.tour.captions"
+msgid "Captions"
+msgstr "Legendas"
+
+#: interface
+#. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
 msgstr "As paradas da visita"

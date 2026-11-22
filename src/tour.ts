@@ -1,4 +1,5 @@
 import audio from './data/tour-audio.json';
+import { captions, type Caption } from './data/captions';
 import { pieceById } from './data/pieces';
 import { mark, spoken, tourStops, tours, type Tour } from './data/tours';
 import { esc } from './html';
@@ -10,7 +11,7 @@ import { langNow, said, tx } from './i18n';
  * tour's words nothing plays by itself. In the walk the guide speaks when the visitor asks for a stop, and the
  * visitor can switch her voice off.
  */
-type Recorded = Record<string, Record<string, Record<string, { file: string; mark: string; seconds?: number }>>>;
+type Recorded = Record<string, Record<string, Record<string, { file: string; mark: string; seconds?: number; cues?: number[]; rests?: number[] }>>>;
 
 /** Whether this visitor has opened a tour that is not announced yet. Kept for the visit only. */
 const previewing = (): boolean => { try { return sessionStorage.getItem('tour-preview') === '1'; } catch { return false; } };
@@ -67,6 +68,33 @@ export const voice = (): HTMLAudioElement => (player ??= Object.assign(new Audio
 /** Whether the visitor wants to hear the guide. They do until they say otherwise, and it is kept between visits. */
 export const wantsVoice = (): boolean => { try { return localStorage.getItem('guide-voice') !== 'off'; } catch { return true; } };
 export const keepVoice = (on: boolean): void => { try { if (on) localStorage.removeItem('guide-voice'); else localStorage.setItem('guide-voice', 'off'); } catch { /* it holds for this visit */ } };
+/** Whether the visitor wants to read what the guide says while she says it. They do not until they ask, and it is kept between visits. */
+export const wantsCaptions = (): boolean => { try { return localStorage.getItem('guide-captions') === 'on'; } catch { return false; } };
+export const keepCaptions = (on: boolean): void => { try { if (on) localStorage.setItem('guide-captions', 'on'); else localStorage.removeItem('guide-captions'); } catch { /* it holds for this visit */ } };
+/** The captions of the parts already asked for, with the time each begins and the time each paragraph ends. */
+const timed = new Map<string, { lines: Caption[]; cues: number[]; rests: number[] } | null>();
+/**
+ * What the guide is saying at a moment of a part's recording, in seconds from its start: one caption, or nothing in
+ * the silences she leaves between paragraphs. Nothing either where the recording has no times, or was made from
+ * other words than the ones now shown.
+ */
+export function captionAt(tour: Tour, partId: string, at: number): string {
+  const code = langNow().code, key = `${tour.id}/${code}/${partId}`;
+  let own = timed.get(key);
+  if (own === undefined) {
+    const part = said.tour(tour)?.parts[partId], kept = (audio as Recorded)[tour.id]?.[code]?.[partId];
+    const lines = part ? captions(part.text) : [];
+    own = part && kept?.cues && kept.mark === mark(spoken(part.text)) && kept.cues.length === lines.length ? { lines, cues: kept.cues, rests: kept.rests ?? [] } : null;
+    timed.set(key, own);
+  }
+  if (!own) return '';
+  let i = -1;
+  while (i + 1 < own.cues.length && own.cues[i + 1] <= at + 0.08) i++;
+  if (i < 0) return '';
+  // the last caption of a paragraph goes when she has finished the paragraph, and the next comes when she speaks again
+  const last = i + 1 >= own.lines.length || own.lines[i + 1].p !== own.lines[i].p, rest = own.rests[own.lines[i].p];
+  return last && rest !== undefined && at > rest + 0.3 ? '' : own.lines[i].text;
+}
 /** The recording of one part in the language in use, as a whole address, or nothing. */
 export function clipOf(tour: Tour, partId: string): string {
   const part = said.tour(tour)?.parts[partId], src = part ? recording(tour, partId, part.text) : '';

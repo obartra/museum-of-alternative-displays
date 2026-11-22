@@ -212,6 +212,7 @@ export const en = {
   'tour.play': 'Hear the guide',
   'tour.pause': 'Pause the guide',
   'tour.sound': 'Audio guide',
+  'tour.captions': 'Captions',
   'tour.line': 'The stops of the tour',
   'tour.stop': 'Stop {n} of {total}',
   'tour.at': '{piece}, hall {n}',

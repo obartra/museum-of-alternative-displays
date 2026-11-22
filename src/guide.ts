@@ -4,7 +4,7 @@ import { tourStops, type Stand, type Tour } from './data/tours';
 import { trailById } from './data/trails';
 import { esc } from './html';
 import { said, t, tx } from './i18n';
-import { clipOf, hush, keepVoice, ready, speak, toursNow, voice, wantsVoice } from './tour';
+import { captionAt, clipOf, hush, keepCaptions, keepVoice, ready, speak, toursNow, voice, wantsCaptions, wantsVoice } from './tour';
 
 /**
  * The guided tour in the walk: a dark band under the picture. On it are the stops of the tour along its line, the
@@ -78,6 +78,8 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
   /** The part whose words wait for the visitor to reach its stop, and the clocks that end the wait. */
   let waiting = '', held = 0, breath = 0;
   let sound = wantsVoice();
+  /** Whether what she says is also shown at the foot of the picture, a sentence at a time. */
+  let cc = wantsCaptions();
   /** Whether the visitor has opened or shut the guide's words themselves. Until they do, the words are open when there is nothing to hear. */
   let words: boolean | undefined, setting = false;
   const fetched = new Set<string>();
@@ -133,6 +135,7 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
 </div>
 <div class="guide__more">
   <button type="button" class="switch" role="switch" data-guide="sound" aria-checked="${sound}"><span class="switch__track"><span class="switch__knob"></span></span><span>${tx('tour.sound')}</span></button>
+  <button type="button" class="switch" role="switch" data-guide="cc" aria-checked="${cc}"><span class="switch__track"><span class="switch__knob"></span></span><span>${tx('tour.captions')}</span></button>
   <button type="button" class="btn guide__leave" data-guide="leave">${tx('tour.leave')}</button>
 </div>
 <details class="guide__words"><summary>${tx('tour.words')}</summary><div class="guide__text"></div><p class="guide__whole"><a href="#words-${tour.id}">${tx('tour.whole')}</a></p></details>`;
@@ -169,11 +172,22 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
   };
 
   /** Bring the keys, the time left and the line up to date with the player. */
+  /** The caption at the foot of the walk's picture. It is the walk's element: the guide only writes in it. */
+  const caption = (text: string) => {
+    const line = document.getElementById('walk-cc');
+    if (!line) return;
+    if (line.textContent !== text) line.textContent = text;
+    line.hidden = !text;
+    // in the closer look the foot of the picture belongs to the views of the piece: the caption stands on top of them
+    const foot = text ? document.querySelector<HTMLElement>('.walk.is-near .near__foot') : null;
+    if (foot) line.style.setProperty('--lift', `${foot.offsetHeight}px`); else line.style.removeProperty('--lift');
+  };
   const sync = () => {
-    if (!tour || closed) return;
+    if (!tour || closed) return caption('');
     // while she waits for the visitor to arrive she counts as speaking: the key that would stop her shows
     const has = !!clip(), on = !!waiting || (mine() && !a.paused && !a.ended);
     root.dataset.voice = !has ? 'none' : sound ? 'on' : 'off';
+    caption(cc && sound && has && mine() && !a.ended && (!a.paused || a.currentTime > 0) ? captionAt(tour, at, a.currentTime) : '');
     root.toggleAttribute('data-playing', on);
     root.toggleAttribute('data-told', mine() && a.ended);
     const key = root.querySelector<HTMLButtonElement>('[data-guide="play"]');
@@ -273,6 +287,7 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     if (what === 'enter') return hooks.enter(el.dataset.tour!);
     if (!tour) return;
     if (what === 'leave') return hooks.leave();
+    if (what === 'cc') { cc = !cc; keepCaptions(cc); el.setAttribute('aria-checked', String(cc)); sync(); return; }
     if (what === 'sound') {
       sound = !sound; keepVoice(sound);
       el.setAttribute('aria-checked', String(sound));
@@ -357,6 +372,7 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
       drop(); hush();
       window.clearTimeout(aimed);
       who.hidden = true; who.innerHTML = '';
+      caption('');
       root.removeEventListener('click', onClick);
       root.removeEventListener('toggle', onToggle, true);
       for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.removeEventListener(name, sync);

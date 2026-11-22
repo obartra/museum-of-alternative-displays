@@ -82,6 +82,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     <button type="button" class="walk__key" data-go="0" data-turn="-1" aria-label="${tx('walk.go.right')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12l-9 7V5z"/></svg></button>
   </div>
   <button type="button" class="walk__key walk__look" id="walk-look" hidden>${LOOK}<span>${tx('walk.near')}</span></button>
+  <p class="walk__cc" id="walk-cc" aria-hidden="true" hidden></p>
   ${nearHtml()}
 </div>
 <section class="guide" id="walk-guide" aria-label="${tx('tour.label')}" hidden></section>

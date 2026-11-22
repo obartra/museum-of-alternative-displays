@@ -1219,6 +1219,12 @@ msgstr "音声ガイド"
 
 #: interface
 #. Interface.
+msgctxt "ui.tour.captions"
+msgid "Captions"
+msgstr "字幕"
+
+#: interface
+#. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
 msgstr "ツアーのスポット"

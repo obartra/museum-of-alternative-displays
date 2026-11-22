@@ -1213,6 +1213,12 @@ msgstr ""
 
 #: interface
 #. Interface.
+msgctxt "ui.tour.captions"
+msgid "Captions"
+msgstr ""
+
+#: interface
+#. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
 msgstr ""

@@ -1214,6 +1214,12 @@ msgstr "语音讲解"
 
 #: interface
 #. Interface.
+msgctxt "ui.tour.captions"
+msgid "Captions"
+msgstr "字幕"
+
+#: interface
+#. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
 msgstr "导览的各站"

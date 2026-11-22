@@ -592,6 +592,11 @@ h1, h2, h3 { text-wrap: balance; }
 /* who the stop of a tour is about, in a corner of the picture: their portrait where there is one, and their name */
 .walk__who { position: absolute; right: var(--r); top: var(--t); display: flex; gap: 10px; max-width: calc(100% - var(--l) - var(--r)); padding: 5px 10px 5px 5px; border-left: 4px solid var(--trail, #1f9d55); border-radius: 4px; background: color-mix(in srgb, var(--plate) 92%, transparent); color: var(--ink); text-decoration: none; font-size: var(--t-xs); font-weight: 700; line-height: 1.15; }
 .walk__who[hidden] { display: none; }
+/* what the guide is saying, a sentence at a time, at the foot of the picture and above the keys that stand there.
+   It is for the eye only: whoever listens to the page hears the guide herself, or reads her words in the band. */
+.walk__cc { position: absolute; left: 50%; bottom: calc(var(--lift, calc(var(--b) + 56px)) + 4px); translate: -50% 0; z-index: 2; width: max-content; max-width: min(calc(100% - var(--l) - var(--r) - 8px), 46ch); margin: 0; padding: 5px 10px 6px; border-radius: 4px; background: color-mix(in srgb, #0b0d0f 84%, transparent); color: #f4f4ee; font-size: var(--t-s); font-weight: 600; line-height: 1.3; text-align: center; text-wrap: balance; pointer-events: none; }
+.walk__cc[hidden] { display: none; }
+.walk__pad:not([hidden]) ~ .walk__cc { --lift: calc(var(--b) + 112px); }
 /* the plate is a link to the page of the piece: with a name and no portrait it is still tall enough for a finger */
 @media (pointer: coarse) { .walk__who { min-height: 44px; } }
 .walk__face { display: flex; align-items: center; gap: 7px; min-width: 0; }
@@ -657,7 +662,7 @@ h1, h2, h3 { text-wrap: balance; }
    phone, held upright or on its side */
 @container view (max-width: 619px) { .walk__who:has(.walk__face + .walk__face) { flex-direction: column; gap: 5px; } }
 .walk__view:has(.walk__who:not([hidden])) .near__hint { top: calc(var(--t) + 78px); }
-@container view (max-width: 619px) { .walk__view:has(.walk__who:not([hidden]) .walk__face + .walk__face) .near__hint { top: calc(var(--t) + 123px); } }
+@container view (max-width: 619px) { .walk__view:has(.walk__who:not([hidden]) .walk__face + .walk__face) .near__hint { top: calc(var(--t) + 128px); } }
 @container view (max-width: 359px) {
   .walk__view:has(.walk__who:not([hidden])) :is(.walk__look, .near__back) { top: calc(var(--t) + 68px); }
   .walk__view:has(.walk__who:not([hidden])) .near__hint { top: calc(var(--t) + 122px); }
@@ -838,6 +843,8 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 /* she has said this part: the way on is lit, and after the closing words the way out */
 .guide[data-told] .guide__key--next:not(:disabled), .guide[data-told][data-last] .guide__leave { background: var(--trail); color: var(--band); box-shadow: 0 2px 0 color-mix(in srgb, var(--trail) 55%, var(--band)); }
 .guide[data-voice="off"] .guide__key--play, .guide[data-voice="none"] .guide__key--play, .guide[data-voices="none"] [data-guide="sound"] { display: none; }
+/* captions follow her voice: where there is none to follow, their switch is not offered */
+.guide:not([data-voice="on"]) [data-guide="cc"] { display: none; }
 .guide__more { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; margin-top: 10px; }
 /* a switch in a tight row is counted with its name broken where it can break, as in the row under the picture: so
    one more switch can stand beside this one before the way out has to go to a row of its own */
