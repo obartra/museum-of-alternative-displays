@@ -12,6 +12,8 @@ import { facts } from '../src/data/facts';
 import { people } from '../src/data/people';
 import { portraits } from '../src/data/portraits';
 import { personLinks } from '../src/data/person-links';
+import { persons } from '../src/data/persons';
+import { bios } from '../src/data/person-bios';
 import { tourFault, tours } from '../src/data/tours';
 import { trails } from '../src/data/trails';
 import { visit } from '../src/data/visit';
@@ -136,6 +138,35 @@ for (const tour of tours) {
 {
   const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
   for (const name of named) if (!personLinks[name]) errors.push(`person ${name}: needs a biography, profile or identifying record`);
+  // every person has a page, and its address is theirs alone
+  const folders = new Map<string, string>();
+  for (const who of persons) {
+    if (!who.slug) errors.push(`person ${who.name}: the name gives no address`);
+    if (folders.has(who.slug)) errors.push(`person ${who.name}: the address person/${who.slug}/ is also that of ${folders.get(who.slug)}`);
+    folders.set(who.slug, who.name);
+  }
+  // the accounts of people are held to one voice: docs/people/VOICE.md says why each rule is there
+  const LOUD = /\b(pioneer\w*|legend\w*|genius|visionar\w*|revolution\w*|father of|mother of|iconic|famous\w*|renowned|brilliant|ground-?breaking|world-class|greatest|best known|celebrated|remarkable|extraordinar\w*)\b/i;
+  const VOUCHED = /\b(credit\w*|says|said|dates|according to|records?|calls?|names?)\b/i;
+  for (const [name, bio] of Object.entries(bios)) {
+    const at = `account of ${name}`;
+    if (!persons.some((who) => who.name === name)) errors.push(`${at}: nobody of that name is on a label`);
+    if (!bio.about.length || bio.about.length > 4) errors.push(`${at}: one to four short paragraphs, not ${bio.about.length}`);
+    if (!bio.sources.length) errors.push(`${at}: needs the sources it rests on`);
+    if (bio.sources.every((s) => s.kind === 'reference')) errors.push(`${at}: needs a source that is not an encyclopedia`);
+    if (bio.born && bio.died && bio.died <= bio.born) errors.push(`${at}: died before being born`);
+    if (bio.died && !bio.born) errors.push(`${at}: a year of death without a year of birth`);
+    for (const line of bio.about) {
+      const words = line.split(/\s+/).length;
+      if (words > 45) errors.push(`${at}: a paragraph of ${words} words; keep each under 45`);
+      if (!/\.$/.test(line)) errors.push(`${at}: "${line.slice(-30)}" should end with a full stop`);
+      if (/[\u2013\u2014]| - |--/.test(line)) errors.push(`${at}: no dashes`);
+      if (/[!?;]/.test(line)) errors.push(`${at}: plain statements only, without ! ? or ;`);
+      const loud = LOUD.exec(line);
+      if (loud) errors.push(`${at}: "${loud[0]}" is praise, not a fact`);
+      for (const sentence of line.split(/(?<=\.)\s+/)) if (/\b(first|earliest|invented|inventor of)\b/i.test(sentence) && !VOUCHED.test(sentence) && !/\bamong the\b/i.test(sentence)) errors.push(`${at}: "${sentence.slice(0, 50)}" claims a first or an invention: say who says so`);
+    }
+  }
   for (const [name, link] of Object.entries(personLinks)) {
     if (!named.has(name)) errors.push(`person link ${name}: no label spells a name that way`);
     if (!/^https:\/\//.test(link.url) || !link.label.trim() || !['biography', 'profile', 'record'].includes(link.kind)) errors.push(`person link ${name}: needs an HTTPS source, description and valid kind`);

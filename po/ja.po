@@ -1356,6 +1356,54 @@ msgid "Go to hall"
 msgstr "展示室へ"
 
 #: interface
+#. Interface.
+msgctxt "ui.person.in"
+msgid "In the collection"
+msgstr "この博物館で"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.with"
+msgid "With {names}"
+msgstr "{names}とともに"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.life"
+msgid "{born} to {died}"
+msgstr "{born}年から{died}年"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.born"
+msgid "Born {born}"
+msgstr "{born}年生まれ"
+
+#: interface
+#. Interface.
+msgctxt "ui.person.elsewhere"
+msgid "Read more elsewhere"
+msgstr "外部でさらに読む"
+
+#: interface
+#. Interface.
+msgctxt "ui.person.kind.biography"
+msgid "Biography"
+msgstr "伝記"
+
+#: interface
+#. Interface.
+msgctxt "ui.person.kind.profile"
+msgid "Profile"
+msgstr "プロフィール"
+
+#: interface
+#. Interface.
+msgctxt "ui.person.kind.record"
+msgid "Record"
+msgstr "記録"
+
+#: interface
 #. Headings on the page of a piece.
 msgctxt "ui.piece.copied"
 msgid "Address copied"

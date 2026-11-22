@@ -79,6 +79,8 @@ latest missing-portrait list. The repository now connects 128 of 143 people, inc
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
 | `src/place.ts` | The addresses of the museum: which place an address stands for, the address of each place, and following a link without loading a page. |
+| `src/data/persons.ts` | Everyone named on a label, each once, with the address of their page (`person/<name>/`) and their lines. |
+| `src/data/person-bios.ts` | A short sourced account of a person, where one has been written. `docs/people/VOICE.md` sets its voice and `docs/people/CURATOR.md` records each reading of the set. |
 | `src/beyond.ts` | The room carried on behind the page of a piece, and the Low power switch that turns it off. |
 | `src/mark.ts` | The museum's mark, MU over AD on four plates: the one drawing behind the header, the icons and the share picture. |
 | `scripts/static-pages.ts` | The page the server sends for every place, in every language, with the sitemap and the page for a missing address. |
@@ -366,6 +368,16 @@ nothing keeps its mark.
 
 The development server has no worker. To try the app, build the site and serve `dist/`: `npm run build`,
 then `npm run preview`.
+
+### A page for each person
+
+Every name on a label leads to that person's own page in the museum, `person/kenyon-taylor/`: their portrait,
+every line the museum has on them with its piece, the sources those rest on, and where to read more
+elsewhere. A person with an account in `src/data/person-bios.ts` has it at the top: a few sourced sentences
+in one voice. `docs/people/VOICE.md` sets the voice down, `npm run check` holds every account to the rules a
+machine can test (sources, length, no praise, no first without a witness), and `docs/people/CURATOR.md`
+records each reading of the whole set. The accounts are written in English and marked as English on the
+pages of other languages.
 
 ### The room behind the page
 

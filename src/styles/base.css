@@ -218,6 +218,45 @@ h1, h2, h3 { text-wrap: balance; }
 .stage canvas.gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .35s ease; }
 .stage canvas.gl.is-live { opacity: 1; }
 .stage canvas.gl:active { cursor: grabbing; }
+/* ---------- the page of one person ---------- */
+/* Laid out as the page of a piece is: the picture on the left, where the model stands on a piece's page, and the
+   name on an enamel plate in the colour of the hall the person's piece hangs in. The portrait is a drawing in a
+   white mount on the concrete of the wall. */
+.pers { display: grid; gap: 14px 44px; grid-template-columns: minmax(0, 1fr); }
+.pers__fig { margin: 0; display: grid; gap: 8px; }
+.pers__wall { display: grid; place-items: center; padding: clamp(32px, 6vw, 56px); background: var(--block); border-radius: 6px;
+  background-image: linear-gradient(172deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 46%); }
+/* a drawing kept at label size is shown at twice that: smaller, it would be lost on the wall */
+.pers__portrait { display: block; width: auto; height: auto; min-width: min(100%, 168px); max-width: min(100%, 336px); max-height: min(58vh, 420px); background: #fff; border-radius: 2px;
+  filter: grayscale(1) contrast(1.06); box-shadow: 0 0 0 10px var(--plate), 0 0 0 11px var(--rim), 0 18px 30px -18px rgba(20, 23, 26, .55); }
+:root[data-lights="off"] .pers__portrait { box-shadow: 0 0 0 10px #f7f6f0, 0 0 0 11px var(--rim), 0 18px 30px -18px rgba(0, 0, 0, .8); }
+.pers__wall--piece { padding: 0; overflow: hidden; }
+.pers__wall--piece img { display: block; width: 100%; height: auto; }
+.pers__credit { font-size: .75rem; line-height: 1.35; color: var(--ink-2); }
+.pers__back { font-weight: 600; text-decoration: underline; text-underline-offset: .18em; }
+.pers > .stack > .crumbs + .plate { margin-top: 4px; }
+.pers__lead { max-width: 38ch; }
+.pers__sec > h2 { margin: 0 0 10px; }
+.pers__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.pers__on { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0 18px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.pers__thumb img { display: block; width: 112px; height: 112px; border-radius: 6px; background: var(--wash-2); }
+.pers__what { display: grid; gap: 4px; justify-items: start; }
+.pers__what .crumb { min-height: 32px; }
+.pers__piece { margin: 0 0 2px; font-size: var(--t-l); font-weight: 700; line-height: 1.2; }
+.pers__with { color: var(--ink-2); font-size: var(--t-s); }
+.pers__tours { display: grid; gap: 14px; }
+@media (max-width: 979px) {
+  /* on a phone the wall runs from edge to edge, as the picture of a piece does */
+  .pers__wall { margin-inline: calc(var(--gutter) * -1); border-radius: 0; padding: 28px; }
+  .pers__portrait { max-height: 300px; }
+  .pers__credit { margin-top: 2px; }
+}
+@media (max-width: 479px) { .pers__on { grid-template-columns: 84px minmax(0, 1fr); gap: 0 14px; } .pers__thumb img { width: 84px; height: 84px; } }
+@media (min-width: 980px) {
+  .pers { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); align-items: start; padding-top: 10px; }
+  .pers__fig { position: sticky; top: 14px; }
+}
+
 /* the hall carried on past the frame of a piece (src/beyond.ts): faint and out of focus behind the page, as the light
    of a room falls on the wall beside a window.
    How faint is set by the small print, which stands straight on the wall: at 15% by day and 17% by night it keeps a

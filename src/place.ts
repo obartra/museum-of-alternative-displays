@@ -2,7 +2,7 @@
  * The addresses of the museum.
  *
  * A place that has words of its own has a folder of its own: the entrance, `hall/2/`, `piece/nixie-tube/`,
- * `index/`, `people/`, `about/` and `tour/women/`, the words of a guided tour. The server has a page in each of
+ * `person/kenyon-taylor/`, `index/`, `people/`, `about/` and `tour/women/`, the words of a guided tour. The server has a page in each of
  * those folders, so a search engine, a chat and a reader without scripts find the same words there that the museum
  * draws. A language other than English stands in front: `ca/piece/nixie-tube/`. An address without a language
  * opens in the visitor's own.
@@ -22,7 +22,7 @@ const HOME = new URL(document.baseURI);
 /** The places that are a single page with a plain name. */
 const PAGES = ['index', 'about', 'people'];
 /** What may follow a # and name a place: the older addresses of the pages, and the states of the building. */
-const NAMED = /^(?:hall-\d+|piece-[a-z0-9-]+|words-[a-z0-9-]+|index|depot|about|people|walk(?:-[a-z0-9-]+)?|tour-[a-z0-9-]+|visit(?:-[a-z0-9-]+)?|missing|sheet(?:\?.*)?|vista|cutouts)$/;
+const NAMED = /^(?:hall-\d+|piece-[a-z0-9-]+|person-[a-z0-9-]+|words-[a-z0-9-]+|index|depot|about|people|walk(?:-[a-z0-9-]+)?|tour-[a-z0-9-]+|visit(?:-[a-z0-9-]+)?|missing|sheet(?:\?.*)?|vista|cutouts)$/;
 
 /** The language at the front of a path, if it names one the museum speaks, and the rest of the path. */
 function split(path: string): { lang: Lang | ''; rest: string } {
@@ -34,7 +34,7 @@ function split(path: string): { lang: Lang | ''; rest: string } {
 function nameOfPath(rest: string): string | null {
   const path = rest.replace(/index\.html$/, '');
   if (path === '') return '';
-  const m = /^(hall|piece|tour)\/([a-z0-9-]+)\/?$/.exec(path);
+  const m = /^(hall|piece|person|tour)\/([a-z0-9-]+)\/?$/.exec(path);
   if (m) return `${m[1] === 'tour' ? 'words' : m[1]}-${m[2]}`;
   const page = /^([a-z]+)\/?$/.exec(path)?.[1];
   return page && PAGES.includes(page) ? page : null;
@@ -65,7 +65,7 @@ export const langOfAddress = (): Lang | '' => placeOf()?.lang ?? '';
  */
 export function link(name: string): string {
   const code = langNow().code, pre = code === 'en' ? '' : `${code}/`;
-  const m = /^(hall|piece|words)-([a-z0-9-]+)$/.exec(name);
+  const m = /^(hall|piece|person|words)-([a-z0-9-]+)$/.exec(name);
   const path = name === '' ? '' : m ? `${m[1] === 'words' ? 'tour' : m[1]}/${m[2]}/` : PAGES.includes(name) ? `${name}/` : null;
   return path === null ? `${pre || './'}#${name}` : pre + path || './';
 }

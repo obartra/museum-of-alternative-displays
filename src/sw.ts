@@ -45,7 +45,7 @@ const MINE = `museum ${new URL(HOME).pathname} `, SHELL = `${MINE}building ${BUI
 const SOUND = `${MINE}sound`;
 const PICTURE = /\.(?:webp|png|jpe?g|gif|svg|avif|ico)$/i;
 /** The folder of a place with words, with or without a language in front, as `src/place.ts` writes them. */
-const PLACE = /^(?:[a-z]{2}(?:-[a-z]+)?\/)?(?:(?:piece|hall|tour)\/[a-z0-9-]+\/|(?:index|people|about)\/)?(?:index\.html)?$/;
+const PLACE = /^(?:[a-z]{2}(?:-[a-z]+)?\/)?(?:(?:piece|hall|person|tour)\/[a-z0-9-]+\/|(?:index|people|about)\/)?(?:index\.html)?$/;
 /** How long the network may take to hand over the page before the kept one is shown instead, in milliseconds. */
 const PATIENCE = 2500;
 /** The most pictures kept. The collection has far fewer today, so everything a visitor has seen or asked to keep stays. */

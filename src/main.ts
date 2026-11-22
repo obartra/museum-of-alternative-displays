@@ -11,6 +11,8 @@ import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
 import { personLinks } from './data/person-links';
+import { personByName, personBySlug, persons } from './data/persons';
+import { bios, personSources } from './data/person-bios';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
@@ -302,26 +304,77 @@ function hallView(n: number): void {
  * each as a link to the page. `named` puts the sitter's name under it: a line that credits several people needs
  * it, or a picture could be taken for the wrong one of them.
  */
-const portraitHtml = (name: string, named = false): string => {
+const portraitCredit = (name: string): string => {
   const pic = portraits[name];
   if (!pic) return '';
-  let credit: string;
   if ('study' in pic) {
     // each publisher once, with the first of its pages
     const once = pic.study.filter((x, i) => pic.study.findIndex((y) => y.by === x.by) === i);
-    credit = tx('people.study', { by: '\u0001' }).replace('\u0001', once.map((x) => `<a href="${esc(x.source)}" rel="noopener">${esc(x.by)}</a>`).join(esc(comma())));
-  } else credit = `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
+    return tx('people.study', { by: '\u0001' }).replace('\u0001', once.map((x) => `<a href="${esc(x.source)}" rel="noopener">${esc(x.by)}</a>`).join(esc(comma())));
+  }
+  return `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
+};
+const portraitHtml = (name: string, named = false): string => {
+  const pic = portraits[name];
+  if (!pic) return '';
+  const credit = portraitCredit(name);
   return `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}${credit}</figcaption></figure>`;
 };
+/** A name, as a link to the person's own page in the museum. What is written of them elsewhere is linked from there. */
 const personNameHtml = (name: string): string => {
-  const link = personLinks[name];
-  return link ? `<a class="person__bio" href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
+  const who = personByName(name);
+  return who ? `<a class="person__bio" href="${link(`person-${who.slug}`)}">${esc(name)}</a>` : esc(name);
 };
 /** One line of a People section. `main` picks the names to set in bold when the list is narrowed. */
 const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string) => boolean): string => {
   const pics = e.who.map((n) => portraitHtml(n, e.who.length > 1)).join('');
   return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${personNameHtml(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
 };
+/**
+ * The page of one person: who they were, where an account has been written (data/person-bios.ts), every line the
+ * museum has on them with its piece, the sources those rest on, and where to read more outside the museum.
+ */
+function personView(slug: string): void {
+  const who = personBySlug(slug);
+  if (!who) return notFound();
+  const bio = bios[who.name], out = personLinks[who.name], pic = portraits[who.name];
+  const lines = who.on.map(({ piece, k }) => said.credit(piece, people[piece]).did[k]);
+  const first = pieceById(who.on[0].piece)!;
+  document.title = titled(who.name);
+  says(bio && langNow().code === 'en' ? bio.about.join(' ') : lines[0]);
+  // the account is written in English: in another language it is marked as English, as every stand-in is
+  const english = langNow().code === 'en' ? '' : ' lang="en"';
+  const life = bio?.born ? (bio.died ? tx('person.life', { born: bio.born, died: bio.died }) : tx('person.born', { born: bio.born })) : '';
+  const told = toursNow();
+  // the guided tours that tell of this person, each on the card the entrance shows it on
+  const lanes = trails.filter((tr) => who.on.some(({ entry }) => tr.who(entry).includes(who.name)))
+    .map((tr) => told.find((x) => x.id === tr.id)).filter((tour): tour is Tour => !!tour).map(tourCard).join('');
+  const sources = personSources(who);
+  const i = persons.indexOf(who), prev = persons[i - 1], next = persons[i + 1];
+  // the picture: the portrait hung on the wall as a framed drawing or, where the museum has none, the piece itself
+  const picture = pic
+    ? `<figure class="pers__fig"><div class="pers__wall"><img class="pers__portrait" src="./people/${esc(pic.file)}" alt="${esc(who.name)}" decoding="async" fetchpriority="high"></div><figcaption class="pers__credit">${portraitCredit(who.name)}</figcaption></figure>`
+    : `<figure class="pers__fig"><a class="pers__wall pers__wall--piece" href="${link(`piece-${first.id}`)}"><img data-poster="${first.id}" src="${poster(first.id, 760)}" srcset="${posterSet(first.id)}" sizes="(min-width: 980px) 44vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: said.piece(first).name })}" decoding="async" fetchpriority="high"></a><figcaption class="pers__credit">${esc(said.piece(first).name)}</figcaption></figure>`;
+  const rows = who.on.map(({ piece, entry }, n) => {
+    const p = pieceById(piece)!, hall = hallById(p.hall), withThem = entry.who.filter((name) => name !== who.name);
+    return `<li class="pers__on" data-hall="${p.hall}"><a class="pers__thumb" href="${link(`piece-${p.id}`)}" tabindex="-1" aria-hidden="true"><img data-poster="${p.id}" src="${poster(p.id, 380)}" alt="" width="380" height="380" loading="lazy" decoding="async"></a><div class="pers__what"><a class="crumb" href="${link(`hall-${hall.id}`)}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><h3 class="pers__piece"><a href="${link(`piece-${p.id}`)}">${esc(said.piece(p).name)}</a></h3><p${standIn.people(piece)}>${esc(lines[n])}</p>${withThem.length ? `<p class="pers__with">${tx('person.with', { names: '\u0001' }).replace('\u0001', withThem.map(personNameHtml).join(esc(comma())))}</p>` : ''}</div></li>`;
+  }).join('');
+  shell(`
+<article class="pers" data-hall="${first.hall}">
+  ${picture}
+  <div class="stack">
+    <p class="crumbs"><a class="crumb pers__back" href="${link('people')}">${tx('people.more')}</a></p>
+    <h1 class="plate" style="display:block"><span class="plate__title">${esc(who.name)}</span>${life ? `<span class="plate__sub">${life}</span>` : ''}</h1>
+    ${bio ? `<p class="lead pers__lead"${english}>${esc(bio.about[0])}</p>${bio.about.length > 1 ? `<div class="prose"${english}>${bio.about.slice(1).map((line) => `<p>${esc(line)}</p>`).join('')}</div>` : ''}` : ''}
+    <section class="pers__sec"><h2 class="h-sec">${tx('person.in')}</h2><ul class="pers__list">${rows}</ul></section>
+    ${lanes ? `<div class="pers__tours">${lanes}</div>` : ''}
+    ${sources.length ? `<section class="pers__sec"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>` : ''}
+    ${out ? `<section class="pers__sec"><h2 class="h-sec">${tx('person.elsewhere')}</h2><ol class="sources"><li><span class="kind">${tx(`person.kind.${out.kind}`)}</span><a href="${esc(out.url)}" rel="noopener">${esc(out.label)}</a></li></ol></section>` : ''}
+    <nav class="pager" aria-label="${tx('nav.people')}">${prev ? `<a href="${link(`person-${prev.slug}`)}">${tx('pager.back', { name: prev.name })}</a>` : `<a href="${link('people')}">${tx('people.more')}</a>`}${next ? `<a href="${link(`person-${next.slug}`)}">${tx('pager.next', { name: next.name })}</a>` : ''}</nav>
+  </div>
+</article>`, undefined, 'people');
+}
+
 /** The trail whose people the People page is narrowed to, or nothing for everyone. */
 let peopleOnly: '' | Trail['id'] = '';
 function peopleView(): void {
@@ -916,6 +969,7 @@ function route(): void {
   const [name, query] = nameNow().split('?');
   lost = false;
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), words = /^words-([a-z0-9-]+)$/.exec(name), visited = /^visit(?:-([a-z0-9-]+))?$/.exec(name), toured = tourAt(name);
+  const person = /^person-([a-z0-9-]+)$/.exec(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
   // the workshop that photographs the pieces for the walk: `scripts/cutouts.mjs` drives it
@@ -926,6 +980,7 @@ function route(): void {
   else if (name === 'index' || name === 'depot') depot();
   else if (name === 'about') about();
   else if (name === 'people') peopleView();
+  else if (person) personView(person[1]);
   else if (walk) walkView(walk[1]);
   else if (toured) walkView(undefined, resumed(toured));
   else if (words) wordsView(words[1]);

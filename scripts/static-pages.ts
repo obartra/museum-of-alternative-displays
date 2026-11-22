@@ -24,6 +24,9 @@ import { tours, type Tour } from '../src/data/tours';
 import { en, type UiKey } from '../src/i18n/en';
 import { LANGS, type CreditText, type HallText, type Lang, type Locale, type PieceText, type TourText } from '../src/i18n/types';
 import { AUTHOR, LICENCE, REPO } from '../src/site';
+import { personByName, persons } from '../src/data/persons';
+import { bios, personSources } from '../src/data/person-bios';
+import { portraits } from '../src/data/portraits';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -32,10 +35,10 @@ const person = (name: string): Record<string, string> => {
   const link = personLinks[name];
   return { '@type': 'Person', name, ...(link && /^https:\/\/[a-z]+\.wikipedia\.org\//.test(link.url) ? { sameAs: link.url } : {}) };
 };
-/** A name in the plain words, as a link to the biography, profile or record that says who the person is. */
-const personName = (name: string): string => {
-  const link = personLinks[name];
-  return link ? `<a href="${esc(link.url)}" title="${esc(link.label)}" rel="noopener">${esc(name)}</a>` : esc(name);
+/** A name in the plain words, as a link to the person's own page in the museum. `pre` is the folder of the language. */
+const personName = (name: string, pre = ''): string => {
+  const who = personByName(name);
+  return who ? `<a href="${pre}person/${who.slug}/">${esc(name)}</a>` : esc(name);
 };
 
 /** The words of one language, as the museum's own pages find them: where a language lacks something, the English stands in. */
@@ -165,7 +168,7 @@ ${x.aka ? `<p>${esc(w.ui('piece.aka', { names: x.aka }))}</p>` : ''}
 <h2>${esc(w.ui('piece.good'))}</h2>${list(x.good)}
 <h2>${esc(w.ui('piece.bad'))}</h2>${list(x.bad)}
 <p>${esc(x.statusNote)}</p>
-${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${e.who.map(personName).join(', ')}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
+${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${e.who.map((n) => personName(n, w.pre)).join(', ')}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
 ${held.length ? `<h2>${esc(w.ui('archive.title'))}</h2><ul>${held.map(({ m, own, file }) => `<li><a href="${esc(file)}">${esc(own.caption)}</a>${own.year ? ` ${esc(own.year)}.` : ''} ${esc(w.ui(`archive.kind.${m.kind}`))}, ${esc(w.ui('archive.by', { author: m.credit.author }))}. ${esc(m.credit.licence)}. <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.archive ?? w.ui('archive.commons'))}</a></li>`).join('')}</ul>` : ''}
 <h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
 <p>${near.map((q) => `<a href="${w.pre}piece/${q.id}/">${esc(w.piece(q).name)}</a>`).join(' / ')}</p>
@@ -191,10 +194,37 @@ ${ways}`,
 <p>${esc(w.ui('people.lead'))}</p>
 ${pieces.filter((p) => people[p.id]).map((p) => {
     const credit = people[p.id], did = w.credit(p.id, credit);
-    return `<h2><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a></h2><ul>${credit.people.map((e, k) => `<li><strong>${e.who.map(personName).join(', ')}.</strong> ${esc(did.did[k])}</li>`).join('')}</ul>`;
+    return `<h2><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a></h2><ul>${credit.people.map((e, k) => `<li><strong>${e.who.map((n) => personName(n, w.pre)).join(', ')}.</strong> ${esc(did.did[k])}</li>`).join('')}</ul>`;
   }).join('\n')}
 ${ways}`,
   });
+
+  // a page for each person: who they were, where an account has been written, their lines, and the sources
+  for (const who of persons) {
+    const bio = bios[who.name], outside = personLinks[who.name], pic = portraits[who.name];
+    const lines = who.on.map(({ piece, k }) => w.credit(piece, people[piece]).did[k]);
+    const sources = personSources(who);
+    const life = bio?.born ? (bio.died ? w.ui('person.life', { born: bio.born, died: bio.died }) : w.ui('person.born', { born: bio.born })) : '';
+    const path = `person/${who.slug}/`;
+    out.push({
+      name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: bio && !w.pre ? bio.about.join(' ') : lines[0], kind: 'ProfilePage',
+      crumbs: [home, [w.ui('nav.people'), 'people/'], [who.name, path]],
+      ...(pic ? { pictures: [`people/${pic.file}`] } : {}),
+      more: {
+        mainEntity: { ...person(who.name), description: bio ? bio.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died ? { deathDate: String(bio.died) } : {}) },
+        citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
+      },
+      body: `<p><a href="${w.pre}people/">${esc(w.ui('people.more'))}</a></p>
+<h1>${esc(who.name)}</h1>
+${life ? `<p>${esc(life)}</p>` : ''}
+${pic ? `<p><img src="people/${esc(pic.file)}" alt="${esc(who.name)}" style="max-width: 168px; height: auto"></p>` : ''}
+${bio ? bio.about.map((line) => `<p${w.pre ? ' lang="en"' : ''}>${esc(line)}</p>`).join('') : ''}
+<h2>${esc(w.ui('person.in'))}</h2><ul>${who.on.map(({ piece, entry }, i) => { const p = pieces.find((q) => q.id === piece)!, others = entry.who.filter((n) => n !== who.name); return `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>. ${esc(lines[i])}${others.length ? ` ${w.ui('person.with', { names: '\u0001' }).split('\u0001').map(esc).join(others.map((n) => personName(n, w.pre)).join(', '))}.` : ''}</li>`; }).join('')}</ul>
+${sources.length ? `<h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>` : ''}
+${outside ? `<h2>${esc(w.ui('person.elsewhere'))}</h2><p>${esc(w.ui(`person.kind.${outside.kind}`))}: <a href="${esc(outside.url)}" rel="noopener">${esc(outside.label)}</a></p>` : ''}
+${ways}`,
+    });
+  }
 
   // about the museum
   out.push({
