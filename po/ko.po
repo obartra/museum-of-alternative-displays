@@ -1302,6 +1302,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "iPhone이나 iPad에서는 Safari에서 공유를 탭한 다음 홈 화면에 추가를 탭하세요."
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "연결 없이 박물관 전체를"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "박물관은 보신 그림을 기기에 보관합니다. 지금 모든 그림을 한꺼번에 받아 두면 어느 쪽이든 연결 없이 열립니다. 가이드 투어의 음성은 따로, 언어별로 보관합니다. 자료 영상은 보관하지 않습니다."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "모든 그림 보관하기, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "이 언어의 가이드 음성 보관하기, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "받는 중: {n}/{of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "모든 그림이 이 기기에 있습니다."
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "이 언어의 가이드 음성이 이 기기에 있습니다."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "파일 {n}개를 받지 못했습니다. 연결이 좋아지면 다시 해 보세요."
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"

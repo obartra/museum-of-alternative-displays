@@ -1302,6 +1302,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "iPhoneやiPadでは、Safariで「共有」をタップし、続けて「ホーム画面に追加」をタップします。"
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "接続なしで博物館のすべてを"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "この博物館は、ご覧になった画像を端末に保存します。いますべての画像をまとめて取得しておけば、どのページも接続なしで開けます。ガイドツアーの音声は別に、言語ごとに保存します。資料の映像は保存されません。"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "すべての画像を保存する（{mb} MB）"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "この言語のガイド音声を保存する（{mb} MB）"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "取得中: {n}/{of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "すべての画像がこの端末にあります。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "この言語のガイド音声がこの端末にあります。"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "{n}個のファイルを取得できませんでした。接続のよいときにもう一度お試しください。"
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"

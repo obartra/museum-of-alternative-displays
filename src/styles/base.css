@@ -576,6 +576,8 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 .visit__go a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; }
 .visit__go .btn { padding: 0 16px; border-color: #e8e9e3; background: #e8e9e3; color: #14171a; font-weight: 700; text-decoration: none; }
 .visit a:focus-visible { outline: 3px solid #e8e9e3; outline-offset: 3px; }
+/* About: what has been kept on the device stands where its button stood */
+.kept { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 .guide { --trail: #1f9d55; --band: #14171a; --band-ink: #e8e9e3; }
 .guide[hidden] { display: none; }
 /* a tour is on offer: one quiet row, marked with a length of its line */

@@ -1306,6 +1306,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "Sur iPhone aŭ iPad, tuŝetu la butonon por kunhavigi en Safari, kaj poste elektu aldoni al la hejmekrano."
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "La tuta muzeo sen konekto"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "La muzeo konservas ĉiun bildon, kiun vi vidis. Vi povas nun elŝuti ĉiujn, por ke ĉiu paĝo malfermiĝu sen konekto. La voĉo de la gvidata vizito estas konservata aparte, po unu lingvo. Arkivaj filmoj ne estas konservataj."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "Konservi ĉiujn bildojn, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "Konservi la voĉon de la gvidanto en ĉi tiu lingvo, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "Elŝutado: {n} el {of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "Ĉiuj bildoj estas en ĉi tiu aparato."
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "La voĉo de la gvidanto estas en ĉi tiu aparato, en ĉi tiu lingvo."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "{n} dosieroj ne povis esti elŝutitaj. Provu denove, kiam la konekto estos pli bona."
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"

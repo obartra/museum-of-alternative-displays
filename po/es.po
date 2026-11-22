@@ -1302,6 +1302,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "En un iPhone o un iPad, toca «Compartir» en Safari y después «Añadir a pantalla de inicio»."
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "Todo el museo sin conexión"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "El museo guarda cada imagen que has visto. Ahora puedes descargarlas todas, para que todas las páginas se abran sin conexión. La voz de la visita guiada se guarda aparte, un idioma cada vez. Las películas de archivo no se guardan."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "Guardar todas las imágenes, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "Guardar la voz de la guía en este idioma, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "Descargando: {n} de {of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "Todas las imágenes están en este dispositivo."
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "La voz de la guía está en este dispositivo, en este idioma."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "{n} archivos no se han podido descargar. Inténtalo de nuevo cuando la conexión sea mejor."
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"

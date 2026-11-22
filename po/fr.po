@@ -1303,6 +1303,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "Sur un iPhone ou un iPad, touchez « Partager » dans Safari, puis « Sur l’écran d’accueil »."
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "Tout le musée hors connexion"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "Le musée garde chaque image que vous avez vue. Vous pouvez les télécharger toutes maintenant, pour que chaque page s’ouvre hors connexion. La voix de la visite guidée est gardée à part, une langue à la fois. Les films d’archives ne sont pas gardés."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "Garder toutes les images, {mb} Mo"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "Garder la voix de la guide dans cette langue, {mb} Mo"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "Téléchargement : {n} sur {of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "Toutes les images sont sur cet appareil."
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "La voix de la guide est sur cet appareil, dans cette langue."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "{n} fichiers n’ont pas pu être téléchargés. Réessayez quand la connexion sera meilleure."
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"

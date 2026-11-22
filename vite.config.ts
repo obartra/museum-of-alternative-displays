@@ -1,8 +1,10 @@
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, type Plugin } from 'vite';
 import { halls } from './src/data/halls';
+import recorded from './src/data/tour-audio.json';
 import { inHall } from './src/data/pieces';
 
 /**
@@ -69,6 +71,20 @@ function keeper(): Plugin {
       page.source = String(page.source).replace('__BUILD__', build);
       const write: Record<string, unknown> = { __BUILD__: build, __SHELL__: shell, __CORE__: core, __LANGUAGES__: languages };
       worker.code = worker.code.replace(/__(?:BUILD|SHELL|CORE|LANGUAGES)__/g, (name) => JSON.stringify(write[name]));
+      // What a visitor can ask to keep on the device (`src/keep.ts`): every picture, and the recordings of each tour
+      // in each language, with what they weigh. Only the recordings the list of them names: an older one may still lie in the folder.
+      const pub = fileURLToPath(new URL('./public/', import.meta.url));
+      const under = (dir: string): string[] => readdirSync(pub + dir, { withFileTypes: true }).flatMap((f) => (f.isDirectory() ? under(`${dir}${f.name}/`) : [`${dir}${f.name}`]));
+      const weight = (paths: string[]) => paths.reduce((sum, path) => sum + statSync(pub + path).size, 0);
+      const pictures = under('').filter((path) => /\.(?:webp|png|jpe?g|svg|avif)$/i.test(path) && !path.startsWith('icons/') && path !== 'og.jpg').sort();
+      const sound: Record<string, Record<string, { files: string[]; bytes: number }>> = {};
+      for (const [tour, langs] of Object.entries(recorded as Record<string, Record<string, Record<string, { file: string }>>>)) {
+        for (const [lang, parts] of Object.entries(langs)) {
+          const files = Object.values(parts).map((part) => `tour/${tour}/${lang}/${part.file}`).sort();
+          ((sound[tour] ??= {})[lang] = { files, bytes: weight(files) });
+        }
+      }
+      this.emitFile({ type: 'asset', fileName: 'offline.json', source: JSON.stringify({ pictures, bytes: weight(pictures), sound }) });
     },
   };
 }

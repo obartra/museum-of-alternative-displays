@@ -13,10 +13,11 @@ import { portraits } from './data/portraits';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
-import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
+import { findKept, greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import { appFoot, appHtml, wireApp } from './app';
+import { keepHtml, showKeep, wireKeep } from './keep';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -717,9 +718,11 @@ function about(): void {
       <p>${tx('about.room.2')}</p>
       <p>${tx('about.room.3')}</p>
       ${appHtml()}
+      ${keepHtml()}
     </section>
   </div>
 </div>`, undefined, 'about');
+  void showKeep();
 }
 
 // ---------- walk: the whole museum in one hall ----------
@@ -845,6 +848,8 @@ window.addEventListener('resize', () => { cancelAnimationFrame(fitting); fitting
 root.dataset.lights = lightsOn ? 'on' : 'off';
 // the museum as an app: wired before the router, so that a newer build can answer a change of page before the router does
 wireApp();
+wireKeep();
+void findKept();
 window.addEventListener('hashchange', route);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
 wireLangMenu((code) => {

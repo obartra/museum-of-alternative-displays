@@ -6,8 +6,9 @@
  * installed. The names of those files change with their contents, so `vite.config.ts` writes the list in here at
  * every build, with a mark that stands for the build. A language is kept from the first time it is used, and a
  * picture from the first time it is shown. With these the museum opens without a connection: every label and
- * every model, and each picture the visitor has seen. Sound and film are not kept. A player asks for them a part
- * at a time, and is left to ask the network itself.
+ * every model, and each picture the visitor has seen. A visitor can ask for every picture at once, and for the
+ * recordings of the guide (`keep.ts`). The worker serves no sound and no film: a player asks for them a part at a
+ * time, and is left to ask the network itself.
  *
  * A new build of the site brings a new worker, and it takes over at once. The page is asked for from the network
  * first, so a visitor with a connection opens the museum as it now is. A page that was open when the new worker
@@ -40,11 +41,13 @@ const BUILD = __BUILD__;
 const HOME = self.registration.scope;
 // Other sites at the same origin have stores of their own, so the names of these begin with the museum's path.
 const MINE = `museum ${new URL(HOME).pathname} `, SHELL = `${MINE}building ${BUILD}`, PICTURES = `${MINE}pictures`;
+/** The recordings a visitor asked to keep (`keep.ts`). The page fills this store and reads it: the worker only leaves it alone. */
+const SOUND = `${MINE}sound`;
 const PICTURE = /\.(?:webp|png|jpe?g|gif|svg|avif|ico)$/i;
 /** How long the network may take to hand over the page before the kept one is shown instead, in milliseconds. */
 const PATIENCE = 2500;
-/** The most pictures kept. The collection has fewer today, so everything a visitor has seen stays. */
-const MOST = 800;
+/** The most pictures kept. The collection has far fewer today, so everything a visitor has seen or asked to keep stays. */
+const MOST = 2400;
 
 const wait = (ms: number) => new Promise<undefined>((done) => setTimeout(done, ms));
 /** The name of a built file without the mark of its contents: what stays the same from one build to the next. */
@@ -63,7 +66,7 @@ self.addEventListener('install', (e) => {
     const saving = !!(navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
     const had = new Set<string>();
     for (const name of await caches.keys()) {
-      if (name.startsWith(MINE) && name !== PICTURES) for (const file of await (await caches.open(name)).keys()) had.add(plain(file.url.slice(HOME.length)));
+      if (name.startsWith(MINE) && name !== PICTURES && name !== SOUND) for (const file of await (await caches.open(name)).keys()) had.add(plain(file.url.slice(HOME.length)));
     }
     const wanted = new Set([...(saving ? __CORE__ : __SHELL__), ...[...__SHELL__, ...__LANGUAGES__].filter((path) => had.has(plain(path)))]);
     await Promise.all([...wanted].map(async (path) => {
@@ -104,7 +107,7 @@ self.addEventListener('message', (e) => {
  * counts as an older one.
  */
 async function tidy(sure?: string): Promise<void> {
-  const old = (await caches.keys()).filter((name) => name.startsWith(MINE) && name !== SHELL && name !== PICTURES);
+  const old = (await caches.keys()).filter((name) => name.startsWith(MINE) && name !== SHELL && name !== PICTURES && name !== SOUND);
   if (!old.length) return;
   const pages = (await self.clients.matchAll({ type: 'window', includeUncontrolled: true })).filter((p) => p.url.startsWith(HOME) && p.id !== sure);
   const builds = await Promise.all(pages.map((p) => new Promise<string>((done) => {

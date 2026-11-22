@@ -70,7 +70,29 @@ export const keepVoice = (on: boolean): void => { try { if (on) localStorage.rem
 /** The recording of one part in the language in use, as a whole address, or nothing. */
 export function clipOf(tour: Tour, partId: string): string {
   const part = said.tour(tour)?.parts[partId], src = part ? recording(tour, partId, part.text) : '';
-  return src ? new URL(src, document.baseURI).href : '';
+  return src ? onDevice(new URL(src, document.baseURI).href) : '';
+}
+
+/**
+ * The recordings a visitor has asked to keep on the device (`keep.ts`). The worker leaves sound to the network,
+ * so a kept recording is handed to the player as an address of the copy itself, which needs no connection.
+ * The copies are looked up when the page opens and again when more have been kept: a player must be given its
+ * address in the same breath as the click that starts it, with no waiting in between.
+ */
+const copies = new Map<string, string>();
+const onDevice = (url: string): string => copies.get(url) ?? url;
+export async function findKept(): Promise<void> {
+  try {
+    if (!('caches' in window)) return;
+    const name = `museum ${new URL('./', document.baseURI).pathname} sound`;
+    if (!(await caches.has(name))) return;
+    const store = await caches.open(name);
+    for (const asked of await store.keys()) {
+      if (copies.has(asked.url)) continue;
+      const got = await store.match(asked);
+      if (got) copies.set(asked.url, URL.createObjectURL(await got.blob()));
+    }
+  } catch { /* the recordings come from the network, as before */ }
 }
 /**
  * Have the guide say one part, from where she left off in it, or from its beginning if she had finished or was
@@ -119,7 +141,7 @@ export function partHtml(tour: Tour, partId: string): string {
   const told = said.tour(tour), part = told?.parts[partId];
   if (!told || !part) return '';
   const stops = tourStops(tour), n = stops.findIndex((s) => s.id === partId) + 1, piece = n ? pieceById(partId) : undefined;
-  const src = recording(tour, partId, part.text);
+  const at = recording(tour, partId, part.text), src = at ? onDevice(new URL(at, document.baseURI).href) : '';
   const place = piece ? `<p class="tour__at"><a href="#piece-${piece.id}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a> <a class="tour__see" href="${tourHash(tour, piece.id)}">${tx('walk.piece')}</a></p>` : '';
   return `${n ? `<p class="tour__no">${tx('tour.stop', { n, total: stops.length })}</p>` : ''}<h2 class="tour__title">${esc(part.title)}</h2>${place}`
     + (src ? `<audio class="tour__audio" controls preload="none" src="${esc(src)}" aria-label="${tx('tour.listen')}: ${esc(part.title)}"></audio>` : '')

@@ -1301,6 +1301,54 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "Auf einem iPhone oder iPad tippen Sie in Safari auf „Teilen“ und dann auf „Zu Home-Bildschirm hinzufügen“."
 
 #: interface
+#. About page.
+msgctxt "ui.about.keep"
+msgid "The whole museum without a connection"
+msgstr "Das ganze Museum ohne Verbindung"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.1"
+msgid "The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept."
+msgstr "Das Museum behält jedes Bild, das Sie gesehen haben. Sie können jetzt alle laden, damit sich jede Seite ohne Verbindung öffnet. Die Stimme der Führung wird getrennt behalten, eine Sprache nach der anderen. Archivfilme werden nicht behalten."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.pictures"
+msgid "Keep every picture, {mb} MB"
+msgstr "Alle Bilder behalten, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.sound"
+msgid "Keep the voice of the guide in this language, {mb} MB"
+msgstr "Die Stimme der Führung in dieser Sprache behalten, {mb} MB"
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.going"
+msgid "Fetching: {n} of {of}"
+msgstr "Wird geladen: {n} von {of}"
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.pictures.done"
+msgid "Every picture is on this device."
+msgstr "Alle Bilder sind auf diesem Gerät."
+
+#: interface
+#. About page.
+msgctxt "ui.about.keep.sound.done"
+msgid "The voice of the guide is on this device, in this language."
+msgstr "Die Stimme der Führung ist in dieser Sprache auf diesem Gerät."
+
+#: interface
+#. About page. Keep the words in curly brackets as they are.
+msgctxt "ui.about.keep.failed"
+msgid "{n} files could not be fetched. Try again when the connection is better."
+msgstr "{n} Dateien konnten nicht geladen werden. Versuchen Sie es noch einmal, wenn die Verbindung besser ist."
+
+#: interface
 #. Interface.
 msgctxt "ui.visit.kind"
 msgid "Short visit"
