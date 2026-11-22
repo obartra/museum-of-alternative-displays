@@ -148,8 +148,8 @@ tour and that the model can speak. The workflow **Tour audio** runs it:
 3. Put the id of the voice in `tour/voices.json`: under `default` for one guide in every
    language, or under a language code for a voice of its own. `leaveOut` names the
    languages that get no recording because the model does not speak them. `waiting` holds
-   voices that are chosen and not yet in use. The script names them in its summary and
-   records nothing with them. To use one, move its id up to `voices`: the next recording
+   voices that are chosen and not yet in use. The script names them in its summary,
+   records nothing with them, and passes over a language whose only voice waits. To use one, move its id up to `voices`: the next recording
    then speaks every part of that language again.
 4. Run it with "Say how many characters it would send", then with "Record what is missing
    or out of date". The recordings are kept in `public/tour/` and the site is deployed.

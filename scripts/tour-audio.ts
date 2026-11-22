@@ -111,6 +111,10 @@ langs = langs.filter((l) => !left.includes(l));
 // voices that are chosen and wait: they are named here so that nobody forgets them, and nothing is recorded with them
 const waiting = Object.entries(config.waiting ?? {}).filter(([l, v]) => v && v !== (config.voices[l] || config.voices.default || ''));
 if (waiting.length) note(`Voices waiting in tour/voices.json, not used yet: ${waiting.map(([l]) => l).join(', ')}. One is used once its id is moved up to "voices".`);
+// a language that has no voice but the one that waits is passed over: it is recorded once that voice is in use
+const held = langs.filter((l) => !(config.voices[l] || config.voices.default) && waiting.some(([w]) => w === l));
+if (held.length) note(`Not recorded, because their voice still waits: ${held.join(', ')}.`);
+langs = langs.filter((l) => !held.includes(l));
 
 // ---------- the sound ----------
 
