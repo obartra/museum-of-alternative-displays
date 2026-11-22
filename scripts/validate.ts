@@ -147,7 +147,7 @@ for (const tour of tours) {
   }
   // the accounts of people are held to one voice: docs/people/VOICE.md says why each rule is there
   const LOUD = /\b(pioneer\w*|legend\w*|genius|visionar\w*|revolution\w*|father of|mother of|iconic|famous\w*|renowned|brilliant|ground-?breaking|world-class|greatest|best known|celebrated|remarkable|extraordinar\w*)\b/i;
-  const VOUCHED = /\b(credit\w*|says|said|dates|according to|records?|calls?|names?)\b/i;
+  const VOUCHED = /\b(credit\w*|says|said|dates|according to|records?|calls?|names?|account|wrote|writes|recall\w*|report\w*)\b/i;
   for (const [name, bio] of Object.entries(bios)) {
     const at = `account of ${name}`;
     if (!persons.some((who) => who.name === name)) errors.push(`${at}: nobody of that name is on a label`);

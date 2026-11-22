@@ -70,7 +70,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Mark Dean | Cathode ray tube | The IBM engineer and inventor, born in 1957. A common name. | yes | `public/people/mark-dean.webp` |
 | Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. | yes | `public/people/guillermo-gonzalez-camarena.webp` |
 | A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/a-frankenstein.jpg` |
-| Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/werner-von-jaworski.jpg` |
+| W. von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/w-von-jaworski.jpg` |
 | Peter Goldmark | Colour-wheel television | Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years. | yes | `public/people/peter-goldmark.webp` |
 | Robert H. Anderson | Storage tube terminal | The Tektronix engineer. A common name. | yes | `public/people/robert-h-anderson.webp` |
 | Andrew Haeff | Storage tube terminal | Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen. | yes | `public/people/andrew-haeff.webp` |

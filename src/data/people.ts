@@ -5,7 +5,8 @@ import { src } from './pieces/src';
  * One line of a label's People section: the people who share one deed, and the deed.
  * `she` names the women among them, for the trail of the women.
  * `aside` marks a line whose people did not make the piece: what came before it, or those who described or
- * used a thing that has no known maker. The plate on its block in the walk does not carry their names.
+ * used a thing that has no known maker, or someone whose part in it the sources dispute. The plate on its block
+ * in the walk does not carry their names.
  */
 export interface Entry { who: string[]; did: string; she?: string[]; aside?: boolean }
 
@@ -17,9 +18,14 @@ export const people: Record<string, Credit> = {
   'split-flap': {
     people: [
       { who: ['Gino Valle'], did: 'Designer credited with the form of the boards made by Solari.' },
-      { who: ['John Myer'], did: 'Belgian inventor credited, with Valle, for the Solari board.' },
+      { who: ['John Myer'], did: 'Worked with Valle on the Cifra 5, Solari\'s flap clock of the mid 1950s. Finestre sull\'Arte calls him a Belgian inventor and gives him the idea of its two numbered rollers.' },
     ],
-    note: 'No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956.',
+    note: 'No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège.',
+    sources: [
+      src('archive', 'Cifra 5 Electro-mechanical clock, ADI Design Museum', 'https://www.adidesignmuseum.org/en/collection/cifra-5-electro-mechanical-clock/'),
+      src('press', 'The Cifra 5 electromechanical clock: the Solari revolution, Finestre sull\'Arte', 'https://www.finestresullarte.info/en/works-and-artists/the-cifra-5-electromechanical-clock-the-solari-revolution'),
+      src('archive', 'Gino Valle, clocks, and the fusion of technology and design, Fondazione Pirelli', 'https://www.fondazionepirelli.org/en/activities/exhibitions/gino-valle-clocks-and-the-fusion-of-technology-and-design/'),
+    ],
   },
   'flip-disc': { people: [{ who: ['Kenyon Taylor'], did: 'Devised the flip-disc at Ferranti-Packard in Canada, for Trans-Canada Air Lines.' }] },
   'mechanical-television': {
@@ -42,7 +48,7 @@ export const people: Record<string, Credit> = {
     people: [
       { who: ['Oleg Tretiakoff', 'Andrée Tretiakoff'], she: ['Andrée Tretiakoff'], did: 'Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974.' },
       { who: ['Klaus Peter Schönherr'], did: 'Invented a piezoelectric braille module in Germany in 1975.' },
-      { who: ['James Bryce'], did: 'Developed the earliest working braille display on record, at IBM around 1950.' },
+      { who: ['James Bryce'], did: 'Began at IBM the first working braille display in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949.' },
     ],
     sources: [
       src('patent', 'Tretiakoff and Tretiakoff, US patent 4,044,350', 'https://patents.google.com/patent/US4044350'),
@@ -75,7 +81,7 @@ export const people: Record<string, Credit> = {
   'colour-wheel-television': {
     people: [
       { who: ['Guillermo González Camarena'], did: 'Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.' },
-      { who: ['A. Frankenstein', 'Werner von Jaworski'], did: 'Applied in Germany in 1904 for a patent on a colour system with a filter wheel.' },
+      { who: ['A. Frankenstein', 'W. von Jaworski'], aside: true, did: 'Applied in Germany in 1904 for a patent on a colour system with three colour filters. The listing the museum has read names selenium cells and mirrors, and no wheel.' },
       { who: ['Peter Goldmark'], did: 'Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years.' },
     ],
   },
@@ -86,8 +92,13 @@ export const people: Record<string, Credit> = {
     ],
   },
   'nixie-tube': {
-    people: [{ who: ['David Hagelbarger'], did: 'The engineer most often named as its inventor.' }],
-    note: 'Credit for the invention is not clear. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s.',
+    people: [{ who: ['David Hagelbarger'], aside: true, did: 'Engineer at Bell Laboratories. He gave The Computer Museum a prototype tube and its patent papers, and the museum\'s report of 1987 calls him its inventor. Other records credit Burroughs.' }],
+    note: 'Credit for the invention is not settled. The Computer Museum in Boston recorded a prototype made at Bell Laboratories as the gift of its inventor, David Hagelbarger. The Computer History Museum, which holds that prototype now, says the Nixie was invented at Burroughs. A donor\'s note there gives the design to the Haydu brothers, about 1948, who sold the patent to Burroughs in 1952. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s.',
+    sources: [
+      src('archive', 'The Collection, The Computer Museum Report, volume 21, winter 1987 to 1988, page 3', 'https://tcm.computerhistory.org/reports/TCMReportWinter1987-88.pdf'),
+      src('archive', 'Nixie Tube Prototype, catalogue number X672.86, Computer History Museum', 'https://www.computerhistory.org/collections/catalog/X672.86'),
+      src('archive', 'Nixie tube, catalogue number X1588.99, Computer History Museum', 'https://www.computerhistory.org/collections/catalog/X1588.99A'),
+    ],
   },
   'vacuum-fluorescent': {
     people: [
@@ -159,25 +170,28 @@ export const people: Record<string, Credit> = {
       { who: ['Mozi'], aside: true, did: 'Taught in China about 430 BCE, and the Mohist school is named after him. Its later members wrote the Canons, which hold an early account of a picture turned over by a small hole.' },
       { who: ['Ibn al-Haytham'], aside: true, did: 'Born in Basra about 965, died in Cairo about 1040. In a dark chamber he studied how light passes through an opening, and how the sun in eclipse looks through a small hole.' },
       { who: ['Gemma Frisius'], aside: true, did: 'Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one.' },
-      { who: ['Daniele Barbaro'], aside: true, did: 'Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer.' },
+      { who: ['Daniele Barbaro'], aside: true, did: 'Venetian nobleman. His book on perspective, dated 1568 or 1569, describes a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer.' },
       { who: ['Johannes Kepler'], aside: true, did: 'Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes.' },
     ],
     note: 'No inventor is known. The Mohist text speaks of the turned shadow and the crossing light, and does not describe a chamber.',
     sources: [
       src('reference', 'Mohism, Stanford Encyclopedia of Philosophy', 'https://plato.stanford.edu/entries/mohism/'),
       src('reference', 'Ibn al-Haytham (Wikipedia)', 'https://en.wikipedia.org/wiki/Ibn_al-Haytham'),
+      src('archive', 'Daniele Barbaro, biography, Museo Galileo, Florence', 'https://catalogue.museogalileo.it/biography/DanieleBarbaro.html'),
     ],
   },
   'shadow-play': {
     people: [
       { who: ['Ibn Daniyal'], aside: true, did: 'Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre.' },
-      { who: ['François Dominique Séraphin'], aside: true, did: 'Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows.' },
+      { who: ['François Dominique Séraphin'], aside: true, did: 'Opened a shadow theatre at Versailles and moved it to Paris in 1784, by one account. Britannica has Paris in 1776, then Versailles. In France such shows were advertised as ombres chinoises, Chinese shadows.' },
       { who: ['Henri Rivière'], aside: true, did: 'Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc.' },
       { who: ['Kara Walker'], she: ['Kara Walker'], aside: true, did: 'American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.' },
     ],
     note: 'No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers.',
     sources: [
       src('reference', 'Ibn Daniel, World Encyclopedia of Puppetry Arts, UNIMA', 'https://wepa.unima.org/en/?p=773'),
+      src('reference', 'Séraphin, World Encyclopedia of Puppetry Arts, UNIMA', 'https://wepa.unima.org/en/?p=6310'),
+      src('reference', 'Dominique Séraphin, Encyclopaedia Britannica', 'https://www.britannica.com/biography/Dominique-Seraphin'),
       src('reference', 'Muḥammad Ibn Dāniyāl (Wikipedia)', 'https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_Ibn_D%C4%81niy%C4%81l'),
       src('archive', 'Kara Walker, Shadow puppet from Testimony: Narrative of a Negress Burdened by Good Intentions (2004), Museum of Modern Art', 'https://www.moma.org/collection/works/97669'),
       src('archive', 'Kara Walker, Fall Frum Grace, Miss Pipi\'s Blue Tale (2011), Sammlung Goetz', 'https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/'),
@@ -228,7 +242,7 @@ export const people: Record<string, Credit> = {
   'gyricon': { people: [{ who: ['Nicholas Sheridon'], did: 'Invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s.' }] },
   'electrophoretic-ink': {
     people: [
-      { who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab in 1996.' },
+      { who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. Their first capsule worked on 23 January 1997.' },
       { who: ['John Rogers', 'Zhenan Bao'], she: ['Zhenan Bao'], did: 'At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics.' },
     ],
     sources: [
@@ -248,7 +262,7 @@ export const people: Record<string, Credit> = {
       src('reference', 'Gerardo Beni, Wikidata', 'https://www.wikidata.org/wiki/Q5550233'),
     ],
   },
-  'interferometric-modulator': { people: [{ who: ['Mark Miles'], did: 'Invented the modulator and founded Etalon, then Iridigm, to develop it. Qualcomm bought Iridigm in 2004.' }] },
+  'interferometric-modulator': { people: [{ who: ['Mark Miles'], did: 'Invented the modulator. He founded Etalon and in 1997 co-founded Iridigm to develop it. Qualcomm bought Iridigm in 2004.' }], sources: [src('archive', 'Mark Miles, speaker biography, Hilton Head Workshop, Transducer Research Foundation (2006)', 'https://www.transducer-research-foundation.org/archive/hh2006/general/speakers/miles.html')] },
   'electrochromic': {
     people: [
       { who: ['S. K. Deb'], did: 'Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.' },
@@ -262,7 +276,11 @@ export const people: Record<string, Credit> = {
   'peppers-ghost': {
     people: [
       { who: ['Henry Dircks'], did: 'Engineer who devised the illusion.' },
-      { who: ['John Henry Pepper'], did: 'Staged it at the Royal Polytechnic Institution in London in 1862, and it took his name.' },
+      { who: ['John Henry Pepper'], did: 'Staged it at the Royal Polytechnic Institution in London, and it took his name. By his own account the first showing was just before Christmas 1862.' },
+    ],
+    sources: [
+      src('archive', 'John Henry Pepper, Scientist of the Day, Linda Hall Library', 'https://www.lindahall.org/about/news/scientist-of-the-day/john-henry-pepper/'),
+      src('paper', 'John Henry Pepper, The True History of the Ghost (1890)', 'https://cuny.manifoldapp.org/read/the-true-history-of-the-ghost/section/c430b376-bfb6-48a0-9b78-0b2bc98a369f'),
     ],
   },
   'illusion-transmitter': {
@@ -291,13 +309,14 @@ export const people: Record<string, Credit> = {
     people: [
       { who: ['Charles Wheatstone'], did: 'Published the stereoscope in London in 1838, months before photography was announced.' },
       { who: ['Kenneth Dunkley'], did: 'Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth.' },
-      { who: ['Charles Harrison'], did: 'Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer\'s accessory to a children\'s toy.' },
+      { who: ['Charles Harrison'], did: 'Industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. Sold from 1962, it went from a photographer\'s accessory to a children\'s toy.' },
     ],
     sources: [
       src('patent', 'Dunkley, US patent 4,810,057', 'https://patents.google.com/patent/US4810057'),
       src('archive', 'Kenneth Dunkley, National Business League', 'https://nationalbusinessleague.org/kenneth-dunkley/'),
       src('archive', 'Charles Harrison, View-Master (model G), Museum of Modern Art', 'https://www.moma.org/collection/works/205547'),
       src('archive', 'Remembering Charles Harrison, Cooper Hewitt, Smithsonian Design Museum (2018)', 'https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/'),
+      src('archive', 'Expanding Views: Charles Harrison\'s Redesign of the View-Master, The Henry Ford', 'https://www.thehenryford.org/collections/explore/articles/expanding-views-charles-harrisons-redesign-of-the-view-master'),
     ],
   },
   'parallax-barrier': {

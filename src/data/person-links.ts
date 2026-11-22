@@ -657,7 +657,7 @@ export const personLinks: Record<string, PersonLink> = {
     "label": "1900–1909 colour-television history, Histoire de la télévision",
     "kind": "record"
   },
-  "Werner von Jaworski": {
+  "W. von Jaworski": {
     "url": "https://www.histv.net/1900-1909",
     "label": "1900–1909 colour-television history, Histoire de la télévision",
     "kind": "record"

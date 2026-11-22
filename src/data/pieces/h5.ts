@@ -19,7 +19,7 @@ export const h5: Piece[] = [
   },
   {
     id: 'electrophoretic-ink', hall: 5, name: 'Electrophoretic ink', aka: 'E Ink, electronic paper',
-    year: 1996, origin: 'Barrett Comiskey, J.D. Albert and Joseph Jacobson, MIT Media Lab, USA',
+    year: 1997, origin: 'Barrett Comiskey, J.D. Albert and Joseph Jacobson, MIT Media Lab, USA',
     status: 'production', statusNote: 'Used in e-readers, shelf labels in shops and signs.',
     principle: 'reflects', needs: ['daylight', 'unpowered'],
     lead: 'Millions of tiny capsules each hold black and white pigment, which an electric field pulls to the top or to the bottom.',
@@ -30,7 +30,7 @@ export const h5: Piece[] = [
     good: ['Looks like print, and is easiest to read in bright light', 'Uses power only to change the page', 'Is thin and can flex'],
     bad: ['Is slow, which suits pages but not video', 'Needs a lamp at night', 'Loses brightness in its colour versions'],
     look: 'Watch the page reset every 15 seconds with the full black and white flash. Then switch the daylight off. The page is still there, but you cannot read it.',
-    sources: [src('paper', 'Comiskey, Albert, Yoshizawa and Jacobson, Nature (1998)', 'https://doi.org/10.1038/28349'), wiki('E_Ink', 'E Ink'), wiki('Electrophoretic_display', 'Electrophoretic display')],
+    sources: [src('paper', 'Comiskey, Albert, Yoshizawa and Jacobson, Nature (1998)', 'https://doi.org/10.1038/28349'), src('press', 'How Electronic Ink Was Invented, Science Friday', 'https://www.sciencefriday.com/articles/how-electronic-ink-was-invented/'), wiki('E_Ink', 'E Ink'), wiki('Electrophoretic_display', 'Electrophoretic display')],
   },
   {
     id: 'cholesteric-lcd', hall: 5, name: 'Cholesteric display', aka: 'Bistable reflective LCD, writing tablet',

@@ -55,3 +55,34 @@ piece's `yearText`:
 
 The year used to sort the pieces (`year`) stays a single number. Nothing is settled by choosing the source one
 likes better.
+
+## Whose deed it is, and care in telling it
+
+Added on 22 November 2026, after the adversarial review recorded in `CURATOR.md`. These rules hold for a label line
+as much as for an account.
+
+- **A shared deed is told the same way wherever it is told.** Co-inventors, co-authors and co-founders get the same
+  verb in every account. No account gives its own subject the larger part unless a source does. Where priority was
+  disputed, each account names the witness for its own claim and says that the other side claimed it too.
+- **The person who did the work is the subject of the sentence.** Not the group, the supervisor, the employer or the
+  husband. "Was built in his group" hides the builder. A woman is not introduced through a marriage. Work is not
+  called help, assistance or support unless the source calls it that, and then the source is named.
+- **Emphasis is substance.** Where a source records a barrier, an exclusion, a credit withheld or the community a
+  thing was made for, the account says so plainly and names the source. It adds no adjective. Praise words stay
+  out for everyone, by the same rule.
+- **No identity without a source.** The museum states nobody's race, ethnicity, religion, nationality, disability,
+  sexuality or gender identity unless a cited source states it, and never infers one from a name, a face or a
+  place. A birthplace is given where a source gives it and it bears on the story. A "first" of identity needs its
+  witness like any other first.
+- **Nothing private about the living.** Health, family and belief stay out unless they bear on the work and the
+  person has made them public.
+- **Names as their bearers write them.** Marks and hyphens are kept for every language alike. A name from outside
+  Europe is not given in a colonial or a Latinised form where the person or the scholarship uses another. Where the
+  sources themselves spell a name two ways, the account says so once.
+- **One institution, one name**, as the cited source gives it for that date. A place keeps its own name: Leuven.
+- **A reader abroad.** A war is named in full on first mention. Distances are in kilometres. A place a reader could
+  mistake gets its city or country. An abbreviation is spelled out or left out.
+- **Counts.** No counts of papers or of scholarly citations. A count of patents a person held may stand where a
+  source gives it.
+- **The plate.** Years go on the plate where a source gives them. Where every source says "about", or two reliable
+  sources give different years, the plate stays empty and the prose or the label says what is known.

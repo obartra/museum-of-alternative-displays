@@ -42,7 +42,7 @@ Colour-wheel television, hall 2.
 
 German patent1904 and field-sequential colour system sources searched, including full/initial-name portrait queries. No named professional portrait tied to this applicant; namesakes excluded.
 
-## Werner von Jaworski
+## W. von Jaworski
 
 Colour-wheel television, hall 2.
 
