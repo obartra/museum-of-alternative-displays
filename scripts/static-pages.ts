@@ -1,68 +1,201 @@
 /**
- * A page of its own for every piece and every hall, written at build time beside the one page of the museum.
+ * A page on the server for every place of the museum that has words, in every language the museum speaks.
  *
- * The museum is one page that draws everything itself, and it tells its places apart by what follows the # in the
- * address. A chat, a search engine and a reader without scripts never see that part: to them every address of the
- * museum is the same page, with one name and one picture. These pages give each piece and each hall an address
- * that says what it is: `piece/<id>/` and `hall/<n>/`, with its own title, sentence and picture in the head, and
- * the words of its label in the body.
+ * The museum is one page that draws everything itself. A search engine, a chat and a reader without scripts see
+ * what the server sends for an address and little else. So each place that has words has a folder with a page in
+ * it: the entrance, `hall/<n>/`, `piece/<id>/`, `index/`, `people/`, `about/` and `tour/<id>/`, the words of a
+ * guided tour. English lies at the top, and every other language in a folder of its own: `ca/piece/<id>/`.
  *
- * Each is the museum's own page with three changes. A `base` points every file it loads back at the museum. The
- * head names the piece. And the body holds the label as plain HTML, for whoever reads without scripts. In a
- * browser the page hands over to the museum at the same place at once: the address becomes the museum's, with
- * `#piece-<id>` on it, and the museum draws the piece. The old addresses with # work as they always did.
+ * Each page is the museum's own page with four changes. A `base` points every file it loads back at the museum's
+ * folder. The head names the place: its title, its sentence, its picture, its address, and the same place in the
+ * other languages. A block of data says the same to a search engine in its own terms. And the body holds the words
+ * of the place as plain HTML, with links to the places around it. In a browser the museum draws the place over
+ * those words at once, and the address stays as it is.
  *
- * `sitemap.xml` lists the pages for search engines. The pages are in English, the language the museum opens in.
+ * `sitemap.xml` lists every page. `404.html` is what the server sends for an address it does not have.
  */
 import { halls } from '../src/data/halls';
 import { inHall, pieces } from '../src/data/pieces';
-import { people } from '../src/data/people';
-import type { Piece } from '../src/data/schema';
-import { en } from '../src/i18n/en';
+import { people, type Credit } from '../src/data/people';
+import type { Hall, Piece } from '../src/data/schema';
+import { tours, type Tour } from '../src/data/tours';
+import { en, type UiKey } from '../src/i18n/en';
+import { LANGS, type CreditText, type HallText, type Lang, type Locale, type PieceText, type TourText } from '../src/i18n/types';
+import { AUTHOR, LICENCE, REPO } from '../src/site';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const NAME = en['site.name'];
 
-interface Own { path: string; route: string; title: string; says: string; picture?: { file: string; wide: number; high: number; alt: string }; body: string }
-
-/** The label of a piece as plain HTML. Addresses in it are written from the museum's own folder: the `base` of the page points there. */
-function label(p: Piece): string {
-  const hall = halls.find((h) => h.id === p.hall)!, credit = people[p.id];
-  const list = (items: string[]) => `<ul>${items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
-  const sources = [...p.sources, ...(credit?.sources ?? []).filter((s) => !p.sources.some((own) => own.url === s.url))];
-  return `<main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">
-<p><a href="./">${esc(NAME)}</a> / <a href="./hall/${hall.id}/">${esc(en['nav.hall'].replace('{n}', String(hall.id)).replace('{name}', hall.name))}</a></p>
-<h1>${esc(p.name)}</h1>
-<p>${esc(p.yearText ?? String(p.year))}. ${esc(p.origin)}.</p>
-<p><img src="./posters/${p.id}-day-760.webp" width="760" height="760" alt="${esc(en['stage.poster'].replace('{name}', p.name))}" style="max-width: 100%; height: auto"></p>
-<p>${esc(p.lead)}</p>
-<h2>${esc(en['piece.how'])}</h2>${p.how.map((x) => `<p>${esc(x)}</p>`).join('')}
-<h2>${esc(en['piece.good'])}</h2>${list(p.good)}
-<h2>${esc(en['piece.bad'])}</h2>${list(p.bad)}
-<p>${esc(p.statusNote)}</p>
-${credit ? `<h2>${esc(en['piece.people'])}</h2>${credit.people.map((e) => `<p><strong>${esc(e.who.join(', '))}.</strong> ${esc(e.did)}</p>`).join('')}${credit.note ? `<p>${esc(credit.note)}</p>` : ''}` : ''}
-<h2>${esc(en['piece.sources'])}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
-</main>`;
+/** The words of one language, as the museum's own pages find them: where a language lacks something, the English stands in. */
+interface Speech {
+  code: Lang;
+  /** The language as a page declares it: `ca`, `pt-BR`, `zh-Hans`. */
+  tag: string;
+  /** The folder of the language, in front of every address: nothing for English, `ca/` for Catalan. */
+  pre: string;
+  ui: (key: UiKey, vars?: Record<string, string | number>) => string;
+  piece: (p: Piece) => PieceText;
+  hall: (hall: Hall) => HallText;
+  credit: (pieceId: string, c: Credit) => CreditText;
+  tour: (tour: Tour) => TourText | undefined;
+}
+function speech(code: Lang, loc?: Locale): Speech {
+  const put = (s: string, vars?: Record<string, string | number>) => (vars ? s.replace(/\{(\w+)\}/g, (all, k: string) => (k in vars ? String(vars[k]) : all)) : s);
+  return {
+    code, tag: LANGS.find((l) => l.code === code)!.tag, pre: code === 'en' ? '' : `${code}/`,
+    ui: (key, vars) => put(loc?.ui[key] ?? en[key], vars),
+    piece: (p) => loc?.pieces[p.id] ?? p,
+    hall: (hall) => loc?.halls[hall.id] ?? hall,
+    credit: (pieceId, c) => {
+      const own = loc?.people?.[pieceId];
+      return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
+    },
+    tour: (tour) => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
+  };
 }
 
-function own(): Own[] {
+/** One page: the place it stands for, its folder, what its head says and the plain words of its body. */
+interface Own {
+  /** The name the museum knows the place by: '', `hall-2`, `piece-nixie-tube`, `index`, `words-women`. */
+  name: string;
+  /** Its folder, under the folder of the language. */
+  path: string;
+  /** The title of the browser tab, whole. */
+  title: string;
+  /** The name of the place alone, for a chat's card. */
+  short: string;
+  says: string;
+  picture?: { file: string; wide: number; high: number; alt: string };
+  body: string;
+  /** What kind of page it is to a search engine, and what else it should know. */
+  kind: string;
+  more?: Record<string, unknown>;
+  /** The way here from the entrance, as name and folder: a search engine shows it in place of the address. */
+  crumbs: [string, string][];
+}
+
+/** A sentence with links in it: `{a}words{/a}` becomes a link to `links.a`. */
+const rich = (text: string, links: Record<string, string>): string =>
+  esc(text).replace(/\{(\w+)\}(.*?)\{\/\1\}/g, (_, k: string, words: string) => `<a href="${esc(links[k] ?? './')}"${/^https?:/.test(links[k] ?? '') ? ' rel="noopener"' : ''}>${words}</a>`);
+
+/** The pages of one language. Addresses in them are written from the museum's folder: the `base` of the page points there. */
+function pagesOf(w: Speech): Own[] {
   const out: Own[] = [];
+  const titled = (page: string) => w.ui('title.page', { page, site: w.ui('site.name') });
+  const hallName = (hall: Hall) => w.ui('nav.hall', { n: hall.id, name: w.hall(hall).name });
+  const year = (p: Piece) => w.piece(p).yearText ?? String(p.year);
+  const list = (items: string[]) => `<ul>${items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
+  const told = tours.filter((tour) => !tour.draft && w.tour(tour));
+  // the way on from every page, for a reader and for a search engine that follows links
+  const ways = `<p><a href="${w.pre || './'}">${esc(w.ui('site.name'))}</a> / <a href="${w.pre}index/">${esc(w.ui('nav.depot'))}</a> / <a href="${w.pre}people/">${esc(w.ui('nav.people'))}</a> / <a href="${w.pre}about/">${esc(w.ui('nav.about'))}</a>${told.map((tour) => ` / <a href="${w.pre}tour/${tour.id}/">${esc(w.tour(tour)!.title)}</a>`).join('')}</p>`;
+  const home: [string, string] = [w.ui('site.name'), ''];
+
+  // the entrance
+  out.push({
+    name: '', path: '', title: w.ui('site.title', { n: pieces.length }), short: w.ui('site.name'), says: w.ui('site.description', { n: pieces.length }), kind: 'CollectionPage', crumbs: [],
+    body: `<h1>${esc(w.ui('site.name'))}</h1>
+<p>${esc(w.ui('site.description', { n: pieces.length }))}</p>
+<p>${esc(w.ui('entrance.intro'))}</p>
+${halls.map((hall) => `<h2><a href="${w.pre}hall/${hall.id}/">${esc(hallName(hall))}</a></h2>
+<p>${esc(w.hall(hall).intro)}</p>
+<ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}</li>`).join('')}</ul>`).join('\n')}
+${ways}`,
+  });
+
   for (const hall of halls) {
-    const name = en['nav.hall'].replace('{n}', String(hall.id)).replace('{name}', hall.name);
+    const name = hallName(hall), near = [halls[hall.id - 2], halls[hall.id]].filter((x) => !!x);
     out.push({
-      path: `hall/${hall.id}/`, route: `hall-${hall.id}`, title: name, says: hall.intro,
-      body: `<main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">
-<p><a href="./">${esc(NAME)}</a></p>
-<h1>${esc(name)}</h1>
-<p>${esc(hall.intro)}</p>
-<ul>${inHall(hall.id).map((p) => `<li><a href="./piece/${p.id}/">${esc(p.name)}</a>. ${esc(p.lead)}</li>`).join('')}</ul>
-</main>`,
+      name: `hall-${hall.id}`, path: `hall/${hall.id}/`, title: titled(w.ui('hall.title', { n: hall.id, name: w.hall(hall).name })), short: name, says: w.hall(hall).intro, kind: 'CollectionPage', crumbs: [home, [name, `hall/${hall.id}/`]],
+      body: `<h1>${esc(name)}</h1>
+<p>${esc(w.hall(hall).intro)}</p>
+<ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}. ${esc(w.piece(p).lead)}</li>`).join('')}</ul>
+<p>${near.map((x) => `<a href="${w.pre}hall/${x.id}/">${esc(hallName(x))}</a>`).join(' / ')}</p>
+${ways}`,
     });
   }
+
   for (const p of pieces) {
+    const x = w.piece(p), hall = halls.find((h) => h.id === p.hall)!, credit = people[p.id], did = credit ? w.credit(p.id, credit) : undefined;
+    const sources = [...p.sources, ...(credit?.sources ?? []).filter((s) => !p.sources.some((own) => own.url === s.url))];
+    const i = pieces.indexOf(p), near = [pieces[i - 1], pieces[i + 1]].filter((q) => !!q);
+    const alt = w.ui('stage.poster', { name: x.name });
     out.push({
-      path: `piece/${p.id}/`, route: `piece-${p.id}`, title: p.name, says: p.lead, body: label(p),
-      picture: { file: `og/${p.id}.jpg`, wide: 760, high: 760, alt: en['stage.poster'].replace('{name}', p.name) },
+      name: `piece-${p.id}`, path: `piece/${p.id}/`, title: titled(x.name), short: x.name, says: x.lead, kind: 'ItemPage',
+      crumbs: [home, [hallName(hall), `hall/${hall.id}/`], [x.name, `piece/${p.id}/`]],
+      picture: { file: `og/${p.id}.jpg`, wide: 760, high: 760, alt },
+      more: {
+        about: { '@type': 'Thing', name: x.name, ...(x.aka ? { alternateName: x.aka } : {}), description: x.lead },
+        ...(credit ? { mentions: [...new Set(credit.people.flatMap((e) => e.who))].map((name) => ({ '@type': 'Person', name })) } : {}),
+        citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
+      },
+      body: `<p><a href="${w.pre}hall/${hall.id}/">${esc(hallName(hall))}</a></p>
+<h1>${esc(x.name)}</h1>
+<p>${esc(year(p))}. ${esc(x.origin)}.</p>
+${x.aka ? `<p>${esc(w.ui('piece.aka', { names: x.aka }))}</p>` : ''}
+<p><img src="posters/${p.id}-day-760.webp" width="760" height="760" alt="${esc(alt)}" style="max-width: 100%; height: auto"></p>
+<p>${esc(x.lead)}</p>
+<h2>${esc(w.ui('piece.how'))}</h2>${x.how.map((line) => `<p>${esc(line)}</p>`).join('')}
+<h2>${esc(w.ui('piece.look'))}</h2><p>${esc(x.look)}</p>
+<h2>${esc(w.ui('piece.good'))}</h2>${list(x.good)}
+<h2>${esc(w.ui('piece.bad'))}</h2>${list(x.bad)}
+<p>${esc(x.statusNote)}</p>
+${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${esc(e.who.join(', '))}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
+<h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
+<p>${near.map((q) => `<a href="${w.pre}piece/${q.id}/">${esc(w.piece(q).name)}</a>`).join(' / ')}</p>
+${ways}`,
+    });
+  }
+
+  // the index: the whole collection in one list
+  out.push({
+    name: 'index', path: 'index/', title: titled(w.ui('depot.title')), short: w.ui('depot.title'), says: w.ui('depot.says', { n: pieces.length }), kind: 'CollectionPage', crumbs: [home, [w.ui('depot.title'), 'index/']],
+    more: { mainEntity: { '@type': 'ItemList', numberOfItems: pieces.length, itemListElement: pieces.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: w.piece(p).name, url: `${w.pre}piece/${p.id}/` })) } },
+    body: `<h1>${esc(w.ui('depot.title'))}</h1>
+<p>${esc(w.ui('depot.says', { n: pieces.length }))}</p>
+<ul>${pieces.map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}. ${esc(w.piece(p).lead)}</li>`).join('')}</ul>
+${ways}`,
+  });
+
+  // the people: everyone named on a label, under the piece they worked on
+  out.push({
+    name: 'people', path: 'people/', title: titled(w.ui('nav.people')), short: w.ui('nav.people'), says: w.ui('people.lead'), kind: 'WebPage', crumbs: [home, [w.ui('nav.people'), 'people/']],
+    body: `<h1>${esc(w.ui('nav.people'))}</h1>
+<p>${esc(w.ui('people.lead'))}</p>
+${pieces.filter((p) => people[p.id]).map((p) => {
+    const credit = people[p.id], did = w.credit(p.id, credit);
+    return `<h2><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a></h2><ul>${credit.people.map((e, k) => `<li><strong>${esc(e.who.join(', '))}.</strong> ${esc(did.did[k])}</li>`).join('')}</ul>`;
+  }).join('\n')}
+${ways}`,
+  });
+
+  // about the museum
+  out.push({
+    name: 'about', path: 'about/', title: titled(w.ui('nav.about')), short: w.ui('nav.about'), says: w.ui('about.says'), kind: 'AboutPage', crumbs: [home, [w.ui('nav.about'), 'about/']],
+    body: `<h1>${esc(w.ui('nav.about'))}</h1>
+<p>${esc(w.ui('about.lead'))}</p>
+<h2>${esc(w.ui('about.piece'))}</h2><p>${esc(w.ui('about.piece.1'))}</p>
+<h2>${esc(w.ui('about.sourced'))}</h2><p>${esc(w.ui('about.sourced.1'))}</p><p>${esc(w.ui('about.sourced.3'))}</p>
+<h2>${esc(w.ui('about.pictures'))}</h2><p>${esc(w.ui('about.pictures.1', { n: pieces.length }))}</p><p>${esc(w.ui('about.pictures.2'))}</p><p>${esc(w.ui('about.pictures.archive'))}</p>
+<h2>${esc(w.ui('about.room'))}</h2><p>${esc(w.ui('about.room.1'))}</p><p>${esc(w.ui('about.room.2'))}</p><p>${esc(w.ui('about.room.3'))}</p>
+<h2>${esc(w.ui('about.corrections'))}</h2><p>${rich(w.ui('about.corrections.1'), { a: `${REPO}/issues`, b: REPO })}</p>
+<h2>${esc(w.ui('about.licence'))}</h2><p>${rich(w.ui('about.licence.1', { name: AUTHOR }), { a: LICENCE })}</p><p>${esc(w.ui('about.licence.2'))}</p>
+<p>${rich(w.ui('about.thanks'), { a: 'https://blair-neal.gitbook.io/survey-of-alternative-displays' })}</p>
+<p>${esc(w.ui('about.author', { name: AUTHOR }))}</p>
+${ways}`,
+  });
+
+  // the words of each guided tour this language tells
+  for (const tour of told) {
+    const text = w.tour(tour)!;
+    out.push({
+      name: `words-${tour.id}`, path: `tour/${tour.id}/`, title: titled(text.title), short: text.title, says: text.lead, kind: 'WebPage', crumbs: [home, [text.title, `tour/${tour.id}/`]],
+      body: `<p>${esc(w.ui('tour.label'))}</p>
+<h1>${esc(text.title)}</h1>
+<p>${esc(text.lead)}</p>
+${tour.parts.map((part) => {
+    const piece = pieces.find((p) => p.id === part.id), say = text.parts[part.id];
+    return `<h2>${esc(say.title)}</h2>${piece ? `<p><a href="${w.pre}piece/${piece.id}/">${esc(w.ui('tour.at', { piece: w.piece(piece).name, n: piece.hall }))}</a></p>` : ''}${say.text.map((line) => `<p>${esc(line)}</p>`).join('')}`;
+  }).join('\n')}
+${ways}`,
     });
   }
   return out;
@@ -78,50 +211,86 @@ function swap(page: string, find: RegExp, put: string): string {
  * The page the server sends for an address it does not have, at whatever depth that address lies. It finds the
  * museum's folder for itself: the address the museum is published at if the page is under it, and otherwise the
  * first folder of the address, where a project's pages live. Then it is the museum's own page, at the place that
- * says a page is missing. A reader without scripts gets one sentence and the way to the entrance.
+ * says a page is missing. A reader without scripts gets one sentence and the way to the entrance, and a search
+ * engine is told to keep the page out of its list.
  */
 function missing(page: string, site: string): string {
-  const find = `<script>(function(){var site=${JSON.stringify(site)},root=location.href.indexOf(site)===0?site:location.origin+'/'+(location.pathname.split('/')[1]||'')+'/';if(root.slice(-2)==='//')root=location.origin+'/';document.write('<base href="'+root+'">');try{history.replaceState(null,'',root+'#missing')}catch(e){}document.documentElement.classList.add('js')})()</script><style>.js [data-plain]{visibility:hidden}</style><meta name="robots" content="noindex">`;
-  let html = swap(page, /<meta charset="utf-8">/, `<meta charset="utf-8">\n${find}`);
-  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(en['title.page'].replace('{page}', en['missing.title']).replace('{site}', NAME))}</title>`);
+  const find = `<script>(function(){var site=${JSON.stringify(site)},root=location.href.indexOf(site)===0?site:location.origin+'/'+(location.pathname.split('/')[1]||'')+'/';if(root.slice(-2)==='//')root=location.origin+'/';document.write('<base href="'+root+'">');try{history.replaceState(null,'',root+'#missing')}catch(e){}document.documentElement.classList.add('js')})()</script>`;
+  let html = swap(page, /<base href="\.\/">\s*<script>[^<]*<\/script>/, find);
+  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(en['title.page'].replace('{page}', en['missing.title']).replace('{site}', en['site.name']))}</title>\n<meta name="robots" content="noindex">`);
   html = swap(html, /<link rel="canonical" href="[^"]*">/, '');
-  return swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px"><h1>${esc(en['missing.title'])}</h1><p><a href="${site}">${esc(NAME)}</a></p></main></div>`);
+  return swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px"><h1>${esc(en['missing.title'])}</h1><p><a href="${site}">${esc(en['site.name'])}</a></p></main></div>`);
 }
 
 /**
- * The pages, made from the museum's own page as the build leaves it, and the sitemap. `page` is that page.
- * The address of the museum is read from its canonical link.
+ * The pages, made from the museum's own page as the build leaves it, and the sitemap. `page` is that page,
+ * `locales` the languages other than English under their codes, and `changed` the day of the last change.
+ * The address of the museum is read from the page's canonical link. `root` is the entrance in English: the page
+ * itself, with its words written in.
  */
-export function staticPages(page: string): { fileName: string; source: string }[] {
+export function staticPages(page: string, locales: Record<string, Locale>, changed: string): { root: string; files: { fileName: string; source: string }[] } {
   const site = /<link rel="canonical" href="([^"]+)">/.exec(page)?.[1];
   if (!site) throw new Error('static pages: the page names no canonical address');
-  const files = own().map((o) => {
-    const up = '../'.repeat(o.path.split('/').length - 1), title = en['title.page'].replace('{page}', o.title).replace('{site}', NAME);
-    // The base comes first, before any address in the head is read, and is then fixed at its full address, so
-    // that it still points at the museum when the address of the page has become the museum's own.
-    // With scripts running, the plain label is hidden while the museum starts, so that it does not show for a moment first.
-    const handover = `<base href="${up}"><meta name="route" content="${o.route}"><script>(function(){var b=document.querySelector('base');b.href=b.href;try{history.replaceState(null,'',b.href+(location.hash||'#${o.route}'))}catch(e){}document.documentElement.classList.add('js')})()</script><style>.js [data-plain]{visibility:hidden}</style>`;
-    let html = swap(page, /<meta charset="utf-8">/, `<meta charset="utf-8">\n${handover}`);
-    html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
-    html = swap(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(o.says)}">`);
-    html = swap(html, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${site}${o.path}">`);
-    html = swap(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(o.title)}">`);
-    html = swap(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(o.says)}">`);
-    html = swap(html, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${site}${o.path}">`);
-    if (o.picture) {
-      html = swap(html, /<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${site}${o.picture.file}">`);
-      html = swap(html, /<meta property="og:image:width" content="[^"]*">/, `<meta property="og:image:width" content="${o.picture.wide}">`);
-      html = swap(html, /<meta property="og:image:height" content="[^"]*">/, `<meta property="og:image:height" content="${o.picture.high}">`);
-      html = swap(html, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${esc(o.picture.alt)}">`);
-      html = swap(html, /<meta name="twitter:card" content="[^"]*">/, '<meta name="twitter:card" content="summary">');
+  const speeches = [speech('en'), ...Object.keys(locales).sort().map((code) => speech(code as Lang, locales[code]))];
+  const all = speeches.map((w) => ({ w, pages: pagesOf(w) }));
+  // the same place in the other languages: only those that have a page for it, since a tour is not told in all of them
+  const others = (name: string) => all.filter(({ pages }) => pages.some((o) => o.name === name)).map(({ w, pages }) => ({ w, path: pages.find((o) => o.name === name)!.path }));
+  const files: { fileName: string; source: string }[] = [];
+  const listed: { url: string; picture?: string }[] = [];
+  let root = '';
+  for (const { w, pages } of all) {
+    for (const o of pages) {
+      const folder = w.pre + o.path, url = site + folder, up = '../'.repeat(folder.split('/').length - 1) || './';
+      const alternates = others(o.name).map((x) => `<link rel="alternate" hreflang="${x.w.tag}" href="${site}${x.w.pre}${x.path}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${site}${o.path}">`;
+      const museum = { '@type': 'WebSite', '@id': `${site}#museum`, url: site, name: en['site.name'], ...(w.ui('site.name') !== en['site.name'] ? { alternateName: w.ui('site.name') } : {}), author: { '@type': 'Person', name: AUTHOR }, license: LICENCE };
+      const data = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          museum,
+          {
+            '@type': o.kind, '@id': url, url, name: o.short, description: o.says, inLanguage: w.tag, isPartOf: { '@id': `${site}#museum` },
+            ...(changed ? { dateModified: changed } : {}),
+            ...(o.picture ? { primaryImageOfPage: { '@type': 'ImageObject', url: site + o.picture.file, width: o.picture.wide, height: o.picture.high } } : {}),
+            ...(o.crumbs.length ? { breadcrumb: { '@type': 'BreadcrumbList', itemListElement: o.crumbs.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: site + w.pre + path })) } } : {}),
+            ...absolute(o.more ?? {}, site),
+          },
+        ],
+      };
+      let html = swap(page, /<html lang="en"/, `<html lang="${w.tag}"`);
+      html = swap(html, /<base href="\.\/">/, `<base href="${up}">`);
+      html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(o.title)}</title>`);
+      html = swap(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(o.says)}">`);
+      html = swap(html, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">\n${alternates}`);
+      html = swap(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(o.short)}">`);
+      html = swap(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(o.says)}">`);
+      html = swap(html, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
+      html = swap(html, /<meta property="og:site_name" content="[^"]*">/, `<meta property="og:site_name" content="${esc(w.ui('site.name'))}">`);
+      html = swap(html, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${esc(w.ui('entrance.room.alt'))}">`);
+      if (o.picture) {
+        html = swap(html, /<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${site}${o.picture.file}">`);
+        html = swap(html, /<meta property="og:image:width" content="[^"]*">/, `<meta property="og:image:width" content="${o.picture.wide}">`);
+        html = swap(html, /<meta property="og:image:height" content="[^"]*">/, `<meta property="og:image:height" content="${o.picture.high}">`);
+        html = swap(html, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${esc(o.picture.alt)}">`);
+        html = swap(html, /<meta name="twitter:card" content="[^"]*">/, '<meta name="twitter:card" content="summary">');
+      }
+      // the name of the place and its language go with the data, so that the museum can tell when it has drawn another place over it
+      html = swap(html, /<\/head>/, `<script type="application/ld+json" data-place="${w.code === 'en' ? '' : w.code} ${o.name}">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>\n</head>`);
+      html = swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">\n${o.body}\n</main></div>`);
+      listed.push({ url, picture: o.name.startsWith('piece-') ? `${site}posters/${o.name.slice(6)}-day-760.webp` : undefined });
+      if (folder === '') root = html; else files.push({ fileName: `${folder}index.html`, source: html });
     }
-    html = swap(html, /<div id="app"><\/div>/, `<div id="app">${o.body}</div>`);
-    return { fileName: `${o.path}index.html`, source: html };
-  });
+  }
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[site, ...own().map((o) => site + o.path)].map((url) => `  <url><loc>${esc(url)}</loc></url>`).join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${listed.map(({ url, picture }) => `  <url><loc>${esc(url)}</loc>${changed ? `<lastmod>${changed}</lastmod>` : ''}${picture ? `<image:image><image:loc>${esc(picture)}</image:loc></image:image>` : ''}</url>`).join('\n')}
 </urlset>
 `;
-  return [...files, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }];
+  return { root, files: [...files, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
+}
+
+/** In the data for a search engine, an address written from the folder of the museum is written out in full. */
+function absolute(more: Record<string, unknown>, site: string): Record<string, unknown> {
+  const fix = (v: unknown): unknown =>
+    Array.isArray(v) ? v.map(fix) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, k === 'url' && typeof x === 'string' && !/^https?:/.test(x) ? site + x : fix(x)])) : v;
+  return fix(more) as Record<string, unknown>;
 }

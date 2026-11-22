@@ -2,16 +2,20 @@
 <html lang="en" data-lights="on">
 <head>
 <meta charset="utf-8">
+<!-- Every address in the museum is written from the museum's own folder. This page lies in that folder. A page in a folder further in has the way back out written here by the build. The address is then fixed in full, so that it still holds when the address bar changes. With scripts running, the plain words a page was sent with are hidden while the museum starts, so that they do not show for a moment first. -->
+<base href="./">
+<script>(function(){var b=document.querySelector('base');b.href=b.href;document.documentElement.classList.add('js')})()</script>
+<style>.js [data-plain]{visibility:hidden}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Museum of Alternative Displays</title>
-<meta name="description" content="A museum of display technologies, from split-flap boards to holograms. Turn each one around, see how it works and where it fails. Nothing is for sale.">
-<!-- What a chat or a search shows of a link to the museum: one name, one sentence and one picture for every address. The addresses are written out in full, as those readers need them, and change if the museum moves. -->
+<meta name="description" content="A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.">
+<!-- What a chat or a search shows of a link to the museum: one name, one sentence and one picture for every address. The build writes them for each page, in each language. The addresses are written out in full, as those readers need them, and change if the museum moves. -->
 <meta name="author" content="Os Bartra">
 <link rel="canonical" href="https://obartra.github.io/museum-of-alternative-displays/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Museum of Alternative Displays">
 <meta property="og:title" content="Museum of Alternative Displays">
-<meta property="og:description" content="A museum of display technologies, from split-flap boards to holograms. Turn each one around, see how it works and where it fails. Nothing is for sale.">
+<meta property="og:description" content="A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.">
 <meta property="og:url" content="https://obartra.github.io/museum-of-alternative-displays/">
 <meta property="og:image" content="https://obartra.github.io/museum-of-alternative-displays/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -35,7 +39,12 @@
   try { day = localStorage.getItem('lights') !== 'off'; } catch (e) {}
   document.documentElement.dataset.lights = day ? 'on' : 'off';
   if (!day) document.querySelector('meta[name="theme-color"]').content = '#08101a';
-  var piece = /^#\/?piece-([a-z0-9-]+)/.exec(location.hash), hall = /^#\/?hall-(\d)/.exec(location.hash);
+  // The place and the language the address names. The folders of the address say them, after the museum's own:
+  // `ca/piece/nixie-tube/`. An older address says the place after a #.
+  var words = __LANG_FILES__, folders = location.pathname.slice(new URL(document.baseURI).pathname.length).split('/');
+  var named = words[folders[0]] ? folders.shift() : '';
+  var place = location.hash.replace(/^#\/?/, '') || (folders[0] === 'piece' || folders[0] === 'hall' ? folders[0] + '-' + folders[1] : folders[0] || '');
+  var piece = /^piece-([a-z0-9-]+)/.exec(place), hall = /^hall-(\d)/.exec(place);
   var first = __FIRST_IN_HALL__;
   var id = piece ? piece[1] : hall ? first[hall[1]] : '';
   var when = day ? '-day-' : '-night-', link = document.createElement('link');
@@ -45,7 +54,7 @@
     link.imageSrcset = './posters/' + id + when + '380.webp 380w, ./posters/' + id + when + '760.webp 760w';
     link.imageSizes = piece ? '(min-width: 900px) 50vw, 100vw' : '(max-width: 359px) 92vw, (max-width: 900px) 46vw, 300px';
     link.href = './posters/' + id + when + '760.webp';
-  } else if (!location.hash.replace('#', '')) {
+  } else if (!place) {
     // the entrance opens on the room, on a phone as on a desk
     link.imageSrcset = './room' + when + '600.webp 600w, ./room' + when + '1200.webp 1200w';
     link.imageSizes = '(min-width: 900px) 56vw, 100vw';
@@ -54,8 +63,8 @@
   if (link) document.head.appendChild(link);
   // A visitor who reads in another language needs its words before a page can be shown. They are asked for now,
   // beside the script of the pages, and not after it: the language is chosen here the way the pages choose it.
-  var words = __LANG_FILES__, lang = '';
-  try { lang = localStorage.getItem('lang') || ''; } catch (e) {}
+  var lang = named;
+  if (!lang) try { lang = localStorage.getItem('lang') || ''; } catch (e) {}
   if (lang !== 'en' && !words[lang]) {
     lang = '';
     var tags = navigator.languages || [navigator.language || ''];
@@ -68,7 +77,7 @@
 <body>
 <a class="vh" href="#main">Skip to content</a>
 <div id="app"></div>
-<noscript><p style="padding:24px;font-family:sans-serif">This museum needs JavaScript to show its pages. Please switch it on in your browser.</p></noscript>
+<noscript><p style="padding:24px;font-family:sans-serif">The models, the walk through the halls and the guided tours need JavaScript. The labels can be read without it.</p></noscript>
 <script>
 // The two faces every page is set in are asked for now, while the script of the pages is still on its way, so that
 // the first picture of the page does not wait for one after the other.

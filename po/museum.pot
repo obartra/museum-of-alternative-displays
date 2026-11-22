@@ -28,6 +28,12 @@ msgid "A museum of {n} display technologies, from split-flap boards to holograms
 msgstr ""
 
 #: interface
+#. Name and description of the site. Keep the words in curly brackets as they are.
+msgctxt "ui.site.title"
+msgid "Museum of Alternative Displays | {n} display technologies in 3D"
+msgstr ""
+
+#: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
 msgctxt "ui.title.page"
 msgid "{page} | {site}"
@@ -726,6 +732,12 @@ msgid "The whole collection in one list."
 msgstr ""
 
 #: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.says"
+msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr ""
+
+#: interface
 #. Index page and its filters.
 msgctxt "ui.depot.light"
 msgid "How it makes the picture"
@@ -825,6 +837,12 @@ msgstr ""
 #. About page.
 msgctxt "ui.about.lead"
 msgid "The collection, its sources and its credits."
+msgstr ""
+
+#: interface
+#. About page.
+msgctxt "ui.about.says"
+msgid "What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under."
 msgstr ""
 
 #: interface

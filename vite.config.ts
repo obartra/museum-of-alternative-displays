@@ -2,11 +2,13 @@ import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { tsImport } from 'tsx/esm/api';
 import { defineConfig, type Plugin } from 'vite';
 import { halls } from './src/data/halls';
 import recorded from './src/data/tour-audio.json';
 import { staticPages } from './scripts/static-pages';
 import { inHall } from './src/data/pieces';
+import type { Locale } from './src/i18n/types';
 
 /**
  * The stylesheet is small, and every page needs all of it before it can paint anything.
@@ -37,10 +39,14 @@ function inlineCss(): Plugin {
   };
 }
 
-/** The page's opening script asks early for the first picture of a hall. It needs to know which piece that is. */
+/**
+ * The page's opening script asks early for the first picture of a hall. It needs to know which piece that is.
+ * While the site is being written, one page answers for every address, at whatever depth: its `base` then names
+ * the top of the server, where the build writes the way back out of each folder.
+ */
 function firstInHall(): Plugin {
   const first = Object.fromEntries(halls.map((h) => [h.id, inHall(h.id)[0]?.id ?? '']));
-  return { name: 'first-in-hall', transformIndexHtml: (html) => html.replace('__FIRST_IN_HALL__', JSON.stringify(first)) };
+  return { name: 'first-in-hall', transformIndexHtml: (html, ctx) => html.replace('__FIRST_IN_HALL__', JSON.stringify(first)).replace('<base href="./">', ctx.server ? '<base href="/">' : '<base href="./">') };
 }
 
 /**
@@ -79,7 +85,7 @@ function keeper(): Plugin {
     apply: 'build',
     enforce: 'post',
     buildStart() { this.emitFile({ type: 'chunk', id: fileURLToPath(new URL('./src/sw.ts', import.meta.url)), fileName: 'sw.js' }); },
-    generateBundle(_, bundle) {
+    async generateBundle(_, bundle) {
       const page = bundle['index.html'], worker = bundle['sw.js'];
       if (page?.type !== 'asset' || worker?.type !== 'chunk') return this.error('the page or its worker is missing from the build');
       const built = Object.values(bundle).filter((file) => file.fileName.startsWith('assets/') && !file.fileName.endsWith('.map'));
@@ -108,8 +114,17 @@ function keeper(): Plugin {
         }
       }
       this.emitFile({ type: 'asset', fileName: 'offline.json', source: JSON.stringify({ pictures, bytes: weight(pictures), sound }) });
-      // a page of its own for every piece and hall, made from the page as it now is, and the sitemap
-      for (const file of staticPages(String(page.source))) this.emitFile({ type: 'asset', ...file });
+      // A page for every place that has words, in every language, made from the page as it now is, and the sitemap.
+      // The languages are the files `scripts/i18n.ts` has written from the translations.
+      const tongues = fileURLToPath(new URL('./src/i18n/locales/', import.meta.url));
+      const locales: Record<string, Locale> = {};
+      for (const file of readdirSync(tongues).filter((f) => f.endsWith('.ts')).sort()) {
+        const loaded = (await tsImport(tongues + file, import.meta.url)) as { default: Locale | { default: Locale } };
+        locales[file.slice(0, -3)] = 'ui' in loaded.default ? loaded.default : loaded.default.default;
+      }
+      const pages = staticPages(String(page.source), locales, changed);
+      page.source = pages.root;
+      for (const file of pages.files) this.emitFile({ type: 'asset', ...file });
     },
   };
 }

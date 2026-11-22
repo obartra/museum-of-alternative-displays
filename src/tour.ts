@@ -3,6 +3,7 @@ import { captions, type Caption } from './data/captions';
 import { pieceById } from './data/pieces';
 import { mark, spoken, tourStops, tours, type Tour } from './data/tours';
 import { esc } from './html';
+import { link } from './place';
 import { langNow, said, tx } from './i18n';
 
 /**
@@ -42,16 +43,16 @@ export function spokenMinutes(tour: Tour): number {
 }
 
 /**
- * The address of a tour in the halls, at one of its parts: `#tour-women`, `#tour-women-microled`.
- * The opening words have the plain address.
+ * The name of a tour in the halls, at one of its parts: `tour-women`, `tour-women-microled`. It follows the # in
+ * the address. The opening words have the plain name.
  */
-export const tourHash = (tour: Tour, partId = 'start'): string => `#tour-${tour.id}${partId === 'start' ? '' : `-${partId}`}`;
+export const tourName = (tour: Tour, partId = 'start'): string => `tour-${tour.id}${partId === 'start' ? '' : `-${partId}`}`;
 /**
  * In full view the address of a tour stays as it was when the visitor entered, so that the step back out lands on
  * the same page. A phone tours in full view, and a reload there would begin the tour again. So the stop is also
  * kept for the visit, and a page that is loaded again at the tour's own address goes on at that stop.
  */
-export const keepStop = (tour: Tour, partId: string): void => { try { sessionStorage.setItem('tour-at', tourHash(tour, partId)); } catch { /* a reload begins again */ } };
+export const keepStop = (tour: Tour, partId: string): void => { try { sessionStorage.setItem('tour-at', tourName(tour, partId)); } catch { /* a reload begins again */ } };
 export function resumed(to: { tour: Tour; part: string }): { tour: Tour; part: string } {
   if (to.part !== 'start') return to;
   try {
@@ -59,7 +60,7 @@ export function resumed(to: { tour: Tour; part: string }): { tour: Tour; part: s
     const kept = sessionStorage.getItem('tour-at') ?? '';
     if (nav?.type !== 'reload' || again) return to;
     again = true;                                   // once: after that, the tour's own address means its beginning
-    return tourAt(kept.slice(1))?.tour === to.tour ? tourAt(kept.slice(1))! : to;
+    return tourAt(kept)?.tour === to.tour ? tourAt(kept)! : to;
   } catch { return to; }
 }
 let again = false;
@@ -187,7 +188,7 @@ export function partHtml(tour: Tour, partId: string): string {
   if (!told || !part) return '';
   const stops = tourStops(tour), n = stops.findIndex((s) => s.id === partId) + 1, piece = n ? pieceById(partId) : undefined;
   const at = recording(tour, partId, part.text), src = at ? onDevice(new URL(at, document.baseURI).href) : '';
-  const place = piece ? `<p class="tour__at"><a href="#piece-${piece.id}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a> <a class="tour__see" href="${tourHash(tour, piece.id)}">${tx('walk.piece')}</a></p>` : '';
+  const place = piece ? `<p class="tour__at"><a href="${link(`piece-${piece.id}`)}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a> <a class="tour__see" href="${link(tourName(tour, piece.id))}">${tx('walk.piece')}</a></p>` : '';
   return `${n ? `<p class="tour__no">${tx('tour.stop', { n, total: stops.length })}</p>` : ''}<h2 class="tour__title">${esc(part.title)}</h2>${place}`
     + (src ? `<audio class="tour__audio" controls preload="none" src="${esc(src)}" aria-label="${tx('tour.listen')}: ${esc(part.title)}"></audio>` : '')
     + `<div class="tour__words">${part.text.map((p) => `<p>${esc(p)}</p>`).join('')}</div>`;
@@ -199,7 +200,7 @@ export function tourPageHtml(tour: Tour): string {
   return `
 <div class="stack">
   <div class="pagehead"><h1 class="title">${esc(told.title)}</h1><p class="lead">${esc(told.lead)}</p></div>
-  <p class="ways"><a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.follow')}</a></p>
+  <p class="ways"><a class="btn btn--go" href="${link(tourName(tour))}">${tx('tour.follow')}</a></p>
   <ol class="tour">${tour.parts.map((part) => `<li class="tour__part" id="part-${part.id}">${partHtml(tour, part.id)}</li>`).join('')}</ol>
 </div>`;
 }

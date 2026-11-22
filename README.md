@@ -73,6 +73,8 @@ Node 22 or newer.
 | `src/three/vista.ts` | What the windows look out on: the sky, and a painted panorama of Montserrat over a town, by day and by night. The eastern three quarters of the ridge are traced from a photograph taken from the north. |
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
+| `src/place.ts` | The addresses of the museum: which place an address stands for, the address of each place, and following a link without loading a page. |
+| `scripts/static-pages.ts` | The page the server sends for every place, in every language, with the sitemap and the page for a missing address. |
 | `scripts/validate.ts` | The collection's rules as code. |
 | `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
 | `docs/design-review.md` | A review of the interface on phone and desktop: what was looked at, what was changed, what was left. |
@@ -117,7 +119,7 @@ people a stop is about, and `npm run check` holds the numbers the tour gives abo
 collection to the data.
 
 A tour is taken in the walk. Its address is `#tour-women`, or `#tour-women-microled` for
-one of its stops, and following the trail in the walk takes up the tour too. A band under
+one of its stops (its words alone are at `tour/women/`), and following the trail in the walk takes up the tour too. A band under
 the picture (`src/guide.ts`) shows the stops along the line and carries the visitor to the
 stop before or after. The guide speaks once the visitor stands there, and not on the way.
 The person the stop is about is shown in a corner of the picture, with a portrait where
@@ -259,22 +261,46 @@ lists who is still waiting and why. Every portrait is shown the same way, croppe
 white, with its credit beside it. One marked `small` is kept to the size of a label and off the walls of
 the walk, because its photographs are small or soft.
 
-## A page for every piece and hall
+## Addresses, and what a search engine finds
 
-The museum is one page, and it tells its places apart by what follows the `#` in the address.
-A chat, a search engine and a reader without scripts never see that part. So the build also
-writes `piece/<id>/index.html` for every piece and `hall/<n>/index.html` for every hall
-(`scripts/static-pages.ts`), and lists them in `sitemap.xml`. Each has its own title, sentence
-and picture in the head, and the label as plain HTML in the body. In a browser it hands over
-to the museum at once: the address becomes `#piece-<id>` and the piece is drawn as always.
-The old addresses with `#` keep working. Share on a piece page gives the piece's own address.
-Without a network the worker opens the museum at the same place.
+Every place of the museum that has words has an address of its own, and the server has a page
+at it (`scripts/static-pages.ts` writes them at build time):
 
-These pages are in English, and the address bar still shows the `#` form once the museum is
-running.
+| Place | Address |
+| --- | --- |
+| Entrance | `./` |
+| A hall | `hall/2/` |
+| A piece | `piece/nixie-tube/` |
+| Index, People, About | `index/`, `people/`, `about/` |
+| The words of a guided tour | `tour/women/` |
 
-For an address the server does not have, the build writes `404.html`. It finds the museum's
-folder, opens the museum there and says that nothing is at that address.
+A language other than English stands in front: `ca/piece/nixie-tube/`. An address without a
+language opens in the visitor's own, and the address bar then shows that language. The address
+bar always shows the address of the place on the page, and Share gives the same one.
+
+What is a state of the building and no text keeps a `#` at the entrance: `#walk`,
+`#walk-<piece>`, `#tour-women`, `#tour-women-<stop>`, `#visit`. The older addresses
+(`#piece-nixie-tube`, `#hall-2`, `#index`) still open their place, and the address bar then
+shows the new form.
+
+The museum is still one page that draws everything itself (`src/place.ts` holds the
+addresses). A link to a place changes the address and draws the place without loading a page.
+Each page the server sends is the museum's own page with the place written into it:
+
+- a `base` that points every file back at the museum's folder,
+- its own title, sentence and picture in the head, and its address as the canonical one,
+- `hreflang` links to the same place in every language that has it,
+- a block of schema.org data (`WebSite`, the page with its breadcrumbs, and for a piece the
+  people on its label and its sources),
+- the words of the place as plain HTML in the body, with links to the places around it.
+
+`sitemap.xml` lists every page in every language, with the day of the last change and the
+picture of each piece. `404.html` tells a search engine to leave it out. Without a network the
+worker answers any of these addresses from the page it kept.
+
+One thing the build cannot do: a `robots.txt` only counts at the top of a host, and this site
+lies in a folder of `obartra.github.io`. The sitemap has to be handed to a search engine by
+its owner, in Google Search Console or Bing Webmaster Tools.
 
 ## Sources that go away
 
@@ -350,8 +376,6 @@ iPhone in particular, how the bar at the top of an installed copy looks by night
   ring that marks a table or the floor has never been seen working. iPhones have no such room
   view in their browsers and are not offered the button.
 - Archive film is thin: most pieces have photographs or patent drawings and no moving picture.
-- Routes are hash links (`#hall-2`, `#piece-nixie-tube`), so pieces are not separate pages for
-  search engines.
 
 ## Deployment
 

@@ -44,6 +44,8 @@ const MINE = `museum ${new URL(HOME).pathname} `, SHELL = `${MINE}building ${BUI
 /** The recordings a visitor asked to keep (`keep.ts`). The page fills this store and reads it: the worker only leaves it alone. */
 const SOUND = `${MINE}sound`;
 const PICTURE = /\.(?:webp|png|jpe?g|gif|svg|avif|ico)$/i;
+/** The folder of a place with words, with or without a language in front, as `src/place.ts` writes them. */
+const PLACE = /^(?:[a-z]{2}(?:-[a-z]+)?\/)?(?:(?:piece|hall|tour)\/[a-z0-9-]+\/|(?:index|people|about)\/)?(?:index\.html)?$/;
 /** How long the network may take to hand over the page before the kept one is shown instead, in milliseconds. */
 const PATIENCE = 2500;
 /** The most pictures kept. The collection has far fewer today, so everything a visitor has seen or asked to keep stays. */
@@ -125,26 +127,32 @@ self.addEventListener('fetch', (e) => {
   if (!req.url.startsWith(HOME) || req.method !== 'GET' || req.headers.has('range')) return;
   const path = req.url.slice(HOME.length).split(/[?#]/)[0];
   if (req.mode === 'navigate') {
-    const own = /^(piece|hall)\/([a-z0-9-]+)\/(?:index\.html)?$/.exec(path);
-    if (path === '' || path === 'index.html') e.respondWith(page(e));
-    // A piece or a hall has a page of its own on the server, which hands over to the museum. Without a network
-    // the worker does the handing over: the museum is opened at the same place.
-    else if (own) e.respondWith(Promise.resolve(e.preloadResponse).then((early) => early ?? fetch(req)).catch(() => Response.redirect(`${HOME}#${own[1]}-${own[2]}`)));
+    // Every place with words has a page of its own on the server, in a folder of its own, and each language has a
+    // folder in front of those: `piece/nixie-tube/`, `ca/hall/2/`, `index/`, `tour/women/`.
+    if (PLACE.test(path)) e.respondWith(page(e, path !== '' && path !== 'index.html'));
   }
   else if (path.startsWith('assets/')) e.respondWith(built(e));
   else if (PICTURE.test(path)) e.respondWith(picture(e));
   // What is left goes to the network untouched: the recordings of the guide and the archive films among it.
 });
 
-/** The page: from the network if it answers soon, and otherwise the page this worker was installed with. */
-async function page(e: Asking): Promise<Response> {
+/**
+ * A page: from the network if it answers soon, and otherwise the page this worker was installed with. That page is
+ * the entrance's, and the museum draws any place from it by the address. `deep` says the address lies in a folder
+ * further in. The kept page says its files are in "this folder", which is only true at the entrance, so the
+ * museum's folder is written into it in full.
+ */
+async function page(e: Asking, deep: boolean): Promise<Response> {
   const fresh = Promise.resolve(e.preloadResponse).then((early) => early ?? fetch(e.request));
   // a slow answer is still waited for, or the browser complains that its early request was thrown away
   e.waitUntil(fresh.catch(() => undefined));
   const got = await Promise.race([fresh.catch(() => undefined), wait(PATIENCE)]);
   // a redirect is the browser's to follow
   if (got && (got.ok || got.type === 'opaqueredirect')) return got;
-  return (await (await caches.open(SHELL)).match(HOME)) ?? fresh;
+  const kept = await (await caches.open(SHELL)).match(HOME);
+  if (!kept) return fresh;
+  if (!deep) return kept;
+  return new Response((await kept.text()).replace('<base href="./">', `<base href="${HOME}">`), { headers: { 'content-type': 'text/html; charset=utf-8' } });
 }
 
 /** A file of the building: its name says what is in it, so a kept copy is always right, whichever build kept it. */

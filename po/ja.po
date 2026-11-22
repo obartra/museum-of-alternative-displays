@@ -35,6 +35,12 @@ msgid "A museum of {n} display technologies, from split-flap boards to holograms
 msgstr "反転フラップ式表示機からホログラムまで、{n}種類のディスプレイ技術を集めた博物館です。一つひとつを回して眺め、映像ができるしくみを確かめられます。"
 
 #: interface
+#. Name and description of the site. Keep the words in curly brackets as they are.
+msgctxt "ui.site.title"
+msgid "Museum of Alternative Displays | {n} display technologies in 3D"
+msgstr "オルタナティブ・ディスプレイ博物館 | 3Dで見る{n}種類のディスプレイ技術"
+
+#: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
 msgctxt "ui.title.page"
 msgid "{page} | {site}"
@@ -732,6 +738,12 @@ msgid "The whole collection in one list."
 msgstr "コレクション全体を一つの一覧で。"
 
 #: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.says"
+msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "博物館の展示品{n}点すべてを一つの一覧で。展示室、年、名前の順に並べ替え、映像のつくり方で絞り込めます。"
+
+#: interface
 #. Index page and its filters.
 msgctxt "ui.depot.light"
 msgid "How it makes the picture"
@@ -832,6 +844,12 @@ msgstr "すべての条件を満たす展示品はありません。条件を一
 msgctxt "ui.about.lead"
 msgid "The collection, its sources and its credits."
 msgstr "コレクションと、その出典とクレジットについて。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.says"
+msgid "What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under."
+msgstr "何を一つの展示品と数えるか、日付や名前の出典、モデルと建物のつくり方、そして博物館を共有するためのライセンスについて。"
 
 #: interface
 #. About page.

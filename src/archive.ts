@@ -1,6 +1,7 @@
 import { media, type Media } from './data/media';
 import { pieces } from './data/pieces';
 import { esc } from './html';
+import { link } from './place';
 import { comma, said, standIn, t, tx } from './i18n';
 
 /**
@@ -130,7 +131,7 @@ export function creditsList(): string {
     const list = archiveOf(p.id);
     if (!list.length) continue;
     const lines = list.map((m) => `<li><a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${tx('archive.by', { author: m.credit.author })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. <span${standIn.media(p.id, m.id)}>${esc(m.credit.changes)}</span>.</li>`);
-    blocks.push(`<li><a class="credits__piece" href="#piece-${p.id}">${esc(said.piece(p).name)}</a><ul>${lines.join('')}</ul></li>`);
+    blocks.push(`<li><a class="credits__piece" href="${link(`piece-${p.id}`)}">${esc(said.piece(p).name)}</a><ul>${lines.join('')}</ul></li>`);
   }
   return blocks.length ? `<ul class="credits">${blocks.join('')}</ul>` : '';
 }

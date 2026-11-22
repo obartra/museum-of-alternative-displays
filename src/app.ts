@@ -1,4 +1,5 @@
 import { tx } from './i18n';
+import { link, beforePlace } from './place';
 import { justAsked, voice } from './tour';
 
 /**
@@ -40,7 +41,7 @@ const offered = (): boolean => !installed && (!!offer || iosSafari);
  * The way to install at the foot of every page. Where the browser has handed over its prompt, the link makes it.
  * Where it has not, on an iPhone or iPad, the link leads to the About page, which says where Safari keeps it.
  */
-export const appFoot = (): string => `<a href="#about" data-install data-app-foot${offered() ? '' : ' hidden'}>${tx('about.app.install')}</a>`;
+export const appFoot = (): string => `<a href="${link('about')}" data-install data-app-foot${offered() ? '' : ' hidden'}>${tx('about.app.install')}</a>`;
 /** What the About page says about installing. It is empty until there is a way to install, and is filled in when one turns up. */
 export function appHtml(): string {
   const html = inner();
@@ -122,10 +123,10 @@ function keepCurrent(sw: ServiceWorkerContainer): void {
     // a page of the same build has nothing to gain from a reload
     void tell(now).then((build) => { if (build === BUILD) return; stale = true; if (!touched) renew(); });
   });
-  // This listener is wired before the router's and is asked first. A change of page is the moment that costs
-  // nothing: the new page is drawn by the newer build. Not when the visitor has just asked for a guided tour,
-  // because the click that asked is what lets the guide speak, and a reload would throw it away.
-  window.addEventListener('hashchange', (e) => { if (!justAsked() && renew()) e.stopImmediatePropagation(); }, true);
+  // Asked before a new place is drawn. A change of page is the moment that costs nothing: the address has
+  // changed already, and the new page is drawn by the newer build. Not when the visitor has just asked for a
+  // guided tour, because the click that asked is what lets the guide speak, and a reload would throw it away.
+  beforePlace(() => !justAsked() && renew());
 
   // Coming back into view, or back onto the network, is a time to look for a newer build, and for the worker to
   // clear out if it could not before. Not more than once a minute.

@@ -3,6 +3,7 @@ import { portraits } from './data/portraits';
 import { tourStops, type Stand, type Tour } from './data/tours';
 import { trailById } from './data/trails';
 import { esc } from './html';
+import { link } from './place';
 import { said, t, tx } from './i18n';
 import { captionAt, clipOf, hush, keepCaptions, keepVoice, ready, speak, toursNow, voice, wantsCaptions, wantsVoice } from './tour';
 
@@ -138,7 +139,7 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
   <button type="button" class="switch" role="switch" data-guide="cc" aria-checked="${cc}"><span class="switch__track"><span class="switch__knob"></span></span><span>${tx('tour.captions')}</span></button>
   <button type="button" class="btn guide__leave" data-guide="leave">${tx('tour.leave')}</button>
 </div>
-<details class="guide__words"><summary>${tx('tour.words')}</summary><div class="guide__text"></div><p class="guide__whole"><a href="#words-${tour.id}">${tx('tour.whole')}</a></p></details>`;
+<details class="guide__words"><summary>${tx('tour.words')}</summary><div class="guide__text"></div><p class="guide__whole"><a href="${link(`words-${tour.id}`)}">${tx('tour.whole')}</a></p></details>`;
   };
 
   /** Show the part the tour is at. */
@@ -147,14 +148,14 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     const stops = tourStops(tour), part = told().parts[at], n = stops.findIndex((s) => s.id === at) + 1, piece = n ? pieceById(at) : undefined, i = index();
     $('.guide__no').textContent = n ? t('tour.stop', { n, total: stops.length }) : `${t('tour.label')}: ${told().title}`;
     $('.guide__title').textContent = part.title;
-    $('.guide__place').innerHTML = piece ? `<a href="#piece-${piece.id}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
+    $('.guide__place').innerHTML = piece ? `<a href="${link(`piece-${piece.id}`)}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
     $('.guide__text').innerHTML = part.text.map((p) => `<p>${esc(p)}</p>`).join('');
     // who this stop is about, in a corner of the picture: a face where there is a portrait, and always the name.
     // It leads to the page of the piece, where the portrait has its credit
     const names = tour.parts[i].who ?? [];
     who.hidden = !piece || !names.length;
     who.innerHTML = piece ? names.map((name) => { const pic = portraits[name]; return `<span class="walk__face">${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : ''}<span>${esc(name)}</span></span>`; }).join('') : '';
-    if (piece) { who.setAttribute('href', `#piece-${piece.id}`); who.title = t('walk.open', { name: said.piece(piece).name }); }
+    if (piece) { who.setAttribute('href', link(`piece-${piece.id}`)); who.title = t('walk.open', { name: said.piece(piece).name }); }
     root.querySelectorAll<HTMLButtonElement>('.guide__dot').forEach((dot, k) => {
       dot.classList.toggle('is-past', k < i); dot.classList.toggle('is-now', k === i);
       if (k === i) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');

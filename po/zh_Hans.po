@@ -30,6 +30,12 @@ msgid "A museum of {n} display technologies, from split-flap boards to holograms
 msgstr "一座收藏{n}种显示技术的博物馆，从翻页显示屏到全息图。每件展品都可以转着看，看它怎样形成画面。"
 
 #: interface
+#. Name and description of the site. Keep the words in curly brackets as they are.
+msgctxt "ui.site.title"
+msgid "Museum of Alternative Displays | {n} display technologies in 3D"
+msgstr "另类显示博物馆 | {n}种显示技术的3D展品"
+
+#: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
 msgctxt "ui.title.page"
 msgid "{page} | {site}"
@@ -727,6 +733,12 @@ msgid "The whole collection in one list."
 msgstr "全部馆藏，列在一张表里。"
 
 #: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.says"
+msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "博物馆的全部{n}件展品列在一张表里，可按展厅、年份或名称排序，也可按成像方式筛选。"
+
+#: interface
 #. Index page and its filters.
 msgctxt "ui.depot.light"
 msgid "How it makes the picture"
@@ -827,6 +839,12 @@ msgstr "没有哪件展品能同时满足这些要求。请去掉一项要求。
 msgctxt "ui.about.lead"
 msgid "The collection, its sources and its credits."
 msgstr "馆藏、资料来源与署名。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.says"
+msgid "What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under."
+msgstr "什么算一件展品，每个日期和名字出自哪里，模型和建筑是怎样做的，以及博物馆以什么许可协议共享。"
 
 #: interface
 #. About page.

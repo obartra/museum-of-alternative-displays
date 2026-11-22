@@ -7,6 +7,7 @@ export const en = {
   'site.name': 'Museum of Alternative Displays',
   'site.skip': 'Skip to content',
   'site.description': 'A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.',
+  'site.title': 'Museum of Alternative Displays | {n} display technologies in 3D',
   'title.page': '{page} | {site}',
   'nav.halls': 'Halls',
   'nav.hall': 'Hall {n}, {name}',
@@ -129,6 +130,7 @@ export const en = {
 
   'depot.title': 'Index',
   'depot.lead': 'The whole collection in one list.',
+  'depot.says': 'All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture.',
   'depot.light': 'How it makes the picture',
   'depot.any': 'Any',
   'depot.must': 'It has to',
@@ -147,6 +149,7 @@ export const en = {
   'depot.count.none': 'Nothing in the collection does all of that. Remove a requirement.',
 
   'about.lead': 'The collection, its sources and its credits.',
+  'about.says': 'What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under.',
   'about.piece': 'What counts as a piece',
   'about.piece.1': 'A piece is a principle: one physical way of putting a picture in front of an eye. It is never a product. A product is named only when it was the first of its kind or is the example everyone means.',
   'about.sourced': 'Sources',

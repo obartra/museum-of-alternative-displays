@@ -36,6 +36,12 @@ msgid "A museum of {n} display technologies, from split-flap boards to holograms
 msgstr "Muzeo de {n} vidigaj teknologioj, de klapfoliaj tabuloj ĝis hologramoj. Turnu ĉiun kaj vidu, kiel ĝi faras bildon."
 
 #: interface
+#. Name and description of the site. Keep the words in curly brackets as they are.
+msgctxt "ui.site.title"
+msgid "Museum of Alternative Displays | {n} display technologies in 3D"
+msgstr "Muzeo de Alternativaj Vidigiloj | {n} vidigaj teknologioj en 3D"
+
+#: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
 msgctxt "ui.title.page"
 msgid "{page} | {site}"
@@ -734,6 +740,12 @@ msgid "The whole collection in one list."
 msgstr "La tuta kolekto en unu listo."
 
 #: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.says"
+msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "Ĉiuj {n} eksponaĵoj de la muzeo en unu listo, ordigeblaj laŭ halo, jaro aŭ nomo kaj filtreblaj laŭ tio, kiel ĉiu faras sian bildon."
+
+#: interface
 #. Index page and its filters.
 msgctxt "ui.depot.light"
 msgid "How it makes the picture"
@@ -834,6 +846,12 @@ msgstr "Nenio en la kolekto faras ĉion ĉi. Forigu unu postulon."
 msgctxt "ui.about.lead"
 msgid "The collection, its sources and its credits."
 msgstr "La kolekto, ĝiaj fontoj kaj ĝiaj atribuoj."
+
+#: interface
+#. About page.
+msgctxt "ui.about.says"
+msgid "What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under."
+msgstr "Kio estas eksponaĵo, de kie venas ĉiu dato kaj ĉiu nomo, kiel la modeloj kaj la konstruaĵo estis faritaj, kaj sub kiu permesilo la muzeo estas kunhavigata."
 
 #: interface
 #. About page.
