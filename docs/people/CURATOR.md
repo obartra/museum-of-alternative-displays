@@ -208,6 +208,10 @@ over no claim the English had dropped. The curator read their reports and ruled 
   better are asked to say so.
 - **No sex is stated** for A. Frankenstein, M. C. Schlamp, Kazuo Yoshinaka or Berthier in any language. The name,
   the patent or the listing carries the sentence.
+- **A sentence the English left open.** Pepper's account said the patent named both men "at his request". Three
+  translators took the request to be Dircks's. Pepper's book says "at my request". The English now says "at his
+  own request", and all nine languages say the same. A check then looked for any other paragraph where a
+  translation names someone the English paragraph does not, and found none.
 - **Cities take the name the language uses** (Lovaina, Löwen, Louvain, Estrasburgo, Straßburg). Institutions keep
   their own names.
 - **Names in other scripts.** Chinese gives the established Chinese names of people who have one (邓青云, 彭笑刚,
