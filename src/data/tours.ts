@@ -112,6 +112,73 @@ export const tours: Tour[] = [
       ] },
     ],
   },
+  {
+    id: 'black',
+    title: 'Black inventors and artists',
+    lead: 'A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label.',
+    parts: [
+      { id: 'start', title: 'Before the first stop', text: [
+        'This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist.',
+        'Some of them made the display. Some made a part that it could not do without. Some put it to a new use, or made art with it. At each stop I will say which.',
+        'The first stop is in hall 2. Go to the cathode ray tube.',
+      ] },
+      { id: 'cathode-ray-tube', title: 'A camera at the door', who: ['Marie Van Brittan Brown', 'Mark Dean'], text: [
+        'Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times.',
+        'The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour.',
+        'The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments.',
+      ] },
+      { id: 'numitron', title: 'The filament came first', who: ['Lewis Latimer'], text: [
+        'Look at the glass bulb. Inside are seven tiny lamp filaments, arranged as the seven bars that form a digit. Current through the right filaments makes them glow in the shape of a numeral.',
+        'Lewis Latimer did not make this display. It is from 1970, and he worked nearly ninety years earlier. But a display made of filaments needs filaments that last. In 1882 Latimer patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace.',
+        'Here the filament is the light. At the next stop, also in this hall, the light comes from a coating that is struck by electrons. Go to the field emission display.',
+      ] },
+      { id: 'field-emission', title: 'A tube made flat', who: ['Akintunde Akinwande'], text: [
+        'The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Above them is the front plate with its glowing coating. The lit dots count seconds.',
+        'This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one.',
+        'These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play.',
+      ] },
+      { id: 'shadow-play', title: 'Cut from black paper', who: ['Kara Walker'], text: [
+        'Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well.',
+        'Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.',
+        'A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping.',
+      ] },
+      { id: 'projection-mapping', title: 'A head in a crystal ball', who: ['Lanny Smoot'], text: [
+        'Look at the white plaster shapes and the projector on its tripod. Each shape receives its own pattern, and no light falls on the floor. By day the picture is barely visible, so switch the daylight off.',
+        'The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room.',
+        'So far every picture needed a lamp or a flame, or made its own light. In hall 5 the pictures use the light of the room. Go to the electrochromic display.',
+      ] },
+      { id: 'electrochromic', title: 'One layer at a time', who: ['Paula Hammond'], text: [
+        'Look at the printed label that shows the minutes in bars. Wait for the minute to change. The old digit fades and the new digit darkens slowly, over several seconds. The window pane behind the label is the same film on glass.',
+        'The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp\'s thesis of 2003 points to a full-colour display.',
+        'This film keeps its colour with the power off. The next picture is not on a surface at all. Go to hall 6 and find the illusion transmitter.',
+      ] },
+      { id: 'illusion-transmitter', title: 'A picture standing in the air', who: ['Valerie Thomas'], text: [
+        'On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later.',
+        'Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980.',
+        'A curved mirror gave that picture its depth. In hall 7 depth comes from giving each eye its own picture. Go to the stereoscope.',
+      ] },
+      { id: 'stereoscope', title: 'Two pictures, two eyes', who: ['Charles Harrison', 'Kenneth Dunkley'], text: [
+        'A hand-held viewer stands on a post, with a stereo card in its holder. Press the Look in button to put an eye to the lens: the flat card becomes a scene with depth. The red and cyan glasses in front do the same job with colour.',
+        'The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer\'s accessory to a children\'s toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth.',
+        'The stereoscope needs a viewer in front of the eyes. The next stop does without one. Stay in this hall and go to the lenticular display.',
+      ] },
+      { id: 'lenticular', title: 'Words that change as you walk', who: ['Hank Willis Thomas'], text: [
+        'Look at the card. It shows an eye, printed in nine views. Turn the model: the eye follows you across the room and jumps from one view to the next.',
+        'A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black.',
+        'One stop is left, in this hall. Go to the head-mounted display.',
+      ] },
+      { id: 'head-mounted', title: 'Goggles for a surgeon', who: ['Samuel Achilefu'], text: [
+        'The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. Press the Put it on button to see what the wearer sees.',
+        'The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014.',
+        'That was the last stop of the blue line.',
+      ] },
+      { id: 'end', title: 'The end of the blue line', text: [
+        'That is the end of the blue line. It began with a camera at a front door. It ends with goggles in an operating theatre.',
+        'Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black. The People page gives the source for every name.',
+        'The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it.',
+      ] },
+    ],
+  },
 ];
 
 export const tourById = (id: string): Tour | undefined => tours.find((t) => t.id === id);
