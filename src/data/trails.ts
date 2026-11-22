@@ -33,7 +33,7 @@ const black: Listed[] = [
   { name: 'Marie Van Brittan Brown', source: src('archive', 'Marie Van Brittan Brown, Lemelson-MIT Program', 'https://lemelson.mit.edu/resources/marie-van-brittan-brown') },
   { name: 'Mark Dean', source: src('maker', 'Mark Dean, IBM', 'https://www.ibm.com/history/mark-dean') },
   { name: 'Lewis Latimer', source: src('archive', 'Bringing light for all, United States Patent and Trademark Office (2024)', 'https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/bringing-light-all') },
-  { name: 'Akintunde Akinwande', source: src('reference', 'Akintunde Akinwande (Wikipedia)', 'https://en.wikipedia.org/wiki/Akintunde_Akinwande') },
+  { name: 'Akintunde Akinwande', source: src('archive', "MTL's Akintunde Ibitayo Akinwande, MIT Black History Project (2015)", 'https://mitblackhistory.blogspot.com/2015/10/mtls-akintunde-ibitayo-akinwande.html') },
   { name: 'Lanny Smoot', source: src('press', 'Black Disney Imagineer Inducted Into Inventors Hall Of Fame, Black Enterprise', 'https://www.blackenterprise.com/black-disney-imagineer-inducted-inventors-hall-of-fame/') },
   { name: 'Kara Walker', source: src('archive', 'Kara Walker, Fall Frum Grace, Miss Pipi\'s Blue Tale (2011), Sammlung Goetz', 'https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/') },
   { name: 'Paula Hammond', source: src('press', 'Paula Hammond, The EDU Ledger (2021)', 'https://www.theeduledger.com/home/article/15109532/paula-hammond') },
