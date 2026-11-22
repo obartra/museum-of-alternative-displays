@@ -61,8 +61,14 @@ export const people: Record<string, Credit> = {
       { who: ['Kenjiro Takayanagi'], did: 'Showed a television receiver built on a cathode ray tube, in Japan in 1926.' },
       { who: ['Philo Farnsworth'], did: 'Sent the first all-electronic television picture, in San Francisco in 1927.' },
       { who: ['Elma Farnsworth'], she: ['Elma Farnsworth'], did: 'Known as Pem. She worked in Philo Farnsworth\'s laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent.' },
+      { who: ['Marie Van Brittan Brown', 'Albert Brown'], she: ['Marie Van Brittan Brown'], did: 'A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969.' },
+      { who: ['Mark Dean'], did: 'Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor.' },
     ],
-    sources: [src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707'), src('press', 'Vale: The Mother of Television, New Atlas (2006)', 'https://newatlas.com/go/5575')],
+    sources: [
+      src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707'), src('press', 'Vale: The Mother of Television, New Atlas (2006)', 'https://newatlas.com/go/5575'),
+      src('archive', 'Marie Van Brittan Brown, Lemelson-MIT Program', 'https://lemelson.mit.edu/resources/marie-van-brittan-brown'),
+      src('maker', 'Mark Dean, IBM', 'https://www.ibm.com/history/mark-dean'), src('archive', 'Mark Dean, National Inventors Hall of Fame', 'https://www.invent.org/inductees/mark-dean'),
+    ],
   },
   'colour-wheel-television': {
     people: [
@@ -141,7 +147,16 @@ export const people: Record<string, Credit> = {
     sources: [src('archive', 'Leota Toombs Thomas, Disney Legends, D23', 'https://d23.com/walt-disney-legend/leota-toombs-thomas/')],
   },
   'gyricon': { people: [{ who: ['Nicholas Sheridon'], did: 'Invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s.' }] },
-  'electrophoretic-ink': { people: [{ who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab in 1996.' }] },
+  'electrophoretic-ink': {
+    people: [
+      { who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab in 1996.' },
+      { who: ['John Rogers', 'Zhenan Bao'], she: ['Zhenan Bao'], did: 'At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics.' },
+    ],
+    sources: [
+      src('paper', 'Rogers, Bao and others, Paper-like electronic displays: large-area rubber-stamped plastic sheets of electronics and microencapsulated electrophoretic inks, Proceedings of the National Academy of Sciences (2001)', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC33123/'),
+      src('lab', 'Zhenan Bao, Stanford University', 'https://profiles.stanford.edu/zhenan-bao'),
+    ],
+  },
   'cholesteric-lcd': { people: [{ who: ['Deng-Ke Yang', 'J. William Doane'], did: 'Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University.' }] },
   'electrowetting': {
     people: [
@@ -155,7 +170,16 @@ export const people: Record<string, Credit> = {
     ],
   },
   'interferometric-modulator': { people: [{ who: ['Mark Miles'], did: 'Invented the modulator and founded Etalon, then Iridigm, to develop it. Qualcomm bought Iridigm in 2004.' }] },
-  'electrochromic': { people: [{ who: ['S. K. Deb'], did: 'Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.' }] },
+  'electrochromic': {
+    people: [
+      { who: ['S. K. Deb'], did: 'Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.' },
+      { who: ['Paula Hammond', 'Dean DeLongchamp'], she: ['Paula Hammond'], did: 'At MIT they built electrochromic films one molecular layer at a time, which switched faster and with more contrast than films made in other ways. DeLongchamp\'s thesis of 2003 points to a full-colour display.' },
+    ],
+    sources: [
+      src('paper', 'DeLongchamp, Engineering the electrochromism and ion conduction of layer-by-layer assembled films, thesis supervised by Paula Hammond, Massachusetts Institute of Technology (2003)', 'https://dspace.mit.edu/handle/1721.1/29995'),
+      src('archive', 'Paula Hammond, Science History Institute', 'https://www.sciencehistory.org/education/scientific-biographies/paula-hammond/'),
+    ],
+  },
   'peppers-ghost': {
     people: [
       { who: ['Henry Dircks'], did: 'Engineer who devised the illusion.' },

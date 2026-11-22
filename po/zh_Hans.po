@@ -2569,6 +2569,18 @@ msgid "Known as Pem. She worked in Philo Farnsworth's laboratories, where she ma
 msgstr "人称Pem。她在Philo Farnsworth的实验室工作，为他的实验绘制技术图纸。她的面孔是这套系统最早传送的图像之一。"
 
 #: hall-2/cathode-ray-tube
+#. People section: what Marie Van Brittan Brown, Albert Brown did. The names stand above this line.
+msgctxt "piece.cathode-ray-tube.people.5"
+msgid "A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969."
+msgstr "纽约的一位护士和她的丈夫，丈夫是电子技师。两人1966年设计的家用安防系统，用一台在四个窥视孔之间移动的摄像机，把来访者显示在电视监视器上。1969年获得专利。"
+
+#: hall-2/cathode-ray-tube
+#. People section: what Mark Dean did. The names stand above this line.
+msgctxt "piece.cathode-ray-tube.people.6"
+msgid "Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor."
+msgstr "IBM的工程师。他在IBM个人计算机上的三项专利中，有两项是驱动单色显示器和彩色显示器的适配器。"
+
+#: hall-2/cathode-ray-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.cathode-ray-tube.view.seat.label"
 msgid "Sit in front"
@@ -5467,6 +5479,12 @@ msgid "Developed the ink in capsules at the MIT Media Lab in 1996."
 msgstr "1996年在MIT媒体实验室研制出装在微胶囊里的墨水。"
 
 #: hall-5/electrophoretic-ink
+#. People section: what John Rogers, Zhenan Bao did. The names stand above this line.
+msgctxt "piece.electrophoretic-ink.people.2"
+msgid "At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics."
+msgstr "2001年在贝尔实验室，两人在一张塑料薄片上压印出256个塑料晶体管，图像的每个点一个，再把这种墨水铺在上面，做成可以弯曲的电子纸。Bao是化学家，设计能导电的塑料。"
+
+#: hall-5/electrophoretic-ink
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.electrophoretic-ink.view.read.label"
 msgid "Pick it up to read"
@@ -5939,6 +5957,12 @@ msgstr "普鲁士蓝是一种颜料，18世纪初在柏林首次制成，至今�
 msgctxt "piece.electrochromic.people.1"
 msgid "Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew."
 msgstr "1969年发表关于氧化钨薄膜的研究，电致变色显示器由此发展而来。"
+
+#: hall-5/electrochromic
+#. People section: what Paula Hammond, Dean DeLongchamp did. The names stand above this line.
+msgctxt "piece.electrochromic.people.2"
+msgid "At MIT they built electrochromic films one molecular layer at a time, which switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
+msgstr "在MIT，两人把电致变色薄膜一层分子一层分子地叠出来，这种薄膜比用其他方法制成的薄膜切换更快、对比度更高。DeLongchamp 2003年的学位论文指向全彩显示器。"
 
 #: hall-5/electrochromic
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7995,7 +8019,7 @@ msgstr ""
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Ten displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
+msgid "A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
 msgstr ""
 
 #: tour-women
@@ -8007,7 +8031,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors."
 msgstr ""
 
 #: tour-women
@@ -8157,7 +8181,31 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
-msgid "Before you go on, turn the daylight back on. The next stop is the electrowetting display in hall 5. The displays there behave like print: they need the light of the room."
+msgid "Before you go on, turn the daylight back on. The next stop is in hall 5, where the displays behave like print: they need the light of the room. Go to the electrophoretic ink, the page of an e-reader."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrophoretic ink: the title of this part.
+msgctxt "tour.women.electrophoretic-ink.title"
+msgid "A page that bends"
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrophoretic-ink.text.1"
+msgid "This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrophoretic-ink.text.2"
+msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrophoretic-ink.text.3"
+msgid "The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display."
 msgstr ""
 
 #: tour-women
@@ -8181,7 +8229,31 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
-msgid "Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
+msgid "There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrochromic display: the title of this part.
+msgctxt "tour.women.electrochromic.title"
+msgid "Layer by layer"
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrochromic.text.1"
+msgid "This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrochromic.text.2"
+msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
+msgstr ""
+
+#: tour-women
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.electrochromic.text.3"
+msgid "That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
 msgstr ""
 
 #: tour-women
@@ -8265,7 +8337,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Eleven women are named at these ten stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgid "Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
 msgstr ""
 
 #: tour-women
