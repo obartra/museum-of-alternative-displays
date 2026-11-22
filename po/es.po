@@ -106,6 +106,18 @@ msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
 
 #: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm"
+msgid "Low power"
+msgstr "Bajo consumo"
+
+#: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm.says"
+msgid "Low power: the hall is not drawn behind the page, and a model waits until it is asked for."
+msgstr "Bajo consumo: la sala no se dibuja detrás de la página, y cada modelo espera a que lo pidan."
+
+#: interface
 #. List of keyboard shortcuts.
 msgctxt "ui.keys.anywhere"
 msgid "On any page"

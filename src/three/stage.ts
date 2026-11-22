@@ -34,6 +34,10 @@ export class Stage {
   private beat = 0;
   private home = { az: 28, el: 13, dist: 5.1 };
   private ro?: ResizeObserver;
+  /** The room carried on past the frame: a small second picture for a canvas that lies behind the page. See beyond(). */
+  private outer?: CanvasRenderingContext2D;
+  private wide = new THREE.PerspectiveCamera();
+  private outerBeat = 0;
   private dragged = false;
   private still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   /** Motion that starts by itself can be stopped. A visitor who asked for less motion starts with it stopped. */
@@ -293,6 +297,44 @@ export class Stage {
     this.owed = 3;
   }
 
+  /**
+   * Carry the room on past the frame. The canvas given lies behind the page, around the stage. Each frame it is
+   * drawn the room as the same eye sees it through a wider lens, off its centre, whose middle is exactly the picture
+   * in the frame: so the piece keeps its place and shape, and the hall goes on outside it. Pass nothing to stop.
+   */
+  beyond(canvas?: HTMLCanvasElement): void {
+    this.outer = canvas?.getContext('2d') ?? undefined;
+    this.owed = 3;
+  }
+  private drawBeyond(): void {
+    const out = this.outer!, oc = out.canvas, box = this.canvas.getBoundingClientRect(), all = oc.getBoundingClientRect();
+    if (box.width < 2 || all.width < 2 || !oc.isConnected) return;
+    const cam = this.camera, wide = this.wide, near = cam.near;
+    const top = near * Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2) / cam.zoom, right = top * cam.aspect;
+    // how much of the near plane one pixel of the page covers: the frame fixes it, the outer canvas only adds pixels
+    const perX = 2 * right / box.width, perY = 2 * top / box.height;
+    cam.updateMatrixWorld();
+    wide.position.copy(cam.position); wide.quaternion.copy(cam.quaternion); wide.near = near; wide.far = cam.far;
+    wide.updateMatrixWorld();
+    wide.projectionMatrix.makePerspective(-right - (box.left - all.left) * perX, right + (all.right - box.right) * perX, top + (box.top - all.top) * perY, -top - (all.bottom - box.bottom) * perY, near, cam.far);
+    wide.projectionMatrixInverse.copy(wide.projectionMatrix).invert();
+    // drawn small into a corner of the stage's own canvas, copied out, and then painted over by the frame itself:
+    // one renderer, and the same light and tone as the picture in the frame
+    const r = this.renderer, buf = r.getDrawingBufferSize(new THREE.Vector2()), pr = r.getPixelRatio();
+    const w = Math.min(oc.width, buf.x), h = Math.min(oc.height, buf.y);
+    r.setViewport(0, 0, w / pr, h / pr); r.setScissor(0, 0, w / pr, h / pr); r.setScissorTest(true);
+    // only the room: the piece is in the frame, and out here, faint and out of focus, it would cost more than it
+    // shows. The floor keeps the reflection it was given for the frame, and the shadows are not worked out again.
+    const root = this.piece?.root, shown = root?.visible ?? false, auto = r.shadowMap.autoUpdate;
+    if (root) root.visible = false;
+    r.shadowMap.autoUpdate = false;
+    r.render(this.scene, wide);
+    r.shadowMap.autoUpdate = auto;
+    if (root) root.visible = shown;
+    out.drawImage(this.canvas, 0, buf.y - h, w, h, 0, 0, oc.width, oc.height);
+    r.setScissorTest(false); r.setViewport(0, 0, buf.x / pr, buf.y / pr);
+  }
+
   /** Advance and draw one frame. `at` pins the piece's clock, for still pictures. */
   step(at?: number): void {
     const now = performance.now(), live = at === undefined;
@@ -326,6 +368,8 @@ export class Stage {
       this.stereo.render(this.scene, this.camera, focus, (eye) => this.room.prepare?.(this.renderer, this.scene, eye));
       return;
     }
+    // the room behind the page is drawn every other frame: it is out of focus, and nobody reads motion from it
+    if (this.outer && live && ++this.outerBeat % 2 === 0) this.drawBeyond();
     this.room.prepare?.(this.renderer, this.scene, this.camera);
     this.renderer.render(this.scene, this.camera);
   }

@@ -218,6 +218,19 @@ h1, h2, h3 { text-wrap: balance; }
 .stage canvas.gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .35s ease; }
 .stage canvas.gl.is-live { opacity: 1; }
 .stage canvas.gl:active { cursor: grabbing; }
+/* the hall carried on past the frame of a piece (src/beyond.ts): faint and out of focus behind the page, as the light
+   of a room falls on the wall beside a window.
+   How faint is set by the small print, which stands straight on the wall: at 15% by day and 17% by night it keeps a
+   contrast of 4.5 to 1 (AA) even where the picture behind it is pure black by day or pure white by night. Those are
+   the ceilings (15.5% and 17.5% to be exact). Under them the picture itself is given more contrast by day and more
+   light by night, so that it reads at all: that changes what is seen, not the worst case. The blur comes last and
+   is wide, which smooths the small picture the stage hands over; a wide blur costs no more than a narrow one. */
+.beyond { position: absolute; left: 0; width: 100%; z-index: -1; pointer-events: none; opacity: 0; filter: contrast(2.4) saturate(1.4) blur(24px); transition: opacity .6s ease;
+  -webkit-mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent); mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent); }
+.beyond.is-on { opacity: .15; }
+:root[data-lights="off"] .beyond { filter: brightness(6) saturate(1.5) blur(24px); }
+:root[data-lights="off"] .beyond.is-on { opacity: .17; }
+body:has(.stage.is-full) .beyond { display: none; }
 .stage__box { position: relative; aspect-ratio: 1 / 1; max-height: 74vh; width: 100%; background: var(--wash-2); }
 .stage__poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; cursor: grab; user-select: none; -webkit-user-drag: none; }
 .stage__poster[hidden] { display: none; }
@@ -442,6 +455,10 @@ h1, h2, h3 { text-wrap: balance; }
   .pager a { line-height: 44px; display: inline-flex; align-items: center; min-height: 44px; }
   .frame { padding-bottom: calc(132px + var(--safe-b)); }
 }
+/* low power: a key that stays down. The small square is filled while it is on, so the sign needs no words */
+.foot__calm { display: inline-flex; align-items: center; min-height: 44px; appearance: none; border: 0; background: none; padding: 0; color: inherit; font: inherit; cursor: pointer; }
+.foot__calm::before { content: ""; flex: none; width: .78em; height: .78em; margin-right: .5em; border: 1.5px solid currentColor; border-radius: 2px; }
+.foot__calm[aria-pressed="true"]::before { background: currentColor; }
 .foot__keys { display: none; appearance: none; border: 0; background: none; padding: 0; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
 @media (hover: hover) and (pointer: fine) { .foot__keys { display: inline-flex; align-items: center; min-height: 44px; } }
 .keys { width: min(92vw, 560px); max-height: 86dvh; padding: 20px 22px 22px; border: 0; border-radius: 7px; background: var(--plate); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink), 0 3px 0 var(--ink); }

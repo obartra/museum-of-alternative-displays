@@ -107,6 +107,18 @@ msgid "Keyboard shortcuts"
 msgstr "キーボードショートカット"
 
 #: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm"
+msgid "Low power"
+msgstr "省電力"
+
+#: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm.says"
+msgid "Low power: the hall is not drawn behind the page, and a model waits until it is asked for."
+msgstr "省電力：展示室をページの背景に描かず、模型は求められるまで読み込みません。"
+
+#: interface
 #. List of keyboard shortcuts.
 msgctxt "ui.keys.anywhere"
 msgid "On any page"

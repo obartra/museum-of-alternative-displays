@@ -107,6 +107,18 @@ msgid "Keyboard shortcuts"
 msgstr "키보드 단축키"
 
 #: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm"
+msgid "Low power"
+msgstr "절전"
+
+#: interface
+#. Foot of the page.
+msgctxt "ui.foot.calm.says"
+msgid "Low power: the hall is not drawn behind the page, and a model waits until it is asked for."
+msgstr "절전: 전시실을 페이지 뒤에 그리지 않으며, 모형은 요청할 때까지 기다립니다."
+
+#: interface
 #. List of keyboard shortcuts.
 msgctxt "ui.keys.anywhere"
 msgid "On any page"

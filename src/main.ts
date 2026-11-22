@@ -22,6 +22,7 @@ import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
 import { AUTHOR, LICENCE, REPO } from './site';
 import { markSvg } from './mark';
+import { calm as lowPower, setCalm, spread, wantsBeyond } from './beyond';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -62,6 +63,14 @@ document.addEventListener('click', (e) => {
   if (into && !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) greet(into.hash);
   // the skip link moves the keyboard and leaves the address alone
   if (t.closest('a[href="#main"]')) { e.preventDefault(); document.getElementById('main')?.focus(); }
+});
+
+// ---------- low power: no room behind the page, and a model waits to be asked for ----------
+document.addEventListener('click', (e) => {
+  if (!(e.target as HTMLElement).closest('[data-calm]')) return;
+  setCalm(!lowPower());
+  // what is running was started under the other setting: begin the page again
+  location.reload();
 });
 
 // ---------- the keys, listed for whoever has a keyboard ----------
@@ -108,12 +117,14 @@ function canShowInRoom(): Promise<boolean> {
 
 /**
  * Whether to start a model without being asked. Not when the browser would draw it in software, which is slow enough
- * to freeze a page, and not when the visitor has asked to save data. `?gl=force` and `?gl=off` in the address override it.
+ * to freeze a page, not when the visitor has asked to save data, and not in low power. `?gl=force` and `?gl=off` in the
+ * address override it.
  */
 let hardware: boolean | undefined;
 function wants3d(): boolean {
   const asked = new URLSearchParams(location.search).get('gl');
   if (asked === 'force' || asked === 'off') return asked === 'force';
+  if (lowPower()) return false;
   if ((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return false;
   if (hardware === undefined) {
     try {
@@ -138,7 +149,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="${link('index')}"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="${link('people')}"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="${link('about')}"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><a href="${link('people')}">${tx('nav.people')}</a><a href="${link('about')}">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${current === 'about' ? '' : appFoot()}</footer>
+<footer class="foot"><a href="${link('people')}">${tx('nav.people')}</a><a href="${link('about')}">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button><button type="button" class="foot__calm" data-calm aria-pressed="${lowPower()}" title="${tx('foot.calm.says')}">${tx('foot.calm')}</button>${current === 'about' ? '' : appFoot()}</footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -571,6 +582,7 @@ ${step === undefined ? '' : visitBand(step)}
   let askedFor: string | null = null;
 
   /** Bring the model to life over its still picture. Only this needs three.js. */
+  let unspread: (() => void) | null = null;
   const go = async () => {
     if (begun || !alive) return;
     begun = true;
@@ -601,6 +613,7 @@ ${step === undefined ? '' : visitBand(step)}
       live = true;
       stage.start();
       if (!seen) stage.stop();
+      if (wantsBeyond(hardware === false)) { unspread?.(); unspread = spread(stage, box); }
       // the first frame is drawn: let it come up over the still picture, then take the picture away
       requestAnimationFrame(() => { cv.classList.add('is-live'); window.setTimeout(() => { if (alive) still.hidden = true; }, 420); });
       for (const b of views.querySelectorAll<HTMLButtonElement>('button')) b.disabled = !!b.dataset.view && !stage.hasView(b.dataset.view);
@@ -710,6 +723,7 @@ ${step === undefined ? '' : visitBand(step)}
     watch.disconnect();
     document.removeEventListener('keydown', onKey);
     lightListeners.delete(relight);
+    unspread?.(); unspread = null;
     stage?.stop();
     stageCanvas?.remove();
   };

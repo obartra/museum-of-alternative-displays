@@ -79,6 +79,7 @@ latest missing-portrait list. The repository now connects 128 of 143 people, inc
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
 | `src/place.ts` | The addresses of the museum: which place an address stands for, the address of each place, and following a link without loading a page. |
+| `src/beyond.ts` | The room carried on behind the page of a piece, and the Low power switch that turns it off. |
 | `src/mark.ts` | The museum's mark, MU over AD on four plates: the one drawing behind the header, the icons and the share picture. |
 | `scripts/static-pages.ts` | The page the server sends for every place, in every language, with the sitemap and the page for a missing address. |
 | `scripts/icons.ts` | Writes the app icon, the icon for a browser tab and the share picture from `src/mark.ts`. |
@@ -365,6 +366,22 @@ nothing keeps its mark.
 
 The development server has no worker. To try the app, build the site and serve `dist/`: `npm run build`,
 then `npm run preview`.
+
+### The room behind the page
+
+On the page of a piece the hall goes on past the frame of the model. A small canvas lies behind the page
+around the stage (`src/beyond.ts`), and each second frame the stage draws the room into it through a wider
+lens, off its centre, whose middle is exactly the picture in the frame (`Stage.beyond` in
+`src/three/stage.ts`). The piece keeps its place and shape, and turning it moves the light of the room
+across the whole page. Only the room is drawn there, at a twenty-fifth of the page's pixels, without the
+piece, a second reflection or new shadows.
+
+It is kept faint enough for the small print to hold a contrast of 4.5 to 1 (AA) in the worst case: 15% by
+day and 17% by night. The sums are beside the rule in `src/styles/base.css`.
+
+It is off where the browser draws in software, for a visitor who asks for less motion or is saving data,
+and in **Low power**, a switch at the foot of every page. Low power also makes a model wait until it is
+asked for. `?surround=1` and `?surround=0` in the address force it on or off, to compare.
 
 ### The mark
 

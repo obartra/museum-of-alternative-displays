@@ -19,6 +19,8 @@ export const en = {
   'foot.sourced': 'Sources and credits',
   'foot.repo': 'Corrections',
   'keys.title': 'Keyboard shortcuts',
+  'foot.calm': 'Low power',
+  'foot.calm.says': 'Low power: the hall is not drawn behind the page, and a model waits until it is asked for.',
   'keys.anywhere': 'On any page',
   'keys.step': 'The piece or hall before, and the next one',
   'keys.tab': 'Move to the next control',
