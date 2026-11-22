@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 143 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 143 people, and 86 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -55,7 +55,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Andrée Tretiakoff | Refreshable braille display | Patented braille dots raised by piezoelectric reeds. They filed first in France, in 1974. |  | `public/people/andree-tretiakoff.jpg` |
 | Klaus Peter Schönherr | Refreshable braille display | Invented a piezoelectric braille module in Germany in 1975. |  | `public/people/klaus-peter-schonherr.jpg` |
 | James Bryce | Refreshable braille display | The IBM engineer. A British statesman, Viscount Bryce, shares the name. |  | `public/people/james-bryce.jpg` |
-| Horst Hörtner | Drone light show | Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015. |  | `public/people/horst-hortner.jpg` |
+| Horst Hörtner | Drone light show | Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015. | yes | `public/people/horst-hortner.webp` |
 
 ## Hall 2, Glass and glow
 
@@ -64,10 +64,10 @@ Take the picture from the person's own article or file page, where the caption s
 | Ferdinand Braun | Cathode ray tube | Built the first cathode ray tube, in Germany in 1897. | yes | `public/people/ferdinand-braun.webp` |
 | Kenjiro Takayanagi | Cathode ray tube | Showed a television receiver built on a cathode ray tube, in Japan in 1926. | yes | `public/people/kenjiro-takayanagi.webp` |
 | Philo Farnsworth | Cathode ray tube | Sent the first all-electronic television picture, in San Francisco in 1927. | yes | `public/people/philo-farnsworth.webp` |
-| Elma Farnsworth | Cathode ray tube | Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent. |  | `public/people/elma-farnsworth.jpg` |
+| Elma Farnsworth | Cathode ray tube | Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent. | yes | `public/people/elma-farnsworth.webp` |
 | Marie Van Brittan Brown | Cathode ray tube | A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969. |  | `public/people/marie-van-brittan-brown.jpg` |
 | Albert Brown | Cathode ray tube | The electronics technician in New York, husband of Marie Van Brittan Brown and joint holder of the 1969 patent. A very common name. |  | `public/people/albert-brown.jpg` |
-| Mark Dean | Cathode ray tube | The IBM engineer and inventor, born in 1957. A common name. |  | `public/people/mark-dean.jpg` |
+| Mark Dean | Cathode ray tube | The IBM engineer and inventor, born in 1957. A common name. | yes | `public/people/mark-dean.webp` |
 | Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. |  | `public/people/guillermo-gonzalez-camarena.jpg` |
 | A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/a-frankenstein.jpg` |
 | Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/werner-von-jaworski.jpg` |
@@ -75,7 +75,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Robert H. Anderson | Storage tube terminal | The Tektronix engineer. A common name. |  | `public/people/robert-h-anderson.jpg` |
 | Andrew Haeff | Storage tube terminal | Built the Memory Tube in the 1940s, the ancestor that Tektronix turned into a screen. | yes | `public/people/andrew-haeff.webp` |
 | David Hagelbarger | Nixie tube | The engineer most often named as its inventor. |  | `public/people/david-hagelbarger.jpg` |
-| Tadashi Nakamura | Vacuum fluorescent display | The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display. |  | `public/people/tadashi-nakamura.jpg` |
+| Tadashi Nakamura | Vacuum fluorescent display | The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display. | yes | `public/people/tadashi-nakamura.webp` |
 | Tadashi Sasaki | Vacuum fluorescent display | The engineer of Hayakawa Electric, later Sharp. | yes | `public/people/tadashi-sasaki.webp` |
 | Lewis Latimer | Numitron | Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace. |  | `public/people/lewis-latimer.jpg` |
 | Donald Bitzer | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. | yes | `public/people/donald-bitzer.webp` |
@@ -85,14 +85,14 @@ Take the picture from the person's own article or file page, where the caption s
 | Charles Spindt | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. | yes | `public/people/charles-spindt.webp` |
 | Kenneth Shoulders | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/kenneth-shoulders.jpg` |
 | Louis Heynick | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/louis-heynick.jpg` |
-| Akintunde Akinwande | Field emission display | Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one. |  | `public/people/akintunde-akinwande.jpg` |
+| Akintunde Akinwande | Field emission display | Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one. | yes | `public/people/akintunde-akinwande.webp` |
 
 ## Hall 3, Solid light
 
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
 | Howard Borden | LED display | Designed the Hewlett-Packard numeric indicator of 1969. | yes | `public/people/howard-borden.webp` |
-| Gerald Pighini | LED display | Designed the Hewlett-Packard numeric indicator of 1969. |  | `public/people/gerald-pighini.jpg` |
+| Gerald Pighini | LED display | Designed the Hewlett-Packard numeric indicator of 1969. | yes | `public/people/gerald-pighini.webp` |
 | Isamu Akasaki | LED display | Made efficient blue LEDs in Japan. Full-colour screens followed, and so did the 2014 Nobel Prize in Physics. | yes | `public/people/isamu-akasaki.webp` |
 | Hiroshi Amano | LED display | Made efficient blue LEDs in Japan. Full-colour screens followed, and so did the 2014 Nobel Prize in Physics. | yes | `public/people/hiroshi-amano.webp` |
 | Shuji Nakamura | LED display | The Nobel laureate of 2014. Not Tadashi Nakamura of Ise Electronics. | yes | `public/people/shuji-nakamura.webp` |
@@ -109,7 +109,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Xiaogang Peng | Quantum-dot display | The chemist of Zhejiang University, an author of the 2014 Nature paper. Several researchers share the name. |  | `public/people/xiaogang-peng.jpg` |
 | Yizheng Jin | Quantum-dot display | At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours. |  | `public/people/yizheng-jin.jpg` |
 | Tuomo Suntola | Thin-film electroluminescent panel | Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels. | yes | `public/people/tuomo-suntola.webp` |
-| Dawon Kahng | Thin-film electroluminescent panel | Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way. |  | `public/people/dawon-kahng.jpg` |
+| Dawon Kahng | Thin-film electroluminescent panel | Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way. | yes | `public/people/dawon-kahng.webp` |
 | Nicholas Sheridon | Flexible display | Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center. |  | `public/people/nicholas-sheridon.jpg` |
 
 ## Hall 4, Light valves
@@ -144,20 +144,20 @@ Take the picture from the person's own article or file page, where the caption s
 | Greg Welch | Projection mapping | The computer scientist, co-author of the 2001 shader lamps paper. A common name. | yes | `public/people/greg-welch.webp` |
 | Kok-Lim Low | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/kok-lim-low.webp` |
 | Deepak Bandyopadhyay | Projection mapping | Described the technique in 2001 under the name shader lamps. |  | `public/people/deepak-bandyopadhyay.jpg` |
-| Lanny Smoot | Projection mapping | Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room. |  | `public/people/lanny-smoot.jpg` |
+| Lanny Smoot | Projection mapping | Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room. | yes | `public/people/lanny-smoot.webp` |
 
 ## Hall 5, Paper
 
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
-| Barrett Comiskey | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/barrett-comiskey.jpg` |
-| J. D. Albert | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/j-d-albert.jpg` |
-| Joseph Jacobson | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/joseph-jacobson.jpg` |
+| Barrett Comiskey | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. | yes | `public/people/barrett-comiskey.webp` |
+| J. D. Albert | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. | yes | `public/people/j-d-albert.webp` |
+| Joseph Jacobson | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. | yes | `public/people/joseph-jacobson.webp` |
 | John Rogers | Electrophoretic ink | John A. Rogers, first author of the 2001 paper on electronic paper that bends. A very common name. |  | `public/people/john-rogers.jpg` |
 | Zhenan Bao | Electrophoretic ink | At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics. |  | `public/people/zhenan-bao.jpg` |
 | Deng-Ke Yang | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/deng-ke-yang.webp` |
 | J. William Doane | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/j-william-doane.webp` |
-| Gerardo Beni | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. |  | `public/people/gerardo-beni.jpg` |
+| Gerardo Beni | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. | yes | `public/people/gerardo-beni.webp` |
 | Susan Hackwood | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. | yes | `public/people/susan-hackwood.webp` |
 | Robert Hayes | Electrowetting display | The Philips researcher, co-author of the 2003 Nature paper. A common name. |  | `public/people/robert-hayes.jpg` |
 | Johan Feenstra | Electrowetting display | Made it work at video speed at Philips Research in Eindhoven in 2003. | yes | `public/people/johan-feenstra.webp` |

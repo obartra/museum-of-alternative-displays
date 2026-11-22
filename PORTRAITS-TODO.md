@@ -1,14 +1,14 @@
 # Portraits still to do
 
-The labels name 143 people. 74 have a portrait on the site and 69 do not. A fifth package of drawings arrived on 22 November 2026, with 32 drawings for 32 of the 69. None of them is on the site yet: the package says of itself that it is for review, and that each drawing needs the owner's yes before it is shown. This file lists first what waits for that yes, then what still has to be drawn or found. The package was made before the two new pieces of hall 4 were on the labels, so their eight people are not in it.
+The labels name 143 people. 86 have a portrait on the site and 57 do not. A fifth package of drawings arrived on 22 November 2026, with 32 drawings. The owner asked for them to be checked. Twelve passed and are on the site. Eighteen wait until the pages they rest on can be opened, one is held by the package for a rights check, and one was stopped here. This file lists those first, then what still has to be drawn or found. The package was made before the two new pieces of hall 4 were on the labels, so their eight people are not in it.
 
 A fourth package, received on 22 November 2026, held one drawing: Louis Brus, after a photograph of 2008. Its own record says that the grant to reuse that photograph could not be verified, so the drawing stays off the site, and the study of Brus that is there stays.
 
-Of the 74 on the site, 39 are drawings after a picture that is free to reuse, and 35 are studies: the face is drawn from photographs that named pages published, and the pose and the clothing are the drawing's own. 12 are shown only at the size of a label, because their photographs are small or soft.
+Of the 86 on the site, 39 are drawings after a picture that is free to reuse, and 47 are studies: the face is drawn from photographs that named pages published, and the pose and the clothing are the drawing's own. 16 are shown only at the size of a label, because their photographs are small or soft.
 
 | What is needed | People |
 | --- | --- |
-| The owner's yes: drawn in the fifth round, and passed the check made here | 30 |
+| A page to open: drawn in the fifth round, and the pages it rests on have not all been read | 18 |
 | A rights check: drawn in the fifth round, held by its own package | 1 |
 | Another look: drawn in the fifth round, stopped by the check made here | 1 |
 | Another look: an earlier drawing was stopped, and the fifth round made no new one | 4 |
@@ -21,68 +21,57 @@ Of the 74 on the site, 39 are drawings after a picture that is free to reuse, an
 
 - Every file of the package matches its list of checksums. The 16 ordinary drawings are 600 by 750 and the 16 small ones 84 by 105, as its record says.
 - Each drawing was looked at beside its own record. Hair, glasses, facial hair, clothing and the turn of the head are as the record describes them, with one exception: Louis Heynick, under Another look.
-- Not done yet: the package holds no photographs, so nothing here sets a drawing beside a photograph, and the source pages have not been opened again. Each page is checked against the label when its drawing is placed. Whether a drawing looks like the person is not judged here at all.
-- One thing for the owner to decide: Barrett Comiskey, J. D. Albert and Joseph Jacobson share one label, and all three look down. At the size of a label their eyes read as closed. The lowered head is what made each pose differ from its photographs.
-- Of the 30 that wait for a yes, 4 follow a picture with a stated basis for reuse and 26 are studies. The package calls the right to publish a study uncertain and leaves that decision to the owner, person by person. The 35 studies already on the site were accepted on the same footing. 15 of the 30 can be shown only at the size of a label.
+- Each drawing rests on one or two pages. A drawing went on the site where every one of its pages had already been read for the label or for this list, and names the person with a fact of the label. That holds for twelve, all of them studies: Mark Dean, Akintunde Akinwande, Dawon Kahng, Lanny Smoot, Horst Hörtner, Elma Farnsworth, Tadashi Nakamura, Gerald Pighini, Barrett Comiskey, J. D. Albert, Joseph Jacobson and Gerardo Beni.
+- The other eighteen rest on at least one page that has not been read here. On 22 November those pages could not be opened: the Commons file pages did not load, and the others need the owner to approve each request, which did not reach him. Nothing is wrong with these drawings as far as the check went.
+- The package holds no photographs, so nothing here sets a drawing beside a photograph. Whether a drawing looks like the person is not judged here at all.
+- Barrett Comiskey, J. D. Albert and Joseph Jacobson share one label, and all three look down. At the size of a label their eyes read as closed. They are on the site, and can come off again if the owner prefers a new pose.
 
 ## The women
 
-8 of the 15 women named on the labels have a portrait on the site. Six stops of the guided tour show a name with no face: Andrée Tretiakoff, Elma Farnsworth, Kara Walker, Zhenan Bao, Paula Hammond and Elizabeth Downing. Four of the six are drawn in the fifth round. Three of those wait for a yes, and Kara Walker waits for a rights check.
+9 of the 15 women named on the labels have a portrait on the site. Five stops of the guided tour show a name with no face: Andrée Tretiakoff, Kara Walker, Zhenan Bao, Paula Hammond and Elizabeth Downing. Three of the five are drawn in the fifth round: Bao and Hammond wait for a page to be opened, and Kara Walker waits for a rights check.
 
 | Person | Piece | Where it stands |
 | --- | --- | --- |
 | Andrée Tretiakoff | Refreshable braille display | No named photograph found. A stop of the tour |
-| Elma Farnsworth | Cathode ray tube | Drawn in the fifth round, a study at label size: waits for a yes. A stop of the tour |
+| Elma Farnsworth | Cathode ray tube | On the site, a study at label size |
 | Marie Van Brittan Brown | Cathode ray tube | No drawing: the one verified photograph clips her hair |
 | Jingyu Lin | MicroLED | On the site, after a free picture |
 | Vicki Colvin | Quantum-dot display | On the site, a study |
 | Elsa Garmire | Scanned laser | On the site, a study |
 | Leota Toombs | Projection mapping | On the site, a study |
 | Kara Walker | Shadow play | Drawn in the fifth round, and held by the package for a rights check. A stop of the tour |
-| Zhenan Bao | Electrophoretic ink | Drawn in the fifth round, after a free picture: waits for a yes. A stop of the tour |
+| Zhenan Bao | Electrophoretic ink | Drawn in the fifth round, after a free picture: waits for the licence page to be opened. A stop of the tour |
 | Susan Hackwood | Electrowetting display | On the site, a study |
-| Paula Hammond | Electrochromic display | Drawn in the fifth round, after a free picture: waits for a yes. A stop of the tour |
+| Paula Hammond | Electrochromic display | Drawn in the fifth round, after a free picture: waits for the licence page to be opened. A stop of the tour |
 | Valerie Thomas | Illusion transmitter | On the site, after a free picture |
 | Elizabeth Downing | Static-volume display | No named photograph found. A stop of the tour |
 | Margaret Benyon | Holography | On the site, a study |
 | Mary Lou Jepsen | Holography | On the site, after a free picture |
 
-## Drawn in the fifth round: waiting for a yes (30)
+## Drawn in the fifth round: a page to open (18)
 
-Open `index.html` in the package for each drawing beside its record. A yes puts the drawing in `public/people` and one line in `src/data/portraits.ts`.
+Each goes on the site when the pages it rests on have been read and name the person with a fact of the label. For a drawing after a picture, the page must also state the licence the record gives. The last column says what is still to open.
 
-| Person | Piece | Size | What it rests on |
-| --- | --- | --- | --- |
-| Zhenan Bao (woman) | Electrophoretic ink, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. |
-| Paula Hammond (woman, blue line) | Electrochromic display, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. |
-| Albert Brown | Cathode ray tube, hall 2 | Label only | A study, from photographs published by The New York Times, 6 December 1969, scanned copy via The American Blackstory. |
-| Mark Dean (blue line) | Cathode ray tube, hall 2 | Full | A study, from photographs published by IBM; National Inventors Hall of Fame. |
-| John Rogers | Electrophoretic ink, hall 5 | Label only | A study, from photographs published by Northwestern University; University of Illinois / L. Brian Stauffer, via Commons. |
-| Dean DeLongchamp | Electrochromic display, hall 5 | Full | After a picture by NIST; individual photographer not stated, NIST public-information reuse policy. |
-| Lewis Latimer (blue line) | Numitron, hall 2 | Label only | After a picture by an unknown photographer, 1882, Public domain (Commons historical photograph). |
-| Akintunde Akinwande (blue line) | Field emission display, hall 2 | Label only | A study, from photographs published by MIT Center for Integrated Circuits and Systems; MIT Technology Licensing Office. |
-| Xiaogang Peng | Quantum-dot display, hall 3 | Label only | A study, from photographs published by University of Hamburg, lecture programme 2021; Nanjing University of Science and Technology, conference programme 2016. |
-| Yizheng Jin | Quantum-dot display, hall 3 | Label only | A study, from photographs published by Nanjing University of Science and Technology, conference programme 2016. |
-| Dawon Kahng | Thin-film electroluminescent panel, hall 3, and Liquid crystal display, hall 4 | Label only | A study, from photographs published by National Inventors Hall of Fame. |
-| Mohamed Atalla | Liquid crystal display, hall 4 | Label only | A study, from photographs published by National Inventors Hall of Fame; History of Semiconductor Engineering, via Commons. |
-| Sivaramakrishna Chandrasekhar | Liquid crystal display, hall 4 | Full | A study, from photographs published by Historic signed portrait photographed at CeNS, via Commons; Raman Research Institute. |
-| B. K. Sadashiva | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph Sadashiva15; Raman Research Institute, lecture photograph Sadashiva12. |
-| K. A. Suresh | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph RVP-01; Raman Research Institute, named biography. |
-| Lanny Smoot (blue line) | Projection mapping, hall 4 | Full | A study, from photographs published by National Inventors Hall of Fame; The Walt Disney Company. |
-| Ali Javan | Holography, hall 7 | Label only | A study, from photographs published by National Inventors Hall of Fame; MIT Physics Annual 2017, in remembrance. |
-| Nasser Peyghambarian | Holography, hall 7 | Full | A study, from photographs published by University of Arizona, Optical Sciences; University of Arizona, Semiconductor Manufacturing. |
-| Pierre-Alexandre Blanche | Holography, hall 7 | Label only | A study, from photographs published by University of Arizona, IEEE author manuscript; University of Arizona, 2021 Optimax award. |
-| Charles Harrison (blue line) | Stereoscope and 3D glasses, hall 7 | Label only | A study, from photographs published by Cooper Hewitt / Rob Tarpey, 2008; The Strong / Tim Klein, 1998, republished by Global Toy News. |
-| Hank Willis Thomas (blue line) | Lenticular display, hall 7 | Full | A study, from photographs published by New City Arts / Andrea Blanch; Ford Foundation. |
-| Samuel Achilefu (blue line) | Head-mounted display, hall 7 | Full | A study, from photographs published by UT Southwestern; Washington University in St. Louis. |
-| Horst Hörtner | Drone light show, hall 1 | Full | A study, from photographs published by Ars Electronica. Replaces a drawing that was stopped. |
-| Elma Farnsworth (woman) | Cathode ray tube, hall 2 | Label only | A study, from photographs published by Television Academy Foundation. Replaces a drawing that was stopped. |
-| Tadashi Nakamura | Vacuum fluorescent display, hall 2 | Full | A study, from photographs published by Electronic Design (archived by World Radio History); Noritake Itron. Replaces a drawing that was stopped. |
-| Gerald Pighini | LED display, hall 3 | Label only | A study, from photographs published by Hewlett-Packard Journal (HP Archive). Replaces a drawing that was stopped. |
-| Barrett Comiskey | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
-| J. D. Albert | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
-| Joseph Jacobson | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
-| Gerardo Beni | Electrowetting display, hall 5 | Full | A study, from photographs published by University of California, Riverside. Replaces a drawing that was stopped. |
+| Person | Piece | Size | What it rests on | Still to open |
+| --- | --- | --- | --- | --- |
+| Zhenan Bao (woman) | Electrophoretic ink, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. | The commons page that states the licence |
+| Paula Hammond (woman, blue line) | Electrochromic display, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. | The commons page that states the licence |
+| Albert Brown | Cathode ray tube, hall 2 | Label only | A study, from photographs published by The New York Times, 6 December 1969, scanned copy via The American Blackstory. | Every page |
+| John Rogers | Electrophoretic ink, hall 5 | Label only | A study, from photographs published by Northwestern University; University of Illinois / L. Brian Stauffer, via Commons. | Every page |
+| Dean DeLongchamp | Electrochromic display, hall 5 | Full | After a picture by NIST; individual photographer not stated, NIST public-information reuse policy. | Every page |
+| Lewis Latimer (blue line) | Numitron, hall 2 | Label only | After a picture by an unknown photographer, 1882, Public domain (Commons historical photograph). | The commons page that states why the photograph is in the public domain |
+| Xiaogang Peng | Quantum-dot display, hall 3 | Label only | A study, from photographs published by University of Hamburg, lecture programme 2021; Nanjing University of Science and Technology, conference programme 2016. | Every page |
+| Yizheng Jin | Quantum-dot display, hall 3 | Label only | A study, from photographs published by Nanjing University of Science and Technology, conference programme 2016. | Every page |
+| Mohamed Atalla | Liquid crystal display, hall 4 | Label only | A study, from photographs published by National Inventors Hall of Fame; History of Semiconductor Engineering, via Commons. | The commons page of the 1963 photograph |
+| Sivaramakrishna Chandrasekhar | Liquid crystal display, hall 4 | Full | A study, from photographs published by Historic signed portrait photographed at CeNS, via Commons; Raman Research Institute. | Every page |
+| B. K. Sadashiva | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph Sadashiva15; Raman Research Institute, lecture photograph Sadashiva12. | Every page |
+| K. A. Suresh | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph RVP-01; Raman Research Institute, named biography. | Every page |
+| Ali Javan | Holography, hall 7 | Label only | A study, from photographs published by National Inventors Hall of Fame; MIT Physics Annual 2017, in remembrance. | Every page |
+| Nasser Peyghambarian | Holography, hall 7 | Full | A study, from photographs published by University of Arizona, Optical Sciences; University of Arizona, Semiconductor Manufacturing. | Every page |
+| Pierre-Alexandre Blanche | Holography, hall 7 | Label only | A study, from photographs published by University of Arizona, IEEE author manuscript; University of Arizona, 2021 Optimax award. | Every page |
+| Charles Harrison (blue line) | Stereoscope and 3D glasses, hall 7 | Label only | A study, from photographs published by Cooper Hewitt / Rob Tarpey, 2008; The Strong / Tim Klein, 1998, republished by Global Toy News. | The global toy news page |
+| Hank Willis Thomas (blue line) | Lenticular display, hall 7 | Full | A study, from photographs published by New City Arts / Andrea Blanch; Ford Foundation. | Every page |
+| Samuel Achilefu (blue line) | Head-mounted display, hall 7 | Full | A study, from photographs published by UT Southwestern; Washington University in St. Louis. | The ut southwestern profile |
 
 ## Held for a rights check (1)
 

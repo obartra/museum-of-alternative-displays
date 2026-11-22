@@ -94,6 +94,18 @@ export const portraits: Record<string, Portrait> = {
   "Daniel Smalley": { file: "daniel-smalley.webp", study: [{ by: "Future Display Group", source: "https://www.smalleyholography.org/contact-us" }] },
   "Ryuji Hirayama": { file: "ryuji-hirayama.webp", small: true, study: [{ by: "Ryuji Hirayama", source: "https://ryujihirayama.github.io/web/" }] },
   "Diego Martinez Plasencia": { file: "diego-martinez-plasencia.webp", study: [{ by: "ACM VRST 2021", source: "https://vrst.acm.org/vrst2021/keynotes/" }] },
+  "Mark Dean": { file: "mark-dean.webp", study: [{ by: "IBM", source: "https://www.ibm.com/history/mark-dean" }, { by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/mark-dean" }] },
+  "Akintunde Akinwande": { file: "akintunde-akinwande.webp", small: true, study: [{ by: "MIT Center for International Studies", source: "https://cis.mit.edu/our-people/akintunde-akinwande" }, { by: "MIT Technology Licensing Office", source: "https://tlo.mit.edu/industry-entrepreneurs/researchers/akintunde-ibitayo-akinwande" }] },
+  "Dawon Kahng": { file: "dawon-kahng.webp", small: true, study: [{ by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/dawon-kahng" }] },
+  "Lanny Smoot": { file: "lanny-smoot.webp", study: [{ by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/lanny-smoot" }, { by: "The Walt Disney Company", source: "https://thewaltdisneycompany.com/lanny-smoot-to-be-the-first-disney-imagineer-inducted-into-the-national-inventors-hall-of-fame/" }] },
+  "Horst Hörtner": { file: "horst-hortner.webp", study: [{ by: "Ars Electronica", source: "https://ars.electronica.art/futurelab/de/hoertner-horst/" }, { by: "Ars Electronica", source: "https://ars.electronica.art/fl25/storyline/virtual-worlds/" }] },
+  "Elma Farnsworth": { file: "elma-farnsworth.webp", small: true, study: [{ by: "Television Academy Foundation, interview of 1996", source: "https://interviews.televisionacademy.com/interviews/elma-farnsworth" }] },
+  "Tadashi Nakamura": { file: "tadashi-nakamura.webp", study: [{ by: "Electronic Design, 15 March 1976, at World Radio History", source: "https://www.worldradiohistory.com/Archive-Electronic-Design/1976/Electronic-Design-V24-N06-1976-0315.pdf" }, { by: "Noritake Itron", source: "https://www.noritake-itron.jp/eng/profile/nakamura/" }] },
+  "Gerald Pighini": { file: "gerald-pighini.webp", small: true, study: [{ by: "Hewlett-Packard Journal, February 1969, at HP Archive", source: "https://hparchive.com/Journals/HPJ-1969-02.pdf" }] },
+  "Barrett Comiskey": { file: "barrett-comiskey.webp", study: [{ by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/barrett-o-comiskey" }] },
+  "J. D. Albert": { file: "j-d-albert.webp", study: [{ by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/jonathan-d-albert" }] },
+  "Joseph Jacobson": { file: "joseph-jacobson.webp", study: [{ by: "National Inventors Hall of Fame", source: "https://www.invent.org/inductees/joseph-m-jacobson" }] },
+  "Gerardo Beni": { file: "gerardo-beni.webp", study: [{ by: "University of California, Riverside", source: "https://cris.ucr.edu/people/gerardo-beni" }] },
 };
 
 /** The file name a portrait is expected under: the name in plain lower-case letters, joined by hyphens. */
