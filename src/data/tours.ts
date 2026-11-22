@@ -174,7 +174,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'end', title: 'The end of the blue line', text: [
         'That is the end of the blue line. It began with a camera at a front door. It ends with goggles in an operating theatre.',
-        'Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black. The People page gives the source for every name.',
+        'Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name.',
         'The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it.',
       ] },
     ],

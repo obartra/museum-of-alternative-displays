@@ -9315,7 +9315,7 @@ msgstr ""
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.2"
-msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black. The People page gives the source for every name."
+msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
 msgstr ""
 
 #: tour-black
