@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 134 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 143 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -116,6 +116,15 @@ Take the picture from the person's own article or file page, where the caption s
 
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
+| Mozi | Camera obscura | Taught in China about 430 BCE, and the Mohist school is named after him. Its later members wrote the Canons, which hold an early account of a picture turned over by a small hole. |  | `public/people/mozi.jpg` |
+| Ibn al-Haytham | Camera obscura | Born in Basra about 965, died in Cairo about 1040. In a dark chamber he studied how light passes through an opening, and how the sun in eclipse looks through a small hole. |  | `public/people/ibn-al-haytham.jpg` |
+| Gemma Frisius | Camera obscura | Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room. His book of 1545 has the oldest known printed drawing of one. |  | `public/people/gemma-frisius.jpg` |
+| Daniele Barbaro | Camera obscura | Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer. |  | `public/people/daniele-barbaro.jpg` |
+| Johannes Kepler | Camera obscura | Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes. |  | `public/people/johannes-kepler.jpg` |
+| Ibn Daniyal | Shadow play | Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre. |  | `public/people/ibn-daniyal.jpg` |
+| François Dominique Séraphin | Shadow play | Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows. |  | `public/people/francois-dominique-seraphin.jpg` |
+| Henri Rivière | Shadow play | Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc. |  | `public/people/henri-riviere.jpg` |
+| Kara Walker | Shadow play | American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America. |  | `public/people/kara-walker.jpg` |
 | Martin Schadt | Liquid crystal display | Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970. | yes | `public/people/martin-schadt.webp` |
 | Wolfgang Helfrich | Liquid crystal display | Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970. | yes | `public/people/wolfgang-helfrich.webp` |
 | James Fergason | Liquid crystal display | Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court. | yes | `public/people/james-fergason.webp` |

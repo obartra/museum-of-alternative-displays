@@ -1,6 +1,6 @@
 # Portraits still to do
 
-The labels name 134 people. 74 have a portrait on the site and 60 do not. This file lists them, and those who are on their way to the labels: first the 24 people the labels gained on 22 November 2026, who have no drawing yet (seven in the morning, and seventeen with the blue line), then those on their way, then the 36 that were open before, sorted by what each one needs. That last part is written out from the third package of drawings, received on 21 November 2026, and from the check made of it here. `PORTRAITS.md` has the whole list and the rules.
+The labels name 143 people. 74 have a portrait on the site and 69 do not. This file lists them: first the 33 people the labels gained on 22 November 2026, who have no drawing yet (seven in the morning, seventeen with the blue line, and nine with the two new pieces of hall 4), then the 36 that were open before, sorted by what each one needs. That last part is written out from the third package of drawings, received on 21 November 2026, and from the check made of it here. `PORTRAITS.md` has the whole list and the rules.
 
 A fourth package, received on 22 November 2026, held one drawing: Louis Brus, after a photograph of 2008. Its own record says that the grant to reuse that photograph could not be verified, so the drawing stays off the site, and the study of Brus that is there stays.
 
@@ -8,8 +8,8 @@ Of the 74 on the site, 39 are drawings after a picture that is free to reuse, an
 
 | What is needed | People |
 | --- | --- |
-| A first drawing: new on the labels on 22 November | 24 |
-| A first drawing: on their way to the labels | 1, and up to 5 more with the two new pieces |
+| A first drawing: new on the labels on 22 November | 30 |
+| No drawing: no portrait from life exists | 3 |
 | Another look: a drawing exists and was stopped | 13 |
 | A photograph that a drawing can rest on | 7 |
 | A named photograph: none was found, or it is not settled who the picture shows | 16 |
@@ -217,20 +217,52 @@ Kara Walker joins this line as well once a source for her is on file.
 - Who this is: Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons, on which a dye makes cancer cells glow. First worn in an operation in 2014.
 - Where he is named: [Washington University in St. Louis, 2016](https://source.washu.edu/2016/02/washington-people-samuel-achilefu/); [Washington University in St. Louis, 2014](https://source.washu.edu/2014/02/special-glasses-help-surgeons-ee-cancer/).
 
-## On their way to the labels
+## New on the labels with the two new pieces (9)
 
-### Kara Walker (woman, will be a stop of the tour)
+Hall 4 gained the camera obscura and the shadow play on 22 November 2026. Their labels name nine people. None of the nine made the piece: each label says that no inventor is known, and names people who described the thing, wrote for it or work with it.
 
-- Piece: Shadow play, hall 4, one of the two new pieces.
-- Who this is: Artist in New York, known for silhouettes cut from paper. She has made films with shadow puppets.
-- Where it stands: her line is written once the piece is in place, and its sources come with it. She adds a thirteenth stop to the women's tour.
+### Kara Walker (woman, a stop of the tour, blue line)
 
-### The two new pieces
+- Piece: Shadow play, hall 4.
+- Who this is: American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.
+- Sources on the label: [Museum of Modern Art](https://www.moma.org/collection/works/97669); [Sammlung Goetz](https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/).
+- What is needed: a photograph that a named page published, for a study. She is a living artist, so a picture that is free to reuse is unlikely.
+- She is the thirteenth stop of the women's tour and the tenth of the blue line.
 
-Hall 4 is gaining two pieces, the camera obscura and the shadow play. Their labels are drafts and the names can still change.
+### Gemma Frisius
 
-- Camera obscura, as drafted: Mozi and Ibn al-Haytham, of whom no portrait from life exists, so they get no drawing. Gemma Frisius, Daniele Barbaro and Johannes Kepler were each painted or engraved in their lifetime, so a drawing after a picture in the public domain should be possible.
-- Shadow play, as drafted: Ibn Daniyal, of whom no portrait from life exists. François Dominique Séraphin and Henri Rivière, for whom a picture in the public domain should exist. Kara Walker is added after the piece is in place.
+- Piece: Camera obscura, hall 4.
+- Who this is: Physician and instrument maker. He watched the solar eclipse of 24 January 1544 at Leuven in a darkened room, and his book of 1545 has the oldest known printed drawing of one.
+- What is needed: a drawing after a picture in the public domain. He was painted and engraved in his lifetime.
+
+### Daniele Barbaro
+
+- Piece: Camera obscura, hall 4.
+- Who this is: Venetian nobleman. In 1568 he described a spectacle lens set in the hole, and a cover over part of the lens to make the picture clearer.
+- What is needed: a drawing after a picture in the public domain. He was painted in his lifetime.
+
+### Johannes Kepler
+
+- Piece: Camera obscura, hall 4.
+- Who this is: Was the first to use the name camera obscura, in 1604. He made himself a portable dark tent with a lens, for sketching landscapes.
+- What is needed: a drawing after a picture in the public domain. Which of the portraits said to show him were made from life is disputed, so the source page has to say what it rests on.
+
+### François Dominique Séraphin
+
+- Piece: Shadow play, hall 4.
+- Who this is: Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784.
+- What is needed: a picture in the public domain that a named page says shows him. None has been looked for yet.
+
+### Henri Rivière
+
+- Piece: Shadow play, hall 4.
+- Who this is: Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896.
+- What is needed: a drawing after a picture in the public domain, which should exist from the years of Le Chat Noir. None has been looked for yet.
+
+### Mozi, Ibn al-Haytham and Ibn Daniyal
+
+- Pieces: Camera obscura (Mozi, Ibn al-Haytham) and Shadow play (Ibn Daniyal), hall 4.
+- No portrait from life exists of any of the three. Every picture said to show one of them was imagined centuries later, so their places stay empty and no drawing is planned.
 
 ## Another look (13)
 
