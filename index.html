@@ -34,6 +34,7 @@
   var day = true;
   try { day = localStorage.getItem('lights') !== 'off'; } catch (e) {}
   document.documentElement.dataset.lights = day ? 'on' : 'off';
+  if (!day) document.querySelector('meta[name="theme-color"]').content = '#08101a';
   var piece = /^#\/?piece-([a-z0-9-]+)/.exec(location.hash), hall = /^#\/?hall-(\d)/.exec(location.hash);
   var first = __FIRST_IN_HALL__;
   var id = piece ? piece[1] : hall ? first[hall[1]] : '';
@@ -42,15 +43,25 @@
   // the same sizes as the picture itself declares, or the browser would fetch a second file
   if (id) {
     link.imageSrcset = './posters/' + id + when + '380.webp 380w, ./posters/' + id + when + '760.webp 760w';
-    link.imageSizes = piece ? '(min-width: 900px) 50vw, 100vw' : '(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px';
+    link.imageSizes = piece ? '(min-width: 900px) 50vw, 100vw' : '(max-width: 359px) 92vw, (max-width: 900px) 46vw, 300px';
     link.href = './posters/' + id + when + '760.webp';
-  } else if (!location.hash.replace('#', '') && matchMedia('(min-width: 760px)').matches) {
-    // the entrance, on a screen wide enough to show the room beside the board
+  } else if (!location.hash.replace('#', '')) {
+    // the entrance opens on the room, on a phone as on a desk
     link.imageSrcset = './room' + when + '600.webp 600w, ./room' + when + '1200.webp 1200w';
-    link.imageSizes = '(min-width: 760px) 46vw, 92vw';
+    link.imageSizes = '(min-width: 900px) 56vw, 100vw';
     link.href = './room' + when + '1200.webp';
-  } else return;
-  document.head.appendChild(link);
+  } else link = null;
+  if (link) document.head.appendChild(link);
+  // A visitor who reads in another language needs its words before a page can be shown. They are asked for now,
+  // beside the script of the pages, and not after it: the language is chosen here the way the pages choose it.
+  var words = __LANG_FILES__, lang = '';
+  try { lang = localStorage.getItem('lang') || ''; } catch (e) {}
+  if (lang !== 'en' && !words[lang]) {
+    lang = '';
+    var tags = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < tags.length && !lang; i++) { var code = tags[i].toLowerCase().split('-')[0]; if (code === 'en' || words[code]) lang = code; }
+  }
+  if (words[lang]) { var hint = document.createElement('link'); hint.rel = 'modulepreload'; hint.crossOrigin = ''; hint.href = './' + words[lang]; document.head.appendChild(hint); }
 })();
 </script>
 </head>
@@ -58,6 +69,11 @@
 <a class="vh" href="#main">Skip to content</a>
 <div id="app"></div>
 <noscript><p style="padding:24px;font-family:sans-serif">This museum needs JavaScript to show its pages. Please switch it on in your browser.</p></noscript>
+<script>
+// The two faces every page is set in are asked for now, while the script of the pages is still on its way, so that
+// the first picture of the page does not wait for one after the other.
+try { document.fonts.load('800 1em "Sofia Sans Extra Condensed Variable"'); document.fonts.load('500 1em "Sofia Sans Variable"'); } catch (e) {}
+</script>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

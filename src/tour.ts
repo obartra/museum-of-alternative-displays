@@ -153,7 +153,7 @@ export function tourPageHtml(tour: Tour): string {
   const told = said.tour(tour)!;
   return `
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${esc(told.title)}</span></h1><p class="lead">${esc(told.lead)}</p></div>
+  <div class="pagehead"><h1 class="title">${esc(told.title)}</h1><p class="lead">${esc(told.lead)}</p></div>
   <p class="ways"><a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.follow')}</a></p>
   <ol class="tour">${tour.parts.map((part) => `<li class="tour__part" id="part-${part.id}">${partHtml(tour, part.id)}</li>`).join('')}</ol>
 </div>`;

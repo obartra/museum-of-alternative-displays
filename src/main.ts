@@ -27,7 +27,9 @@ const app = document.getElementById('app')!;
 const root = document.documentElement;
 /** The name of a page for the browser tab. */
 const titled = (page: string) => t('title.page', { page, site: t('site.name') });
-const three = () => import('./three/runtime');
+/** The models draw a typed line on a few of their screens. That face is fetched with them, and no page waits for it. */
+const typed = () => document.fonts.load('16px "PT Mono"').catch(() => undefined);
+const three = () => Promise.all([import('./three/runtime'), typed()]).then(([runtime]) => runtime);
 const hallColour = (n: number) => getComputedStyle(root).getPropertyValue(`--h${n}`).trim();
 
 // ---------- daylight: one switch for the whole building, day or night ----------
@@ -37,7 +39,7 @@ const lightListeners = new Set<(on: boolean) => void>();
 function setLights(on: boolean): void {
   lightsOn = on;
   root.dataset.lights = on ? 'on' : 'off';
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', on ? '#e8e9e3' : '#000000');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', on ? '#e8e9e3' : '#08101a');
   try { localStorage.setItem('lights', on ? 'on' : 'off'); } catch { /* fine */ }
   for (const sw of document.querySelectorAll<HTMLElement>('[data-lights-switch]')) sw.setAttribute('aria-checked', String(on));
   for (const fn of lightListeners) fn(on);
@@ -150,30 +152,32 @@ function entrance(): void {
     return `<a class="board__row" href="#hall-${x.id}" data-hall="${x.id}"><span class="vh">${tx('board.row', { n: x.id, name, count: count('count.pieces', n) })}</span><span aria-hidden="true" style="display:contents">${cell(String(x.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(name, wide)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
   }).join('');
   shell(`
-<div class="stack">
-  <h1 class="lead" style="max-width: 30ch; font-size: clamp(1.45rem, 5.4vw, 2.3rem); line-height: 1.16; font-weight: 600">${tx('entrance.lead', { n: pieces.length })}</h1>
-  <p class="prose">${tx('entrance.intro')}</p>
-  <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
-  <a class="visitcard" href="#visit"><span class="visitcard__kind">${tx('visit.kind')}</span><strong class="visitcard__title">${tx('visit.title')}</strong><span class="visitcard__lead">${tx('visit.lead')}</span></a>
-  ${toursNow().map(tourCard).join('')}
-  <div class="split">
+<div class="stack entrance">
+  <div class="hero">
+    <figure class="roompic hero__pic"><img data-room src="${room(1200)}" srcset="${roomSet()}" sizes="${ROOM_SIZES}" width="1200" height="800" alt="${tx('entrance.room.alt')}" fetchpriority="high" decoding="async"><div class="hero__switch">${switchHtml()}</div></figure>
+    <div class="hero__words">
+      <h1 class="hero__line">${tx('entrance.lead', { n: pieces.length })}</h1>
+      <p class="prose">${tx('entrance.intro')}</p>
+    </div>
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
       <div class="board__rows">${rows}</div>
     </section>
-    <figure class="roompic"><img data-room src="${room(1200)}" srcset="${roomSet()}" sizes="(min-width: 760px) 46vw, 92vw" width="1200" height="800" alt="${tx('entrance.room.alt')}" decoding="async"></figure>
+    <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
   </div>
-  <section class="stack" style="--gap: 14px">
-    <h2 class="h-sec">${tx('entrance.room')}</h2>
-    <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p></div>
-  </section>
+  <a class="visitcard" href="#visit"><span class="visitcard__kind">${tx('visit.kind')}</span><strong class="visitcard__title">${tx('visit.title')}</strong><span class="visitcard__lead">${tx('visit.lead')}</span></a>
+  ${toursNow().map(tourCard).join('')}
   <section class="hallpic">
-    <a class="hallpic__img" href="#walk" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 1160px, 92vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
+    <a class="hallpic__img" href="#walk" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 720px, (min-width: 760px) 58vw, 100vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
     <div class="stack" style="--gap: 12px">
       <h2 class="h-sec">${tx('walk.title')}</h2>
       <p class="prose">${tx('walk.lead', { n: pieces.length })}</p>
       <p class="ways"><a class="btn btn--go" href="#walk">${tx('walk.start')}</a></p>
     </div>
+  </section>
+  <section class="stack" style="--gap: 12px">
+    <h2 class="h-sec">${tx('entrance.room')}</h2>
+    <div class="prose"><p>${tx('entrance.room.1')}</p><p>${tx('entrance.room.2')}</p></div>
   </section>
 </div>`);
   // the board settles into place the way a real one does, one flap at a time
@@ -209,6 +213,8 @@ const posterSet = (id: string, on = lightsOn) => `${poster(id, 380, on)} 380w, $
 /** The room itself, in one wide picture for the entrance. */
 const room = (w: 600 | 1200, on = lightsOn) => `./room-${on ? 'day' : 'night'}-${w}.webp`;
 const roomSet = (on = lightsOn) => `${room(600, on)} 600w, ${room(1200, on)} 1200w`;
+/** How wide the room is drawn at the door. The page that opens this one asks for the picture early with the same words. */
+const ROOM_SIZES = '(min-width: 900px) 56vw, 100vw';
 /** The long hall of the walk, seen from its door. */
 const hallPic = (w: 800 | 1600, on = lightsOn) => `./walk-${on ? 'day' : 'night'}-${w}.webp`;
 const hallPicSet = (on = lightsOn) => `${hallPic(800, on)} 800w, ${hallPic(1600, on)} 1600w`;
@@ -217,13 +223,30 @@ lightListeners.add((on) => {
     const id = img.dataset.poster!;
     img.srcset = posterSet(id, on); img.src = poster(id, 760, on);
   }
-  for (const img of document.querySelectorAll<HTMLImageElement>('img[data-room]')) { img.srcset = roomSet(on); img.src = room(1200, on); }
+  for (const img of document.querySelectorAll<HTMLImageElement>('img[data-room]')) {
+    // the room does not jump from day to night: the picture it was stays behind while the picture it becomes comes up over it
+    const frame = img.parentElement, was = img.currentSrc;
+    if (frame && was && !calm) {
+      frame.style.backgroundImage = `url("${was}")`;
+      img.style.transition = 'none'; img.style.opacity = '0';
+      void img.offsetWidth;
+      img.style.transition = '';
+    }
+    img.srcset = roomSet(on); img.src = room(1200, on);
+    const up = () => { img.style.opacity = ''; };
+    if (img.decode) img.decode().then(up, up); else up();
+  }
   for (const img of document.querySelectorAll<HTMLImageElement>('img[data-hallpic]')) { img.srcset = hallPicSet(on); img.src = hallPic(800, on); }
 });
 
+/** How wide a tile's picture is drawn: two to a row on a phone. The page that opens this one asks for the first picture early with the same words. */
+const TILE_SIZES = '(max-width: 359px) 92vw, (max-width: 900px) 46vw, 300px';
 /** The first tiles of a list are in view when the page opens: they load at once, the rest as they come near. */
 function tile(p: Piece, i = 9): string {
-  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 300px" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta">${yearOf(p)} ${chip(p.status)}</div></a>`;
+  // as on the plate of its block in the halls: the first people named as its makers, and its date
+  const who = people[p.id]?.people.find((e) => !e.aside)?.who ?? [];
+  const by = [esc(who.length > 2 ? `${who.slice(0, 2).join(comma())} +${who.length - 2}` : who.join(comma())), yearOf(p)].filter(Boolean).join(esc(comma()));
+  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="${TILE_SIZES}" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta"><span>${by}</span>${chip(p.status)}</div></a>`;
 }
 
 function hallView(n: number): void {
@@ -280,8 +303,8 @@ function peopleView(): void {
   const pill = (value: string, label: string) => `<label class="pill"><input type="radio" name="who" value="${value}"${peopleOnly === value ? ' checked' : ''}><span>${label}</span></label>`;
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
-  <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${trails.map((tr) => pill(tr.id, tx(`trail.${tr.id}`))).join('')}</fieldset></form>
+  <div class="pagehead"><h1 class="title">${tx('nav.people')}</h1><p class="lead">${tx('people.lead')}</p></div>
+  <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend><div class="filters__keys">${pill('', tx('people.all'))}${trails.map((tr) => pill(tr.id, tx(`trail.${tr.id}`))).join('')}</div></fieldset></form>
   <p class="count" id="who-count" role="status"></p>
   <p class="ways" id="who-walk" hidden></p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
@@ -301,7 +324,7 @@ function peopleView(): void {
         for (const { e } of list) for (const n of tr ? tr.who(e) : e.who) names.add(n);
         return `<section class="who"><h3 class="who__piece"><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, tr ? (n) => tr.who(e).includes(n) : undefined)).join('')}</ul></section>`;
       }).join('');
-      return blocks ? `<section class="stack" style="--gap: 4px"><h2 class="h-sec">${tx('hall.title', { n: h.id, name: said.hall(h).name })}</h2><div class="who__grid">${blocks}</div></section>` : '';
+      return blocks ? `<section class="stack" style="--gap: 4px" data-hall="${h.id}"><h2 class="h-sec who__hall"><b class="who__no" aria-hidden="true">${h.id}</b><span>${tx('hall.title', { n: h.id, name: said.hall(h).name })}</span></h2><div class="who__grid">${blocks}</div></section>` : '';
     }).join('');
     tally.textContent = t('people.count', { n: names.size });
     // the way into the halls along the trail: its guided tour where the language tells one, or the trail itself
@@ -383,7 +406,7 @@ function visitEnd(): void {
   shell(`
 <div class="stack">
   <div class="stack prose" style="--gap: 12px">
-    <h1 class="h-sec">${tx('visit.end.title', { n: pieces.length })}</h1>
+    <h1 class="title">${tx('visit.end.title', { n: pieces.length })}</h1>
     <p>${tx('visit.end.1')}</p>
     <p>${tx('visit.end.2')}</p>
   </div>
@@ -421,7 +444,7 @@ ${step === undefined ? '' : visitBand(step)}
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
-    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a><button type="button" class="crumbs__share" data-share="piece/${p.id}/" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
+    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="piece/${p.id}/" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
@@ -650,12 +673,12 @@ function depot(): void {
   const s = depotState;
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('depot.title')}</span></h1><p class="lead">${tx('depot.lead')}</p></div>
+  <div class="pagehead"><h1 class="title">${tx('depot.title')}</h1><p class="lead">${tx('depot.lead')}</p></div>
   <form class="filters" id="filters">
-    <fieldset><legend>${tx('depot.light')}</legend>${pill('principle', '', tx('depot.any'), 'radio', s.principle === '')}${(Object.keys(PRINCIPLE_LABEL) as Principle[]).map((k) => pill('principle', k, esc(said.principle(k)), 'radio', s.principle === k)).join('')}</fieldset>
-    <fieldset><legend>${tx('depot.must')}</legend>${(Object.keys(NEED_LABEL) as Exclude<Need, 'dark'>[]).filter((k) => (k as Need) !== 'dark').map((k) => pill('needs', k, tx(`depot.must.${k}`), 'checkbox', s.needs.has(k))).join('')}</fieldset>
-    <fieldset><legend>${tx('depot.status')}</legend>${pill('status', '', tx('depot.any'), 'radio', s.status === '')}${(Object.keys(STATUS_LABEL) as Status[]).map((k) => pill('status', k, esc(said.status(k)), 'radio', s.status === k)).join('')}</fieldset>
-    <fieldset><legend>${tx('depot.order')}</legend>${pill('sort', 'hall', tx('depot.sort.hall'), 'radio', s.sort === 'hall')}${pill('sort', 'year', tx('depot.sort.year'), 'radio', s.sort === 'year')}${pill('sort', 'name', tx('depot.sort.name'), 'radio', s.sort === 'name')}</fieldset>
+    <fieldset><legend>${tx('depot.light')}</legend><div class="filters__keys">${pill('principle', '', tx('depot.any'), 'radio', s.principle === '')}${(Object.keys(PRINCIPLE_LABEL) as Principle[]).map((k) => pill('principle', k, esc(said.principle(k)), 'radio', s.principle === k)).join('')}</div></fieldset>
+    <fieldset><legend>${tx('depot.must')}</legend><div class="filters__keys">${(Object.keys(NEED_LABEL) as Exclude<Need, 'dark'>[]).filter((k) => (k as Need) !== 'dark').map((k) => pill('needs', k, tx(`depot.must.${k}`), 'checkbox', s.needs.has(k))).join('')}</div></fieldset>
+    <fieldset><legend>${tx('depot.status')}</legend><div class="filters__keys">${pill('status', '', tx('depot.any'), 'radio', s.status === '')}${(Object.keys(STATUS_LABEL) as Status[]).map((k) => pill('status', k, esc(said.status(k)), 'radio', s.status === k)).join('')}</div></fieldset>
+    <fieldset><legend>${tx('depot.order')}</legend><div class="filters__keys">${pill('sort', 'hall', tx('depot.sort.hall'), 'radio', s.sort === 'hall')}${pill('sort', 'year', tx('depot.sort.year'), 'radio', s.sort === 'year')}${pill('sort', 'name', tx('depot.sort.name'), 'radio', s.sort === 'name')}</div></fieldset>
   </form>
   <p class="count" id="count" role="status"></p>
   <div class="rows" id="rows"></div>
@@ -691,7 +714,7 @@ function about(): void {
   const held = archiveCount();
   shell(`
 <div class="stack">
-  <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.about')}</span></h1><p class="lead">${tx('about.lead')}</p></div>
+  <div class="pagehead"><h1 class="title">${tx('nav.about')}</h1><p class="lead">${tx('about.lead')}</p></div>
   <div class="split">
     <section class="stack prose" style="--gap: 12px">
       <h2 class="h-sec">${tx('about.piece')}</h2>
@@ -747,7 +770,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
   const asked = !!toured && justAsked(), auto = wants3d() && (asked || !matchMedia('(pointer: coarse)').matches);
   shell(`
 <div class="walkpage">
-  <div class="hallhead walk__lead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('walk.title')}</span></h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
+  <div class="hallhead walk__lead"><h1 class="title">${tx('walk.title')}</h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
   <div class="walk" id="walk" data-hall="${from?.hall ?? 1}"><div class="walk__view"><img class="walk__still" src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="100vw" width="1600" height="900" alt="" fetchpriority="high" decoding="async"></div><div class="walk__wait"></div></div>
 </div>`, undefined, 'walk');
   const host = document.getElementById('walk')!;
@@ -764,6 +787,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
     stage.attach();
     return { stage, canvas: cv, build: (id: string) => builders[id]() };
   };
+  void typed();
   void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: switchHtml(), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title, stage: lend }); })
     .catch(() => { hush(); host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
   leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); hush(); };
@@ -771,7 +795,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
 
 function notFound(): void {
   document.title = titled(t('missing.page'));
-  shell(`<div class="stack"><h1 class="h-sec">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#index' })}</p></div>`);
+  shell(`<div class="pagehead"><h1 class="title">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#index' })}</p></div>`);
 }
 
 // ---------- contact sheet, for checking every model at once ----------
@@ -833,6 +857,27 @@ function route(): void {
   fitPlates();
   window.scrollTo(0, 0);
   document.body.dataset.ready = '1';
+  shown = location.hash;
+}
+
+/**
+ * From one page to the next, the way a visitor steps from the hall up to a piece: the picture they chose is carried
+ * from its place in the list to the stand, and on the way back from the stand to its place. The rest of the page
+ * changes under it in a short fade. Where the browser cannot do this, or the visitor has asked for stillness, the
+ * page simply changes.
+ */
+let shown = '';
+function go(): void {
+  if (calm || typeof document.startViewTransition !== 'function') return route();
+  const pictureOf = (hash: string) => (/^#piece-[a-z0-9-]+$/.test(hash) ? document.querySelector<HTMLElement>(`a.tile[href="${hash}"] img`) : null);
+  const carry = (img: HTMLElement | null) => img?.style.setProperty('view-transition-name', 'stage');
+  const from = shown;
+  carry(pictureOf(location.hash));
+  const change = document.startViewTransition(() => { route(); carry(pictureOf(from)); });
+  const settle = () => { for (const img of document.querySelectorAll<HTMLElement>('a.tile img')) img.style.removeProperty('view-transition-name'); };
+  change.finished.then(settle, settle);
+  // a visitor who steps on before the change is over cuts it short, and that is no error
+  change.ready.catch(() => undefined);
 }
 
 /**
@@ -876,11 +921,15 @@ document.addEventListener('click', (e) => {
   }, () => undefined);
 });
 void findKept();
-window.addEventListener('hashchange', route);
+window.addEventListener('hashchange', go);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
 wireLangMenu((code) => {
   const y = window.scrollY;
   void useLang(code, true).then(() => { route(); window.scrollTo({ top: y, behavior: 'instant' }); document.getElementById('lang')?.focus(); });
 });
-const faces = () => Promise.all([document.fonts.load('800 40px "Sofia Sans Extra Condensed Variable"'), document.fonts.load('500 16px "Sofia Sans Variable"'), document.fonts.load('16px "PT Mono"')]).catch(() => undefined);
-void Promise.all([useLang(wanted()), faces()]).then(route);
+// the two faces every page is set in. The page that opens this one has already asked for them
+const faces = () => Promise.all([document.fonts.load('800 40px "Sofia Sans Extra Condensed Variable"'), document.fonts.load('500 16px "Sofia Sans Variable"')]).catch(() => undefined);
+// The faces are asked for early and are often here before this script is. The first page is then drawn in a turn
+// of its own, and not in the turn that read the script: two short pieces of work, where one long one would hold
+// up a slow phone.
+void Promise.all([useLang(wanted()), faces()]).then(breathe).then(route);

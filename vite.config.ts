@@ -44,6 +44,28 @@ function firstInHall(): Plugin {
 }
 
 /**
+ * The page's opening script asks early for the words of the visitor's language, so it needs the name the build gave
+ * to each language's file. While the site is being written there are no such files, and it asks for nothing.
+ */
+function langFiles(): Plugin {
+  return {
+    name: 'lang-files',
+    enforce: 'post',
+    transformIndexHtml: (html, ctx) => (ctx.server ? html.replace('__LANG_FILES__', '{}') : html),
+    generateBundle(_, bundle) {
+      const html = bundle['index.html'];
+      if (!html || html.type !== 'asset') return;
+      const files: Record<string, string> = {};
+      for (const [name, file] of Object.entries(bundle)) {
+        const code = file.type === 'chunk' ? /\/src\/i18n\/locales\/([a-z-]+)\.ts$/.exec(file.facadeModuleId ?? '')?.[1] : undefined;
+        if (code) files[code] = name;
+      }
+      html.source = String(html.source).replace('__LANG_FILES__', () => JSON.stringify(files));
+    },
+  };
+}
+
+/**
  * The worker that keeps the museum on a visitor's device (`src/sw.ts`) is built into `sw.js`, beside the page: a
  * worker serves the folder it lies in. It has to name the files of the build, and their names change with their
  * contents, so the names are written into it here, once they are known. With them goes a mark for the build, made
@@ -102,5 +124,5 @@ export default defineConfig({
   base: './',
   define: { __CHANGED__: JSON.stringify(changed) },
   build: { target: 'es2022', chunkSizeWarningLimit: 900 },
-  plugins: [firstInHall(), inlineCss(), keeper()],
+  plugins: [firstInHall(), inlineCss(), langFiles(), keeper()],
 });

@@ -1,46 +1,78 @@
-/* Plain grounds, black lettering, and one enamel colour for each hall: on its plate, its tab and the block its pieces stand on. */
+/* Three materials, each with one job. Enamel says: the plates, the keys and the lettering. Concrete carries: what a
+   picture stands on, and the rules. Glass shows: the pictures, by day and by night.
+   The colours are taken from the building as its own pictures show it. */
 :root {
-  --wash: #e8e9e3;      /* whitewashed wall */
-  --wash-2: #dcdfd7;    /* recessed panel */
-  --ink: #14171a;       /* enamel black lettering */
-  --ink-2: #4c5356;     /* secondary lettering */
+  --wash: #e8e9e3;      /* limewash: the wall of a hall in daylight, and the ground of every page */
+  --wash-2: #dcdfd7;    /* the wall in shade: a recessed panel */
+  --block: #c9cbc4;     /* cast concrete: what a picture stands on */
+  --ink: #14171a;       /* frame black: lettering, the window frames, black enamel */
+  --ink-2: #4c5356;     /* graphite: small print */
   --line: #b4b9af;      /* joints and rules */
-  --plate: #f7f6f0;     /* white enamel */
-  --signal: #d1481f;    /* red lead primer, used for the visitor route and alerts */
+  --plate: #f7f6f0;     /* white enamel: the face of a key and of a plain plate */
+  --signal: #d1481f;    /* red lead: what is switched on, and where the keyboard is */
+  --trail: #1f9d55;     /* the line painted on the floor for a guided tour */
+  --band: #14171a;      /* the dark enamel of the tour's band */
+  --band-ink: #e8e9e3;
+  --rim: rgba(20, 23, 26, .3); /* the edge of a plate against the wall */
 
   --h1: #586067;        /* Mechanics: machine grey */
   --h2: #d1481f;        /* Glass: red lead */
   --h3: #1f3fa6;        /* Semiconductors: cobalt */
   --h4: #dba51a;        /* Optics: chrome yellow */
   --h5: #efe8d2;        /* Print: ivory */
-  --h6: #14857c;        /* Darkroom: turquoise */
+  --h6: #13827a;        /* Darkroom: turquoise, a shade deeper than it was so that its white numeral reads at any size */
   --h7: #57409a;        /* Tower: violet */
   --hall: var(--ink);
   --hall-ink: #ffffff;
 
+  /* two families. The condensed one letters the signs, the other sets the labels */
   --display: "Sofia Sans Extra Condensed Variable", "Arial Narrow", "Roboto Condensed", sans-serif;
   --text: "Sofia Sans Variable", "Segoe UI", system-ui, sans-serif;
+  /* kept for the 3D models, which draw a typed line on some of their screens. No page is set in it */
   --mono: "PT Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  --step--1: 0.84rem;
-  --step-0: 1.0625rem;
-  --step-1: 1.3rem;
-  --step-2: 1.75rem;
+  /* labels: five sizes, each with one role */
+  --t-xs: .8125rem;     /* 13: credits and the small print of a record */
+  --t-s: .9375rem;      /* 15: keys, captions, second lines */
+  --t-m: 1.0625rem;     /* 17: the text of a label */
+  --t-l: 1.25rem;       /* 20: the opening sentence of a label, and the heads of its parts */
+  --t-xl: clamp(1.625rem, 1.2rem + 2.2vw, 2.5rem); /* the one sentence at the door */
+  /* signs: four sizes */
+  --sign-s: 1.375rem;   /* 22: door numbers and the keys of the band */
+  --sign-m: 1.75rem;    /* 28: the name of a piece in a list, the title of a tour */
+  --sign-l: clamp(2.2rem, 9vw, 4.2rem); /* a name plate */
+  --sign-xl: clamp(5rem, 22vw, 9rem);   /* the numeral of a hall */
+
+  /* the names the stylesheet used before, so that nothing set with them moves */
+  --step--1: var(--t-xs);
+  --step-0: var(--t-m);
+  --step-1: var(--t-l);
+  --step-2: var(--sign-m);
   --step-3: 2.6rem;
   --step-4: 4rem;
+
   --gutter: clamp(16px, 4vw, 40px);
   --measure: 62ch;
+  --key: 36px;          /* the height of a key under a mouse */
   color-scheme: light;
 }
+/* under a finger every key is 44px tall */
+@media (pointer: coarse) { :root { --key: 44px; } }
 
+/* Night is the same hall with the daylight off: the wall is the deep blue of the night pictures, not black, so a
+   picture of the hall at night has no edge against the page. */
 :root[data-lights="off"] {
-  --wash: #000000;
-  --wash-2: #0e0f0f;
-  --ink: #d8dbd4;
-  --ink-2: #8b918d;
-  --line: #2b2e2c;
-  --plate: #181919;
+  --wash: #08101a;
+  --wash-2: #0e1825;
+  --block: #131d2c;
+  --ink: #dde3ea;
+  --ink-2: #97a3b3;
+  --line: #2a3646;
+  --plate: #182435;
   --signal: #e2603a;
+  --trail: #2aae63;
+  --band: #131d2c;
+  --rim: rgba(221, 227, 234, .22);
   color-scheme: dark;
 }
 
