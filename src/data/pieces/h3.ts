@@ -94,7 +94,7 @@ export const h3: Piece[] = [
   },
   {
     id: 'flexible-display', hall: 3, name: 'Flexible display', aka: 'Rollable, foldable',
-    year: 1974, origin: 'Flexible electronic paper at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019',
+    year: 1974, yearText: 'the 1970s', origin: 'Flexible electronic paper at the Xerox Palo Alto Research Center, USA. Curved OLED phones from 2013 and folding ones from 2019',
     status: 'production', statusNote: 'Curved and folding phones are on sale. Screens that roll up completely are much rarer.',
     principle: 'emits', needs: [],
     lead: 'The thin films of a flat panel sit on plastic instead of glass, so that the sheet can bend.',

@@ -3211,6 +3211,12 @@ msgid "DVST, direct-view bistable storage tube"
 msgstr "DVST, tube à mémoire bistable à vision directe"
 
 #: hall-2/storage-tube
+#. The date of the piece, as its label gives it.
+msgctxt "piece.storage-tube.yearText"
+msgid "1963 in an oscilloscope, 1968 as a display"
+msgstr "1963 dans un oscilloscope, 1968 comme écran"
+
+#: hall-2/storage-tube
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.storage-tube.origin"
 msgid "Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s"
@@ -3487,10 +3493,16 @@ msgid "VFD"
 msgstr "VFD, afficheur fluorescent à vide"
 
 #: hall-2/vacuum-fluorescent
+#. The date of the piece, as its label gives it.
+msgctxt "piece.vacuum-fluorescent.yearText"
+msgid "1957 to 1959"
+msgstr "de 1957 à 1959"
+
+#: hall-2/vacuum-fluorescent
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.vacuum-fluorescent.origin"
-msgid "Philips, Netherlands (single indicator). First multi-segment tube by Ise Electronics, Japan, 1967"
-msgstr "Philips, Pays-Bas (indicateur simple). Premier tube à plusieurs segments par Ise Electronics, Japon, 1967"
+msgid "Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967"
+msgstr "Philips, Pays-Bas (indicateur simple). Les sources le datent entre 1957 et 1959. Premier tube à plusieurs segments par Ise Electronics, Japon, 1967"
 
 #: hall-2/vacuum-fluorescent
 #. Where this kind of display stands today.
@@ -3953,6 +3965,12 @@ msgstr "Afficheur à alvéoles"
 msgctxt "piece.eggcrate.aka"
 msgid "Lamp matrix"
 msgstr "Eggcrate display, matrice de lampes"
+
+#: hall-2/eggcrate
+#. The date of the piece, as its label gives it.
+msgctxt "piece.eggcrate.yearText"
+msgid "about 1968"
+msgstr "vers 1968"
 
 #: hall-2/eggcrate
 #. Who made it first, and where. No full stop at the end.
@@ -4751,6 +4769,12 @@ msgstr "Écran flexible"
 msgctxt "piece.flexible-display.aka"
 msgid "Rollable, foldable"
 msgstr "Enroulable, pliable"
+
+#: hall-3/flexible-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.flexible-display.yearText"
+msgid "the 1970s"
+msgstr "années 1970"
 
 #: hall-3/flexible-display
 #. Who made it first, and where. No full stop at the end.
@@ -8597,6 +8621,12 @@ msgstr "Affichage tête haute"
 msgctxt "piece.head-up.aka"
 msgid "HUD"
 msgstr "HUD"
+
+#: hall-7/head-up
+#. The date of the piece, as its label gives it.
+msgctxt "piece.head-up.yearText"
+msgid "first flown 1958, in service 1961"
+msgstr "premier vol en 1958, en service en 1961"
 
 #: hall-7/head-up
 #. Who made it first, and where. No full stop at the end.

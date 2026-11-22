@@ -3210,6 +3210,12 @@ msgid "DVST, direct-view bistable storage tube"
 msgstr "DVST, 직시형 쌍안정 축적관"
 
 #: hall-2/storage-tube
+#. The date of the piece, as its label gives it.
+msgctxt "piece.storage-tube.yearText"
+msgid "1963 in an oscilloscope, 1968 as a display"
+msgstr "1963년 오실로스코프에, 1968년 디스플레이로"
+
+#: hall-2/storage-tube
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.storage-tube.origin"
 msgid "Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s"
@@ -3486,10 +3492,16 @@ msgid "VFD"
 msgstr "VFD"
 
 #: hall-2/vacuum-fluorescent
+#. The date of the piece, as its label gives it.
+msgctxt "piece.vacuum-fluorescent.yearText"
+msgid "1957 to 1959"
+msgstr "1957년에서 1959년 사이"
+
+#: hall-2/vacuum-fluorescent
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.vacuum-fluorescent.origin"
-msgid "Philips, Netherlands (single indicator). First multi-segment tube by Ise Electronics, Japan, 1967"
-msgstr "필립스, 네덜란드(단일 표시기). 최초의 다중 세그먼트 관은 이세 전자공업, 일본, 1967년"
+msgid "Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967"
+msgstr "필립스, 네덜란드(단일 표시기). 자료에 따라 1957년에서 1959년 사이로 연대가 다릅니다. 최초의 다중 세그먼트 관은 이세 전자공업, 일본, 1967년"
 
 #: hall-2/vacuum-fluorescent
 #. Where this kind of display stands today.
@@ -3952,6 +3964,12 @@ msgstr "전구 표시판"
 msgctxt "piece.eggcrate.aka"
 msgid "Lamp matrix"
 msgstr "에그크레이트, 램프 매트릭스"
+
+#: hall-2/eggcrate
+#. The date of the piece, as its label gives it.
+msgctxt "piece.eggcrate.yearText"
+msgid "about 1968"
+msgstr "1968년경"
 
 #: hall-2/eggcrate
 #. Who made it first, and where. No full stop at the end.
@@ -4750,6 +4768,12 @@ msgstr "플렉시블 디스플레이"
 msgctxt "piece.flexible-display.aka"
 msgid "Rollable, foldable"
 msgstr "롤러블, 폴더블"
+
+#: hall-3/flexible-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.flexible-display.yearText"
+msgid "the 1970s"
+msgstr "1970년대"
 
 #: hall-3/flexible-display
 #. Who made it first, and where. No full stop at the end.
@@ -8596,6 +8620,12 @@ msgstr "헤드업 디스플레이"
 msgctxt "piece.head-up.aka"
 msgid "HUD"
 msgstr "HUD"
+
+#: hall-7/head-up
+#. The date of the piece, as its label gives it.
+msgctxt "piece.head-up.yearText"
+msgid "first flown 1958, in service 1961"
+msgstr "1958년 첫 비행, 1961년 실전 배치"
 
 #: hall-7/head-up
 #. Who made it first, and where. No full stop at the end.

@@ -34,3 +34,20 @@ what became of them or of the work. Years of birth and death go in the `born` an
 After a batch of accounts is written, all of them are read together, old and new, against this page, and
 `CURATOR.md` records the date, what was read and what was changed. The reading looks for what a machine cannot:
 two accounts that tell one event differently, a sentence that claims more than its source, a change of tone.
+
+## When sources disagree
+
+This holds for the label of a piece as much as for the account of a person. Where reliable sources give different
+dates, or one bare year would hide which event is meant, the museum shows it the way a museum label does, in the
+piece's `yearText`:
+
+- **about 1968**, where the date is not established.
+- **the 1970s**, where the sources agree on no single year: an interview with the inventor of Gyricon gives 1974,
+  and MIT Technology Review has him joining the laboratory in 1975.
+- **1957 to 1959**, where two records date one thing differently. The line of origin then says that the sources
+  differ, and both are listed.
+- **first flown 1958, in service 1961** and **1963 in an oscilloscope, 1968 as a display**, where two events are
+  both the answer and a visitor should know which is which.
+
+The year used to sort the pieces (`year`) stays a single number. Nothing is settled by choosing the source one
+likes better.

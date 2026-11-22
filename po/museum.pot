@@ -3204,6 +3204,12 @@ msgid "DVST, direct-view bistable storage tube"
 msgstr ""
 
 #: hall-2/storage-tube
+#. The date of the piece, as its label gives it.
+msgctxt "piece.storage-tube.yearText"
+msgid "1963 in an oscilloscope, 1968 as a display"
+msgstr ""
+
+#: hall-2/storage-tube
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.storage-tube.origin"
 msgid "Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s"
@@ -3480,9 +3486,15 @@ msgid "VFD"
 msgstr ""
 
 #: hall-2/vacuum-fluorescent
+#. The date of the piece, as its label gives it.
+msgctxt "piece.vacuum-fluorescent.yearText"
+msgid "1957 to 1959"
+msgstr ""
+
+#: hall-2/vacuum-fluorescent
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.vacuum-fluorescent.origin"
-msgid "Philips, Netherlands (single indicator). First multi-segment tube by Ise Electronics, Japan, 1967"
+msgid "Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967"
 msgstr ""
 
 #: hall-2/vacuum-fluorescent
@@ -3945,6 +3957,12 @@ msgstr ""
 #. Other names the piece goes by.
 msgctxt "piece.eggcrate.aka"
 msgid "Lamp matrix"
+msgstr ""
+
+#: hall-2/eggcrate
+#. The date of the piece, as its label gives it.
+msgctxt "piece.eggcrate.yearText"
+msgid "about 1968"
 msgstr ""
 
 #: hall-2/eggcrate
@@ -4743,6 +4761,12 @@ msgstr ""
 #. Other names the piece goes by.
 msgctxt "piece.flexible-display.aka"
 msgid "Rollable, foldable"
+msgstr ""
+
+#: hall-3/flexible-display
+#. The date of the piece, as its label gives it.
+msgctxt "piece.flexible-display.yearText"
+msgid "the 1970s"
 msgstr ""
 
 #: hall-3/flexible-display
@@ -8589,6 +8613,12 @@ msgstr ""
 #. Other names the piece goes by.
 msgctxt "piece.head-up.aka"
 msgid "HUD"
+msgstr ""
+
+#: hall-7/head-up
+#. The date of the piece, as its label gives it.
+msgctxt "piece.head-up.yearText"
+msgid "first flown 1958, in service 1961"
 msgstr ""
 
 #: hall-7/head-up

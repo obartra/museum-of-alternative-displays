@@ -110,7 +110,7 @@ export const h7: Piece[] = [
   },
   {
     id: 'head-up', hall: 7, name: 'Head-up display', aka: 'HUD',
-    year: 1958, origin: 'Blackburn Buccaneer strike aircraft, UK, descended from wartime reflector gunsights',
+    year: 1958, yearText: 'first flown 1958, in service 1961', origin: 'Blackburn Buccaneer strike aircraft, UK, descended from wartime reflector gunsights',
     status: 'production', statusNote: 'Standard in military and airline cockpits, and more and more common in cars. The first one in a production car appeared in 1988.',
     principle: 'directs', needs: ['seethrough', 'daylight'],
     lead: 'A sloping sheet of glass reflects symbols that are focused far away, so that they appear to sit on the world outside.',

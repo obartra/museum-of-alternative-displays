@@ -50,7 +50,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'storage-tube', hall: 2, name: 'Storage tube terminal', aka: 'DVST, direct-view bistable storage tube',
-    year: 1968, origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s',
+    year: 1968, yearText: '1963 in an oscilloscope, 1968 as a display', origin: 'Robert H. Anderson, Tektronix, USA, building on ideas of Andrew Haeff. The tube was refined at Tektronix from the late 1950s',
     status: 'extinct', statusNote: 'Replaced during the 1980s, when memory became cheap enough for raster graphics, in which the screen sweeps every line as a television does.',
     principle: 'emits', needs: [],
     lead: 'This tube stores its own picture: a line, once drawn, stays lit on the glass with no computer memory behind it.',
@@ -80,7 +80,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'vacuum-fluorescent', hall: 2, name: 'Vacuum fluorescent display', aka: 'VFD',
-    year: 1959, origin: 'Philips, Netherlands (single indicator). First multi-segment tube by Ise Electronics, Japan, 1967',
+    year: 1959, yearText: '1957 to 1959', origin: 'Philips, Netherlands (single indicator). Sources date it between 1957 and 1959. First multi-segment tube by Ise Electronics, Japan, 1967',
     status: 'niche', statusNote: 'Lost most of its markets to liquid crystal and OLED displays, but is still in production.',
     principle: 'emits', needs: [],
     lead: 'A flat glass box holds bars and symbols that glow blue-green, as on the video recorders and microwave ovens of its time.',
@@ -91,7 +91,7 @@ export const h2: Piece[] = [
     good: ['Is bright, with high contrast, and readable at a wide angle', 'Works from a few tens of volts', 'Can have segments of any shape that the maker prints'],
     bad: ['Shows only the fixed shapes built into it', 'Needs a vacuum and a heated wire', 'Dims first where its phosphor has glowed the most'],
     look: 'Zoom in on the front of the glass. The thin horizontal wires are the heated wires, called filaments, and the fine mesh behind them is the grid. Every connecting wire leaves the glass along the bottom edge.',
-    sources: [wiki('Vacuum_fluorescent_display', 'Vacuum fluorescent display'), src('archive', 'DM160, first source the Philips Bulletin of January 1959, Radiomuseum', 'https://www.radiomuseum.org/tubes/tube_dm160.html'), src('archive', 'Milestones: Vacuum Fluorescent Displays, 1967, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Vacuum_Fluorescent_Displays,_1967')],
+    sources: [wiki('Vacuum_fluorescent_display', 'Vacuum fluorescent display'), src('archive', 'DM160, first source the Philips Bulletin of January 1959, Radiomuseum', 'https://www.radiomuseum.org/tubes/tube_dm160.html'), src('archive', 'Milestones: Vacuum Fluorescent Displays, 1967, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Vacuum_Fluorescent_Displays,_1967'), src('archive', '6977 / DM160, Logic State Indicator, ASE Museo Edelpro', 'https://www.ase-museoedelpro.org/Museo_Edelpro/Catalogo/tubes/records_nw/6977-DM160/6977-DM160.pdf')],
   },
   {
     id: 'numitron', hall: 2, name: 'Numitron', aka: 'Incandescent filament display',
@@ -139,7 +139,7 @@ export const h2: Piece[] = [
   },
   {
     id: 'eggcrate', hall: 2, name: 'Eggcrate display', aka: 'Lamp matrix',
-    year: 1968, origin: 'Maker not recorded',
+    year: 1968, yearText: 'about 1968', origin: 'Maker not recorded',
     status: 'extinct', statusNote: 'Used on television game shows into the late 1990s, and on scoreboards and road signs until flip-disc, fibre optic and LED signs replaced it.',
     principle: 'emits', needs: ['daylight'],
     lead: 'Ordinary light bulbs sit in a grid, each in its own cell of a mask that keeps its light from spilling onto its neighbours.',
