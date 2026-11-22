@@ -348,6 +348,7 @@ function wordsView(id: string): void {
 }
 
 // ---------- piece ----------
+const hallOk = (n: number): boolean => halls.some((h) => h.id === n);
 /** Who made the museum: named on the About page and in its licence. */
 const AUTHOR = 'Os Bartra';
 /** The day of the last change to the museum, put in by the build. Empty when the build could not tell. */
@@ -420,7 +421,7 @@ ${step === undefined ? '' : visitBand(step)}
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
-    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a></p>
+    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a><button type="button" class="crumbs__share" data-share="piece/${p.id}/" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
@@ -825,6 +826,10 @@ function route(): void {
   else if (words) wordsView(words[1]);
   else if (visited) visitView(visited[1]);
   else notFound();
+  // A piece and a hall each have a page of their own on the server, with a name and a picture a chat can show.
+  // That is the address a share sheet or a search engine should take for this place.
+  const canon = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+  if (canon) canon.href = new URL(piece && pieceById(piece[1]) ? `piece/${piece[1]}/` : hall && hallOk(Number(hall[1])) ? `hall/${hall[1]}/` : './', document.baseURI).href;
   fitPlates();
   window.scrollTo(0, 0);
   document.body.dataset.ready = '1';
@@ -852,6 +857,17 @@ root.dataset.lights = lightsOn ? 'on' : 'off';
 // the museum as an app: wired before the router, so that a newer build can answer a change of page before the router does
 wireApp();
 wireKeep();
+// Share: the address of a piece's own page goes to the device's share sheet, or to the clipboard where there is none
+document.addEventListener('click', (e) => {
+  const btn = (e.target as Element).closest<HTMLButtonElement>('[data-share]');
+  if (!btn) return;
+  const url = new URL(btn.dataset.share ?? './', document.baseURI).href, title = btn.dataset.title ?? document.title;
+  if (typeof navigator.share === 'function') { void navigator.share({ title, url }).catch(() => undefined); return; }
+  void navigator.clipboard?.writeText(url).then(() => {
+    btn.textContent = t('piece.copied');
+    setTimeout(() => { if (btn.isConnected) btn.textContent = t('piece.share'); }, 2200);
+  }, () => undefined);
+});
 void findKept();
 window.addEventListener('hashchange', route);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu

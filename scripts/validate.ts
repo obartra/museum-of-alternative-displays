@@ -57,6 +57,9 @@ for (const p of pieces) for (const when of ['day', 'night']) for (const w of [38
   if (!existsSync(new URL(`../public/posters/${p.id}-${when}-${w}.webp`, import.meta.url))) fail(p.id, `no still picture for ${when} at ${w} px. Run npm run posters`);
 }
 
+// every piece has the picture a chat shows beside a link to its own page
+for (const p of pieces) if (!existsSync(new URL(`../public/og/${p.id}.jpg`, import.meta.url))) fail(p.id, 'no picture for link previews in public/og. Run python3 scripts/og.py');
+
 // people: every entry belongs to a piece, names someone, says what they did, and marks as women only people it names
 for (const [id, c] of Object.entries(people)) {
   if (!seen.has(id)) errors.push(`${id}: people for a piece that is not in the data`);

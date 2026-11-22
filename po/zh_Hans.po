@@ -1297,6 +1297,18 @@ msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
 msgstr "在iPhone或iPad上，在Safari里轻点“共享”，再轻点“添加到主屏幕”。"
 
 #: interface
+#. Headings on the page of a piece.
+msgctxt "ui.piece.share"
+msgid "Share"
+msgstr "分享"
+
+#: interface
+#. Headings on the page of a piece.
+msgctxt "ui.piece.copied"
+msgid "Address copied"
+msgstr "地址已复制"
+
+#: interface
 #. About page.
 msgctxt "ui.about.keep"
 msgid "The whole museum without a connection"

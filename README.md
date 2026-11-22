@@ -60,6 +60,7 @@ Node 22 or newer.
 | `src/i18n/en.ts` | Every word of the interface, in English. The list a translation has to cover. |
 | `src/i18n/locales/` | One file per language, with the interface and the whole collection in that language. Loaded on demand. |
 | `public/posters/` | A still picture of every piece by day and by night, in two sizes. Lists show these, and a piece page shows one until its model is running. Made by `scripts/posters.mjs`. |
+| `public/og/` | The day poster of every piece as a JPEG: the picture a chat shows beside a link to the piece's own page. Made by `python3 scripts/og.py` (needs Pillow). Run it again when the posters change. |
 | `src/three/models/h1.ts` to `h7.ts` | One model builder per piece. |
 | `src/three/kit.ts` | Materials and shapes shared by every model: glass, finishes, eased edges, glow, and portals for things seen through other things. |
 | `src/three/parts.ts` | Small hardware: screws, louvres, knobs, feet, lenses, posts, breadboards. |
@@ -209,8 +210,9 @@ says which of those things was done to it.
    be looked into or sat in front of, or has a part worth going close to, give it `views`:
    the camera's two points under an id, with the words for that id in `src/data/views.ts`.
    The page then offers a button that puts the visitor there.
-3. Run `npm run posters` so the new piece has its still pictures, and `npm run cutouts` so
-   it has its place in the walk.
+3. Run `npm run posters` so the new piece has its still pictures, `npm run cutouts` so
+   it has its place in the walk, and `python3 scripts/og.py` so a link to its own page
+   shows its picture.
 4. `npm run check`.
 
 To look at every model at once, open `#sheet` on the dev server, or `#sheet?lights=off`.
@@ -257,11 +259,25 @@ lists who is still waiting and why. Every portrait is shown the same way, croppe
 white, with its credit beside it. One marked `small` is kept to the size of a label and off the walls of
 the walk, because its photographs are small or soft.
 
+## A page for every piece and hall
+
+The museum is one page, and it tells its places apart by what follows the `#` in the address.
+A chat, a search engine and a reader without scripts never see that part. So the build also
+writes `piece/<id>/index.html` for every piece and `hall/<n>/index.html` for every hall
+(`scripts/static-pages.ts`), and lists them in `sitemap.xml`. Each has its own title, sentence
+and picture in the head, and the label as plain HTML in the body. In a browser it hands over
+to the museum at once: the address becomes `#piece-<id>` and the piece is drawn as always.
+The old addresses with `#` keep working. Share on a piece page gives the piece's own address.
+Without a network the worker opens the museum at the same place.
+
+These pages are in English, and the address bar still shows the `#` form once the museum is
+running.
+
 ## The museum as an app
 
 The site can be installed, on a phone and on a desk machine. `public/manifest.webmanifest` gives the app
 its name, its colours and its icons, and `index.html` carries the tags an iPhone reads. Under its icon the
-app is called Museum. A browser that installs sites has its own control for it. The About page adds a
+app is called Alt Displays. A browser that installs sites has its own control for it. The About page adds a
 button, Install the app, wherever the browser hands the page its prompt, which Chrome, Edge and the other
 browsers built on Chromium do. Safari on an iPhone or iPad hands over nothing, so there the About page says
 where to tap: Share, then Add to Home Screen. A copy that is already installed offers neither.

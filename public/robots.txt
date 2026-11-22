@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://obartra.github.io/museum-of-alternative-displays/sitemap.xml

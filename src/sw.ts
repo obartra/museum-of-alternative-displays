@@ -124,7 +124,13 @@ self.addEventListener('fetch', (e) => {
   // Other sites, anything that is not a plain request, and anything asked for a part at a time are the network's affair.
   if (!req.url.startsWith(HOME) || req.method !== 'GET' || req.headers.has('range')) return;
   const path = req.url.slice(HOME.length).split(/[?#]/)[0];
-  if (req.mode === 'navigate') { if (path === '' || path === 'index.html') e.respondWith(page(e)); }
+  if (req.mode === 'navigate') {
+    const own = /^(piece|hall)\/([a-z0-9-]+)\/(?:index\.html)?$/.exec(path);
+    if (path === '' || path === 'index.html') e.respondWith(page(e));
+    // A piece or a hall has a page of its own on the server, which hands over to the museum. Without a network
+    // the worker does the handing over: the museum is opened at the same place.
+    else if (own) e.respondWith(Promise.resolve(e.preloadResponse).then((early) => early ?? fetch(req)).catch(() => Response.redirect(`${HOME}#${own[1]}-${own[2]}`)));
+  }
   else if (path.startsWith('assets/')) e.respondWith(built(e));
   else if (PICTURE.test(path)) e.respondWith(picture(e));
   // What is left goes to the network untouched: the recordings of the guide and the archive films among it.

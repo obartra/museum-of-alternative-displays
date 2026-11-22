@@ -303,6 +303,8 @@ h1, h2, h3 { text-wrap: balance; }
 .crumb:hover span { text-decoration: underline; }
 .crumbs { display: flex; align-items: center; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; }
 .crumbs__walk { font-weight: 700; font-size: .9rem; }
+.crumbs__share { min-height: 44px; padding: 0 2px; border: 0; background: none; color: inherit; font: inherit; font-weight: 700; font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.crumbs__share:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 /* the one column may shrink below its widest child, or a sideways-scrolling row would stretch the page */
 .piece { display: grid; gap: 26px 44px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 980px) {

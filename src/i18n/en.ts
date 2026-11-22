@@ -228,6 +228,8 @@ export const en = {
   'about.app.1': 'The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one.',
   'about.app.install': 'Install the app',
   'about.app.ios': 'On an iPhone or iPad, tap Share in Safari, then Add to Home Screen.',
+  'piece.share': 'Share',
+  'piece.copied': 'Address copied',
   'about.keep': 'The whole museum without a connection',
   'about.keep.1': 'The museum keeps each picture you have seen. You can fetch them all now, so that every page opens without a connection. The voice of the guided tour is kept apart, one language at a time. Archive films are not kept.',
   'about.keep.pictures': 'Keep every picture, {mb} MB',
