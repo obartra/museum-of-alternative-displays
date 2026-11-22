@@ -1,5 +1,7 @@
 # Portraits still to do
 
+Feedback on the 42 drawings of round 6, one by one and as a set, is in [docs/portraits/v6/REVIEW.md](docs/portraits/v6/REVIEW.md): what to export larger, which five are too pale, which poses and eyes to redo, and three things to put right in the records.
+
 The labels name **143 people**. **128 have connected portraits in this branch; 15 remain empty**. Round 6 connects 30 accepted v5 drawings and 24 new or corrected drawings. All 69 names in the incoming brief have an outcome in [the manifest](docs/portraits/v6/manifest.json). Counts describe repository data, not a claim that the branch is already deployed.
 
 The user accepts clearly named historical engravings where detail supports a likeness; a posthumous date alone is not a hold. No special historical note is added beside a portrait. Dates, identity evidence and uncertain source-photo rights stay in the records. Redrawing does not clear rights.
