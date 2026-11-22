@@ -90,12 +90,208 @@
     "seconds": 49.8
    },
    "end": {
-    "file": "11-end.82a2fb.mp3",
-    "mark": "0230e0c3",
+    "file": "11-end.48427c.mp3",
+    "mark": "8611bd7f",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 35.1
+    "seconds": 36
+   }
+  },
+  "ca": {
+   "start": {
+    "file": "00-start.1f785c.mp3",
+    "mark": "19fdadb0",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 29.3
+   },
+   "braille-display": {
+    "file": "01-braille-display.7b023b.mp3",
+    "mark": "ad0d89a7",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.5
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.c22964.mp3",
+    "mark": "0f1611d0",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.3
+   },
+   "microled": {
+    "file": "03-microled.100d4d.mp3",
+    "mark": "45475957",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.7
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.9f916c.mp3",
+    "mark": "cbe50794",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66
+   },
+   "scanned-laser": {
+    "file": "05-scanned-laser.cae46d.mp3",
+    "mark": "b125dcb3",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.7
+   },
+   "projection-mapping": {
+    "file": "06-projection-mapping.60fdf0.mp3",
+    "mark": "272ff9ea",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.1
+   },
+   "electrowetting": {
+    "file": "07-electrowetting.a3b9c5.mp3",
+    "mark": "bd1882d4",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 56.4
+   },
+   "illusion-transmitter": {
+    "file": "08-illusion-transmitter.e16b26.mp3",
+    "mark": "d64998d9",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65.6
+   },
+   "static-volume": {
+    "file": "09-static-volume.fc1a7c.mp3",
+    "mark": "29c78a28",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65.2
+   },
+   "holography": {
+    "file": "10-holography.569b5b.mp3",
+    "mark": "bfccd34f",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53.8
+   },
+   "end": {
+    "file": "11-end.166ee5.mp3",
+    "mark": "e07ea44c",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 40.5
+   }
+  },
+  "es": {
+   "start": {
+    "file": "00-start.9011f3.mp3",
+    "mark": "78a170ba",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 29.7
+   },
+   "braille-display": {
+    "file": "01-braille-display.4861b6.mp3",
+    "mark": "a4ab7f3e",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 54.1
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.624197.mp3",
+    "mark": "b2a29695",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.5
+   },
+   "microled": {
+    "file": "03-microled.afdee1.mp3",
+    "mark": "d62d54d1",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.7
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.1476ad.mp3",
+    "mark": "2360efc9",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.7
+   },
+   "scanned-laser": {
+    "file": "05-scanned-laser.5f15ee.mp3",
+    "mark": "727e518b",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.3
+   },
+   "projection-mapping": {
+    "file": "06-projection-mapping.b8b718.mp3",
+    "mark": "06913778",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.5
+   },
+   "electrowetting": {
+    "file": "07-electrowetting.caf657.mp3",
+    "mark": "180114ef",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.9
+   },
+   "illusion-transmitter": {
+    "file": "08-illusion-transmitter.b60350.mp3",
+    "mark": "7018e334",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66.5
+   },
+   "static-volume": {
+    "file": "09-static-volume.78359b.mp3",
+    "mark": "631fc940",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.8
+   },
+   "holography": {
+    "file": "10-holography.1e6376.mp3",
+    "mark": "5ee3c996",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.2
+   },
+   "end": {
+    "file": "11-end.0b09fc.mp3",
+    "mark": "b346e570",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 41
    }
   }
  }
