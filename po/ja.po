@@ -1129,9 +1129,27 @@ msgstr "女性"
 
 #: interface
 #. A trail is a route through the halls.
+msgctxt "ui.trail.black"
+msgid "Black inventors and artists"
+msgstr "黒人の発明家と芸術家"
+
+#: interface
+#. A trail is a route through the halls.
 msgctxt "ui.trail.walk"
 msgid "Walk this trail"
 msgstr "この順路を歩く"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list"
+msgid "Who is on this trail"
+msgstr "この順路に入っている人"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list.black"
+msgid "This trail is a list of people, written down by name. Each one is on it because the source given here describes that person as Black, as African American, or as born and raised in an African country."
+msgstr "この順路は、名前を一人ずつ書き出した人の一覧です。どの人も、ここに挙げた出典がその人を黒人、アフリカ系アメリカ人、またはアフリカの国で生まれ育った人と記しているので、入っています。"
 
 #: interface
 #. Interface.
@@ -3384,6 +3402,12 @@ msgid "In March 1970 the editors of Popular Electronics called the new tube so s
 msgstr "1970年3月、雑誌『ポピュラー・エレクトロニクス』の編集者たちは、この新しい管があまりに単純なので、なぜいままで誰も思いつかなかったのか不思議だと書きました。5ボルト以下で動き、10万時間以上もつと見込まれていました。"
 
 #: hall-2/numitron
+#. People section: what Lewis Latimer did. The names stand above this line.
+msgctxt "piece.numitron.people.1"
+msgid "Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
+msgstr "このディスプレイを作った人ではありません。先にあったのは電球のフィラメントです。1882年に、初期の電球の炭素フィラメントを、炉の中で折れるものが少なくなるように作る方法の特許を取りました。"
+
+#: hall-2/numitron
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.numitron.view.filaments.label"
 msgid "Go close to one bulb"
@@ -3610,6 +3634,12 @@ msgstr "突起は、誰かが研いでいるわけではありません。スタ
 msgctxt "piece.field-emission.people.1"
 msgid "Patented the way of making the microscopic tips, at Stanford Research Institute."
 msgstr "スタンフォード研究所で、微小な突起の作り方について特許を取りました。"
+
+#: hall-2/field-emission
+#. People section: what Akintunde Akinwande did. The names stand above this line.
+msgctxt "piece.field-emission.people.2"
+msgid "Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one."
+msgstr "ナイジェリアとスタンフォード大学で学んだ技術者。1986年にハネウェルに入り、薄膜の電界放出素子とディスプレイに取り組みました。MITでは、一つずつ切り替えられる放出素子のアレイを研究しました。"
 
 #: hall-2/field-emission
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4223,6 +4253,12 @@ msgctxt "piece.quantum-dot.people.4"
 msgid "American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry."
 msgstr "米国、フランス、チュニジアにゆかりのある化学者。1993年に、ほぼ完全な品質のドットを作る方法を見つけました。三人は2023年のノーベル化学賞を分け合いました。"
 
+#: hall-3/quantum-dot
+#. People section: what Xiaogang Peng, Yizheng Jin did. The names stand above this line.
+msgctxt "piece.quantum-dot.people.5"
+msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
+msgstr "2014年に浙江大学で、液体を一層ずつ塗り重ねて量子ドットのダイオードを作りました。深い赤色に光り、流した電子の5分の1を光に変え、寿命は10万時間を超えると見積もられました。"
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4324,6 +4360,12 @@ msgstr "原子層堆積法は、膜を原子一層ずつ積み上げる方法で
 msgctxt "piece.thin-film-el.people.1"
 msgid "Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels."
 msgstr "フィンランドの物理学者。1974年に、このパネルを作るために、膜を原子一層ずつ成長させる原子層堆積法を考案しました。"
+
+#: hall-3/thin-film-el
+#. People section: what Dawon Kahng did. The names stand above this line.
+msgctxt "piece.thin-film-el.people.2"
+msgid "Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way."
+msgstr "ソウル生まれ。1968年にベル研究所で、硫化亜鉛のような化合物の薄い膜は、中に入れた金属の原子に速い電子がぶつかると光ることを示しました。このパネルも同じ仕組みで光を出します。"
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4654,6 +4696,18 @@ msgstr "1971年に米国で、よく似た特許を出願しました。どち�
 msgctxt "piece.liquid-crystal.people.3"
 msgid "Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light."
 msgstr "1960年代にRCAで、光を散乱させて働く、より早い型の液晶ディスプレイを作りました。"
+
+#: hall-4/liquid-crystal
+#. People section: what Sivaramakrishna Chandrasekhar, B. K. Sadashiva, K. A. Suresh did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.4"
+msgid "In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from."
+msgstr "1977年にバンガロールのラマン研究所で、分子が棒ではなく円盤の形をした液晶を見つけました。こうした液晶の膜は、のちに画面を読み取れる角度を広げました。"
+
+#: hall-4/liquid-crystal
+#. People section: what Mohamed Atalla, Dawon Kahng did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.5"
+msgid "Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul."
+msgstr "1960年にベル研究所で、実際に動く最初のMOSトランジスターを発表しました。各セルの後ろにある薄膜トランジスターは、これとよく似た仕組みで働きます。アタラはポートサイド生まれ、カーンはソウル生まれです。"
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5278,6 +5332,12 @@ msgstr "美術家。「Displacements」では、部屋を撮影し、白く塗�
 msgctxt "piece.projection-mapping.people.3"
 msgid "Described the technique in 2001 under the name shader lamps."
 msgstr "2001年に、シェーダーランプの名でこの手法を発表しました。"
+
+#: hall-4/projection-mapping
+#. People section: what Lanny Smoot did. The names stand above this line.
+msgctxt "piece.projection-mapping.people.4"
+msgid "Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room."
+msgstr "100件を超える特許を持つ、ディズニーのリサーチフェロー。ホーンテッドマンションの水晶玉の中の頭、マダム・レオタを、降霊会の部屋で宙に浮かせた人とされています。"
 
 #: hall-4/projection-mapping
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7152,6 +7212,18 @@ msgid "Published the stereoscope in London in 1838, months before photography wa
 msgstr "1838年にロンドンでステレオスコープを発表しました。写真術の公表より数か月前のことです。"
 
 #: hall-7/stereoscope
+#. People section: what Kenneth Dunkley did. The names stand above this line.
+msgctxt "piece.stereoscope.people.2"
+msgid "Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth."
+msgstr "ペンシルベニア州の物理学者。1989年の特許は、レンズのない眼鏡についてのものです。あるのは二つの小さな穴と、二つの空の枠だけです。特許は、ふつうの平らな絵に奥行きがあるように見えると述べています。"
+
+#: hall-7/stereoscope
+#. People section: what Charles Harrison did. The names stand above this line.
+msgctxt "piece.stereoscope.people.3"
+msgid "Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer's accessory to a children's toy."
+msgstr "シカゴの工業デザイナー。1958年に、手で持つステレオスコープ「View-Master」を、軽い成形プラスチックで設計し直しました。写真家の道具だったものが、子どものおもちゃになりました。"
+
+#: hall-7/stereoscope
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereoscope.view.eyepiece.label"
 msgid "Look in"
@@ -7378,6 +7450,12 @@ msgstr "かまぼこ形のレンズは、かつてカラーのホームムービ
 msgctxt "piece.lenticular.people.1"
 msgid "Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain."
 msgstr "スイスのラッパースヴィルの眼科医。1912年に、小さなレンズのシートを重ねた立体写真の特許を出願し、1949年には脳の研究でノーベル賞を受けました。"
+
+#: hall-7/lenticular
+#. People section: what Hank Willis Thomas did. The names stand above this line.
+msgctxt "piece.lenticular.people.2"
+msgid "Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black."
+msgstr "ニューヨークの美術家。そのレンチキュラー印刷の作品には、見る人が前を通ると変わる文字が入っています。ある作品では「Black Imitates White」（黒は白をまねる）が「White Imitates Black」（白は黒をまねる）に変わります。"
 
 #: hall-7/lenticular
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7614,6 +7692,18 @@ msgid "The first holographic video display was built in Benton's group at the MI
 msgstr "最初のホログラフィー動画ディスプレイは、1989年にMITメディアラボのベントンのグループで作られました。同じ年のジェプセンの学位論文が、その設計を記しています。"
 
 #: hall-7/holography
+#. People section: what Ali Javan did. The names stand above this line.
+msgctxt "piece.holography.people.5"
+msgid "Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with."
+msgstr "テヘラン生まれ。1960年にベル研究所で、ウィリアム・ベネット、ドン・ヘリオットとともに最初の気体レーザーを動かしました。途切れない光線を出す最初のレーザーでした。ホログラムはレーザーの光で作ります。"
+
+#: hall-7/holography
+#. People section: what Nasser Peyghambarian, Pierre-Alexandre Blanche did. The names stand above this line.
+msgctxt "piece.holography.people.6"
+msgid "At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes."
+msgstr "2010年にアリゾナ大学で、二人のグループが書き換えのできるホログラムを発表しました。ポリマーのシートが、2秒ごとに新しいカラーの像を記録します。2008年には4分かかっていました。"
+
+#: hall-7/holography
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.holography.view.plate.label"
 msgid "Look through the plate"
@@ -7738,6 +7828,12 @@ msgstr "1968年のヘッドセットで見せた情景の一つは、着けた�
 msgctxt "piece.head-mounted.people.1"
 msgid "Built the first headset driven by computer graphics, at Harvard University in 1968."
 msgstr "1968年にハーバード大学で、コンピューターグラフィックスで動く最初のヘッドセットを作りました。"
+
+#: hall-7/head-mounted
+#. People section: what Samuel Achilefu did. The names stand above this line.
+msgctxt "piece.head-mounted.people.2"
+msgid "Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014."
+msgstr "ナイジェリア生まれ。セントルイスのワシントン大学で、彼のチームは外科医のための画面つきゴーグルを作りました。色素を使うと、がん細胞が画面の上で光って見えます。2014年に初めて手術で使われました。"
 
 #: hall-7/head-mounted
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

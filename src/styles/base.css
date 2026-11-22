@@ -495,6 +495,10 @@ h1, h2, h3 { text-wrap: balance; }
 .walk__stops { stroke-width: 7px; }
 .walk__plan[data-trail] .walk__trail { opacity: 1; }
 .walk__plan[data-trail] .walk__trail--under { opacity: .9; }
+/* two trails share the plan: the one being followed is drawn in full, and the other stays quiet under it, without its dots */
+.walk__plan[data-trail] .walk__trail:not(.is-followed) { opacity: .4; }
+.walk__plan[data-trail] .walk__trail--under:not(.is-followed) { opacity: .25; }
+.walk__plan[data-trail] .walk__stops:not(.is-followed) { opacity: 0; }
 .walk__wall { fill: var(--wash-2); }
 .walk__block { opacity: .85; }
 .walk__block.is-here { opacity: 1; stroke: var(--signal); stroke-width: 3px; vector-effect: non-scaling-stroke; paint-order: stroke; }

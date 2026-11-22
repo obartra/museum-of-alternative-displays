@@ -1131,9 +1131,27 @@ msgstr "Virinoj"
 
 #: interface
 #. A trail is a route through the halls.
+msgctxt "ui.trail.black"
+msgid "Black inventors and artists"
+msgstr "Nigraj inventistoj kaj artistoj"
+
+#: interface
+#. A trail is a route through the halls.
 msgctxt "ui.trail.walk"
 msgid "Walk this trail"
 msgstr "Sekvi ĉi tiun itineron"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list"
+msgid "Who is on this trail"
+msgstr "Kiu estas sur ĉi tiu itinero"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list.black"
+msgid "This trail is a list of people, written down by name. Each one is on it because the source given here describes that person as Black, as African American, or as born and raised in an African country."
+msgstr "Ĉi tiu itinero estas listo de homoj, skribita nomon post nomo. Ĉiu estas en ĝi, ĉar la fonto donita ĉi tie priskribas tiun homon kiel nigran, kiel afrik-usonan aŭ kiel naskitan kaj kreskintan en afrika lando."
 
 #: interface
 #. Interface.
@@ -3388,6 +3406,12 @@ msgid "In March 1970 the editors of Popular Electronics called the new tube so s
 msgstr "En marto 1970 la redaktoroj de Popular Electronics nomis la novan tubon tiel simpla, ke ili miris, kial neniu pensis pri ĝi pli frue. Ĝi funkciis per 5 voltoj aŭ malpli, kaj oni atendis, ke ĝi daŭros pli ol 100 000 horojn."
 
 #: hall-2/numitron
+#. People section: what Lewis Latimer did. The names stand above this line.
+msgctxt "piece.numitron.people.1"
+msgid "Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
+msgstr "Ne faris ĉi tiun vidigilon. Unue venis la lampa filamento, kaj en 1882 li patentis manieron fari la karbajn filamentojn de fruaj elektraj lampoj tiel, ke malpli da ili rompiĝis en la forno."
+
+#: hall-2/numitron
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.numitron.view.filaments.label"
 msgid "Go close to one bulb"
@@ -3614,6 +3638,12 @@ msgstr "Neniu akrigas la pintojn. En la metodo patentita ĉe Stanford Research I
 msgctxt "piece.field-emission.people.1"
 msgid "Patented the way of making the microscopic tips, at Stanford Research Institute."
 msgstr "Patentis la manieron fari la mikroskopajn pintojn, ĉe Stanford Research Institute."
+
+#: hall-2/field-emission
+#. People section: what Akintunde Akinwande did. The names stand above this line.
+msgctxt "piece.field-emission.people.2"
+msgid "Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one."
+msgstr "Inĝeniero, edukita en Niĝerio kaj ĉe Stanford. Li eklaboris ĉe Honeywell en 1986 kaj tie laboris pri maldikfilmaj kampemisiiloj kaj ekranoj, kaj ĉe MIT pri aroj de emisiiloj ŝaltataj unuope."
 
 #: hall-2/field-emission
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4227,6 +4257,12 @@ msgctxt "piece.quantum-dot.people.4"
 msgid "American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry."
 msgstr "Usona, franca kaj tunizia kemiisto. En 1993 li trovis la manieron fari punktojn de preskaŭ perfekta kvalito. La tri kune ricevis la Nobel-premion pri kemio de 2023."
 
+#: hall-3/quantum-dot
+#. People section: what Xiaogang Peng, Yizheng Jin did. The names stand above this line.
+msgctxt "piece.quantum-dot.people.5"
+msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
+msgstr "Ĉe la Universitato de Ĝeĝjango en 2014 ili faris kvantumpunktan diodon el likvoj, tavolon post tavolo. Ĝi lumis profunde ruĝe, ŝanĝis kvinonon de siaj elektronoj en lumon, kaj ĝia vivdaŭro estis taksita je pli ol 100 000 horoj."
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4328,6 +4364,12 @@ msgstr "Atomtavola demetado, kiu konstruas filmon po unu tavolo de atomoj kaj nu
 msgctxt "piece.thin-film-el.people.1"
 msgid "Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels."
 msgstr "Finna fizikisto. En 1974 li elpensis atomtavolan demetadon, kiu kreskigas filmon po unu tavolo de atomoj, por fari ĉi tiujn panelojn."
+
+#: hall-3/thin-film-el
+#. People section: what Dawon Kahng did. The names stand above this line.
+msgctxt "piece.thin-film-el.people.2"
+msgid "Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way."
+msgstr "Naskita en Seulo. En 1968 ĉe Bell Laboratories li montris, ke maldikaj filmoj el kombinaĵoj kiel zinka sulfido lumas, kiam rapidaj elektronoj trafas metalajn atomojn metitajn en ilin. Ĉi tiuj paneloj faras lumon tiel."
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4658,6 +4700,18 @@ msgstr "Petis similan patenton en Usono en 1971. La disputo pri tio, kiu estis l
 msgctxt "piece.liquid-crystal.people.3"
 msgid "Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light."
 msgstr "Konstruis pli fruan specon de likvakristala ekrano ĉe RCA en la 1960-aj jaroj, kiu funkciis per disĵetado de lumo."
+
+#: hall-4/liquid-crystal
+#. People section: what Sivaramakrishna Chandrasekhar, B. K. Sadashiva, K. A. Suresh did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.4"
+msgid "In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from."
+msgstr "En 1977 ĉe la Raman Research Institute en Bengaluro ili trovis likvajn kristalojn, kies molekuloj estas diskoj, ne bastonetoj. Filmoj el tiaj likvaj kristaloj poste larĝigis la angulon, el kiu ekrano estas legebla."
+
+#: hall-4/liquid-crystal
+#. People section: what Mohamed Atalla, Dawon Kahng did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.5"
+msgid "Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul."
+msgstr "Montris la unuan funkciantan MOS-transistoron ĉe Bell Laboratories en 1960. La maldikfilma transistoro malantaŭ ĉiu ĉelo funkcias simile. Atalla naskiĝis en Port-Saido, Kahng en Seulo."
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5282,6 +5336,12 @@ msgstr "Artisto. Por Displacements li filmis ĉambron, farbis ĝin blanka kaj pr
 msgctxt "piece.projection-mapping.people.3"
 msgid "Described the technique in 2001 under the name shader lamps."
 msgstr "Priskribis la teknikon en 2001 sub la nomo shader lamps."
+
+#: hall-4/projection-mapping
+#. People section: what Lanny Smoot did. The names stand above this line.
+msgctxt "piece.projection-mapping.people.4"
+msgid "Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room."
+msgstr "Altranga esploristo ĉe Disney kun pli ol 100 patentoj. Oni atribuas al li, ke Madame Leota, la kapo en la kristala globo de la Haunted Mansion, ŝvebas en sia seanca ĉambro."
 
 #: hall-4/projection-mapping
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7156,6 +7216,18 @@ msgid "Published the stereoscope in London in 1838, months before photography wa
 msgstr "Publikigis la stereoskopon en Londono en 1838, monatojn antaŭ ol la fotografio estis anoncita."
 
 #: hall-7/stereoscope
+#. People section: what Kenneth Dunkley did. The names stand above this line.
+msgctxt "piece.stereoscope.people.2"
+msgid "Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth."
+msgstr "Fizikisto en Pensilvanio. Lia patento de 1989 temas pri okulvitroj sen lensoj: du pinglotruoj kaj du malplenaj kadroj. Ĝi diras, ke ili donas al ordinara plata bildo la aspekton de profundo."
+
+#: hall-7/stereoscope
+#. People section: what Charles Harrison did. The names stand above this line.
+msgctxt "piece.stereoscope.people.3"
+msgid "Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer's accessory to a children's toy."
+msgstr "Industria dezajnisto en Ĉikago. En 1958 li redezajnis la View-Master, stereoskopon por la mano, el malpeza muldita plasto, kaj el akcesoraĵo de fotistoj ĝi fariĝis ludilo por infanoj."
+
+#: hall-7/stereoscope
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereoscope.view.eyepiece.label"
 msgid "Look in"
@@ -7382,6 +7454,12 @@ msgstr "Ripaj lensoj iam faris kolorajn hejmajn filmojn. La filmo Kodacolor, ven
 msgctxt "piece.lenticular.people.1"
 msgid "Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain."
 msgstr "Okulkuracisto en Rapperswil, Svislando. Li petis sian patenton pri stereoskopaj bildoj sub folio de malgrandaj lensoj en 1912, kaj en 1949 gajnis Nobel-premion pro sia laboro pri la cerbo."
+
+#: hall-7/lenticular
+#. People section: what Hank Willis Thomas did. The names stand above this line.
+msgctxt "piece.lenticular.people.2"
+msgid "Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black."
+msgstr "Artisto en Novjorko. Liaj lentikulaj presaĵoj portas tekston, kiu ŝanĝiĝas, kiam la vizitanto preterpaŝas. En unu, Black Imitates White (nigro imitas blankon) fariĝas White Imitates Black (blanko imitas nigron)."
 
 #: hall-7/lenticular
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7618,6 +7696,18 @@ msgid "The first holographic video display was built in Benton's group at the MI
 msgstr "La unua holografia videovidigilo estis konstruita en la grupo de Benton ĉe la MIT Media Lab en 1989. La tezo de Jepsen de tiu jaro priskribas ĝian dezajnon."
 
 #: hall-7/holography
+#. People section: what Ali Javan did. The names stand above this line.
+msgctxt "piece.holography.people.5"
+msgid "Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with."
+msgstr "Naskita en Teherano. Ĉe Bell Laboratories en 1960 li, William Bennett kaj Don Herriott funkciigis la unuan gaslaseron, la unuan kun konstanta fasko. Hologramoj estas farataj per lasera lumo."
+
+#: hall-7/holography
+#. People section: what Nasser Peyghambarian, Pierre-Alexandre Blanche did. The names stand above this line.
+msgctxt "piece.holography.people.6"
+msgid "At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes."
+msgstr "Ĉe la Universitato de Arizono en 2010 ilia grupo montris reskribeblan hologramon: folio el polimero ricevis novan koloran bildon ĉiun duan sekundon. En 2008 tio daŭris kvar minutojn."
+
+#: hall-7/holography
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.holography.view.plate.label"
 msgid "Look through the plate"
@@ -7742,6 +7832,12 @@ msgstr "Unu sceno montrita en la kasko de 1968 estis ĉambro desegnita per linio
 msgctxt "piece.head-mounted.people.1"
 msgid "Built the first headset driven by computer graphics, at Harvard University in 1968."
 msgstr "Konstruis la unuan surkapan vidigilon stiratan de komputila grafiko, ĉe la Universitato Harvard en 1968."
+
+#: hall-7/head-mounted
+#. People section: what Samuel Achilefu did. The names stand above this line.
+msgctxt "piece.head-mounted.people.2"
+msgid "Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014."
+msgstr "Naskita en Niĝerio. Lia teamo ĉe la Universitato Washington en Sankta Luiso konstruis okulvitrojn kun ekrano por kirurgoj: tinkturo igas kancerajn ĉelojn lumi sur ĝi. Unuafoje portitaj dum operacio en 2014."
 
 #: hall-7/head-mounted
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

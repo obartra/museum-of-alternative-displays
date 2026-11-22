@@ -12,6 +12,7 @@ import { facts } from '../src/data/facts';
 import { people } from '../src/data/people';
 import { portraits } from '../src/data/portraits';
 import { tourFault, tours } from '../src/data/tours';
+import { trails } from '../src/data/trails';
 import { media } from '../src/data/media';
 import { views } from '../src/data/views';
 import { builders } from '../src/three/models';
@@ -77,6 +78,29 @@ for (const tour of tours) {
   for (const part of tour.parts) if (DASH.test(part.title + part.text.join(' '))) errors.push(`tour ${tour.id}, ${part.id}: no em dashes or double hyphens`);
   // whoever a stop is said to be about is named on the label of that piece, spelled as the label spells them
   for (const part of tour.parts) for (const name of part.who ?? []) if (!people[part.id]?.people.some((e) => e.who.includes(name))) errors.push(`tour ${tour.id}, ${part.id}: ${name} is not named on the label of the piece`);
+}
+// a trail has stops and a line of its own on the floor. A trail whose people are written down by name names only
+// people who are on a label, each once, and each with a source that has an https address
+{
+  const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
+  for (const tr of trails) {
+    if (!tr.stops.length) errors.push(`trail ${tr.id}: it has no stops`);
+    const once = new Set<string>();
+    for (const x of tr.list ?? []) {
+      if (!named.has(x.name)) errors.push(`trail ${tr.id}: ${x.name} is on its list, and no label spells a name that way`);
+      if (once.has(x.name)) errors.push(`trail ${tr.id}: ${x.name} is on its list twice`);
+      once.add(x.name);
+      let host = '';
+      try { host = new URL(x.source.url).hostname; } catch { /* reported below */ }
+      if (!host || !/^https:\/\//.test(x.source.url) || !x.source.label.trim()) errors.push(`trail ${tr.id}: ${x.name} needs a source with a label and an https address`);
+      if (BANNED_HOSTS.test(host)) errors.push(`trail ${tr.id}: shops and video hosts are not sources: ${host}`);
+    }
+    for (const other of trails.slice(0, trails.indexOf(tr))) {
+      if (other.lane === tr.lane) errors.push(`trails ${other.id} and ${tr.id}: both run in the same lane of the aisle`);
+      // a dot on the floor is 0.32 m across: two trails that stop at one piece need their dots further apart than that
+      if (Math.abs(other.spur - tr.spur) < 0.4 && other.stops.some((id) => tr.stops.includes(id))) errors.push(`trails ${other.id} and ${tr.id}: where both stop at a piece, their dots lie on top of each other`);
+    }
+  }
 }
 // what the green line says in numbers about the collection is counted here, and not remembered. It is said so that
 // it stays true while people and pieces are added elsewhere in the halls

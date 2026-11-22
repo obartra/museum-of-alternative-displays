@@ -1124,9 +1124,27 @@ msgstr "女性"
 
 #: interface
 #. A trail is a route through the halls.
+msgctxt "ui.trail.black"
+msgid "Black inventors and artists"
+msgstr "黑人发明家与艺术家"
+
+#: interface
+#. A trail is a route through the halls.
 msgctxt "ui.trail.walk"
 msgid "Walk this trail"
 msgstr "沿这条路线参观"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list"
+msgid "Who is on this trail"
+msgstr "这条路线上的人"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list.black"
+msgid "This trail is a list of people, written down by name. Each one is on it because the source given here describes that person as Black, as African American, or as born and raised in an African country."
+msgstr "这条路线是一份按姓名写下的名单。每个人之所以在名单上，是因为这里给出的资料把此人描述为黑人、非裔美国人，或在非洲国家出生并长大的人。"
 
 #: interface
 #. Interface.
@@ -3379,6 +3397,12 @@ msgid "In March 1970 the editors of Popular Electronics called the new tube so s
 msgstr "1970年3月，《Popular Electronics》杂志的编辑说，这种新管子简单得让人纳闷：怎么以前就没人想到。它用5伏或更低的电压工作，预计寿命超过10万小时。"
 
 #: hall-2/numitron
+#. People section: what Lewis Latimer did. The names stand above this line.
+msgctxt "piece.numitron.people.1"
+msgid "Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
+msgstr "他没有造过这种显示器。先有的是灯丝。1882年，他为一种制造早期电灯碳丝的方法取得专利，让碳丝在炉中少断一些。"
+
+#: hall-2/numitron
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.numitron.view.filaments.label"
 msgid "Go close to one bulb"
@@ -3605,6 +3629,12 @@ msgstr "尖锥不是磨出来的。按斯坦福研究所（Stanford Research Ins
 msgctxt "piece.field-emission.people.1"
 msgid "Patented the way of making the microscopic tips, at Stanford Research Institute."
 msgstr "在Stanford Research Institute为制造微型尖锥的方法取得专利。"
+
+#: hall-2/field-emission
+#. People section: what Akintunde Akinwande did. The names stand above this line.
+msgctxt "piece.field-emission.people.2"
+msgid "Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one."
+msgstr "工程师，先后在尼日利亚和斯坦福大学求学。1986年进入Honeywell，在那里研究薄膜场发射器件和显示器；后来在MIT研究可以逐个开关的发射体阵列。"
 
 #: hall-2/field-emission
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4218,6 +4248,12 @@ msgctxt "piece.quantum-dot.people.4"
 msgid "American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry."
 msgstr "美国、法国和突尼斯化学家。1993年，他找到了制造质量近乎完美的量子点的方法。三人共同获得2023年诺贝尔化学奖。"
 
+#: hall-3/quantum-dot
+#. People section: what Xiaogang Peng, Yizheng Jin did. The names stand above this line.
+msgctxt "piece.quantum-dot.people.5"
+msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
+msgstr "2014年，他们在浙江大学用溶液一层一层地做出了量子点二极管。它发深红色的光，能把五分之一的电子变成光，寿命估计超过10万小时。"
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4319,6 +4355,12 @@ msgstr "原子层沉积每次只长一层原子，如今用来帮助制造计算
 msgctxt "piece.thin-film-el.people.1"
 msgid "Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels."
 msgstr "芬兰物理学家。1974年，他为制造这种面板想出了原子层沉积法，让薄膜一次只长一层原子。"
+
+#: hall-3/thin-film-el
+#. People section: what Dawon Kahng did. The names stand above this line.
+msgctxt "piece.thin-film-el.people.2"
+msgid "Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way."
+msgstr "生于首尔。1968年，他在贝尔实验室证明，硫化锌一类化合物的薄膜里掺入金属原子后，高速电子撞上这些原子，薄膜就会发光。这种面板正是这样发光的。"
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4649,6 +4691,18 @@ msgstr "1971年在美国提出一项类似的专利。谁先谁后的争议最�
 msgctxt "piece.liquid-crystal.people.3"
 msgid "Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light."
 msgstr "1960年代在RCA做出更早的一种液晶显示器，靠散射光线工作。"
+
+#: hall-4/liquid-crystal
+#. People section: what Sivaramakrishna Chandrasekhar, B. K. Sadashiva, K. A. Suresh did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.4"
+msgid "In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from."
+msgstr "1977年，他们在班加罗尔的拉曼研究所发现了分子呈圆盘状而不是棒状的液晶。后来，用这类液晶做成的薄膜扩大了屏幕的可视角度。"
+
+#: hall-4/liquid-crystal
+#. People section: what Mohamed Atalla, Dawon Kahng did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.5"
+msgid "Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul."
+msgstr "1960年在贝尔实验室展示了第一只能工作的MOS晶体管。每个单元后面的薄膜晶体管，工作方式与它相似。Atalla生于塞得港，Kahng生于首尔。"
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5273,6 +5327,12 @@ msgstr "艺术家。在作品Displacements里，他拍下一个房间，把房�
 msgctxt "piece.projection-mapping.people.3"
 msgid "Described the technique in 2001 under the name shader lamps."
 msgstr "2001年以shader lamps为名描述了这项技术。"
+
+#: hall-4/projection-mapping
+#. People section: what Lanny Smoot did. The names stand above this line.
+msgctxt "piece.projection-mapping.people.4"
+msgid "Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room."
+msgstr "迪士尼的资深研究员，拥有100多项专利。Haunted Mansion水晶球里的那颗头像Madame Leota能在降神会的房间里飘浮，被认为是他的功劳。"
 
 #: hall-4/projection-mapping
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7147,6 +7207,18 @@ msgid "Published the stereoscope in London in 1838, months before photography wa
 msgstr "1838年在伦敦发表立体镜，比摄影术公布还早几个月。"
 
 #: hall-7/stereoscope
+#. People section: what Kenneth Dunkley did. The names stand above this line.
+msgctxt "piece.stereoscope.people.2"
+msgid "Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth."
+msgstr "宾夕法尼亚州的物理学家。他1989年的专利是一副没有镜片的眼镜：两个针孔，两个空框。专利说，戴上它，普通的平面图片看起来就有了深度。"
+
+#: hall-7/stereoscope
+#. People section: what Charles Harrison did. The names stand above this line.
+msgctxt "piece.stereoscope.people.3"
+msgid "Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer's accessory to a children's toy."
+msgstr "芝加哥的工业设计师。1958年，他用轻便的注塑塑料重新设计了手持立体镜View-Master，它从摄影师的配件变成了儿童玩具。"
+
+#: hall-7/stereoscope
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereoscope.view.eyepiece.label"
 msgid "Look in"
@@ -7373,6 +7445,12 @@ msgstr "柱镜曾经用来拍彩色家庭电影。柯达从1928年起出售的Ko
 msgctxt "piece.lenticular.people.1"
 msgid "Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain."
 msgstr "瑞士拉珀斯维尔的眼科医生。1912年，他为覆有小透镜薄片的立体图片申请专利；1949年，他因对大脑的研究获得诺贝尔奖。"
+
+#: hall-7/lenticular
+#. People section: what Hank Willis Thomas did. The names stand above this line.
+msgctxt "piece.lenticular.people.2"
+msgid "Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black."
+msgstr "纽约的艺术家。他的光栅立体画作品上有文字，观众从前面走过，文字就会变。其中一件上，Black Imitates White（黑模仿白）会变成White Imitates Black（白模仿黑）。"
 
 #: hall-7/lenticular
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7609,6 +7687,18 @@ msgid "The first holographic video display was built in Benton's group at the MI
 msgstr "第一台全息视频显示器于1989年在MIT媒体实验室Benton的研究组里造出。Jepsen同年的学位论文讲述了它的设计。"
 
 #: hall-7/holography
+#. People section: what Ali Javan did. The names stand above this line.
+msgctxt "piece.holography.people.5"
+msgid "Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with."
+msgstr "生于德黑兰。1960年，他与William Bennett和Don Herriott在贝尔实验室让第一台气体激光器运转起来，这也是第一台能发出连续光束的激光器。全息图就是用激光制作的。"
+
+#: hall-7/holography
+#. People section: what Nasser Peyghambarian, Pierre-Alexandre Blanche did. The names stand above this line.
+msgctxt "piece.holography.people.6"
+msgid "At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes."
+msgstr "2010年，他们在亚利桑那大学的研究组展示了可以重写的全息图：一张聚合物薄片每两秒就能记下一幅新的彩色图像。2008年时，这需要四分钟。"
+
+#: hall-7/holography
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.holography.view.plate.label"
 msgid "Look through the plate"
@@ -7733,6 +7823,12 @@ msgstr "1968年那台头显展示过这样一个场景：用线条在佩戴者�
 msgctxt "piece.head-mounted.people.1"
 msgid "Built the first headset driven by computer graphics, at Harvard University in 1968."
 msgstr "1968年在哈佛大学造出第一台由计算机图形驱动的头戴式显示器。"
+
+#: hall-7/head-mounted
+#. People section: what Samuel Achilefu did. The names stand above this line.
+msgctxt "piece.head-mounted.people.2"
+msgid "Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014."
+msgstr "生于尼日利亚。他在圣路易斯华盛顿大学的团队为外科医生造出了带屏幕的护目镜：染料让癌细胞在屏幕上发光。2014年，它第一次在手术中使用。"
 
 #: hall-7/head-mounted
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

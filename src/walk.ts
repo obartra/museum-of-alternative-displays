@@ -60,9 +60,9 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let lightsOn = o.lights, closed = false;
   const coarse = matchMedia('(pointer: coarse)').matches, calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const names = Object.fromEntries(pieces.map((p) => [p.id, said.piece(p).name]));
-  // the second line of each plate: the first people named for the piece, and its year
+  // the second line of each plate: the first people named for the piece as its makers, and its year
   const makers = Object.fromEntries(pieces.map((p) => {
-    const who = people[p.id]?.people[0]?.who ?? [], year = said.piece(p).yearText ?? String(p.year);
+    const who = people[p.id]?.people.find((e) => !e.aside)?.who ?? [], year = said.piece(p).yearText ?? String(p.year);
     return [p.id, [who.length > 3 ? `${who.slice(0, 2).join(comma())} +${who.length - 2}` : who.join(comma()), year].filter(Boolean).join(comma())];
   }));
   const hallName = (n: number) => said.hall(halls[n - 1]).name;
@@ -93,9 +93,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     ${trails.map((tr) => {
       const stops = tr.stops.map((id) => plan.placeOf(id)).filter((p) => !!p);
       if (!stops.length) return '';
-      const end = (p: plan.Place) => p.z - p.side * (plan.BLOCK / 2 + 0.34);
-      const d = `M${plan.DOOR.x} ${tr.lane}H${Math.max(...stops.map((p) => p.x))}` + stops.map((p) => `M${p.x} ${tr.lane}V${end(p)}`).join('');
-      return `<path class="walk__trail walk__trail--under" data-trail="${tr.id}" d="${d}"/><path class="walk__trail" data-trail="${tr.id}" d="${d}" stroke="${tr.colour}"/><path class="walk__trail walk__stops" data-trail="${tr.id}" d="${stops.map((p) => `M${p.x} ${end(p)}h0`).join('')}" stroke="${tr.colour}"/>`;
+      // as on the floor: each trail has its own place in front of a block, so that two that stop there lie side by side
+      const at = (p: plan.Place) => p.x + tr.spur, end = (p: plan.Place) => p.z - p.side * (plan.BLOCK / 2 + 0.34);
+      const d = `M${plan.DOOR.x} ${tr.lane}H${Math.max(...stops.map(at))}` + stops.map((p) => `M${at(p)} ${tr.lane}V${end(p)}`).join('');
+      return `<path class="walk__trail walk__trail--under" data-trail="${tr.id}" d="${d}"/><path class="walk__trail" data-trail="${tr.id}" d="${d}" stroke="${tr.colour}"/><path class="walk__trail walk__stops" data-trail="${tr.id}" d="${stops.map((p) => `M${at(p)} ${end(p)}h0`).join('')}" stroke="${tr.colour}"/>`;
     }).join('')}
     ${plan.places.map((p) => `<rect class="walk__block" data-piece="${p.id}" x="${p.x - plan.BLOCK / 2}" y="${p.z - plan.BLOCK / 2}" width="${plan.BLOCK}" height="${plan.BLOCK}" fill="${INK[p.hall] ?? '#ffffff'}"><title>${names[p.id]}</title></rect>`).join('')}
   </svg>
@@ -386,6 +387,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     const tr = trailById(id), tour = tr ? toursNow().find((x) => x.id === tr.id) : undefined;
     pick.value = tr ? tr.id : '';
     if (tr) planEl.dataset.trail = tr.id; else delete planEl.dataset.trail;
+    // of the lines on the plan, the one being followed is drawn in full and any other stays quiet
+    for (const el of planEl.querySelectorAll<SVGElement>('.walk__trail')) el.classList.toggle('is-followed', el.dataset.trail === tr?.id);
     try { if (tr && !tour) localStorage.setItem('trail', tr.id); else localStorage.removeItem('trail'); } catch { /* remembering is a courtesy */ }
     trailNow = tr?.stops;
     gallery?.follow(trailNow);

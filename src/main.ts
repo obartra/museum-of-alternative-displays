@@ -10,7 +10,7 @@ import { langMenu, wireLangMenu } from './langmenu';
 import { facts } from './data/facts';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
-import { trailById, trails } from './data/trails';
+import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
@@ -268,38 +268,48 @@ const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string)
   const pics = e.who.map((n) => portraitHtml(n, e.who.length > 1)).join('');
   return `<li class="person"><div><p class="person__who">${e.who.map((n) => `<span${main && !main(n) ? ' class="person__with"' : ''}>${esc(n)}</span>`).join(esc(comma()))}</p><p class="person__did"${standIn.people(pieceId)}>${esc(did)}</p></div>${pics ? `<div class="person__pics">${pics}</div>` : ''}</li>`;
 };
-let peopleOnly: '' | 'women' = '';
+/** The trail whose people the People page is narrowed to, or nothing for everyone. */
+let peopleOnly: '' | Trail['id'] = '';
 function peopleView(): void {
   document.title = titled(t('nav.people'));
   const pill = (value: string, label: string) => `<label class="pill"><input type="radio" name="who" value="${value}"${peopleOnly === value ? ' checked' : ''}><span>${label}</span></label>`;
   shell(`
 <div class="stack">
   <div class="hallhead"><h1 class="plate" style="--hall: var(--ink); --hall-ink: var(--wash)"><span class="plate__title" style="padding: 6px 14px 2px">${tx('nav.people')}</span></h1><p class="lead">${tx('people.lead')}</p></div>
-  <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${pill('women', tx('people.women'))}</fieldset></form>
+  <form class="filters" id="who"><fieldset><legend>${tx('people.show')}</legend>${pill('', tx('people.all'))}${trails.map((tr) => pill(tr.id, tx(`trail.${tr.id}`))).join('')}</fieldset></form>
   <p class="count" id="who-count" role="status"></p>
-  <p class="ways" id="who-walk" hidden>${toursNow().filter((tour) => tour.id === trails[0]?.id).map((tour) => `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a>`).join('') || `<a class="btn btn--go" href="#walk-${trails[0]?.stops[0] ?? ''}" data-trail="${trails[0]?.id ?? ''}">${tx('trail.walk')}</a>`}</p>
+  <p class="ways" id="who-walk" hidden></p>
   <div class="stack" id="who-rows" style="--gap: 44px"></div>
+  <section class="stack" id="who-list" style="--gap: 6px" hidden></section>
 </div>`, undefined, 'people');
   const rows = document.getElementById('who-rows')!, tally = document.getElementById('who-count')!;
+  const walk = document.getElementById('who-walk')!, written = document.getElementById('who-list')!;
   const draw = () => {
-    const women = peopleOnly === 'women', names = new Set<string>();
+    const tr = trailById(peopleOnly), names = new Set<string>();
     rows.innerHTML = halls.map((h) => {
       const blocks = inHall(h.id).map((p) => {
         const c = people[p.id];
         if (!c) return '';
         const told = said.credit(p.id, c);
-        const list = c.people.map((e, k) => ({ e, did: told.did[k] })).filter(({ e }) => !women || e.she?.length);
+        const list = c.people.map((e, k) => ({ e, did: told.did[k] })).filter(({ e }) => !tr || tr.who(e).length);
         if (!list.length) return '';
-        for (const { e } of list) for (const n of women ? e.she! : e.who) names.add(n);
-        return `<section class="who"><h3 class="who__piece"><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, women ? (n) => !!e.she?.includes(n) : undefined)).join('')}</ul></section>`;
+        for (const { e } of list) for (const n of tr ? tr.who(e) : e.who) names.add(n);
+        return `<section class="who"><h3 class="who__piece"><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, tr ? (n) => tr.who(e).includes(n) : undefined)).join('')}</ul></section>`;
       }).join('');
       return blocks ? `<section class="stack" style="--gap: 4px"><h2 class="h-sec">${tx('hall.title', { n: h.id, name: said.hall(h).name })}</h2><div class="who__grid">${blocks}</div></section>` : '';
     }).join('');
     tally.textContent = t('people.count', { n: names.size });
-    document.getElementById('who-walk')!.hidden = !women;
+    // the way into the halls along the trail: its guided tour where the language tells one, or the trail itself
+    const tour = tr ? toursNow().find((x) => x.id === tr.id) : undefined;
+    walk.hidden = !tr;
+    walk.innerHTML = !tr ? '' : tour ? `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a>` : `<a class="btn btn--go" href="#walk-${tr.stops[0] ?? ''}" data-trail="${tr.id}">${tx('trail.walk')}</a>`;
+    // a trail whose people are written down by name shows the source that each name rests on
+    const list = tr?.list?.filter((x) => names.has(x.name)) ?? [];
+    written.hidden = !list.length;
+    written.innerHTML = list.length ? `<h2 class="h-sec">${tx('trail.list')}</h2><p class="prose">${tr?.id === 'black' ? tx('trail.list.black') : ''}</p><ol class="sources">${list.map((x) => `<li><span class="kind">${esc(x.name)}</span><a href="${esc(x.source.url)}" rel="noopener">${esc(x.source.label)}</a></li>`).join('')}</ol>` : '';
   };
-  document.getElementById('who-walk')!.addEventListener('click', keepTrail);
-  document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = (ev.target as HTMLInputElement).value as '' | 'women'; draw(); });
+  walk.addEventListener('click', keepTrail);
+  document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = trailById((ev.target as HTMLInputElement).value)?.id ?? ''; draw(); });
   draw();
 }
 

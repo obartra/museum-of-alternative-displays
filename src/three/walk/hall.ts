@@ -195,26 +195,29 @@ export function buildHall(o: HallOptions): Hall {
   const decals = buildDecals({ lite: o.lite, names: o.names ?? {}, text: o.text ?? o.display });
   if (decals.mesh) shell.add(decals.mesh);
   // the trails: a painted line down the aisle for each, with a spur and a dot at every piece it stops at
-  for (const trail of trails) {
+  trails.forEach((trail, layer) => {
     const stops = trail.stops.map((id) => placeOf(id)).filter((p) => !!p);
-    if (!stops.length) continue;
-    const paint = new THREE.MeshStandardMaterial({ color: trail.colour, roughness: 0.5, metalness: 0, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4 });
+    if (!stops.length) return;
+    // where the spur of one trail crosses the line of another, the later trail is the upper coat of paint
+    const lift = -4 - 2 * layer;
+    const paint = new THREE.MeshStandardMaterial({ color: trail.colour, roughness: 0.5, metalness: 0, polygonOffset: true, polygonOffsetFactor: lift, polygonOffsetUnits: lift });
     const strip = (x1: number, z1: number, x2: number, z2: number, wide = 0.07) => {
       const g = new THREE.PlaneGeometry(Math.hypot(x2 - x1, z2 - z1) + wide, wide);
       g.rotateX(-Math.PI / 2); g.rotateY(-Math.atan2(z2 - z1, x2 - x1)); g.translate((x1 + x2) / 2, FLOOR + 0.014, (z1 + z2) / 2);
       return g;
     };
-    const parts: THREE.BufferGeometry[] = [strip(DOOR.x, trail.lane, Math.max(...stops.map((p) => p.x)), trail.lane)];
+    const parts: THREE.BufferGeometry[] = [strip(DOOR.x, trail.lane, Math.max(...stops.map((p) => p.x + trail.spur)), trail.lane)];
     for (const p of stops) {
-      const end = p.z - p.side * (BLOCK / 2 + 0.34);
-      parts.push(strip(p.x, trail.lane, p.x, end));
-      const dot = new THREE.CircleGeometry(0.16, 28); dot.rotateX(-Math.PI / 2); dot.translate(p.x, FLOOR + 0.015, end);
+      // each trail has its own place in front of a block, so that two that stop there lie side by side
+      const x = p.x + trail.spur, end = p.z - p.side * (BLOCK / 2 + 0.34);
+      parts.push(strip(x, trail.lane, x, end));
+      const dot = new THREE.CircleGeometry(0.16, 28); dot.rotateX(-Math.PI / 2); dot.translate(x, FLOOR + 0.015, end);
       parts.push(dot);
     }
     const line = new THREE.Mesh(mergeGeometries(parts.map((g) => g.toNonIndexed())), paint);
     line.receiveShadow = true;
     shell.add(line);
-  }
+  });
 
   // outside: the same land and sky, turned with the plot, and big enough to stand beyond the far end of the hall
   const out = vista();

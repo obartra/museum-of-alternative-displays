@@ -1128,9 +1128,27 @@ msgstr "Frauen"
 
 #: interface
 #. A trail is a route through the halls.
+msgctxt "ui.trail.black"
+msgid "Black inventors and artists"
+msgstr "Schwarze Erfinder und Künstler"
+
+#: interface
+#. A trail is a route through the halls.
 msgctxt "ui.trail.walk"
 msgid "Walk this trail"
 msgstr "Diesem Rundgang folgen"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list"
+msgid "Who is on this trail"
+msgstr "Wer zu diesem Rundgang gehört"
+
+#: interface
+#. A trail is a route through the halls.
+msgctxt "ui.trail.list.black"
+msgid "This trail is a list of people, written down by name. Each one is on it because the source given here describes that person as Black, as African American, or as born and raised in an African country."
+msgstr "Dieser Rundgang ist eine Liste von Personen, Name für Name aufgeschrieben. Jede steht darauf, weil die hier genannte Quelle sie als Schwarz, als afroamerikanisch oder als in einem afrikanischen Land geboren und aufgewachsen beschreibt."
 
 #: interface
 #. Interface.
@@ -3383,6 +3401,12 @@ msgid "In March 1970 the editors of Popular Electronics called the new tube so s
 msgstr "Im März 1970 nannten die Redakteure von Popular Electronics die neue Röhre so einfach, dass sie sich fragten, warum niemand früher darauf gekommen war. Sie lief mit 5 Volt oder weniger und sollte mehr als 100.000 Stunden halten."
 
 #: hall-2/numitron
+#. People section: what Lewis Latimer did. The names stand above this line.
+msgctxt "piece.numitron.people.1"
+msgid "Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
+msgstr "Hat diese Anzeige nicht gebaut. Zuerst kam der Glühfaden, und 1882 ließ er sich ein Verfahren patentieren, die Kohlefäden früher elektrischer Lampen so herzustellen, dass im Ofen weniger davon brachen."
+
+#: hall-2/numitron
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.numitron.view.filaments.label"
 msgid "Go close to one bulb"
@@ -3609,6 +3633,12 @@ msgstr "Niemand schleift die Spitzen. Bei dem Verfahren, das am Stanford Researc
 msgctxt "piece.field-emission.people.1"
 msgid "Patented the way of making the microscopic tips, at Stanford Research Institute."
 msgstr "Ließen sich am Stanford Research Institute das Verfahren zur Herstellung der mikroskopischen Spitzen patentieren."
+
+#: hall-2/field-emission
+#. People section: what Akintunde Akinwande did. The names stand above this line.
+msgctxt "piece.field-emission.people.2"
+msgid "Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one."
+msgstr "Ingenieur, ausgebildet in Nigeria und in Stanford. Er kam 1986 zu Honeywell und arbeitete dort an Dünnschicht-Feldemittern und Anzeigen, am MIT dann an Feldern von Emittern, die einzeln geschaltet werden."
 
 #: hall-2/field-emission
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4222,6 +4252,12 @@ msgctxt "piece.quantum-dot.people.4"
 msgid "American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry."
 msgstr "Amerikanischer, französischer und tunesischer Chemiker. 1993 fand er den Weg, Punkte von nahezu perfekter Qualität herzustellen. Die drei teilten sich 2023 den Nobelpreis für Chemie."
 
+#: hall-3/quantum-dot
+#. People section: what Xiaogang Peng, Yizheng Jin did. The names stand above this line.
+msgctxt "piece.quantum-dot.people.5"
+msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
+msgstr "Bauten 2014 an der Zhejiang-Universität eine Quantenpunkt-Diode aus Flüssigkeiten, Schicht auf Schicht. Sie leuchtete tiefrot, verwandelte ein Fünftel ihrer Elektronen in Licht, und ihre Lebensdauer wurde mit über 100.000 Stunden angegeben."
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4323,6 +4359,12 @@ msgstr "Die Atomlagenabscheidung, die einen Film Atomlage für Atomlage aufbaut 
 msgctxt "piece.thin-film-el.people.1"
 msgid "Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels."
 msgstr "Finnischer Physiker. 1974 entwickelte er die Atomlagenabscheidung, die einen Film Atomlage für Atomlage wachsen lässt, um diese Anzeigen herzustellen."
+
+#: hall-3/thin-film-el
+#. People section: what Dawon Kahng did. The names stand above this line.
+msgctxt "piece.thin-film-el.people.2"
+msgid "Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way."
+msgstr "Geboren in Seoul. 1968 zeigte er an den Bell Laboratories, dass dünne Filme aus Verbindungen wie Zinksulfid leuchten, wenn schnelle Elektronen auf Metallatome treffen, die man in sie eingebracht hat. So erzeugen diese Anzeigen ihr Licht."
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4653,6 +4695,18 @@ msgstr "Meldete 1971 in den USA ein ähnliches Patent an. Der Streit darüber, w
 msgctxt "piece.liquid-crystal.people.3"
 msgid "Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light."
 msgstr "Baute in den 1960er-Jahren bei RCA eine frühere Art von Flüssigkristallanzeige, die das Licht streute."
+
+#: hall-4/liquid-crystal
+#. People section: what Sivaramakrishna Chandrasekhar, B. K. Sadashiva, K. A. Suresh did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.4"
+msgid "In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from."
+msgstr "Fanden 1977 am Raman Research Institute in Bangalore Flüssigkristalle, deren Moleküle Scheiben sind und keine Stäbchen. Folien aus solchen Flüssigkristallen vergrößerten später den Winkel, aus dem ein Bildschirm lesbar ist."
+
+#: hall-4/liquid-crystal
+#. People section: what Mohamed Atalla, Dawon Kahng did. The names stand above this line.
+msgctxt "piece.liquid-crystal.people.5"
+msgid "Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul."
+msgstr "Führten 1960 an den Bell Laboratories den ersten funktionierenden MOS-Transistor vor. Der Dünnschichttransistor hinter jeder Zelle arbeitet auf ähnliche Weise. Atalla wurde in Port Said geboren, Kahng in Seoul."
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5277,6 +5331,12 @@ msgstr "Künstler. Für Displacements filmte er ein Zimmer, strich es weiß und 
 msgctxt "piece.projection-mapping.people.3"
 msgid "Described the technique in 2001 under the name shader lamps."
 msgstr "Beschrieben die Technik 2001 unter dem Namen Shader Lamps."
+
+#: hall-4/projection-mapping
+#. People section: what Lanny Smoot did. The names stand above this line.
+msgctxt "piece.projection-mapping.people.4"
+msgid "Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room."
+msgstr "Research Fellow bei Disney mit mehr als 100 Patenten. Ihm wird zugeschrieben, dass Madame Leota, der Kopf in der Kristallkugel der Haunted Mansion, in ihrem Séance-Raum schwebt."
 
 #: hall-4/projection-mapping
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7151,6 +7211,18 @@ msgid "Published the stereoscope in London in 1838, months before photography wa
 msgstr "Stellte das Stereoskop 1838 in London vor, Monate bevor die Fotografie bekannt gegeben wurde."
 
 #: hall-7/stereoscope
+#. People section: what Kenneth Dunkley did. The names stand above this line.
+msgctxt "piece.stereoscope.people.2"
+msgid "Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth."
+msgstr "Physiker in Pennsylvania. Sein Patent von 1989 gilt einer Brille ohne Linsen: zwei Lochblenden und zwei leere Rahmen. Darin heißt es, sie gebe einem gewöhnlichen flachen Bild den Anschein von Tiefe."
+
+#: hall-7/stereoscope
+#. People section: what Charles Harrison did. The names stand above this line.
+msgctxt "piece.stereoscope.people.3"
+msgid "Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer's accessory to a children's toy."
+msgstr "Industriedesigner in Chicago. 1958 gestaltete er den View-Master, ein Stereoskop für die Hand, in leichtem Spritzguss-Kunststoff neu, und aus einem Zubehör für Fotografen wurde ein Kinderspielzeug."
+
+#: hall-7/stereoscope
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereoscope.view.eyepiece.label"
 msgid "Look in"
@@ -7377,6 +7449,12 @@ msgstr "Gerippte Linsen ermöglichten einst farbige Heimfilme. Der Kodacolor-Fil
 msgctxt "piece.lenticular.people.1"
 msgid "Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain."
 msgstr "Augenarzt in Rapperswil in der Schweiz. 1912 meldete er sein Patent für stereoskopische Bilder unter einer Folie aus kleinen Linsen an, und 1949 erhielt er einen Nobelpreis für seine Arbeiten über das Gehirn."
+
+#: hall-7/lenticular
+#. People section: what Hank Willis Thomas did. The names stand above this line.
+msgctxt "piece.lenticular.people.2"
+msgid "Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black."
+msgstr "Künstler in New York. Seine Lentikulardrucke tragen Text, der sich ändert, wenn man an ihnen vorbeigeht. Auf einem wird aus Black Imitates White (Schwarz ahmt Weiß nach) White Imitates Black (Weiß ahmt Schwarz nach)."
 
 #: hall-7/lenticular
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7613,6 +7691,18 @@ msgid "The first holographic video display was built in Benton's group at the MI
 msgstr "Die erste holografische Videoanzeige entstand 1989 in Bentons Gruppe am MIT Media Lab. Jepsens Abschlussarbeit aus demselben Jahr beschreibt ihren Aufbau."
 
 #: hall-7/holography
+#. People section: what Ali Javan did. The names stand above this line.
+msgctxt "piece.holography.people.5"
+msgid "Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with."
+msgstr "Geboren in Teheran. 1960 nahmen er, William Bennett und Don Herriott an den Bell Laboratories den ersten Gaslaser in Betrieb, den ersten mit einem stetigen Strahl. Hologramme werden mit Laserlicht gemacht."
+
+#: hall-7/holography
+#. People section: what Nasser Peyghambarian, Pierre-Alexandre Blanche did. The names stand above this line.
+msgctxt "piece.holography.people.6"
+msgid "At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes."
+msgstr "Ihre Gruppe an der University of Arizona zeigte 2010 ein wiederbeschreibbares Hologramm: Eine Polymerfolie nahm alle zwei Sekunden ein neues Farbbild auf. 2008 dauerte das vier Minuten."
+
+#: hall-7/holography
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.holography.view.plate.label"
 msgid "Look through the plate"
@@ -7737,6 +7827,12 @@ msgstr "Eine der Szenen, die das Gerät von 1968 zeigte, war ein Raum aus Linien
 msgctxt "piece.head-mounted.people.1"
 msgid "Built the first headset driven by computer graphics, at Harvard University in 1968."
 msgstr "Bauten 1968 an der Harvard University das erste Headset, das von Computergrafik gesteuert wurde."
+
+#: hall-7/head-mounted
+#. People section: what Samuel Achilefu did. The names stand above this line.
+msgctxt "piece.head-mounted.people.2"
+msgid "Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014."
+msgstr "Geboren in Nigeria. Sein Team an der Washington University in St. Louis baute für Chirurgen eine Brille mit Bildschirm: Ein Farbstoff lässt Krebszellen darauf leuchten. 2014 wurde sie zum ersten Mal bei einer Operation getragen."
 
 #: hall-7/head-mounted
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

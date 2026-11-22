@@ -3,9 +3,11 @@ import { src } from './pieces/src';
 
 /**
  * One line of a label's People section: the people who share one deed, and the deed.
- * `she` names the women among them, for the trail on the People page.
+ * `she` names the women among them, for the trail of the women.
+ * `aside` marks a line about what came before the piece: its people did not make the piece, so the plate on
+ * its block in the walk does not carry their names.
  */
-export interface Entry { who: string[]; did: string; she?: string[] }
+export interface Entry { who: string[]; did: string; she?: string[]; aside?: boolean }
 
 /** The people of one piece. `note` says where credit is shared or contested. `sources` are added to the piece's own. */
 export interface Credit { people: Entry[]; note?: string; sources?: Source[] }
@@ -93,6 +95,13 @@ export const people: Record<string, Credit> = {
       { who: ['Tadashi Sasaki'], did: 'Led calculator development at Hayakawa Electric, now Sharp, and asked Nakamura for a low-voltage display.' },
     ],
   },
+  'numitron': {
+    people: [{ who: ['Lewis Latimer'], aside: true, did: 'Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace.' }],
+    sources: [
+      src('patent', 'Latimer, US patent 252,386', 'https://patents.google.com/patent/US252386'),
+      src('archive', 'Bringing light for all, United States Patent and Trademark Office (2024)', 'https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/bringing-light-all'),
+    ],
+  },
   'plasma-panel': {
     people: [
       { who: ['Donald Bitzer', 'Gene Slottow', 'Robert Willson'], did: 'Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student.' },
@@ -100,7 +109,16 @@ export const people: Record<string, Credit> = {
     ],
     sources: [src('archive', 'Milestones: Color Plasma Television, 1993, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Color_Plasma_Television,_1993')],
   },
-  'field-emission': { people: [{ who: ['Charles Spindt', 'Kenneth Shoulders', 'Louis Heynick'], did: 'Patented the way of making the microscopic tips, at Stanford Research Institute.' }] },
+  'field-emission': {
+    people: [
+      { who: ['Charles Spindt', 'Kenneth Shoulders', 'Louis Heynick'], did: 'Patented the way of making the microscopic tips, at Stanford Research Institute.' },
+      { who: ['Akintunde Akinwande'], did: 'Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one.' },
+    ],
+    sources: [
+      src('lab', 'Akintunde Akinwande, MIT Center for International Studies', 'https://cis.mit.edu/our-people/akintunde-akinwande'),
+      src('lab', 'Akintunde Ibitayo Akinwande, MIT Technology Licensing Office', 'https://tlo.mit.edu/industry-entrepreneurs/researchers/akintunde-ibitayo-akinwande'),
+    ],
+  },
   'led-display': {
     people: [
       { who: ['Howard Borden', 'Gerald Pighini'], did: 'Designed the Hewlett-Packard numeric indicator of 1969.' },
@@ -116,16 +134,43 @@ export const people: Record<string, Credit> = {
       { who: ['Aleksey Yekimov'], did: 'Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour.' },
       { who: ['Louis Brus'], did: 'Proved the same effect in particles floating freely in a liquid.' },
       { who: ['Moungi Bawendi'], did: 'American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry.' },
+      { who: ['Xiaogang Peng', 'Yizheng Jin'], did: 'At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours.' },
     ],
-    sources: [src('press', 'Nobel Chemistry Prize 2023, Tecnológico de Monterrey', 'https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/')],
+    sources: [
+      src('press', 'Nobel Chemistry Prize 2023, Tecnológico de Monterrey', 'https://tecscience.tec.mx/en/tech/nobel-chemistry-prize-2023/'),
+      src('paper', 'Dai, Jin, Peng and others, Solution-processed, high-performance light-emitting diodes based on quantum dots, Nature (2014)', 'https://www.nature.com/articles/nature13829'),
+      src('press', 'Stender, Insulator triggered charge balance for high-performance QLEDs, MRS Bulletin (2015)', 'https://link.springer.com/article/10.1557/mrs.2014.314'),
+    ],
   },
-  'thin-film-el': { people: [{ who: ['Tuomo Suntola'], did: 'Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels.' }] },
+  'thin-film-el': {
+    people: [
+      { who: ['Tuomo Suntola'], did: 'Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels.' },
+      { who: ['Dawon Kahng'], did: 'Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way.' },
+    ],
+    sources: [
+      src('paper', 'Kahng, Electroluminescence of rare-earth and transition metal molecules in II-VI compounds via impact excitation, Applied Physics Letters (1968)', 'https://doi.org/10.1063/1.1652574'),
+      src('paper', 'Chase, Hepplewhite, Krupka and Kahng, Electroluminescence of ZnS Lumocen devices containing rare-earth and transition-metal fluorides, Journal of Applied Physics (1969)', 'https://doi.org/10.1063/1.1658025'),
+      src('archive', 'Dawon Kahng, National Inventors Hall of Fame', 'https://www.invent.org/inductees/dawon-kahng'),
+    ],
+  },
   'flexible-display': { people: [{ who: ['Nicholas Sheridon'], did: 'Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.' }] },
   'liquid-crystal': {
     people: [
       { who: ['Martin Schadt', 'Wolfgang Helfrich'], did: 'Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970.' },
       { who: ['James Fergason'], did: 'Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court.' },
       { who: ['George Heilmeier'], did: 'Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light.' },
+      { who: ['Sivaramakrishna Chandrasekhar', 'B. K. Sadashiva', 'K. A. Suresh'], did: 'In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from.' },
+      { who: ['Mohamed Atalla', 'Dawon Kahng'], did: 'Showed the first working MOS transistor at Bell Laboratories in 1960. The thin-film transistor behind every cell works in a similar way. Atalla was born in Port Said, Kahng in Seoul.' },
+    ],
+    sources: [
+      src('paper', 'Chandrasekhar, Sadashiva and Suresh, Liquid crystals of disc-like molecules, Pramana (1977)', 'https://www.ias.ac.in/article/fulltext/pram/009/05/0471-0480'),
+      src('press', 'Suresh, Ground-breaking discoveries in liquid crystals, Nature India (2024)', 'https://www.nature.com/articles/d44151-023-00176-z'),
+      src('paper', 'Shinagawa, Novel Optical Compensation Film for TFT-LCDs Using Discotic Liquid Crystal Aligned Obliquely, Hyomen Kagaku (1998)', 'https://www.jstage.jst.go.jp/article/jsssj1980/19/5/19_5_333/_article/-char/ja'),
+      src('archive', '1960: Metal Oxide Semiconductor (MOS) Transistor Demonstrated, Computer History Museum', 'https://www.computerhistory.org/siliconengine/metal-oxide-semiconductor-mos-transistor-demonstrated/'),
+      src('archive', 'Martin (John) M. Atalla, National Inventors Hall of Fame', 'https://www.invent.org/inductees/martin-john-m-atalla'),
+      src('reference', 'Mohamed M. Atalla (Wikipedia)', 'https://en.wikipedia.org/wiki/Mohamed_M._Atalla'),
+      src('archive', 'Dawon Kahng, National Inventors Hall of Fame', 'https://www.invent.org/inductees/dawon-kahng'),
+      src('paper', 'Kuo, Thin Film Transistor Technology: Past, Present, and Future, The Electrochemical Society Interface (2013)', 'https://www.electrochem.org/dl/interface/spr/spr13/spr13_p055_061.pdf'),
     ],
   },
   'micromirror': { people: [{ who: ['Larry Hornbeck'], did: 'Invented the mirror chip at Texas Instruments in 1987.' }] },
@@ -143,8 +188,13 @@ export const people: Record<string, Credit> = {
       { who: ['Leota Toombs'], she: ['Leota Toombs'], did: 'Artist at WED Enterprises, the Disney design workshop. Her filmed face is projected onto a blank head inside the crystal ball of the Haunted Mansion.' },
       { who: ['Michael Naimark'], did: 'Artist. For Displacements he filmed a room, painted it white and projected the film back onto it.' },
       { who: ['Ramesh Raskar', 'Greg Welch', 'Kok-Lim Low', 'Deepak Bandyopadhyay'], did: 'Described the technique in 2001 under the name shader lamps.' },
+      { who: ['Lanny Smoot'], did: 'Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room.' },
     ],
-    sources: [src('archive', 'Leota Toombs Thomas, Disney Legends, D23', 'https://d23.com/walt-disney-legend/leota-toombs-thomas/')],
+    sources: [
+      src('archive', 'Leota Toombs Thomas, Disney Legends, D23', 'https://d23.com/walt-disney-legend/leota-toombs-thomas/'),
+      src('maker', 'Lanny Smoot to Be the First Disney Imagineer Inducted into the National Inventors Hall of Fame, The Walt Disney Company (2024)', 'https://thewaltdisneycompany.com/news/lanny-smoot-to-be-the-first-disney-imagineer-inducted-into-the-national-inventors-hall-of-fame/'),
+      src('archive', 'Lanny Smoot, National Inventors Hall of Fame', 'https://www.invent.org/inductees/lanny-smoot'),
+    ],
   },
   'gyricon': { people: [{ who: ['Nicholas Sheridon'], did: 'Invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s.' }] },
   'electrophoretic-ink': {
@@ -208,7 +258,19 @@ export const people: Record<string, Credit> = {
   'optical-trap': { people: [{ who: ['Daniel Smalley'], did: 'Leads the group at Brigham Young University that built the display, published in 2018.' }] },
   'acoustic-levitation': { people: [{ who: ['Ryuji Hirayama', 'Diego Martinez Plasencia', 'Nobuyuki Masuda', 'Sriram Subramanian'], did: 'Built the display at the University of Sussex and published it in 2019.' }] },
   'laser-plasma': { people: [{ who: ['Yoichi Ochiai'], did: 'Led the version of 2015, which uses far shorter laser pulses.' }] },
-  'stereoscope': { people: [{ who: ['Charles Wheatstone'], did: 'Published the stereoscope in London in 1838, months before photography was announced.' }] },
+  'stereoscope': {
+    people: [
+      { who: ['Charles Wheatstone'], did: 'Published the stereoscope in London in 1838, months before photography was announced.' },
+      { who: ['Kenneth Dunkley'], did: 'Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth.' },
+      { who: ['Charles Harrison'], did: 'Industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic, and it went from a photographer\'s accessory to a children\'s toy.' },
+    ],
+    sources: [
+      src('patent', 'Dunkley, US patent 4,810,057', 'https://patents.google.com/patent/US4810057'),
+      src('archive', 'Kenneth Dunkley, National Business League', 'https://nationalbusinessleague.org/kenneth-dunkley/'),
+      src('archive', 'Charles Harrison, View-Master (model G), Museum of Modern Art', 'https://www.moma.org/collection/works/205547'),
+      src('archive', 'Remembering Charles Harrison, Cooper Hewitt, Smithsonian Design Museum (2018)', 'https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/'),
+    ],
+  },
   'parallax-barrier': {
     people: [
       { who: ['Frederic Ives'], did: 'Made the first parallax stereogram, in the United States in 1901.' },
@@ -216,10 +278,16 @@ export const people: Record<string, Credit> = {
     ],
   },
   'lenticular': {
-    people: [{ who: ['Walter Hess'], did: 'Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain.' }],
+    people: [
+      { who: ['Walter Hess'], did: 'Eye doctor in Rapperswil, Switzerland. He filed his patent for stereoscopic pictures under a sheet of small lenses in 1912, and in 1949 won a Nobel Prize for his work on the brain.' },
+      { who: ['Hank Willis Thomas'], did: 'Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black.' },
+    ],
     sources: [
       src('patent', 'Hess, US patent 1,128,979', 'https://patents.google.com/patent/US1128979'),
       src('paper', 'C. W. Hess, Walter R. Hess, Schweizer Archiv für Neurologie und Psychiatrie (2008)', 'https://mdpi-res.com/d_attachment/sanpp/sanpp-159-00255/article_deploy/sanpp-159-00255.pdf'),
+      src('archive', 'Hank Willis Thomas, They are Us, Us is Them and Impossibly, SFO Museum', 'https://www.sfomuseum.org/public-art/public-collection/left-they-are-us-us-them-and-right-impossibly'),
+      src('archive', 'Docent\'s Corner: Hank Willis Thomas, Blowing Rock Art and History Museum', 'https://www.blowingrockmuseum.org/athome/docent-corner-hank-willis-thomas'),
+      src('archive', 'Hank Willis Thomas, Art21', 'https://art21.org/artist/hank-willis-thomas/'),
     ],
   },
   'integral-imaging': { people: [{ who: ['Gabriel Lippmann'], did: 'Proposed it in France in 1908 and called it integral photography.' }] },
@@ -229,15 +297,30 @@ export const people: Record<string, Credit> = {
       { who: ['Emmett Leith', 'Juris Upatnieks'], did: 'Published the off-axis method of recording holograms in 1962.' },
       { who: ['Margaret Benyon'], she: ['Margaret Benyon'], did: 'Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later.' },
       { who: ['Stephen Benton', 'Mary Lou Jepsen'], she: ['Mary Lou Jepsen'], did: "The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design." },
+      { who: ['Ali Javan'], did: 'Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with.' },
+      { who: ['Nasser Peyghambarian', 'Pierre-Alexandre Blanche'], did: 'At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes.' },
     ],
     sources: [
       src('paper', 'Jepsen, Holographic Video: Design and Implementation of a Display System, MIT (1989)', 'http://hdl.handle.net/1721.1/14173'),
       src('lab', 'The Mark-I Holographic Video Display, MIT Media Lab', 'https://www.media.mit.edu/spi/HVmark1.htm'),
       src('archive', 'Margaret Benyon, Center for the Holographic Arts', 'https://holocenter.org/margaret-benyon'),
       src('reference', 'Margaret Benyon (Wikipedia)', 'https://en.wikipedia.org/wiki/Margaret_Benyon'),
+      src('archive', 'Ali Javan, Lemelson-MIT Program', 'https://lemelson.mit.edu/resources/ali-javan'),
+      src('archive', 'Hologram, Toy Train, National Museum of American History', 'https://www.si.edu/object/hologram-toy-train%3Anmah_1448340'),
+      src('paper', 'Blanche, Peyghambarian and others, Holographic three-dimensional telepresence using large-area photorefractive polymer, Nature (2010)', 'https://www.nature.com/articles/nature09521'),
+      src('press', 'Star Wars telepresence tantalisingly close, Physics World (2010)', 'https://physicsworld.com/a/star-wars-telepresence-tantalisingly-close/'),
     ],
   },
-  'head-mounted': { people: [{ who: ['Ivan Sutherland', 'Bob Sproull'], did: 'Built the first headset driven by computer graphics, at Harvard University in 1968.' }] },
+  'head-mounted': {
+    people: [
+      { who: ['Ivan Sutherland', 'Bob Sproull'], did: 'Built the first headset driven by computer graphics, at Harvard University in 1968.' },
+      { who: ['Samuel Achilefu'], did: 'Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014.' },
+    ],
+    sources: [
+      src('press', 'Special glasses help surgeons ‘see’ cancer, Washington University in St. Louis (2014)', 'https://source.washu.edu/2014/02/special-glasses-help-surgeons-ee-cancer/'),
+      src('press', 'Washington People: Samuel Achilefu, Washington University in St. Louis (2016)', 'https://source.washu.edu/2016/02/washington-people-samuel-achilefu/'),
+    ],
+  },
   'retinal-display': { people: [{ who: ['Kazuo Yoshinaka'], did: 'Proposed the display at Nippon Electric in Japan in 1986.' }] },
   'head-up': { people: [{ who: ['J. M. Naish'], did: 'Worked out the system first called a head-up display, at Farnborough from 1956.' }] },
 };
