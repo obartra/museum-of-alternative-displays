@@ -3,6 +3,7 @@ import { people } from './data/people';
 import { trailById, trails } from './data/trails';
 import type { Stand } from './data/tours';
 import { openGuide } from './guide';
+import { nearHtml, openNear, type Lent } from './near';
 import { hush, tourHash, toursNow } from './tour';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
@@ -19,6 +20,9 @@ import * as plan from './three/walk/plan';
  * (`guide.ts`) takes the place of the Next and Previous buttons, and the address is the tour's, at its stop.
  * In a tour the visitor is carried from stop to stop, so the picture is left to the piece: the words on how to
  * walk go after a few seconds, and under a finger the walking buttons fold behind one key.
+ *
+ * In front of a piece, a key on the picture, or a click on the piece, brings it up for a closer look (`near.ts`):
+ * the visitor turns it and looks into it where they stand, and a tour that is being told goes on being told.
  */
 export interface WalkOptions {
   /** Piece to start in front of. Without one the walk starts at the door. */
@@ -35,6 +39,8 @@ export interface WalkOptions {
   asked?: boolean;
   /** A tour was taken up or put down: its title, or nothing. For the title of the page. */
   onTour?: (title: string | undefined) => void;
+  /** The stand that a piece's own page shows it on, lent for a closer look without leaving the hall. */
+  stage?: (into: HTMLElement) => Promise<Lent>;
 }
 export interface Walk {
   /** Day turned to night, or back. */
@@ -47,6 +53,8 @@ const hallCss = (n: number, name: string) => getComputedStyle(document.documentE
 /** The ink that reads on each hall's enamel, as the stylesheet has it. */
 const INK: Record<number, string> = { 4: '#14171a', 5: '#14171a' };
 const still = (on: boolean, w: 800 | 1600) => `./walk-${on ? 'day' : 'night'}-${w}.webp`;
+const posterOf = (id: string, on: boolean) => `./posters/${id}-${on ? 'day' : 'night'}-760.webp`;
+const LOOK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.96 12.05l4.25 4.24-1.42 1.42-4.24-4.25A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm1 2.5v2h2v2h-2v2h-2v-2h-2v-2h2v-2z"/></svg>';
 
 export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let lightsOn = o.lights, closed = false;
@@ -66,13 +74,15 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <p class="walk__hint" id="walk-hint"></p>
   <p class="walk__note" id="walk-note" role="status"></p>
   <a class="walk__who" id="walk-who" hidden></a>
-  <button type="button" class="walk__key walk__fold" id="walk-fold" aria-controls="walk-pad" aria-expanded="false" aria-label="${tx('walk.pad')}" title="${tx('walk.pad')}" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.5 4.5H13V11h4.5V8.5L22 12l-4.5 3.5V13H13v4.5h2.5L12 22l-3.5-4.5H11V13H6.5v2.5L2 12l4.5-3.5V11H11V6.5H8.5z"/></svg></button>
+  <button type="button" class="walk__key walk__fold" id="walk-fold" aria-controls="walk-pad" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.5 4.5H13V11h4.5V8.5L22 12l-4.5 3.5V13H13v4.5h2.5L12 22l-3.5-4.5H11V13H6.5v2.5L2 12l4.5-3.5V11H11V6.5H8.5z"/></svg><span>${tx('walk.walk')}</span></button>
   <div class="walk__pad" id="walk-pad" role="group" aria-label="${tx('walk.pad')}" hidden>
     <button type="button" class="walk__key" data-go="1" data-turn="0" aria-label="${tx('walk.go.forward')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 9H5z"/></svg></button>
     <button type="button" class="walk__key" data-go="0" data-turn="1" aria-label="${tx('walk.go.left')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l9-7v14z"/></svg></button>
     <button type="button" class="walk__key" data-go="-1" data-turn="0" aria-label="${tx('walk.go.back')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l-7-9h14z"/></svg></button>
     <button type="button" class="walk__key" data-go="0" data-turn="-1" aria-label="${tx('walk.go.right')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12l-9 7V5z"/></svg></button>
   </div>
+  <button type="button" class="walk__key walk__look" id="walk-look" hidden>${LOOK}<span>${tx('walk.near')}</span></button>
+  ${nearHtml()}
 </div>
 <section class="guide" id="walk-guide" aria-label="${tx('tour.label')}" hidden></section>
 <p class="walk__where" id="walk-where" aria-live="polite"></p>
@@ -108,7 +118,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   const view = document.getElementById('walk-view')!, stillImg = document.getElementById('walk-still') as HTMLImageElement;
   const startBtn = document.getElementById('walk-start') as HTMLButtonElement, hint = document.getElementById('walk-hint')!, note = document.getElementById('walk-note')!;
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
-  const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement;
+  const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement, look = document.getElementById('walk-look') as HTMLButtonElement;
   let introFor = 0;
   const btn = (name: string) => host.querySelector<HTMLButtonElement>(`[data-walk="${name}"]`)!;
   const pauseBtn = btn('pause'), fullBtn = btn('full'), vrBtn = btn('vr'), goto = document.getElementById('walk-goto') as HTMLSelectElement;
@@ -144,6 +154,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     goto.value = w.piece ?? '';
     if (w.piece) { last = w.piece; mark(); }
     guide.arrive(w.piece);
+    layLook();
   };
   /** Where the tour wants the visitor stood, asked for before the hall was there to stand in. */
   let waiting: { piece: string; stand?: Stand } | undefined, failed = false;
@@ -162,8 +173,36 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     fold.setAttribute('aria-expanded', String(folded && padOpen));
     pad.hidden = !live || (folded && !padOpen);
   };
+  /** The key that offers a closer look is on the picture while the visitor stands in front of a piece. */
+  const layLook = () => { look.hidden = !gallery || !o.stage || !gallery.where.piece || !!near.piece; };
+  const near = openNear(document.getElementById('walk-near')!, {
+    lend: (into) => o.stage!(into),
+    colour: (n) => hallCss(n, 'h'),
+    poster: posterOf,
+    lights: () => lightsOn,
+    paused: () => !!gallery?.isPaused,
+    // the hall is covered: it stops drawing, and its keys and its canvas are out of reach until it is uncovered
+    onOpen: () => { gallery?.stop(); host.classList.add('is-near'); if (canvas) canvas.inert = true; layLook(); },
+    onShut: () => {
+      const within = host.querySelector('#walk-near')!.contains(document.activeElement);
+      host.classList.remove('is-near');
+      if (canvas) canvas.inert = false;
+      if (!closed && !document.hidden) gallery?.start();
+      layLook();
+      if (within) (look.hidden ? canvas : look)?.focus({ preventScroll: true });
+    },
+  });
+  /** Bring the piece the visitor stands in front of up close. Not on the way somewhere: the hall has to have come to rest. */
+  const lookAt = (id?: string) => {
+    if (!id || !gallery || !o.stage || gallery.gliding || near.piece === id) return;
+    near.setFree(host.classList.contains('is-full'));
+    near.open(id);
+    host.querySelector<HTMLElement>('.near__back')?.focus({ preventScroll: true });
+  };
   const guide = openGuide(document.getElementById('walk-guide')!, document.getElementById('walk-who')!, {
     goTo: (piece, stand) => {
+      // the tour moves on: a closer look at the stop before is over
+      near.shut();
       if (gallery) { gallery.goPiece(piece, false, stand); return 'soon'; }
       waiting = { piece, stand };
       return failed ? 'never' : 'later';
@@ -215,6 +254,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
           onRelease: () => { if (host.classList.contains('is-full')) setFull(false); else ((guide.tour ? host.querySelector<HTMLElement>('[data-guide="next"]:not(:disabled)') : null) ?? where.querySelector('a') ?? btn('next')).focus(); },
           onTouch: () => { hint.style.opacity = '0'; },
           onStep: (by) => guide.step(by),
+          onLook: (id) => lookAt(id),
         });
       } catch {
         canvas.remove(); canvas = null;
@@ -246,6 +286,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let stepped = false;
   const setFull = (full: boolean, byBack = false) => {
     if (full === host.classList.contains('is-full')) return;
+    // leaving full view by its button ends a closer look as well: the step back is then full view's own
+    if (!full && !byBack) near.shut();
     // closing by the button takes the step back, and the browser tells us when it has: `onPop` then sees to the address
     let pending = false;
     if (full) { try { history.pushState({ full: true }, ''); stepped = true; } catch { stepped = false; } }
@@ -255,6 +297,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     fullBtn.textContent = t(full ? 'stage.close' : 'stage.expand');
     document.body.style.overflow = full ? 'hidden' : '';
     gallery?.setFree(full);
+    near.setFree(full);
     gallery?.resize();
     if (full && !begun) void go();
     if (!full && !pending) mark();
@@ -271,20 +314,34 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   // the step back out of full view lands on this page again: only then is the address brought up to date
   const onPop = () => {
     if (leaving) { const to = leaving; leaving = ''; mark(true); location.hash = to; return; }
+    // the back button of a phone, with a closer look open: back to the hall and no further. The step that full view
+    // had taken has just been spent, so it is taken again
+    if (near.piece) {
+      near.shut();
+      if (host.classList.contains('is-full')) { try { history.pushState({ full: true }, ''); stepped = true; } catch { stepped = false; setFull(false, true); } }
+      return;
+    }
     if (host.classList.contains('is-full')) { stepped = false; setFull(false, true); } else mark();
   };
-  const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' && host.classList.contains('is-full') && document.activeElement !== canvas) setFull(false); };
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key !== 'Escape' || e.defaultPrevented) return;
+    if (near.piece) { e.preventDefault(); near.shut(); }
+    else if (host.classList.contains('is-full') && document.activeElement !== canvas) setFull(false);
+  };
 
   const onClick = (e: MouseEvent) => {
     // a link to another page, followed out of full view
     const out = (e.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
     if (out && host.classList.contains('is-full') && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) { e.preventDefault(); return leaveTo(out.getAttribute('href')!); }
-    const el = (e.target as Element).closest<HTMLElement | SVGElement>('[data-walk], [data-bay], [data-piece], #walk-start, #walk-fold');
+    const el = (e.target as Element).closest<HTMLElement | SVGElement>('[data-walk], [data-bay], [data-piece], #walk-start, #walk-fold, #walk-look');
     if (!el) return;
+    if (el.id === 'walk-look') return lookAt(gallery?.where.piece);
     // the button on the picture: in a tour the guide begins once the visitor stands at the stop, and a phone gives the tour the whole screen
     if (el.id === 'walk-start') { if (guide.tour) { guide.begin(); if (small()) return setFull(true); } return void go(); }
     if (el.id === 'walk-fold') { padOpen = !padOpen; return layPad(); }
     const name = el.dataset.walk;
+    // going somewhere else in the hall ends a closer look
+    if (el.dataset.piece || el.dataset.bay || name === 'prev' || name === 'next' || name === 'vr') near.shut();
     if (el.dataset.piece) gallery?.goPiece(el.dataset.piece);
     if (el.dataset.bay && gallery) {
       // with a mouse the plan is a map: go to the very place. From the keyboard, or under a finger, go into that bay
@@ -297,7 +354,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     }
     if (name === 'prev') gallery?.next(-1);
     if (name === 'next') gallery?.next(1);
-    if (name === 'pause' && gallery) { gallery.setPaused(!gallery.isPaused); pauseBtn.textContent = t(gallery.isPaused ? 'stage.play' : 'stage.pause'); }
+    if (name === 'pause' && gallery) { gallery.setPaused(!gallery.isPaused); near.setPaused(gallery.isPaused); pauseBtn.textContent = t(gallery.isPaused ? 'stage.play' : 'stage.pause'); }
     if (name === 'full') setFull(!host.classList.contains('is-full'));
     if (name === 'vr' && gallery) {
       vrBtn.disabled = true;
@@ -313,9 +370,12 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   const padDown = (e: Event) => { e.preventDefault(); hold(e, true); };
   const padUp = (e: Event) => hold(e, false);
   const padKey = (e: KeyboardEvent) => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); hold(e, e.type === 'keydown'); } };
-  const onHide = () => { if (document.hidden) gallery?.stop(); else if (!closed) gallery?.start(); };
+  const onHide = () => {
+    near.rest(document.hidden);
+    if (document.hidden) gallery?.stop(); else if (!closed && !near.piece) gallery?.start();
+  };
 
-  const onGoto = () => { if (goto.value) gallery?.goPiece(goto.value); };
+  const onGoto = () => { if (goto.value) { near.shut(); gallery?.goPiece(goto.value); } };
   /**
    * The trail being followed: shown on the plan, and what Next and Previous stop at. A trail is kept from one visit
    * to the next. Where the language tells a guided tour of the trail, following it is taking that tour, from the
@@ -339,7 +399,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (!tour) { mark(); if (how.step && tr && gallery) gallery.next(1); }
   };
   // chosen from the list: a click, so a tour may begin to speak
-  pick.addEventListener('change', () => { follow(pick.value, { step: true, say: true }); if (guide.tour) { if (small()) setFull(true); else void go(); } });
+  pick.addEventListener('change', () => { near.shut(); follow(pick.value, { step: true, say: true }); if (guide.tour) { if (small()) setFull(true); else void go(); } });
   let kept = '';
   try { kept = localStorage.getItem('trail') ?? ''; } catch { /* fine */ }
   // a visitor who has just asked for a stop of a tour hears the guide there once the hall has opened. The link made her ready
@@ -363,6 +423,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     setLights(on) {
       lightsOn = on;
       gallery?.setLights(on);
+      near.setLights(on);
       if (!stillImg.hidden) { stillImg.src = still(on, 800); stillImg.srcset = `${still(on, 800)} 800w, ${still(on, 1600)} 1600w`; }
       for (const s of host.querySelectorAll('[data-lights-switch]')) s.setAttribute('aria-checked', String(on));
     },
@@ -376,6 +437,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('visibilitychange', onHide);
       guide.close();
+      near.close();
       gallery?.dispose(); gallery = null;
     },
   };

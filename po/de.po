@@ -1044,6 +1044,24 @@ msgstr "Gehen"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.walk"
+msgid "Walk"
+msgstr "Gehen"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near"
+msgid "Look closer"
+msgstr "Näher ansehen"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near.back"
+msgid "Back to the hall"
+msgstr "Zurück in den Saal"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.go.forward"
 msgid "Walk forward"
 msgstr "Vorwärts gehen"

@@ -40,6 +40,8 @@ export interface GalleryOptions {
   onTouch: () => void;
   /** N or P was pressed. The page may take the step on itself, and says so: a guided tour does. */
   onStep?: (by: 1 | -1) => boolean;
+  /** The piece the visitor stands in front of was clicked or tapped: they want a closer look at it. */
+  onLook?: (id: string) => void;
 }
 
 const WALK = 1.6, RUN = 4.3, TURN = 1.25;
@@ -309,7 +311,8 @@ export class Gallery {
     const behind = decalAt(this.hall.hung, this.aim.ray.origin, this.aim.ray.direction);
     const portrait = behind && (!hit.piece || !this.stands.strikes(hit.piece.id, this.aim)) ? behind : undefined;
     if (portrait) this.goPiece(portrait.piece);
-    else if (hit.piece) this.goPiece(hit.piece.id);
+    // the piece one already stands in front of: a closer look. Any other: go and stand in front of it
+    else if (hit.piece) { if (hit.piece.id === this.here.piece && !this.glide && this.o.onLook) this.o.onLook(hit.piece.id); else this.goPiece(hit.piece.id); }
     else if (hit.floor) {
       const [x, z] = hit.floor, far = Math.hypot(x - this.x, z - this.z);
       // arrive looking the way one came, unless it was only a step

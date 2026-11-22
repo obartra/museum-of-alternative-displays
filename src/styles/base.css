@@ -426,9 +426,52 @@ h1, h2, h3 { text-wrap: balance; }
 .walk__key:nth-child(1) { grid-area: 1 / 2; } .walk__key:nth-child(2) { grid-area: 2 / 1; }
 .walk__key:nth-child(3) { grid-area: 2 / 2; } .walk__key:nth-child(4) { grid-area: 2 / 3; }
 /* in a tour the visitor is carried, and the walking buttons wait behind this key. Open, it stands in their free corner */
-.walk__fold { position: absolute; left: 10px; bottom: 10px; width: 46px; height: 46px; touch-action: manipulation; }
+.walk__fold { position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 7px; height: 46px; padding: 0 13px 0 10px; font-weight: 700; font-size: .9rem; touch-action: manipulation; background: color-mix(in srgb, var(--wash) 88%, transparent); }
 .walk__fold[hidden] { display: none; }
-.walk__fold[aria-expanded="true"] { bottom: 65px; width: 50px; height: 50px; background: var(--ink); color: var(--wash); }
+.walk__fold[aria-expanded="true"] { bottom: 65px; justify-content: center; width: 50px; height: 50px; padding: 0; background: var(--ink); color: var(--wash); }
+.walk__fold[aria-expanded="true"] span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* in front of a piece: the key that brings it up for a closer look. It stands where the way back will stand, clear of
+   the walking buttons and of the name plate on the block. The words on how to walk move down to make room for it */
+.walk__look { position: absolute; left: 10px; top: 10px; display: inline-flex; align-items: center; gap: 7px; max-width: calc(100% - 20px); height: 46px; padding: 0 14px 0 10px; font-weight: 700; font-size: .9rem; touch-action: manipulation; background: color-mix(in srgb, var(--wash) 88%, transparent); }
+.walk__look[hidden] { display: none; }
+.walk__view:has(.walk__look:not([hidden])) .walk__hint { top: 64px; }
+@media (hover: hover) { :is(.walk__look, .walk__fold, .near__back):hover { background: var(--ink); color: var(--wash); } }
+/* a closer look: the piece on the stand of its own page, over the picture of the hall */
+.near { position: absolute; inset: 0; z-index: 1; background: var(--wash-2); }
+.near[hidden] { display: none; }
+.near__box { position: absolute; inset: 0; }
+.near__poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.near__poster[hidden] { display: none; }
+.near canvas.gl { position: absolute; inset: 0; display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .35s ease; }
+.near canvas.gl.is-live { opacity: 1; }
+.near canvas.gl:active { cursor: grabbing; }
+.near__back { position: absolute; left: 10px; top: 10px; display: inline-flex; align-items: center; gap: 7px; height: 46px; padding: 0 14px 0 10px; font-weight: 700; font-size: .9rem; touch-action: manipulation; background: color-mix(in srgb, var(--wash) 88%, transparent); }
+.near__long { display: none; }
+@media (min-width: 620px) { .near__short { display: none; } .near__long { display: inline; } }
+.near__hint { position: absolute; left: 12px; top: 64px; max-width: calc(100% - 24px); padding: 2px 7px; border-radius: 3px; background: color-mix(in srgb, var(--wash) 80%, transparent); font-size: .78rem; font-weight: 600; color: var(--ink-2); pointer-events: none; transition: opacity .6s; }
+.near__hint:empty { display: none; }
+/* what a view shows, and the places to look from, along the foot of the picture */
+.near__foot { position: absolute; left: 0; right: 0; bottom: 0; display: grid; gap: 7px; padding: 22px 0 10px; background: linear-gradient(to top, color-mix(in srgb, var(--wash) 88%, transparent) 58%, transparent); pointer-events: none; }
+.near__foot > * { pointer-events: auto; }
+.near__say { margin: 0 12px; max-width: 62ch; font-size: .86rem; line-height: 1.4; }
+.near__say:empty { display: none; }
+.near__views { display: flex; gap: 8px; padding: 0 10px; overflow-x: auto; scrollbar-width: none; }
+.near__views::-webkit-scrollbar { display: none; }
+.near__views .btn { flex: none; min-height: 40px; white-space: nowrap; }
+/* while the piece is up close, what belongs to the hall stands down. The plate of the tour stays: the guide is still speaking */
+.walk.is-near :is(.walk__pad, .walk__fold, .walk__look, .walk__hint, .walk__note, .walk__start) { display: none; }
+.walk__who { z-index: 2; }
+/* two people on the plate stand one above the other on a phone, so that the plate keeps to its corner. On the
+   narrowest phones the plate has the top row to itself, and the key stands under it */
+@media (max-width: 619px) { .walk__who:has(.walk__face + .walk__face) { flex-direction: column; gap: 5px; } }
+.walk__view:has(.walk__who:not([hidden])) .near__hint { top: 88px; }
+@media (max-width: 619px) { .walk__view:has(.walk__who:not([hidden]) .walk__face + .walk__face) .near__hint { top: 133px; } }
+@media (max-width: 359px) {
+  .walk__view:has(.walk__who:not([hidden])) :is(.walk__look, .near__back) { top: 78px; }
+  .walk__view:has(.walk__who:not([hidden])) .near__hint { top: 132px; }
+  .walk__view:has(.walk__who:not([hidden]) .walk__face + .walk__face) :is(.walk__look, .near__back) { top: 133px; }
+  .walk__view:has(.walk__who:not([hidden]) .walk__face + .walk__face) .near__hint { top: 187px; }
+}
 /* where the visitor stands, in words */
 .walk__where { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; min-height: 54px; padding: 10px 12px 0; font-weight: 600; font-size: .95rem; line-height: 1.25; }
 .walk__no { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 3px; background: var(--hall); color: var(--hall-ink); font: 800 1.1rem/1 var(--display); }
@@ -481,7 +524,7 @@ h1, h2, h3 { text-wrap: balance; }
 .walk.is-full .walk__where { min-height: 0; padding-top: 8px; }
 .walk.is-full .walk__plan { height: 44px; }
 .walk.is-full .walk__bar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
-@media (prefers-reduced-motion: reduce) { .walk__gl, .walk__hint { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .walk__gl, .walk__hint, .near canvas.gl, .near__hint { transition: none; } }
 
 /* ---------- a piece in the visitor's own room: the words over the camera's picture ---------- */
 .roomview { position: fixed; inset: 0; z-index: 60; pointer-events: none; background: transparent; }

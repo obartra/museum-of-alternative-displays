@@ -1045,6 +1045,24 @@ msgstr "Caminar"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.walk"
+msgid "Walk"
+msgstr "Camina"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near"
+msgid "Look closer"
+msgstr "Mira-la de prop"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near.back"
+msgid "Back to the hall"
+msgstr "Torna a l'àmbit"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.go.forward"
 msgid "Walk forward"
 msgstr "Avança"

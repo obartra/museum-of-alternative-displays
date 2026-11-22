@@ -1040,6 +1040,24 @@ msgstr "行走"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.walk"
+msgid "Walk"
+msgstr "行走"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near"
+msgid "Look closer"
+msgstr "走近看"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.near.back"
+msgid "Back to the hall"
+msgstr "回到展厅"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.go.forward"
 msgid "Walk forward"
 msgstr "向前走"

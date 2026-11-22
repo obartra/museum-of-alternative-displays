@@ -681,7 +681,17 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
   let hall: { setLights(on: boolean): void; close(): void } | null = null, gone = false;
   const relight = (on: boolean) => hall?.setLights(on);
   lightListeners.add(relight);
-  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: switchHtml(), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title }); })
+  // a closer look at a piece in the hall is taken on the stand that the pages of the pieces share
+  const lend = async (into: HTMLElement) => {
+    const { Stage, builders } = await three();
+    if (!stageCanvas) { stageCanvas = document.createElement('canvas'); stageCanvas.className = 'gl'; stageCanvas.tabIndex = 0; }
+    const cv = stageCanvas;
+    into.append(cv);
+    try { stage ??= new Stage(cv, true); } catch (e) { cv.remove(); throw e; }
+    stage.attach();
+    return { stage, canvas: cv, build: (id: string) => builders[id]() };
+  };
+  void import('./walk').then(({ openWalk }) => { if (!gone) hall = openWalk(host, { start: from?.id, lights: lightsOn, auto, asked, switchHtml: switchHtml(), tour: toured && { id: toured.tour.id, part: toured.part }, onTour: title, stage: lend }); })
     .catch(() => { hush(); host.innerHTML = `<p class="prose">${tx('walk.fail')}</p>`; });
   leave = () => { gone = true; lightListeners.delete(relight); hall?.close(); hush(); };
 }
