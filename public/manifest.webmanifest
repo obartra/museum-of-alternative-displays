@@ -1,0 +1,19 @@
+{
+  "name": "Museum of Alternative Displays",
+  "short_name": "Museum",
+  "description": "A museum of display technologies, from split-flap boards to holograms. Turn each one around, see how it works and where it fails. Nothing is for sale.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e8e9e3",
+  "theme_color": "#e8e9e3",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

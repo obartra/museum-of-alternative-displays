@@ -1260,6 +1260,30 @@ msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a}
 msgstr "이 주소에는 전시실도 전시품도 없습니다. {a}입구로 돌아가거나{/a} {b}색인에서 찾아보세요{/b}."
 
 #: interface
+#. About page.
+msgctxt "ui.about.app"
+msgid "The museum as an app"
+msgstr "앱으로 보는 박물관"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.1"
+msgid "The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one."
+msgstr "이 박물관은 앱으로 설치할 수 있습니다. 설치하면 전용 아이콘으로 전용 창에서 열리고, 스스로 최신 상태를 유지합니다. 모든 라벨과 모델, 그리고 한 번 본 그림은 기기에 저장되므로, 연결이 없어도 박물관이 열립니다. 소리와 영상은 여전히 연결이 필요합니다."
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.install"
+msgid "Install the app"
+msgstr "앱 설치"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.ios"
+msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
+msgstr "iPhone이나 iPad에서는 Safari에서 공유를 탭한 다음 홈 화면에 추가를 탭하세요."
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

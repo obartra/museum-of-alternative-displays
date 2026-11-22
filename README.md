@@ -257,6 +257,58 @@ lists who is still waiting and why. Every portrait is shown the same way, croppe
 white, with its credit beside it. One marked `small` is kept to the size of a label and off the walls of
 the walk, because its photographs are small or soft.
 
+## The museum as an app
+
+The site can be installed, on a phone and on a desk machine. `public/manifest.webmanifest` gives the app
+its name, its colours and its icons, and `index.html` carries the tags an iPhone reads. Under its icon the
+app is called Museum. A browser that installs sites has its own control for it. The About page adds a
+button, Install the app, wherever the browser hands the page its prompt, which Chrome, Edge and the other
+browsers built on Chromium do. Safari on an iPhone or iPad hands over nothing, so there the About page says
+where to tap: Share, then Add to Home Screen. A copy that is already installed offers neither.
+
+A worker, `src/sw.ts`, built into `sw.js`, keeps the museum on the device. It serves a plain tab as well as
+an installed copy. It keeps three things:
+
+- The building: the page, its scripts, its stylesheet and its typefaces, with every model and every label
+  in English. It is fetched once, when the first page has loaded and come to rest, and today adds about
+  340 KB to that first visit.
+- A language, from the first time a visitor reads in it.
+- Each picture, from the first time it is shown, up to 800 of them. A kept picture is shown at once and
+  fetched again behind it, so a picture that changed on the server is the new one the second time.
+
+With these the museum opens without a connection. The recordings of the guide and the archive films are
+not kept: a player asks for them a part at a time, and the worker leaves that to the network. A visitor who
+has asked the browser to save data gets only what the first page needs, and the rest as it is used.
+
+### How a new build reaches an installed copy
+
+The visitor does nothing, and is asked nothing. Every build has a mark, made from its page and the names of
+its files and written into both the page and the worker (`keeper` in `vite.config.ts`). A build that changes
+nothing keeps its mark.
+
+1. The page is asked for from the network first, so a visitor with a connection opens the newest build. If
+   the network has not answered within two and a half seconds, the kept page opens.
+2. The browser looks for a new `sw.js` whenever a page of the site opens. `src/app.ts` has it look again
+   when the page comes back into view, because an installed app is more often brought back than opened.
+3. A new worker fetches the files whose names have changed, takes the others over from the worker before
+   it, and takes over at once.
+4. A page that was open at that moment is of the older build. It reloads by itself, at the same address,
+   when that costs the visitor nothing: at once if they have not touched the page yet, and otherwise at
+   their next change of page. It never reloads while the guide is speaking, while the walk or a model fills
+   the window, or while a closer look or a dialog is open.
+5. Until that page has reloaded, the files of its own build are kept for it. They are removed once no open
+   page is of an older build.
+
+The development server has no worker. To try the app, build the site and serve `dist/`: `npm run build`,
+then `npm run preview`.
+
+The icon is one drawing, `public/icons/icon.svg`: an enamel plate with the M of the name and the colours of
+the seven halls. `node scripts/icons.mjs` makes the PNG files from it, and needs Playwright as the posters
+do. A phone cuts an icon to a shape of its own, so two of the files run the plate out to the edges.
+
+All of this has been run in a test browser on a desk machine. It has not been tried on a phone. On an
+iPhone in particular, how the bar at the top of an installed copy looks by night is not known.
+
 ## Known gaps
 
 - 28 of the 50 pieces still rest only on encyclopedia articles. Replacing those with primary

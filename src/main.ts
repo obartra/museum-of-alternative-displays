@@ -15,6 +15,7 @@ import { tourById, tourStops, type Tour } from './data/tours';
 import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
+import { appHtml, wireApp } from './app';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -651,6 +652,7 @@ function about(): void {
       <p>${tx('about.room.1')}</p>
       <p>${tx('about.room.2')}</p>
       <p>${tx('about.room.3')}</p>
+      ${appHtml()}
     </section>
   </div>
 </div>`, undefined, 'about');
@@ -776,6 +778,8 @@ let fitting = 0;
 window.addEventListener('resize', () => { cancelAnimationFrame(fitting); fitting = requestAnimationFrame(fitPlates); });
 
 root.dataset.lights = lightsOn ? 'on' : 'off';
+// the museum as an app: wired before the router, so that a newer build can answer a change of page before the router does
+wireApp();
 window.addEventListener('hashchange', route);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
 wireLangMenu((code) => {

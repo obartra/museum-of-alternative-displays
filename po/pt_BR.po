@@ -1261,6 +1261,30 @@ msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a}
 msgstr "Não há sala nem peça neste endereço. {a}Volte à entrada{/a} ou {b}procure no índice{/b}."
 
 #: interface
+#. About page.
+msgctxt "ui.about.app"
+msgid "The museum as an app"
+msgstr "O museu como aplicativo"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.1"
+msgid "The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one."
+msgstr "O museu pode ser instalado como um aplicativo. Ele passa a abrir por um ícone próprio, em uma janela própria, e se mantém atualizado sozinho. Todas as etiquetas e todos os modelos ficam guardados no aparelho, assim como cada imagem que você já viu, de modo que o museu abre sem conexão. O som e os filmes ainda precisam de conexão."
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.install"
+msgid "Install the app"
+msgstr "Instalar o aplicativo"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.ios"
+msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
+msgstr "Em um iPhone ou iPad, toque em Compartilhar no Safari e depois em Adicionar à Tela de Início."
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

@@ -1255,6 +1255,30 @@ msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a}
 msgstr "这个地址下没有展厅，也没有展品。{a}返回入口{/a}，或者{b}到索引里找一找{/b}。"
 
 #: interface
+#. About page.
+msgctxt "ui.about.app"
+msgid "The museum as an app"
+msgstr "把博物馆装成应用"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.1"
+msgid "The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one."
+msgstr "这座博物馆可以安装成一个应用。安装后，它有自己的图标，在自己的窗口里打开，并且会自动保持最新。所有展品说明和模型都保存在设备上，你看过的每一张图片也一样，所以没有网络连接也能打开博物馆。声音和影片仍然需要网络连接。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.install"
+msgid "Install the app"
+msgstr "安装应用"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.ios"
+msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
+msgstr "在iPhone或iPad上，在Safari里轻点“共享”，再轻点“添加到主屏幕”。"
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

@@ -1260,6 +1260,30 @@ msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a}
 msgstr "En aquesta adreça no hi ha cap àmbit ni cap peça. {a}Torna a l'entrada{/a} o {b}mira a l'índex{/b}."
 
 #: interface
+#. About page.
+msgctxt "ui.about.app"
+msgid "The museum as an app"
+msgstr "El museu com a aplicació"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.1"
+msgid "The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one."
+msgstr "El museu es pot instal·lar com una aplicació. Aleshores s'obre des d'una icona pròpia, en una finestra pròpia, i es manté al dia tot sol. Totes les fitxes i tots els models es desen al dispositiu, i també cada imatge que has vist, de manera que el museu s'obre sense connexió. El so i les pel·lícules encara necessiten connexió."
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.install"
+msgid "Install the app"
+msgstr "Instal·la l'aplicació"
+
+#: interface
+#. About page.
+msgctxt "ui.about.app.ios"
+msgid "On an iPhone or iPad, tap Share in Safari, then Add to Home Screen."
+msgstr "En un iPhone o un iPad, toca «Comparteix» al Safari i després «Afegeix a la pantalla d'inici»."
+
+#: interface
 #. Whether a kind of display is still made. Shown in the table of facts and in the index.
 msgctxt "status.production"
 msgid "In production"

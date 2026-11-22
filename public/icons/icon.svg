@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Museum of Alternative Displays</title>
+  <!--
+    The icon of the museum as an app. An enamel plate in the museum's black, with the thin line that every plate
+    in the museum carries inside its edge. On it stand the M of the name, in the display face of the plates, and
+    the colours of the seven halls in a column, as the board at the entrance lists them.
+    The letter is Sofia Sans Extra Condensed at weight 800, drawn as an outline, so the file needs no typeface.
+    scripts/icons.mjs makes the PNG files from this drawing. It finds the parts by their ids.
+  -->
+  <defs>
+    <!-- the light on the enamel, as the plates have it in the stylesheet: from the top, gone by two fifths of the way down -->
+    <linearGradient id="light" gradientUnits="userSpaceOnUse" x1="216" y1="-30" x2="296" y2="542">
+      <stop offset="0" stop-color="#fff" stop-opacity=".16"/>
+      <stop offset=".38" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="plate" width="512" height="512" rx="104" fill="#14171a"/>
+  <rect id="gloss" width="512" height="512" rx="104" fill="url(#light)"/>
+  <rect id="line" x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="#e8e9e3" stroke-opacity=".78" stroke-width="6"/>
+  <g id="mark">
+    <rect x="98" y="92" width="40" height="40" rx="4" fill="#586067"/>
+    <rect x="98" y="140" width="40" height="40" rx="4" fill="#d1481f"/>
+    <rect x="98" y="188" width="40" height="40" rx="4" fill="#1f3fa6"/>
+    <rect x="98" y="236" width="40" height="40" rx="4" fill="#dba51a"/>
+    <rect x="98" y="284" width="40" height="40" rx="4" fill="#efe8d2"/>
+    <rect x="98" y="332" width="40" height="40" rx="4" fill="#14857c"/>
+    <rect x="98" y="380" width="40" height="40" rx="4" fill="#57409a"/>
+    <path fill="#e8e9e3" d="M173 420Q168 420 168 414.3L172.3 98Q172.3 92 177.5 92H240Q245.2 92 246 96.4L290.6 262.3L335.2 96.4Q336.3 92 341.2 92H403.7Q408.7 92 408.7 98L413.2 414.3Q413.2 420 407.9 420H357.1Q351.9 420 351.9 414L350.8 275.3Q350.5 249.8 351.5 228.9Q352.5 208.1 353.9 190.6H353.1Q349.2 206.4 344.5 222.5Q339.8 238.6 334.6 254.2L296.4 375.9Q295.1 380 291.6 380H289.3Q286.1 380 284.8 375.9L246.1 254Q241 238.4 236.5 222.4Q231.9 206.4 228.1 190.6H227.1Q228.6 208.1 229.7 228.8Q230.7 249.6 230.4 275.1L229 414Q229 420 224.1 420Z"/>
+  </g>
+</svg>

@@ -220,6 +220,11 @@ export const en = {
   'missing.page': 'Not found',
   'missing.title': 'Nothing at this address',
   'missing.text': 'There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}.',
+
+  'about.app': 'The museum as an app',
+  'about.app.1': 'The museum can be installed as an app. It then opens from an icon of its own, in a window of its own, and keeps itself up to date. Every label and every model is kept on the device, and so is each picture you have seen, so the museum opens without a connection. Sound and film still need one.',
+  'about.app.install': 'Install the app',
+  'about.app.ios': 'On an iPhone or iPad, tap Share in Safari, then Add to Home Screen.',
 } as const;
 
 export type UiKey = keyof typeof en;
