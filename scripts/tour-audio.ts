@@ -243,6 +243,8 @@ async function pauses(file: string): Promise<[number, number][]> {
  * that points to the pause between two paragraphs, and the cut is made in the middle of the pause that ffmpeg
  * finds there. Says `cannot` when this part has to be spoken paragraph by paragraph after all.
  */
+/** How often a part of each language could not be cut where its paragraphs meet. */
+const missed: Record<string, number> = {};
 async function inOnePiece(voice: string, lang: string, x: { n: number; text: string[] }): Promise<{ clips: string[] } | { refusal: string } | { cannot: string }> {
   const text = spoken(x.text);
   const res = await speak(voice, lang, text, true);
@@ -258,9 +260,10 @@ async function inOnePiece(voice: string, lang: string, x: { n: number; text: str
   writeFileSync(file, Buffer.from(got.audio_base64, 'base64'));
   if (x.text.length === 1) return { clips: [file] };
   const ch = got.alignment?.characters ?? [], t0 = got.alignment?.character_start_times_seconds ?? [], t1 = got.alignment?.character_end_times_seconds ?? [];
-  // from here on, whatever cannot be done for this part is not tried for the others: each try that fails is paid for
-  const giveUp = (why: string) => { timed = false; return { cannot: why }; };
-  if (!ch.length || t0.length !== ch.length || t1.length !== ch.length) return giveUp(`${config.model} gave no times with its speech.`);
+  if (!ch.length || t0.length !== ch.length || t1.length !== ch.length) { timed = false; return { cannot: `${config.model} gave no times with its speech.` }; }
+  // A voice that runs two paragraphs together leaves no place to cut. Each try that fails is paid for, so a
+  // language whose voice has done it twice is spoken paragraph by paragraph from then on. The others go on in one piece.
+  const giveUp = (why: string) => { missed[lang] = (missed[lang] ?? 0) + 1; return { cannot: why }; };
   // Where one paragraph ends and the next begins. The characters come back as they were sent, but what stands
   // between two paragraphs may have been made into something else, so each paragraph is looked for by its first words
   const entry: number[] = [];
@@ -308,7 +311,7 @@ for (const lang of langs) {
     if (!voice) { missingVoice.add(lang); continue; }
     // A refusal ends this language and not the run: the others may still be recorded, and what was made is kept
     let raw: string[] = [], refusal = '';
-    if (timed) {
+    if (timed && (missed[lang] ?? 0) < 2) {
       const got = await inOnePiece(voice, lang, x);
       if ('clips' in got) raw = got.clips; else if ('refusal' in got) refusal = got.refusal; else note(`${lang}, ${x.part}: ${got.cannot} Its paragraphs are spoken one by one.`);
     }

@@ -4885,6 +4885,12 @@ msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le
 msgstr "Trabalhou com até vinte ajudantes nos espetáculos de sombras do cabaré Le Chat Noir, em Paris, que apresentou 45 deles entre 1885 e 1896. A partir de 1887 as figuras eram de zinco."
 
 #: hall-4/shadow-play
+#. People section: what Kara Walker did. The names stand above this line.
+msgctxt "piece.shadow-play.people.4"
+msgid "American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
+msgstr "Artista americana, conhecida pelas silhuetas recortadas em papel preto. Desde 2004 faz filmes em que bonecos articulados de papel, movidos à mão com varetas, encenam histórias da escravidão nos Estados Unidos."
+
+#: hall-4/shadow-play
 #. Note under the People section.
 msgctxt "piece.shadow-play.note"
 msgid "No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers."
@@ -8475,8 +8481,8 @@ msgstr "Mulheres no museu"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr "Uma visita guiada pelas sete salas. Doze displays, dos pinos do braille a um holograma, cada um com pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
+msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
+msgstr "Uma visita guiada pelas sete salas. Treze displays, dos pinos do braille a um holograma, cada um com pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -8487,8 +8493,8 @@ msgstr "Antes da primeira parada"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors."
-msgstr "Boas-vindas ao museu. Esta visita segue a linha verde no chão. Ela passa pelas sete salas e para diante de doze displays. Cada um tem pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
+msgstr "Boas-vindas ao museu. Esta visita segue a linha verde no chão. Ela passa pelas sete salas e para diante de treze displays. Cada um tem pelo menos uma mulher entre as pessoas que o inventaram ou contribuíram para ele."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -8589,8 +8595,32 @@ msgstr "Os cristais se chamam pontos quânticos. A maioria das telas os usa como
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
-msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
-msgstr "O tubo de raios catódicos, a parede de LED e este pixel produzem a própria luz. Na sala 4, uma lâmpada ou um laser produz a luz, e o display lhe dá forma. Vá até o laser de varredura."
+msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth."
+msgstr "O tubo de raios catódicos, a parede de LED e este pixel produzem a própria luz. Na sala 4, o sol, uma lâmpada ou um laser produz a luz, e o display lhe dá forma. Vá até o teatro de sombras, onde a lâmpada é uma chama atrás de um pano."
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: the title of this part.
+msgctxt "tour.women.shadow-play.title"
+msgid "A flame and a cloth"
+msgstr "Uma chama e um pano"
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.1"
+msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft."
+msgstr "Olhe para o pano. Atrás dele arde uma chama, e entre a chama e o pano ficam três figuras planas: uma árvore, um cervo e um pássaro. O que você vê são as sombras delas. Observe o pássaro. Quando ele voa em direção à lamparina, a sombra cresce e a borda fica suave."
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.2"
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
+msgstr "Ninguém sabe quem fez isso primeiro. Há registros em Java e na China de cerca de mil anos atrás, e ele é encenado até hoje. Furos recortados em uma figura deixam a luz passar e desenham um olho ou uma pena dentro da sombra. Kara Walker, artista americana conhecida pelas silhuetas recortadas em papel preto, faz filmes assim desde 2004. Os seus bonecos articulados de papel, movidos à mão com varetas, encenam histórias da escravidão nos Estados Unidos."
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.3"
+msgid "The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser."
+msgstr "A primeira parada não precisava de luz nenhuma. Esta só precisa de uma chama. A próxima parada, nesta mesma sala, desenha com um feixe de luz. Vá até o laser de varredura."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
@@ -8793,8 +8823,8 @@ msgstr "Este é o fim da linha verde. Ela começou com pinos que se leem pelo ta
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "Quatorze mulheres são citadas nestas doze paradas, e você já esteve diante do trabalho de cada uma. Ao todo, as etiquetas destas salas citam mais de cem pessoas."
+msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "Quinze mulheres são citadas nestas treze paradas, e você já esteve diante do trabalho de cada uma. Ao todo, as etiquetas destas salas citam mais de cem pessoas."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.

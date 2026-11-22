@@ -4884,6 +4884,12 @@ msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le
 msgstr "パリのキャバレー「ル・シャ・ノワール」の影絵芝居に、多いときは二十人の助手とともに取り組みました。この店は1885年から1896年のあいだに45の演目を上演しました。1887年からは、人形は亜鉛板でできていました。"
 
 #: hall-4/shadow-play
+#. People section: what Kara Walker did. The names stand above this line.
+msgctxt "piece.shadow-play.people.4"
+msgid "American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
+msgstr "アメリカの美術家。黒い紙を切り抜いたシルエットで知られます。2004年から、棒につけた関節のある紙人形を手で動かし、アメリカの奴隷制の物語を演じさせる映像作品を作っています。"
+
+#: hall-4/shadow-play
 #. Note under the People section.
 msgctxt "piece.shadow-play.note"
 msgid "No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers."
@@ -8474,8 +8480,8 @@ msgstr "博物館の女性たち"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr "七つの展示室をめぐるガイドツアーです。点字のピンからホログラムまで、12のディスプレイに立ち寄ります。どれも、発明した人や貢献した人の中に少なくとも一人の女性がいます。"
+msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
+msgstr "七つの展示室をめぐるガイドツアーです。点字のピンからホログラムまで、13のディスプレイに立ち寄ります。どれも、発明した人や貢献した人の中に少なくとも一人の女性がいます。"
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -8486,8 +8492,8 @@ msgstr "最初のスポットの前に"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors."
-msgstr "博物館へようこそ。このツアーは、床の緑の線に沿って進みます。七つの展示室すべてを通り、12のディスプレイに立ち寄ります。どれも、発明した人や貢献した人の中に少なくとも一人の女性がいます。"
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
+msgstr "博物館へようこそ。このツアーは、床の緑の線に沿って進みます。七つの展示室すべてを通り、13のディスプレイに立ち寄ります。どれも、発明した人や貢献した人の中に少なくとも一人の女性がいます。"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -8588,8 +8594,32 @@ msgstr "この結晶は量子ドットと呼ばれます。ほとんどの画面
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
-msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
-msgstr "ブラウン管も、LEDの壁も、この画素も、自分で光を作ります。第4展示室では、ランプかレーザーが光を作り、ディスプレイがその光に形を与えます。走査型レーザーへ進んでください。"
+msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth."
+msgstr "ブラウン管も、LEDの壁も、この画素も、自分で光を作ります。第4展示室では、太陽かランプかレーザーが光を作り、ディスプレイがその光に形を与えます。影絵芝居へ進んでください。そこでは、布のうしろの炎がランプです。"
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: the title of this part.
+msgctxt "tour.women.shadow-play.title"
+msgid "A flame and a cloth"
+msgstr "炎と布"
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.1"
+msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft."
+msgstr "布の幕を見てください。そのうしろで炎が燃えていて、炎と布のあいだに平たい人形が三つあります。木と鹿と鳥です。見えているのは、その影です。鳥を見ていてください。鳥がランプのほうへ飛ぶと、影は大きくなり、縁がやわらかくなります。"
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.2"
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
+msgstr "これを最初にしたのがだれかは、分かっていません。およそ千年前のジャワと中国に記録があり、いまも上演されています。人形に開けた穴は光を通し、影の中に目や羽根を描きます。黒い紙を切り抜いたシルエットで知られるアメリカの美術家カラ・ウォーカーは、2004年からこの方法で映像作品を作っています。棒につけた関節のある紙人形を手で動かし、アメリカの奴隷制の物語を演じさせます。"
+
+#: tour-women
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.shadow-play.text.3"
+msgid "The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser."
+msgstr "最初のスポットは、光をまったく必要としませんでした。ここで必要なのは炎だけです。次のスポットは、この同じ展示室にあり、光のビームで描きます。走査型レーザーへ進んでください。"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
@@ -8792,8 +8822,8 @@ msgstr "緑の線はここで終わりです。始まりは、指で触れて読
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "この12のスポットには、14人の女性の名前があります。あなたはいま、その一人一人の仕事の前に立ってきました。この七つの展示室のラベルには、合わせて100人を超える人の名前があります。"
+msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "この13のスポットには、15人の女性の名前があります。あなたはいま、その一人一人の仕事の前に立ってきました。この七つの展示室のラベルには、合わせて100人を超える人の名前があります。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.

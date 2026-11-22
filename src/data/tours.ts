@@ -35,10 +35,10 @@ export const tours: Tour[] = [
   {
     id: 'women',
     title: 'Women in the museum',
-    lead: 'A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
+    lead: 'A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors.',
+        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors.',
         'The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins.',
       ] },
       { id: 'braille-display', title: 'Read by touch', stand: { wide: 2.1, aim: 0.2 }, who: ['Andrée Tretiakoff'], text: [
@@ -59,7 +59,12 @@ export const tours: Tour[] = [
       { id: 'quantum-dot', title: 'Colour from size', stand: { wide: 1.6, aim: 0.45 }, who: ['Vicki Colvin'], text: [
         'This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour.',
         'The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper.',
-        'The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser.',
+        'The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth.',
+      ] },
+      { id: 'shadow-play', title: 'A flame and a cloth', who: ['Kara Walker'], text: [
+        'Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft.',
+        'Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.',
+        'The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser.',
       ] },
       { id: 'scanned-laser', title: 'Drawing with a laser', who: ['Elsa Garmire'], text: [
         'Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall.',
@@ -102,7 +107,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'end', title: 'The end of the green line', text: [
         'That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there.',
-        'Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
+        'Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
         'The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour.',
       ] },
     ],

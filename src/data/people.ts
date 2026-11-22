@@ -173,11 +173,14 @@ export const people: Record<string, Credit> = {
       { who: ['Ibn Daniyal'], aside: true, did: 'Eye doctor, born in Mosul in 1248. He settled in Cairo and wrote three shadow plays there, the oldest texts that survive for the Arabic shadow theatre.' },
       { who: ['François Dominique Séraphin'], aside: true, did: 'Showed shadow plays at Versailles from 1771 and moved his theatre to Paris in 1784. In France such shows were advertised as ombres chinoises, Chinese shadows.' },
       { who: ['Henri Rivière'], aside: true, did: 'Worked with up to twenty assistants on the shadow plays of the cabaret Le Chat Noir in Paris, which staged 45 of them between 1885 and 1896. From 1887 the figures were of zinc.' },
+      { who: ['Kara Walker'], she: ['Kara Walker'], aside: true, did: 'American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.' },
     ],
     note: 'No inventor is recorded for wayang, for the Chinese shadow theatre or for Karagöz. In Java the craft has been handed down within families of puppeteers, musicians and puppet makers.',
     sources: [
       src('reference', 'Ibn Daniel, World Encyclopedia of Puppetry Arts, UNIMA', 'https://wepa.unima.org/en/?p=773'),
       src('reference', 'Muḥammad Ibn Dāniyāl (Wikipedia)', 'https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_Ibn_D%C4%81niy%C4%81l'),
+      src('archive', 'Kara Walker, Shadow puppet from Testimony: Narrative of a Negress Burdened by Good Intentions (2004), Museum of Modern Art', 'https://www.moma.org/collection/works/97669'),
+      src('archive', 'Kara Walker, Fall Frum Grace, Miss Pipi\'s Blue Tale (2011), Sammlung Goetz', 'https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/'),
     ],
   },
   'liquid-crystal': {

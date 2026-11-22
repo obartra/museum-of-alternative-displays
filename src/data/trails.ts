@@ -35,6 +35,7 @@ const black: Listed[] = [
   { name: 'Lewis Latimer', source: src('archive', 'Bringing light for all, United States Patent and Trademark Office (2024)', 'https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/bringing-light-all') },
   { name: 'Akintunde Akinwande', source: src('reference', 'Akintunde Akinwande (Wikipedia)', 'https://en.wikipedia.org/wiki/Akintunde_Akinwande') },
   { name: 'Lanny Smoot', source: src('press', 'Black Disney Imagineer Inducted Into Inventors Hall Of Fame, Black Enterprise', 'https://www.blackenterprise.com/black-disney-imagineer-inducted-inventors-hall-of-fame/') },
+  { name: 'Kara Walker', source: src('archive', 'Kara Walker, Fall Frum Grace, Miss Pipi\'s Blue Tale (2011), Sammlung Goetz', 'https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/') },
   { name: 'Paula Hammond', source: src('press', 'Paula Hammond, The EDU Ledger (2021)', 'https://www.theeduledger.com/home/article/15109532/paula-hammond') },
   { name: 'Valerie Thomas', source: src('press', 'Valerie Thomas, Biography.com', 'https://www.biography.com/scientists/valerie-thomas') },
   { name: 'Kenneth Dunkley', source: src('archive', 'Kenneth Dunkley, National Business League', 'https://nationalbusinessleague.org/kenneth-dunkley/') },
