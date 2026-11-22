@@ -74,7 +74,7 @@ for path, html in sorted(pages.items()):
     body = plain(html)
     if body.count('<h1>') != 1:
         wrong.append(f'{path}: {body.count("<h1>")} main headings in the plain words')
-    for href in re.findall(r'<a href="([^"]+)"', body):
+    for href, tongue in re.findall(r'<a href="([^"]+)"( hreflang="[^"]+")?', body):
         if re.match(r'https?:', href):
             continue
         to = '' if href == './' else href
@@ -83,7 +83,7 @@ for path, html in sorted(pages.items()):
                 wrong.append(f'{path}: a link to a file that is not there: {href}')
         elif to not in pages:
             wrong.append(f'{path}: a link leads nowhere: {href}')
-        elif lang_of(to) != lang_of(path):
+        elif lang_of(to) != lang_of(path) and not tongue:
             wrong.append(f'{path}: a link leaves the language: {href}')
     for src in re.findall(r'<img src="([^"]+)"', body):
         if not os.path.exists(os.path.join(dist, src)):

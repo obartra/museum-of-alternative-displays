@@ -174,6 +174,7 @@ ${ways}`,
   // the people: everyone named on a label, under the piece they worked on
   out.push({
     name: 'people', path: 'people/', title: titled(w.ui('nav.people')), short: w.ui('nav.people'), says: w.ui('people.lead'), kind: 'WebPage', crumbs: [home, [w.ui('nav.people'), 'people/']],
+    more: { mentions: [...new Set(pieces.flatMap((p) => people[p.id]?.people.flatMap((e) => e.who) ?? []))].map((name) => ({ '@type': 'Person', name })) },
     body: `<h1>${esc(w.ui('nav.people'))}</h1>
 <p>${esc(w.ui('people.lead'))}</p>
 ${pieces.filter((p) => people[p.id]).map((p) => {
@@ -257,7 +258,8 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
   for (const { w, pages } of all) {
     for (const o of pages) {
       const folder = w.pre + o.path, url = site + folder, up = '../'.repeat(folder.split('/').length - 1) || './';
-      const alternates = others(o.name).map((x) => `<link rel="alternate" hreflang="${x.w.tag}" href="${site}${x.w.pre}${x.path}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${site}${o.path}">`;
+      const same = others(o.name);
+      const alternates = same.map((x) => `<link rel="alternate" hreflang="${x.w.tag}" href="${site}${x.w.pre}${x.path}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${site}${o.path}">`;
       const museum = { '@type': 'WebSite', '@id': `${site}#museum`, url: site, name: en['site.name'], ...(w.ui('site.name') !== en['site.name'] ? { alternateName: w.ui('site.name') } : {}), author: { '@type': 'Person', name: AUTHOR }, license: LICENCE };
       const data = {
         '@context': 'https://schema.org',
@@ -291,7 +293,9 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
       }
       // the name of the place and its language go with the data, so that the museum can tell when it has drawn another place over it
       html = swap(html, /<\/head>/, `<script type="application/ld+json" data-place="${w.code === 'en' ? '' : w.code} ${o.name}">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>\n</head>`);
-      html = swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">\n${o.body}\n</main></div>`);
+      // the same place in the other languages, each under its own name
+      const tongues = `<p>${same.map((x) => `<a href="${x.w.pre + x.path || './'}" hreflang="${x.w.tag}" lang="${x.w.tag}">${esc(LANGS.find((l) => l.code === x.w.code)!.name)}</a>`).join(' / ')}</p>`;
+      html = swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">\n${o.body}\n${tongues}\n</main></div>`);
       listed.push({ url, pictures: (o.pictures ?? []).map((file) => site + file) });
       if (folder === '') root = html; else files.push({ fileName: `${folder}index.html`, source: html });
     }

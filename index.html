@@ -83,6 +83,15 @@
 // the first picture of the page does not wait for one after the other.
 try { document.fonts.load('800 1em "Sofia Sans Extra Condensed Variable"'); document.fonts.load('500 1em "Sofia Sans Variable"'); } catch (e) {}
 </script>
+<script>
+// The plain words a page came with are hidden while the museum starts. If its script does not arrive or cannot run
+// here, they are shown after all: a reader then has the label, and the links to the other pages.
+(function () {
+  var show = function () { if (!document.body.dataset.ready) document.documentElement.classList.remove('js'); };
+  setTimeout(show, 8000);
+  window.addEventListener('error', function (e) { if (e.target && e.target.tagName === 'SCRIPT') show(); }, true);
+})();
+</script>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
