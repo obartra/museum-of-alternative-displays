@@ -1,6 +1,6 @@
 # Portraits still to do
 
-The labels name 143 people. 74 have a portrait on the site and 69 do not. This file lists them: first the 33 people the labels gained on 22 November 2026, who have no drawing yet (seven in the morning, seventeen with the blue line, and nine with the two new pieces of hall 4), then the 36 that were open before, sorted by what each one needs. That last part is written out from the third package of drawings, received on 21 November 2026, and from the check made of it here. `PORTRAITS.md` has the whole list and the rules.
+The labels name 143 people. 74 have a portrait on the site and 69 do not. A fifth package of drawings arrived on 22 November 2026, with 32 drawings for 32 of the 69. None of them is on the site yet: the package says of itself that it is for review, and that each drawing needs the owner's yes before it is shown. This file lists first what waits for that yes, then what still has to be drawn or found. The package was made before the two new pieces of hall 4 were on the labels, so their eight people are not in it.
 
 A fourth package, received on 22 November 2026, held one drawing: Louis Brus, after a photograph of 2008. Its own record says that the grant to reuse that photograph could not be verified, so the drawing stays off the site, and the study of Brus that is there stays.
 
@@ -8,188 +8,143 @@ Of the 74 on the site, 39 are drawings after a picture that is free to reuse, an
 
 | What is needed | People |
 | --- | --- |
-| A first drawing: new on the labels on 22 November | 30 |
-| No drawing: no portrait from life exists | 3 |
-| Another look: a drawing exists and was stopped | 13 |
-| A photograph that a drawing can rest on | 7 |
+| The owner's yes: drawn in the fifth round, and passed the check made here | 30 |
+| A rights check: drawn in the fifth round, held by its own package | 1 |
+| Another look: drawn in the fifth round, stopped by the check made here | 1 |
+| Another look: an earlier drawing was stopped, and the fifth round made no new one | 4 |
+| A photograph that a drawing can rest on | 9 |
 | A named photograph: none was found, or it is not settled who the picture shows | 16 |
+| A first drawing after a picture in the public domain: the two new pieces | 5 |
+| No drawing: no portrait from life exists | 3 |
+
+## The check made here on the fifth package
+
+- Every file of the package matches its list of checksums. The 16 ordinary drawings are 600 by 750 and the 16 small ones 84 by 105, as its record says.
+- Each drawing was looked at beside its own record. Hair, glasses, facial hair, clothing and the turn of the head are as the record describes them, with one exception: Louis Heynick, under Another look.
+- Not done yet: the package holds no photographs, so nothing here sets a drawing beside a photograph, and the source pages have not been opened again. Each page is checked against the label when its drawing is placed. Whether a drawing looks like the person is not judged here at all.
+- One thing for the owner to decide: Barrett Comiskey, J. D. Albert and Joseph Jacobson share one label, and all three look down. At the size of a label their eyes read as closed. The lowered head is what made each pose differ from its photographs.
+- Of the 30 that wait for a yes, 4 follow a picture with a stated basis for reuse and 26 are studies. The package calls the right to publish a study uncertain and leaves that decision to the owner, person by person. The 35 studies already on the site were accepted on the same footing. 15 of the 30 can be shown only at the size of a label.
 
 ## The women
 
-8 of the 14 women named on the labels have a portrait on the site. Five stops of the guided tour show a name with no face: Andrée Tretiakoff, Elma Farnsworth, Zhenan Bao, Paula Hammond and Elizabeth Downing. A fifteenth woman, Kara Walker, arrives with the shadow play and will be a stop of the tour.
+8 of the 15 women named on the labels have a portrait on the site. Six stops of the guided tour show a name with no face: Andrée Tretiakoff, Elma Farnsworth, Kara Walker, Zhenan Bao, Paula Hammond and Elizabeth Downing. Four of the six are drawn in the fifth round. Three of those wait for a yes, and Kara Walker waits for a rights check.
 
 | Person | Piece | Where it stands |
 | --- | --- | --- |
-| Andrée Tretiakoff | Refreshable braille display | No named photograph found |
-| Elma Farnsworth | Cathode ray tube | A drawing exists and was stopped |
-| Marie Van Brittan Brown | Cathode ray tube | New on 22 November: no drawing yet |
+| Andrée Tretiakoff | Refreshable braille display | No named photograph found. A stop of the tour |
+| Elma Farnsworth | Cathode ray tube | Drawn in the fifth round, a study at label size: waits for a yes. A stop of the tour |
+| Marie Van Brittan Brown | Cathode ray tube | No drawing: the one verified photograph clips her hair |
 | Jingyu Lin | MicroLED | On the site, after a free picture |
 | Vicki Colvin | Quantum-dot display | On the site, a study |
 | Elsa Garmire | Scanned laser | On the site, a study |
 | Leota Toombs | Projection mapping | On the site, a study |
-| Kara Walker | Shadow play, a new piece | On her way to the labels: no drawing yet. Will be a stop of the tour |
-| Zhenan Bao | Electrophoretic ink | New on 22 November: no drawing yet. A stop of the tour |
+| Kara Walker | Shadow play | Drawn in the fifth round, and held by the package for a rights check. A stop of the tour |
+| Zhenan Bao | Electrophoretic ink | Drawn in the fifth round, after a free picture: waits for a yes. A stop of the tour |
 | Susan Hackwood | Electrowetting display | On the site, a study |
-| Paula Hammond | Electrochromic display | New on 22 November: no drawing yet. A stop of the tour |
+| Paula Hammond | Electrochromic display | Drawn in the fifth round, after a free picture: waits for a yes. A stop of the tour |
 | Valerie Thomas | Illusion transmitter | On the site, after a free picture |
-| Elizabeth Downing | Static-volume display | No named photograph found |
+| Elizabeth Downing | Static-volume display | No named photograph found. A stop of the tour |
 | Margaret Benyon | Holography | On the site, a study |
 | Mary Lou Jepsen | Holography | On the site, after a free picture |
 
-## New on the labels in the morning (7)
+## Drawn in the fifth round: waiting for a yes (30)
 
-Added on 22 November 2026. None has a drawing yet. The pages listed are where the person is named together with a fact from the label. Whether a photograph there may be drawn after, or only studied, has still to be settled for each.
+Open `index.html` in the package for each drawing beside its record. A yes puts the drawing in `public/people` and one line in `src/data/portraits.ts`.
 
-### Zhenan Bao (woman, a stop of the tour)
+| Person | Piece | Size | What it rests on |
+| --- | --- | --- | --- |
+| Zhenan Bao (woman) | Electrophoretic ink, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. |
+| Paula Hammond (woman, blue line) | Electrochromic display, hall 5 | Full | After a picture by Christopher Michel, CC BY-SA 4.0. |
+| Albert Brown | Cathode ray tube, hall 2 | Label only | A study, from photographs published by The New York Times, 6 December 1969, scanned copy via The American Blackstory. |
+| Mark Dean (blue line) | Cathode ray tube, hall 2 | Full | A study, from photographs published by IBM; National Inventors Hall of Fame. |
+| John Rogers | Electrophoretic ink, hall 5 | Label only | A study, from photographs published by Northwestern University; University of Illinois / L. Brian Stauffer, via Commons. |
+| Dean DeLongchamp | Electrochromic display, hall 5 | Full | After a picture by NIST; individual photographer not stated, NIST public-information reuse policy. |
+| Lewis Latimer (blue line) | Numitron, hall 2 | Label only | After a picture by an unknown photographer, 1882, Public domain (Commons historical photograph). |
+| Akintunde Akinwande (blue line) | Field emission display, hall 2 | Label only | A study, from photographs published by MIT Center for Integrated Circuits and Systems; MIT Technology Licensing Office. |
+| Xiaogang Peng | Quantum-dot display, hall 3 | Label only | A study, from photographs published by University of Hamburg, lecture programme 2021; Nanjing University of Science and Technology, conference programme 2016. |
+| Yizheng Jin | Quantum-dot display, hall 3 | Label only | A study, from photographs published by Nanjing University of Science and Technology, conference programme 2016. |
+| Dawon Kahng | Thin-film electroluminescent panel, hall 3, and Liquid crystal display, hall 4 | Label only | A study, from photographs published by National Inventors Hall of Fame. |
+| Mohamed Atalla | Liquid crystal display, hall 4 | Label only | A study, from photographs published by National Inventors Hall of Fame; History of Semiconductor Engineering, via Commons. |
+| Sivaramakrishna Chandrasekhar | Liquid crystal display, hall 4 | Full | A study, from photographs published by Historic signed portrait photographed at CeNS, via Commons; Raman Research Institute. |
+| B. K. Sadashiva | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph Sadashiva15; Raman Research Institute, lecture photograph Sadashiva12. |
+| K. A. Suresh | Liquid crystal display, hall 4 | Label only | A study, from photographs published by Raman Research Institute, lecture photograph RVP-01; Raman Research Institute, named biography. |
+| Lanny Smoot (blue line) | Projection mapping, hall 4 | Full | A study, from photographs published by National Inventors Hall of Fame; The Walt Disney Company. |
+| Ali Javan | Holography, hall 7 | Label only | A study, from photographs published by National Inventors Hall of Fame; MIT Physics Annual 2017, in remembrance. |
+| Nasser Peyghambarian | Holography, hall 7 | Full | A study, from photographs published by University of Arizona, Optical Sciences; University of Arizona, Semiconductor Manufacturing. |
+| Pierre-Alexandre Blanche | Holography, hall 7 | Label only | A study, from photographs published by University of Arizona, IEEE author manuscript; University of Arizona, 2021 Optimax award. |
+| Charles Harrison (blue line) | Stereoscope and 3D glasses, hall 7 | Label only | A study, from photographs published by Cooper Hewitt / Rob Tarpey, 2008; The Strong / Tim Klein, 1998, republished by Global Toy News. |
+| Hank Willis Thomas (blue line) | Lenticular display, hall 7 | Full | A study, from photographs published by New City Arts / Andrea Blanch; Ford Foundation. |
+| Samuel Achilefu (blue line) | Head-mounted display, hall 7 | Full | A study, from photographs published by UT Southwestern; Washington University in St. Louis. |
+| Horst Hörtner | Drone light show, hall 1 | Full | A study, from photographs published by Ars Electronica. Replaces a drawing that was stopped. |
+| Elma Farnsworth (woman) | Cathode ray tube, hall 2 | Label only | A study, from photographs published by Television Academy Foundation. Replaces a drawing that was stopped. |
+| Tadashi Nakamura | Vacuum fluorescent display, hall 2 | Full | A study, from photographs published by Electronic Design (archived by World Radio History); Noritake Itron. Replaces a drawing that was stopped. |
+| Gerald Pighini | LED display, hall 3 | Label only | A study, from photographs published by Hewlett-Packard Journal (HP Archive). Replaces a drawing that was stopped. |
+| Barrett Comiskey | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
+| J. D. Albert | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
+| Joseph Jacobson | Electrophoretic ink, hall 5 | Full | A study, from photographs published by National Inventors Hall of Fame. Replaces a drawing that was stopped. |
+| Gerardo Beni | Electrowetting display, hall 5 | Full | A study, from photographs published by University of California, Riverside. Replaces a drawing that was stopped. |
 
-- Piece: Electrophoretic ink, hall 5.
-- Who this is: Chemist. With John Rogers at Bell Laboratories in 2001 she stamped 256 plastic transistors onto a plastic sheet and laid the ink over them: electronic paper that bends. Now at Stanford University.
-- Where she is named: [Stanford University](https://profiles.stanford.edu/zhenan-bao); [Stanford Bio-X](https://biox.stanford.edu/people/zhenan-bao).
+## Held for a rights check (1)
 
-### Paula Hammond (woman, a stop of the tour)
+### Kara Walker (woman, a stop of the tour, blue line)
 
-- Piece: Electrochromic display, hall 5.
-- Who this is: Chemical engineer at MIT. With Dean DeLongchamp she built electrochromic films one molecular layer at a time.
-- Where she is named: [Science History Institute](https://www.sciencehistory.org/education/scientific-biographies/paula-hammond/); [MIT Institute for Soldier Nanotechnologies](https://isn.mit.edu/people/prof-paula-t-hammond).
+- Piece: Shadow play, hall 4, one of the two new pieces.
+- The drawing: After a picture by Studio International; filmed by Martin Kennedy, CC BY-SA 3.0 (as stated on Commons). Full size.
+- Held by the package: Close-cropped hair and source floral top retained. Cheek/chin geometry softened after comparison. Commons reports an open licence, but original Vimeo grant could not be rechecked: hold publication pending rights review.
+- What is needed: the licence of the original film, read on its own page, or another picture with a stated basis for reuse. Until then the drawing stays off the site, as the fourth package's drawing of Louis Brus does.
 
-### Marie Van Brittan Brown (woman)
+## Another look (5)
+
+### Louis Heynick
+
+- Piece: Field emission display, hall 2.
+- The fifth round's drawing: A study, from photographs published by Bioelectromagnetics Society newsletter (archived copy). Label only.
+- Its record says: Restored documented WHITE moustache; retained receding combed white hair, broad older cheeks and new near-front pose/plain shirt. Newsletter scan is soft: label only. Photo supplied courtesy Sheila Johnston; photographer unstated.
+- Stopped here: At the size of a label, which is the only size this drawing has, the upper lip still reads as bare: the white moustache of the photograph is a faint line. This is what stopped the drawing before it. A new drawing in which the moustache can be seen at 84 by 105.
+
+### Guillermo González Camarena
+
+- Piece: Colour-wheel television, hall 2.
+- Who this is: Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.
+- Photographs used: [INEHRM / Secretaría de Cultura, Mexico](https://repositorio-inehrm.cultura.gob.mx/fototeca/guillermo-gonzalez-camarena/); [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg).
+- Stopped by the package: Both sources name the colour-TV inventor and support glasses/hair/face. Archive catalogues its photograph ca1935, conflicting with apparent adult age used here; chronology needs clarification.
+- Fifth round, no new drawing: Archive ca1935 date remains inconsistent with the apparent adult age in the held drawing. No new primary chronology evidence found in this pass. Keep earlier drawing held; do not silently reinterpret catalogue date.
+
+### Kenneth Shoulders
+
+- Piece: Field emission display, hall 2.
+- Who this is: Patented the way of making the microscopic tips, at Stanford Research Institute.
+- Photographs used: [SRI International Alumni Association](https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf).
+- Stopped by the package: Broad head and receding hair are documented, but the blank few-mark face loses too much of the sitter’s apparent age and eye shape. Keep off site pending stronger likeness evidence.
+- Fifth round, no new drawing: Targeted search again returns SRI obituary soft portrait. No sharper named professional photograph accepted yet.
+
+### Gregg Favalora
+
+- Piece: Swept-volume display, hall 6.
+- Who this is: Founder of Actuality Systems, which put the Perspecta display on sale in 2002.
+- Photographs used: [MIT Microsystems Technology Laboratories](https://www.mtl.mit.edu/events-seminars/events/electroholographic-3-d-display-technologies-based-surface-acoustic-wave); [bulletin.yale.edu](https://bulletin.yale.edu/sites/default/files/scienceengineeringviewbook-2011-2012.pdf).
+- Stopped by the package: Grey hair and short beard are documented, but the few-mark result makes the eye and cheek shapes too generic to endorse. A better recent portrait should precede approval.
+- Fifth round, no new drawing: New 2011 Josh Reynolds/Boston Globe work photographs downloaded and captioned. They document a younger clean-shaven appearance; no sharper recent grey-haired/bearded portrait was accepted. Current Optics for Hire team page has no named photograph of him. Keep the third-round drawing held.
+
+### Stephen Benton
+
+- Piece: Holography, hall 7.
+- Who this is: The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design.
+- Photographs used: [Arts at MIT](https://arts.mit.edu/camit/awards/kepes/).
+- Stopped by the package: Beard and receding wavy hair agree, but the MIT work photo clips the crown and the generated drawing completes that boundary. Hold until a verified full-crown work portrait supports it.
+- Fifth round, no new drawing: New Gallery286 catalogue gives a named portrait but only 172×189 overall with projected light crossing the face. MIT News downloadable 1996 original is still 154×109. Neither accepted as a replacement for the clipped-crown MIT Arts photo. No new drawing.
+
+## A photograph first (9)
+
+No drawing was made. A study needs a named photograph in which the face is at least 60 pixels wide, the eyes, nose and mouth can be told apart, and the top of the head is not cut off.
+
+### Marie Van Brittan Brown (woman, blue line)
 
 - Piece: Cathode ray tube, hall 2.
 - Who this is: A nurse in New York. With her husband Albert Brown she devised a home security system in 1966 that showed the caller on a television monitor. Patented in 1969.
 - Where she is named: [Lemelson-MIT Program](https://lemelson.mit.edu/resources/marie-van-brittan-brown).
 - Take care: the photograph with a caption is the one of the couple holding their patent, printed by the New York Times in 1969 and held by an agency. Any other picture offered under her name has to be checked against it before it is used.
-
-### Albert Brown
-
-- Piece: Cathode ray tube, hall 2.
-- Who this is: Electronics technician in New York, husband of Marie Van Brittan Brown and joint holder of the patent of 1969.
-- Not to be mixed up: a very common name. Only the man in the New York Times photograph of 1969, beside her.
-
-### Mark Dean
-
-- Piece: Cathode ray tube, hall 2.
-- Who this is: Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor.
-- Not to be mixed up: a common name. The IBM engineer and inventor, born in 1957.
-- Where he is named: [IBM](https://www.ibm.com/history/mark-dean); [National Inventors Hall of Fame](https://www.invent.org/inductees/mark-dean).
-
-### John Rogers
-
-- Piece: Electrophoretic ink, hall 5.
-- Who this is: John A. Rogers, then at Bell Laboratories, first author of the paper of 2001 on electronic paper that bends.
-- Not to be mixed up: a very common name. Only John A. Rogers, the first author of that paper. No page has been looked up yet.
-
-### Dean DeLongchamp
-
-- Piece: Electrochromic display, hall 5.
-- Who this is: Wrote the thesis of 2003 on electrochromic films built one layer at a time, in Paula Hammond's laboratory at MIT. No page has been looked up yet.
-
-## New on the labels with the blue line (17)
-
-Added on 22 November 2026, with the blue line and the lines researched beside it. None has a drawing yet. "Who this is" follows the label, whose every line was checked against its sources. The pages listed are where the person is named together with a fact from the label. Whether a photograph there may be drawn after, or only studied, has still to be settled for each.
-
-### The blue line
-
-The second trail on the floor is a blue line, "Black inventors and artists". Eleven people stand on it. Each is on it because a source describes them so in its own words, and the People page shows that source beside the name.
-
-| Person | Piece | Where it stands |
-| --- | --- | --- |
-| Marie Van Brittan Brown (woman) | Cathode ray tube | On the labels since 22 November: no drawing yet |
-| Mark Dean | Cathode ray tube | On the labels since 22 November: no drawing yet |
-| Lewis Latimer | Numitron | On the labels since 22 November: no drawing yet. A picture in the public domain should exist |
-| Akintunde Akinwande | Field emission display | On the labels since 22 November: no drawing yet |
-| Lanny Smoot | Projection mapping | On the labels since 22 November: no drawing yet |
-| Paula Hammond (woman) | Electrochromic display | On the labels since 22 November: no drawing yet. A stop of the women's tour |
-| Valerie Thomas (woman) | Illusion transmitter | On the site, after a free picture |
-| Kenneth Dunkley | Stereoscope and 3D glasses | On the labels since 22 November: no drawing yet |
-| Charles Harrison | Stereoscope and 3D glasses | On the labels since 22 November: no drawing yet |
-| Hank Willis Thomas | Lenticular display | On the labels since 22 November: no drawing yet |
-| Samuel Achilefu | Head-mounted display | On the labels since 22 November: no drawing yet |
-
-Kara Walker joins this line as well once a source for her is on file.
-
-### Lewis Latimer (blue line)
-
-- Piece: Numitron, hall 2.
-- Who this is: Draughtsman and inventor, 1848 to 1928. Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace.
-- A free picture: he was photographed in the nineteenth century, so a drawing after a picture in the public domain should be possible.
-- Where he is named: [United States Patent and Trademark Office](https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/bringing-light-all).
-
-### Akintunde Akinwande (blue line)
-
-- Piece: Field emission display, hall 2.
-- Who this is: Akintunde Ibitayo Akinwande, engineer at MIT, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays.
-- Where he is named: [MIT](https://cis.mit.edu/our-people/akintunde-akinwande); [MIT Technology Licensing Office](https://tlo.mit.edu/industry-entrepreneurs/researchers/akintunde-ibitayo-akinwande); [Wikipedia](https://en.wikipedia.org/wiki/Akintunde_Akinwande).
-
-### Xiaogang Peng
-
-- Piece: Quantum-dot display, hall 3.
-- Who this is: Chemist at Zhejiang University. In 2014 he and Yizheng Jin made a quantum-dot diode from liquids, layer on layer.
-- Not to be mixed up: several researchers carry this name. Only the chemist of Zhejiang University.
-- Where he is named: the paper in [Nature](https://www.nature.com/articles/nature13829). No page with a photograph has been looked up yet.
-
-### Yizheng Jin
-
-- Piece: Quantum-dot display, hall 3.
-- Who this is: Chemist at Zhejiang University. With Xiaogang Peng he made the quantum-dot diode of 2014.
-- Where he is named: the paper in [Nature](https://www.nature.com/articles/nature13829). No page with a photograph has been looked up yet.
-
-### Dawon Kahng
-
-- Pieces: Thin-film electroluminescent panel, hall 3, and Liquid crystal display, hall 4.
-- Who this is: Engineer, born in Seoul, 1931 to 1992. With Mohamed Atalla he showed the first working MOS transistor at Bell Laboratories in 1960. In 1968 he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them.
-- Where he is named: [National Inventors Hall of Fame](https://www.invent.org/inductees/dawon-kahng).
-
-### Mohamed Atalla
-
-- Piece: Liquid crystal display, hall 4.
-- Who this is: Engineer, born in Port Said, 1924 to 2009. With Dawon Kahng he showed the first working MOS transistor at Bell Laboratories in 1960.
-- Not to be mixed up: also written Martin M. Atalla and John Atalla. One man.
-- Where he is named: [National Inventors Hall of Fame](https://invent.org/inductees/martin-john-m-atalla); [Computer History Museum](https://www.computerhistory.org/siliconengine/metal-oxide-semiconductor-mos-transistor-demonstrated/).
-
-### Sivaramakrishna Chandrasekhar
-
-- Piece: Liquid crystal display, hall 4.
-- Who this is: Physicist at the Raman Research Institute in Bangalore, 1930 to 2004. In 1977 he, B. K. Sadashiva and K. A. Suresh found liquid crystals whose molecules are discs, not rods.
-- Not to be mixed up: not Subrahmanyan Chandrasekhar, the astrophysicist, whose pictures a search for the surname brings up first.
-- Where he is named: [Nature India](https://www.nature.com/articles/d44151-023-00176-z).
-
-### B. K. Sadashiva
-
-- Piece: Liquid crystal display, hall 4.
-- Who this is: Chemist at the Raman Research Institute in Bangalore, one of the three authors of the paper of 1977.
-- Where he is named: the paper in [Pramana](https://www.ias.ac.in/article/fulltext/pram/009/05/0471-0480). No page with a photograph has been looked up yet.
-
-### K. A. Suresh
-
-- Piece: Liquid crystal display, hall 4.
-- Who this is: Physicist at the Raman Research Institute in Bangalore, one of the three authors of the paper of 1977.
-- Not to be mixed up: a common name. Only the liquid crystal physicist of Bangalore.
-- Where he is named: the paper in [Pramana](https://www.ias.ac.in/article/fulltext/pram/009/05/0471-0480). No page with a photograph has been looked up yet.
-
-### Lanny Smoot (blue line)
-
-- Piece: Projection mapping, hall 4.
-- Who this is: Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room.
-- Where he is named: [The Walt Disney Company](https://thewaltdisneycompany.com/lanny-smoot-to-be-the-first-disney-imagineer-inducted-into-the-national-inventors-hall-of-fame/); [National Inventors Hall of Fame](https://www.invent.org/inductees/lanny-smoot).
-
-### Ali Javan
-
-- Piece: Holography, hall 7.
-- Who this is: Physicist, born in Tehran, 1926 to 2016. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam.
-- Only he is drawn: the line mentions Bennett and Herriott, and names Javan alone as its person.
-- Where he is named: [Lemelson-MIT Program](https://lemelson.mit.edu/resources/ali-javan).
-
-### Nasser Peyghambarian
-
-- Piece: Holography, hall 7.
-- Who this is: Professor of optical sciences at the University of Arizona. In 2010 his group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds.
-- Where he is named: the paper in [Nature](https://www.nature.com/articles/nature09521). No page with a photograph has been looked up yet.
-
-### Pierre-Alexandre Blanche
-
-- Piece: Holography, hall 7.
-- Who this is: Researcher in optical sciences at the University of Arizona, first author of the paper of 2010 on the rewritable hologram.
-- Where he is named: the paper in [Nature](https://www.nature.com/articles/nature09521). No page with a photograph has been looked up yet.
+- Fifth round: Verified 6 December 1969 New York Times couple photograph recovered (403×552 scan and 330×254 head crop). Her face has adequate label pixels, but the only verified exposure clips the left hair boundary. Hold rather than complete an undocumented boundary, consistently with the Benton hold. Lemelson solo image is a modern drawing, not another source photograph. All unverified solo portraits remain excluded.
 
 ### Kenneth Dunkley (blue line)
 
@@ -197,37 +152,83 @@ Kara Walker joins this line as well once a source for her is on file.
 - Who this is: Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames.
 - Take care: many pages say that his glasses are the ones used in cinemas. His patent does not say that, and a picture of cinema glasses is not a picture of his.
 - Where he is named: [National Business League](https://nationalbusinessleague.org/kenneth-dunkley/). This page is thin: it names him under the heading "Black innovator" and says little more. A second page that names him with his patent would make a drawing safer.
+- Fifth round: National Business League page has a modern digital illustration, not an identified photograph. No photographer or source photograph is named. Do not generate a documentary likeness from that illustration alone.
 
-### Charles Harrison (blue line)
+### A. Frankenstein
 
-- Piece: Stereoscope and 3D glasses, hall 7.
-- Who this is: Industrial designer in Chicago, 1931 to 2018. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic.
-- Not to be mixed up: a common name. Only the industrial designer of Chicago.
-- Where he is named: [Cooper Hewitt](https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/); [The Strong National Museum of Play](https://www.museumofplay.org/blog/charles-harrison-the-black-industrial-designer-who-revamped-view-master/).
+- Piece: Colour-wheel television, hall 2.
+- Who this is: Applied in Germany in 1904 for a patent on a colour system with a filter wheel.
+- Why there is no drawing: German patent1904 and field-sequential colour system sources searched, including full/initial-name portrait queries. No named professional portrait tied to this applicant; namesakes excluded.
+- Fifth round: searched again, with the same result.
 
-### Hank Willis Thomas (blue line)
+### Werner von Jaworski
 
-- Piece: Lenticular display, hall 7.
-- Who this is: Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black.
-- Where he is named: [North Carolina Museum of Art](https://learn.ncartmuseum.org/artist/hank-willis-thomas/); [Art21](https://art21.org/artist/hank-willis-thomas/); [SFO Museum](https://www.sfomuseum.org/public-art/public-collection/they-are-us-us-them-and-impossibly), which shows the work and not the artist.
+- Piece: Colour-wheel television, hall 2.
+- Who this is: Applied in Germany in 1904 for a patent on a colour system with a filter wheel.
+- Why there is no drawing: Patent1904, colour-TV histories, exact-name and variant-name portrait searches. No identified portrait tied to the patent applicant; no substitution from namesake results.
+- Fifth round: searched again, with the same result.
 
-### Samuel Achilefu (blue line)
+### M. C. Schlamp
 
-- Piece: Head-mounted display, hall 7.
-- Who this is: Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons, on which a dye makes cancer cells glow. First worn in an operation in 2014.
-- Where he is named: [Washington University in St. Louis, 2016](https://source.washu.edu/2016/02/washington-people-samuel-achilefu/); [Washington University in St. Louis, 2014](https://source.washu.edu/2014/02/special-glasses-help-surgeons-ee-cancer/).
+- Piece: Quantum-dot display, hall 3.
+- Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
+- Why there is no drawing: Berkeley paper/royalty/patent records searched; full name Michael C. Schlamp corroborated. No named professional portrait located. Unlabelled group photographs were not used.
+- Fifth round: searched again, with the same result.
 
-## New on the labels with the two new pieces (9)
+### Nicholas Sheridon
 
-Hall 4 gained the camera obscura and the shadow play on 22 November 2026. Their labels name nine people. None of the nine made the piece: each label says that no inventor is known, and names people who described the thing, wrote for it or work with it.
+- Piece: Flexible display, hall 3.
+- Who this is: Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.
+- Why there is no drawing: Commons, Xerox/e-paper histories, HNF and TFOT interview checked. Captioned TFOT headshot URLs return404; remaining named photograph has a face only a few dozen pixels wide. No drawing.
+- Fifth round: searched again, with the same result.
 
-### Kara Walker (woman, a stop of the tour, blue line)
+### S. K. Deb
 
-- Piece: Shadow play, hall 4.
-- Who this is: American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.
-- Sources on the label: [Museum of Modern Art](https://www.moma.org/collection/works/97669); [Sammlung Goetz](https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/).
-- What is needed: a photograph that a named page published, for a study. She is a living artist, so a picture that is free to reuse is unlikely.
-- She is the thirteenth stop of the women's tour and the tenth of the blue line.
+- Piece: Electrochromic display, hall 5.
+- Who this is: Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.
+- Why there is no drawing: Display conference/NREL and exact-name source searches. Downloaded conference face48.2px; larger original denied access. Named NREL group face smaller still. Private-family and politician images excluded.
+- Fifth round: searched again, with the same result.
+
+### Roger Macfarlane
+
+- Piece: Static-volume display, hall 6.
+- Who this is: Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author.
+- Why there is no drawing: AIP/Stanford rare-earth and volume-display sources searched. Verified photograph has dark protective goggles obscuring the eyes; no adequate second portrait. BYU classicist namesake excluded.
+- Fifth round: searched again, with the same result.
+
+### Nobuyuki Masuda
+
+- Piece: Acoustic levitation display, hall 6.
+- Who this is: Built the display at the University of Sussex and published it in 2019.
+- Why there is no drawing: 2019 acoustic-trap author identity, TUS/Chiba publication records and native author-photo PDF checked. Native face about58.4px, below60 cutoff. Toho Gas executive namesake excluded.
+- Fifth round: searched again, with the same result.
+
+## No named photograph (16)
+
+The searches found no picture that a page ties to this person, or it is not settled who the picture found shows. The last column is what the fifth round found.
+
+| Person | Piece | What the search found |
+| --- | --- | --- |
+| John Myer | Split-flap board | Identity unresolved: split-flap sources describe a Belgian inventor. A portrait of MIT architect John Randolph Myer was not accepted without confirming they are the same person. |
+| Kenyon Taylor | Flip-disc display | Ferranti engineer identified, but no confidently captioned downloadable portrait found. |
+| Oleg Tretiakoff | Refreshable braille display | Commons labels this historical cadet portrait Oleg Tretiakoff, but supplies no biography or archival provenance tying the sitter to the braille inventor. The 2025 upload date is not the photograph date. Independent identification remains unresolved. |
+| Andrée Tretiakoff (woman) | Refreshable braille display | Targeted French/accented and unaccented portrait search again finds braille and computational linguistics records, no named adequate photograph. No invented face. |
+| Klaus Peter Schönherr | Refreshable braille display | No portrait confidently tied to the braille inventor; namesake search results excluded. |
+| James Bryce | Refreshable braille display | New search finds a Smithsonian record for a Franklin Chenault Watkins painting dated 1966, after Bryce died in 1949. Not a portrait from life; no new drawing from it. Previously captioned museum self-portrait remains below 60 face pixels. |
+| Robert H. Anderson | Storage tube terminal | Storage-tube engineer identified; namesake military, medical and RAND portraits excluded. |
+| David Hagelbarger | Nixie tube | Bell Labs inventor identified; no confidently captioned downloadable portrait found. |
+| Deepak Bandyopadhyay | Projection mapping | UNC computer scientist identified; old personal site unavailable, and no usable verified portrait downloaded. |
+| Robert Hayes | Electrowetting display | Electrowetting researcher Robert A. Hayes identified; namesake nuclear engineer portrait excluded. |
+| Max Hirsch | Swept-volume display | No portrait confidently tied to the swept-volume inventor; namesake politician portraits excluded. |
+| Elizabeth Downing (woman) | Static-volume display | Targeted search again finds Stanford/3D Technology Laboratories descriptions and contemporary display pictures, but no adequately named portrait. Student-athlete namesakes remain excluded. |
+| John Ralston | Static-volume display | SDL laser researcher identified; no confidently captioned portrait found. |
+| Auguste Berthier | Parallax barrier | No portrait confidently tied to the parallax-barrier inventor. |
+| Kazuo Yoshinaka | Virtual retinal display | No portrait confidently tied to the virtual-retinal-display inventor. |
+| J. M. Naish | Head-up display | No portrait confidently tied to the head-up-display researcher; physician namesake excluded. |
+
+## The two new pieces (8)
+
+Hall 4 gained the camera obscura and the shadow play on 22 November 2026, after the fifth package was made. Their labels name nine people, and Kara Walker is the only one the package has. None of the nine made the piece: each label says that no inventor is known, and names people who described the thing, wrote for it or work with it.
 
 ### Gemma Frisius
 
@@ -263,169 +264,3 @@ Hall 4 gained the camera obscura and the shadow play on 22 November 2026. Their 
 
 - Pieces: Camera obscura (Mozi, Ibn al-Haytham) and Shadow play (Ibn Daniyal), hall 4.
 - No portrait from life exists of any of the three. Every picture said to show one of them was imagined centuries later, so their places stay empty and no drawing is planned.
-
-## Another look (13)
-
-A study was drawn and did not pass. Most were stopped by the package that made them, and its reason is quoted. Two passed there and were stopped by the check made here, which compares hair, glasses, facial hair, age, pose and clothing with the photographs and does not judge a face.
-
-### Horst Hörtner
-
-- Piece: Drone light show, hall 1.
-- Who this is: Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015.
-- Photographs used: [Ars Electronica](https://ars.electronica.art/futurelab/de/hoertner-horst/); [Ars Electronica](https://ars.electronica.art/fl25/storyline/virtual-worlds/).
-- Stopped here: The head is turned the same way and about as far as in the second photograph, the one taken in a workshop. The brief asked for a turn to the other side. A new drawing turned to the left.
-
-### Elma Farnsworth (woman)
-
-- Piece: Cathode ray tube, hall 2.
-- Who this is: Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent.
-- Photographs used: [Television Academy Foundation](https://interviews.televisionacademy.com/interviews/elma-farnsworth).
-- Stopped by the package: Identity is documented by the interview, but the highly simplified drawing still makes the eyes and hair too schematic to endorse the likeness or apparent age88. Keep off site.
-
-### Guillermo González Camarena
-
-- Piece: Colour-wheel television, hall 2.
-- Who this is: Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.
-- Photographs used: [INEHRM / Secretaría de Cultura, Mexico](https://repositorio-inehrm.cultura.gob.mx/fototeca/guillermo-gonzalez-camarena/); [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ing._Guillermo_Gonz%C3%A1lez_Camarena.jpg).
-- Stopped by the package: Both sources name the colour-TV inventor and support glasses/hair/face. Archive catalogues its photograph ca1935, conflicting with apparent adult age used here; chronology needs clarification.
-
-### Tadashi Nakamura
-
-- Piece: Vacuum fluorescent display, hall 2.
-- Who this is: Founder of Ise Electronics in Japan. He invented the display and put it on sale in 1967.
-- Not to be mixed up: The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display.
-- Photographs used: [Electronic Design (archived by World Radio History)](https://www.worldradiohistory.com/Archive-Electronic-Design/1976/Electronic-Design-V24-N06-1976-0315.pdf); [Noritake Itron](https://www.noritake-itron.jp/eng/profile/nakamura/).
-- Stopped by the package: 1976 source establishes age53 and swept hair/glasses; later Noritake portrait confirms identity. Final turn appears wider than the20, 40° allowance from the historical view; review pose before publication.
-
-### Kenneth Shoulders
-
-- Piece: Field emission display, hall 2.
-- Who this is: Patented the way of making the microscopic tips, at Stanford Research Institute.
-- Photographs used: [SRI International Alumni Association](https://alumni.sri.com/newsletters/2013/AlumNews-Dec-2013.pdf).
-- Stopped by the package: Broad head and receding hair are documented, but the blank few-mark face loses too much of the sitter’s apparent age and eye shape. Keep off site pending stronger likeness evidence.
-
-### Louis Heynick
-
-- Piece: Field emission display, hall 2.
-- Who this is: Patented the way of making the microscopic tips, at Stanford Research Institute.
-- Photographs used: [Bioelectromagnetics Society newsletter (archived copy)](https://maisonsaine.ca/uploads/2014/06/news183.pdf).
-- Stopped here: The photograph shows a white moustache and the drawing has a bare lip. A new drawing with the moustache.
-
-### Gerald Pighini
-
-- Piece: LED display, hall 3.
-- Who this is: Designed the Hewlett-Packard numeric indicator of 1969.
-- Photographs used: [Hewlett-Packard Journal (HP Archive)](https://hparchive.com/Journals/HPJ-1969-02.pdf).
-- Stopped by the package: Crew-cut hair and dark glasses agree, but the final turn looks beyond the single-photo allowance and the manual eye-spacing/face-width screen is uncertain. Review pose and cheek geometry.
-
-### Barrett Comiskey
-
-- Piece: Electrophoretic ink, hall 5.
-- Who this is: Developed the ink in capsules at the MIT Media Lab in 1996.
-- Photographs used: [National Inventors Hall of Fame](https://www.invent.org/inductees/barrett-o-comiskey).
-- Stopped by the package: Balding crown, cheek shape and documented ceremony glasses agree. Lowered inclination is new, but a 20, 40° difference from every event view is not established.
-
-### J. D. Albert
-
-- Piece: Electrophoretic ink, hall 5.
-- Who this is: Developed the ink in capsules at the MIT Media Lab in 1996.
-- Photographs used: [National Inventors Hall of Fame](https://www.invent.org/inductees/jonathan-d-albert).
-- Stopped by the package: Receding hairline, short beard and broad face agree. New downcast inclination is visible, but difference of20, 40° from all four event views cannot be certified.
-
-### Joseph Jacobson
-
-- Piece: Electrophoretic ink, hall 5.
-- Who this is: Developed the ink in capsules at the MIT Media Lab in 1996.
-- Photographs used: [National Inventors Hall of Fame](https://www.invent.org/inductees/joseph-m-jacobson).
-- Stopped by the package: Short hair and close beard agree. Apparent age uses the primary portrait. Pose remains too close to at least one supplied view despite a lower inclination; hold for pose review.
-
-### Gerardo Beni
-
-- Piece: Electrowetting display, hall 5.
-- Who this is: Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England.
-- Photographs used: [University of California, Riverside](https://cris.ucr.edu/people/gerardo-beni).
-- Stopped by the package: Named faculty source is secure, but the final drawing gives the thinning crown too much dense curl volume. Keep for review rather than approving likeness.
-
-### Gregg Favalora
-
-- Piece: Swept-volume display, hall 6.
-- Who this is: Founder of Actuality Systems, which put the Perspecta display on sale in 2002.
-- Photographs used: [MIT Microsystems Technology Laboratories](https://www.mtl.mit.edu/events-seminars/events/electroholographic-3-d-display-technologies-based-surface-acoustic-wave); [bulletin.yale.edu](https://bulletin.yale.edu/sites/default/files/scienceengineeringviewbook-2011-2012.pdf).
-- Stopped by the package: Grey hair and short beard are documented, but the few-mark result makes the eye and cheek shapes too generic to endorse. A better recent portrait should precede approval.
-
-### Stephen Benton
-
-- Piece: Holography, hall 7.
-- Who this is: The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design.
-- Photographs used: [Arts at MIT](https://arts.mit.edu/camit/awards/kepes/).
-- Stopped by the package: Beard and receding wavy hair agree, but the MIT work photo clips the crown and the generated drawing completes that boundary. Hold until a verified full-crown work portrait supports it.
-
-## A photograph first (7)
-
-No drawing was made in the third round. A study needs a named photograph in which the face is at least 60 pixels wide and the eyes, nose and mouth can be told apart.
-
-### A. Frankenstein
-
-- Piece: Colour-wheel television, hall 2.
-- Who this is: Applied in Germany in 1904 for a patent on a colour system with a filter wheel.
-- Why there is no drawing: German patent1904 and field-sequential colour system sources searched, including full/initial-name portrait queries. No named professional portrait tied to this applicant; namesakes excluded.
-
-### Werner von Jaworski
-
-- Piece: Colour-wheel television, hall 2.
-- Who this is: Applied in Germany in 1904 for a patent on a colour system with a filter wheel.
-- Why there is no drawing: Patent1904, colour-TV histories, exact-name and variant-name portrait searches. No identified portrait tied to the patent applicant; no substitution from namesake results.
-
-### M. C. Schlamp
-
-- Piece: Quantum-dot display, hall 3.
-- Who this is: Made an LED from quantum dots and a plastic that conducts, at the University of California, Berkeley. Colvin is the first author of the paper of 1994.
-- Why there is no drawing: Berkeley paper/royalty/patent records searched; full name Michael C. Schlamp corroborated. No named professional portrait located. Unlabelled group photographs were not used.
-
-### Nicholas Sheridon
-
-- Piece: Flexible display, hall 3.
-- Who this is: Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center.
-- Why there is no drawing: Commons, Xerox/e-paper histories, HNF and TFOT interview checked. Captioned TFOT headshot URLs return404; remaining named photograph has a face only a few dozen pixels wide. No drawing.
-
-### S. K. Deb
-
-- Piece: Electrochromic display, hall 5.
-- Who this is: Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew.
-- Why there is no drawing: Display conference/NREL and exact-name source searches. Downloaded conference face48.2px; larger original denied access. Named NREL group face smaller still. Private-family and politician images excluded.
-
-### Roger Macfarlane
-
-- Piece: Static-volume display, hall 6.
-- Who this is: Drew coloured points of light inside a block of glass with crossed infrared beams. The work was published from Stanford University in 1996, with Downing as first author.
-- Why there is no drawing: AIP/Stanford rare-earth and volume-display sources searched. Verified photograph has dark protective goggles obscuring the eyes; no adequate second portrait. BYU classicist namesake excluded.
-
-### Nobuyuki Masuda
-
-- Piece: Acoustic levitation display, hall 6.
-- Who this is: Built the display at the University of Sussex and published it in 2019.
-- Why there is no drawing: 2019 acoustic-trap author identity, TUS/Chiba publication records and native author-photo PDF checked. Native face about58.4px, below60 cutoff. Toho Gas executive namesake excluded.
-
-## No named photograph (16)
-
-The searches found no picture that a page ties to this person, or it is not settled who the picture found shows.
-
-| Person | Piece | What the search found |
-| --- | --- | --- |
-| John Myer | Split-flap board | Identity unresolved: split-flap sources describe a Belgian inventor. A portrait of MIT architect John Randolph Myer was not accepted without confirming they are the same person. |
-| Kenyon Taylor | Flip-disc display | Ferranti engineer identified, but no confidently captioned downloadable portrait found. |
-| Oleg Tretiakoff | Refreshable braille display | Commons labels this historical cadet portrait Oleg Tretiakoff, but supplies no biography or archival provenance tying the sitter to the braille inventor. The 2025 upload date is not the photograph date. Independent identification remains unresolved. |
-| Andrée Tretiakoff (woman) | Refreshable braille display | Braille co-inventor and computational linguist identified; no confidently captioned portrait found. |
-| Klaus Peter Schönherr | Refreshable braille display | No portrait confidently tied to the braille inventor; namesake search results excluded. |
-| James Bryce | Refreshable braille display | No portrait confidently tied to the listed braille inventor; politician and other namesakes excluded. |
-| Robert H. Anderson | Storage tube terminal | Storage-tube engineer identified; namesake military, medical and RAND portraits excluded. |
-| David Hagelbarger | Nixie tube | Bell Labs inventor identified; no confidently captioned downloadable portrait found. |
-| Deepak Bandyopadhyay | Projection mapping | UNC computer scientist identified; old personal site unavailable, and no usable verified portrait downloaded. |
-| Robert Hayes | Electrowetting display | Electrowetting researcher Robert A. Hayes identified; namesake nuclear engineer portrait excluded. |
-| Max Hirsch | Swept-volume display | No portrait confidently tied to the swept-volume inventor; namesake politician portraits excluded. |
-| Elizabeth Downing (woman) | Static-volume display | Stanford 3D-display researcher identified; student-athlete and other namesake portraits excluded. |
-| John Ralston | Static-volume display | SDL laser researcher identified; no confidently captioned portrait found. |
-| Auguste Berthier | Parallax barrier | No portrait confidently tied to the parallax-barrier inventor. |
-| Kazuo Yoshinaka | Virtual retinal display | No portrait confidently tied to the virtual-retinal-display inventor. |
-| J. M. Naish | Head-up display | No portrait confidently tied to the head-up-display researcher; physician namesake excluded. |
-
