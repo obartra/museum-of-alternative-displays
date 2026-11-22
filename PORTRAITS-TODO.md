@@ -1,32 +1,91 @@
 # Portraits still to do
 
-The labels name 110 people. 74 have a portrait on the site and 36 do not. This file lists those 36, sorted by what each one needs. It is written out from the third package of drawings, received on 21 November 2026, and from the check made of it here. `PORTRAITS.md` has the whole list and the rules.
+The labels name 117 people. 74 have a portrait on the site and 43 do not. This file lists them: first the seven people the labels gained on 22 November 2026, who have no drawing yet, then the 36 that were open before, sorted by what each one needs. That second part is written out from the third package of drawings, received on 21 November 2026, and from the check made of it here. `PORTRAITS.md` has the whole list and the rules.
+
+A fourth package, received on 22 November 2026, held one drawing: Louis Brus, after a photograph of 2008. Its own record says that the grant to reuse that photograph could not be verified, so the drawing stays off the site, and the study of Brus that is there stays.
 
 Of the 74 on the site, 39 are drawings after a picture that is free to reuse, and 35 are studies: the face is drawn from photographs that named pages published, and the pose and the clothing are the drawing's own. 12 are shown only at the size of a label, because their photographs are small or soft.
 
 | What is needed | People |
 | --- | --- |
+| A first drawing: new on the labels on 22 November | 7 |
 | Another look: a drawing exists and was stopped | 13 |
 | A photograph that a drawing can rest on | 7 |
 | A named photograph: none was found, or it is not settled who the picture shows | 16 |
 
 ## The women
 
-8 of the 11 women named on the labels have a portrait on the site.
+8 of the 14 women named on the labels have a portrait on the site. Five stops of the guided tour show a name with no face: Andrée Tretiakoff, Elma Farnsworth, Zhenan Bao, Paula Hammond and Elizabeth Downing.
 
 | Person | Piece | Where it stands |
 | --- | --- | --- |
 | Andrée Tretiakoff | Refreshable braille display | No named photograph found |
 | Elma Farnsworth | Cathode ray tube | A drawing exists and was stopped |
+| Marie Van Brittan Brown | Cathode ray tube | New on 22 November: no drawing yet |
 | Jingyu Lin | MicroLED | On the site, after a free picture |
 | Vicki Colvin | Quantum-dot display | On the site, a study |
 | Elsa Garmire | Scanned laser | On the site, a study |
 | Leota Toombs | Projection mapping | On the site, a study |
+| Zhenan Bao | Electrophoretic ink | New on 22 November: no drawing yet. A stop of the tour |
 | Susan Hackwood | Electrowetting display | On the site, a study |
+| Paula Hammond | Electrochromic display | New on 22 November: no drawing yet. A stop of the tour |
 | Valerie Thomas | Illusion transmitter | On the site, after a free picture |
 | Elizabeth Downing | Static-volume display | No named photograph found |
 | Margaret Benyon | Holography | On the site, a study |
 | Mary Lou Jepsen | Holography | On the site, after a free picture |
+
+## New on the labels (7)
+
+Added on 22 November 2026. None has a drawing yet. The pages listed are where the person is named together with a fact from the label. Whether a photograph there may be drawn after, or only studied, has still to be settled for each.
+
+### Zhenan Bao (woman, a stop of the tour)
+
+- Piece: Electrophoretic ink, hall 5.
+- Who this is: Chemist. With John Rogers at Bell Laboratories in 2001 she stamped 256 plastic transistors onto a plastic sheet and laid the ink over them: electronic paper that bends. Now at Stanford University.
+- Where she is named: [Stanford University](https://profiles.stanford.edu/zhenan-bao); [Stanford Bio-X](https://biox.stanford.edu/people/zhenan-bao).
+
+### Paula Hammond (woman, a stop of the tour)
+
+- Piece: Electrochromic display, hall 5.
+- Who this is: Chemical engineer at MIT. With Dean DeLongchamp she built electrochromic films one molecular layer at a time.
+- Where she is named: [Science History Institute](https://www.sciencehistory.org/education/scientific-biographies/paula-hammond/); [MIT Institute for Soldier Nanotechnologies](https://isn.mit.edu/people/prof-paula-t-hammond).
+
+### Marie Van Brittan Brown (woman)
+
+- Piece: Cathode ray tube, hall 2.
+- Who this is: A nurse in New York. With her husband Albert Brown she devised a home security system in 1966 that showed the caller on a television monitor. Patented in 1969.
+- Where she is named: [Lemelson-MIT Program](https://lemelson.mit.edu/resources/marie-van-brittan-brown).
+- Take care: the photograph with a caption is the one of the couple holding their patent, printed by the New York Times in 1969 and held by an agency. Any other picture offered under her name has to be checked against it before it is used.
+
+### Albert Brown
+
+- Piece: Cathode ray tube, hall 2.
+- Who this is: Electronics technician in New York, husband of Marie Van Brittan Brown and joint holder of the patent of 1969.
+- Not to be mixed up: a very common name. Only the man in the New York Times photograph of 1969, beside her.
+
+### Mark Dean
+
+- Piece: Cathode ray tube, hall 2.
+- Who this is: Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor.
+- Not to be mixed up: a common name. The IBM engineer and inventor, born in 1957.
+- Where he is named: [IBM](https://www.ibm.com/history/mark-dean); [National Inventors Hall of Fame](https://www.invent.org/inductees/mark-dean).
+
+### John Rogers
+
+- Piece: Electrophoretic ink, hall 5.
+- Who this is: John A. Rogers, then at Bell Laboratories, first author of the paper of 2001 on electronic paper that bends.
+- Not to be mixed up: a very common name. Only John A. Rogers, the first author of that paper. No page has been looked up yet.
+
+### Dean DeLongchamp
+
+- Piece: Electrochromic display, hall 5.
+- Who this is: Wrote the thesis of 2003 on electrochromic films built one layer at a time, in Paula Hammond's laboratory at MIT. No page has been looked up yet.
+
+## Coming with the second trail (12)
+
+These people are being added to labels now, with the blue line. They will need drawings as well: Kenneth Dunkley (stereoscope), Samuel Achilefu (head-mounted display), Lewis Latimer (Numitron), Ali Javan, Nasser Peyghambarian and Pierre-Alexandre Blanche (holography), Sivaramakrishna Chandrasekhar, B. K. Sadashiva and K. A. Suresh (liquid crystal display), Dawon Kahng (thin-film electroluminescent display), Xiaogang Peng and Yizheng Jin (quantum-dot display). Lewis Latimer was photographed in the nineteenth century, so a drawing after a picture in the public domain should be possible for him.
+
+Two new pieces for hall 4, the camera obscura and the shadow play, name people of whom no portrait from life exists (Mozi, Ibn al-Haytham, Ibn Daniyal). They get no drawing.
 
 ## Another look (13)
 

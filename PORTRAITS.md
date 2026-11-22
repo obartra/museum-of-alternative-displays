@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 110 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 117 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -64,7 +64,10 @@ Take the picture from the person's own article or file page, where the caption s
 | Ferdinand Braun | Cathode ray tube | Built the first cathode ray tube, in Germany in 1897. | yes | `public/people/ferdinand-braun.webp` |
 | Kenjiro Takayanagi | Cathode ray tube | Showed a television receiver built on a cathode ray tube, in Japan in 1926. | yes | `public/people/kenjiro-takayanagi.webp` |
 | Philo Farnsworth | Cathode ray tube | Sent the first all-electronic television picture, in San Francisco in 1927. | yes | `public/people/philo-farnsworth.webp` |
-| Elma Farnsworth | Cathode ray tube | Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent. |  | `public/people/elma-farnsworth.jpg` |
+| Elma Farnsworth | Cathode ray tube | Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent. |  | `public/people/elma-farnsworth.jpg` |
+| Marie Van Brittan Brown | Cathode ray tube | A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969. |  | `public/people/marie-van-brittan-brown.jpg` |
+| Albert Brown | Cathode ray tube | A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969. |  | `public/people/albert-brown.jpg` |
+| Mark Dean | Cathode ray tube | Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor. |  | `public/people/mark-dean.jpg` |
 | Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. |  | `public/people/guillermo-gonzalez-camarena.jpg` |
 | A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/a-frankenstein.jpg` |
 | Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/werner-von-jaworski.jpg` |
@@ -131,6 +134,8 @@ Take the picture from the person's own article or file page, where the caption s
 | Barrett Comiskey | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/barrett-comiskey.jpg` |
 | J. D. Albert | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/j-d-albert.jpg` |
 | Joseph Jacobson | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/joseph-jacobson.jpg` |
+| John Rogers | Electrophoretic ink | At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics. |  | `public/people/john-rogers.jpg` |
+| Zhenan Bao | Electrophoretic ink | At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics. |  | `public/people/zhenan-bao.jpg` |
 | Deng-Ke Yang | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/deng-ke-yang.webp` |
 | J. William Doane | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/j-william-doane.webp` |
 | Gerardo Beni | Electrowetting display | Proposed the display at Bell Laboratories in 1981 and gave the effect its name. Beni was born in Florence and Hackwood in England. |  | `public/people/gerardo-beni.jpg` |
@@ -139,6 +144,8 @@ Take the picture from the person's own article or file page, where the caption s
 | Johan Feenstra | Electrowetting display | Made it work at video speed at Philips Research in Eindhoven in 2003. | yes | `public/people/johan-feenstra.webp` |
 | Mark Miles | Interferometric modulator | The display engineer who founded Etalon and Iridigm. A motor racing executive shares the name. | yes | `public/people/mark-miles.webp` |
 | S. K. Deb | Electrochromic display | Published the work on tungsten oxide films, in 1969, from which electrochromic displays grew. |  | `public/people/s-k-deb.jpg` |
+| Paula Hammond | Electrochromic display | At MIT they built electrochromic films one molecular layer at a time, which switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display. |  | `public/people/paula-hammond.jpg` |
+| Dean DeLongchamp | Electrochromic display | At MIT they built electrochromic films one molecular layer at a time, which switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display. |  | `public/people/dean-delongchamp.jpg` |
 
 ## Hall 6, Mid-air
 
