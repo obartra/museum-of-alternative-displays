@@ -34,6 +34,13 @@ const inner = (): string => {
   const how = offer ? `<p class="ways"><button type="button" class="btn" data-install>${tx('about.app.install')}</button></p>` : iosSafari ? `<p>${tx('about.app.ios')}</p>` : '';
   return how && !installed ? `<h2 class="h-sec">${tx('about.app')}</h2><p>${tx('about.app.1')}</p>${how}` : '';
 };
+/** Whether there is a way to install that this page can offer: the browser's own prompt, or Safari's Share menu. */
+const offered = (): boolean => !installed && (!!offer || iosSafari);
+/**
+ * The way to install at the foot of every page. Where the browser has handed over its prompt, the link makes it.
+ * Where it has not, on an iPhone or iPad, the link leads to the About page, which says where Safari keeps it.
+ */
+export const appFoot = (): string => `<a href="#about" data-install data-app-foot${offered() ? '' : ' hidden'}>${tx('about.app.install')}</a>`;
 /** What the About page says about installing. It is empty until there is a way to install, and is filled in when one turns up. */
 export function appHtml(): string {
   const html = inner();
@@ -42,6 +49,7 @@ export function appHtml(): string {
 const show = (): void => {
   const html = inner();
   for (const el of document.querySelectorAll<HTMLElement>('[data-app]')) { el.innerHTML = html; el.hidden = !html; }
+  for (const el of document.querySelectorAll<HTMLElement>('[data-app-foot]')) el.hidden = !offered();
 };
 
 /** Start all of it. Called before the router is wired: see `hashchange` below. */
@@ -52,6 +60,8 @@ export function wireApp(): void {
   document.addEventListener('click', (e) => {
     const btn = (e.target as Element).closest<HTMLElement>('[data-install]'), asked = offer;
     if (!btn || !asked) return;
+    // the link at the foot of a page leads to the About page only where there is no prompt to make
+    e.preventDefault();
     // an offer can be made once: the browser hands over another if this one is turned down
     offer = undefined;
     void asked.prompt().then(() => asked.userChoice).catch(() => undefined).then(() => {

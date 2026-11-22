@@ -15,7 +15,7 @@ import { tourById, tourStops, type Tour } from './data/tours';
 import { greet, hush, justAsked, keepTrail, preview, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
-import { appHtml, wireApp } from './app';
+import { appFoot, appHtml, wireApp } from './app';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -125,7 +125,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#people"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button></footer>
+<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${appFoot()}</footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -345,6 +345,8 @@ function wordsView(id: string): void {
 }
 
 // ---------- piece ----------
+/** The hall whose pieces are about depth. Only there does a piece offer red and cyan glasses. */
+const DEPTH = 7;
 function pieceView(id: string): void {
   const p = pieceById(id);
   if (!p) return notFound();
@@ -368,7 +370,7 @@ function pieceView(id: string): void {
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
-    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
+    <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
     <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a></p>
@@ -499,6 +501,8 @@ function pieceView(id: string): void {
       arBtn.hidden = !(await canShowInRoom());
       if (import.meta.env.DEV) for (const v of places) if (!stage.hasView(v.id)) console.warn(`${p.id}: the view "${v.id}" has words but the model gives it no place`);
       pauseBtn.disabled = stereoBtn.disabled = false;
+      // the glasses are offered in the hall about depth only: a stage that comes from there with them on takes them off
+      if (p.hall !== DEPTH && stage.isStereo) stage.setStereo(false);
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
       pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause');
       tell(HINT.turn);
@@ -530,7 +534,7 @@ function pieceView(id: string): void {
     else if (name === 'front') { setView(null); stage?.goFront(); }
     else if (name === 'home') setView(null);
     if (name === 'pause' && stage && live) { stage.setPaused(!stage.isPaused); pauseBtn.textContent = t(stage.isPaused ? 'stage.play' : 'stage.pause'); }
-    if (name === 'stereo' && stage && live) {
+    if (name === 'stereo' && stage && live && p.hall === DEPTH) {
       stage.setStereo(!stage.isStereo);
       stereoBtn.setAttribute('aria-pressed', String(stage.isStereo));
       if (stage.isStereo) tell(t('stage.stereo.on')); else tell(HINT.turn);
