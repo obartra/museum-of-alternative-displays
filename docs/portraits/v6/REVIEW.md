@@ -3,6 +3,8 @@
 Written on 22 November 2026, after pull request 4 was merged. It covers the 42 drawings that round added:
 8 drawings after a picture, 19 studies from two or more pages and 15 studies from a single page.
 
+![The drawings this review names, side by side](review-sheet.jpg)
+
 ## What was looked at, and what was not
 
 Looked at: every one of the 42 drawings, at full size and at the size a label shows it. Their pixel sizes
