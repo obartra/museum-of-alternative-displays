@@ -207,8 +207,10 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* ---------- the record of a piece: what a museum writes down about every object ---------- */
 .card { font-size: var(--t-s); line-height: 1.4; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
-.card div { display: grid; grid-template-columns: 8.5em 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.card div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .card dt { color: var(--ink-2); }
+/* a long word, such as a Dutch or German compound, may break and must never widen the page */
+.card dd { overflow-wrap: anywhere; }
 
 /* ---------- stage ---------- */
 /* the picture is glass, and what it stands on is concrete: the keys of the stage are set into the block */
