@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 117 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 134 people, and 74 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -66,8 +66,8 @@ Take the picture from the person's own article or file page, where the caption s
 | Philo Farnsworth | Cathode ray tube | Sent the first all-electronic television picture, in San Francisco in 1927. | yes | `public/people/philo-farnsworth.webp` |
 | Elma Farnsworth | Cathode ray tube | Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent. |  | `public/people/elma-farnsworth.jpg` |
 | Marie Van Brittan Brown | Cathode ray tube | A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969. |  | `public/people/marie-van-brittan-brown.jpg` |
-| Albert Brown | Cathode ray tube | A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969. |  | `public/people/albert-brown.jpg` |
-| Mark Dean | Cathode ray tube | Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor. |  | `public/people/mark-dean.jpg` |
+| Albert Brown | Cathode ray tube | The electronics technician in New York, husband of Marie Van Brittan Brown and joint holder of the 1969 patent. A very common name. |  | `public/people/albert-brown.jpg` |
+| Mark Dean | Cathode ray tube | The IBM engineer and inventor, born in 1957. A common name. |  | `public/people/mark-dean.jpg` |
 | Guillermo González Camarena | Colour-wheel television | Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later. |  | `public/people/guillermo-gonzalez-camarena.jpg` |
 | A. Frankenstein | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/a-frankenstein.jpg` |
 | Werner von Jaworski | Colour-wheel television | Applied in Germany in 1904 for a patent on a colour system with a filter wheel. |  | `public/people/werner-von-jaworski.jpg` |
@@ -77,6 +77,7 @@ Take the picture from the person's own article or file page, where the caption s
 | David Hagelbarger | Nixie tube | The engineer most often named as its inventor. |  | `public/people/david-hagelbarger.jpg` |
 | Tadashi Nakamura | Vacuum fluorescent display | The founder of Ise Electronics. Not Shuji Nakamura, who is listed under the LED display. |  | `public/people/tadashi-nakamura.jpg` |
 | Tadashi Sasaki | Vacuum fluorescent display | The engineer of Hayakawa Electric, later Sharp. | yes | `public/people/tadashi-sasaki.webp` |
+| Lewis Latimer | Numitron | Not a maker of this display. The lamp filament came first, and in 1882 he patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace. |  | `public/people/lewis-latimer.jpg` |
 | Donald Bitzer | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. | yes | `public/people/donald-bitzer.webp` |
 | Gene Slottow | Plasma display panel | Invented the panel at the University of Illinois in 1964, for the PLATO teaching system. Willson was a graduate student. | yes | `public/people/gene-slottow.webp` |
 | Robert Willson | Plasma display panel | The Illinois graduate student of 1964. A common name. | yes | `public/people/robert-willson.webp` |
@@ -84,6 +85,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Charles Spindt | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. | yes | `public/people/charles-spindt.webp` |
 | Kenneth Shoulders | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/kenneth-shoulders.jpg` |
 | Louis Heynick | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. |  | `public/people/louis-heynick.jpg` |
+| Akintunde Akinwande | Field emission display | Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one. |  | `public/people/akintunde-akinwande.jpg` |
 
 ## Hall 3, Solid light
 
@@ -104,7 +106,10 @@ Take the picture from the person's own article or file page, where the caption s
 | Aleksey Yekimov | Quantum-dot display | Russian physicist. He showed in coloured glass that the size of a tiny crystal sets its colour. | yes | `public/people/aleksey-yekimov.webp` |
 | Louis Brus | Quantum-dot display | Proved the same effect in particles floating freely in a liquid. | yes | `public/people/louis-brus.webp` |
 | Moungi Bawendi | Quantum-dot display | American, French and Tunisian chemist. In 1993 he found the way to make dots of almost perfect quality. The three shared the 2023 Nobel Prize in Chemistry. | yes | `public/people/moungi-bawendi.webp` |
+| Xiaogang Peng | Quantum-dot display | The chemist of Zhejiang University, an author of the 2014 Nature paper. Several researchers share the name. |  | `public/people/xiaogang-peng.jpg` |
+| Yizheng Jin | Quantum-dot display | At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours. |  | `public/people/yizheng-jin.jpg` |
 | Tuomo Suntola | Thin-film electroluminescent panel | Finnish physicist. In 1974 he devised atomic layer deposition, which grows a film one layer of atoms at a time, to make these panels. | yes | `public/people/tuomo-suntola.webp` |
+| Dawon Kahng | Thin-film electroluminescent panel | Born in Seoul. In 1968 at Bell Laboratories he showed that thin films of compounds like zinc sulphide glow when fast electrons strike metal atoms placed in them. These panels make light that way. |  | `public/people/dawon-kahng.jpg` |
 | Nicholas Sheridon | Flexible display | Made Gyricon, the first flexible electronic paper, at the Xerox Palo Alto Research Center. |  | `public/people/nicholas-sheridon.jpg` |
 
 ## Hall 4, Light valves
@@ -115,6 +120,10 @@ Take the picture from the person's own article or file page, where the caption s
 | Wolfgang Helfrich | Liquid crystal display | Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970. | yes | `public/people/wolfgang-helfrich.webp` |
 | James Fergason | Liquid crystal display | Filed a similar patent in the United States in 1971. The dispute over who came first was settled out of court. | yes | `public/people/james-fergason.webp` |
 | George Heilmeier | Liquid crystal display | Built an earlier kind of liquid crystal display at RCA in the 1960s, which worked by scattering light. | yes | `public/people/george-heilmeier.webp` |
+| Sivaramakrishna Chandrasekhar | Liquid crystal display | The liquid crystal physicist of the Raman Research Institute in Bangalore, 1930 to 2004. Not Subrahmanyan Chandrasekhar, the astrophysicist. |  | `public/people/sivaramakrishna-chandrasekhar.jpg` |
+| B. K. Sadashiva | Liquid crystal display | In 1977 at the Raman Research Institute in Bangalore they found liquid crystals whose molecules are discs, not rods. Films of such liquid crystals later widened the angle a screen can be read from. |  | `public/people/b-k-sadashiva.jpg` |
+| K. A. Suresh | Liquid crystal display | The liquid crystal physicist of the Raman Research Institute in Bangalore, an author of the 1977 paper. A common name. |  | `public/people/k-a-suresh.jpg` |
+| Mohamed Atalla | Liquid crystal display | The Bell Laboratories engineer, born in Port Said, 1924 to 2009. Also written Martin M. Atalla and John Atalla. |  | `public/people/mohamed-atalla.jpg` |
 | Larry Hornbeck | Digital micromirror device | Invented the mirror chip at Texas Instruments in 1987. | yes | `public/people/larry-hornbeck.webp` |
 | Fritz Fischer | Eidophor | The Swiss engineer at ETH Zurich. A German historian and a biathlete share the name. | yes | `public/people/fritz-fischer.webp` |
 | Joseph Ostoja-Kotkowski | Scanned laser | Staged an early laser show, Sound and Image, at the Adelaide Festival of Arts in 1968. | yes | `public/people/joseph-ostoja-kotkowski.webp` |
@@ -126,6 +135,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Greg Welch | Projection mapping | The computer scientist, co-author of the 2001 shader lamps paper. A common name. | yes | `public/people/greg-welch.webp` |
 | Kok-Lim Low | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/kok-lim-low.webp` |
 | Deepak Bandyopadhyay | Projection mapping | Described the technique in 2001 under the name shader lamps. |  | `public/people/deepak-bandyopadhyay.jpg` |
+| Lanny Smoot | Projection mapping | Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room. |  | `public/people/lanny-smoot.jpg` |
 
 ## Hall 5, Paper
 
@@ -134,7 +144,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Barrett Comiskey | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/barrett-comiskey.jpg` |
 | J. D. Albert | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/j-d-albert.jpg` |
 | Joseph Jacobson | Electrophoretic ink | Developed the ink in capsules at the MIT Media Lab in 1996. |  | `public/people/joseph-jacobson.jpg` |
-| John Rogers | Electrophoretic ink | At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics. |  | `public/people/john-rogers.jpg` |
+| John Rogers | Electrophoretic ink | John A. Rogers, first author of the 2001 paper on electronic paper that bends. A very common name. |  | `public/people/john-rogers.jpg` |
 | Zhenan Bao | Electrophoretic ink | At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics. |  | `public/people/zhenan-bao.jpg` |
 | Deng-Ke Yang | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/deng-ke-yang.webp` |
 | J. William Doane | Cholesteric display | Made the reflective display that keeps its picture, at the Liquid Crystal Institute of Kent State University. | yes | `public/people/j-william-doane.webp` |
@@ -175,9 +185,12 @@ Take the picture from the person's own article or file page, where the caption s
 | Person | Piece | The right person | On the site | Save the picture as |
 |---|---|---|---|---|
 | Charles Wheatstone | Stereoscope and 3D glasses | Published the stereoscope in London in 1838, months before photography was announced. | yes | `public/people/charles-wheatstone.webp` |
+| Kenneth Dunkley | Stereoscope and 3D glasses | Physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. It says they give an ordinary flat picture the look of depth. |  | `public/people/kenneth-dunkley.jpg` |
+| Charles Harrison | Stereoscope and 3D glasses | The industrial designer of Chicago, 1931 to 2018, who redesigned the View-Master in 1958. A common name. |  | `public/people/charles-harrison.jpg` |
 | Frederic Ives | Parallax barrier | Frederic Eugene Ives, the father. His son Herbert Ives also worked on 3D pictures. | yes | `public/people/frederic-ives.webp` |
 | Auguste Berthier | Parallax barrier | Described the principle in 1896. |  | `public/people/auguste-berthier.jpg` |
 | Walter Hess | Lenticular display | Walter Rudolf Hess, the eye doctor of Rapperswil who filed the 1912 patent and later won a Nobel Prize. | yes | `public/people/walter-hess.webp` |
+| Hank Willis Thomas | Lenticular display | Artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one, Black Imitates White becomes White Imitates Black. |  | `public/people/hank-willis-thomas.jpg` |
 | Gabriel Lippmann | Integral imaging | Proposed it in France in 1908 and called it integral photography. | yes | `public/people/gabriel-lippmann.webp` |
 | Dennis Gabor | Holography | Invented holography in 1948 at British Thomson-Houston in Rugby, England. | yes | `public/people/dennis-gabor.webp` |
 | Emmett Leith | Holography | Published the off-axis method of recording holograms in 1962. | yes | `public/people/emmett-leith.webp` |
@@ -185,7 +198,11 @@ Take the picture from the person's own article or file page, where the caption s
 | Margaret Benyon | Holography | Painter, born in Birmingham and raised in Kenya. She made holograms as art from 1968 and showed them a year later. | yes | `public/people/margaret-benyon.webp` |
 | Stephen Benton | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. |  | `public/people/stephen-benton.jpg` |
 | Mary Lou Jepsen | Holography | The first holographic video display was built in Benton's group at the MIT Media Lab in 1989. Jepsen's thesis of that year sets out its design. | yes | `public/people/mary-lou-jepsen.webp` |
+| Ali Javan | Holography | Born in Tehran. At Bell Laboratories in 1960 he, William Bennett and Don Herriott ran the first gas laser, the first to give a steady beam. Laser light is what holograms are made with. |  | `public/people/ali-javan.jpg` |
+| Nasser Peyghambarian | Holography | At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes. |  | `public/people/nasser-peyghambarian.jpg` |
+| Pierre-Alexandre Blanche | Holography | At the University of Arizona in 2010 their group showed a rewritable hologram: a sheet of polymer took a new colour picture every two seconds. In 2008 it took four minutes. |  | `public/people/pierre-alexandre-blanche.jpg` |
 | Ivan Sutherland | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/ivan-sutherland.webp` |
 | Bob Sproull | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/bob-sproull.webp` |
+| Samuel Achilefu | Head-mounted display | Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014. |  | `public/people/samuel-achilefu.jpg` |
 | Kazuo Yoshinaka | Virtual retinal display | Proposed the display at Nippon Electric in Japan in 1986. |  | `public/people/kazuo-yoshinaka.jpg` |
 | J. M. Naish | Head-up display | Worked out the system first called a head-up display, at Farnborough from 1956. |  | `public/people/j-m-naish.jpg` |
