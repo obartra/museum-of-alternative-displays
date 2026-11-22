@@ -165,7 +165,7 @@ export const people: Record<string, Credit> = {
     note: 'No inventor is known. The Mohist text speaks of the turned shadow and the crossing light, and does not describe a chamber.',
     sources: [
       src('reference', 'Mohism, Stanford Encyclopedia of Philosophy', 'https://plato.stanford.edu/entries/mohism/'),
-      src('archive', 'Ibn al-Haytham and the Legacy of Arabic Optics, International Year of Light 2015', 'https://www.light2015.org/Home/ScienceStories/1000-Years-of-Arabic-Optics.html'),
+      src('reference', 'Ibn al-Haytham (Wikipedia)', 'https://en.wikipedia.org/wiki/Ibn_al-Haytham'),
     ],
   },
   'shadow-play': {

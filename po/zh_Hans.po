@@ -30,6 +30,12 @@ msgid "A museum of {n} display technologies, from split-flap boards to holograms
 msgstr "一座收藏{n}种显示技术的博物馆，从翻页显示屏到全息图。每件展品都可以转着看，看它怎样形成画面。"
 
 #: interface
+#. Name and description of the site. Keep the words in curly brackets as they are.
+msgctxt "ui.site.title"
+msgid "Museum of Alternative Displays | {n} display technologies in 3D"
+msgstr "另类显示博物馆 | {n}种显示技术的3D展品"
+
+#: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
 msgctxt "ui.title.page"
 msgid "{page} | {site}"
@@ -727,6 +733,12 @@ msgid "The whole collection in one list."
 msgstr "全部馆藏，列在一张表里。"
 
 #: interface
+#. Index page and its filters. Keep the words in curly brackets as they are.
+msgctxt "ui.depot.says"
+msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "博物馆的全部{n}件展品列在一张表里，可按展厅、年份或名称排序，也可按成像方式筛选。"
+
+#: interface
 #. Index page and its filters.
 msgctxt "ui.depot.light"
 msgid "How it makes the picture"
@@ -827,6 +839,12 @@ msgstr "没有哪件展品能同时满足这些要求。请去掉一项要求。
 msgctxt "ui.about.lead"
 msgid "The collection, its sources and its credits."
 msgstr "馆藏、资料来源与署名。"
+
+#: interface
+#. About page.
+msgctxt "ui.about.says"
+msgid "What counts as a piece, where every date and name comes from, how the models and the building were made, and the licence the museum is shared under."
+msgstr "什么算一件展品，每个日期和名字出自哪里，模型和建筑是怎样做的，以及博物馆以什么许可协议共享。"
 
 #: interface
 #. About page.
@@ -9017,3 +9035,303 @@ msgstr "这十三站一共提到了十五位女性，你已经在每一位的成
 msgctxt "tour.women.end.text.3"
 msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
 msgstr "一路上，绿线还经过了四十多件别的展品。退出导览，这些展厅就任你走。每件展品都有自己的说明，上面写着参与者的名字。谢谢你参加这次导览。"
+
+#: tour-black
+#. Title of a guided tour.
+msgctxt "tour.black.title"
+msgid "Black inventors and artists"
+msgstr "黑人发明家与艺术家"
+
+#: tour-black
+#. One sentence under the title of the tour, saying what it is.
+msgctxt "tour.black.lead"
+msgid "A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label."
+msgstr "一条走过五个展厅的导览路线。十件展品，从电视显像管到头显，每一件的说明上都有一位黑人发明家或艺术家。"
+
+#: tour-black
+#. Guided tour, before the first stop: the title of this part.
+msgctxt "tour.black.start.title"
+msgid "Before the first stop"
+msgstr "第一站之前"
+
+#: tour-black
+#. Guided tour, before the first stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.start.text.1"
+msgid "This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist."
+msgstr "这条导览沿着地上的蓝线走。它在五个展厅的十件展品前停下。每一件的说明上，都写着一位黑人发明家或黑人艺术家的名字。"
+
+#: tour-black
+#. Guided tour, before the first stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.start.text.2"
+msgid "Some of them made the display. Some made a part that it could not do without. Some put it to a new use, or made art with it. At each stop I will say which."
+msgstr "他们当中，有人造出了这件展品。有人造出了它少不了的一个部件。有人给它找到了新用途，或者用它做了艺术。每到一站，我会告诉你是哪一种。"
+
+#: tour-black
+#. Guided tour, before the first stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.start.text.3"
+msgid "The first stop is in hall 2. Go to the cathode ray tube."
+msgstr "第一站在2号展厅。去看阴极射线管。"
+
+#: tour-black
+#. Guided tour, at the piece Cathode ray tube: the title of this part.
+msgctxt "tour.black.cathode-ray-tube.title"
+msgid "A camera at the door"
+msgstr "门口的摄像机"
+
+#: tour-black
+#. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.cathode-ray-tube.text.1"
+msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times."
+msgstr "看屏幕。那条向下移动的亮带，就是一束电子刚刚画过的几行。模型把这个过程放慢了大约60倍。"
+
+#: tour-black
+#. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.cathode-ray-tube.text.2"
+msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
+msgstr "台座上的铭牌写着Ferdinand Braun，他在1897年造出了第一只这样的管子。这份说明上有两个人让这种管子派上了用场。Marie Van Brittan Brown是纽约的一位护士，她的丈夫Albert是电子技师。1966年，他们为自己的家造了一套安防系统。一台摄像机在门上的四个窥视孔之间移动，一台电视监视器显示出来访的人。他们在1969年取得了专利。Mark Dean是IBM的工程师。他在IBM个人计算机上的三项专利中，有两项是驱动显示器的适配器，一项用于单色显示器，一项用于彩色显示器。"
+
+#: tour-black
+#. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.cathode-ray-tube.text.3"
+msgid "The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments."
+msgstr "下一站也在这个展厅。去看Numitron数码管，就是那个装着七根细小灯丝的玻璃泡。"
+
+#: tour-black
+#. Guided tour, at the piece Numitron: the title of this part.
+msgctxt "tour.black.numitron.title"
+msgid "The filament came first"
+msgstr "先有的是灯丝"
+
+#: tour-black
+#. Guided tour, at the piece Numitron: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.numitron.text.1"
+msgid "Look at the glass bulb. Inside are seven tiny lamp filaments, arranged as the seven bars that form a digit. Current through the right filaments makes them glow in the shape of a numeral."
+msgstr "看这个玻璃泡。里面有七根细小的灯丝，排成七个笔段，拼出一个数字。电流通过该亮的几根灯丝，它们就发出数字形状的光。"
+
+#: tour-black
+#. Guided tour, at the piece Numitron: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.numitron.text.2"
+msgid "Lewis Latimer did not make this display. It is from 1970, and he worked nearly ninety years earlier. But a display made of filaments needs filaments that last. In 1882 Latimer patented a way of making the carbon filaments of early electric lamps so that fewer broke in the furnace."
+msgstr "Lewis Latimer没有造过这种显示器。它出自1970年，而Latimer工作的年代比这早了将近九十年。可是用灯丝做的显示器，需要耐用的灯丝。1882年，Latimer为一种制造早期电灯碳丝的方法取得专利，让碳丝在炉中少断一些。"
+
+#: tour-black
+#. Guided tour, at the piece Numitron: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.numitron.text.3"
+msgid "Here the filament is the light. At the next stop, also in this hall, the light comes from a coating that is struck by electrons. Go to the field emission display."
+msgstr "在这里，灯丝本身就是光。下一站也在这个展厅，那里的光来自被电子击中的一层涂层。去看场致发射显示器。"
+
+#: tour-black
+#. Guided tour, at the piece Field emission display: the title of this part.
+msgctxt "tour.black.field-emission.title"
+msgid "A tube made flat"
+msgstr "压扁的管子"
+
+#: tour-black
+#. Guided tour, at the piece Field emission display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.field-emission.text.1"
+msgid "The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Above them is the front plate with its glowing coating. The lit dots count seconds."
+msgstr "模型展示的是面板的一个角，已经剖开，并放大了很多倍。从下往上一层层看。最下面是尖锥，然后是栅极，每个尖锥上方都有一个孔。再往上是前面板，上面有发光的涂层。亮着的点按秒计数。"
+
+#: tour-black
+#. Guided tour, at the piece Field emission display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.field-emission.text.2"
+msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one."
+msgstr "这种显示器是一只压扁到几毫米厚的阴极射线管，每个点后面都有一个微小的电子源。制造尖锥的方法是在Stanford Research Institute取得专利的。Akintunde Akinwande先后在尼日利亚和斯坦福大学求学。他1986年进入Honeywell，在那里研究薄膜场发射器件和显示器。在MIT，他研究可以逐个开关的发射体阵列。"
+
+#: tour-black
+#. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.field-emission.text.3"
+msgid "These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play."
+msgstr "这三件展品都自己发光。下一件只需要一团火焰。走到4号展厅，去看影戏。"
+
+#: tour-black
+#. Guided tour, at the piece Shadow play: the title of this part.
+msgctxt "tour.black.shadow-play.title"
+msgid "Cut from black paper"
+msgstr "用黑纸剪出来"
+
+#: tour-black
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.shadow-play.text.1"
+msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well."
+msgstr "看这块布幕。幕后燃着一团火焰，火焰和布之间立着三个扁平的影人：一棵树、一头鹿和一只鸟。你看到的是它们的影子。把日光关掉，才看得清楚。"
+
+#: tour-black
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.shadow-play.text.2"
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
+msgstr "没有人知道这是谁最先做的。大约一千年前，爪哇和中国已有记载。Kara Walker是美国艺术家，以黑纸剪出的剪影闻名。她从2004年起就用这种办法拍摄影片。她的活动关节纸偶装在杆上，用手操纵，演出美国奴隶制的故事。"
+
+#: tour-black
+#. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.shadow-play.text.3"
+msgid "A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping."
+msgstr "影子是把光挡住而成的图画。下一站就在这个展厅，它把图画随着光送出去。去看投影映射。"
+
+#: tour-black
+#. Guided tour, at the piece Projection mapping: the title of this part.
+msgctxt "tour.black.projection-mapping.title"
+msgid "A head in a crystal ball"
+msgstr "水晶球里的一颗头"
+
+#: tour-black
+#. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.projection-mapping.text.1"
+msgid "Look at the white plaster shapes and the projector on its tripod. Each shape receives its own pattern, and no light falls on the floor. By day the picture is barely visible, so switch the daylight off."
+msgstr "看那几个白色的石膏形体，还有架在三脚架上的投影机。每个形体都得到属于自己的图案，没有一点光落在地板上。白天，画面几乎看不出来，所以请关掉日光。"
+
+#: tour-black
+#. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.projection-mapping.text.2"
+msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room."
+msgstr "铭牌上的年份1969，是迪士尼乐园Haunted Mansion的年份。在那里，一张拍下来的脸被投到水晶球里的一颗素面头像上。这颗头像叫Madame Leota。Lanny Smoot是迪士尼的资深研究员，拥有100多项专利。Madame Leota能在降神会的房间里飘浮，被认为是他的功劳。"
+
+#: tour-black
+#. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.projection-mapping.text.3"
+msgid "So far every picture needed a lamp or a flame, or made its own light. In hall 5 the pictures use the light of the room. Go to the electrochromic display."
+msgstr "到这里为止，每幅图画不是需要一盏灯或一团火焰，就是自己发光。在5号展厅，图画用的是房间里的光。去看电致变色显示屏。"
+
+#: tour-black
+#. Guided tour, at the piece Electrochromic display: the title of this part.
+msgctxt "tour.black.electrochromic.title"
+msgid "One layer at a time"
+msgstr "一次叠一层"
+
+#: tour-black
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.electrochromic.text.1"
+msgid "Look at the printed label that shows the minutes in bars. Wait for the minute to change. The old digit fades and the new digit darkens slowly, over several seconds. The window pane behind the label is the same film on glass."
+msgstr "看那张用笔段显示分钟数的印刷标签。等分钟数变化。旧数字渐渐褪去，新数字在几秒钟里慢慢变深。标签后面的那块窗玻璃上，是同一种薄膜。"
+
+#: tour-black
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.electrochromic.text.2"
+msgid "The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
+msgstr "铭牌上写着S. K. Deb。1969年，他发表了关于氧化钨薄膜的研究，这类显示屏就是从那里发展出来的。Paula Hammond在麻省理工学院与Dean DeLongchamp一起工作。他们一层分子一层分子地叠出电致变色薄膜。他们的薄膜变色更快、对比度更高，胜过用其他方法制成的薄膜。DeLongchamp在2003年完成的学位论文指向全彩显示屏。"
+
+#: tour-black
+#. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.electrochromic.text.3"
+msgid "This film keeps its colour with the power off. The next picture is not on a surface at all. Go to hall 6 and find the illusion transmitter."
+msgstr "这种薄膜断电后仍保持颜色。下一幅图画根本不在任何表面上。去6号展厅，找到幻象传送器。"
+
+#: tour-black
+#. Guided tour, at the piece Illusion transmitter: the title of this part.
+msgctxt "tour.black.illusion-transmitter.title"
+msgid "A picture standing in the air"
+msgstr "立在空中的像"
+
+#: tour-black
+#. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.illusion-transmitter.text.1"
+msgid "On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later."
+msgstr "左边，一只真灯泡藏在灯座下方，它的像立在上面那个空灯座里。右边根本没有灯泡。看左边的灯泡熄灭：右边的像过一会儿也跟着暗下去。"
+
+#: tour-black
+#. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.illusion-transmitter.text.2"
+msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
+msgstr "在这里，铭牌上写的正是这条导览要来看的那个人。Valerie Thomas于1943年生于马里兰州。她是摩根州立大学仅有的两名主修物理的女生之一。她以数据分析员的身份进入NASA，并在那里发明了幻象传送器。铭牌上的年份是1980年。"
+
+#: tour-black
+#. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.illusion-transmitter.text.3"
+msgid "A curved mirror gave that picture its depth. In hall 7 depth comes from giving each eye its own picture. Go to the stereoscope."
+msgstr "一面曲面镜给了那个像纵深。在7号展厅，纵深来自让每只眼睛各看一幅图。去看立体镜。"
+
+#: tour-black
+#. Guided tour, at the piece Stereoscope and 3D glasses: the title of this part.
+msgctxt "tour.black.stereoscope.title"
+msgid "Two pictures, two eyes"
+msgstr "两幅图，两只眼"
+
+#: tour-black
+#. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.stereoscope.text.1"
+msgid "A hand-held viewer stands on a post, with a stereo card in its holder. Press the Look in button to put an eye to the lens: the flat card becomes a scene with depth. The red and cyan glasses in front do the same job with colour."
+msgstr "一只手持式立体镜立在支柱上，片夹里插着一张立体卡片。按“往里看”按钮，把眼睛凑到透镜前：平面的卡片变成了一个有纵深的场景。前面的红青眼镜用颜色做同样的事。"
+
+#: tour-black
+#. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.stereoscope.text.2"
+msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
+msgstr "铭牌上写着Charles Wheatstone，他1838年在伦敦发表了立体镜。这份说明上有两个人来得晚得多。Charles Harrison是芝加哥的工业设计师。1958年，他用轻便的注塑塑料重新设计了手持立体镜View-Master。它从摄影师的配件变成了儿童玩具。Kenneth Dunkley是宾夕法尼亚州的物理学家。他1989年的专利是一副没有镜片的眼镜：两个针孔，两个空框。专利说，戴上它，普通的平面图片看起来就有了深度。"
+
+#: tour-black
+#. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.stereoscope.text.3"
+msgid "The stereoscope needs a viewer in front of the eyes. The next stop does without one. Stay in this hall and go to the lenticular display."
+msgstr "立体镜需要在眼前放一个观看器。下一站不用。留在这个展厅，去看柱镜光栅显示。"
+
+#: tour-black
+#. Guided tour, at the piece Lenticular display: the title of this part.
+msgctxt "tour.black.lenticular.title"
+msgid "Words that change as you walk"
+msgstr "你一走，字就变"
+
+#: tour-black
+#. Guided tour, at the piece Lenticular display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.lenticular.text.1"
+msgid "Look at the card. It shows an eye, printed in nine views. Turn the model: the eye follows you across the room and jumps from one view to the next."
+msgstr "看这张卡片。上面印着一只眼睛，共有九个视图。转动模型：这只眼睛会一路跟着你穿过房间，并从一个视图跳到下一个视图。"
+
+#: tour-black
+#. Guided tour, at the piece Lenticular display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.lenticular.text.2"
+msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
+msgstr "一张由细条拼成的图片上，盖着一片排满细小柱镜的薄板；你站的位置不同，每条柱镜显示的细条也不同。铭牌上写着Walter Hess，他在1912年申请了专利。Hank Willis Thomas是纽约的艺术家。他的光栅立体画作品上有文字，观众从前面走过，文字就会变。其中一件上，Black Imitates White（黑模仿白）会变成White Imitates Black（白模仿黑）。"
+
+#: tour-black
+#. Guided tour, at the piece Lenticular display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.lenticular.text.3"
+msgid "One stop is left, in this hall. Go to the head-mounted display."
+msgstr "还剩一站，就在这个展厅。去看头戴式显示器。"
+
+#: tour-black
+#. Guided tour, at the piece Head-mounted display: the title of this part.
+msgctxt "tour.black.head-mounted.title"
+msgid "Goggles for a surgeon"
+msgstr "给外科医生的护目镜"
+
+#: tour-black
+#. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.head-mounted.text.1"
+msgid "The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. Press the Put it on button to see what the wearer sees."
+msgstr "模型展示的是戴在假人头上的一台头显。旁边是供一只眼睛使用的部件：一片透镜和它后面的小屏幕。按“戴上”按钮，看看佩戴者看到的是什么。"
+
+#: tour-black
+#. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.head-mounted.text.2"
+msgid "The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
+msgstr "铭牌上写着Ivan Sutherland和Bob Sproull，他们1968年在哈佛大学造出了第一台由计算机图形驱动的头显。Samuel Achilefu生于尼日利亚。他在圣路易斯华盛顿大学的团队为外科医生造出了带屏幕的护目镜。一种染料让癌细胞在那块屏幕上发光。2014年，这副护目镜第一次在手术中使用。"
+
+#: tour-black
+#. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.head-mounted.text.3"
+msgid "That was the last stop of the blue line."
+msgstr "这是蓝线的最后一站。"
+
+#: tour-black
+#. Guided tour, after the last stop: the title of this part.
+msgctxt "tour.black.end.title"
+msgid "The end of the blue line"
+msgstr "蓝线的终点"
+
+#: tour-black
+#. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.end.text.1"
+msgid "That is the end of the blue line. It began with a camera at a front door. It ends with goggles in an operating theatre."
+msgstr "蓝线到这里结束。它从一户人家门口的摄像机开始。它以手术室里的护目镜结束。"
+
+#: tour-black
+#. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.end.text.2"
+msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
+msgstr "这十站一共提到了十二个人。每个人之所以在这条线上，是因为有资料把此人描述为黑人、非裔美国人，或在非洲国家出生并长大的人。“人物”页给出了每个名字的资料来源。"
+
+#: tour-black
+#. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.black.end.text.3"
+msgid "The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it."
+msgstr "地上的绿线是另一条导览，讲的是博物馆里的女性。退出导览，这些展厅就任你走。谢谢你参加这次导览。"

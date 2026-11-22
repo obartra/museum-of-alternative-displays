@@ -4,7 +4,8 @@ import { trailById, trails } from './data/trails';
 import type { Stand } from './data/tours';
 import { openGuide } from './guide';
 import { nearHtml, openNear, type Lent } from './near';
-import { hush, tourHash, toursNow, keepStop } from './tour';
+import { hush, tourName, toursNow, keepStop } from './tour';
+import { goTo, link, nameNow, placeOf, setAddress } from './place';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -95,9 +96,9 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       const stops = tr.stops.map((id) => plan.placeOf(id)).filter((p) => !!p);
       if (!stops.length) return '';
       // as on the floor: each trail has its own place in front of a block, so that two that stop there lie side by side
-      const at = (p: plan.Place) => p.x + tr.spur, end = (p: plan.Place) => p.z - p.side * (plan.BLOCK / 2 + 0.34);
-      const d = `M${plan.DOOR.x} ${tr.lane}H${Math.max(...stops.map(at))}` + stops.map((p) => `M${at(p)} ${tr.lane}V${end(p)}`).join('');
-      return `<path class="walk__trail walk__trail--under" data-trail="${tr.id}" d="${d}"/><path class="walk__trail" data-trail="${tr.id}" d="${d}" stroke="${tr.colour}"/><path class="walk__trail walk__stops" data-trail="${tr.id}" d="${stops.map((p) => `M${at(p)} ${end(p)}h0`).join('')}" stroke="${tr.colour}"/>`;
+      const spur = (p: plan.Place) => p.x + tr.spur, end = (p: plan.Place) => p.z - p.side * (plan.BLOCK / 2 + 0.34);
+      const d = `M${plan.DOOR.x} ${tr.lane}H${Math.max(...stops.map(spur))}` + stops.map((p) => `M${spur(p)} ${tr.lane}V${end(p)}`).join('');
+      return `<path class="walk__trail walk__trail--under" data-trail="${tr.id}" d="${d}"/><path class="walk__trail" data-trail="${tr.id}" d="${d}" stroke="${tr.colour}"/><path class="walk__trail walk__stops" data-trail="${tr.id}" d="${stops.map((p) => `M${spur(p)} ${end(p)}h0`).join('')}" stroke="${tr.colour}"/>`;
     }).join('')}
     ${plan.places.map((p) => `<rect class="walk__block" data-piece="${p.id}" x="${p.x - plan.BLOCK / 2}" y="${p.z - plan.BLOCK / 2}" width="${plan.BLOCK}" height="${plan.BLOCK}" fill="${INK[p.hall] ?? '#ffffff'}"><title>${names[p.id]}</title></rect>`).join('')}
   </svg>
@@ -137,10 +138,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
    */
   const mark = (anyway = false) => {
     if (guide.tour && !closed) keepStop(guide.tour, guide.part);
-    if (closed || (!anyway && host.classList.contains('is-full')) || !/^#(walk|tour)/.test(location.hash)) return;
-    const to = guide.tour ? tourHash(guide.tour, guide.part) : last ? `#walk-${last}` : location.hash.startsWith('#tour') ? '#walk' : '';
-    if (!to || location.hash === to) return;
-    try { history.replaceState(history.state, '', to); } catch { /* the address is a courtesy */ }
+    const now = nameNow();
+    if (closed || (!anyway && host.classList.contains('is-full')) || !/^(walk|tour)/.test(now)) return;
+    const to = guide.tour ? tourName(guide.tour, guide.part) : last ? `walk-${last}` : now.startsWith('tour') ? 'walk' : '';
+    if (to && now !== to) setAddress(to);
   };
 
   /** Say where the visitor is: the hall, and the piece in front of them if there is one, with the way to its page. */
@@ -148,7 +149,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     const p = w.piece ? pieceById(w.piece) : undefined;
     host.dataset.hall = String(w.hall || 1);
     where.innerHTML = w.hall
-      ? `<b class="walk__no" aria-hidden="true">${w.hall}</b><span>${tx('nav.hall', { n: w.hall, name: hallName(w.hall) })}</span>${p ? `<a class="btn walk__open" href="#piece-${p.id}">${tx('walk.open', { name: names[p.id] })}</a>` : ''}`
+      ? `<b class="walk__no" aria-hidden="true">${w.hall}</b><span>${tx('nav.hall', { n: w.hall, name: hallName(w.hall) })}</span>${p ? `<a class="btn walk__open" href="${link(`piece-${p.id}`)}">${tx('walk.open', { name: names[p.id] })}</a>` : ''}`
       : '';
     for (const b of planEl.querySelectorAll<HTMLElement>('[data-bay]')) b.setAttribute('aria-current', String(Number(b.dataset.bay) === w.hall));
     // what the hall the visitor has walked into is about, as its own page says it
@@ -227,10 +228,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (!gallery) return;
     const pc = (v: number) => Math.max(0, Math.min(100, v * 100)).toFixed(2);
     // on the plan the hall runs to the right and the windows are along the top
-    const at = `${pc(gallery.x / plan.LENGTH)}|${pc(gallery.z / (2 * plan.HALF) + 0.5)}|${Math.round((Math.atan2(-Math.cos(gallery.yaw), -Math.sin(gallery.yaw)) * 180) / Math.PI)}`;
-    if (at === marked) return;
-    marked = at;
-    const [x, y, turn] = at.split('|');
+    const spot = `${pc(gallery.x / plan.LENGTH)}|${pc(gallery.z / (2 * plan.HALF) + 0.5)}|${Math.round((Math.atan2(-Math.cos(gallery.yaw), -Math.sin(gallery.yaw)) * 180) / Math.PI)}`;
+    if (spot === marked) return;
+    marked = spot;
+    const [x, y, turn] = spot.split('|');
     me.style.left = `${x}%`; me.style.top = `${y}%`; me.style.setProperty('--turn', `${turn}deg`);
   };
 
@@ -254,7 +255,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
           signs: halls.map((h) => ({ no: h.id, name: hallName(h.id), ground: hallCss(h.id, 'h'), ink: INK[h.id] ?? '#ffffff' })),
           names, makers, display, text: getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || undefined,
           onWhere: tell,
-          onOpen: (id) => leaveTo(`#piece-${id}`),
+          onOpen: (id) => leaveTo(link(`piece-${id}`)),
           onRelease: () => { if (host.classList.contains('is-full')) setFull(false); else ((guide.tour ? host.querySelector<HTMLElement>('[data-guide="next"]:not(:disabled)') : null) ?? where.querySelector('a') ?? btn('next')).focus(); },
           onTouch: () => { hint.style.opacity = '0'; },
           onStep: (by) => guide.step(by),
@@ -313,11 +314,11 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let leaving = '';
   const leaveTo = (href: string) => {
     if (host.classList.contains('is-full') && stepped) { stepped = false; leaving = href; history.back(); }
-    else { mark(true); location.hash = href; }
+    else { mark(true); goTo(href); }
   };
   // the step back out of full view lands on this page again: only then is the address brought up to date
   const onPop = () => {
-    if (leaving) { const to = leaving; leaving = ''; mark(true); location.hash = to; return; }
+    if (leaving) { const to = leaving; leaving = ''; mark(true); goTo(to); return; }
     // the back button of a phone, with a closer look open: back to the hall and no further. The step that full view
     // had taken has just been spent, so it is taken again
     if (near.piece) {
@@ -335,8 +336,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
 
   const onClick = (e: MouseEvent) => {
     // a link to another page, followed out of full view
-    const out = (e.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
-    if (out && host.classList.contains('is-full') && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) { e.preventDefault(); return leaveTo(out.getAttribute('href')!); }
+    const out = (e.target as Element).closest<HTMLAnchorElement>('a[href]');
+    if (out && placeOf(new URL(out.href)) && host.classList.contains('is-full') && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) { e.preventDefault(); return leaveTo(out.href); }
     const el = (e.target as Element).closest<HTMLElement | SVGElement>('[data-walk], [data-bay], [data-piece], #walk-start, #walk-fold, #walk-look');
     if (!el) return;
     if (el.id === 'walk-look') return lookAt(gallery?.where.piece);

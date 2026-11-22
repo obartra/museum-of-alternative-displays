@@ -45,7 +45,7 @@ export const h5: Piece[] = [
     good: ['Keeps its picture without power, indefinitely', 'Reflects brightly for a liquid crystal, because it has no polarising filters', 'Is simple enough to coat onto plastic film'],
     bad: ['Shows one colour for each layer', 'Erases the whole tablet at once, not line by line'],
     look: 'Watch the stylus write the time. The strokes stay. After a pause, the whole sheet clears at once.',
-    sources: [src('patent', 'Yang, Lu and Doane, US patent 6,061,107', 'https://patents.google.com/patent/US6061107'), src('press', 'Cholesteric LCDs show images after power is turned off, Laser Focus World (1998)', 'https://laserfocusworld.com/test-measurement/research/article/16547241/cholesteric-lcds-show-images-after-power-is-turned-off'), src('archive', 'Reflective Cholesteric Liquid Crystals, American Physical Society prize talk (2017)', 'https://archive.aps.org/mar/2017/v29/4')],
+    sources: [src('patent', 'Yang, Lu and Doane, US patent 6,061,107', 'https://patents.google.com/patent/US6061107'), src('press', 'Cholesteric LCDs show images after power is turned off, Laser Focus World (1998)', 'https://laserfocusworld.com/test-measurement/research/article/16547241/cholesteric-lcds-show-images-after-power-is-turned-off'), src('archive', 'Reflective Cholesteric Liquid Crystals, American Physical Society prize talk (2017)', 'https://meetings.aps.org/Meeting/MAR17/Session/V29.4')],
   },
   {
     id: 'electrowetting', hall: 5, name: 'Electrowetting display',

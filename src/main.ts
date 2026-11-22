@@ -14,20 +14,27 @@ import { personLinks } from './data/person-links';
 import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
-import { findKept, greet, hush, justAsked, keepTrail, preview, resumed, spokenMinutes, tourAt, tourHash, tourPageHtml, toursNow } from './tour';
+import { findKept, greet, hush, justAsked, keepTrail, preview, resumed, spokenMinutes, tourAt, tourName, tourPageHtml, toursNow } from './tour';
+import { goTo, langOfAddress, link, nameNow, settle, wirePlaces } from './place';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
+import { AUTHOR, LICENCE, REPO } from './site';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
 
-const REPO = 'https://github.com/obartra/museum-of-alternative-displays';
 const app = document.getElementById('app')!;
 const root = document.documentElement;
 /** The name of a page for the browser tab. */
 const titled = (page: string) => t('title.page', { page, site: t('site.name') });
+/**
+ * The sentence a search engine or a chat shows under the name of a page. A page says its own before it is drawn:
+ * the lead of a piece, the introduction of a hall. A page that says nothing gets the sentence of the museum.
+ */
+let saying = '';
+const says = (text: string): void => { saying = text; };
 /** The models draw a typed line on a few of their screens. That face is fetched with them, and no page waits for it. */
 const typed = () => document.fonts.load('16px "PT Mono"').catch(() => undefined);
 const three = () => Promise.all([import('./three/runtime'), typed()]).then(([runtime]) => runtime);
@@ -50,9 +57,9 @@ document.addEventListener('click', (e) => {
   const t = e.target as HTMLElement;
   if (t.closest('[data-lights-switch]')) setLights(!lightsOn);
   // a link into a guided tour, followed in this window: the guide may begin, since only a click lets a page start a voice
-  const into = t.closest<HTMLAnchorElement>('a[href^="#tour-"]');
+  const into = t.closest<HTMLAnchorElement>('a[href*="#tour-"]');
   if (into && !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) greet(into.hash);
-  // the skip link shares the address bar with the router, so handle it here
+  // the skip link moves the keyboard and leaves the address alone
   if (t.closest('a[href="#main"]')) { e.preventDefault(); document.getElementById('main')?.focus(); }
 });
 
@@ -121,20 +128,21 @@ function wants3d(): boolean {
 }
 
 function shell(inner: string, hall?: number, current?: string): void {
-  const tab = (n: number) => `<a href="#hall-${n}" data-hall="${n}"${hall === n ? ' aria-current="true"' : ''}><span class="vh">${tx('nav.hall', { n, name: said.hall(hallById(n)).name })}</span><span aria-hidden="true">${n}</span></a>`;
+  const tab = (n: number) => `<a href="${link(`hall-${n}`)}" data-hall="${n}"${hall === n ? ' aria-current="true"' : ''}><span class="vh">${tx('nav.hall', { n, name: said.hall(hallById(n)).name })}</span><span aria-hidden="true">${n}</span></a>`;
   const menu = langMenu();
   app.innerHTML = `
 <header class="top">
-  <a class="top__name" href="#">${tx('site.name')}</a>
+  <a class="top__name" href="${link('')}">${tx('site.name')}</a>
   <div class="top__tools">${menu}${switchHtml()}</div>
-  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="#index"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="#people"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="#about"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
+  <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="${link('index')}"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="${link('people')}"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="${link('about')}"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><a href="#people">${tx('nav.people')}</a><a href="#about">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${current === 'about' ? '' : appFoot()}</footer>
+<footer class="foot"><a href="${link('people')}">${tx('nav.people')}</a><a href="${link('about')}">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button>${current === 'about' ? '' : appFoot()}</footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
-  document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description', { n: pieces.length }));
+  document.querySelector('meta[name="description"]')?.setAttribute('content', saying || t('site.description', { n: pieces.length }));
+  saying = '';
 }
 
 const chip = (s: Status) => `<span class="chip chip--${s}">${esc(said.status(s))}</span>`;
@@ -143,14 +151,14 @@ const yearOf = (p: Piece) => esc(p.year < 1500 ? said.piece(p).yearText ?? Strin
 
 // ---------- entrance ----------
 function entrance(): void {
-  document.title = t('site.name');
+  document.title = t('site.title', { n: pieces.length });
   const cell = (ch: string, cls = '') => `<span class="flap ${cls}" data-ch="${esc(ch)}">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`;
   const word = (text: string, n: number) => [...text.toLocaleUpperCase(langNow().tag).padEnd(n, ' ')].slice(0, n).map((c) => cell(c)).join('');
   // a row is as long as the longest hall name in the language in use, and never shorter than the English board
   const wide = Math.max(14, ...halls.map((x) => [...said.hall(x).name].length));
   const rows = halls.map((x) => {
     const n = inHall(x.id).length, name = said.hall(x).name;
-    return `<a class="board__row" href="#hall-${x.id}" data-hall="${x.id}"><span class="vh">${tx('board.row', { n: x.id, name, count: count('count.pieces', n) })}</span><span aria-hidden="true" style="display:contents">${cell(String(x.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(name, wide)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
+    return `<a class="board__row" href="${link(`hall-${x.id}`)}" data-hall="${x.id}"><span class="vh">${tx('board.row', { n: x.id, name, count: count('count.pieces', n) })}</span><span aria-hidden="true" style="display:contents">${cell(String(x.id), 'flap--tag')}<span class="flap flap--gap"></span>${word(name, wide)}<span class="flap flap--gap"></span>${word(String(n).padStart(2, ' '), 2)}</span></a>`;
   }).join('');
   shell(`
 <div class="stack entrance">
@@ -164,16 +172,16 @@ function entrance(): void {
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
       <div class="board__rows">${rows}</div>
     </section>
-    <p class="ways"><a class="btn btn--go" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#walk">${tx('walk.title')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a><a class="btn" href="#people">${tx('nav.people')}</a></p>
+    <p class="ways"><a class="btn btn--go" href="${link('hall-1')}">${tx('entrance.start')}</a><a class="btn" href="${link('walk')}">${tx('walk.title')}</a><a class="btn" href="${link('index')}">${tx('entrance.browse')}</a><a class="btn" href="${link('people')}">${tx('nav.people')}</a></p>
   </div>
-  <a class="visitcard" href="#visit"><span class="visitcard__kind">${tx('visit.kind')}</span><strong class="visitcard__title">${tx('visit.title')}</strong><span class="visitcard__lead">${tx('visit.lead')}</span></a>
+  <a class="visitcard" href="${link('visit')}"><span class="visitcard__kind">${tx('visit.kind')}</span><strong class="visitcard__title">${tx('visit.title')}</strong><span class="visitcard__lead">${tx('visit.lead')}</span></a>
   ${toursNow().map(tourCard).join('')}
   <section class="hallpic">
-    <a class="hallpic__img" href="#walk" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 720px, (min-width: 760px) 58vw, 100vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
+    <a class="hallpic__img" href="${link('walk')}" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 720px, (min-width: 760px) 58vw, 100vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
     <div class="stack" style="--gap: 12px">
       <h2 class="h-sec">${tx('walk.title')}</h2>
       <p class="prose">${tx('walk.lead', { n: pieces.length })}</p>
-      <p class="ways"><a class="btn btn--go" href="#walk">${tx('walk.start')}</a></p>
+      <p class="ways"><a class="btn btn--go" href="${link('walk')}">${tx('walk.start')}</a></p>
     </div>
   </section>
   <section class="stack" style="--gap: 12px">
@@ -247,7 +255,7 @@ function tile(p: Piece, i = 9): string {
   // as on the plate of its block in the halls: the first people named as its makers, and its date
   const who = people[p.id]?.people.find((e) => !e.aside)?.who ?? [];
   const by = [esc(who.length > 2 ? `${who.slice(0, 2).join(comma())} +${who.length - 2}` : who.join(comma())), yearOf(p)].filter(Boolean).join(esc(comma()));
-  return `<a class="tile" href="#piece-${p.id}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="${TILE_SIZES}" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta"><span>${by}</span>${chip(p.status)}</div></a>`;
+  return `<a class="tile" href="${link(`piece-${p.id}`)}" data-hall="${p.hall}"><div class="tile__img"><img alt="" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="${TILE_SIZES}" width="760" height="760" decoding="async" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'}><span class="tile__no">${tx('tile.no', { no: inv(p) })}</span></div><div class="tile__name">${esc(said.piece(p).name)}</div><div class="tile__meta"><span>${by}</span>${chip(p.status)}</div></a>`;
 }
 
 function hallView(n: number): void {
@@ -255,20 +263,21 @@ function hallView(n: number): void {
   if (!hall) return notFound();
   const words = said.hall(hall), named = (x: typeof hall) => ({ n: x.id, name: said.hall(x).name });
   document.title = titled(t('hall.title', { n, name: words.name }));
+  says(words.intro);
   const list = inHall(n);
   const prev = halls[n - 2], next = halls[n];
   shell(`
 <div class="stack">
   <div class="hallhead">
     <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(words.name)}</span><span class="plate__sub" style="padding-left:0">${esc(count('count.pieces', list.length))}</span></span></h1>
-    <div class="stack" style="--gap: 16px"><p class="lead">${esc(words.intro)}</p>${list.length ? `<p class="ways"><a class="btn" href="#walk-${list[0].id}">${tx('walk.hall')}</a></p>` : ''}</div>
+    <div class="stack" style="--gap: 16px"><p class="lead">${esc(words.intro)}</p>${list.length ? `<p class="ways"><a class="btn" href="${link(`walk-${list[0].id}`)}">${tx('walk.hall')}</a></p>` : ''}</div>
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
-  <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="#hall-${prev.id}">${tx('pager.backHall', named(prev))}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#hall-${next.id}">${tx('pager.nextHall', named(next))}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
+  <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="${link(`hall-${prev.id}`)}">${tx('pager.backHall', named(prev))}</a>` : `<a href="${link('')}">${tx('pager.entrance')}</a>`}${next ? `<a href="${link(`hall-${next.id}`)}">${tx('pager.nextHall', named(next))}</a>` : `<a href="${link('index')}">${tx('pager.depot')}</a>`}</nav>
 </div>`, n);  const onKey = (e: KeyboardEvent) => {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test((document.activeElement as HTMLElement | null)?.tagName ?? '')) return;
     const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
-    if (to) location.hash = `#hall-${to.id}`;
+    if (to) goTo(link(`hall-${to.id}`));
   };
   document.addEventListener('keydown', onKey);
   leave = () => document.removeEventListener('keydown', onKey);
@@ -305,6 +314,7 @@ const entryHtml = (pieceId: string, e: Entry, did: string, main?: (name: string)
 let peopleOnly: '' | Trail['id'] = '';
 function peopleView(): void {
   document.title = titled(t('nav.people'));
+  says(t('people.lead'));
   const pill = (value: string, label: string) => `<label class="pill"><input type="radio" name="who" value="${value}"${peopleOnly === value ? ' checked' : ''}><span>${label}</span></label>`;
   shell(`
 <div class="stack">
@@ -328,7 +338,7 @@ function peopleView(): void {
         const list = c.people.map((e, k) => ({ e, did: told.did[k] })).filter(({ e }) => !tr || tr.who(e).length);
         if (!list.length) return '';
         for (const { e } of list) for (const n of tr ? tr.who(e) : e.who) names.add(n);
-        return `<section class="who"><h3 class="who__piece"><a href="#piece-${p.id}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, tr ? (n) => tr.who(e).includes(n) : undefined)).join('')}</ul></section>`;
+        return `<section class="who"><h3 class="who__piece"><a href="${link(`piece-${p.id}`)}">${esc(said.piece(p).name)}</a></h3><ul class="people__list">${list.map(({ e, did }) => entryHtml(p.id, e, did, tr ? (n) => tr.who(e).includes(n) : undefined)).join('')}</ul></section>`;
       }).join('');
       return blocks ? `<section class="stack" style="--gap: 4px" data-hall="${h.id}"><h2 class="h-sec who__hall"><b class="who__no" aria-hidden="true">${h.id}</b><span>${tx('hall.title', { n: h.id, name: said.hall(h).name })}</span></h2><div class="who__grid">${blocks}</div></section>` : '';
     }).join('');
@@ -338,7 +348,7 @@ function peopleView(): void {
     // the way into the halls along the trail: its guided tour where the language tells one, or the trail itself
     const tour = tr ? toursNow().find((x) => x.id === tr.id) : undefined;
     walk.hidden = !tr;
-    walk.innerHTML = !tr ? '' : tour ? `<a class="btn btn--go" href="${tourHash(tour)}">${tx('tour.take')}</a><a class="btn" href="#words-${tour.id}">${tx('tour.whole')}</a>` : `<a class="btn btn--go" href="#walk-${tr.stops[0] ?? ''}" data-trail="${tr.id}">${tx('trail.walk')}</a>`;
+    walk.innerHTML = !tr ? '' : tour ? `<a class="btn btn--go" href="${link(tourName(tour))}">${tx('tour.take')}</a><a class="btn" href="${link(`words-${tour.id}`)}">${tx('tour.whole')}</a>` : `<a class="btn btn--go" href="${link(`walk-${tr.stops[0] ?? ''}`)}" data-trail="${tr.id}">${tx('trail.walk')}</a>`;
     // a trail whose people are written down by name shows the source that each name rests on
     const list = tr?.list?.filter((x) => names.has(x.name)) ?? [];
     written.hidden = !list.length;
@@ -365,14 +375,14 @@ const HEADPHONES = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v5
  */
 function tourCard(tour: Tour): string {
   const own = said.tour(tour)!, minutes = spokenMinutes(tour);
-  return `<a class="tourcard" href="${tourHash(tour)}" style="--trail: ${trailById(tour.id)?.colour ?? '#1f9d55'}; --stops: ${tourStops(tour).length}">
+  return `<a class="tourcard" href="${link(tourName(tour))}" style="--trail: ${trailById(tour.id)?.colour ?? '#1f9d55'}; --stops: ${tourStops(tour).length}">
     <span class="tourcard__line" aria-hidden="true"></span>
     <span class="tourcard__kind">${tx('tour.label')}</span>
     <strong class="tourcard__title">${esc(own.title)}</strong>
     <span class="tourcard__lead">${esc(own.lead)}</span>
     <span class="tourcard__foot"><span class="tourcard__go">${tx('tour.take')}</span>${minutes ? `<span class="tourcard__audio">${HEADPHONES}${tx('tour.spoken', { n: minutes })}</span>` : ''}</span>
   </a>
-  <p class="tourcard__more"><a href="#words-${tour.id}">${tx('tour.whole')}</a></p>`;
+  <p class="tourcard__more"><a href="${link(`words-${tour.id}`)}">${tx('tour.whole')}</a></p>`;
 }
 
 // ---------- the words of a guided tour, on one page ----------
@@ -381,13 +391,11 @@ function wordsView(id: string): void {
   if (!tour || !said.tour(tour)) return notFound();
   if (tour.draft) preview();
   document.title = titled(said.tour(tour)!.title);
+  says(said.tour(tour)!.lead);
   shell(tourPageHtml(tour));
 }
 
 // ---------- piece ----------
-const hallOk = (n: number): boolean => halls.some((h) => h.id === n);
-/** Who made the museum: named on the About page and in its licence. */
-const AUTHOR = 'Os Bartra';
 /** The day of the last change to the museum, put in by the build. Empty when the build could not tell. */
 declare const __CHANGED__: string;
 /** That day in the visitor's language, as a line for the About page. */
@@ -403,7 +411,7 @@ function linesHtml(id: string): string {
   if (!on.length) return '';
   return `<p class="lines">${on.map((tr) => {
     const tour = toursNow().find((x) => x.id === tr.id);
-    return `<a class="line" style="--trail: ${tr.colour}" href="${tour ? tourHash(tour, id) : `#walk-${id}`}" data-trail="${tr.id}"><span class="line__mark" aria-hidden="true"></span>${tx('piece.line', { name: t(`trail.${tr.id}`) })}</a>`;
+    return `<a class="line" style="--trail: ${tr.colour}" href="${link(tour ? tourName(tour, id) : `walk-${id}`)}" data-trail="${tr.id}"><span class="line__mark" aria-hidden="true"></span>${tx('piece.line', { name: t(`trail.${tr.id}`) })}</a>`;
   }).join('')}</p>`;
 }
 
@@ -415,7 +423,7 @@ function visitBand(step: number): string {
   return `<aside class="visit" aria-label="${tx('visit.kind')}">
   <p class="visit__step">${tx('visit.step', { n: step + 1, of: visit.length })}</p>
   <p class="visit__note">${tx(VISIT_NOTES[step])}</p>
-  <p class="visit__go"><a class="btn" href="#visit-${to ? to.id : 'end'}">${to ? tx('visit.next', { name: said.piece(to).name }) : tx('visit.finish')}</a><a href="#piece-${visit[step]}">${tx('visit.leave')}</a></p>
+  <p class="visit__go"><a class="btn" href="${link(`visit-${to ? to.id : 'end'}`)}">${to ? tx('visit.next', { name: said.piece(to).name }) : tx('visit.finish')}</a><a href="${link(`piece-${visit[step]}`)}">${tx('visit.leave')}</a></p>
 </aside>`;
 }
 /** `#visit` is the first stop, `#visit-<piece>` a stop, and `#visit-end` the page after the last one. */
@@ -434,7 +442,7 @@ function visitEnd(): void {
     <p>${tx('visit.end.1')}</p>
     <p>${tx('visit.end.2')}</p>
   </div>
-  <p class="ways"><a class="btn btn--go" href="#walk">${tx('walk.title')}</a><a class="btn" href="#hall-1">${tx('entrance.start')}</a><a class="btn" href="#index">${tx('entrance.browse')}</a></p>
+  <p class="ways"><a class="btn btn--go" href="${link('walk')}">${tx('walk.title')}</a><a class="btn" href="${link('hall-1')}">${tx('entrance.start')}</a><a class="btn" href="${link('index')}">${tx('entrance.browse')}</a></p>
   ${toursNow().map(tourCard).join('')}
 </div>`);
 }
@@ -449,6 +457,7 @@ function pieceView(id: string, step?: number): void {
   // a piece made to be looked into or sat in front of gets a button that puts the visitor there, in place of the plain front view
   const places = viewsOf(p.id).map((v) => ({ ...v, ...said.view(p.id, v) }));
   document.title = titled(x.name);
+  says(x.lead);
   // one thing worth repeating, with the source it rests on. That source joins the list at the foot of the page
   const fact = facts[p.id];
   // the people behind the piece, and the sources that name them
@@ -468,7 +477,7 @@ ${step === undefined ? '' : visitBand(step)}
     <div class="stage__bar">${switchHtml()}<span class="gap"></span><button type="button" class="btn" data-act="stereo" aria-pressed="false" disabled${p.hall === DEPTH ? '' : ' hidden'}>${tx('stage.stereo')}</button><button type="button" class="btn" data-act="pause" disabled>${tx(calm ? 'stage.play' : 'stage.pause')}</button><button type="button" class="btn" data-act="full">${tx('stage.expand')}</button></div>
   </div>
   <div class="stack">
-    <p class="crumbs"><a class="crumb" href="#hall-${hall.id}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="#walk-${p.id}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="piece/${p.id}/" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
+    <p class="crumbs"><a class="crumb" href="${link(`hall-${hall.id}`)}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="${link(`walk-${p.id}`)}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="${link(`piece-${p.id}`)}" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
@@ -481,7 +490,7 @@ ${step === undefined ? '' : visitBand(step)}
       ${row(tx('card.principle'), esc(said.principle(p.principle)))}
       ${p.needs.length ? row(tx('card.properties'), esc(p.needs.map((n) => said.need(n)).join('. '))) : ''}
     </dl>
-    ${credit && told ? `<section class="people stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.people')}</h2><ul class="people__list">${credit.people.map((e, k) => entryHtml(p.id, e, told.did[k])).join('')}</ul>${linesHtml(p.id)}${told.note ? `<p class="people__note"${standIn.people(p.id)}>${esc(told.note)}</p>` : ''}<p class="small"><a href="#people">${tx('people.more')}</a></p></section>` : ''}
+    ${credit && told ? `<section class="people stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.people')}</h2><ul class="people__list">${credit.people.map((e, k) => entryHtml(p.id, e, told.did[k])).join('')}</ul>${linesHtml(p.id)}${told.note ? `<p class="people__note"${standIn.people(p.id)}>${esc(told.note)}</p>` : ''}<p class="small"><a href="${link('people')}">${tx('people.more')}</a></p></section>` : ''}
     ${archiveSection(p.id)}
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.how')}</h2><div class="prose">${x.how.map((par) => `<p>${esc(par)}</p>`).join('')}</div></section>
     <div class="duo">
@@ -489,7 +498,7 @@ ${step === undefined ? '' : visitBand(step)}
       <section><h3>${tx('piece.bad')}</h3><ul>${x.bad.map((li) => `<li>${esc(li)}</li>`).join('')}</ul></section>
     </div>
     <section class="stack" style="--gap: 6px"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>
-    <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="#piece-${prev.id}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="#">${tx('pager.entrance')}</a>`}${next ? `<a href="#piece-${next.id}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="#index">${tx('pager.depot')}</a>`}</nav>
+    <nav class="pager" aria-label="${tx('pager.pieces')}">${prev ? `<a href="${link(`piece-${prev.id}`)}">${tx('pager.back', { name: said.piece(prev).name })}</a>` : `<a href="${link('')}">${tx('pager.entrance')}</a>`}${next ? `<a href="${link(`piece-${next.id}`)}">${tx('pager.next', { name: said.piece(next).name })}</a>` : `<a href="${link('index')}">${tx('pager.depot')}</a>`}</nav>
   </div>
 </article>`, p.hall);
 
@@ -552,7 +561,7 @@ ${step === undefined ? '' : visitBand(step)}
     // anywhere else on the page, left and right step through the collection
     if (/^(INPUT|SELECT|TEXTAREA)$/.test(on?.tagName ?? '')) return;
     const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
-    if (to) location.hash = `#piece-${to.id}`;
+    if (to) goTo(link(`piece-${to.id}`));
   };
   // without the model there is nowhere to look from, so the row of places goes too
   const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; views.hidden = true; caption.textContent = ''; };
@@ -670,7 +679,7 @@ ${step === undefined ? '' : visitBand(step)}
     const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
     if (!free || Math.abs(dx) < 80 || Math.abs(dx) < Math.abs(dy) * 2.2) return;
     const to = dx < 0 ? next : prev;
-    if (to) location.hash = `#piece-${to.id}`;
+    if (to) goTo(link(`piece-${to.id}`));
   }, { passive: true });
 
   leave = () => {
@@ -692,6 +701,7 @@ const depotState: { principle: Principle | ''; status: Status | ''; needs: Set<N
 
 function depot(): void {
   document.title = titled(t('depot.title'));
+  says(t('depot.says', { n: pieces.length }));
   const pill = (group: string, value: string, label: string, type: 'radio' | 'checkbox', checked: boolean) =>
     `<label class="pill"><input type="${type}" name="${group}" value="${value}" id="f-${group}-${value || 'any'}"${checked ? ' checked' : ''}><span>${label}</span></label>`;
   const s = depotState;
@@ -718,7 +728,7 @@ function depot(): void {
     if (s.sort === 'year') list = [...list].sort((a, b) => a.year - b.year);
     if (s.sort === 'name') list = [...list].sort((a, b) => byName(said.piece(a).name, said.piece(b).name));
     document.getElementById('count')!.textContent = list.length === pieces.length ? t('depot.count.all', { n: list.length }) : list.length ? t('depot.count.some', { n: list.length, total: pieces.length }) : t('depot.count.none');
-    document.getElementById('rows')!.innerHTML = list.map((p) => `<a class="row" href="#piece-${p.id}" data-hall="${p.hall}"><span class="row__hall" aria-hidden="true">${p.hall}</span><span><span class="row__name">${esc(said.piece(p).name)}</span><br><span class="small muted">${esc(said.piece(p).lead)}</span></span><span style="text-align:right"><span class="row__year">${yearOf(p)}</span><br>${chip(p.status)}</span></a>`).join('');
+    document.getElementById('rows')!.innerHTML = list.map((p) => `<a class="row" href="${link(`piece-${p.id}`)}" data-hall="${p.hall}"><span class="row__hall" aria-hidden="true">${p.hall}</span><span><span class="row__name">${esc(said.piece(p).name)}</span><br><span class="small muted">${esc(said.piece(p).lead)}</span></span><span style="text-align:right"><span class="row__year">${yearOf(p)}</span><br>${chip(p.status)}</span></a>`).join('');
   };
   form.addEventListener('change', draw);
   form.addEventListener('submit', (e) => e.preventDefault());
@@ -728,6 +738,7 @@ function depot(): void {
 // ---------- about ----------
 function about(): void {
   document.title = titled(t('nav.about'));
+  says(t('about.says'));
   const kinds = new Map<SourceKind, number>();
   for (const p of pieces) {
     const own = facts[p.id]?.source;
@@ -757,7 +768,7 @@ function about(): void {
       <h2 class="h-sec">${tx('about.corrections')}</h2>
       <p>${rich('about.corrections.1', { a: `${REPO}/issues`, b: REPO })}</p>
       <h2 class="h-sec">${tx('about.licence')}</h2>
-      <p>${rich('about.licence.1', { a: 'https://creativecommons.org/licenses/by-sa/4.0/' }, { name: AUTHOR })}</p>
+      <p>${rich('about.licence.1', { a: LICENCE }, { name: AUTHOR })}</p>
       <p>${tx('about.licence.2')}</p>
       <p class="small muted">${rich('about.thanks', { a: 'https://blair-neal.gitbook.io/survey-of-alternative-displays' })}</p>
       <p class="small muted">${tx('about.author', { name: AUTHOR })}</p>
@@ -818,8 +829,9 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
 }
 
 function notFound(): void {
+  lost = true;
   document.title = titled(t('missing.page'));
-  shell(`<div class="pagehead"><h1 class="title">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: '#', b: '#index' })}</p></div>`);
+  shell(`<div class="pagehead"><h1 class="title">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: link(''), b: link('index') })}</p></div>`);
 }
 
 // ---------- contact sheet, for checking every model at once ----------
@@ -862,10 +874,13 @@ let seat = 0, newest = Date.now();
 const places = new Map<number, number>();
 window.addEventListener('scroll', () => { places.set(seat, window.scrollY); }, { passive: true });
 
+/** Set by the page that says there is nothing at an address. */
+let lost = false;
 function route(): void {
   leave?.(); leave = null;
-  // plain names only, so a link survives being embedded: #hall-2, #piece-nixie-tube, #index, #about
-  const [name, query] = location.hash.replace(/^#\/?/, '').split('?');
+  // the place the address names: hall-2, piece-nixie-tube, index, about, walk, and nothing at all for the entrance
+  const [name, query] = nameNow().split('?');
+  lost = false;
   const hall = /^hall-(\d)$/.exec(name), piece = /^piece-([a-z0-9-]+)$/.exec(name), walk = /^walk(?:-([a-z0-9-]+))?$/.exec(name), words = /^words-([a-z0-9-]+)$/.exec(name), visited = /^visit(?:-([a-z0-9-]+))?$/.exec(name), toured = tourAt(name);
   if (name === 'sheet') { void sheet(new URLSearchParams(query ?? '')); return; }
   if (name === 'vista') { void import('./three/vista').then(({ landscape }) => landscape()).then(({ land, lights }) => { app.innerHTML = ''; for (const cv of [land, lights]) { cv.style.cssText = 'display:block;width:4096px;background:#cfd6dc;margin-bottom:8px'; app.append(cv); } lights.style.background = '#0a1020'; document.body.dataset.ready = '1'; }); return; }
@@ -882,10 +897,17 @@ function route(): void {
   else if (words) wordsView(words[1]);
   else if (visited) visitView(visited[1]);
   else notFound();
-  // A piece and a hall each have a page of their own on the server, with a name and a picture a chat can show.
-  // That is the address a share sheet or a search engine should take for this place.
+  // The address bar is brought to the address this place is written with: an old address with a # becomes the
+  // folder of the place, and the language in use stands in front. An address with nothing behind it is left alone.
+  const place = name === 'depot' ? 'index' : name;
+  settle(lost ? null : place);
+  // A place with words of its own has a page of its own on the server. That is the address a search engine should
+  // take for it. The walk, a tour under way and the short visit are states of the entrance.
+  const own = !lost && !link(place).includes('#');
   const canon = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-  if (canon) canon.href = new URL(piece && pieceById(piece[1]) ? `piece/${piece[1]}/` : hall && hallOk(Number(hall[1])) ? `hall/${hall[1]}/` : './', document.baseURI).href;
+  if (canon) canon.href = new URL(link(own ? place : ''), document.baseURI).href;
+  // what the page as the server sent it says of itself to a search engine is true of that place only
+  for (const data of document.querySelectorAll<HTMLElement>('script[type="application/ld+json"]')) if (data.dataset.place !== `${langOfAddress()} ${place}`) data.remove();
   fitPlates();
   // A new place opens at its top. A place the visitor comes back to, with Back or Forward, or that is drawn again
   // in another language, opens where they left it.
@@ -897,7 +919,7 @@ function route(): void {
     window.scrollTo(0, 0);
   }
   document.body.dataset.ready = '1';
-  shown = location.hash;
+  shown = name;
 }
 
 /**
@@ -909,10 +931,10 @@ function route(): void {
 let shown = '';
 function go(): void {
   if (calm || typeof document.startViewTransition !== 'function') return route();
-  const pictureOf = (hash: string) => (/^#piece-[a-z0-9-]+$/.test(hash) ? document.querySelector<HTMLElement>(`a.tile[href="${hash}"] img`) : null);
+  const pictureOf = (name: string) => (/^piece-[a-z0-9-]+$/.test(name) ? document.querySelector<HTMLElement>(`a.tile[href="${link(name)}"] img`) : null);
   const carry = (img: HTMLElement | null) => img?.style.setProperty('view-transition-name', 'stage');
   const from = shown;
-  carry(pictureOf(location.hash));
+  carry(pictureOf(nameNow()));
   const change = document.startViewTransition(() => { route(); carry(pictureOf(from)); });
   const settle = () => { for (const img of document.querySelectorAll<HTMLElement>('a.tile img')) img.style.removeProperty('view-transition-name'); };
   change.finished.then(settle, settle);
@@ -963,7 +985,8 @@ document.addEventListener('click', (e) => {
   }, () => undefined);
 });
 void findKept();
-window.addEventListener('hashchange', go);
+// a link to a place of the museum, a step back or forward, a new name after the #: the place is drawn
+wirePlaces(go);
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
 wireLangMenu((code) => {
   const y = window.scrollY;
@@ -974,4 +997,5 @@ const faces = () => Promise.all([document.fonts.load('800 40px "Sofia Sans Extra
 // The faces are asked for early and are often here before this script is. The first page is then drawn in a turn
 // of its own, and not in the turn that read the script: two short pieces of work, where one long one would hold
 // up a slow phone.
-void Promise.all([useLang(wanted()), faces()]).then(breathe).then(route);
+// the language the address names, and for an address that names none the visitor's own
+void Promise.all([useLang(langOfAddress() || wanted()), faces()]).then(breathe).then(route);
