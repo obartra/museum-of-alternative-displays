@@ -28,6 +28,8 @@ jobs:
       # types, then the collection's own rules: every piece has a model, limits and a source
       - run: npm run check
       - run: npm run build
+      # what a search engine will find: every page read without scripts, its links, its languages, the sitemap
+      - run: python3 scripts/crawl.py dist
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:

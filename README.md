@@ -294,8 +294,13 @@ Each page the server sends is the museum's own page with the place written into 
   people on its label and its sources),
 - the words of the place as plain HTML in the body, with links to the places around it.
 
-`sitemap.xml` lists every page in every language, with the day of the last change and the
-picture of each piece. `404.html` tells a search engine to leave it out. Without a network the
+`sitemap.xml` lists every page in every language, with the day of the last change, the picture
+of each piece and its archive pictures. A piece's data also names each archive picture with
+its author, its licence and the page it came from.
+
+`npm run crawl` (after a build) reads every page the way a search engine does, without
+scripts: its address, title and sentence, its languages and whether they point back, its data,
+and every link and picture in its plain words. The deploy stops if anything is wrong. `404.html` tells a search engine to leave it out. Without a network the
 worker answers any of these addresses from the page it kept.
 
 One thing the build cannot do: a `robots.txt` only counts at the top of a host, and this site

@@ -13,6 +13,7 @@
     "validate": "tsx scripts/validate.ts",
     "check": "npm run i18n && npm run typecheck && npm run validate",
     "build": "npm run i18n && vite build",
+    "crawl": "python3 scripts/crawl.py dist",
     "preview": "vite preview",
     "posters": "node scripts/posters.mjs",
     "cutouts": "node scripts/cutouts.mjs"

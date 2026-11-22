@@ -15,6 +15,7 @@
  * `sitemap.xml` lists every page. `404.html` is what the server sends for an address it does not have.
  */
 import { halls } from '../src/data/halls';
+import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
 import { people, type Credit } from '../src/data/people';
 import type { Hall, Piece } from '../src/data/schema';
@@ -37,6 +38,8 @@ interface Speech {
   hall: (hall: Hall) => HallText;
   credit: (pieceId: string, c: Credit) => CreditText;
   tour: (tour: Tour) => TourText | undefined;
+  /** What an archive picture shows, and what stands in for it for someone who cannot see it. */
+  media: (pieceId: string, m: Media) => { caption: string; alt: string; year?: string };
 }
 function speech(code: Lang, loc?: Locale): Speech {
   const put = (s: string, vars?: Record<string, string | number>) => (vars ? s.replace(/\{(\w+)\}/g, (all, k: string) => (k in vars ? String(vars[k]) : all)) : s);
@@ -50,6 +53,10 @@ function speech(code: Lang, loc?: Locale): Speech {
       return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
     },
     tour: (tour) => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
+    media: (pieceId, m) => {
+      const own = loc?.media[pieceId]?.[m.id];
+      return own ? { caption: own.caption, alt: own.alt, year: own.year ?? m.year } : m;
+    },
   };
 }
 
@@ -71,6 +78,8 @@ interface Own {
   more?: Record<string, unknown>;
   /** The way here from the entrance, as name and folder: a search engine shows it in place of the address. */
   crumbs: [string, string][];
+  /** The pictures on the page, written from the museum's folder, for the sitemap. */
+  pictures?: string[];
 }
 
 /** A sentence with links in it: `{a}words{/a}` becomes a link to `links.a`. */
@@ -118,14 +127,20 @@ ${ways}`,
     const sources = [...p.sources, ...(credit?.sources ?? []).filter((s) => !p.sources.some((own) => own.url === s.url))];
     const i = pieces.indexOf(p), near = [pieces[i - 1], pieces[i + 1]].filter((q) => !!q);
     const alt = w.ui('stage.poster', { name: x.name });
+    // From the archive: real photographs, drawings and films, each with its credit and its licence
+    const held = (media[p.id] ?? []).map((m) => ({ m, own: w.media(p.id, m), file: (m.kind === 'film' ? m.mp4 : m.large).replace(/^\.\//, '') }));
+    const stills = held.filter(({ m }) => m.kind !== 'film');
     out.push({
       name: `piece-${p.id}`, path: `piece/${p.id}/`, title: titled(x.name), short: x.name, says: x.lead, kind: 'ItemPage',
       crumbs: [home, [hallName(hall), `hall/${hall.id}/`], [x.name, `piece/${p.id}/`]],
       picture: { file: `og/${p.id}.jpg`, wide: 760, high: 760, alt },
+      pictures: [`posters/${p.id}-day-760.webp`, ...stills.map(({ file }) => file)],
       more: {
         about: { '@type': 'Thing', name: x.name, ...(x.aka ? { alternateName: x.aka } : {}), description: x.lead },
         ...(credit ? { mentions: [...new Set(credit.people.flatMap((e) => e.who))].map((name) => ({ '@type': 'Person', name })) } : {}),
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
+        // each archive picture with who made it, its licence and the page it came from: what a picture search shows beside it
+        ...(stills.length ? { image: stills.map(({ m, own, file }) => ({ '@type': 'ImageObject', contentUrl: file, caption: own.caption, description: own.alt, width: m.width, height: m.height, creditText: m.credit.author, ...(m.credit.licenceUrl ? { license: m.credit.licenceUrl } : {}), acquireLicensePage: m.credit.source })) } : {}),
       },
       body: `<p><a href="${w.pre}hall/${hall.id}/">${esc(hallName(hall))}</a></p>
 <h1>${esc(x.name)}</h1>
@@ -139,6 +154,7 @@ ${x.aka ? `<p>${esc(w.ui('piece.aka', { names: x.aka }))}</p>` : ''}
 <h2>${esc(w.ui('piece.bad'))}</h2>${list(x.bad)}
 <p>${esc(x.statusNote)}</p>
 ${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${esc(e.who.join(', '))}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
+${held.length ? `<h2>${esc(w.ui('archive.title'))}</h2><ul>${held.map(({ m, own, file }) => `<li><a href="${esc(file)}">${esc(own.caption)}</a>${own.year ? ` ${esc(own.year)}.` : ''} ${esc(w.ui(`archive.kind.${m.kind}`))}, ${esc(w.ui('archive.by', { author: m.credit.author }))}. ${esc(m.credit.licence)}. <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.archive ?? w.ui('archive.commons'))}</a></li>`).join('')}</ul>` : ''}
 <h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
 <p>${near.map((q) => `<a href="${w.pre}piece/${q.id}/">${esc(w.piece(q).name)}</a>`).join(' / ')}</p>
 ${ways}`,
@@ -236,7 +252,7 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
   // the same place in the other languages: only those that have a page for it, since a tour is not told in all of them
   const others = (name: string) => all.filter(({ pages }) => pages.some((o) => o.name === name)).map(({ w, pages }) => ({ w, path: pages.find((o) => o.name === name)!.path }));
   const files: { fileName: string; source: string }[] = [];
-  const listed: { url: string; picture?: string }[] = [];
+  const listed: { url: string; pictures: string[] }[] = [];
   let root = '';
   for (const { w, pages } of all) {
     for (const o of pages) {
@@ -276,13 +292,13 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
       // the name of the place and its language go with the data, so that the museum can tell when it has drawn another place over it
       html = swap(html, /<\/head>/, `<script type="application/ld+json" data-place="${w.code === 'en' ? '' : w.code} ${o.name}">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>\n</head>`);
       html = swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px">\n${o.body}\n</main></div>`);
-      listed.push({ url, picture: o.name.startsWith('piece-') ? `${site}posters/${o.name.slice(6)}-day-760.webp` : undefined });
+      listed.push({ url, pictures: (o.pictures ?? []).map((file) => site + file) });
       if (folder === '') root = html; else files.push({ fileName: `${folder}index.html`, source: html });
     }
   }
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${listed.map(({ url, picture }) => `  <url><loc>${esc(url)}</loc>${changed ? `<lastmod>${changed}</lastmod>` : ''}${picture ? `<image:image><image:loc>${esc(picture)}</image:loc></image:image>` : ''}</url>`).join('\n')}
+${listed.map(({ url, pictures }) => `  <url><loc>${esc(url)}</loc>${changed ? `<lastmod>${changed}</lastmod>` : ''}${pictures.map((file) => `<image:image><image:loc>${esc(file)}</image:loc></image:image>`).join('')}</url>`).join('\n')}
 </urlset>
 `;
   return { root, files: [...files, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
@@ -291,6 +307,6 @@ ${listed.map(({ url, picture }) => `  <url><loc>${esc(url)}</loc>${changed ? `<l
 /** In the data for a search engine, an address written from the folder of the museum is written out in full. */
 function absolute(more: Record<string, unknown>, site: string): Record<string, unknown> {
   const fix = (v: unknown): unknown =>
-    Array.isArray(v) ? v.map(fix) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, k === 'url' && typeof x === 'string' && !/^https?:/.test(x) ? site + x : fix(x)])) : v;
+    Array.isArray(v) ? v.map(fix) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, (k === 'url' || k === 'contentUrl') && typeof x === 'string' && !/^https?:/.test(x) ? site + x : fix(x)])) : v;
   return fix(more) as Record<string, unknown>;
 }

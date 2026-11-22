@@ -21,6 +21,8 @@ import { langNow, offered, type Lang } from './i18n';
 const HOME = new URL(document.baseURI);
 /** The places that are a single page with a plain name. */
 const PAGES = ['index', 'about', 'people'];
+/** What may follow a # and name a place: the older addresses of the pages, and the states of the building. */
+const NAMED = /^(?:hall-\d+|piece-[a-z0-9-]+|words-[a-z0-9-]+|index|depot|about|people|walk(?:-[a-z0-9-]+)?|tour-[a-z0-9-]+|visit(?:-[a-z0-9-]+)?|missing|sheet(?:\?.*)?|vista|cutouts)$/;
 
 /** The language at the front of a path, if it names one the museum speaks, and the rest of the path. */
 function split(path: string): { lang: Lang | ''; rest: string } {
@@ -47,7 +49,10 @@ export function placeOf(url: URL | Location = location): { name: string; lang: L
   const { lang, rest } = split(url.pathname.slice(HOME.pathname.length));
   const name = nameOfPath(rest);
   if (name === null) return null;
-  return { name: url.hash.replace(/^#\/?/, '') || name, lang };
+  // On the page of a place, a # that names nothing the museum knows is someone else's mark and is passed over.
+  // At the entrance it is taken as an address, and the page says there is nothing at it.
+  const hash = url.hash.replace(/^#\/?/, '');
+  return { name: hash && (name === '' || NAMED.test(hash)) ? hash : name, lang };
 }
 /** The name of the place the address bar shows: `piece-nixie-tube`, `hall-2`, `index`, `walk`, and '' for the entrance. */
 export const nameNow = (): string => placeOf()?.name ?? 'missing';
