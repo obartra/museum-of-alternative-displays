@@ -1132,109 +1132,109 @@ msgstr "沿这条路线参观"
 #. Interface.
 msgctxt "ui.tour.label"
 msgid "Guided tour"
-msgstr ""
+msgstr "导览"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.take"
 msgid "Take the guided tour"
-msgstr ""
+msgstr "参加导览"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.spoken"
 msgid "With a spoken guide, about {n} minutes"
-msgstr ""
+msgstr "配语音讲解，约{n}分钟"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.follow"
 msgid "Take the tour in the halls"
-msgstr ""
+msgstr "在展厅里跟着导览走"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.start"
 msgid "Start the tour"
-msgstr ""
+msgstr "开始导览"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.leave"
 msgid "Leave the tour"
-msgstr ""
+msgstr "退出导览"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.prev"
 msgid "Previous stop"
-msgstr ""
+msgstr "上一站"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.next"
 msgid "Next stop"
-msgstr ""
+msgstr "下一站"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.play"
 msgid "Hear the guide"
-msgstr ""
+msgstr "听讲解"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.pause"
 msgid "Pause the guide"
-msgstr ""
+msgstr "暂停讲解"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.sound"
 msgid "Audio guide"
-msgstr ""
+msgstr "语音讲解"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.line"
 msgid "The stops of the tour"
-msgstr ""
+msgstr "导览的各站"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.stop"
 msgid "Stop {n} of {total}"
-msgstr ""
+msgstr "第{n}站，共{total}站"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
 msgctxt "ui.tour.at"
 msgid "{piece}, hall {n}"
-msgstr ""
+msgstr "{piece}，{n}号展厅"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.listen"
 msgid "Listen to the guide"
-msgstr ""
+msgstr "听讲解"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.words"
 msgid "What the guide says"
-msgstr ""
+msgstr "讲解词"
 
 #: interface
 #. Interface.
 msgctxt "ui.tour.whole"
 msgid "The whole tour on one page"
-msgstr ""
+msgstr "在一页上看完整导览"
 
 #: interface
 #. About page.
 msgctxt "ui.about.tour"
 msgid "The guided tour was written for this museum. It adds no facts to the labels, only the thread from one to the next. Where it can be heard, the voice is synthetic: it is made with ElevenLabs from the words shown beside it."
-msgstr ""
+msgstr "导览是专为这座博物馆写的。它不在展品说明之外添加任何事实，只加上把一件展品连到下一件的线索。能听到讲解的地方，声音是合成的：用ElevenLabs根据旁边显示的文字生成。"
 
 #: interface
 #. Page shown for an address that does not exist.
@@ -8014,334 +8014,334 @@ msgstr "约{n}年"
 #. Title of a guided tour.
 msgctxt "tour.women.title"
 msgid "Women in the museum"
-msgstr ""
+msgstr "博物馆里的女性"
 
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
 msgid "A guided walk through all seven halls. Twelve displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "一条走遍七个展厅的导览路线。十二件展品，从盲文的小针到全息图，每一件的发明者或贡献者当中至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
 msgctxt "tour.women.start.title"
 msgid "Before the first stop"
-msgstr ""
+msgstr "第一站之前"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
 msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at twelve displays. Each has at least one woman among its inventors or contributors."
-msgstr ""
+msgstr "欢迎来到博物馆。这条导览沿着地上的绿线走。它穿过全部七个展厅，在十二件展品前停下。每一件的发明者或贡献者当中，至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
 msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
-msgstr ""
+msgstr "导览会在每一站等你。准备好了，就按“下一站”的按钮。第一站是1号展厅的盲文点显器，那里的图像是用小针拼成的。"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: the title of this part.
 msgctxt "tour.women.braille-display.title"
 msgid "Read by touch"
-msgstr ""
+msgstr "用手指读"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
 msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
-msgstr ""
+msgstr "这块显示器靠触摸来读。一排排小针升起、落下，拼出一行盲文。模型拼的是时间。注意看右边的几个单元，它们每秒都在变。"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
 msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr ""
+msgstr "每个点的下面有一块晶体，加上电压就会弯曲；一根杠杆把这点小小的弯曲变成小针的升起。Andrée Tretiakoff和Oleg Tretiakoff为这种顶起盲文点的办法取得了专利。他们1974年首先在法国提出申请。"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
 msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr ""
+msgstr "它是博物馆里唯一完全不需要光的展品。绿线上的其他各站都靠光工作。下一站是2号展厅的阴极射线管，在那里，一束电子让屏幕发光。"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
 msgctxt "tour.women.cathode-ray-tube.title"
 msgid "A beam that draws"
-msgstr ""
+msgstr "会画画的电子束"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.1"
 msgid "Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam."
-msgstr ""
+msgstr "看屏幕。那条向下移动的亮带，就是一束电子刚刚画过的几行。模型把这个过程放慢了大约60倍。从侧面可以看到操纵电子束的铜线圈。"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
 msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr ""
+msgstr "台座上的铭牌写着Ferdinand Braun，他在1897年造出了第一只这样的管子。三十年后，Philo Farnsworth在旧金山传送出第一幅全电子电视图像。Elma Farnsworth，人称Pem，在他的实验室工作，为实验绘制技术图纸。她的面孔是这套系统最早传送的图像之一。"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.3"
 msgid "In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps."
-msgstr ""
+msgstr "在1号展厅，图像是用小针拼成的。在这里，一束电子画出整幅图像。下一站是3号展厅的MicroLED墙，那里的图像是用灯拼成的。"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: the title of this part.
 msgctxt "tour.women.microled.title"
 msgid "A question at dinner"
-msgstr ""
+msgstr "晚餐桌上的一个问题"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.1"
 msgid "The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time."
-msgstr ""
+msgstr "你面前这面墙是用LED做的，每一颗都小得看不见。有一块模块取了下来，斜靠在台座上，吸盘还吸在上面。这样的墙，就是一块一块修的。"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
 msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr ""
+msgstr "Jingyu Lin和Hongxing Jiang是物理学家。2000年，他们在堪萨斯州立大学做出了最早的microLED。两人也是夫妻，这个想法起于晚餐桌上的一个问题：把一颗LED缩小到千分之几毫米，会怎么样？"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.3"
 msgid "Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps."
-msgstr ""
+msgstr "留在3号展厅。下一站是量子点显示，它靠的是比这些灯小得多的晶体。"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: the title of this part.
 msgctxt "tour.women.quantum-dot.title"
 msgid "Colour from size"
-msgstr ""
+msgstr "颜色来自大小"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.1"
 msgid "This is one pixel, cut open and greatly enlarged. Blue light rises from the lamps on the board. In the left well, large crystals turn it red. In the middle well, small ones turn it green. The right well has no crystals, and the blue passes through. The size of a crystal alone sets its colour."
-msgstr ""
+msgstr "这是一个像素，剖开后放大了许多倍。蓝光从电路板上的灯升起。在左边的小格里，大的晶体把它变成红光。在中间的小格里，小的晶体把它变成绿光。右边的小格里没有晶体，蓝光直接穿过。晶体的颜色，只由它的大小决定。"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
 msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr ""
+msgstr "这些晶体叫作量子点。大多数屏幕像这个模型一样用它们：把蓝光变成红光和绿光。1994年，在伯克利，Vicki Colvin和两位同事走了另一条路。他们让电流通过一层量子点，使它发光。Colvin是那篇论文的第一作者。"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
 msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
-msgstr ""
+msgstr "阴极射线管、LED墙和这个像素，都自己发光。在4号展厅，光由一盏灯或一台激光器发出，再由显示装置给它塑形。去看激光扫描投影。"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: the title of this part.
 msgctxt "tour.women.scanned-laser.title"
 msgid "Drawing with a laser"
-msgstr ""
+msgstr "用激光画画"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.1"
 msgid "Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall."
-msgstr ""
+msgstr "从左到右跟着光束看。三台激光器的光合成一束白光。两面装在高速电机上的小镜子操纵它，你的眼睛把移动的光点连成墙上的一幅图。"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
 msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr ""
+msgstr "铭牌上写着Joseph Ostoja-Kotkowski，他在阿德莱德上演过一场早期的激光表演。Elsa Garmire是加州理工学院的物理学家，她用激光制作图像。这些图像在1972年被拍成影片，成为Laserium的蓝本。Laserium是在洛杉矶格里菲斯天文台开演的激光表演。"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.3"
 msgid "In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes."
-msgstr ""
+msgstr "在2号展厅，一束电子在管子里画出图像。这一束是光，它可以画在任何东西上：云、建筑、烟雾。在同一个展厅再走几步，有一幅画面是照着一组白色石膏形体裁出来的。"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: the title of this part.
 msgctxt "tour.women.projection-mapping.title"
 msgid "A picture cut to fit"
-msgstr ""
+msgstr "量体裁出的画面"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.1"
 msgid "Find the switch marked Daylight and turn it off. By day this picture is barely visible. The projector on the tripod is an ordinary one. The work is in the picture, which is cut to fit the shapes it lands on. Each shape gets its own pattern, and no light falls on the floor."
-msgstr ""
+msgstr "找到标着“日光”的开关，把它关掉。白天，这幅画面几乎看不出来。三脚架上的投影机只是一台普通的投影机。功夫在画面上：它是照着它落到的形体裁出来的。每个形体都得到属于自己的图案，没有一点光落在地板上。"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
 msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr ""
+msgstr "1969年，迪士尼乐园的Haunted Mansion用这个办法做出了会唱歌的胸像。先拍下几位歌手的脸，再把影片投到按同样的脸做成的石膏胸像上。在同一座宅子里，有一个水晶球，里面是一颗素面头像。Leota Toombs是迪士尼设计工坊的艺术家，她把自己的脸给了它：投在那颗头像上的影片，拍的就是她。"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
 msgid "Before you go on, turn the daylight back on. The next stop is in hall 5, where the displays behave like print: they need the light of the room. Go to the electrophoretic ink, the page of an e-reader."
-msgstr ""
+msgstr "往下走之前，请把日光重新打开。下一站在5号展厅，那里的显示装置像印刷品一样：它们需要房间里的光。去看电泳墨水，也就是电子书阅读器的一页。"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: the title of this part.
 msgctxt "tour.women.electrophoretic-ink.title"
 msgid "A page that bends"
-msgstr ""
+msgstr "能弯曲的一页"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.1"
 msgid "This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power."
-msgstr ""
+msgstr "这是电子书阅读器的一页。它不发光。几百万个微胶囊里装着黑色和白色的颜料，电压把其中一种颜色拉到上面。看一会儿这一页。它每15秒重置一次，先闪一下黑，再闪一下白。在两次重置之间，它不耗电就能保持页面。"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
 msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr ""
+msgstr "铭牌上写着Barrett Comiskey、J. D. Albert和Joseph Jacobson，他们1996年在MIT媒体实验室研制出这种墨水。五年后，在贝尔实验室，John Rogers和Zhenan Bao把它铺在一张塑料薄片上。Bao是化学家，设计能导电的塑料。他们用一枚橡皮图章在薄片上压印出256个塑料晶体管，图像的每个点一个。这一页可以弯曲。"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.3"
 msgid "The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display."
-msgstr ""
+msgstr "这种墨水很慢，对一页书来说够用了。下一站就在这个展厅，是同一类显示装置，后来快到能放视频。去看电润湿显示屏。"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: the title of this part.
 msgctxt "tour.women.electrowetting.title"
 msgid "Oil and water"
-msgstr ""
+msgstr "油和水"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.1"
 msgid "These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher."
-msgstr ""
+msgstr "这是12个小格，放大了很多倍。每个小格里，水的下面有一滴染了色的油。没有电压时，油铺开，小格显出它的颜色。加上电压，水把油推到一个角落。注意看一个小格切换的时候。油并没有消失。它聚到角落里，堆得更高了。"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
 msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr ""
+msgstr "在第一站，电压让一块晶体弯曲，顶起一根小针。在这里，电压让水把油推到一边。Susan Hackwood和Gerardo Beni于1981年在贝尔实验室提出这种显示屏，并为这一效应命名：电润湿。铭牌上的年份2003年，是荷兰的一个实验室把它做到能放视频的那一年。"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.3"
 msgid "There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes."
-msgstr ""
+msgstr "这个展厅里还有一站。去看电致变色显示屏，一张显示分钟数的印刷标签。"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: the title of this part.
 msgctxt "tour.women.electrochromic.title"
 msgid "Layer by layer"
-msgstr ""
+msgstr "一层一层地叠"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.1"
 msgid "This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film."
-msgstr ""
+msgstr "这张印刷标签显示的是整点过后的分钟数。在这个展厅里，电压先是移动了颜料，后来移动了油。在这里，它移动的是原子。它把带电的原子推进印刷的薄膜里，薄膜就变深。等分钟数变化。旧数字渐渐褪去，新数字在几秒钟里慢慢变深。标签后面的那块玻璃上，是同一种薄膜。"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
 msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr ""
+msgstr "铭牌上写着S. K. Deb。他1969年关于氧化钨薄膜的研究，是这类显示屏的起点。在麻省理工学院，Paula Hammond和Dean DeLongchamp用另一种办法做出这样的薄膜：一层分子一层分子地叠。他们的薄膜变色更快、对比度更高，胜过用其他方法制成的薄膜。讲述这项工作的学位论文完成于2003年，它指向全彩显示屏。"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.3"
 msgid "That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air."
-msgstr ""
+msgstr "这是最后一件像印刷品那样工作的展品。接下来是6号展厅：空中。去看幻象传送器，在那里，一个像悬在空中。"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: the title of this part.
 msgctxt "tour.women.illusion-transmitter.title"
 msgid "A bulb that is not there"
-msgstr ""
+msgstr "一只并不存在的灯泡"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.1"
 msgid "Look at the two boxes. On the left, a real bulb hangs hidden under the socket, and a curved mirror stands its picture in the empty socket above. On the right there is no bulb, only the picture, sent across by a camera and a second mirror. Watch the left bulb go dark. The picture on the right follows."
-msgstr ""
+msgstr "看这两个箱子。左边，一只真灯泡藏在灯座下方，一面曲面镜把它的像立在上面那个空灯座里。右边没有灯泡，只有像，它是由一台摄像机和第二面镜子传过来的。看左边的灯泡熄灭。右边的像也跟着暗下去。"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
 msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr ""
+msgstr "在3号展厅，有一个问题是在晚餐桌上提出的。这一个是1976年在一场展览上提出的。Valerie Thomas看到，一只灯泡从灯座上取下之后，一面曲面镜还能让它看起来亮着，她想知道这个像能不能传送出去。发明幻象传送器的时候，她在NASA主管Landsat的图像处理系统。那场展览四年之后，她获得了专利。"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
 msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
-msgstr ""
+msgstr "留在6号展厅，去看静态体显示器，在那里，图像填满一块空间。"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: the title of this part.
 msgctxt "tour.women.static-volume.title"
 msgid "Drawing inside glass"
-msgstr ""
+msgstr "在玻璃里面画"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
 msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
-msgstr ""
+msgstr "先看那一叠透明的薄片。里面的图形是一个绳结。薄片一片接一片地变成乳白色，各自接住图像的一个切片。没有任何东西在动。"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
 msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
-msgstr ""
+msgstr "现在看叠层旁边的那块玻璃。它只在两束看不见的光交叉的地方发光，模型把这两束光画成了红色。在2号展厅，画图的是一束电子；在4号展厅，是一台激光器。在这里，画图的是两束光交叉的那一点，而且是在三维空间里画。"
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
 msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr ""
+msgstr "Elizabeth Downing和三位同事就是这样在玻璃内部画出彩色光点的。这项研究1996年由斯坦福大学发表，Downing是第一作者。原型是一个边长约15毫米的立方体，模型把它放大了许多倍。最后一站是全息术，在7号展厅。"
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
 msgctxt "tour.women.holography.title"
 msgid "The light itself"
-msgstr ""
+msgstr "光本身"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
-msgstr ""
+msgstr "透过这块玻璃板看。后面好像立着一辆玩具火车头。往旁边挪一步，你就能看到火车头的侧面。它并不在玻璃后面。全息图记录的是光本身。在4号展厅，激光画出图像。在这里，激光只是照亮这块板，而板发出的光波，和当初火车头发出的一模一样。"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr ""
+msgstr "Dennis Gabor在1948年发明了全息术。二十年后，画家Margaret Benyon开始把全息图当作艺术来创作。这样的全息图是静止的。第一台全息视频显示器于1989年在MIT媒体实验室造出，Mary Lou Jepsen同年在那里写的学位论文讲述了它的设计。"
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
 msgctxt "tour.women.end.title"
 msgid "The end of the green line"
-msgstr ""
+msgstr "绿线的终点"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr ""
+msgstr "绿线到这里结束。它从靠触摸来读的小针开始。它以一辆并不存在的玩具火车头结束。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
 msgid "Fourteen women are named at these twelve stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr ""
+msgstr "这十二站一共提到了十四位女性，你已经在每一位的成果前停留过。这些展厅的展品说明里，总共提到了一百多个人。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.3"
 msgid "The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
-msgstr ""
+msgstr "一路上，绿线还经过了四十多件别的展品。退出导览，这些展厅就任你走。每件展品都有自己的说明，上面写着参与者的名字。谢谢你参加这次导览。"
