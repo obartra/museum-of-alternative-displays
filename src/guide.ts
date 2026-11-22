@@ -1,25 +1,33 @@
 import { pieceById } from './data/pieces';
+import { portraits } from './data/portraits';
 import { tourStops, type Stand, type Tour } from './data/tours';
 import { trailById } from './data/trails';
 import { esc } from './html';
 import { said, t, tx } from './i18n';
-import { clipOf, hush, keepVoice, speak, toursNow, voice, wantsVoice } from './tour';
+import { clipOf, hush, keepVoice, ready, speak, toursNow, voice, wantsVoice } from './tour';
 
 /**
  * The guided tour in the walk: a dark band under the picture. On it are the stops of the tour along its line, the
  * stop the tour is at, the keys that go to the stop before and the stop after, the switch for the guide's voice
  * and the way out of the tour.
  *
- * The visitor moves the tour on. Asking for a stop carries them to it and the guide begins. The guide is never cut
- * off by walking: a visitor who strolls to another stop while she speaks hears her out, and she takes up that stop
- * when she has finished. With her voice switched off, or where a language has no recording, the tour is the same
- * tour to read.
+ * The visitor moves the tour on. Asking for a stop carries them to it, and the guide begins when they are there:
+ * she does not tell them what to look at while they are still on the way. The guide is never cut off by walking:
+ * a visitor who strolls to another stop while she speaks hears her out, and she takes up that stop when she has
+ * finished. With her voice switched off, or where a language has no recording, the tour is the same tour to read.
+ *
+ * The person a stop is about is shown in a corner of the picture, with their portrait where there is one.
  *
  * While no tour is being taken and the language tells one, the band is a single quiet row that offers it.
  */
 export interface GuideHooks {
-  /** Carry the visitor to a stop, to the place the tour stands them at. */
-  goTo(piece: string, stand?: Stand): void;
+  /**
+   * Carry the visitor to a stop, to the place the tour stands them at. Says when they will be there: `soon`, at
+   * the end of a short walk, `later`, once the hall has opened, or `never`, where there is no hall to stand in.
+   */
+  goTo(piece: string, stand?: Stand): 'soon' | 'later' | 'never';
+  /** The visitor is being carried somewhere at this moment. */
+  moving(): boolean;
   /** The visitor asked for a tour, with a click. */
   enter(tour: string): void;
   /** The visitor asked to leave the tour. */
@@ -33,14 +41,19 @@ export interface Guide {
   /** The tour being taken, if one is, and the part it is at. */
   readonly tour: Tour | undefined;
   readonly part: string;
-  /** Take up a tour at one of its parts, or put the tour down. `say` starts the guide, which the first time only a click may do. */
+  /**
+   * Take up a tour at one of its parts, or put the tour down. `say` has the guide speak, which the first time only
+   * a click may let her do. At a stop she waits until the visitor stands there.
+   */
   take(tour: Tour | undefined, part?: string, say?: boolean): void;
   /** The visitor is in front of another piece, or of none. */
   arrive(piece?: string): void;
   /** One stop on or back, from a key of the keyboard. Says whether a tour took the step. */
   step(by: 1 | -1): boolean;
-  /** Have the guide speak at the part the tour is on. For the button that starts the walk. */
-  say(): void;
+  /** The button that starts the walk was pressed in a tour: the guide speaks the part the tour is at, once the visitor stands at its stop. */
+  begin(): void;
+  /** No hall will open: whatever the guide was waiting to say, she says. */
+  stranded(): void;
   close(): void;
 }
 
@@ -52,11 +65,18 @@ const ICON = {
 };
 const clock = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
-export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
+/** How long the guide waits for a visitor on the way to a stop before she begins anyway, in milliseconds. */
+const WAIT = { soon: 4500, later: 20000 };
+/** The breath between arriving and her first word. */
+const BREATH = 400;
+
+export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks): Guide {
   const a = voice();
   let tour: Tour | undefined, at = 'start', here = '', closed = false;
   /** The stop a key has just sent the visitor to. Until they are there, the pieces they pass are not arrivals. */
   let aiming = '', aimed = 0;
+  /** The part whose words wait for the visitor to reach its stop, and the clocks that end the wait. */
+  let waiting = '', held = 0, breath = 0;
   let sound = wantsVoice();
   /** Whether the visitor has opened or shut the guide's words themselves. Until they do, the words are open when there is nothing to hear. */
   let words: boolean | undefined, setting = false;
@@ -67,8 +87,12 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   const clip = () => (tour ? clipOf(tour, at) : '');
   /** The player holds the recording of the part the tour is at. */
   const mine = () => { const url = clip(); return !!url && a.src === url; };
-  /** The guide is in the middle of this part: speaking, or stopped part of the way through it. */
-  const busy = () => sound && mine() && !a.ended && (!a.paused || a.currentTime > 0);
+  /** The guide is in the middle of this part: about to speak, speaking, or stopped part of the way through it. */
+  const busy = () => sound && (!!waiting || (mine() && !a.ended && (!a.paused || a.currentTime > 0)));
+  /** The stop at which a part is told: its own, and for the closing words the last one. */
+  const stopOf = (part: string) => { const stops = tourStops(tour!); return stops.find((x) => x.id === part) ?? (part === 'end' ? stops[stops.length - 1] : undefined); };
+  /** Stop waiting for the visitor: nothing is about to be said. */
+  const drop = () => { waiting = ''; window.clearTimeout(held); window.clearTimeout(breath); };
   const $ = <T extends HTMLElement>(sel: string) => root.querySelector<T>(sel)!;
 
   /** Draw the band for the tour being taken, or the row that offers one, or nothing. */
@@ -79,6 +103,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
       root.hidden = !offer;
       for (const name of ['data-playing', 'data-told', 'data-last', 'data-voice', 'data-voices']) root.removeAttribute(name);
       root.style.removeProperty('--trail');
+      who.hidden = true; who.innerHTML = '';
       root.innerHTML = offer
         ? `<div class="guide__invite"><p class="guide__name"><span>${tx('tour.label')}</span><b>${esc(said.tour(offer)!.title)}</b></p><button type="button" class="btn guide__start" data-guide="enter" data-tour="${offer.id}">${tx('tour.start')}</button></div>`
         : '';
@@ -86,7 +111,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     }
     const stops = tourStops(tour), any = tour.parts.some((p) => clipOf(tour!, p.id));
     root.hidden = false;
-    root.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
+    for (const el of [root, who]) el.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
     root.dataset.voices = any ? 'some' : 'none';
     root.innerHTML = `
 <div class="guide__line" role="group" aria-label="${tx('tour.line')}">${tour.parts.map((p) => { const n = stops.indexOf(p) + 1, title = told().parts[p.id].title; return `<button type="button" class="guide__dot${n ? '' : ' guide__dot--cap'}" data-guide="part" data-part="${p.id}" aria-label="${esc(n ? `${n}. ${title}` : title)}" title="${esc(n ? `${n}. ${title}` : title)}"><i></i></button>`; }).join('')}</div>
@@ -120,6 +145,12 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     $('.guide__title').textContent = part.title;
     $('.guide__place').innerHTML = piece ? `<a href="#piece-${piece.id}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
     $('.guide__text').innerHTML = part.text.map((p) => `<p>${esc(p)}</p>`).join('');
+    // who this stop is about, in a corner of the picture: a face where there is a portrait, and always the name.
+    // It leads to the page of the piece, where the portrait has its credit
+    const names = tour.parts[i].who ?? [];
+    who.hidden = !piece || !names.length;
+    who.innerHTML = piece ? names.map((name) => { const pic = portraits[name]; return `<span class="walk__face">${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : ''}<span>${esc(name)}</span></span>`; }).join('') : '';
+    if (piece) { who.setAttribute('href', `#piece-${piece.id}`); who.title = t('walk.open', { name: said.piece(piece).name }); }
     root.querySelectorAll<HTMLButtonElement>('.guide__dot').forEach((dot, k) => {
       dot.classList.toggle('is-past', k < i); dot.classList.toggle('is-now', k === i);
       if (k === i) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');
@@ -139,7 +170,8 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   /** Bring the keys, the time left and the line up to date with the player. */
   const sync = () => {
     if (!tour || closed) return;
-    const has = !!clip(), on = mine() && !a.paused && !a.ended;
+    // while she waits for the visitor to arrive she counts as speaking: the key that would stop her shows
+    const has = !!clip(), on = !!waiting || (mine() && !a.paused && !a.ended);
     root.dataset.voice = !has ? 'none' : sound ? 'on' : 'off';
     root.toggleAttribute('data-playing', on);
     root.toggleAttribute('data-told', mine() && a.ended);
@@ -153,6 +185,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   };
 
   const say = () => {
+    drop();
     if (!tour || !sound || !clip()) return;
     const part = told().parts[at];
     void speak(tour, at).then(() => sync());
@@ -162,17 +195,64 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     } catch { /* the lock screen goes without */ }
   };
 
-  /** Go to a part because the visitor asked for it: the tour moves there, they are carried to its stop, and the guide begins. */
+  /**
+   * Have the guide ready for the part the tour is at, and hold her until the visitor stands at its stop. Where
+   * this runs inside a click, it is what lets her begin by herself when the walk there is over. She does not wait
+   * for ever: a visitor who turns off on the way hears her all the same.
+   */
+  const cue = (when: 'soon' | 'later') => {
+    drop();
+    ready(tour!, at);
+    waiting = at;
+    held = window.setTimeout(say, WAIT[when]);
+    sync();
+  };
+  /** The visitor is at the stop: once they have come to a stand, and after a breath, she speaks. */
+  const release = () => {
+    const part = waiting;
+    if (!part) return;
+    window.clearTimeout(breath);
+    const stood = () => {
+      if (waiting !== part || closed) return;
+      if (hooks.moving()) breath = window.setTimeout(stood, 100);
+      else breath = window.setTimeout(() => { if (waiting === part && !closed) say(); }, BREATH);
+    };
+    stood();
+  };
+  /**
+   * Have the guide say the part the tour is at: now, or once the visitor has been carried to its stop. A visitor
+   * who is in front of the stop already has only to be stood in the tour's place.
+   */
+  const tell = (when: 'now' | 'soon' | 'later' | 'never') => {
+    if (!sound || !clip()) { drop(); hush(); return; }
+    if (when === 'now' || when === 'never') return say();
+    cue(when);
+    if (here && here === stopOf(at)?.id) release();
+  };
+
+  /** Go to a part because the visitor asked for it: the tour moves there, they are carried to its stop, and the guide begins when they arrive. */
   const go = (id: string) => {
     if (!tour || !tour.parts.some((p) => p.id === id)) return;
+    drop();
     at = id;
     const stops = tourStops(tour), last = stops[stops.length - 1];
     // the closing words are said at the last stop, and leave alone a visitor who is looking round it
     const stop = stops.find((s) => s.id === id) ?? (id === 'end' && here !== last?.id ? last : undefined);
-    if (stop) { aiming = stop.id; window.clearTimeout(aimed); aimed = window.setTimeout(() => { aiming = ''; }, 3600); hooks.goTo(stop.id, stop.stand); }
+    let when: 'now' | 'soon' | 'later' | 'never' = 'now';
+    if (stop) {
+      aiming = stop.id; window.clearTimeout(aimed); aimed = window.setTimeout(() => { aiming = ''; }, WAIT.soon + 200);
+      when = hooks.goTo(stop.id, stop.stand);
+    }
     show();
-    if (sound && clip()) say(); else hush();
+    tell(when);
     hooks.onPart();
+  };
+  /** One part back. As on any player: well into a part, the key goes back to its beginning, and from its beginning to the part before. */
+  const back = () => {
+    if (!tour) return;
+    const i = index();
+    if (sound && !waiting && mine() && !a.ended && a.currentTime > 3) { a.currentTime = 0; say(); }
+    else if (i > 0) go(tour.parts[i - 1].id);
   };
 
   /** The visitor has walked up to another stop: the tour goes with them, unless the guide is in the middle of a part. */
@@ -181,7 +261,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     const stops = tourStops(tour);
     if (!stops.some((s) => s.id === here) || (at === 'end' && here === stops[stops.length - 1].id)) return;
     at = here;
-    show(); say();
+    show(); tell('soon');
     hooks.onPart();
   };
 
@@ -195,15 +275,15 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     if (what === 'sound') {
       sound = !sound; keepVoice(sound);
       el.setAttribute('aria-checked', String(sound));
-      if (sound) { show(); say(); } else { hush(); show(); keepUp(); }
+      if (sound) { show(); say(); } else { drop(); hush(); show(); keepUp(); }
       return;
     }
     hooks.onKey();
     const i = index();
-    if (what === 'prev' && i > 0) go(tour.parts[i - 1].id);
+    if (what === 'prev') back();
     if (what === 'next' && i < tour.parts.length - 1) go(tour.parts[i + 1].id);
     if (what === 'part') go(el.dataset.part!);
-    if (what === 'play') { if (mine() && !a.paused && !a.ended) hush(); else say(); }
+    if (what === 'play') { if (waiting || (mine() && !a.paused && !a.ended)) { drop(); hush(); sync(); } else say(); }
   };
   const onToggle = (e: Event) => {
     const box = e.target as HTMLDetailsElement;
@@ -236,37 +316,46 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
       if (closed) return;
       if (!next || !said.tour(next)) {
         if (tour) hush();
-        tour = undefined; aiming = ''; window.clearTimeout(aimed);
+        tour = undefined; aiming = ''; window.clearTimeout(aimed); drop();
         draw();
         return;
       }
       const fresh = next !== tour;
+      drop();
       tour = next; at = next.parts.some((p) => p.id === part) ? part : 'start';
       if (fresh) { words = undefined; draw(); }
       const stops = tourStops(next), last = stops[stops.length - 1];
       const stop = stops.find((s) => s.id === at) ?? (at === 'end' ? last : undefined);
       // at a stop, the visitor is stood where the tour stands them
-      if (stop && (stop.stand || here !== stop.id)) hooks.goTo(stop.id, stop.stand);
+      let when: 'now' | 'soon' | 'later' | 'never' = 'now';
+      if (stop && (stop.stand || here !== stop.id)) when = hooks.goTo(stop.id, stop.stand);
       show();
-      if (speakNow) say();
+      if (speakNow) tell(when);
       hooks.onPart();
     },
     arrive(piece) {
       here = piece ?? '';
-      if (aiming) { if (here === aiming) { aiming = ''; window.clearTimeout(aimed); } return; }
+      if (aiming) { if (here !== aiming) return; aiming = ''; window.clearTimeout(aimed); }
+      if (waiting) { if (tour && here === stopOf(waiting)?.id) release(); return; }
       keepUp();
     },
     step(by) {
       if (!tour) return false;
-      const to = tour.parts[index() + by];
-      if (to) { hooks.onKey(); go(to.id); }
+      hooks.onKey();
+      if (by < 0) back(); else { const to = tour.parts[index() + 1]; if (to) go(to.id); }
       return true;
     },
-    say,
+    begin() {
+      if (!tour || closed) return;
+      const stop = stopOf(at);
+      tell(stop && here !== stop.id ? hooks.goTo(stop.id, stop.stand) : 'now');
+    },
+    stranded() { if (waiting) say(); },
     close() {
       closed = true;
-      hush();
+      drop(); hush();
       window.clearTimeout(aimed);
+      who.hidden = true; who.innerHTML = '';
       root.removeEventListener('click', onClick);
       root.removeEventListener('toggle', onToggle, true);
       for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.removeEventListener(name, sync);

@@ -75,6 +75,8 @@ for (const tour of tours) {
   const fault = tourFault(tour);
   if (fault) errors.push(`tour ${tour.id}: ${fault}`);
   for (const part of tour.parts) if (DASH.test(part.title + part.text.join(' '))) errors.push(`tour ${tour.id}, ${part.id}: no em dashes or double hyphens`);
+  // whoever a stop is said to be about is named on the label of that piece, spelled as the label spells them
+  for (const part of tour.parts) for (const name of part.who ?? []) if (!people[part.id]?.people.some((e) => e.who.includes(name))) errors.push(`tour ${tour.id}, ${part.id}: ${name} is not named on the label of the piece`);
 }
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in
 {

@@ -190,6 +190,8 @@ export class Gallery {
   }
 
   get where(): Where { return this.here; }
+  /** The visitor is being carried somewhere, and has not yet come to a stand. */
+  get gliding(): boolean { return !!this.glide; }
 
   // ---------- going somewhere ----------
 

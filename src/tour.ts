@@ -67,6 +67,18 @@ export function speak(tour: Tour, partId: string): Promise<boolean> {
   if (a.src !== url) a.src = url; else if (a.ended) a.currentTime = 0;
   return a.play().then(() => true, () => false);
 }
+/**
+ * Have the guide ready to say one part, without a sound: she is started and stopped in the same breath. Done in a
+ * click, this is what lets her begin by herself a moment later, when the visitor has reached the stop.
+ */
+export function ready(tour: Tour, partId: string): void {
+  const url = clipOf(tour, partId);
+  if (!url) return;
+  const a = voice();
+  if (a.src !== url) a.src = url; else if (a.currentTime > 0) a.currentTime = 0;
+  void a.play().catch(() => undefined);
+  a.pause();
+}
 /** Stop the guide. */
 export const hush = (): void => { player?.pause(); };
 
@@ -74,14 +86,16 @@ export const hush = (): void => { player?.pause(); };
 let asked = -1e9;
 export const justAsked = (): boolean => performance.now() - asked < 2500;
 /**
- * A link into a tour was clicked: the guide begins at once, while the hall opens. It has to be here, in the click.
- * A phone will not let a voice start once the click is over.
+ * A link into a tour was clicked. The opening words are said at once, while the hall opens. What is said at a stop
+ * waits until the visitor stands there, and is only made ready. Either has to be done here, in the click: a phone
+ * will not let a voice start once the click is over.
  */
 export function greet(hash: string): void {
   const to = tourAt(hash.replace(/^#\/?/, ''));
   if (!to || !said.tour(to.tour)) return;
   asked = performance.now();
-  if (wantsVoice()) void speak(to.tour, to.part);
+  if (!wantsVoice()) return;
+  if (to.part === 'start') void speak(to.tour, to.part); else ready(to.tour, to.part);
 }
 
 /** One part of a tour on the page of its words: where it is told, its title, the recording if there is one, and what the guide says. */
