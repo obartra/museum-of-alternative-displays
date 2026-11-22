@@ -67,7 +67,7 @@ export const people: Record<string, Credit> = {
       { who: ['Mark Dean'], did: 'Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor.' },
     ],
     sources: [
-      src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707'), src('press', 'Vale: The Mother of Television, New Atlas (2006)', 'https://newatlas.com/go/5575'),
+      src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707'), src('press', 'Obituary of Elma Farnsworth, TWICE (2006)', 'https://www.twice.com/?p=75873'),
       src('archive', 'Marie Van Brittan Brown, Lemelson-MIT Program', 'https://lemelson.mit.edu/resources/marie-van-brittan-brown'),
       src('maker', 'Mark Dean, IBM', 'https://www.ibm.com/history/mark-dean'), src('archive', 'Mark Dean, National Inventors Hall of Fame', 'https://www.invent.org/inductees/mark-dean'),
     ],
@@ -181,7 +181,7 @@ export const people: Record<string, Credit> = {
       { who: ['Elsa Garmire'], she: ['Elsa Garmire'], did: 'Physicist at the California Institute of Technology. Her laser images, filmed in 1972, became the model for Laserium.' },
       { who: ['Ivan Dryer'], did: 'Filmmaker who worked with Garmire and opened Laserium at Griffith Observatory in Los Angeles in 1973.' },
     ],
-    sources: [src('press', 'Hecht, Elsa Garmire, SPIE Photonics Focus (2021)', 'https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows')],
+    sources: [src('press', 'When Laser Science Was Far Out, Science Friday (2016)', 'https://www.sciencefriday.com/segments/when-laser-science-was-far-out/'), src('archive', 'Laserimage (1972), Science on Screen', 'https://scienceonscreen.org/films/laserimage')],
   },
   'projection-mapping': {
     people: [
