@@ -338,7 +338,8 @@ h1, h2, h3 { text-wrap: balance; }
 .piece { display: grid; gap: 26px 44px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 980px) {
   .piece { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); align-items: start; }
-  .piece > .stage { position: sticky; top: 14px; }
+  /* not in full view: there the stage is fixed over the page, and this rule would win and fold its picture away */
+  .piece > .stage:not(.is-full) { position: sticky; top: 14px; }
 }
 .surface { background: #000; border-radius: 3px; padding: 10px; display: grid; place-items: center; }
 .surface canvas { display: block; max-width: 100%; max-height: 300px; height: auto; width: auto; image-rendering: auto; }
