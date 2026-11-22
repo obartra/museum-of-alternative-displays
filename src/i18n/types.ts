@@ -56,6 +56,8 @@ export interface Locale {
   people?: Record<string, CreditText>;
   /** The guided tours. A tour is here only when the language tells all of it. */
   tours?: Record<string, TourText>;
+  /** The accounts of people (src/data/person-bios.ts), under the folder of the person's page. An account is here only when every paragraph of it is translated. */
+  bios?: Record<string, string[]>;
   /** For a language with more than two forms for a number: the sentence for each form, under the name of the sentence. */
   plural?: Record<string, Partial<Record<Intl.LDMLPluralRule, string>>>;
 }

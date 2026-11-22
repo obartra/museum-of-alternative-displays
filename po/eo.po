@@ -9426,3 +9426,201 @@ msgstr "Dek du homoj estas nomataj ĉe ĉi tiuj dek haltejoj. Ĉiu el ili estas 
 msgctxt "tour.black.end.text.3"
 msgid "The green line on the floor is another tour, about the women in the museum. Leave this tour, and the halls are yours to walk. Thank you for taking it."
 msgstr "La verda linio sur la planko estas alia vizito, pri la virinoj en la muzeo. Forlasu ĉi tiun viziton, kaj la haloj estas viaj por promeni. Dankon, ke vi faris ĝin."
+
+#: people
+#. About Kenyon Taylor, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenyon-taylor.about.1"
+msgid "His name stands on the patents of Ferranti-Packard for magnetically operated signs, one of them with Donald Winrow."
+msgstr ""
+
+#: people
+#. About Ferdinand Braun, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ferdinand-braun.about.1"
+msgid "Born in Fulda, he studied at Marburg and Berlin and taught physics at Karlsruhe, Tübingen and Strasbourg."
+msgstr ""
+
+#: people
+#. About Ferdinand Braun, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ferdinand-braun.about.2"
+msgid "In 1897 he built a cathode-ray oscillograph."
+msgstr ""
+
+#: people
+#. About Ferdinand Braun, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ferdinand-braun.about.3"
+msgid "He shared the Nobel Prize in Physics of 1909 with Guglielmo Marconi, for work on wireless telegraphy."
+msgstr ""
+
+#: people
+#. About Ferdinand Braun, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ferdinand-braun.about.4"
+msgid "He died in Brooklyn, held in the United States as a German citizen during the war."
+msgstr ""
+
+#: people
+#. About Robert H. Anderson, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-h-anderson.about.1"
+msgid "A physicist, he joined Tektronix in 1959, in the research group led by Dick Ropiequet."
+msgstr ""
+
+#: people
+#. About Robert H. Anderson, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-h-anderson.about.2"
+msgid "He set himself the task of a storage tube of simple build, and arrived at one with no separate storage target inside it."
+msgstr ""
+
+#: people
+#. About Robert H. Anderson, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-h-anderson.about.3"
+msgid "The Type 564 oscilloscope of 1963 was built around it. He left Tektronix in 1969."
+msgstr ""
+
+#: people
+#. About Donald Bitzer, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.donald-bitzer.about.1"
+msgid "He took three degrees in electrical engineering at the University of Illinois, the last a doctorate in 1960."
+msgstr ""
+
+#: people
+#. About Donald Bitzer, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.donald-bitzer.about.2"
+msgid "In 1964, with Gene Slottow and the student Robert Willson, he made the plasma display panel for PLATO, the teaching network of the university."
+msgstr ""
+
+#: people
+#. About Donald Bitzer, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.donald-bitzer.about.3"
+msgid "The three received an Emmy Award for it in 2002."
+msgstr ""
+
+#: people
+#. About Gene Slottow, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gene-slottow.about.1"
+msgid "He received his doctorate at the University of Illinois in 1964."
+msgstr ""
+
+#: people
+#. About Gene Slottow, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gene-slottow.about.2"
+msgid "In the same year he, Donald Bitzer and Robert Willson made the plasma display panel there, and in 2002 the three received an Emmy Award for it."
+msgstr ""
+
+#: people
+#. About Robert Willson, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-willson.about.1"
+msgid "A graduate student of Donald Bitzer and Gene Slottow at the University of Illinois, he took his doctorate there in 1966."
+msgstr ""
+
+#: people
+#. About Robert Willson, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-willson.about.2"
+msgid "With them he made the plasma display panel in 1964, and shared the Emmy Award of 2002."
+msgstr ""
+
+#: people
+#. About Nicholas Sheridon, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nicholas-sheridon.about.1"
+msgid "A physicist at the Xerox Palo Alto Research Center, he proposed replacing the monitor with something like paper, and soon had a crude working model."
+msgstr ""
+
+#: people
+#. About Nicholas Sheridon, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nicholas-sheridon.about.2"
+msgid "Xerox took him off the work in 1977."
+msgstr ""
+
+#: people
+#. About Nicholas Sheridon, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nicholas-sheridon.about.3"
+msgid "By 2001 he was head of research at Gyricon Media, a company Xerox had spun off."
+msgstr ""
+
+#: people
+#. About Martin Schadt, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.martin-schadt.about.1"
+msgid "A physicist, he was among the earliest hired at the research laboratories of Hoffmann-La Roche in Basel."
+msgstr ""
+
+#: people
+#. About Martin Schadt, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.martin-schadt.about.2"
+msgid "In the autumn of 1970 he and Wolfgang Helfrich studied twisted layers of liquid crystal there. They filed a patent that December and published in February 1971."
+msgstr ""
+
+#: people
+#. About Martin Schadt, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.martin-schadt.about.3"
+msgid "In 1972 he built a prototype of a display that used the effect."
+msgstr ""
+
+#: people
+#. About Wolfgang Helfrich, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.wolfgang-helfrich.about.1"
+msgid "A physicist at Hoffmann-La Roche in Basel, he worked out the twisted nematic effect with Martin Schadt in 1970."
+msgstr ""
+
+#: people
+#. About Wolfgang Helfrich, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.wolfgang-helfrich.about.2"
+msgid "He left the company soon afterwards for the Freie Universität Berlin."
+msgstr ""
+
+#: people
+#. About Fritz Fischer, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.fritz-fischer.about.1"
+msgid "Born in Signau, Switzerland, he worked at the institute of technical physics of ETH Zurich."
+msgstr ""
+
+#: people
+#. About Fritz Fischer, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.fritz-fischer.about.2"
+msgid "He applied for a patent on the Eidophor in November 1939. When he died his second prototype was not yet running."
+msgstr ""
+
+#: people
+#. About Fritz Fischer, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.fritz-fischer.about.3"
+msgid "His collaborators carried the work on, and the Historical Dictionary of Switzerland dates its full working order to 1959."
+msgstr ""
+
+#: people
+#. About Joseph Ostoja-Kotkowski, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-ostoja-kotkowski.about.1"
+msgid "Born in Golub, Poland, he lived and worked in South Australia."
+msgstr ""
+
+#: people
+#. About Joseph Ostoja-Kotkowski, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-ostoja-kotkowski.about.2"
+msgid "The History Trust of South Australia says that his Sound and Image of 1968, at the Adelaide Festival of Arts, may have been the first use of a laser in a theatre."
+msgstr ""
+
+#: people
+#. About Joseph Ostoja-Kotkowski, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-ostoja-kotkowski.about.3"
+msgid "He went on to stage works of laser light and sound in Canberra, Ballarat, Brisbane and Warsaw."
+msgstr ""
+
+#: people
+#. About Joseph Plateau, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-plateau.about.1"
+msgid "A Belgian, born in Brussels."
+msgstr ""
+
+#: people
+#. About Joseph Plateau, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-plateau.about.2"
+msgid "The Science Museum Group credits him with the first demonstration of the illusion of a moving picture, with the phenakistoscope of 1832."
+msgstr ""
+
+#: people
+#. About Gabriel Lippmann, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gabriel-lippmann.about.1"
+msgid "He received the Nobel Prize in Physics of 1908 for a way of photographing colours by the interference of light."
+msgstr ""
+
+#: people
+#. About Gabriel Lippmann, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gabriel-lippmann.about.2"
+msgid "In the same year he published his idea of integral photography in the Journal de Physique."
+msgstr ""

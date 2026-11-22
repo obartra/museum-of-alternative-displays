@@ -342,9 +342,9 @@ function personView(slug: string): void {
   const lines = who.on.map(({ piece, k }) => said.credit(piece, people[piece]).did[k]);
   const first = pieceById(who.on[0].piece)!;
   document.title = titled(who.name);
-  says(bio && langNow().code === 'en' ? bio.about.join(' ') : lines[0]);
-  // the account is written in English: in another language it is marked as English, as every stand-in is
-  const english = langNow().code === 'en' ? '' : ' lang="en"';
+  // the account in the language in use or, where it is not translated yet, in English and marked as English
+  const about = bio ? said.bio(who.slug, bio.about) : [], english = bio ? standIn.bio(who.slug, bio.about) : '';
+  says(bio && !english ? about.join(' ') : lines[0]);
   const life = bio?.born ? (bio.died ? tx('person.life', { born: bio.born, died: bio.died }) : tx('person.born', { born: bio.born })) : '';
   const told = toursNow();
   // the guided tours that tell of this person, each on the card the entrance shows it on
@@ -366,7 +366,7 @@ function personView(slug: string): void {
   <div class="stack">
     <p class="crumbs"><a class="crumb pers__back" href="${link('people')}">${tx('people.more')}</a></p>
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(who.name)}</span>${life ? `<span class="plate__sub">${life}</span>` : ''}</h1>
-    ${bio ? `<p class="lead pers__lead"${english}>${esc(bio.about[0])}</p>${bio.about.length > 1 ? `<div class="prose"${english}>${bio.about.slice(1).map((line) => `<p>${esc(line)}</p>`).join('')}</div>` : ''}` : ''}
+    ${about.length ? `<p class="lead pers__lead"${english}>${esc(about[0])}</p>${about.length > 1 ? `<div class="prose"${english}>${about.slice(1).map((line) => `<p>${esc(line)}</p>`).join('')}</div>` : ''}` : ''}
     <section class="pers__sec"><h2 class="h-sec">${tx('person.in')}</h2><ul class="pers__list">${rows}</ul></section>
     ${lanes ? `<div class="pers__tours">${lanes}</div>` : ''}
     ${sources.length ? `<section class="pers__sec"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>` : ''}

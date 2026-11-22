@@ -53,6 +53,8 @@ interface Speech {
   hall: (hall: Hall) => HallText;
   credit: (pieceId: string, c: Credit) => CreditText;
   tour: (tour: Tour) => TourText | undefined;
+  /** The account of a person and whether it is the language's own: English stands in until it is translated. */
+  bio: (slug: string, about: string[]) => { about: string[]; own: boolean };
   /** What an archive picture shows, and what stands in for it for someone who cannot see it. */
   media: (pieceId: string, m: Media) => { caption: string; alt: string; year?: string };
 }
@@ -67,6 +69,7 @@ function speech(code: Lang, loc?: Locale): Speech {
       const own = loc?.people?.[pieceId];
       return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
     },
+    bio: (slug, about) => { const own = loc?.bios?.[slug]; return !loc ? { about, own: true } : own && own.length === about.length ? { about: own, own: true } : { about, own: false }; },
     tour: (tour) => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
     media: (pieceId, m) => {
       const own = loc?.media[pieceId]?.[m.id];
@@ -204,21 +207,22 @@ ${ways}`,
     const bio = bios[who.name], outside = personLinks[who.name], pic = portraits[who.name];
     const lines = who.on.map(({ piece, k }) => w.credit(piece, people[piece]).did[k]);
     const sources = personSources(who);
+    const told = bio ? w.bio(who.slug, bio.about) : undefined;
     const life = bio?.born ? (bio.died ? w.ui('person.life', { born: bio.born, died: bio.died }) : w.ui('person.born', { born: bio.born })) : '';
     const path = `person/${who.slug}/`;
     out.push({
-      name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: bio && !w.pre ? bio.about.join(' ') : lines[0], kind: 'ProfilePage',
+      name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: told?.own ? told.about.join(' ') : lines[0], kind: 'ProfilePage',
       crumbs: [home, [w.ui('nav.people'), 'people/'], [who.name, path]],
       ...(pic ? { pictures: [`people/${pic.file}`] } : {}),
       more: {
-        mainEntity: { ...person(who.name), description: bio ? bio.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died ? { deathDate: String(bio.died) } : {}) },
+        mainEntity: { ...person(who.name), description: told?.own ? told.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died ? { deathDate: String(bio.died) } : {}) },
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
       },
       body: `<p><a href="${w.pre}people/">${esc(w.ui('people.more'))}</a></p>
 <h1>${esc(who.name)}</h1>
 ${life ? `<p>${esc(life)}</p>` : ''}
 ${pic ? `<p><img src="people/${esc(pic.file)}" alt="${esc(who.name)}" style="max-width: 168px; height: auto"></p>` : ''}
-${bio ? bio.about.map((line) => `<p${w.pre ? ' lang="en"' : ''}>${esc(line)}</p>`).join('') : ''}
+${told ? told.about.map((line) => `<p${told.own ? '' : ' lang="en"'}>${esc(line)}</p>`).join('') : ''}
 <h2>${esc(w.ui('person.in'))}</h2><ul>${who.on.map(({ piece, entry }, i) => { const p = pieces.find((q) => q.id === piece)!, others = entry.who.filter((n) => n !== who.name); return `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>. ${esc(lines[i])}${others.length ? ` ${w.ui('person.with', { names: '\u0001' }).split('\u0001').map(esc).join(others.map((n) => personName(n, w.pre)).join(', '))}.` : ''}</li>`; }).join('')}</ul>
 ${sources.length ? `<h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>` : ''}
 ${outside ? `<h2>${esc(w.ui('person.elsewhere'))}</h2><p>${esc(w.ui(`person.kind.${outside.kind}`))}: <a href="${esc(outside.url)}" rel="noopener">${esc(outside.label)}</a></p>` : ''}

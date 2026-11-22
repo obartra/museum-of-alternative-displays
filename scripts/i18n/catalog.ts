@@ -11,6 +11,8 @@ import { facts } from '../../src/data/facts';
 import { halls } from '../../src/data/halls';
 import { media } from '../../src/data/media';
 import { people } from '../../src/data/people';
+import { bios } from '../../src/data/person-bios';
+import { slugOf } from '../../src/data/persons';
 import { pieces } from '../../src/data/pieces';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL } from '../../src/data/schema';
 import { tours } from '../../src/data/tours';
@@ -109,6 +111,7 @@ export function slots(): Slot[] {
       part.text.forEach((t, i) => out.push({ key: `${k}.${part.id}.text.${i + 1}`, en: t, note: `Guided tour, ${at}: what the guide says, paragraph ${i + 1} of ${part.text.length}. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.`, where }));
     }
   }
+  for (const [name, bio] of Object.entries(bios)) bio.about.forEach((t, i) => out.push({ key: `person.${slugOf(name)}.about.${i + 1}`, en: t, note: `About ${name}, on that person's own page: paragraph ${i + 1} of ${bio.about.length}. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.`, where: 'people' }));
   return out;
 }
 
@@ -166,6 +169,7 @@ export function fromLocale(loc: Locale, code: string): { said: Said; notes: stri
     put(`${k}.title`, own.title); put(`${k}.lead`, own.lead);
     for (const part of tour.parts) { put(`${k}.${part.id}.title`, own.parts[part.id]?.title); own.parts[part.id]?.text.forEach((t, i) => put(`${k}.${part.id}.text.${i + 1}`, t)); }
   }
+  for (const name of Object.keys(bios)) loc.bios?.[slugOf(name)]?.forEach((t, i) => put(`person.${slugOf(name)}.about.${i + 1}`, t));
   const most = (tally: Map<string, number>) => [...tally].sort((a, b) => b[1] - a[1])[0]?.[0];
   patterns.forEach((pattern, i) => {
     const tally = changes.get(pattern);
@@ -245,6 +249,12 @@ export function toLocale(said: Said, code: string): { locale: Locale; english: s
       const own: TourText = { title, lead, parts: Object.fromEntries(parts.map((x) => [x.id, { title: x.title!, text: x.text as string[] }])) };
       (locale.tours ??= {})[tour.id] = own;
     } else english.push(k);
+  }
+  // the account of a person is told whole or not at all, as a tour is
+  for (const [name, bio] of Object.entries(bios)) {
+    const k = `person.${slugOf(name)}`, about = bio.about.map((_, i) => get(`${k}.about.${i + 1}`));
+    if (about.every(Boolean)) (locale.bios ??= {})[slugOf(name)] = about as string[];
+    else english.push(k);
   }
   return { locale, english };
 }

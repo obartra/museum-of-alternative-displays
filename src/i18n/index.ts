@@ -79,6 +79,8 @@ export const said = {
     const own = loc?.people?.[pieceId];
     return own && own.did.length === c.people.length ? own : { did: c.people.map((e) => e.did), note: c.note };
   },
+  /** The account of a person, by the folder of their page: the language's own where all of it is translated, the English otherwise. */
+  bio: (slug: string, about: string[]): string[] => { const own = loc?.bios?.[slug]; return own && own.length === about.length ? own : about; },
   /** A guided tour. A language that does not tell it has none: the tour is offered only where it is told. */
   tour: (tour: Tour): TourText | undefined => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
   status: (s: Status): string => loc?.status[s] ?? STATUS_LABEL[s],
@@ -94,6 +96,7 @@ export const said = {
 export const standIn = {
   fact: (pieceId: string): string => (loc && !loc.facts?.[pieceId] ? ' lang="en"' : ''),
   people: (pieceId: string): string => (loc && !loc.people?.[pieceId] ? ' lang="en"' : ''),
+  bio: (slug: string, about: string[]): string => (loc && loc.bios?.[slug]?.length !== about.length ? ' lang="en"' : ''),
   view: (pieceId: string, id: string): string => (loc && !loc.views?.[pieceId]?.[id] ? ' lang="en"' : ''),
   media: (pieceId: string, id: string): string => (loc && !loc.media?.[pieceId]?.[id] ? ' lang="en"' : ''),
 };
