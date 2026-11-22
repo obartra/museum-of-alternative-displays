@@ -10149,8 +10149,8 @@ msgstr "A Histoire de la télévision registra W. von Jaworski, antes de A. Fran
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.2"
-msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling his name with a final y. Neither source gives his first name."
-msgstr "A VDE, a associação alemã de engenheiros eletricistas, situa em 1903 propostas de televisão de Jaworsky e Frankenstein, entre outros, escrevendo o nome dele com y no final. Nenhuma das duas fontes dá o seu primeiro nome."
+msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name."
+msgstr "A VDE, a associação alemã de engenheiros eletricistas, situa em 1903 propostas de televisão de Jaworsky e Frankenstein, entre outros, escrevendo esse nome com y no final. Nenhuma das duas fontes dá o primeiro nome."
 
 #: people
 #. About Peter Goldmark, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

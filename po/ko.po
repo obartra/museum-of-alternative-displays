@@ -10148,8 +10148,8 @@ msgstr "Histoire de la télévision은 1904년 8월 20일자 독일 특허 172 3
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.2"
-msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling his name with a final y. Neither source gives his first name."
-msgstr "독일 전기 기술자 협회인 VDE는 여러 사람의 것과 함께 Jaworsky와 Frankenstein의 텔레비전 제안을 1903년에 두며, 그의 성을 끝 글자 y로 적습니다. 두 자료 모두 그의 성 말고 이름은 밝히지 않습니다."
+msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name."
+msgstr "독일 전기 기술자 협회인 VDE는 여러 사람의 것과 함께 Jaworsky와 Frankenstein의 텔레비전 제안을 1903년에 두며, 이 성을 끝 글자 y로 적습니다. 두 자료 모두 성 말고 이름은 밝히지 않습니다."
 
 #: people
 #. About Peter Goldmark, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

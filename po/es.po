@@ -10148,7 +10148,7 @@ msgstr "Histoire de la télévision cita a W. von Jaworski, por delante de A. Fr
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.2"
-msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling his name with a final y. Neither source gives his first name."
+msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name."
 msgstr "La VDE, la asociación alemana de ingenieros electrotécnicos, sitúa en 1903 propuestas de televisión de Jaworsky y Frankenstein, entre otras, y escribe su apellido con y final. Ninguna de las dos fuentes da su nombre de pila."
 
 #: people

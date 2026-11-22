@@ -404,7 +404,7 @@ export const bios: Record<string, Bio> = {
   "W. von Jaworski": {
     about: [
       "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. Its title spoke of making pictures and objects visible at a distance with selenium cells, three colour filters and mirrors.",
-      "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling his name with a final y. Neither source gives his first name.",
+      "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name.",
     ],
     sources: [
       s("archive", "1900 to 1909, Histoire de la télévision (histv.net)", "https://www.histv.net/1900-1909"),

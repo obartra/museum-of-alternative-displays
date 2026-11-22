@@ -1713,13 +1713,13 @@ msgstr "Aquí un píxel és un objecte que podries agafar amb la mà. Totes les 
 #. Name of a hall. It must fit a board on a small phone. At most 16 characters.
 msgctxt "hall.2.name"
 msgid "Glass and glow"
-msgstr "Vidre i lluor"
+msgstr "Vidre i claror"
 
 #: hall-2
 #. Introduction at the top of the page of a hall.
 msgctxt "hall.2.intro"
 msgid "Every piece in this hall is sealed glass with something glowing inside. The glow comes from a beam of electrons, from a gas lit by electricity or from a hot wire. Each of these needs a vacuum or a gas filling to work."
-msgstr "Totes les peces d'aquest àmbit són vidre segellat amb alguna cosa que brilla a dins. La lluor ve d'un feix d'electrons, d'un gas que l'electricitat encén o d'un fil roent. Per funcionar, totes tres coses necessiten el buit o un gas que ompli el vidre."
+msgstr "Totes les peces d'aquest àmbit són vidre segellat amb alguna cosa que brilla a dins. La claror ve d'un feix d'electrons, d'un gas que l'electricitat encén o d'un fil roent. Per funcionar, totes tres coses necessiten el buit o un gas que ompli el vidre."
 
 #: hall-3
 #. Name of a hall. It must fit a board on a small phone. At most 16 characters.
@@ -3411,7 +3411,7 @@ msgstr "Les xifres del fons es veuen a través de les del davant"
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.nixie-tube.look"
 msgid "Turn the model until you see a tube from the side. The ten numerals stand in a stack inside the mesh, and the lit one moves forward and back as the seconds count. Then switch the daylight off and watch the orange glow appear on the glass."
-msgstr "Fes girar el model fins que vegis un tub de costat. Les deu xifres formen una pila dins la malla, i la que està encesa va endavant i endarrere a mesura que passen els segons. Després apaga la llum del dia i mira com apareix la lluor taronja al vidre."
+msgstr "Fes girar el model fins que vegis un tub de costat. Les deu xifres formen una pila dins la malla, i la que està encesa va endavant i endarrere a mesura que passen els segons. Després apaga la llum del dia i mira com apareix la resplendor taronja al vidre."
 
 #: hall-2/nixie-tube
 #. A short story about the piece, under the heading Worth knowing.
@@ -3471,7 +3471,7 @@ msgstr "Vista propera de xifres primes de metall clar, posades les unes sobre le
 #. Caption of a picture or film from an archive.
 msgctxt "piece.nixie-tube.media.glow.caption"
 msgid "The glow inside a working Nixie tube, seen through the honeycomb mesh at the front. The light is a thin sheath of glowing neon that clings to the metal of the numeral."
-msgstr "La lluor dins d'un tub Nixie en funcionament, vista a través de la malla de bresca de la part del davant. La llum és una beina fina de neó lluminós que s'arrapa al metall de la xifra."
+msgstr "La resplendor dins d'un tub Nixie en funcionament, vista a través de la malla de bresca de la part del davant. La llum és una beina fina de neó lluminós que s'arrapa al metall de la xifra."
 
 #: hall-2/nixie-tube
 #. The same picture described for someone who cannot see it.
@@ -3735,7 +3735,7 @@ msgstr "Dues làmines de vidre tanquen una graella de cel·les de gas diminutes,
 #. How it works, paragraph 1 of 2.
 msgctxt "piece.plasma-panel.how.1"
 msgid "A high voltage across a cell turns the gas inside it into plasma, a gas that carries electric charge and glows. In the first panels that glow was the picture: orange dots on black. The panel was flat and rugged, and it could hold a picture without help from a computer. That is why a university built it for classroom terminals."
-msgstr "Una tensió alta aplicada a una cel·la converteix el gas que conté en plasma, un gas que porta càrrega elèctrica i brilla. En els primers panells, aquesta lluor era la imatge: punts taronja sobre negre. El panell era pla i robust, i podia retenir una imatge sense l'ajuda d'un ordinador. Per això una universitat el va construir per a terminals d'aula."
+msgstr "Una tensió alta aplicada a una cel·la converteix el gas que conté en plasma, un gas que porta càrrega elèctrica i brilla. En els primers panells, aquesta resplendor era la imatge: punts taronja sobre negre. El panell era pla i robust, i podia retenir una imatge sense l'ajuda d'un ordinador. Per això una universitat el va construir per a terminals d'aula."
 
 #: hall-2/plasma-panel
 #. How it works, paragraph 2 of 2.
@@ -10148,7 +10148,7 @@ msgstr "Histoire de la télévision posa W. von Jaworski, davant d'A. Frankenste
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.2"
-msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling his name with a final y. Neither source gives his first name."
+msgid "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name."
 msgstr "La VDE, l'associació alemanya d'enginyers electrotècnics, situa el 1903 propostes de televisió de Jaworsky i Frankenstein, entre altres, i escriu el seu nom amb una y final. Cap de les dues fonts no en dona el nom de pila."
 
 #: people
