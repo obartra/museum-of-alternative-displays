@@ -21,6 +21,7 @@ import { archiveCount, archiveSection, creditsList, wireArchive } from './archiv
 import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
 import { AUTHOR, LICENCE, REPO } from './site';
+import { markSvg } from './mark';
 import type { Stage } from './three/stage';
 
 /** Studies for the room a piece is shown in. The original hall, and three colder ones to choose between. */
@@ -132,7 +133,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   const menu = langMenu();
   app.innerHTML = `
 <header class="top">
-  <a class="top__name" href="${link('')}">${tx('site.name')}</a>
+  <a class="top__name" href="${link('')}">${markSvg('top__mark')}<span>${tx('site.name')}</span></a>
   <div class="top__tools">${menu}${switchHtml()}</div>
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="${link('index')}"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="${link('people')}"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="${link('about')}"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>

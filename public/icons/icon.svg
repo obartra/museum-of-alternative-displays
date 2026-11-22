@@ -1,30 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <title>Museum of Alternative Displays</title>
   <!--
-    The icon of the museum as an app. An enamel plate in the museum's black, with the thin line that every plate
-    in the museum carries inside its edge. On it stand the M of the name, in the display face of the plates, and
-    the colours of the seven halls in a column, as the board at the entrance lists them.
-    The letter is Sofia Sans Extra Condensed at weight 800, drawn as an outline, so the file needs no typeface.
-    scripts/icons.mjs makes the PNG files from this drawing. It finds the parts by their ids.
+    The icon of the museum as an app: MU over AD on four enamel plates, in the colours of halls 2, 3, 6 and 4.
+    Written by scripts/icons.ts from src/mark.ts. Change the drawing there and run the script again.
   -->
   <defs>
+    <clipPath id="shape"><rect id="plate" width="512" height="512" rx="104"/></clipPath>
     <!-- the light on the enamel, as the plates have it in the stylesheet: from the top, gone by two fifths of the way down -->
     <linearGradient id="light" gradientUnits="userSpaceOnUse" x1="216" y1="-30" x2="296" y2="542">
       <stop offset="0" stop-color="#fff" stop-opacity=".16"/>
       <stop offset=".38" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect id="plate" width="512" height="512" rx="104" fill="#14171a"/>
-  <rect id="gloss" width="512" height="512" rx="104" fill="url(#light)"/>
-  <rect id="line" x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="#e8e9e3" stroke-opacity=".78" stroke-width="6"/>
-  <g id="mark">
-    <rect x="98" y="92" width="40" height="40" rx="4" fill="#586067"/>
-    <rect x="98" y="140" width="40" height="40" rx="4" fill="#d1481f"/>
-    <rect x="98" y="188" width="40" height="40" rx="4" fill="#1f3fa6"/>
-    <rect x="98" y="236" width="40" height="40" rx="4" fill="#dba51a"/>
-    <rect x="98" y="284" width="40" height="40" rx="4" fill="#efe8d2"/>
-    <rect x="98" y="332" width="40" height="40" rx="4" fill="#14857c"/>
-    <rect x="98" y="380" width="40" height="40" rx="4" fill="#57409a"/>
-    <path fill="#e8e9e3" d="M173 420Q168 420 168 414.3L172.3 98Q172.3 92 177.5 92H240Q245.2 92 246 96.4L290.6 262.3L335.2 96.4Q336.3 92 341.2 92H403.7Q408.7 92 408.7 98L413.2 414.3Q413.2 420 407.9 420H357.1Q351.9 420 351.9 414L350.8 275.3Q350.5 249.8 351.5 228.9Q352.5 208.1 353.9 190.6H353.1Q349.2 206.4 344.5 222.5Q339.8 238.6 334.6 254.2L296.4 375.9Q295.1 380 291.6 380H289.3Q286.1 380 284.8 375.9L246.1 254Q241 238.4 236.5 222.4Q231.9 206.4 228.1 190.6H227.1Q228.6 208.1 229.7 228.8Q230.7 249.6 230.4 275.1L229 414Q229 420 224.1 420Z"/>
+  <g clip-path="url(#shape)">
+    <g id="ground"><rect x="0" y="0" width="256" height="256" fill="#d1481f"/><rect x="256" y="0" width="256" height="256" fill="#1f3fa6"/><rect x="0" y="256" width="256" height="256" fill="#13827a"/><rect x="256" y="256" width="256" height="256" fill="#dba51a"/></g>
+    <path id="matrix" d="M256 0V512M0 256H512" stroke="#14171a" stroke-width="12"/>
+    <g id="letters"><path transform="translate(0 0) scale(2.56)" fill="#ffffff" d="M31.7 77.5Q30.9 77.5 30.9 76.6L31.6 27.3Q31.6 26.4 32.4 26.4H42.1Q42.9 26.4 43.1 27.1L50 52.9L57 27.1Q57.1 26.4 57.9 26.4H67.6Q68.4 26.4 68.4 27.3L69.1 76.6Q69.1 77.5 68.3 77.5H60.4Q59.6 77.5 59.6 76.6L59.4 55Q59.3 51 59.5 47.7Q59.7 44.5 59.9 41.8H59.8Q59.1 44.2 58.4 46.7Q57.7 49.2 56.9 51.7L50.9 70.6Q50.7 71.3 50.2 71.3H49.8Q49.3 71.3 49.1 70.6L43.1 51.6Q42.3 49.2 41.6 46.7Q40.9 44.2 40.3 41.8H40.1Q40.4 44.5 40.5 47.7Q40.7 51 40.6 54.9L40.4 76.6Q40.4 77.5 39.7 77.5Z"/><path transform="translate(256 0) scale(2.56)" fill="#ffffff" d="M50 78Q42.6 78 38.9 73.6Q35.3 69.2 35.3 60.4V27.3Q35.3 26.4 36 26.4H44.2Q44.9 26.4 44.9 27.3V60.1Q44.9 65.1 46.1 67.2Q47.3 69.2 50 69.2Q52.7 69.2 53.9 67.2Q55.1 65.2 55.1 60.1V27.3Q55.1 26.4 55.9 26.4H64Q64.8 26.4 64.8 27.3V60.4Q64.8 69.2 61.1 73.6Q57.4 78 50 78Z"/><path transform="translate(0 256) scale(2.56)" fill="#ffffff" d="M34 77.5Q33.2 77.5 33.4 76.5L43.9 27.1Q44 26.4 44.8 26.4H55.2Q56 26.4 56.2 27.1L66.7 76.4Q66.9 77.5 66 77.5H57.1Q56.4 77.5 56.3 76.8L51.6 46.5Q51.2 43.8 50.8 41.1Q50.4 38.4 50.1 35.8H49.9Q49.6 38.4 49.2 41.1Q48.9 43.8 48.4 46.5L43.6 76.8Q43.5 77.5 42.7 77.5ZM43.7 66.9 45.1 59H54.7L56.2 66.9Z"/><path transform="translate(256 256) scale(2.56)" fill="#14171a" d="M36.5 77.5Q35.6 77.5 35.6 76.6V27.3Q35.6 26.4 36.5 26.4H47.7Q56.5 26.4 60.9 31.8Q65.3 37.1 65.3 48V54.6Q65.3 66.1 61 71.8Q56.6 77.5 48 77.5ZM45.2 68.8H47.8Q52 68.8 53.8 65.4Q55.7 61.9 55.7 54.7V48Q55.7 41.4 53.8 38.3Q51.8 35.1 47.5 35.1H45.2Z"/></g>
+    <rect id="gloss" width="512" height="512" fill="url(#light)"/>
   </g>
 </svg>

@@ -79,7 +79,9 @@ latest missing-portrait list. The repository now connects 128 of 143 people, inc
 | `src/sims/draw.ts` | The shared test signal: the time of day as digits, dots and segments. |
 | `src/main.ts` | Pages and routing. |
 | `src/place.ts` | The addresses of the museum: which place an address stands for, the address of each place, and following a link without loading a page. |
+| `src/mark.ts` | The museum's mark, MU over AD on four plates: the one drawing behind the header, the icons and the share picture. |
 | `scripts/static-pages.ts` | The page the server sends for every place, in every language, with the sitemap and the page for a missing address. |
+| `scripts/icons.ts` | Writes the app icon, the icon for a browser tab and the share picture from `src/mark.ts`. |
 | `scripts/validate.ts` | The collection's rules as code. |
 | `docs/model-review.md` | Every model rated for accuracy and fit, with what was changed. |
 | `docs/design-review.md` | A review of the interface on phone and desktop: what was looked at, what was changed, what was left. |
@@ -364,9 +366,18 @@ nothing keeps its mark.
 The development server has no worker. To try the app, build the site and serve `dist/`: `npm run build`,
 then `npm run preview`.
 
-The icon is one drawing, `public/icons/icon.svg`: an enamel plate with the M of the name and the colours of
-the seven halls. `node scripts/icons.mjs` makes the PNG files from it, and needs Playwright as the posters
-do. A phone cuts an icon to a shape of its own, so two of the files run the plate out to the edges.
+### The mark
+
+The museum's mark is MU over AD on four enamel plates, in red lead, cobalt, turquoise and chrome yellow:
+one pixel of the museum with four sub-pixels. `src/mark.ts` is the one drawing. The header draws the mark
+from it, and `npx tsx scripts/icons.ts` writes every file that carries it: the app icon
+(`public/icons/icon.svg` and the PNG files beside it), the icon for the tab of a browser, and the name
+plate on the picture shared with a link (`public/og.jpg`, made from `docs/brand/og-base.jpg`). The script
+needs Playwright as the posters do. A phone cuts an icon to a shape of its own, so two of the files run
+the enamel out to the edges and keep the letters near the middle.
+
+The mark is never shown without its letters. Where they would be too small to read, as in the tab of a
+browser, it is its first plate alone: the M on red lead. The study behind the mark is in `docs/brand`.
 
 All of this has been run in a test browser on a desk machine. It has not been tried on a phone. On an
 iPhone in particular, how the bar at the top of an installed copy looks by night is not known.

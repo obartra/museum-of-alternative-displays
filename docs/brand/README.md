@@ -4,7 +4,7 @@ Asked on 22 November 2026: a made-up logo in the museum's own style, four letter
 (AD on one row, MU on the next), each letter on a hall colour. One board argues for that idea as
 strongly as it can be argued. A second sets it beside three other marks and gives a verdict.
 
-Nothing here is on the site yet. The app icon is still `public/icons/icon.svg`.
+Mark 2, MU over AD, was chosen the same day and is on the site. What was done is at the end.
 
 ![Four plates: AD over MU](logo-1-four-plates.jpg)
 
@@ -31,10 +31,21 @@ Keep the plates and the colours, and put the rows in the order of the name: **MU
 The seven colours stay with the halls. The seven-segment figure is better kept as something inside
 the museum (a hall indicator, a loading figure) than as the logo.
 
-## To carry it out
+## Carried out
 
-Once a mark is chosen: `public/icons/icon.svg` and the sizes made from it, the favicon, the header
-beside the name, the picture shared with a link, and the web app manifest.
+`src/mark.ts` is the one drawing, with the letters as outlines so that no file needs the typeface.
+
+- The header shows the mark beside the name, at 40 pixels on a desk and 36 or 32 on a phone.
+- The app icon runs the four enamels to the edges, parted by a black line as the sub-pixels of a screen
+  are. A phone cuts the corners itself, so the plates carry no line of their own there.
+- The picture shared with a link carries a white enamel plate with the mark and the name.
+- `npx tsx scripts/icons.ts` writes all of these files from the drawing.
+
+One thing differs from the first board. It said that under 28 pixels the letters go and the four colours
+stay. Four bare squares in red, blue, green and yellow are the mark of Microsoft, and ours without its
+letters sits close to that. So the mark is never shown without its letters. Where they cannot be read, in
+the tab of a browser, the mark is its first plate alone: the M on red lead, which is what the tab showed
+before.
 
 ## Making the boards again
 

@@ -43,26 +43,33 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .top .tabs { grid-column: 1 / -1; }
 .top__tools { display: flex; align-items: center; gap: 10px; position: relative; }
-@media (min-width: 1040px) {
-  .top { grid-template-columns: auto 1fr auto; gap: 12px 28px; padding-block: 12px; }
-  .top .tabs { grid-column: auto; justify-self: end; order: 0; }
+/* On a desk the name, the tools and the doors stand in one row. German keeps two rows at every width: its words are
+   the longest, and one row would break the name over three lines or push the last door out of the frame. */
+@media (min-width: 1100px) {
+  :root:not(:lang(de)) .top { grid-template-columns: auto 1fr auto; gap: 12px 28px; padding-block: 12px; }
+  :root:not(:lang(de)) .top .tabs { grid-column: auto; justify-self: end; order: 0; }
   /* where the one row is at its tightest the doors are a little narrower, so that the longest words (German) still fit */
   .top .tabs a { flex: 0 0 40px; }
   .top .tabs a.tabs__word { flex: 0 0 auto; }
 }
 @media (min-width: 1200px) { .top .tabs a { flex: 0 0 44px; } .top .tabs a.tabs__word { flex: 0 0 auto; } }
 .top__name {
-  display: flex; align-items: center; min-height: 44px; margin-right: auto;
+  display: flex; align-items: center; gap: 10px; min-height: 44px; margin-right: auto;
   font-family: var(--display); font-weight: 800; font-size: 1.25rem; line-height: 1;
   letter-spacing: .01em; text-transform: uppercase; text-decoration: none; text-wrap: balance;
 }
-@media (max-width: 359px) { .top__name { font-size: 1.125rem; } }
+@media (max-width: 389px) { .top__name { font-size: 1.125rem; } }
 @media (min-width: 520px) { .top__name { font-size: 1.5rem; } }
+/* the mark: MU over AD on four plates, one more plate of the family of the hall numbers. src/mark.ts draws it */
+.top__mark { flex: none; width: 36px; height: 36px; }
+@media (max-width: 389px) { .top__name { gap: 8px; } .top__mark { width: 32px; height: 32px; } }
+@media (min-width: 520px) { .top__mark { width: 40px; height: 40px; } }
 
 /* Japanese has no spaces, and a browser will break its lines inside a word. The museum's name breaks only at its
    middle dot unless it has to, and headings break between phrases where the browser knows how. Korean keeps each
    word whole, as its readers expect. */
-:root:lang(ja) .top__name { font-size: 1.05rem; line-height: 1.2; word-break: keep-all; overflow-wrap: anywhere; }
+:root:lang(ja) .top__name { font-size: .95rem; line-height: 1.2; word-break: keep-all; overflow-wrap: anywhere; }
+@media (max-width: 389px) { :root:lang(ja) .top__name { font-size: .9rem; } }
 :root:lang(ja) :is(h1, h2, h3, .lead) { word-break: auto-phrase; }
 :root:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 :root:lang(ko) .top__name { font-size: 1.15rem; line-height: 1.15; }
@@ -111,18 +118,22 @@ h1, h2, h3 { text-wrap: balance; }
 /* language: a key that names the one in use, and under it a directory of all of them, each under its own name. The
    directory hangs from the right-hand end of the header and is as wide as a phone lets it be. */
 /* where the header is one row the key stands in the middle of it, and the list hangs from the key itself */
-@media (min-width: 1040px) { .lang { position: relative; } .lang__list { right: auto; left: 0; } }
+@media (min-width: 1100px) { :root:not(:lang(de)) .lang { position: relative; } :root:not(:lang(de)) .lang__list { right: auto; left: 0; } }
 .lang__now { padding: 0 10px; font-size: var(--t-xs); line-height: 1; }
 .lang__now::after { content: ""; width: 6px; height: 6px; margin: 0 1px 3px 1px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform .15s ease; }
 .lang__now[aria-expanded="true"]::after { transform: translateY(3px) rotate(225deg); }
 .lang__globe { flex: none; width: 15px; height: 15px; }
 .lang__short { display: none; }
-@media (max-width: 359px) { .lang__globe { display: none; } }
+@media (max-width: 389px) { .lang__globe { display: none; } }
 /* the name in full where there is room for it: not on a phone, and not where the one-row header is at its tightest */
-@media (max-width: 719px), (min-width: 1040px) and (max-width: 1199px) {
+@media (max-width: 719px) {
   /* a language whose name is short enough has no short form, and keeps its name */
   .lang__long:not(:last-child) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .lang__short { display: inline; }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  :root:not(:lang(de)) .lang__long:not(:last-child) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  :root:not(:lang(de)) .lang__short { display: inline; }
 }
 .lang__list {
   position: absolute; z-index: 60; top: calc(100% + 9px); right: 0; width: min(440px, 100vw - var(--side-l) - var(--side-r));
