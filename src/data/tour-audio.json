@@ -2,12 +2,12 @@
  "women": {
   "en": {
    "start": {
-    "file": "00-start.d787fc.mp3",
-    "mark": "de26991b",
+    "file": "00-start.80c276.mp3",
+    "mark": "d620eb51",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 27.6
+    "seconds": 28
    },
    "braille-display": {
     "file": "01-braille-display.634385.mp3",
@@ -50,20 +50,20 @@
     "seconds": 55.7
    },
    "projection-mapping": {
-    "file": "06-projection-mapping.52595c.mp3",
-    "mark": "1a78b444",
+    "file": "06-projection-mapping.16ae9b.mp3",
+    "mark": "debb9b07",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 61.4
+    "seconds": 64
    },
    "electrowetting": {
-    "file": "07-electrowetting.47c71e.mp3",
-    "mark": "7357b6ba",
+    "file": "08-electrowetting.968f4c.mp3",
+    "mark": "c2f70a3a",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 57.3
+    "seconds": 58.5
    },
    "illusion-transmitter": {
     "file": "08-illusion-transmitter.d86d71.mp3",
@@ -90,18 +90,34 @@
     "seconds": 49.8
    },
    "end": {
-    "file": "11-end.48427c.mp3",
-    "mark": "8611bd7f",
+    "file": "13-end.285120.mp3",
+    "mark": "822f4402",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 36
+    "seconds": 35.3
+   },
+   "electrophoretic-ink": {
+    "file": "07-electrophoretic-ink.348060.mp3",
+    "mark": "893b302b",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.9
+   },
+   "electrochromic": {
+    "file": "09-electrochromic.6f0c83.mp3",
+    "mark": "07c2aa65",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 70.9
    }
   },
   "ca": {
    "start": {
-    "file": "00-start.1f785c.mp3",
-    "mark": "19fdadb0",
+    "file": "00-start.6d7f0d.mp3",
+    "mark": "2160fbbc",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
@@ -148,20 +164,20 @@
     "seconds": 59.7
    },
    "projection-mapping": {
-    "file": "06-projection-mapping.60fdf0.mp3",
-    "mark": "272ff9ea",
+    "file": "06-projection-mapping.6ec2ee.mp3",
+    "mark": "cbad93c6",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 68.1
+    "seconds": 70.5
    },
    "electrowetting": {
-    "file": "07-electrowetting.a3b9c5.mp3",
-    "mark": "bd1882d4",
+    "file": "08-electrowetting.b50e1f.mp3",
+    "mark": "e9bbf7b0",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 56.4
+    "seconds": 58.2
    },
    "illusion-transmitter": {
     "file": "08-illusion-transmitter.e16b26.mp3",
@@ -188,18 +204,34 @@
     "seconds": 53.8
    },
    "end": {
-    "file": "11-end.166ee5.mp3",
-    "mark": "e07ea44c",
+    "file": "13-end.23db5f.mp3",
+    "mark": "55700c8a",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 40.5
+    "seconds": 42.4
+   },
+   "electrophoretic-ink": {
+    "file": "07-electrophoretic-ink.0f4554.mp3",
+    "mark": "4146de12",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 74.1
+   },
+   "electrochromic": {
+    "file": "09-electrochromic.99f910.mp3",
+    "mark": "723713f1",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 72.4
    }
   },
   "es": {
    "start": {
-    "file": "00-start.9011f3.mp3",
-    "mark": "78a170ba",
+    "file": "00-start.622cd5.mp3",
+    "mark": "663b3be9",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
@@ -246,20 +278,20 @@
     "seconds": 61.3
    },
    "projection-mapping": {
-    "file": "06-projection-mapping.b8b718.mp3",
-    "mark": "06913778",
+    "file": "06-projection-mapping.dd4c45.mp3",
+    "mark": "28d6bbad",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 67.5
+    "seconds": 71.5
    },
    "electrowetting": {
-    "file": "07-electrowetting.caf657.mp3",
-    "mark": "180114ef",
+    "file": "08-electrowetting.5f3558.mp3",
+    "mark": "861a051c",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 60.9
+    "seconds": 60.6
    },
    "illusion-transmitter": {
     "file": "08-illusion-transmitter.b60350.mp3",
@@ -286,12 +318,28 @@
     "seconds": 52.2
    },
    "end": {
-    "file": "11-end.0b09fc.mp3",
-    "mark": "b346e570",
+    "file": "13-end.398811.mp3",
+    "mark": "2d2d2ffd",
     "voice": "jVMsZEw3hfmEAe9OUUtS",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 41
+    "seconds": 41.1
+   },
+   "electrophoretic-ink": {
+    "file": "07-electrophoretic-ink.8705fb.mp3",
+    "mark": "1e424666",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 74.5
+   },
+   "electrochromic": {
+    "file": "09-electrochromic.005629.mp3",
+    "mark": "c27210b6",
+    "voice": "jVMsZEw3hfmEAe9OUUtS",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 76.5
    }
   }
  }
