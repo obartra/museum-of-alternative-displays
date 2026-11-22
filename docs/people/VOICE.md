@@ -29,6 +29,10 @@ what became of them or of the work. Years of birth and death go in the `born` an
 
 `npm run check` enforces 1 to 5 mechanically (`scripts/validate.ts`). Rules 6 to 8 are for the curator's reading.
 
+Two allowances, both for want of a better way to say a true thing. The post a living person holds today may stand
+in the present tense. And where the year of a person's death is known but the year of birth is not, the death is
+given in the prose, since the plate shows the two years only as a pair.
+
 ## The curator's reading
 
 After a batch of accounts is written, all of them are read together, old and new, against this page, and

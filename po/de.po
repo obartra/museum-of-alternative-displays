@@ -9621,3 +9621,2181 @@ msgstr ""
 msgctxt "person.gabriel-lippmann.about.2"
 msgid "In the same year he published his idea of integral photography in the Journal de Physique."
 msgstr ""
+
+#: people
+#. About Gino Valle, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gino-valle.about.1"
+msgid "An architect and industrial designer from Udine, he graduated from the University Institute of Architecture in Venice in 1948 and held a Fulbright scholarship at the Harvard Graduate School of Design in 1951. He taught architecture in Venice from 1954 to 2001."
+msgstr ""
+
+#: people
+#. About Gino Valle, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gino-valle.about.2"
+msgid "For Solari he designed the Cifra 5 clock of 1954 and 1955, which won the Compasso d'Oro in 1956. His alphanumeric boards for airports and stations brought the firm a second Compasso d'Oro in 1962."
+msgstr ""
+
+#: people
+#. About Gino Valle, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gino-valle.about.3"
+msgid "His Cifra 3 clock of 1966, with lettering by Massimo Vignelli, entered the permanent collection of the Museum of Modern Art in New York in 1968."
+msgstr ""
+
+#: people
+#. About John Myer, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-myer.about.1"
+msgid "He worked with Gino Valle on the Cifra 5 clock, which Solari made in the mid 1950s. The ADI Design Museum lists him among its four designers, with Valle, Nani Valle and Michele Provinciali."
+msgstr ""
+
+#: people
+#. About John Myer, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-myer.about.2"
+msgid "According to Finestre sull'Arte, the case could not hold the fifty or so flaps the minutes would need. Myer proposed two numbered rollers whose combinations would show them."
+msgstr ""
+
+#: people
+#. About Paul Nipkow, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-nipkow.about.1"
+msgid "Born in Lauenburg in Pomerania, he began studying natural sciences in Berlin in 1882, where Adolf Slaby and Hermann Helmholtz were among his teachers. Lack of money ended his studies."
+msgstr ""
+
+#: people
+#. About Paul Nipkow, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-nipkow.about.2"
+msgid "His patent for an electric telescope took effect from 6 January 1884. The German Patent and Trade Mark Office says he probably never tried to build it, and that it could hardly have worked at the time."
+msgstr ""
+
+#: people
+#. About Paul Nipkow, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-nipkow.about.3"
+msgid "He worked as an engineer of railway signals for Zimmermann & Buchloh near Berlin. After 1933 the Nazi government made propaganda of him, and the patent office records that the world's first regular television station was named after him."
+msgstr ""
+
+#: people
+#. About John Logie Baird, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-logie-baird.about.1"
+msgid "Born in Helensburgh, he studied at the Glasgow and West of Scotland Technical College, but the war interrupted his course and he did not graduate. In 1915 he joined the Clyde Valley Electrical Power Company."
+msgstr ""
+
+#: people
+#. About John Logie Baird, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-logie-baird.about.2"
+msgid "Working in Hastings, he transmitted the silhouette of a Maltese cross in 1924. In 1927 he sent a picture 438 miles from London to Glasgow by telephone line, and in 1928 to New York by short-wave radio."
+msgstr ""
+
+#: people
+#. About John Logie Baird, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-logie-baird.about.3"
+msgid "The BBC tried his mechanical system against the electronic one of Marconi-EMI and had dropped his by 1937. In the 1940s he worked on colour and stereoscopic television."
+msgstr ""
+
+#: people
+#. About Daniel Rozin, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-rozin.about.1"
+msgid "He took a degree at the Bezalel Academy of Art and Design in Jerusalem and then spent about ten years as an industrial designer for a large company in Israel."
+msgstr ""
+
+#: people
+#. About Daniel Rozin, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-rozin.about.2"
+msgid "He came to the Interactive Telecommunications Program at New York University for a master's degree, stayed on after graduating, and teaches there as an arts professor in the Tisch School of the Arts."
+msgstr ""
+
+#: people
+#. About Daniel Rozin, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-rozin.about.3"
+msgid "His work has been shown at the Victoria and Albert Museum in London and the Israel Museum in Jerusalem. His awards include the Prix Ars Electronica and the Rothschild Prize."
+msgstr ""
+
+#: people
+#. About Daniel Leithinger, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-leithinger.about.1"
+msgid "He took his bachelor's and master's degrees at the Upper Austria University of Applied Sciences in Hagenberg in 2005 and 2007, and his doctorate at the MIT Media Lab in 2015. The inFORM paper of 2013 was written with Follmer, Ishii and two others."
+msgstr ""
+
+#: people
+#. About Daniel Leithinger, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-leithinger.about.2"
+msgid "From 2018 to 2023 he was an assistant professor of computer science at the University of Colorado Boulder, where he led the THING Lab at the ATLAS Institute. He then became a Design Tech Innovation Fellow at Cornell University."
+msgstr ""
+
+#: people
+#. About Daniel Leithinger, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-leithinger.about.3"
+msgid "In 2015 he cofounded Lumii, now Fathom Optics, to develop 3D displays that need no glasses."
+msgstr ""
+
+#: people
+#. About Sean Follmer, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sean-follmer.about.1"
+msgid "He took a degree in engineering at Stanford University in 2009, then a master's in 2011 and a doctorate in 2015 at the MIT Media Lab."
+msgstr ""
+
+#: people
+#. About Sean Follmer, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sean-follmer.about.2"
+msgid "He returned to Stanford, where he is an associate professor of mechanical engineering and directs the Shape Lab. His research includes haptics, shape-changing interfaces and interfaces for people who are blind or visually impaired."
+msgstr ""
+
+#: people
+#. About Sean Follmer, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sean-follmer.about.3"
+msgid "He received a Sloan Research Fellowship in 2021 and an NSF CAREER Award in 2022."
+msgstr ""
+
+#: people
+#. About Hiroshi Ishii, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-ishii.about.1"
+msgid "He took degrees in electronic and computer engineering at Hokkaido University, ending with a doctorate in 1992. From 1988 to 1994 he led a research group at NTT Human Interface Laboratories, whose team built TeamWorkStation and ClearBoard."
+msgstr ""
+
+#: people
+#. About Hiroshi Ishii, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-ishii.about.2"
+msgid "He joined the MIT Media Lab in October 1995 and set up the Tangible Media Group to pursue an idea he called Tangible Bits, in which people handle digital information through physical objects."
+msgstr ""
+
+#: people
+#. About Hiroshi Ishii, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-ishii.about.3"
+msgid "ACM SIGCHI elected him to its CHI Academy in 2006 for creating tangible user interfaces as a field. He became an associate director of the Media Lab in May 2008."
+msgstr ""
+
+#: people
+#. About Oleg Tretiakoff, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.oleg-tretiakoff.about.1"
+msgid "With Andrée Tretiakoff, both of Sceaux in France, he filed a United States patent in 1975, granted in 1977, for a braille panel. Each dot was a rod that a thin piezoelectric strip pushed up or drew down as it bent."
+msgstr ""
+
+#: people
+#. About Oleg Tretiakoff, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.oleg-tretiakoff.about.2"
+msgid "The American Printing House for the Blind credits the pair with the first commercially available paperless braille machine, the Digicassette, introduced in Paris in 1976. It kept text on cassette tape and raised one line of braille at a time."
+msgstr ""
+
+#: people
+#. About Oleg Tretiakoff, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.oleg-tretiakoff.about.3"
+msgid "A later patent of theirs, granted in 1981, was assigned to Triformation Systems. The American Printing House says braille displays of the following decades largely refined the Tretiakoff design."
+msgstr ""
+
+#: people
+#. About Andrée Tretiakoff, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andree-tretiakoff.about.1"
+msgid "She and Oleg Tretiakoff, both of Sceaux in France, are the named inventors on a United States patent filed in 1975 and granted in 1977. In it, six rods per braille cell were raised and lowered by bending piezoelectric strips."
+msgstr ""
+
+#: people
+#. About Andrée Tretiakoff, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andree-tretiakoff.about.2"
+msgid "The American Printing House for the Blind credits the couple with the first commercially available paperless braille machine, the Digicassette, introduced in Paris in 1976. It stored text on cassette tape."
+msgstr ""
+
+#: people
+#. About Andrée Tretiakoff, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andree-tretiakoff.about.3"
+msgid "Their second United States patent, granted in 1981, was assigned to Triformation Systems and also covered reading and recording braille data on magnetic tape."
+msgstr ""
+
+#: people
+#. About Klaus Peter Schönherr, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.klaus-peter-schonherr.about.1"
+msgid "He founded Schoenherr GmbH in 1974, according to a history of the Braillotron calculator published on facele.eu, which also says he patented in 1975 a braille element able to show and erase characters."
+msgstr ""
+
+#: people
+#. About Klaus Peter Schönherr, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.klaus-peter-schonherr.about.2"
+msgid "In 1977 Computerwoche reported a braille terminal from the firm, in use at the University of Tübingen computing centre since December 1976. It widened the braille cell to eight dots to cover a set of 96 characters."
+msgstr ""
+
+#: people
+#. About Klaus Peter Schönherr, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.klaus-peter-schonherr.about.3"
+msgid "He received the Louis Braille Prize in 1980. The American Printing House for the Blind says his company later became Handy Tech."
+msgstr ""
+
+#: people
+#. About James Bryce, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-bryce.about.1"
+msgid "He joined the Computing-Tabulating-Recording Company in 1917, became its chief engineer in 1923, and in 1926 organised the IBM Patent Department. He held more than 500 patents in the United States and abroad."
+msgstr ""
+
+#: people
+#. About James Bryce, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-bryce.about.2"
+msgid "His work included an automatic multiplying punch and the use of electron tubes for arithmetic. In 1936 the US Patent Office named him among ten living inventors at its centenary."
+msgstr ""
+
+#: people
+#. About James Bryce, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-bryce.about.3"
+msgid "The American Printing House for the Blind records a braille display begun by Bryce at IBM. It read text from perforated paper tape and raised the characters on a moving plastic belt. Arnold Grunwald later took it up at Argonne National Laboratory."
+msgstr ""
+
+#: people
+#. About Horst Hörtner, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.horst-hortner.about.1"
+msgid "In 1990 he co-founded the media art group x-space in Graz. He joined Ars Electronica in 1995 as technical director to help set up the Ars Electronica Center, which opened in 1996."
+msgstr ""
+
+#: people
+#. About Horst Hörtner, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.horst-hortner.about.2"
+msgid "With Gerfried Stocker he founded the Futurelab, which he ran as managing director from 1996 to 2024 and has since served as senior director. He has also been chief technology officer of Ars Electronica since 2020."
+msgstr ""
+
+#: people
+#. About Horst Hörtner, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.horst-hortner.about.3"
+msgid "He holds patents on drone swarm flight. Ars Electronica names him as the inventor of the spaxel, the lit drone of its swarm, which flew at the voestalpine Klangwolke in Linz in 2012."
+msgstr ""
+
+#: people
+#. About Kenjiro Takayanagi, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenjiro-takayanagi.about.1"
+msgid "Born in what is now Hamamatsu, he trained at the teacher training school of the Tokyo Higher Technical School. In 1924 he became an assistant professor at the new Hamamatsu Higher Technical College and began his television research there."
+msgstr ""
+
+#: people
+#. About Kenjiro Takayanagi, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenjiro-takayanagi.about.2"
+msgid "The picture he sent on 25 December 1926 was the Japanese character イ. The IEEE records that in 1935 he made an Iconoscope and showed a television system that was electronic at both ends."
+msgstr ""
+
+#: people
+#. About Kenjiro Takayanagi, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenjiro-takayanagi.about.3"
+msgid "At NHK his group set up a television station in 1939. During the war he worked on radar and night vision equipment. Afterwards he joined the Victor Company of Japan, and his team's television set was put on sale by Sharp in 1953."
+msgstr ""
+
+#: people
+#. About Kenjiro Takayanagi, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenjiro-takayanagi.about.4"
+msgid "The IEEE dedicated a Milestone to his work at Hamamatsu in 2009. He received the Order of Culture in 1981."
+msgstr ""
+
+#: people
+#. About Philo Farnsworth, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.philo-farnsworth.about.1"
+msgid "Born in Beaver City, Utah, he sketched an electronic camera tube for his school science teacher, Justin Tolman, in 1922. He enrolled briefly at Brigham Young University and left for lack of money."
+msgstr ""
+
+#: people
+#. About Philo Farnsworth, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.philo-farnsworth.about.2"
+msgid "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory on the second floor of 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide."
+msgstr ""
+
+#: people
+#. About Philo Farnsworth, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.philo-farnsworth.about.3"
+msgid "RCA challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court found for him in 1935, and in 1939 RCA agreed to pay him royalties."
+msgstr ""
+
+#: people
+#. About Philo Farnsworth, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.philo-farnsworth.about.4"
+msgid "His company built receivers at Fort Wayne, Indiana, until ITT bought the plant in 1949. He stayed with ITT as a consultant until 1967 and later worked on nuclear fusion as a source of power."
+msgstr ""
+
+#: people
+#. About Elma Farnsworth, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elma-farnsworth.about.1"
+msgid "In the San Francisco laboratory she kept the logbooks and spot welded the elements of the tubes."
+msgstr ""
+
+#: people
+#. About Elma Farnsworth, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elma-farnsworth.about.2"
+msgid "After Philo Farnsworth died in 1971 she spent decades pressing for his place in the history of television. The Television Academy credits her efforts in part for his entry to the National Inventors Hall of Fame and for a postage stamp in his honour."
+msgstr ""
+
+#: people
+#. About Elma Farnsworth, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elma-farnsworth.about.3"
+msgid "In 1990 she published Distant Vision, a book about her husband and his work. The Television Academy's Archive of American Television recorded a seven hour interview with her in 1996. She died in Bountiful, Utah, in 2006."
+msgstr ""
+
+#: people
+#. About Marie Van Brittan Brown, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.marie-van-brittan-brown.about.1"
+msgid "Born in Jamaica, Queens, she worked long hours as a nurse and often came home late at night. The Lemelson MIT Program says she wanted a way to see who was knocking at her door."
+msgstr ""
+
+#: people
+#. About Marie Van Brittan Brown, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.marie-van-brittan-brown.about.2"
+msgid "Besides the camera and monitors, the system had two way microphones for speaking to the caller, a remote control to unlock the door from a distance, and an emergency button that raised an alarm with police or security."
+msgstr ""
+
+#: people
+#. About Marie Van Brittan Brown, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.marie-van-brittan-brown.about.3"
+msgid "The New York Times reported on it, and she received an award from the National Scientists Committee. The Lemelson MIT Program counts 32 later patent applications that cite the patent."
+msgstr ""
+
+#: people
+#. About Albert Brown, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.albert-brown.about.1"
+msgid "He is named with Marie Van Brittan Brown as joint inventor on United States patent 3,482,037, filed on 1 August 1966 and granted on 2 December 1969. Both are listed as living in Jamaica, New York."
+msgstr ""
+
+#: people
+#. About Albert Brown, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.albert-brown.about.2"
+msgid "The patent describes a control unit with a microphone and loudspeaker, and a door fitted with a radio controlled lock. The Lemelson MIT Program says he helped his wife build the system."
+msgstr ""
+
+#: people
+#. About Mark Dean, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-dean.about.1"
+msgid "He graduated summa cum laude from the University of Tennessee in 1979, then took a master's degree at Florida Atlantic University and a doctorate in electrical engineering at Stanford. He joined IBM at Boca Raton, Florida, in 1979."
+msgstr ""
+
+#: people
+#. About Mark Dean, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-dean.about.2"
+msgid "He worked on the IBM PC AT, and the National Inventors Hall of Fame elected him in 1997 with Dennis Moeller for the ISA bus. IBM named him a Fellow in 1995. Later his team built an experimental processor that ran at one gigahertz."
+msgstr ""
+
+#: people
+#. About Mark Dean, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-dean.about.3"
+msgid "He became director of IBM's Almaden Research Center and then IBM's chief technology officer for the Middle East and Africa. He left IBM in 2013 to join the University of Tennessee College of Engineering as John Fisher Distinguished Professor."
+msgstr ""
+
+#: people
+#. About Guillermo González Camarena, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.guillermo-gonzalez-camarena.about.1"
+msgid "Born in Guadalajara, he built a radio transmitter at the age of eight. He graduated in 1939 from the Escuela Superior de Ingeniería Mecánica y Eléctrica of the Instituto Politécnico Nacional in Mexico City."
+msgstr ""
+
+#: people
+#. About Guillermo González Camarena, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.guillermo-gonzalez-camarena.about.2"
+msgid "He called his colour method the Sistema Tricromático Secuencial de Campos. The NTSC system used in the United States became the standard instead, and in the 1960s he devised a simpler two colour system."
+msgstr ""
+
+#: people
+#. About Guillermo González Camarena, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.guillermo-gonzalez-camarena.about.3"
+msgid "The Mexico City station XHGC, Channel 5, carries his initials."
+msgstr ""
+
+#: people
+#. About A. Frankenstein, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.a-frankenstein.about.1"
+msgid "Histoire de la télévision lists the application as German patent 172 376 of 20 August 1904, under the names W. von Jaworski and A. Frankenstein. It describes selenium cells, three colour filters and mirrors that split the picture into groups of points."
+msgstr ""
+
+#: people
+#. About A. Frankenstein, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.a-frankenstein.about.2"
+msgid "The VDE, the German association of electrical engineers, places television proposals by Ré, Jaworsky and Frankenstein in 1903."
+msgstr ""
+
+#: people
+#. About Werner von Jaworski, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.werner-von-jaworski.about.1"
+msgid "Histoire de la télévision lists the application as German patent 172 376 of 20 August 1904, under the names W. von Jaworski and A. Frankenstein. It describes selenium cells, three colour filters and mirrors that split the picture into groups of points."
+msgstr ""
+
+#: people
+#. About Werner von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.werner-von-jaworski.about.2"
+msgid "The VDE, the German association of electrical engineers, places television proposals by Ré, Jaworsky and Frankenstein in 1903, spelling his name with a final y."
+msgstr ""
+
+#: people
+#. About Peter Goldmark, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.peter-goldmark.about.1"
+msgid "Born in Budapest, he studied at the universities of Berlin and Vienna and moved to the United States in 1933. In 1936 he joined CBS as chief engineer of its television department."
+msgstr ""
+
+#: people
+#. About Peter Goldmark, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.peter-goldmark.about.2"
+msgid "In 1940 he tested his colour system from the top of the Chrysler Building. The Federal Communications Commission approved it, but it never went into commercial use. It served in closed circuit work such as surgery, and sent pictures back from Apollo 15."
+msgstr ""
+
+#: people
+#. About Peter Goldmark, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.peter-goldmark.about.3"
+msgid "The National Inventors Hall of Fame credits him with the long playing record of 1948 and records 77 patents. He received the National Medal of Science in 1977 and entered the Hall of Fame in 2007."
+msgstr ""
+
+#: people
+#. About Andrew Haeff, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andrew-haeff.about.1"
+msgid "Born in Moscow, he qualified as an engineer at the Russian Polytechnic Institute in Harbin in 1928 and took his master's and doctoral degrees at Caltech in 1929 and 1932. He worked at the RCA research laboratories from 1934 to 1941."
+msgstr ""
+
+#: people
+#. About Andrew Haeff, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andrew-haeff.about.2"
+msgid "He then joined the Naval Research Laboratory as a consultant in electronics. He was granted a patent for the Memory Tube in August 1947, and a tube of his type was used in MIT's Whirlwind computer."
+msgstr ""
+
+#: people
+#. About Andrew Haeff, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.andrew-haeff.about.3"
+msgid "In 1950 he moved to Hughes Aircraft, where he set up its Electron Tube Laboratory, developed the Typotron for computer output, and became vice president and director of research. The IEEE History Center records him as the first recipient of the Harry Diamond Memorial Award."
+msgstr ""
+
+#: people
+#. About David Hagelbarger, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.david-hagelbarger.about.1"
+msgid "He was a researcher at Bell Telephone Laboratories. A. Michael Noll's history of the laboratories prints a photograph of him with Claude Shannon taken in 1955."
+msgstr ""
+
+#: people
+#. About David Hagelbarger, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.david-hagelbarger.about.2"
+msgid "A 1987 profile of Shannon in Omni says Hagelbarger invented a machine that tried to guess whether a player would choose heads or tails. Shannon built a simpler version that beat it."
+msgstr ""
+
+#: people
+#. About Tadashi Nakamura, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tadashi-nakamura.about.1"
+msgid "Born in Ise City, he set up Ise Electronics Corporation there in September 1966, to make and sell display devices. The company dates the basic structure of the display to 1966 and a single digit tube to 1967."
+msgstr ""
+
+#: people
+#. About Tadashi Nakamura, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tadashi-nakamura.about.2"
+msgid "The IEEE dedicated a Milestone to the vacuum fluorescent display on 4 November 2025, with a plaque at the company's main building in Taiki, Mie Prefecture. The company took the name Noritake Itron Corporation in 2002."
+msgstr ""
+
+#: people
+#. About Tadashi Sasaki, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tadashi-sasaki.about.1"
+msgid "Born in Shimane Prefecture, he graduated in electrical engineering from Kyoto Imperial University in 1938. At Kawanishi Machine Works he researched and produced vacuum tubes, and he worked on radar during the Second World War."
+msgstr ""
+
+#: people
+#. About Tadashi Sasaki, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tadashi-sasaki.about.2"
+msgid "He moved to Hayakawa Electric Industry in 1964, at the request of its management. The QT-8D microCompet of 1969, made with North American Rockwell, was built on large-scale integrated circuits. Calculators combining CMOS logic with liquid crystal displays reached mass production in 1973."
+msgstr ""
+
+#: people
+#. About Tadashi Sasaki, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tadashi-sasaki.about.3"
+msgid "He rose to senior managing director and executive vice president of the company, and later served it as an adviser. In 1994 he founded the International Center for Materials Research. The IEEE made him an honorary member in 2003."
+msgstr ""
+
+#: people
+#. About Lewis Latimer, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lewis-latimer.about.1"
+msgid "After service in the Navy during the Civil War, he worked at a Boston patent law firm and taught himself mechanical drawing until the partners made him their draftsman. In 1876 he drew the plans for Alexander Graham Bell's telephone."
+msgstr ""
+
+#: people
+#. About Lewis Latimer, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lewis-latimer.about.2"
+msgid "In 1880 Hiram Maxim hired him as assistant manager and mechanical draftsman. The National Inventors Hall of Fame says that at the United States Electric Lighting Company he oversaw the setting up of lighting plants in the United States, Canada and England."
+msgstr ""
+
+#: people
+#. About Lewis Latimer, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lewis-latimer.about.3"
+msgid "Thomas Edison then took him on as a patent investigator and expert witness. In 1890 he published a book describing the Edison system of incandescent lighting. He retired in 1922. The National Inventors Hall of Fame inducted him in 2006."
+msgstr ""
+
+#: people
+#. About Tsutae Shinoda, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tsutae-shinoda.about.1"
+msgid "He entered the engineering faculty of Hiroshima University in 1968, where his graduation research on protective layers for plasma panels was supervised by Heiju Uchiike. He joined Fujitsu Laboratories in 1973 and worked on AC plasma panels."
+msgstr ""
+
+#: people
+#. About Tsutae Shinoda, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tsutae-shinoda.about.2"
+msgid "After colour trials begun in 1979, he separated the electrodes that selected a cell from those that lit it, in a reflective surface discharge structure with three electrodes. A later stripe rib structure, with ribs on one substrate only, made 21-inch panels feasible."
+msgstr ""
+
+#: people
+#. About Tsutae Shinoda, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tsutae-shinoda.about.3"
+msgid "His awards included the Karl Ferdinand Braun Award of the Society for Information Display in 2003 and honorary membership of the IEEE in 2007. The IEEE recognised the colour plasma display as a Milestone in May 2025."
+msgstr ""
+
+#: people
+#. About Charles Spindt, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-spindt.about.1"
+msgid "Born in San Jose, California, he left architecture studies at Berkeley for the Air Force and flew as an all-weather fighter interceptor pilot. He then took a degree in electrical engineering at San Jose State."
+msgstr ""
+
+#: people
+#. About Charles Spindt, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-spindt.about.2"
+msgid "He joined the Applied Physics Lab of Stanford Research Institute in 1959, hired by Kenneth Shoulders. In 1966 he worked out processes for making the gated field emitter array cathode, and published the work in the Journal of Applied Physics in 1968."
+msgstr ""
+
+#: people
+#. About Charles Spindt, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-spindt.about.3"
+msgid "He co-founded the IEEE vacuum microelectronics conference in 1988. The Society for Information Display gave him its Jan Rajchman Prize in 1996. SRI named him a Fellow in 1992, and he retired in 2002 as director emeritus of its vacuum microelectronics program."
+msgstr ""
+
+#: people
+#. About Kenneth Shoulders, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenneth-shoulders.about.1"
+msgid "Born in Texas, he was on the research staff of the Massachusetts Institute of Technology from 1955 to 1958. There he studied microfabrication for field emission amplifiers and magnetic film memories, often working with Dudley A. Buck."
+msgstr ""
+
+#: people
+#. About Kenneth Shoulders, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenneth-shoulders.about.2"
+msgid "Stanford Research Institute hired him in 1958 as a senior research engineer. He worked on very small devices, field emission elements among them, and built the vacuum systems for evaporation and multi beam exposure used to develop the Spindt cathode array."
+msgstr ""
+
+#: people
+#. About Kenneth Shoulders, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenneth-shoulders.about.3"
+msgid "He hired Charles Spindt at the institute in 1959. After leaving it he studied charge clusters at a private laboratory in Bodega, California. His papers are held by the Science History Institute in Philadelphia."
+msgstr ""
+
+#: people
+#. About Louis Heynick, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.louis-heynick.about.1"
+msgid "Louis N. Heynick was named with Charles Spindt and Kenneth Shoulders on the United States patent for field emission cathode structures with a cellular array of emission sites. It was filed in February 1970 and issued in August 1973, assigned to Stanford Research Institute."
+msgstr ""
+
+#: people
+#. About Louis Heynick, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.louis-heynick.about.2"
+msgid "He held a master's degree. In March 1983, with Peter Polson, he wrote a review of the biological effects of radiofrequency radiation for the Air Force School of Aerospace Medicine, as an SRI International project."
+msgstr ""
+
+#: people
+#. About Akintunde Akinwande, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.akintunde-akinwande.about.1"
+msgid "He moved to the Microsystems Technology Laboratories at the Massachusetts Institute of Technology in January 1995. His research there covered smart sensors and actuators, intelligent displays, large area electronics, field ionization devices, mass spectrometry and electric propulsion."
+msgstr ""
+
+#: people
+#. About Akintunde Akinwande, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.akintunde-akinwande.about.2"
+msgid "He received a National Science Foundation CAREER award in 1996 and was a visiting professor in the Cambridge University Engineering Department in 2002 and 2003. At MIT he held the Thomas and Gerd Perkins professorship of electrical engineering and computer science."
+msgstr ""
+
+#: people
+#. About Howard Borden, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.howard-borden.about.1"
+msgid "Howard C. Borden began work as a mechanical engineer in 1939. He studied mechanical engineering at the Massachusetts Institute of Technology and electronics at the U.S. Navy Radio Materiel School, and took a BA in economics at Stanford University in 1961."
+msgstr ""
+
+#: people
+#. About Howard Borden, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.howard-borden.about.2"
+msgid "After Navy service and more engineering work he bought an appliance store, where he introduced television. He then spent 11 years in electro optical and mechanical research and development before joining Hewlett-Packard in 1966."
+msgstr ""
+
+#: people
+#. About Howard Borden, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.howard-borden.about.3"
+msgid "In February 1969 the Hewlett-Packard Journal gave him as manager of solid-state displays at HP Associates, and as a member of the Society for Information Display."
+msgstr ""
+
+#: people
+#. About Gerald Pighini, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gerald-pighini.about.1"
+msgid "Gerald P. Pighini took a BS in metallurgical engineering at Brooklyn Polytechnic in 1955 and worked in solid-state electronics from then on. Before Hewlett-Packard he was chief manufacturing engineer for a maker of semiconductor devices."
+msgstr ""
+
+#: people
+#. About Gerald Pighini, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gerald-pighini.about.2"
+msgid "He joined Hewlett-Packard in 1965 as chief engineer of HP Associates and then became its production manager for semiconductors, before moving to solid-state displays. He co-wrote a paper on growing large gallium arsenide phosphide wafers for making LEDs."
+msgstr ""
+
+#: people
+#. About Isamu Akasaki, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.isamu-akasaki.about.1"
+msgid "He graduated from Kyoto University in 1952 and joined the research staff of Kobe Kogyo Corporation. From 1959 he taught in the electronics department of Nagoya University, which awarded him a doctorate in engineering in 1964."
+msgstr ""
+
+#: people
+#. About Isamu Akasaki, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.isamu-akasaki.about.2"
+msgid "From 1964 he headed a fundamental research laboratory at Matsushita Research Institute Tokyo, and later its semiconductor department. He returned to Nagoya University as professor of electronics in 1981, and moved to Meijo University in 1992."
+msgstr ""
+
+#: people
+#. About Isamu Akasaki, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.isamu-akasaki.about.3"
+msgid "At Nagoya in the 1980s he and Hiroshi Amano grew thin films of gallium nitride crystal of high quality by metal organic vapour phase epitaxy. From 1987 to 1990 he led a JST project to develop gallium nitride blue LEDs."
+msgstr ""
+
+#: people
+#. About Hiroshi Amano, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-amano.about.1"
+msgid "Born in Hamamatsu, he studied electrical engineering at Nagoya University and joined the nitride semiconductor group of Isamu Akasaki as an undergraduate in 1982. He took his degrees there in 1983, 1985 and 1989."
+msgstr ""
+
+#: people
+#. About Hiroshi Amano, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-amano.about.2"
+msgid "In 1985, under Akasaki, he grew smooth gallium nitride crystal on sapphire over a buffer layer laid down at low temperature. In 1989 he made a gallium nitride LED with a p-n junction, which the Lindau Nobel Laureate Meetings records as the first."
+msgstr ""
+
+#: people
+#. About Hiroshi Amano, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hiroshi-amano.about.3"
+msgid "He was a research associate at Nagoya University from 1988 and became a professor at Meijo University in 2002. He returned to Nagoya University in 2010, and in 2015 became director of its Center for Integrated Research of Future Electronics."
+msgstr ""
+
+#: people
+#. About Shuji Nakamura, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.shuji-nakamura.about.1"
+msgid "Born in Ehime, he studied electrical engineering at the University of Tokushima, taking degrees in 1977 and 1979 and a doctorate in 1994. He joined Nichia Chemical Industries in 1979 and spent 1988 at the University of Florida as a visiting research associate."
+msgstr ""
+
+#: people
+#. About Shuji Nakamura, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.shuji-nakamura.about.2"
+msgid "He began work on blue LEDs of group III nitrides in 1989. In 1990 he built a growth system for gallium nitride that he named Two-Flow MOCVD, and in 1991 he made p-type gallium nitride films by thermal annealing."
+msgstr ""
+
+#: people
+#. About Shuji Nakamura, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.shuji-nakamura.about.3"
+msgid "Nichia began selling white LEDs based on his blue LEDs in 1996, and violet laser diodes for Blu-ray discs in 1999. From 2000 he was a professor of materials and of electrical and computer engineering at the University of California, Santa Barbara."
+msgstr ""
+
+#: people
+#. About Ching Wan Tang, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ching-wan-tang.about.1"
+msgid "He took a science degree at the University of British Columbia in 1970 and a doctorate in chemistry at Cornell University in 1975."
+msgstr ""
+
+#: people
+#. About Ching Wan Tang, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ching-wan-tang.about.2"
+msgid "He joined Eastman Kodak as a research scientist in 1975. With Steven Van Slyke he found a metal chelate that gave a lasting glow. The National Inventors Hall of Fame lists US patent 4,356,429 for the OLED and inducted him in 2018."
+msgstr ""
+
+#: people
+#. About Ching Wan Tang, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ching-wan-tang.about.3"
+msgid "He retired from Kodak in 2006 as a Distinguished Fellow of the Kodak Research Laboratories and joined the chemical engineering department of the University of Rochester. He received the Wolf Prize in Chemistry in 2011 and the Kyoto Prize in 2019."
+msgstr ""
+
+#: people
+#. About Steven Van Slyke, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.steven-van-slyke.about.1"
+msgid "He studied chemistry at Ithaca College, graduating in 1978, and later took a master's degree in materials science at the Rochester Institute of Technology. He joined Eastman Kodak straight from college, in 1979."
+msgstr ""
+
+#: people
+#. About Steven Van Slyke, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.steven-van-slyke.about.2"
+msgid "For about fifteen years he worked on the basic science of electroluminescence. In the mid 1990s he moved to process engineering and helped license the technology for a car audio display that came out in 1996."
+msgstr ""
+
+#: people
+#. About Steven Van Slyke, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.steven-van-slyke.about.3"
+msgid "The National Inventors Hall of Fame records 40 patents of his on OLED materials and device design. It inducted him, with Tang, in 2018."
+msgstr ""
+
+#: people
+#. About Steven Van Slyke, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.steven-van-slyke.about.4"
+msgid "Kodak sold its OLED intellectual property in 2009. He then joined Kateeva, a start-up in Silicon Valley that worked on inkjet printing of OLED panels, as chief technology officer."
+msgstr ""
+
+#: people
+#. About Hongxing Jiang, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hongxing-jiang.about.1"
+msgid "He took a degree at Fudan University in Shanghai and a doctorate in physics at Syracuse University in 1986. After two years as a research associate at Michigan State University he joined the physics faculty of Kansas State University in 1988."
+msgstr ""
+
+#: people
+#. About Hongxing Jiang, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hongxing-jiang.about.2"
+msgid "At Kansas State he directed the Kansas Advanced Semiconductor Coordinated Laboratory from 1998 to 2008. In 2008 he and Lin moved their group and its microLED research to Texas Tech University, where both later held Horn professorships."
+msgstr ""
+
+#: people
+#. About Hongxing Jiang, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hongxing-jiang.about.3"
+msgid "In the team's own account, they saw blue light from a gallium nitride microLED 12 micrometres across in August 1999. His Texas Tech CV dates a video-capable VGA microLED microdisplay, driven by a silicon CMOS chip, to 2009."
+msgstr ""
+
+#: people
+#. About Hongxing Jiang, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hongxing-jiang.about.4"
+msgid "The International SSL Alliance gave him its Global SSL Award of Outstanding Achievements in 2021, citing the invention of the microLED."
+msgstr ""
+
+#: people
+#. About Jingyu Lin, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.jingyu-lin.about.1"
+msgid "She studied physics at the State University of New York College at Oneonta and at Syracuse University, where she took a doctorate in 1989. She was then a professor of physics at Kansas State University."
+msgstr ""
+
+#: people
+#. About Jingyu Lin, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.jingyu-lin.about.2"
+msgid "In 2008 she and Jiang moved their group and its microLED research to Texas Tech University. There she held a Horn professorship and the Linda F. Whitacre Chair in Electrical and Computer Engineering, and co-directed the Nano-Photonics Center."
+msgstr ""
+
+#: people
+#. About Jingyu Lin, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.jingyu-lin.about.3"
+msgid "Her research covered III-nitride semiconductors such as boron nitride, aluminium nitride and gallium nitride, along with radiation sensors and MOCVD crystal growth. She was elected a fellow of the National Academy of Inventors in 2018."
+msgstr ""
+
+#: people
+#. About Vicki Colvin, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.vicki-colvin.about.1"
+msgid "She took a degree in chemistry and physics at Stanford University in 1988 and a doctorate in chemistry at the University of California, Berkeley, in 1994. Louisiana State University says that doctoral work produced the original technology for using colloidal quantum dots in displays."
+msgstr ""
+
+#: people
+#. About Vicki Colvin, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.vicki-colvin.about.2"
+msgid "At Rice University she was a professor of chemistry and vice provost for research, and directed the National Science Foundation's Center for Biological and Environmental Nanotechnology."
+msgstr ""
+
+#: people
+#. About Vicki Colvin, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.vicki-colvin.about.3"
+msgid "She moved to Brown University, where she was provost from July 2015 to July 2016 and directed the Center for Biomedical Engineering. In 2024 Louisiana State University named her dean of its College of Engineering."
+msgstr ""
+
+#: people
+#. About M. C. Schlamp, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.m-c-schlamp.about.1"
+msgid "Schlamp worked with Paul Alivisatos in the Department of Chemistry at the University of California, Berkeley, in the 1990s."
+msgstr ""
+
+#: people
+#. About M. C. Schlamp, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.m-c-schlamp.about.2"
+msgid "In 1997 Schlamp, Xiaogang Peng and Alivisatos reported diodes in the Journal of Applied Physics that paired the polymer PPV with cadmium selenide nanocrystals in cadmium sulphide shells. They glowed red to green, from as little as 4 volts."
+msgstr ""
+
+#: people
+#. About Paul Alivisatos, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-alivisatos.about.1"
+msgid "He studied chemistry at the University of Chicago, graduating in 1981, and took a doctorate at the University of California, Berkeley, in 1986. He taught at Berkeley from 1988 to 2021, latterly as executive vice chancellor and provost."
+msgstr ""
+
+#: people
+#. About Paul Alivisatos, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-alivisatos.about.2"
+msgid "From 2009 to 2016 he directed the Lawrence Berkeley National Laboratory. His group worked on controlling the size and shape of nanocrystals, and he was a founder of two companies, Quantum Dot Corp and Nanosys."
+msgstr ""
+
+#: people
+#. About Paul Alivisatos, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paul-alivisatos.about.3"
+msgid "The University of Chicago says his inventions are used in QLED television displays. He became its fourteenth president on 1 September 2021."
+msgstr ""
+
+#: people
+#. About Aleksey Yekimov, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.aleksey-yekimov.about.1"
+msgid "He graduated in physics from Leningrad State University in 1967 and took a doctorate at the Ioffe Physical-Technical Institute in 1974. He then did research at the Vavilov State Optical Institute in Leningrad."
+msgstr ""
+
+#: people
+#. About Aleksey Yekimov, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.aleksey-yekimov.about.2"
+msgid "With his doctoral student Alexei Onushchenko he tinted silicate glass with copper chloride. The temperature of the process set the size of the crystals, from a few to tens of nanometres. In 1981 he traced the effect to quantum confinement."
+msgstr ""
+
+#: people
+#. About Aleksey Yekimov, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.aleksey-yekimov.about.3"
+msgid "From 1999 he was chief scientist at Nanocrystals Technology Inc. in New York. He shared the Nobel Prize in Chemistry of 2023 with Louis Brus and Moungi Bawendi, for the discovery and synthesis of quantum dots."
+msgstr ""
+
+#: people
+#. About Louis Brus, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.louis-brus.about.1"
+msgid "Born in Cleveland, he studied at Rice University on a Navy scholarship and took a doctorate in physical chemistry at Columbia University in 1969. He then served as a scientific staff officer at the Naval Research Laboratory in Washington."
+msgstr ""
+
+#: people
+#. About Louis Brus, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.louis-brus.about.2"
+msgid "He worked at Bell Laboratories from 1973 to 1996. There, in 1983, he made the nanocrystals later known as quantum dots."
+msgstr ""
+
+#: people
+#. About Louis Brus, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.louis-brus.about.3"
+msgid "In 1996 he joined the chemistry department at Columbia University. He shared the Nobel Prize in Chemistry of 2023 with Aleksey Yekimov and Moungi Bawendi."
+msgstr ""
+
+#: people
+#. About Moungi Bawendi, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.moungi-bawendi.about.1"
+msgid "He took an undergraduate degree at Harvard University in 1982 and a doctorate at the University of Chicago in 1988. As a postdoctoral researcher he worked with Louis Brus at AT&T Bell Laboratories."
+msgstr ""
+
+#: people
+#. About Moungi Bawendi, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.moungi-bawendi.about.2"
+msgid "He joined the faculty of the Massachusetts Institute of Technology in 1990 and became the Lester Wolfe Professor of Chemistry. His group grew dots of a chosen size by varying the conditions under which they crystallised."
+msgstr ""
+
+#: people
+#. About Moungi Bawendi, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.moungi-bawendi.about.3"
+msgid "He later found ways to control how efficiently the dots gave off light and to curb their habit of blinking on and off."
+msgstr ""
+
+#: people
+#. About Xiaogang Peng, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.xiaogang-peng.about.1"
+msgid "A chemist, he was a coauthor with M. C. Schlamp and Paul Alivisatos at the University of California, Berkeley, of a paper of 1997 on diodes made with nanocrystals that had a core and a shell."
+msgstr ""
+
+#: people
+#. About Xiaogang Peng, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.xiaogang-peng.about.2"
+msgid "At the University of Arkansas he held the Scharlau professorship of chemistry and biochemistry and worked on ways to grow nanocrystals of high quality in solution. In 2002 he and colleagues founded NN-Labs to sell nanocrystals."
+msgstr ""
+
+#: people
+#. About Xiaogang Peng, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.xiaogang-peng.about.3"
+msgid "He later moved to the Department of Chemistry at Zhejiang University. With Yizheng Jin and others he reported in Nature in 2014 a red diode with a thin insulating layer between the dots and the oxide layer that carried electrons."
+msgstr ""
+
+#: people
+#. About Yizheng Jin, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yizheng-jin.about.1"
+msgid "A chemist, he was a tenured professor at Zhejiang University and directed the Institute of Advanced Materials Chemistry in its Department of Chemistry. His work covered light-emitting diodes made from solutions, with quantum dots or perovskites, and the oxide layers used in them."
+msgstr ""
+
+#: people
+#. About Yizheng Jin, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yizheng-jin.about.2"
+msgid "In the Nature paper of 2014, which names him with Peng among its authors, a layer of PMMA about 6 nanometres thick between the dots and the oxide balanced the charge."
+msgstr ""
+
+#: people
+#. About Yizheng Jin, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yizheng-jin.about.3"
+msgid "A profile for the SID conference ICDT lists the work among China's top ten scientific advances of 2014. The Ministry of Education named him a Chang Jiang Scholar Distinguished Professor in 2023."
+msgstr ""
+
+#: people
+#. About Tuomo Suntola, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tuomo-suntola.about.1"
+msgid "Born in Tampere, he took a doctorate at Helsinki University of Technology. When the medical instrument company Instrumentarium asked him for product ideas, he proposed atomic layer deposition, and he filed a patent on it in 1974."
+msgstr ""
+
+#: people
+#. About Tuomo Suntola, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tuomo-suntola.about.2"
+msgid "According to thisisFINLAND, the first panel made this way showed arriving and departing flights at Helsinki Airport, and commercial production followed in the 1980s. He later worked on the method at Microchemistry, a subsidiary of the energy company Neste."
+msgstr ""
+
+#: people
+#. About Tuomo Suntola, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.tuomo-suntola.about.3"
+msgid "Intel began to use the method in its chips in 2007. Suntola received the Millennium Technology Prize in 2018. He co-owned the ALD company Picosun until it was sold to Applied Materials in 2022."
+msgstr ""
+
+#: people
+#. About Dawon Kahng, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dawon-kahng.about.1"
+msgid "He took a bachelor's degree at Seoul National University in 1955 and his master's and doctoral degrees at Ohio State University. He joined Bell Telephone Laboratories in 1959."
+msgstr ""
+
+#: people
+#. About Dawon Kahng, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dawon-kahng.about.2"
+msgid "The transistor he built with Atalla used Atalla's layer of silicon oxide on the silicon surface. The National Inventors Hall of Fame calls the device, the MOSFET, the most widely used in the computer and electronics industries."
+msgstr ""
+
+#: people
+#. About Dawon Kahng, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dawon-kahng.about.3"
+msgid "He retired from Bell Laboratories in 1988 and then founded the NEC Research Institute, for basic research in computing and communications. The Hall of Fame inducted him in 2009."
+msgstr ""
+
+#: people
+#. About Ibn al-Haytham, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-al-haytham.about.1"
+msgid "Known in Latin as Alhazen, he trained for an official career and was made a minister for Basra and its region. He later turned to science, reading Aristotle above all."
+msgstr ""
+
+#: people
+#. About Ibn al-Haytham, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-al-haytham.about.2"
+msgid "In Egypt the Fatimid caliph al-Hakim set him to regulate the flow of the Nile. Travelling upriver with his engineers, he judged the plan unworkable and said so, and was given an administrative post instead."
+msgstr ""
+
+#: people
+#. About Ibn al-Haytham, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-al-haytham.about.3"
+msgid "His Kitab al-Manazir, the Book of Optics, ran to seven books and rested on experiment. It reached Latin readers in 1270 as Opticae thesaurus Alhazeni. In Cairo he lived by writing, teaching and copying texts."
+msgstr ""
+
+#: people
+#. About Gemma Frisius, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gemma-frisius.about.1"
+msgid "Born in Dokkum in Friesland, he entered the University of Louvain in 1526 as a poor student. He took a medical degree but stayed on for mathematics and astronomy, and became professor of medicine and mathematics there."
+msgstr ""
+
+#: people
+#. About Gemma Frisius, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gemma-frisius.about.2"
+msgid "With the goldsmith Gaspard van der Heyden, and Gerardus Mercator as engraver, he made a terrestrial globe in 1536 and a celestial globe in 1537. In 1530 he proposed finding longitude by comparing local time with a carried clock."
+msgstr ""
+
+#: people
+#. About Gemma Frisius, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gemma-frisius.about.3"
+msgid "MacTutor credits his tract of 1533 with the first proposal to fix places by triangulation. His De radio astronomico of 1545 described a cross staff about one and a half metres long. He died at Louvain."
+msgstr ""
+
+#: people
+#. About Daniele Barbaro, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniele-barbaro.about.1"
+msgid "Born in Venice, he studied philosophy, mathematics and optics at the University of Padua. He served the Venetian state as ambassador in London and became patriarch of Aquileia. In 1561 he represented Venice at the Council of Trent."
+msgstr ""
+
+#: people
+#. About Daniele Barbaro, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniele-barbaro.about.2"
+msgid "In 1556 he published an Italian translation of Vitruvius on architecture with a long commentary, and a Latin edition in 1567. He was a friend of the architect Andrea Palladio. His treatise on perspective appeared in Venice."
+msgstr ""
+
+#: people
+#. About Johannes Kepler, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johannes-kepler.about.1"
+msgid "Born in Weil der Stadt near Stuttgart, he studied at Tübingen under the Copernican Michael Maestlin and taught at Graz from 1594."
+msgstr ""
+
+#: people
+#. About Johannes Kepler, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johannes-kepler.about.2"
+msgid "He joined Tycho Brahe in Prague in 1600 and after Brahe died in 1601 succeeded him as mathematician to Emperor Rudolf II. His Astronomiae pars optica of 1604 used reflection and refraction to explain eclipses."
+msgstr ""
+
+#: people
+#. About Johannes Kepler, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johannes-kepler.about.3"
+msgid "Astronomia nova of 1609 set out elliptical orbits and the law of equal areas, and Harmonice mundi of 1619 a third law. His Dioptrice of 1611 described a telescope with two convex lenses. He moved to Linz in 1612."
+msgstr ""
+
+#: people
+#. About Ibn Daniyal, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-daniyal.about.1"
+msgid "Doctor and poet as well as a man of the theatre, he came to Cairo after the Mongols took Baghdad in 1258. He wrote his plays out in advance as dialogue with verse and music, and directed the shows himself."
+msgstr ""
+
+#: people
+#. About Ibn Daniyal, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-daniyal.about.2"
+msgid "The plays are Tayf al khayal, Ajib wa gharib and al Mutayyam. The opening play seems to praise Sultan Baybars and his laws against vice, but UNIMA reads it as satire on the Mamluk regime."
+msgstr ""
+
+#: people
+#. About Ibn Daniyal, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ibn-daniyal.about.3"
+msgid "The texts survive in four manuscripts, the oldest of 1425 in the Süleymaniye Library in Istanbul. Paul Kahle edited two of the plays between 1910 and 1912 and found Mamluk leather figures now in Berlin."
+msgstr ""
+
+#: people
+#. About François Dominique Séraphin, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.francois-dominique-seraphin.about.1"
+msgid "At twenty three he opened a theatre behind an inn in the Lannion garden at Versailles, showing shadows with changing scenery. He was called to play for the court three times a week in carnival."
+msgstr ""
+
+#: people
+#. About François Dominique Séraphin, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.francois-dominique-seraphin.about.2"
+msgid "In Paris he settled in the new galleries of the Palais Royal. His bill mixed comic pieces by Dorvigny and Guillemain with fairy tales such as Cendrillon. Made to swear loyalty to the Republic, he staged La Démonseigneurisation in 1790."
+msgstr ""
+
+#: people
+#. About François Dominique Séraphin, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.francois-dominique-seraphin.about.3"
+msgid "His descendants kept the Séraphin shows going until 1870, moving the theatre to the Passage Jouffroy in 1859."
+msgstr ""
+
+#: people
+#. About Henri Rivière, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henri-riviere.about.1"
+msgid "Born in Paris, he went to the Collège Rollin, taught himself drawing by copying illustrations by Doré and Vierge, and spent a short time in the studio of Émile Bin."
+msgstr ""
+
+#: people
+#. About Henri Rivière, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henri-riviere.about.2"
+msgid "He frequented the Chat Noir from about eighteen and helped start its journal. In 1886 Rodolphe Salis gave him artistic and technical charge of the cabaret's shadow theatre."
+msgstr ""
+
+#: people
+#. About Henri Rivière, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henri-riviere.about.3"
+msgid "In the 1890s he made woodcuts after Japanese models, and in 1902 published lithographs, Thirty Six Views of the Eiffel Tower, as a tribute to Hokusai. He collected about 800 Japanese objects and gave up printmaking for watercolour in 1916."
+msgstr ""
+
+#: people
+#. About Kara Walker, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kara-walker.about.1"
+msgid "From Stockton, California, she took a BFA at the Atlanta College of Art and an MFA at the Rhode Island School of Design. Her cut paper wall installation Gone was shown at the Drawing Center in New York in 1994."
+msgstr ""
+
+#: people
+#. About Kara Walker, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kara-walker.about.2"
+msgid "She received a MacArthur Fellowship in 1997 and represented the United States at the Bienal de São Paulo in 2002. Testimony of 2004 is a short silent film on 16mm, made with shadow puppets."
+msgstr ""
+
+#: people
+#. About Kara Walker, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kara-walker.about.3"
+msgid "The Museum of Modern Art holds puppets from Testimony, of cut black paper with pencil, tape and metal fasteners. In 2014 she showed A Subtlety, a sculpture in a former Domino Sugar works in Brooklyn."
+msgstr ""
+
+#: people
+#. About James Fergason, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-fergason.about.1"
+msgid "Born in Wakenda, Missouri, he took a degree in physics at the University of Missouri in 1956. The Lemelson-MIT Program says he organised the first American research team on liquid crystals, at Westinghouse Research Labs from 1957."
+msgstr ""
+
+#: people
+#. About James Fergason, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-fergason.about.2"
+msgid "His patent of 1963 used cholesteric liquid crystals to sense temperature. In the 1960s he was associate director of the Liquid Crystal Institute at Kent State University. In 1969 he found the twisted nematic field effect."
+msgstr ""
+
+#: people
+#. About James Fergason, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.james-fergason.about.3"
+msgid "Around 1970 he founded ILIXCO to make displays. He held more than 125 United States patents, entered the National Inventors Hall of Fame in 1998 and received the Lemelson-MIT Prize in 2006."
+msgstr ""
+
+#: people
+#. About George Heilmeier, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.george-heilmeier.about.1"
+msgid "He studied electrical engineering at the University of Pennsylvania and took a PhD in electronics at Princeton in 1962. He joined RCA Laboratories in 1958 and rose to direct solid state device research."
+msgstr ""
+
+#: people
+#. About George Heilmeier, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.george-heilmeier.about.2"
+msgid "In 1964 he found that a voltage changed the colour of a nematic liquid crystal doped with dye. RCA showed prototype liquid crystal displays in 1968."
+msgstr ""
+
+#: people
+#. About George Heilmeier, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.george-heilmeier.about.3"
+msgid "He became a White House Fellow in 1970 and director of DARPA in 1974, then worked at Texas Instruments and led Bellcore from 1991. He received the Kyoto Prize in Advanced Technology in 2005."
+msgstr ""
+
+#: people
+#. About Sivaramakrishna Chandrasekhar, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sivaramakrishna-chandrasekhar.about.1"
+msgid "After postgraduate study at the University of Cambridge he joined the University of Mysore with the task of building a school of physics. After a further spell in Britain he moved to the Raman Research Institute in Bangalore in 1971."
+msgstr ""
+
+#: people
+#. About Sivaramakrishna Chandrasekhar, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sivaramakrishna-chandrasekhar.about.2"
+msgid "There he set up and led a liquid crystal laboratory. The 1977 paper in Pramana reported compounds called benzene hexa n alkanoates, whose disc molecules stacked into columns set in a hexagonal array."
+msgstr ""
+
+#: people
+#. About B. K. Sadashiva, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.b-k-sadashiva.about.1"
+msgid "A chemist, he took a master's degree in organic chemistry at Bangalore University and a PhD under S. Chandrasekhar at the Raman Research Institute, where he spent his whole career and retired as a senior professor in 2008."
+msgstr ""
+
+#: people
+#. About B. K. Sadashiva, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.b-k-sadashiva.about.2"
+msgid "K. A. Suresh recalls that Sadashiva, then a doctoral student, prepared the pure samples for the disc work after earlier ones proved impure. He later worked on metallomesogens and chiral layered liquid crystals."
+msgstr ""
+
+#: people
+#. About B. K. Sadashiva, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.b-k-sadashiva.about.3"
+msgid "He wrote more than 130 papers, received the G. W. Gray Medal of the British Liquid Crystal Society and was a Fellow of the National Academy of Sciences, India. He died in 2020."
+msgstr ""
+
+#: people
+#. About K. A. Suresh, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.k-a-suresh.about.1"
+msgid "Kattera A. Suresh took his doctorate at the Raman Research Institute in Bangalore in 1979."
+msgstr ""
+
+#: people
+#. About K. A. Suresh, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.k-a-suresh.about.2"
+msgid "Set by Sivaramakrishna Chandrasekhar to study the new compounds, he examined them by X-ray diffraction and proposed a model of discs stacked in columns, which became accepted as the hexagonal columnar structure."
+msgstr ""
+
+#: people
+#. About K. A. Suresh, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.k-a-suresh.about.3"
+msgid "He held a Juliet Curie Fellowship at the Collège de France in 1983, then worked for Dowell Schlumberger in France and at Carnegie Mellon University before returning to the institute in 1989."
+msgstr ""
+
+#: people
+#. About K. A. Suresh, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.k-a-suresh.about.4"
+msgid "He became a senior professor there in 2004 and from 2010 was Scientist of Eminence at the Centre for Nano and Soft Matter Sciences in Bangalore."
+msgstr ""
+
+#: people
+#. About Mohamed Atalla, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mohamed-atalla.about.1"
+msgid "He took a master's degree and a doctorate in mechanical engineering at Purdue University, in 1947 and 1949, and then joined Bell Laboratories."
+msgstr ""
+
+#: people
+#. About Mohamed Atalla, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mohamed-atalla.about.2"
+msgid "There he studied the surface of silicon and grew a layer of silicon dioxide on the wafer to overcome the surface states that blocked current. He proposed a metal, oxide and silicon transistor and gave the work to Dawon Kahng."
+msgstr ""
+
+#: people
+#. About Mohamed Atalla, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mohamed-atalla.about.3"
+msgid "In 1962 he co-founded Hewlett-Packard Associates, and in 1972 he founded the Atalla Corporation, whose Atalla Box encrypted PIN and cash machine messages."
+msgstr ""
+
+#: people
+#. About Mohamed Atalla, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mohamed-atalla.about.4"
+msgid "The National Inventors Hall of Fame inducted him in 2009."
+msgstr ""
+
+#: people
+#. About Larry Hornbeck, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.larry-hornbeck.about.1"
+msgid "Born in St. Louis, he joined Texas Instruments in 1973 and took a doctorate in physics at Case Western Reserve University in 1974."
+msgstr ""
+
+#: people
+#. About Larry Hornbeck, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.larry-hornbeck.about.2"
+msgid "At the company's Central Research Laboratories he began in 1977 on analogue deformable mirrors, and spent about a decade on them before turning to hinged digital ones. He came to hold 34 United States patents."
+msgstr ""
+
+#: people
+#. About Larry Hornbeck, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.larry-hornbeck.about.3"
+msgid "He received an Engineering Emmy in 1998 and an Academy Award of Merit in 2015 for the cinema projectors built on the chip. He joined the faculty of the University of Texas at Dallas in 2017."
+msgstr ""
+
+#: people
+#. About Elsa Garmire, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elsa-garmire.about.1"
+msgid "Born in Buffalo, New York, she took degrees in physics at Harvard and at MIT, where she worked with Charles Townes on nonlinear effects of strong laser beams."
+msgstr ""
+
+#: people
+#. About Elsa Garmire, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elsa-garmire.about.2"
+msgid "As a senior research fellow at Caltech from 1966 to 1973 she joined Experiments in Art and Technology and designed the large Mylar mirror of the Pepsi pavilion at Expo 70 in Osaka."
+msgstr ""
+
+#: people
+#. About Elsa Garmire, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elsa-garmire.about.3"
+msgid "She was president of Laser Images, the company she founded with Ivan Dryer, until she handed it to him in 1973. She then taught at the University of Southern California and from 1995 at Dartmouth College."
+msgstr ""
+
+#: people
+#. About Ivan Dryer, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-dryer.about.1"
+msgid "He worked as a guide at Griffith Observatory from 1956, on and off until 1968, and as a filmmaker, including as documentary editor on the feature film Executive Action."
+msgstr ""
+
+#: people
+#. About Ivan Dryer, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-dryer.about.2"
+msgid "After seeing Elsa Garmire show her laser work at a conference in 1970, he began on live laser shows with the filmmaker Dale Pelton. Their company was incorporated in February 1971."
+msgstr ""
+
+#: people
+#. About Ivan Dryer, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-dryer.about.3"
+msgid "Laserium ran at Griffith until January 2002. His company took shows to 46 planetariums and other venues. According to Live Design, the International Laser Display Association gave him its first Career Achievement Award in 1989."
+msgstr ""
+
+#: people
+#. About Leota Toombs, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.leota-toombs.about.1"
+msgid "She began at the Walt Disney Studios in 1940 in the Ink and Paint department and moved to animation. She returned in 1962 to join WED Enterprises."
+msgstr ""
+
+#: people
+#. About Leota Toombs, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.leota-toombs.about.2"
+msgid "She worked on attractions for the 1964 to 1965 New York World's Fair, then on Pirates of the Caribbean and the Haunted Mansion, where she also voiced the bride known as Little Leota."
+msgstr ""
+
+#: people
+#. About Leota Toombs, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.leota-toombs.about.3"
+msgid "In 1971 she moved to Walt Disney World to set up the team that kept its shows running, and from 1979 she trained figure finishers in California."
+msgstr ""
+
+#: people
+#. About Michael Naimark, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.michael-naimark.about.1"
+msgid "He made Displacements three times between 1980 and 1984, the third at the San Francisco Museum of Modern Art. A 16mm camera on a slow turntable filmed two performers, who looked ghostly when projected because they were not painted."
+msgstr ""
+
+#: people
+#. About Michael Naimark, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.michael-naimark.about.2"
+msgid "He was on the original design team of the MIT Media Lab in 1980 and a founding member of the Atari Research Lab, the Apple Multimedia Lab and Lucasfilm Interactive. He joined Interval Research in 1992."
+msgstr ""
+
+#: people
+#. About Michael Naimark, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.michael-naimark.about.3"
+msgid "His work is in the collections of the Exploratorium, the American Museum of the Moving Image and ZKM Karlsruhe."
+msgstr ""
+
+#: people
+#. About Ramesh Raskar, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ramesh-raskar.about.1"
+msgid "He studied engineering in Pune and took his doctorate at the University of North Carolina at Chapel Hill. He then joined Mitsubishi Electric Research Laboratories, where his work led to 40 patents."
+msgstr ""
+
+#: people
+#. About Ramesh Raskar, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ramesh-raskar.about.2"
+msgid "He wrote the shader lamps paper while at Mitsubishi. It covered a plain object with projected images from several projectors so that it took on its own or another appearance."
+msgstr ""
+
+#: people
+#. About Ramesh Raskar, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ramesh-raskar.about.3"
+msgid "In 2008 he founded the Camera Culture group at the MIT Media Lab. He received the Lemelson-MIT Prize in 2016 for femto-photography, which can show objects around a corner."
+msgstr ""
+
+#: people
+#. About Greg Welch, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-welch.about.1"
+msgid "Before academic work he was at NASA's Jet Propulsion Laboratory and the Defense Systems Division of Northrop Grumman. He was a research professor at the University of North Carolina at Chapel Hill, which the shader lamps paper gives as his affiliation."
+msgstr ""
+
+#: people
+#. About Greg Welch, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-welch.about.2"
+msgid "He moved to the University of Central Florida, where he became a Pegasus Professor, holder of the AdventHealth Endowed Chair in Healthcare Simulation and co-director of the Synthetic Reality Lab."
+msgstr ""
+
+#: people
+#. About Kok-Lim Low, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kok-lim-low.about.1"
+msgid "He was a graduate student in computer science at the University of North Carolina at Chapel Hill when the shader lamps paper appeared, and took his doctorate there in 2006."
+msgstr ""
+
+#: people
+#. About Kok-Lim Low, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kok-lim-low.about.2"
+msgid "He joined the School of Computing of the National University of Singapore, where he became a senior lecturer. His work there covered computer graphics, real-time rendering and the automated design of papercraft."
+msgstr ""
+
+#: people
+#. About Deepak Bandyopadhyay, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.deepak-bandyopadhyay.about.1"
+msgid "He was at the University of North Carolina at Chapel Hill when the shader lamps paper appeared in 2001."
+msgstr ""
+
+#: people
+#. About Deepak Bandyopadhyay, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.deepak-bandyopadhyay.about.2"
+msgid "He took his doctorate there in 2006 under Jack Snoeyink, with a thesis on a geometric framework for nearest neighbour analysis of protein structure and function."
+msgstr ""
+
+#: people
+#. About Lanny Smoot, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lanny-smoot.about.1"
+msgid "Born in New York City, he took degrees in electrical engineering at Columbia University. From 1978 to 1998 he was at Bell Laboratories and Bellcore, with patents in fibre optics, video on demand and video conferencing."
+msgstr ""
+
+#: people
+#. About Lanny Smoot, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lanny-smoot.about.2"
+msgid "He joined Disney in 1998 and worked as a research fellow and head of Imagineering research and development. His work included an extendable lightsaber and the HoloTile floor for shared virtual reality."
+msgstr ""
+
+#: people
+#. About Lanny Smoot, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lanny-smoot.about.3"
+msgid "The National Inventors Hall of Fame inducted him in 2024."
+msgstr ""
+
+#: people
+#. About Barrett Comiskey, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.barrett-comiskey.about.1"
+msgid "He studied mathematics at MIT and worked in the Media Lab, where in 1995 Joseph Jacobson set him the task of a book whose pages could change at the press of a button."
+msgstr ""
+
+#: people
+#. About Barrett Comiskey, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.barrett-comiskey.about.2"
+msgid "With J. D. Albert he showed on 23 January 1997 that an electric field could move particles inside a microcapsule. He co-founded E Ink in 1997 and spent eight years on the ink in Cambridge, Massachusetts and Shanghai."
+msgstr ""
+
+#: people
+#. About Barrett Comiskey, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.barrett-comiskey.about.3"
+msgid "He later took an MBA at Stanford and has worked in Asia since 2004. The National Inventors Hall of Fame inducted him in 2016."
+msgstr ""
+
+#: people
+#. About J. D. Albert, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-d-albert.about.1"
+msgid "Jonathan Albert was a mechanical engineering student at MIT when Joseph Jacobson recruited him to his laboratory. With Barrett Comiskey he worked on Jacobson's idea of a book whose pages could be changed electronically, and they had a working prototype in January 1997."
+msgstr ""
+
+#: people
+#. About J. D. Albert, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-d-albert.about.2"
+msgid "Later in 1997 he co-founded E Ink with Comiskey, Jacobson, Russ Wilcox and Jerome Rubin, and he developed the methods used to make electronic ink displays in volume. The National Inventors Hall of Fame inducted him in 2016."
+msgstr ""
+
+#: people
+#. About J. D. Albert, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-d-albert.about.3"
+msgid "He became director of engineering at Bresslergroup, a product design firm, and taught product design, engineering and entrepreneurship in the Integrated Product Design programme at the University of Pennsylvania."
+msgstr ""
+
+#: people
+#. About Joseph Jacobson, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-jacobson.about.1"
+msgid "He took a bachelor's degree at Brown University and a doctorate in physics at MIT, and was then a postdoctoral fellow in physics at Stanford University."
+msgstr ""
+
+#: people
+#. About Joseph Jacobson, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-jacobson.about.2"
+msgid "In the mid-1990s he proposed a display of black and white particles held in tiny spheres. In 1997 he launched E Ink with his students Barrett Comiskey and J. D. Albert, and the Media Lab lists him as a technical founder of the company."
+msgstr ""
+
+#: people
+#. About Joseph Jacobson, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.joseph-jacobson.about.3"
+msgid "As a professor at the MIT Media Lab he went on to head its Molecular Machines group, which works on synthetic biology. The National Inventors Hall of Fame inducted him in 2016."
+msgstr ""
+
+#: people
+#. About John Rogers, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-rogers.about.1"
+msgid "He studied chemistry and physics at the University of Texas at Austin, graduating in 1989, and took a doctorate in physical chemistry at MIT in 1995. He was then a Junior Fellow of the Harvard Society of Fellows until 1997."
+msgstr ""
+
+#: people
+#. About John Rogers, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-rogers.about.2"
+msgid "He joined Bell Laboratories in 1997 as a member of technical staff in condensed matter physics research, and directed that department from late 2000 to 2002. He was the lead author of the paper of 2001 in the Proceedings of the National Academy of Sciences."
+msgstr ""
+
+#: people
+#. About John Rogers, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-rogers.about.3"
+msgid "He spent thirteen years on the faculty of the University of Illinois, then moved to Northwestern University in 2016 as professor of materials science and engineering and director of the Querrey Simpson Institute for Bioelectronics. He received a MacArthur Fellowship in 2009."
+msgstr ""
+
+#: people
+#. About Zhenan Bao, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.zhenan-bao.about.1"
+msgid "She took her doctorate in chemistry at the University of Chicago in 1995 and joined Bell Labs, then part of Lucent Technologies. She became a Distinguished Member of Technical Staff there in 2001, and was second author of that year's paper on the bendable display."
+msgstr ""
+
+#: people
+#. About Zhenan Bao, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.zhenan-bao.about.2"
+msgid "She moved to Stanford University in 2004, where she became K.K. Lee Professor in Chemical Engineering, chaired the department from 2018 to 2022, and founded the Stanford Wearable Electronics Initiative. Her group works on electronics modelled on skin."
+msgstr ""
+
+#: people
+#. About Zhenan Bao, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.zhenan-bao.about.3"
+msgid "She co-founded C3 Nano, later acquired by DuPont, and PyrAmes. She is a member of the National Academy of Sciences and the National Academy of Engineering."
+msgstr ""
+
+#: people
+#. About Deng-Ke Yang, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.deng-ke-yang.about.1"
+msgid "He took a degree in physics at Tsinghua University in 1984 and a doctorate in physics at the University of Hawaii in 1989, and joined Kent State University the same year."
+msgstr ""
+
+#: people
+#. About Deng-Ke Yang, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.deng-ke-yang.about.2"
+msgid "Kent State gave him its Excellence Award in Invention in 2000 for the bistable reflective cholesteric display. The Society for Information Display recognised his work on polymer stabilised cholesteric devices in 2005 and made him a Fellow in 2007."
+msgstr ""
+
+#: people
+#. About Deng-Ke Yang, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.deng-ke-yang.about.3"
+msgid "With S. T. Wu he wrote Reflective Liquid Crystal Displays of 2001 and Fundamentals of Liquid Crystal Devices of 2006. The Society gave him its Slottow-Owaki Prize in 2017 for education and training in liquid crystal displays."
+msgstr ""
+
+#: people
+#. About J. William Doane, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-william-doane.about.1"
+msgid "Bill Doane took a doctorate in physics at the University of Missouri-Columbia in 1965 and joined the Kent State University faculty that year."
+msgstr ""
+
+#: people
+#. About J. William Doane, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-william-doane.about.2"
+msgid "He became director of the Liquid Crystal Institute in 1983, and in 1991 was the founding director of the ALCOM Center for liquid crystalline optical materials. In 1995 and 1996 he published on reflective cholesteric displays in the SID Digest and Information Display."
+msgstr ""
+
+#: people
+#. About J. William Doane, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-william-doane.about.3"
+msgid "He co-founded Kent Displays, Inc., where he served as vice president for research and development and chief science officer. He retired from the university in 1996 and was a Fellow of the American Physical Society."
+msgstr ""
+
+#: people
+#. About Gerardo Beni, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gerardo-beni.about.1"
+msgid "He took a laurea in physics at the University of Florence in 1970 and a doctorate in physics at the University of California, Los Angeles, in 1974."
+msgstr ""
+
+#: people
+#. About Gerardo Beni, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gerardo-beni.about.2"
+msgid "At Bell Telephone Laboratories he and Susan Hackwood filed a patent in June 1981 on devices that change the surface tension between two fluids with a voltage. Granted in November 1983, it noted that fluids of different colours give a colour change."
+msgstr ""
+
+#: people
+#. About Gerardo Beni, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gerardo-beni.about.3"
+msgid "He co-founded the Journal of Robotic Systems in 1982, became a professor of electrical and computer engineering at the University of California, Riverside, and later wrote on swarm intelligence and swarm robotics."
+msgstr ""
+
+#: people
+#. About Susan Hackwood, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.susan-hackwood.about.1"
+msgid "She took a doctorate in solid state ionics and became head of device robotics technology research at AT&T Bell Laboratories. Her patent with Gerardo Beni, filed in June 1981, used a voltage to change the surface tension between two fluids."
+msgstr ""
+
+#: people
+#. About Susan Hackwood, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.susan-hackwood.about.2"
+msgid "In 1984 she joined the University of California, Santa Barbara, as a professor of electrical and computer engineering, and founded the NSF Engineering Research Center for Robotic Systems in Microelectronics there."
+msgstr ""
+
+#: people
+#. About Susan Hackwood, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.susan-hackwood.about.3"
+msgid "She became founding dean of the Bourns College of Engineering at the University of California, Riverside, and later executive director of the California Council on Science and Technology. She is a Fellow of the IEEE and the AAAS."
+msgstr ""
+
+#: people
+#. About Robert Hayes, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-hayes.about.1"
+msgid "A physicist at Philips Research in Eindhoven, he wrote with Johan Feenstra the paper Video-speed electronic paper based on electrowetting, published in Nature in 2003."
+msgstr ""
+
+#: people
+#. About Robert Hayes, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-hayes.about.2"
+msgid "In each pixel a voltage made water push aside a coloured oil film about 10 microns thick, uncovering a white surface beneath. Physics World reported that a pixel switched in less than 10 milliseconds."
+msgstr ""
+
+#: people
+#. About Robert Hayes, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.robert-hayes.about.3"
+msgid "The paper said its colour design was four times brighter than reflective liquid crystal displays, with reflectivity and contrast close to those of paper."
+msgstr ""
+
+#: people
+#. About Johan Feenstra, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johan-feenstra.about.1"
+msgid "He took a doctorate in solid state physics at the Rijksuniversiteit Groningen in 1997. At Philips Research in the Netherlands he wrote the Nature paper of 2003 on video-speed electrowetting displays with Robert Hayes."
+msgstr ""
+
+#: people
+#. About Johan Feenstra, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johan-feenstra.about.2"
+msgid "He co-founded Liquavista, spun out of Philips in 2006, and served as its chief executive and chief technology officer among other roles. Samsung Electronics bought the company in 2011, and it was later sold to Amazon."
+msgstr ""
+
+#: people
+#. About Johan Feenstra, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.johan-feenstra.about.3"
+msgid "He joined SMART Photonics, a maker of photonic chips, as chief executive in 2019."
+msgstr ""
+
+#: people
+#. About Mark Miles, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-miles.about.1"
+msgid "He took a degree in electrical engineering at MIT and spent more than twelve years on development work for clients including ARPA, the NSF and the Air Force Office of Scientific Research. His firm Etalon worked on MEMS devices and thin film processes."
+msgstr ""
+
+#: people
+#. About Mark Miles, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-miles.about.2"
+msgid "He co-founded Iridigm Display Corporation in 1997 and, as chief technology officer, directed its technology development for more than five years."
+msgstr ""
+
+#: people
+#. About Mark Miles, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mark-miles.about.3"
+msgid "After the sale he advised Qualcomm MEMS Technologies, the subsidiary formed to sell displays built on the modulator, and ran Mark Miles Consulting in San Francisco. By 2006 he held eleven patents."
+msgstr ""
+
+#: people
+#. About S. K. Deb, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.s-k-deb.about.1"
+msgid "Satyen Deb studied at Dacca University, graduating in 1953 and 1955, and took a doctorate in solid state physics at the Cavendish Laboratory of Cambridge University."
+msgstr ""
+
+#: people
+#. About S. K. Deb, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.s-k-deb.about.2"
+msgid "He was a corporate research fellow at American Cyanamid in Stamford, Connecticut. His NREL biography says that he discovered the electrochromic phenomenon in transition metal oxides."
+msgstr ""
+
+#: people
+#. About S. K. Deb, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.s-k-deb.about.3"
+msgid "He joined what is now the National Renewable Energy Laboratory in 1978, managed its in-house photovoltaic research and directed its Center for Basic Sciences. He was a Fellow of the American Physical Society."
+msgstr ""
+
+#: people
+#. About Paula Hammond, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paula-hammond.about.1"
+msgid "She studied chemical engineering at MIT, graduating in 1984, took a master's degree at Georgia Tech in 1988 and returned to MIT for her doctorate in 1993. She then held an NSF postdoctoral fellowship in chemistry at Harvard."
+msgstr ""
+
+#: people
+#. About Paula Hammond, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paula-hammond.about.2"
+msgid "On the MIT faculty she co-founded the Institute for Soldier Nanotechnology in 2002. Her group's work has included polymers for solar cells, nanoparticles that carry chemotherapy drugs and a spray coating that helps blood clot."
+msgstr ""
+
+#: people
+#. About Paula Hammond, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.paula-hammond.about.3"
+msgid "She was appointed head of the Department of Chemical Engineering in 2015 and later became Vice Provost for Faculty and an Institute Professor. The Science History Institute gave her its Othmer Gold Medal in 2024."
+msgstr ""
+
+#: people
+#. About Dean DeLongchamp, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dean-delongchamp.about.1"
+msgid "A chemical engineer, he took his doctorate at the Massachusetts Institute of Technology in 2003, with Paula Hammond as adviser."
+msgstr ""
+
+#: people
+#. About Dean DeLongchamp, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dean-delongchamp.about.2"
+msgid "His thesis also built polymer electrolyte films layer by layer that conducted ions well and held together mechanically, and it used nanocrystals of the Prussian blue family as electrochromic layers."
+msgstr ""
+
+#: people
+#. About Dean DeLongchamp, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dean-delongchamp.about.3"
+msgid "He moved to the National Institute of Standards and Technology as a postdoctoral fellow in 2003. He went on to lead its Polymer Processing Group, and specialised in soft X-ray spectroscopy and scattering. He received a Presidential Early Career Award in 2009."
+msgstr ""
+
+#: people
+#. About Henry Dircks, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henry-dircks.about.1"
+msgid "Born in Liverpool, he was apprenticed to a merchant house and then worked as a practical engineer on railways, canals and mines before setting up as a consulting engineer. He took out several patents between 1840 and 1857."
+msgstr ""
+
+#: people
+#. About Henry Dircks, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henry-dircks.about.2"
+msgid "Grace's Guide dates his design of the ghost illusion to 1858. He built models and showed them to theatre owners, who declined because their stages would have needed rebuilding."
+msgstr ""
+
+#: people
+#. About Henry Dircks, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henry-dircks.about.3"
+msgid "After Pepper adapted one of his models, the patent of 1863 was taken out in both their names, Pepper says at his own request. Dircks objected that the show bore only Pepper's name, and in 1863 published a book defending his claim."
+msgstr ""
+
+#: people
+#. About Henry Dircks, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.henry-dircks.about.4"
+msgid "He also wrote on perpetual motion and on the second Marquis of Worcester. He died in Brighton."
+msgstr ""
+
+#: people
+#. About John Henry Pepper, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-henry-pepper.about.1"
+msgid "A chemist and lecturer on popular science, he joined the staff of the Royal Polytechnic Institution in 1848 and was its director within ten years. He also wrote books, among them The Playbook of Metals."
+msgstr ""
+
+#: people
+#. About John Henry Pepper, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-henry-pepper.about.2"
+msgid "Around 1862 he took one of Henry Dircks's models and adapted it, hiding the second actor in the orchestra pit. By his own account he gave a private showing just before Christmas 1862, and took the patent the next day."
+msgstr ""
+
+#: people
+#. About John Henry Pepper, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-henry-pepper.about.3"
+msgid "Under an agreement with Dircks, Pepper kept the profits, Dircks kept the credit, and the patent was shared. Pepper gave only his own name when presenting the show, and Dircks protested."
+msgstr ""
+
+#: people
+#. About Valerie Thomas, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.valerie-thomas.about.1"
+msgid "At NASA she rose to manage the development of image processing systems for Landsat satellite data."
+msgstr ""
+
+#: people
+#. About Valerie Thomas, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.valerie-thomas.about.2"
+msgid "The idea came from an exhibit she saw in 1976, where a concave mirror made a light bulb appear to glow in an empty socket. She filed her patent in December 1978. It used parabolic mirrors at both ends."
+msgstr ""
+
+#: people
+#. About Valerie Thomas, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.valerie-thomas.about.3"
+msgid "She later worked on the Space Physics Analysis Network, as its project manager, and was associate chief of the Space Science Data Operations Office when she retired from NASA in 1995."
+msgstr ""
+
+#: people
+#. About Karri Palovuori, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.karri-palovuori.about.1"
+msgid "A professor at Tampere University of Technology, he worked with Ismo Rakkolainen on the fog screen. The two had described a walk-through virtual environment at the IEEE Virtual Reality conference in Orlando in 2002."
+msgstr ""
+
+#: people
+#. About Karri Palovuori, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.karri-palovuori.about.2"
+msgid "His later work at Tampere University was in electronics and embedded systems, including full custom VLSI subsystems. His profile there lists about 80 publications and more than ten patents."
+msgstr ""
+
+#: people
+#. About Ismo Rakkolainen, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ismo-rakkolainen.about.1"
+msgid "A senior researcher in the Technology Signal Processing Laboratory at Tampere University of Technology, he built early prototypes of the screen with plastic drinking straws that pushed air through small nozzles."
+msgstr ""
+
+#: people
+#. About Ismo Rakkolainen, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ismo-rakkolainen.about.2"
+msgid "The fog screen was shown at the Turku Science Exhibition in autumn 2002 and at SIGGRAPH Emerging Technologies in San Diego in 2003. FogScreen Inc was founded in 2003 to make and sell it."
+msgstr ""
+
+#: people
+#. About Ismo Rakkolainen, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ismo-rakkolainen.about.3"
+msgid "He stayed at Tampere University as a university research fellow and adjunct professor in the TAUCHI Research Center, working on user interfaces, virtual reality and new displays."
+msgstr ""
+
+#: people
+#. About Max Hirsch, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.max-hirsch.about.1"
+msgid "He filed the patent in January 1958, in his own name with no company behind it. A cathode-ray tube and its lenses and mirrors turned together with a rear-projection screen, spun by a motor at more than twenty turns a second."
+msgstr ""
+
+#: people
+#. About Max Hirsch, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.max-hirsch.about.2"
+msgid "A second patent, filed in November 1958 and granted in April 1961, let the tube stay still while circuits turned the picture on its face in step with the screen."
+msgstr ""
+
+#: people
+#. About Gregg Favalora, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gregg-favalora.about.1"
+msgid "He built his display as a senior project at Yale University in 1996, with laser beams reflected onto a fast rotating screen. He took it further as an electrical engineering doctoral student at Harvard, on leave by 1998."
+msgstr ""
+
+#: people
+#. About Gregg Favalora, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gregg-favalora.about.2"
+msgid "He started Actuality Systems with two Harvard students and won the MIT $50K Entrepreneurship Competition in 1997. MIT Technology Review named him among its innovators under 35 in 1999."
+msgstr ""
+
+#: people
+#. About Gregg Favalora, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.gregg-favalora.about.3"
+msgid "In 2009 he joined Optics for Hire, an optical design consultancy in Arlington, Massachusetts. By 2011 he was named on nine United States patents."
+msgstr ""
+
+#: people
+#. About Elizabeth Downing, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elizabeth-downing.about.1"
+msgid "Before Stanford she worked as an engineer on laser equipment at the FMC Corporation Technology Center in Santa Clara, California."
+msgstr ""
+
+#: people
+#. About Elizabeth Downing, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elizabeth-downing.about.2"
+msgid "As a graduate student she spent eight years on the display, with borrowed laboratory space and donated lasers. The work had a United States Navy grant of 350,000 dollars. The prototype cube was a stack of three doped glass layers, one for each primary colour."
+msgstr ""
+
+#: people
+#. About Elizabeth Downing, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.elizabeth-downing.about.3"
+msgid "She set up 3D Technology Laboratories in Mountain View, California, to sell the patented device, and by 1997 was planning a larger cube of many thin layers."
+msgstr ""
+
+#: people
+#. About Lambertus Hesselink, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lambertus-hesselink.about.1"
+msgid "He studied applied physics and mechanics at Twente University and took his doctorate at the California Institute of Technology in 1977. At Stanford University he became professor of electrical engineering, and supervised Downing's display research there."
+msgstr ""
+
+#: people
+#. About Lambertus Hesselink, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lambertus-hesselink.about.2"
+msgid "His research covered ultra high density optical data storage, nonlinear optics and nanophotonics. He founded Siros Technologies in 1997 and cofounded Senvid in 1999. The National Academy of Inventors made him a fellow in 2022."
+msgstr ""
+
+#: people
+#. About John Ralston, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.john-ralston.about.1"
+msgid "In 1996 he worked at SDL, a laser maker in San Jose, California, which supplied the small high power lasers used to draw points inside the glass. He was one of the four authors of the paper in Science."
+msgstr ""
+
+#: people
+#. About Roger Macfarlane, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.roger-macfarlane.about.1"
+msgid "A physicist at the IBM Almaden Research Center, he studied how atoms and molecules behave in solids, with a view to storing data at very high density."
+msgstr ""
+
+#: people
+#. About Roger Macfarlane, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.roger-macfarlane.about.2"
+msgid "Much of his work was laser spectroscopy of rare earth ions in crystals, including spectral hole burning. He was still publishing on rare earth doped materials in 2013."
+msgstr ""
+
+#: people
+#. About Daniel Smalley, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-smalley.about.1"
+msgid "He studied at the Massachusetts Institute of Technology, with a degree in electrical engineering in 2005 and a doctorate in holography in 2013. His thesis described a new integrated optics platform, and at MIT he worked on a low cost holographic video monitor."
+msgstr ""
+
+#: people
+#. About Daniel Smalley, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-smalley.about.2"
+msgid "At Brigham Young University he became professor of electrical and computer engineering. In the display, lasers trapped and heated a single cellulose particle and steered it through the air while red, green and blue light lit it."
+msgstr ""
+
+#: people
+#. About Ryuji Hirayama, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ryuji-hirayama.about.1"
+msgid "He studied engineering at Chiba University in Japan and took his doctorate there in 2017, with a thesis on volumetric displays that hold several flat images. He then held research fellowships from the Japan Society for the Promotion of Science."
+msgstr ""
+
+#: people
+#. About Ryuji Hirayama, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ryuji-hirayama.about.2"
+msgid "One of those fellowships took him in 2018 to the laboratory of Nobuyuki Masuda at Tokyo University of Science. In 2019 he joined the Interact Lab at Sussex as a Rutherford Fellow, and he is the lead author of the paper in Nature."
+msgstr ""
+
+#: people
+#. About Ryuji Hirayama, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ryuji-hirayama.about.3"
+msgid "He moved to the computer science department of University College London in 2020, became a lecturer in 2022 and an associate professor in 2026. He leads FabDisp, a project on acoustic holography for display and fabrication, and cofounded the company AcoustoFab in 2023."
+msgstr ""
+
+#: people
+#. About Diego Martinez Plasencia, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.diego-martinez-plasencia.about.1"
+msgid "He taught as an assistant lecturer at UCLM in Spain and was a research associate at the University of Bristol before becoming a lecturer in interactive 3D graphics at Sussex. He later moved to University College London as an associate professor."
+msgstr ""
+
+#: people
+#. About Diego Martinez Plasencia, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.diego-martinez-plasencia.about.2"
+msgid "At UCL he cofounded the Multi-Sensory Devices Group with Marianna Obrist and Sriram Subramanian. His work joins 3D display methods, human computer interaction and applied physics, from tabletop systems with several views to displays made of moving particles."
+msgstr ""
+
+#: people
+#. About Nobuyuki Masuda, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nobuyuki-masuda.about.1"
+msgid "He was a professor of applied electronics at Tokyo University of Science, where his laboratory designed special purpose computing circuits on programmable chips (FPGAs) and used graphics processors to speed up numerical work, much of it for computer generated holograms."
+msgstr ""
+
+#: people
+#. About Nobuyuki Masuda, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nobuyuki-masuda.about.2"
+msgid "From 2018 to 2021 he led a project that built a dedicated FPGA computer for digital holography, which his team reported to be faster than a PC. Ryuji Hirayama worked in his laboratory as a research fellow in 2018 before going to Sussex."
+msgstr ""
+
+#: people
+#. About Sriram Subramanian, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sriram-subramanian.about.1"
+msgid "When the display was published he was Professor of Informatics at Sussex and held a Royal Academy of Engineering Chair in Emerging Technologies. The university named him as leader of the project."
+msgstr ""
+
+#: people
+#. About Sriram Subramanian, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sriram-subramanian.about.2"
+msgid "He moved to University College London, where he leads the Multi-Sensory Devices lab, working on touch in mid air, levitation and contactless control by ultrasound. The company Ultrahaptics, later Ultraleap, grew from his early hardware designs, and he founded Metasonixx and cofounded AcoustoFab."
+msgstr ""
+
+#: people
+#. About Sriram Subramanian, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.sriram-subramanian.about.3"
+msgid "In 2025 he was elected a Fellow of the Royal Academy of Engineering."
+msgstr ""
+
+#: people
+#. About Yoichi Ochiai, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yoichi-ochiai.about.1"
+msgid "He studied information media at the University of Tsukuba and took a doctorate in applied computer science at the University of Tokyo in 2015. He then joined Tsukuba's Institute of Library, Information and Media Science, as assistant professor and from 2017 associate professor."
+msgstr ""
+
+#: people
+#. About Yoichi Ochiai, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yoichi-ochiai.about.2"
+msgid "The femtosecond display, called Fairy Lights in Femtoseconds, was shown at SIGGRAPH 2015 with colleagues from Utsunomiya University, the Nagoya Institute of Technology, the University of Tokyo and Sony CSL. The team argued that plasma from femtosecond pulses was safer than from nanosecond pulses."
+msgstr ""
+
+#: people
+#. About Yoichi Ochiai, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.yoichi-ochiai.about.3"
+msgid "He was also chief executive of Pixie Dust Technologies from 2015 and director of Tsukuba's Research and Development Center for Digital Nature from 2020. MIT Technology Review listed him among its Innovators Under 35 for Japan in 2020."
+msgstr ""
+
+#: people
+#. About Charles Wheatstone, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-wheatstone.about.1"
+msgid "From near Gloucester, he was apprenticed to his uncle's firm of musical instrument makers in London. In 1834 King's College London made him Professor of Experimental Philosophy."
+msgstr ""
+
+#: people
+#. About Charles Wheatstone, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-wheatstone.about.2"
+msgid "His paper on the stereoscope, Contributions to the Physiology of Vision, appeared in the Philosophical Transactions of the Royal Society. He drew simple line figures to view in it and, in 1840, asked William Henry Fox Talbot for stereoscopic photographs."
+msgstr ""
+
+#: people
+#. About Charles Wheatstone, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-wheatstone.about.3"
+msgid "With William Fothergill Cooke he worked on the electric telegraph, which ran on the Great Western Railway from 1838. He also gave his name to the Wheatstone Bridge for measuring electrical resistance, and was knighted in 1868."
+msgstr ""
+
+#: people
+#. About Kenneth Dunkley, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenneth-dunkley.about.1"
+msgid "He took a master's degree in physics and became president of Holospace Laboratories in Camp Hill, Pennsylvania. For several years he ran visual effects workshops at the Museum of Scientific Discovery in Harrisburg, and worked on holography, lasers and electro optics."
+msgstr ""
+
+#: people
+#. About Kenneth Dunkley, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.kenneth-dunkley.about.2"
+msgid "The National Business League says the idea came while he was demonstrating holography at the Franklin Institute, when tubes with pinholes gave a flat photograph depth. He filed the patent in April 1986. Its pinholes and frames can be moved apart or together."
+msgstr ""
+
+#: people
+#. About Charles Harrison, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-harrison.about.1"
+msgid "Born in Shreveport, Louisiana, he took a degree in industrial design at the School of the Art Institute of Chicago in 1954, served in the Army as a mapmaker in Germany, and later earned a master's in art education at night."
+msgstr ""
+
+#: people
+#. About Charles Harrison, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-harrison.about.2"
+msgid "He took the View-Master job as a freelance designer through Robert Podall Associates, for the maker Sawyer's. Moulding the viewer in thermoplastic rather than Bakelite, he said, let units be made ten times faster. He recalled the work taking under two weeks."
+msgstr ""
+
+#: people
+#. About Charles Harrison, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.charles-harrison.about.3"
+msgid "Sears, Roebuck and Company hired him as a staff designer in 1961, and he rose to chief of design, with over 750 products. After retiring in 1993 he taught in Chicago. He won the National Design Award for Lifetime Achievement in 2008."
+msgstr ""
+
+#: people
+#. About Frederic Ives, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.frederic-ives.about.1"
+msgid "Born in Litchfield, Connecticut, he was apprenticed as a boy to a printer and, with no formal schooling, was put in charge of the photographic laboratory at Cornell University while still a teenager."
+msgstr ""
+
+#: people
+#. About Frederic Ives, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.frederic-ives.about.2"
+msgid "There he worked out a halftone process for printing photographs, in commercial use by 1881, and a crossline screen. He later made the Kromskop, a viewer that gave colour stereo pictures from three pairs of filtered negatives. He held about seventy patents."
+msgstr ""
+
+#: people
+#. About Frederic Ives, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.frederic-ives.about.3"
+msgid "Living in Philadelphia, he filed his patent for the parallax stereogram in September 1902 and was granted it in April 1903. A screen of opaque lines with clear spaces, set at a calculated distance, lets each eye see only its own picture."
+msgstr ""
+
+#: people
+#. About Walter Hess, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.walter-hess.about.1"
+msgid "Born in Frauenfeld, Switzerland, he studied medicine at Lausanne, Berlin, Kiel and Zurich and qualified in 1906. He trained in ophthalmology for two years under Otto Haab in Zurich before opening his practice."
+msgstr ""
+
+#: people
+#. About Walter Hess, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.walter-hess.about.2"
+msgid "His patent prints two stereoscopic negatives in strips behind a ribbed celluloid plate, each rib part of a cylinder, so no stereoscope or spectacles are needed. C. W. Hess writes that his plans to sell it came to nothing when war broke out in 1914."
+msgstr ""
+
+#: people
+#. About Walter Hess, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.walter-hess.about.3"
+msgid "In 1912 he joined the Physiological Institute of the University of Zurich, and in 1917 became its professor and head, until 1951. He shared the Nobel Prize with Egas Moniz, for work on the diencephalon as a centre coordinating the internal organs."
+msgstr ""
+
+#: people
+#. About Hank Willis Thomas, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hank-willis-thomas.about.1"
+msgid "He took a degree in fine art at New York University in 1998 and a master's at California College of the Arts in 2004. He began as a photographer and went on to make sculpture and installations."
+msgstr ""
+
+#: people
+#. About Hank Willis Thomas, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hank-willis-thomas.about.2"
+msgid "His work turns on perception, context and the reuse of brands, logos and familiar images. He has also printed portraits of activists on coloured retroreflective vinyl."
+msgstr ""
+
+#: people
+#. About Hank Willis Thomas, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.hank-willis-thomas.about.3"
+msgid "Two of his lenticular prints of 2017, They are Us, Us is Them and Impossibly, hang in Harvey Milk Terminal 1 at San Francisco International Airport. In the second, the words possible, possibly and impossible take turns as the viewer moves."
+msgstr ""
+
+#: people
+#. About Dennis Gabor, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dennis-gabor.about.1"
+msgid "Born in Budapest, he studied electrical engineering in Berlin, taking a doctorate in 1927, and then worked in research at Siemens and Halske. In 1934 he joined the British Thomson-Houston Company at Rugby."
+msgstr ""
+
+#: people
+#. About Dennis Gabor, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dennis-gabor.about.2"
+msgid "In his Nobel lecture he said the aim was a better electron microscope, sharp enough to resolve atomic lattices. His early optical trials used a mercury lamp, whose short coherence kept objects small. The method came back into use with the laser after 1963."
+msgstr ""
+
+#: people
+#. About Dennis Gabor, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.dennis-gabor.about.3"
+msgid "From 1949 to 1967 he was at Imperial College London, as reader in electronics and then professor of applied electron physics. The Nobel Prize in Physics of 1971 credits him with the invention and development of the holographic method."
+msgstr ""
+
+#: people
+#. About Emmett Leith, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.emmett-leith.about.1"
+msgid "Born in Detroit, he studied physics at Wayne State University. In 1952 he joined the Radar Laboratory of the University of Michigan's Willow Run Laboratories, where he worked on synthetic aperture radar."
+msgstr ""
+
+#: people
+#. About Emmett Leith, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.emmett-leith.about.2"
+msgid "He brought Juris Upatnieks onto the holography work in 1960. They called their method lensless photography, and showed a hologram of a toy train at a meeting of the Optical Society of America in 1964."
+msgstr ""
+
+#: people
+#. About Emmett Leith, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.emmett-leith.about.3"
+msgid "He became a full professor at Michigan in 1968 and received the National Medal of Science in 1979. The Optical Society of America named a medal after him in 2006."
+msgstr ""
+
+#: people
+#. About Juris Upatnieks, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.juris-upatnieks.about.1"
+msgid "Born in Riga, he left Latvia in 1944 and reached the United States in 1951. He took a degree in electrical engineering at the University of Akron in 1960."
+msgstr ""
+
+#: people
+#. About Juris Upatnieks, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.juris-upatnieks.about.2"
+msgid "Emmett Leith recruited him that year to Willow Run Laboratories at the University of Michigan. The two patented their holography work jointly as Wavefront Reconstruction Using a Coherent Reference Beam."
+msgstr ""
+
+#: people
+#. About Juris Upatnieks, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.juris-upatnieks.about.3"
+msgid "From 1973 to 1993 he worked at the University of Michigan, at the Environmental Research Institute and then in electrical and computer engineering. He held 19 United States patents and received the Emmett N. Leith Medal in 2010."
+msgstr ""
+
+#: people
+#. About Margaret Benyon, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.margaret-benyon.about.1"
+msgid "Her stated aim was to take holography out of the science laboratory and widen what counted as fine art. She lived in Australia in the 1970s, and after returning to Britain in 1980 her holograms dealt with the human body."
+msgstr ""
+
+#: people
+#. About Margaret Benyon, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.margaret-benyon.about.2"
+msgid "Tigirl, of 1985, set a holographic self portrait against a photograph of a tiger. In 1994 the Royal College of Art in London awarded her a doctorate for her research and practice in art holography."
+msgstr ""
+
+#: people
+#. About Margaret Benyon, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.margaret-benyon.about.3"
+msgid "She was appointed MBE in 2000 for services to art. Her work is held by the Victoria and Albert Museum and the Australian National Gallery. From 2005 she was a visiting fellow at the University of New South Wales."
+msgstr ""
+
+#: people
+#. About Stephen Benton, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.stephen-benton.about.1"
+msgid "Born in San Francisco, he studied electrical engineering at MIT, working with Harold Edgerton, and as a student worked in Edwin Land's vision research laboratory at Polaroid. He took his doctorate at Harvard in 1968."
+msgstr ""
+
+#: people
+#. About Stephen Benton, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.stephen-benton.about.2"
+msgid "MIT News credits him with inventing rainbow holography, which lets a hologram be seen in ordinary white light."
+msgstr ""
+
+#: people
+#. About Stephen Benton, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.stephen-benton.about.3"
+msgid "He returned to MIT in 1980, founded its Spatial Imaging Group in 1982 and was on the founding faculty of the Media Lab in 1984. He later directed the Center for Advanced Visual Studies."
+msgstr ""
+
+#: people
+#. About Mary Lou Jepsen, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mary-lou-jepsen.about.1"
+msgid "She studied electrical engineering and took a doctorate in optical physics at Brown University. Her master's degree at the MIT Media Lab was in computational holography."
+msgstr ""
+
+#: people
+#. About Mary Lou Jepsen, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mary-lou-jepsen.about.2"
+msgid "She was chief technology officer and chief architect of the One Laptop per Child laptop, and chief technology officer of the display division at Intel. She also ran a display company based in Taipei."
+msgstr ""
+
+#: people
+#. About Mary Lou Jepsen, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.mary-lou-jepsen.about.3"
+msgid "She directed engineering at Google X and at Facebook, where her work included virtual reality at Oculus. She then founded Openwater, which aims to put imaging of MRI quality into a wearable device."
+msgstr ""
+
+#: people
+#. About Ali Javan, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ali-javan.about.1"
+msgid "He came to the United States in 1949 and took his doctorate in physics at Columbia University in 1954, under Charles Townes, without a bachelor's or master's degree."
+msgstr ""
+
+#: people
+#. About Ali Javan, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ali-javan.about.2"
+msgid "He worked out the principle of the helium and neon laser in 1958. The day after it gave its beam in December 1960, the laser carried a telephone conversation."
+msgstr ""
+
+#: people
+#. About Ali Javan, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ali-javan.about.3"
+msgid "He joined the Massachusetts Institute of Technology in 1961 and held the Francis Wright Davis chair of physics from 1978 to 1996. He was inducted into the National Inventors Hall of Fame in 2006."
+msgstr ""
+
+#: people
+#. About Nasser Peyghambarian, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nasser-peyghambarian.about.1"
+msgid "He took his doctorate in solid state physics at Indiana University in 1982 and came to the Optical Sciences Center at the University of Arizona as a postdoctoral fellow."
+msgstr ""
+
+#: people
+#. About Nasser Peyghambarian, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nasser-peyghambarian.about.2"
+msgid "A professor of optical sciences and of materials science and engineering, he directed a National Science Foundation research centre for integrated access networks and founded two companies, NP Photonics and TIPD."
+msgstr ""
+
+#: people
+#. About Nasser Peyghambarian, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.nasser-peyghambarian.about.3"
+msgid "He led the team behind the 2010 telepresence display, a 17 inch screen fed by sixteen cameras, and said it could help in surgery. He was named a fellow of the National Academy of Inventors in 2016."
+msgstr ""
+
+#: people
+#. About Pierre-Alexandre Blanche, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.pierre-alexandre-blanche.about.1"
+msgid "At the University of Arizona's optical sciences college he worked in diffractive optics and holography. He was lead author of the 2010 report on holographic telepresence from the group."
+msgstr ""
+
+#: people
+#. About Pierre-Alexandre Blanche, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.pierre-alexandre-blanche.about.2"
+msgid "In that system one computer turned the views of sixteen cameras into hogel data and sent it over Ethernet to a second computer, which wrote the holograms onto the polymer screen."
+msgstr ""
+
+#: people
+#. About Pierre-Alexandre Blanche, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.pierre-alexandre-blanche.about.3"
+msgid "In 2021 he won an Optimax grant toward a curved head-up display built on a waveguide. Optica made him a fellow, citing holographic 3D displays and augmented reality combiners."
+msgstr ""
+
+#: people
+#. About Ivan Sutherland, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-sutherland.about.1"
+msgid "Born in Hastings, Nebraska, he studied at the Carnegie Institute of Technology and Caltech and took his doctorate at MIT in 1963 under Claude Shannon, with a thesis on Sketchpad, a graphical system for drawing with a computer."
+msgstr ""
+
+#: people
+#. About Ivan Sutherland, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-sutherland.about.2"
+msgid "In 1964 he succeeded J. C. R. Licklider as head of the Information Processing Techniques Office at ARPA. The 1968 headset was nicknamed the Sword of Damocles."
+msgstr ""
+
+#: people
+#. About Ivan Sutherland, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.ivan-sutherland.about.3"
+msgid "He taught at the University of Utah from 1968 to 1974 and cofounded Evans and Sutherland with David Evans. Sun Microsystems bought his firm with Bob Sproull in 1990. He received the Turing Award in 1988."
+msgstr ""
+
+#: people
+#. About Bob Sproull, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.bob-sproull.about.1"
+msgid "He worked at the Xerox Palo Alto Research Center and was an associate professor of computer science at Carnegie Mellon University, then a principal of Sutherland, Sproull and Associates."
+msgstr ""
+
+#: people
+#. About Bob Sproull, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.bob-sproull.about.2"
+msgid "He joined Sun Microsystems in 1990 as a vice president and fellow of Sun Microsystems Laboratories, and retired as director of Oracle Labs, which grew out of it."
+msgstr ""
+
+#: people
+#. About Bob Sproull, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.bob-sproull.about.3"
+msgid "With William Newman he wrote the textbook Principles of Interactive Computer Graphics. His research ran from graphics hardware and page description languages to asynchronous circuits. He was elected to the National Academy of Engineering."
+msgstr ""
+
+#: people
+#. About Samuel Achilefu, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.samuel-achilefu.about.1"
+msgid "He took a doctorate in molecular and materials chemistry at the University of Nancy and trained at Oxford, then joined the discovery research department of Mallinckrodt Medical in St. Louis in 1993."
+msgstr ""
+
+#: people
+#. About Samuel Achilefu, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.samuel-achilefu.about.2"
+msgid "At Washington University he was professor of radiology and of biomedical engineering. The goggles were made with Viktor Gruev of the engineering school and Ron Liang of the University of Arizona, with funding from the National Cancer Institute."
+msgstr ""
+
+#: people
+#. About Samuel Achilefu, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.samuel-achilefu.about.3"
+msgid "In 2016 he was installed as Michel M. Ter-Pogossian Professor of Radiology. In February 2022 he moved to UT Southwestern Medical Center to chair its department of biomedical engineering."
+msgstr ""
+
+#: people
+#. About J. M. Naish, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-m-naish.about.1"
+msgid "He worked at the Royal Aircraft Establishment, Farnborough. A technical note of 1962 set out the form of the steering information his head-up display gave the pilot, and weighed how bright it must be against a desert sky."
+msgstr ""
+
+#: people
+#. About J. M. Naish, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-m-naish.about.2"
+msgid "In a paper of 1965 he reported that the display could be learned easily and used accurately, and proposed it as a monitor for automatic landing and take-off."
+msgstr ""
+
+#: people
+#. About J. M. Naish, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.j-m-naish.about.3"
+msgid "By 1979 he was at NASA Ames Research Center as a research associate of the National Research Council. His review of head-up display formats there found neither of the two main kinds fully adequate."
+msgstr ""
