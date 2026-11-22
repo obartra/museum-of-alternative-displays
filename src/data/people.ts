@@ -60,9 +60,9 @@ export const people: Record<string, Credit> = {
       { who: ['Ferdinand Braun'], did: 'Built the first cathode ray tube, in Germany in 1897.' },
       { who: ['Kenjiro Takayanagi'], did: 'Showed a television receiver built on a cathode ray tube, in Japan in 1926.' },
       { who: ['Philo Farnsworth'], did: 'Sent the first all-electronic television picture, in San Francisco in 1927.' },
-      { who: ['Elma Farnsworth'], she: ['Elma Farnsworth'], did: 'Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent.' },
+      { who: ['Elma Farnsworth'], she: ['Elma Farnsworth'], did: 'Known as Pem. She worked in Philo Farnsworth\'s laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent.' },
     ],
-    sources: [src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707')],
+    sources: [src('press', 'Woman who helped invent TV dies at 98, Associated Press (2006)', 'https://www.nbcnews.com/id/wbna12596707'), src('press', 'Vale: The Mother of Television, New Atlas (2006)', 'https://newatlas.com/go/5575')],
   },
   'colour-wheel-television': {
     people: [

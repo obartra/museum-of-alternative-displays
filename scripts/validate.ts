@@ -78,6 +78,21 @@ for (const tour of tours) {
   // whoever a stop is said to be about is named on the label of that piece, spelled as the label spells them
   for (const part of tour.parts) for (const name of part.who ?? []) if (!people[part.id]?.people.some((e) => e.who.includes(name))) errors.push(`tour ${tour.id}, ${part.id}: ${name} is not named on the label of the piece`);
 }
+// what the green line says in numbers about the collection is counted here, and not remembered
+{
+  const tour = tours.find((t) => t.id === 'women'), said = tour ? tour.parts.flatMap((p) => p.text).join(' ') : '';
+  const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
+  const women = new Map<string, string[]>();
+  for (const [id, c] of Object.entries(people)) for (const e of c.people) for (const name of e.she ?? []) women.set(name, [...(women.get(name) ?? []), id]);
+  const stops = tour ? tour.parts.map((p) => p.id) : [];
+  const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'];
+  const count = /\b([A-Za-z]+) women are named on the labels\b/.exec(said)?.[1].toLowerCase();
+  if (count && WORDS[women.size] !== count) errors.push(`tour women: it says ${count} women are named on the labels, and there are ${women.size}`);
+  if (/\bone in ten\b/.test(said) && Math.round(named.size / women.size) !== 10) errors.push(`tour women: it says one in ten of the people named is a woman, and it is ${women.size} of ${named.size}`);
+  if (/\ball eleven\b|\ball of them\b/.test(said)) for (const [name, at] of women) if (!at.some((id) => stops.includes(id))) errors.push(`tour women: it says the line stops at the work of every woman named, and ${name} is not at a stop`);
+  const passed = /\bpassed (\d+) other displays\b/.exec(said)?.[1];
+  if (passed && tour && Number(passed) !== pieces.length - (tour.parts.length - 2)) errors.push(`tour women: it says the line passed ${passed} other displays, and it is ${pieces.length - (tour.parts.length - 2)}`);
+}
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in
 {
   const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));

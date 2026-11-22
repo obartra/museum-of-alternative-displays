@@ -2546,8 +2546,8 @@ msgstr "Va transmetre la primera imatge de televisió totalment electrònica, a 
 #: hall-2/cathode-ray-tube
 #. People section: what Elma Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.4"
-msgid "Known as Pem. She worked beside Philo Farnsworth in his laboratories, and her face was among the first that his system sent."
-msgstr "Coneguda com a Pem. Va treballar al costat de Philo Farnsworth als seus laboratoris, i la seva cara va ser una de les primeres que el sistema va transmetre."
+msgid "Known as Pem. She worked in Philo Farnsworth's laboratories, where she made the technical drawings for his experiments. Her face was among the first that his system sent."
+msgstr "Coneguda com a Pem. Va treballar als laboratoris de Philo Farnsworth, on feia els dibuixos tècnics dels seus experiments. La seva cara va ser una de les primeres que el sistema va transmetre."
 
 #: hall-2/cathode-ray-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -7988,13 +7988,13 @@ msgstr ""
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. Follow the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at ten displays. Each has at least one woman among its inventors or contributors."
 msgstr ""
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.2"
-msgid "The picture is made of something different at every stop. It starts with pins, at the braille display in hall 1."
+msgid "The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins."
 msgstr ""
 
 #: tour-women
@@ -8006,19 +8006,19 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.1"
-msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right: they change every second."
+msgid "This display is read by touch. Rows of pins rise and fall to spell a line of braille. The model is spelling the time. Watch the cells on the right. They change every second."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
-msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Oleg and Andrée Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
+msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
-msgid "It is the only piece in the museum that needs no light at all. Every other display on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
+msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
 msgstr ""
 
 #: tour-women
@@ -8036,7 +8036,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
-msgid "In 1927, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked beside him in his laboratories. Her face was among the first that his system sent."
+msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
 msgstr ""
 
 #: tour-women
@@ -8060,7 +8060,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
-msgid "Hongxing Jiang and Jingyu Lin are physicists and a married couple. The idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre? In 2000, at Kansas State University, they made the first microLEDs."
+msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
 msgstr ""
 
 #: tour-women
@@ -8084,13 +8084,13 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
-msgid "The crystals are called quantum dots. The model shows what most screens do with them. In 1994, at Berkeley, Vicki Colvin, M. C. Schlamp and Paul Alivisatos took another route: they made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
+msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.3"
-msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes it, and the display shapes it. Go to the scanned laser."
+msgid "The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 a lamp or a laser makes the light, and the display shapes it. Go to the scanned laser."
 msgstr ""
 
 #: tour-women
@@ -8108,7 +8108,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
-msgid "The laser images of Elsa Garmire, a physicist at the California Institute of Technology, were filmed in 1972, and they became the model for Laserium. Ivan Dryer, a filmmaker who worked with her, opened Laserium at Griffith Observatory in Los Angeles in 1973."
+msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
 msgstr ""
 
 #: tour-women
@@ -8132,13 +8132,13 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
-msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. The Haunted Mansion also has a crystal ball with a blank head inside. The face projected onto it is the filmed face of Leota Toombs, an artist at the Disney design workshop."
+msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.3"
-msgid "The next stop is in hall 5, at the electrowetting display. The displays there behave like print: they use the light of the room."
+msgid "Before you go on, turn the daylight back on. The next stop is the electrowetting display in hall 5. The displays there behave like print: they need the light of the room."
 msgstr ""
 
 #: tour-women
@@ -8156,7 +8156,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
-msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Gerardo Beni and Susan Hackwood proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. In 2003, at Philips Research in Eindhoven, Robert Hayes and Johan Feenstra made it work at video speed."
+msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
 msgstr ""
 
 #: tour-women
@@ -8180,13 +8180,13 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
-msgid "In hall 3 a question was asked at a dinner table. Another was asked at an exhibition in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. She had joined NASA as a data analyst. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat. Her patent was granted on 21 October 1980."
+msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.3"
-msgid "Stay in hall 6 for the static-volume display, where a stack of clear sheets catches the picture."
+msgid "Stay in hall 6 for the static-volume display, where the picture fills a block of space."
 msgstr ""
 
 #: tour-women
@@ -8198,19 +8198,19 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.1"
-msgid "The figure is a knot. In the stack of clear sheets, one sheet at a time turns milky and catches its slice of the picture. Look along the stack from the side to see the knot in slices. Nothing moves."
+msgid "Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.2"
-msgid "There is another way to fill a volume, with no sheets: a block of special glass that glows only where two invisible beams cross. The model does not show it. A beam of electrons drew in hall 2, and a laser in hall 4. In that block the point where the two beams cross does the drawing, in three dimensions."
+msgid "Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions."
 msgstr ""
 
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
-msgid "Elizabeth Downing, Lambertus Hesselink, John Ralston and Roger Macfarlane drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996. Downing is the first author. The last stop is holography, in hall 7."
+msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
 msgstr ""
 
 #: tour-women
@@ -8228,7 +8228,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
-msgid "Dennis Gabor invented holography in 1948. Margaret Benyon, a painter, made holograms as art from 1968 and showed them a year later. A hologram like this one is static. In 1989 the first holographic video display was built in the group of Stephen Benton at the MIT Media Lab. Mary Lou Jepsen set out its design in her thesis of that year."
+msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
 msgstr ""
 
 #: tour-women
@@ -8238,13 +8238,19 @@ msgid "The end of the green line"
 msgstr ""
 
 #: tour-women
-#. Guided tour, after the last stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
 msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
 msgstr ""
 
 #: tour-women
-#. Guided tour, after the last stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Every piece in these halls has its people, and their names are on the labels. Thank you for taking the tour."
+msgid "Eleven women are named on the labels in these halls, one in ten of all the people named there. You have now stood at the work of all eleven."
+msgstr ""
+
+#: tour-women
+#. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.end.text.3"
+msgid "The line passed 43 other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour."
 msgstr ""

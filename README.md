@@ -109,12 +109,20 @@ before the first stop, a part for each stop of the trail, and a few words at the
 written to be spoken, and it adds no facts to the labels: everything in it is on the label
 of the piece it is told at. What it adds is the thread from one stop to the next.
 
+A stop has three paragraphs. The first says what to look at. The second is about the
+people: one person or one pair, and one year, and where the plate on the block names
+someone else, the guide says why. The third hands over to the next stop. `who` names the
+people a stop is about, and `npm run check` holds the numbers the tour gives about the
+collection to the data.
+
 A tour is taken in the walk. Its address is `#tour-women`, or `#tour-women-microled` for
 one of its stops, and following the trail in the walk takes up the tour too. A band under
-the picture (`src/guide.ts`) shows the stops along the line, carries the visitor to the stop
-before or after, and has the guide speak there. The visitor can switch her voice off and
-read the same words, and can leave the tour and go on walking. A phone gives a tour the
-whole screen. The words of the whole tour are also on one page, `#words-women`.
+the picture (`src/guide.ts`) shows the stops along the line and carries the visitor to the
+stop before or after. The guide speaks once the visitor stands there, and not on the way.
+The person the stop is about is shown in a corner of the picture, with a portrait where
+there is one. The visitor can switch her voice off and read the same words, and can leave
+the tour and go on walking. A phone gives a tour the whole screen, and folds the walking
+buttons behind one key. The words of the whole tour are also on one page, `#words-women`.
 
 A stop may say where the tour stands the visitor (`stand` in the tour's data), when the
 usual place in front of the block is too far back to show what the guide points at. The
@@ -143,13 +151,26 @@ tour and that the model can speak. The workflow **Tour audio** runs it:
 4. Run it with "Say how many characters it would send", then with "Record what is missing
    or out of date". The recordings are kept in `public/tour/` and the site is deployed.
 
+A part is spoken in one piece. ElevenLabs says when each character was spoken, and the
+script cuts the recording where its paragraphs meet, in the pause that is there, and puts
+it together again as `delivery` in `tour/voices.json` says: a silence before the first
+word, a longer one after the paragraph that says what to look at, one between the other
+paragraphs and one at the end. The voice is asked to speak at `speed` of its own pace, and
+a part that still runs faster than `pace` words a minute is stretched to it, by a tenth at
+most. Every part is brought to the same loudness, with its peaks under a limit. This needs
+`ffmpeg`, which the workflow installs. Where the times cannot be had, each paragraph is
+spoken by itself.
+
 The site offers a recording only beside the very words it was made from. When a part is
 reworded it falls silent until the workflow is run again, and only that part is recorded
-again. The words are always there to read, so the tour works without sound.
+again. A change to the voice, the model or the delivery records every part again. The words
+are always there to read, so the tour works without sound.
 
 One player says every part (`voice` in `src/tour.ts`). A browser lets a page start a sound
 only from a click, and remembers it for the player the sound was started on. So the click
-that takes up a tour, on a link or on a button, starts the guide then and there.
+that takes up a tour, on a link or on a button, starts the opening words then and there,
+and the click that asks for a stop makes the guide ready, without a sound, so that she can
+begin by herself when the visitor has arrived.
 
 ## Archive pictures
 

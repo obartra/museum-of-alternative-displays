@@ -7,5 +7,16 @@
   },
   "leaveOut": [
     "eo"
-  ]
+  ],
+  "delivery": {
+    "whole": true,
+    "speed": 0.94,
+    "pace": 150,
+    "lead": 0.2,
+    "afterLook": 2,
+    "between": 1.1,
+    "tail": 0.4,
+    "loudness": -16,
+    "peak": -1.5
+  }
 }
