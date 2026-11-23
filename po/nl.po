@@ -525,6 +525,42 @@ msgstr "Bron: {a}{label}{/a}"
 
 #: interface
 #. Headings on the page of a piece.
+msgctxt "ui.piece.sound"
+msgid "Hear it"
+msgstr "Beluister het"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.sound.credit"
+msgid "Recording: {a}{title}{/a} by {by}, {licence}"
+msgstr "Opname: {a}{title}{/a}, door {by}, {licence}"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.split-flap"
+msgid "The board at 30th Street Station, Philadelphia, turning over"
+msgstr "Het bord in station 30th Street, Philadelphia, terwijl het omslaat"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-on"
+msgid "A television switched on, with the whistle of its lines"
+msgstr "Een televisie die wordt aangezet, met het fluiten van de lijnen"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-degauss"
+msgid "A computer monitor switched on, degaussed and switched off"
+msgstr "Een computermonitor die wordt aangezet, gedemagnetiseerd en uitgezet"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.view-master"
+msgid "The lever of a View-Master, pressed again and again"
+msgstr "De hendel van een View-Master, telkens weer ingedrukt"
+
+#: interface
+#. Headings on the page of a piece.
 msgctxt "ui.piece.sources"
 msgid "Sources"
 msgstr "Bronnen"

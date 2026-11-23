@@ -529,6 +529,42 @@ msgstr "出典：{a}{label}{/a}"
 
 #: interface
 #. Headings on the page of a piece.
+msgctxt "ui.piece.sound"
+msgid "Hear it"
+msgstr "音を聞く"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.sound.credit"
+msgid "Recording: {a}{title}{/a} by {by}, {licence}"
+msgstr "録音：{a}{title}{/a}（{by}、{licence}）"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.split-flap"
+msgid "The board at 30th Street Station, Philadelphia, turning over"
+msgstr "フィラデルフィアの30丁目駅の案内板が切り替わる音"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-on"
+msgid "A television switched on, with the whistle of its lines"
+msgstr "テレビの電源を入れた音と、走査線のかん高い音"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-degauss"
+msgid "A computer monitor switched on, degaussed and switched off"
+msgstr "コンピューターのモニターの電源を入れ、消磁し、切る音"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.view-master"
+msgid "The lever of a View-Master, pressed again and again"
+msgstr "View-Masterのレバーを何度も押す音"
+
+#: interface
+#. Headings on the page of a piece.
 msgctxt "ui.piece.sources"
 msgid "Sources"
 msgstr "出典"

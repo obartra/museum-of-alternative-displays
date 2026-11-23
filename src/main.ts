@@ -8,6 +8,8 @@ import { esc } from './html';
 import { byName, comma, count, langNow, rich, said, standIn, t, tx, useLang, wanted } from './i18n';
 import { langMenu, wireLangMenu } from './langmenu';
 import { facts } from './data/facts';
+import { sounds } from './data/sounds';
+import { soundSection, wireSounds } from './sound';
 import { people, type Entry } from './data/people';
 import { portraits } from './data/portraits';
 import { personLinks } from './data/person-links';
@@ -537,6 +539,7 @@ ${step === undefined ? '' : visitBand(step)}
     <h1 class="plate" style="display:block"><span class="plate__title">${esc(x.name)}</span>${x.aka ? `<span class="plate__sub">${tx('piece.aka', { names: x.aka })}</span>` : ''}</h1>
     <p class="lead">${esc(x.lead)}</p>
     <section class="stack" style="--gap: 10px"><h2 class="h-sec">${tx('piece.look')}</h2><p class="prose">${esc(x.look)}</p><div id="surface"></div></section>
+    ${soundSection(sounds[p.id])}
     ${fact ? `<section class="fact stack" style="--gap: 8px"><h2 class="h-sec">${tx('piece.fact')}</h2><p class="fact__text"${standIn.fact(p.id)}>${esc(said.fact(p.id, fact.text))}</p><p class="small muted">${rich('piece.fact.source', { a: fact.source.url }, { label: fact.source.label })}</p></section>` : ''}
     <dl class="card">
       ${row(tx('card.no'), inv(p))}
@@ -757,8 +760,10 @@ ${step === undefined ? '' : visitBand(step)}
     if (to) goTo(link(`piece-${to.id}`));
   }, { passive: true });
 
+  const unsound = wireSounds(document.querySelector('.piece')!);
   leave = () => {
     alive = false; live = false;
+    unsound();
     window.clearTimeout(resting);
     unwire();
     window.removeEventListener('popstate', onBack);

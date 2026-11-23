@@ -530,6 +530,42 @@ msgstr "Fonte: {a}{label}{/a}"
 
 #: interface
 #. Headings on the page of a piece.
+msgctxt "ui.piece.sound"
+msgid "Hear it"
+msgstr "Ouça"
+
+#: interface
+#. Headings on the page of a piece. Keep the words in curly brackets as they are.
+msgctxt "ui.piece.sound.credit"
+msgid "Recording: {a}{title}{/a} by {by}, {licence}"
+msgstr "Gravação: {a}{title}{/a}, de {by}, {licence}"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.split-flap"
+msgid "The board at 30th Street Station, Philadelphia, turning over"
+msgstr "O painel da estação 30th Street, na Filadélfia, virando"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-on"
+msgid "A television switched on, with the whistle of its lines"
+msgstr "Um televisor sendo ligado, com o assobio das suas linhas"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.crt-degauss"
+msgid "A computer monitor switched on, degaussed and switched off"
+msgstr "Um monitor de computador sendo ligado, desmagnetizado e desligado"
+
+#: interface
+#. Interface.
+msgctxt "ui.sound.view-master"
+msgid "The lever of a View-Master, pressed again and again"
+msgstr "A alavanca de um View-Master, apertada várias vezes"
+
+#: interface
+#. Headings on the page of a piece.
 msgctxt "ui.piece.sources"
 msgid "Sources"
 msgstr "Fontes"

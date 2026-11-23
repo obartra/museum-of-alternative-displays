@@ -120,7 +120,7 @@ Round6 targeted pass: Rechecked the author of the1964 superimposed-fields paper 
 
 Static-volume display
 
-The earlier study was withdrawn on main in commit 9690ca6. Its photograph names the founder of Neursantys, but the review did not establish a source tying that man to the SDL author of the 1996 display paper. The existing image remains unconnected until that identity chain is established. This supplement did not search for or replace it.
+No portrait, by the owner's decision of 22 November 2026. A study was drawn from a photograph that names John Ralston, founder of Neursantys. No source read ties that man to the John Ralston of SDL who co-wrote the 1996 Science paper, and the name is common. The study was withdrawn in commit 9690ca6 and is not kept in the repository. A portrait goes here only with a page that names the SDL author himself.
 
 ## Greg Dawe
 

@@ -443,9 +443,9 @@ Credit Os Bartra and the Museum of Alternative Displays with a link, say what yo
 share your version under the same licence.
 
 The licence does not cover the portraits in `public/people`, the recordings in `public/tour`,
-or the archive pictures and films in `public/media`, each of which keeps the licence named in
-its credit. No licence has been chosen yet for the rest of the code, which stays all rights
-reserved by the repository owner until one is added. Typefaces are Sofia Sans and Sofia Sans
+the archive pictures and films in `public/media`, each of which keeps the licence named in
+its credit, and the recordings in `public/sounds`, credited on the page of each piece. The rest
+of the code is under the MIT License, in `LICENSE`. Typefaces are Sofia Sans and Sofia Sans
 Extra Condensed (Lettersoup) and PT Mono (ParaType), each under the SIL Open Font License.
 
 The People page and piece labels link each of 143 names to a checked biography, institutional profile or identifying record.

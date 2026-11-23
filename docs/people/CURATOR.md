@@ -125,7 +125,8 @@ Ibn al-Haytham's plate, emptied because both his years are "about" and the plate
 
 - **W. von Jaworski.** No source gives a first name. The page had "Werner". It now has the initial.
 - **John Ralston.** His portrait and outside link are withdrawn. The study photograph is of the founder of
-  Neursantys, and no source read ties that man to the author at SDL in 1996.
+  Neursantys, and no source read ties that man to the author at SDL in 1996. On 22 November 2026 the owner
+  decided to leave the place empty: a likeness of the wrong man would be worse than none.
 - **Samuel Achilefu.** A reviewer half remembered a report of his death. A search found none.
 - **The Nixie tube.** The curator's first correction of the label said no record tied Hagelbarger to the tube.
   That was wrong. The Computer Museum's report of winter 1987 to 1988 lists the prototype as his gift and calls him

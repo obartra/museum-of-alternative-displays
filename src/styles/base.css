@@ -1261,3 +1261,12 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
   .hallhead .plate__no { font-size: clamp(5rem, 34vh, 9rem); }
   .lang__list { max-height: calc(100vh - 80px - var(--safe-b)); max-height: calc(100dvh - 80px - var(--safe-b)); }
 }
+
+/* the sound of the machine: a key for each recording, its words beside the sign, its length after them */
+.sound__list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.sound__list p { margin: 4px 0 0; }
+.sound__key { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; max-width: 100%; text-align: start; }
+.sound__key small { flex: none; color: var(--ink-2); font-weight: 600; }
+.sound__sign { flex: none; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: var(--wash); }
+.sound__sign svg { width: 14px; height: 14px; fill: currentColor; }
+.sound__key[aria-pressed="false"] .sound__sign svg + svg, .sound__key[aria-pressed="true"] .sound__sign svg:first-child { display: none; }
