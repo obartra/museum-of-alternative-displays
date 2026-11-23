@@ -1,4 +1,6 @@
+import { personByName } from './data/persons';
 import { pieceById } from './data/pieces';
+import { portraits } from './data/portraits';
 import { tourStops, type Stand, type Tour } from './data/tours';
 import { trailById } from './data/trails';
 import { esc } from './html';
@@ -75,6 +77,8 @@ const BREATH = 400;
 export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   const a = voice();
   let tour: Tour | undefined, at = 'start', here = '', closed = false;
+  // the name plates in the band: a design still being looked at, shown only with ?plate in the address
+  const plates = new URLSearchParams(location.search).has('plate');
   /** The stop a key has just sent the visitor to. Until they are there, the pieces they pass are not arrivals. */
   let aiming = '', aimed = 0;
   /** The part whose words wait for the visitor to reach its stop, and the clocks that end the wait. */
@@ -137,6 +141,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     <p class="guide__no" aria-live="polite"></p>
     <h2 class="guide__title" aria-live="polite"></h2>
     <p class="guide__place"></p>
+    ${plates ? '<p class="guide__plate"></p>' : ''}
   </div>
   <div class="guide__side">
     <div class="guide__keys">
@@ -163,6 +168,17 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     $('.guide__title').textContent = part.title;
     $('.guide__place').innerHTML = piece ? `<a href="${link(`piece-${piece.id}`)}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
     $('.guide__text').innerHTML = part.text.map((p) => `<p>${esc(p)}</p>`).join('');
+    // the people this stop is about, on a plate in the colour of the line: quiet until the guide says their name
+    const plate = root.querySelector<HTMLElement>('.guide__plate');
+    if (plate) {
+      const who = tour.parts.find((p) => p.id === at)?.who ?? [];
+      plate.hidden = !who.length;
+      plate.innerHTML = who.map((name) => {
+        const one = personByName(name), pic = portraits[name];
+        const face = pic ? `<img src="./people/small/${esc(pic.file)}" alt="" width="28" height="35">` : `<i aria-hidden="true">${esc(name.split(/\s+/).filter((w) => /^[A-Z]/.test(w)).map((w) => w[0]).slice(0, 2).join(''))}</i>`;
+        return `<a class="guide__name-plate" href="${one ? link(`person-${one.slug}`) : '#'}" data-said="${esc(name.split(/\s+/).pop()!)}">${face}<span>${esc(name)}</span></a>`;
+      }).join('');
+    }
     root.querySelectorAll<HTMLButtonElement>('.guide__dot').forEach((dot, k) => {
       dot.classList.toggle('is-past', k < i); dot.classList.toggle('is-now', k === i);
       if (k === i) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');
@@ -195,7 +211,9 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     // while she waits for the visitor to arrive she counts as speaking: the key that would stop her shows
     const has = !!clip(), on = !!waiting || (mine() && !a.paused && !a.ended);
     root.dataset.voice = !has ? 'none' : sound ? 'on' : 'off';
-    caption(cc && sound && has && mine() && !a.ended && (!a.paused || a.currentTime > 0) ? captionAt(tour, at, a.currentTime) : '');
+    const heard = has && mine() && !a.ended && (!a.paused || a.currentTime > 0) ? captionAt(tour, at, a.currentTime) : '';
+    caption(cc && sound ? heard : '');
+    for (const chip of root.querySelectorAll<HTMLElement>('.guide__name-plate')) chip.classList.toggle('is-said', !!heard && heard.includes(chip.dataset.said ?? '\u0000'));
     root.toggleAttribute('data-playing', on);
     root.toggleAttribute('data-told', mine() && a.ended);
     const key = root.querySelector<HTMLButtonElement>('[data-guide="play"]');
