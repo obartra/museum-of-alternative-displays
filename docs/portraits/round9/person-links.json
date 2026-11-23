@@ -1,0 +1,27 @@
+{
+  "M. C. Schlamp": {
+    "url": "https://www.aquestconsulting.com/team/",
+    "label": "Michael Schlamp, chemistry PhD, UC Berkeley; Aquest Consulting",
+    "kind": "profile"
+  },
+  "Everett Bickley": {
+    "url": "https://sirismm.si.edu/EADpdfs/NMAH.AC.0683.pdf",
+    "label": "Everett Bickley papers, biographical note, Smithsonian National Museum of American History",
+    "kind": "biography"
+  },
+  "Thomas Rasmussen Walgensten": {
+    "url": "https://lucerna.exeter.ac.uk/person/index.php?id=6003671&language=EN",
+    "label": "Thomas Rasmussen Walgensten, Lucerna, University of Exeter",
+    "kind": "record"
+  },
+  "Eric J. Seibel": {
+    "url": "https://www.engr.washington.edu/facultyfinder/eric-seibel",
+    "label": "Eric Seibel, College of Engineering, University of Washington",
+    "kind": "profile"
+  },
+  "Greg Dawe": {
+    "url": "https://chei.ucsd.edu/suncave/",
+    "label": "Greg Dawe and SunCAVE, Cultural Heritage Engineering Initiative, UC San Diego",
+    "kind": "record"
+  }
+}
