@@ -315,6 +315,12 @@ msgstr "Aanzichten"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "Ter nagedachtenis aan"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "Hele object"
@@ -5272,8 +5278,8 @@ msgstr "Hangt af van een levende speler, en moet met televisie en video om zijn 
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "Het model toont een doek in een houten frame, met een olielamp die erachter hangt. Drie platte figuren staan op stokjes tussen de lamp en het doek: een boom, een hert en een vogel. Van voren zie je alleen hun schaduwen. De boom en het hert worden tegen het doek gehouden, dus hun schaduwen zijn scherp. De vogel komt dicht langs het doek en gaat dan terug naar de lamp: zijn schaduw wordt groot en zacht, en het hert heft zijn kop. Kijk hoe de randen trillen met de vlam. Overdag zijn de schaduwen bleek, dus zet het daglicht uit. Druk dan op de knop Ga achter het scherm om de figuren zelf te zien, geperforeerd en beschilderd. Elke minuut sluit het irisdiafragma, een titelkaart noemt Lotte Reiniger en 1926, en een tweede bedrijf speelt in zwart karton onder blauw licht, zoals de getinte kopieën van haar tijd de nacht lieten zien."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "Het model toont een doek in een houten frame, met een olielamp die erachter hangt. Drie platte figuren staan op stokjes tussen de lamp en het doek: een boom, een hert en een vogel. Van voren zie je alleen hun schaduwen. De boom en het hert worden tegen het doek gehouden, dus hun schaduwen zijn scherp. De vogel komt dicht langs het doek en gaat dan terug naar de lamp: zijn schaduw wordt groot en zacht, en het hert heft zijn kop. Kijk hoe de randen trillen met de vlam. Overdag zijn de schaduwen bleek, dus zet het daglicht uit. Druk dan op de knop Ga achter het scherm om de figuren zelf te zien, geperforeerd en beschilderd. Elke minuut sluit het irisdiafragma, verschijnt een titelkaart ter nagedachtenis aan Lotte Reiniger, en een tweede bedrijf speelt in zwart karton onder blauw licht, zoals de getinte kopieën van haar tijd de nacht lieten zien."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

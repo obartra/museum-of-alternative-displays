@@ -1,3 +1,4 @@
+import { words } from '../words';
 import { esc } from '../html';
 import type { Media } from '../data/media';
 import { NEED_LABEL, PRINCIPLE_LABEL, STATUS_LABEL, type Hall, type Need, type Piece, type Principle, type SourceKind, type Status } from '../data/schema';
@@ -41,6 +42,7 @@ export async function useLang(code: Lang, keep = false): Promise<boolean> {
   let got = true;
   try { loc = load ? (await load()).default : null; lang = load ? code : 'en'; } catch { got = false; }
   document.documentElement.lang = langNow().tag;
+  words.homage = t('stage.homage');
   if (keep && got) try { localStorage.setItem('lang', lang); } catch { /* fine */ }
   return got;
 }

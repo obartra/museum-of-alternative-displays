@@ -319,6 +319,12 @@ msgstr "시점"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "추모"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "전체 보기"
@@ -5276,8 +5282,8 @@ msgstr "살아 있는 연희자가 있어야 하고, 텔레비전이나 비디�
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "모델은 나무 틀에 맨 천 막과, 그 뒤에 매단 기름 등불을 보여 줍니다. 등불과 천 사이에는 막대에 단 납작한 인형 셋이 있습니다. 나무와 사슴과 새입니다. 앞에서는 그림자만 보입니다. 나무와 사슴은 천에 바짝 대어 있어서 그림자가 또렷합니다. 새는 천 가까이를 지나갔다가 등불 쪽으로 돌아옵니다. 그러면 새의 그림자가 크고 부드러워지고, 사슴이 고개를 듭니다. 그림자의 가장자리가 불꽃을 따라 떨리는 것을 보세요. 낮에는 그림자가 옅으니 햇빛을 끄세요. 그런 다음 막 뒤로 가기 버튼을 누르면, 구멍을 뚫고 색을 칠한 인형 자체를 볼 수 있습니다. 1분마다 아이리스가 닫히고, 타이틀 카드가 Lotte Reiniger와 1926을 알리며, 파란 빛 아래 검은 판지로 된 제2막이 펼쳐집니다. 그녀의 시대에 착색 필름은 밤을 그렇게 보여 주었습니다."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "모델은 나무 틀에 맨 천 막과, 그 뒤에 매단 기름 등불을 보여 줍니다. 등불과 천 사이에는 막대에 단 납작한 인형 셋이 있습니다. 나무와 사슴과 새입니다. 앞에서는 그림자만 보입니다. 나무와 사슴은 천에 바짝 대어 있어서 그림자가 또렷합니다. 새는 천 가까이를 지나갔다가 등불 쪽으로 돌아옵니다. 그러면 새의 그림자가 크고 부드러워지고, 사슴이 고개를 듭니다. 그림자의 가장자리가 불꽃을 따라 떨리는 것을 보세요. 낮에는 그림자가 옅으니 햇빛을 끄세요. 그런 다음 막 뒤로 가기 버튼을 누르면, 구멍을 뚫고 색을 칠한 인형 자체를 볼 수 있습니다. 1분마다 아이리스가 닫히고, Lotte Reiniger를 추모하는 타이틀 카드가 나오고, 파란 빛 아래 검은 판지로 된 제2막이 펼쳐집니다. 그녀의 시대에 착색 필름은 밤을 그렇게 보여 주었습니다."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

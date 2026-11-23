@@ -58,6 +58,7 @@ export const en = {
   'stage.poster': '{name}, on its stand.',
   'stage.start': 'Start 3D',
   'stage.views': 'Views',
+  'stage.homage': 'In memory of',
   'stage.home': 'Whole piece',
   'stage.front': 'Front',
   'stage.stereo': '3D glasses',

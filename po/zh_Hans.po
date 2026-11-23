@@ -314,6 +314,12 @@ msgstr "视角"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "纪念"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "全貌"
@@ -5271,8 +5277,8 @@ msgstr "离不开活生生的艺人，还要同电视和录像争夺观众"
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "模型里有一个木框，框上绷着布幕，幕后吊着一盏油灯。灯和布之间有三个装在杆上的扁平影人：一棵树、一头鹿和一只鸟。从正面只能看到它们的影子。树和鹿贴着布，所以影子清晰。鸟先贴着布飞过，然后从靠灯的一侧飞回来：它的影子变得又大又软，鹿也抬起了头。留意影子的边缘怎样随着火焰颤动。白天影子很淡，所以请关掉日光。然后按“绕到幕后”按钮，看看镂空并上色的影人本身。每过一分钟，光圈就会合上，一张字幕卡写着Lotte Reiniger和1926，接着在蓝光下用黑卡纸演出第二幕，就像她那个时代的染色胶片表现夜晚那样。"
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "模型里有一个木框，框上绷着布幕，幕后吊着一盏油灯。灯和布之间有三个装在杆上的扁平影人：一棵树、一头鹿和一只鸟。从正面只能看到它们的影子。树和鹿贴着布，所以影子清晰。鸟先贴着布飞过，然后从靠灯的一侧飞回来：它的影子变得又大又软，鹿也抬起了头。留意影子的边缘怎样随着火焰颤动。白天影子很淡，所以请关掉日光。然后按“绕到幕后”按钮，看看镂空并上色的影人本身。每过一分钟，光圈就会合上，出现一张纪念Lotte Reiniger的字幕卡，接着在蓝光下用黑卡纸演出第二幕，就像她那个时代的染色胶片表现夜晚那样。"
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

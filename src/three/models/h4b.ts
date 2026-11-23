@@ -1,4 +1,5 @@
 import { G, M, Swarm, beam, halo, screen, THREE, type Built } from '../kit';
+import { words } from '../../words';
 import { lens, screws } from '../parts';
 import { landscape, type Land } from '../vista';
 
@@ -337,15 +338,18 @@ function laceWing(c: Ctx): void {
   pierce(c, () => { for (const [x, a] of [[44, 1.3], [62, 1.45], [80, 1.57], [98, 1.69], [116, 1.84]]) slit(c, x, 70, 50, 4, a); dot(c, 80, 124, 4); });
 }
 
-/** The title card the second act opens on, as the films of the 1920s did: a border of curls, her name and the year. */
+/** The title card the second act opens on, as the films of the 1920s did: a border of curls, words of remembrance, her name and her years. */
 function titleCard(c: Ctx, w: number, h: number): void {
   c.clearRect(0, 0, w, h); c.fillStyle = c.strokeStyle = '#000'; c.lineCap = 'round';
   // the frame: everything outside a rounded window is card, and curls grow in from its corners
   c.beginPath(); c.rect(0, 0, w, h); c.roundRect(70, 50, w - 140, h - 100, 60); c.fill('evenodd');
   c.lineWidth = 7; for (const [x, y, d] of [[110, 92, 1], [w - 110, 92, -1], [110, h - 92, -1], [w - 110, h - 92, 1]]) { curl(c, x, y, 34, 1.3, 0, d); curl(c, x + d * 70, y, 18, 1.1, Math.PI, -d); }
   c.textAlign = 'center'; c.textBaseline = 'middle';
-  c.font = '700 96px "Sofia Sans Variable", "Sofia Sans", Georgia, serif'; c.fillText('Lotte Reiniger', w / 2, h / 2 - 22);
-  c.font = '400 58px "Sofia Sans Variable", "Sofia Sans", Georgia, serif'; c.fillText('1926', w / 2, h / 2 + 70);
+  // in memory, not a credit: the words say so, and the years are her life, not a date for this piece
+  const face = '"Sofia Sans Variable", "Sofia Sans", Georgia, serif';
+  c.font = `400 50px ${face}`; c.fillText(words.homage ?? 'In memory of', w / 2, h / 2 - 104);
+  c.font = `700 96px ${face}`; c.fillText('Lotte Reiniger', w / 2, h / 2 - 22);
+  c.font = `400 54px ${face}`; c.fillText('1899\u20131981', w / 2, h / 2 + 70);
   c.lineWidth = 4; c.beginPath(); c.moveTo(w / 2 - 230, h / 2 + 22); c.lineTo(w / 2 - 70, h / 2 + 22); c.moveTo(w / 2 + 70, h / 2 + 22); c.lineTo(w / 2 + 230, h / 2 + 22); c.stroke();
   curl(c, w / 2 - 248, h / 2 + 10, 12, 1, 0, -1); curl(c, w / 2 + 248, h / 2 + 10, 12, 1, Math.PI, 1);
 }

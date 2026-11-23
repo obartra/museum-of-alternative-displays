@@ -316,6 +316,12 @@ msgstr "Виды"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "Памяти"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "Весь экспонат"
@@ -5273,8 +5279,8 @@ msgstr "Зависит от живого исполнителя и вынужд�
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "Модель показывает тканевый экран в деревянной раме, за которым висит масляная лампа. Между лампой и тканью стоят на палочках три плоские фигуры: дерево, олень и птица. Спереди видны только их тени. Дерево и олень прижаты к ткани, поэтому их тени четкие. Птица проходит близко к ткани, а потом отходит к лампе: ее тень становится большой и мягкой, а олень поднимает голову. Посмотрите, как края дрожат вместе с пламенем. Днем тени бледные, поэтому выключите дневной свет. Потом нажмите кнопку «Зайдите за экран», чтобы увидеть сами фигуры, перфорированные и раскрашенные. Каждую минуту диафрагма-ирис закрывается, титр называет Лотте Райнигер и 1926 год, и второй акт идет в черном картоне при синем свете, как тонированные копии ее времени показывали ночь."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "Модель показывает тканевый экран в деревянной раме, за которым висит масляная лампа. Между лампой и тканью стоят на палочках три плоские фигуры: дерево, олень и птица. Спереди видны только их тени. Дерево и олень прижаты к ткани, поэтому их тени четкие. Птица проходит близко к ткани, а потом отходит к лампе: ее тень становится большой и мягкой, а олень поднимает голову. Посмотрите, как края дрожат вместе с пламенем. Днем тени бледные, поэтому выключите дневной свет. Потом нажмите кнопку «Зайдите за экран», чтобы увидеть сами фигуры, перфорированные и раскрашенные. Каждую минуту диафрагма-ирис закрывается, появляется титр в память о Лотте Райнигер, и второй акт идет в черном картоне при синем свете, как тонированные копии ее времени показывали ночь."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

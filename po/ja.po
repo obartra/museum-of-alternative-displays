@@ -319,6 +319,12 @@ msgstr "視点"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "追悼"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "全体"
@@ -5276,8 +5282,8 @@ msgstr "生身の演者がいなければ成り立たず、テレビやビデオ
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "モデルは、木の枠に張った布の幕と、そのうしろに吊るした油のランプを見せています。ランプと布のあいだに、棒のついた平たい人形が三つあります。木と鹿と鳥です。正面からは影しか見えません。木と鹿は布にぴったりつけてあるので、影はくっきりしています。鳥は布のすぐそばを通り過ぎ、それからランプの側を通って戻ってきます。すると鳥の影は大きく、やわらかくなり、鹿が頭を上げます。影の縁が炎と一緒にふるえるのを見てください。昼は影が薄いので、日光を消してください。それから「幕の裏へ回る」ボタンを押すと、透かし彫りと彩色をほどこした人形そのものが見えます。1分ごとにアイリスが閉じ、タイトルカードがLotte Reinigerと1926を告げ、青い光の下で黒いボール紙の第二幕が演じられます。彼女の時代の着色フィルムは、夜をそう見せていました。"
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "モデルは、木の枠に張った布の幕と、そのうしろに吊るした油のランプを見せています。ランプと布のあいだに、棒のついた平たい人形が三つあります。木と鹿と鳥です。正面からは影しか見えません。木と鹿は布にぴったりつけてあるので、影はくっきりしています。鳥は布のすぐそばを通り過ぎ、それからランプの側を通って戻ってきます。すると鳥の影は大きく、やわらかくなり、鹿が頭を上げます。影の縁が炎と一緒にふるえるのを見てください。昼は影が薄いので、日光を消してください。それから「幕の裏へ回る」ボタンを押すと、透かし彫りと彩色をほどこした人形そのものが見えます。1分ごとにアイリスが閉じ、Lotte Reinigerを偲ぶタイトルカードが現れ、青い光の下で黒いボール紙の第二幕が演じられます。彼女の時代の着色フィルムは、夜をそう見せていました。"
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

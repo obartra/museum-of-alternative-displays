@@ -321,6 +321,12 @@ msgstr "Vistas"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "En memoria de"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "Pieza entera"
@@ -5278,8 +5284,8 @@ msgstr "Depende de un intérprete vivo, y tiene que competir con la televisión 
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "El modelo muestra una pantalla de tela en un bastidor de madera, con una lámpara de aceite colgada detrás. Tres figuras planas se sostienen con varillas entre la lámpara y la tela: un árbol, un ciervo y un pájaro. Desde delante solo ves sus sombras. El árbol y el ciervo están pegados a la tela, y por eso dan sombras nítidas. El pájaro pasa junto a la tela y después vuelve por el lado de la lámpara: su sombra se hace grande y blanda, y el ciervo levanta la cabeza. Fíjate en cómo tiemblan los bordes con la llama. De día las sombras son pálidas, así que apaga la luz del día. Después pulsa el botón «Pasa detrás de la pantalla» para ver las figuras mismas, caladas y pintadas. Cada minuto el iris se cierra, un rótulo anuncia a Lotte Reiniger y 1926, y se representa un segundo acto en cartón negro bajo una luz azul, como las copias viradas de su época mostraban la noche."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "El modelo muestra una pantalla de tela en un bastidor de madera, con una lámpara de aceite colgada detrás. Tres figuras planas se sostienen con varillas entre la lámpara y la tela: un árbol, un ciervo y un pájaro. Desde delante solo ves sus sombras. El árbol y el ciervo están pegados a la tela, y por eso dan sombras nítidas. El pájaro pasa junto a la tela y después vuelve por el lado de la lámpara: su sombra se hace grande y blanda, y el ciervo levanta la cabeza. Fíjate en cómo tiemblan los bordes con la llama. De día las sombras son pálidas, así que apaga la luz del día. Después pulsa el botón «Pasa detrás de la pantalla» para ver las figuras mismas, caladas y pintadas. Cada minuto el iris se cierra, aparece un rótulo en memoria de Lotte Reiniger, y se representa un segundo acto en cartón negro bajo una luz azul, como las copias viradas de su época mostraban la noche."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.

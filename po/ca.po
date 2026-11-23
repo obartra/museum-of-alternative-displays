@@ -319,6 +319,12 @@ msgstr "Vistes"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.homage"
+msgid "In memory of"
+msgstr "En record de"
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.home"
 msgid "Whole piece"
 msgstr "Peça sencera"
@@ -5276,8 +5282,8 @@ msgstr "Depèn d'un intèrpret viu, i ha de competir amb la televisió i el víd
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
-msgstr "El model mostra una pantalla de tela en un bastidor de fusta, amb una làmpada d'oli penjada al darrere. Tres figures planes s'aguanten amb varetes entre la làmpada i la tela: un arbre, un cérvol i un ocell. Des de davant només en veus les ombres. L'arbre i el cérvol estan arrambats a la tela, i per això fan ombres nítides. L'ocell passa arran de la tela i després torna pel costat de la làmpada: la seva ombra es fa gran i tova, i el cérvol aixeca el cap. Fixa't com les vores tremolen amb la flama. De dia les ombres són pàl·lides, de manera que apaga la llum del dia. Després prem el botó «Ves darrere la pantalla» per veure les figures mateixes, calades i pintades. Cada minut l'iris es tanca, un cartell anuncia Lotte Reiniger i 1926, i s'hi representa un segon acte en cartró negre sota una llum blava, com les còpies virades de la seva època mostraven la nit."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card in memory of Lotte Reiniger appears, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "El model mostra una pantalla de tela en un bastidor de fusta, amb una làmpada d'oli penjada al darrere. Tres figures planes s'aguanten amb varetes entre la làmpada i la tela: un arbre, un cérvol i un ocell. Des de davant només en veus les ombres. L'arbre i el cérvol estan arrambats a la tela, i per això fan ombres nítides. L'ocell passa arran de la tela i després torna pel costat de la làmpada: la seva ombra es fa gran i tova, i el cérvol aixeca el cap. Fixa't com les vores tremolen amb la flama. De dia les ombres són pàl·lides, de manera que apaga la llum del dia. Després prem el botó «Ves darrere la pantalla» per veure les figures mateixes, calades i pintades. Cada minut l'iris es tanca, apareix un cartell en record de Lotte Reiniger, i s'hi representa un segon acte en cartró negre sota una llum blava, com les còpies virades de la seva època mostraven la nit."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.
