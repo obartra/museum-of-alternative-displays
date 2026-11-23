@@ -480,6 +480,8 @@ export function cave(): Built {
 
   return {
     root, inDark: 'glows', glow: 0xb0a8ff, view: [30, 16], zoom: 1.25,
+    // every pixel of the four screens follows a ray through a small world: a phone draws half as many each way
+    thrift: 0.5,
     views: {
       inside: { at: [0.05, Y0 + 1.62, 1.2], to: [0, Y0 + 1.3, -H], fov: 72, play: 0.1 },
       behind: { at: [MX + 1.9, Y0 + 4.6, 5.6], to: [MX - 0.75, MY - 0.2, -0.4], fov: 46, play: 0.25 },

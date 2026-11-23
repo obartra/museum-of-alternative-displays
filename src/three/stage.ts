@@ -54,11 +54,16 @@ export class Stage {
   private free?: THREE.Vector3;
   /** Called the first time the visitor turns the piece. */
   onTouch?: () => void;
+  /** Pixels of the picture to one of the page, and whether this is a phone or a tablet, where a costly piece gets fewer. */
+  private ratio = 1;
+  private sparing = false;
 
   constructor(private canvas: HTMLCanvasElement, interactive: boolean) {
     // the stencil buffer is what lets a reflection show only inside its pane, and a scene only through its lens
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, stencil: true, preserveDrawingBuffer: !interactive, powerPreference: 'high-performance' });
-    this.renderer.setPixelRatio(interactive ? Math.min(window.devicePixelRatio || 1, 2) : 1);
+    this.ratio = interactive ? Math.min(window.devicePixelRatio || 1, 2) : 1;
+    this.sparing = interactive && matchMedia('(pointer: coarse)').matches;
+    this.renderer.setPixelRatio(this.ratio);
     this.renderer.toneMapping = THREE.NeutralToneMapping;
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFShadowMap;
@@ -167,6 +172,8 @@ export class Stage {
   /** Put a piece on the plinth, scaled to fit, in front of its hall colour. */
   setPiece(b: Built, hallColour: string, hallNo?: number): void {
     this.clear();
+    const ratio = this.sparing ? Math.max(1, this.ratio * (b.thrift ?? 1)) : this.ratio;
+    if (this.renderer.getPixelRatio() !== ratio) { this.renderer.setPixelRatio(ratio); this.owed = 3; }
     const root = b.root;
     // what is only seen through a window (a reflection, a scene behind a lens) takes up no room on the plinth
     const aside: [THREE.Object3D, THREE.Object3D][] = [];

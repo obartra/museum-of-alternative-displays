@@ -52,6 +52,11 @@ export interface Built {
   surface?: HTMLCanvasElement;
   /** Places to look from, by the id they have in src/data/views.ts. */
   views?: Record<string, Spot>;
+  /**
+   * For a piece whose picture is worked out afresh for every pixel: the share of the usual pixels across that the
+   * stand draws it with on a phone or a tablet. 0.5 is half as many each way, a quarter of the work.
+   */
+  thrift?: number;
 }
 
 export interface Screen {

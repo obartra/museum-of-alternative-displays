@@ -194,6 +194,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     poster: posterOf,
     lights: () => lightsOn,
     paused: () => !!gallery?.isPaused,
+    wait: () => coarse,
     // the hall is covered: it stops drawing, and its keys and its canvas are out of reach until it is uncovered
     onOpen: () => { gallery?.stop(); host.classList.add('is-near'); if (canvas) canvas.inert = true; layLook(); layWho(); },
     onShut: () => {

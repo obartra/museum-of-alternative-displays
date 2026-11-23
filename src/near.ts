@@ -30,6 +30,8 @@ export interface NearOptions {
   /** Day or night, and whether what moves by itself has been stopped, at this moment. */
   lights(): boolean;
   paused(): boolean;
+  /** A phone: the still picture stands in, and the model is made only when the visitor asks for it. */
+  wait(): boolean;
   /** The look covers the hall, or has uncovered it again. */
   onOpen(): void;
   onShut(): void;
@@ -68,6 +70,11 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
   let piece = '', lent: Lent | undefined, live = false, turn = 0, free = false, hidden = false;
   const tell = (text: string) => { hint.textContent = text; hint.style.opacity = text ? '1' : '0'; };
   const places = () => viewsOf(piece).map((v) => ({ ...v, ...said.view(piece, v) }));
+  /** The keys along the foot: the whole piece, its front, and its own places to look from. Dead until the model runs. */
+  const keys = () => {
+    const list = places();
+    return `<button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${list.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${list.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}`;
+  };
 
   /** Look from one of the piece's own places. The same button again, or null, goes back to the whole piece. */
   const setView = (id: string | null) => {
@@ -117,6 +124,13 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
     const el = (e.target as Element).closest<HTMLElement>('[data-view], [data-act], .near__back');
     if (!el || !root.contains(el)) return;
     if (el.classList.contains('near__back')) return near.shut();
+    if (el.dataset.act === 'start') {
+      if (!piece || live) return;
+      views.innerHTML = keys();
+      tell(t('stage.loading'));
+      root.querySelector<HTMLElement>('.near__back')?.focus({ preventScroll: true });
+      return void run(piece, turn);
+    }
     const stage = lent?.stage;
     if (!stage || !live) return;
     if (el.dataset.view) setView(el.dataset.view);
@@ -144,15 +158,16 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
       const mine = ++turn;
       lent?.stage.stop();
       piece = id; live = false;
-      const list = places();
-      views.innerHTML = `<button type="button" class="btn" data-act="home" disabled>${tx('stage.home')}</button>${list.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front" disabled>${tx('stage.front')}</button>`}${list.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false" disabled>${esc(v.label)}</button>`).join('')}`;
+      // on a phone the hall already holds one 3D picture: a second one is made when it is asked for, not before
+      const wait = o.wait();
+      views.innerHTML = wait ? `<button type="button" class="btn near__start" data-act="start">${tx('stage.start')}</button>` : keys();
       say.textContent = ''; say.removeAttribute('lang');
       still.src = o.poster(id, o.lights()); still.hidden = false;
       lent?.canvas.classList.remove('is-live');
       root.hidden = false;
-      tell(t('stage.loading'));
+      tell(wait ? '' : t('stage.loading'));
       o.onOpen();
-      void run(id, mine);
+      if (!wait) void run(id, mine);
     },
     shut() {
       if (!piece) return;
