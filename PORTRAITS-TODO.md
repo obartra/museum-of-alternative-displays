@@ -1,5 +1,7 @@
 # Portraits still to do
 
+The current request is [docs/portraits/REQUEST-round9.md](docs/portraits/REQUEST-round9.md).
+
 Feedback on the 42 drawings of round 6, one by one and as a set, is in [docs/portraits/v6/REVIEW.md](docs/portraits/v6/REVIEW.md): what to export larger, which five are too pale, which poses and eyes to redo, and three things to put right in the records.
 
 The labels name **169 people**. **130 have portraits; 39 remain empty**: the 17 harder cases below, which earlier rounds could not settle, and 22 people added with the newest pieces, listed first. The CAVE supplement adds Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, with [source records and review](docs/portraits/cave/README.md). Greg Dawe is also on the CAVE label and awaits a portrait; the earlier Ralston drawing was withdrawn on main because its identity chain was not established. Counts describe repository data.
