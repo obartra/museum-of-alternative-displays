@@ -413,8 +413,8 @@ iPhone in particular, how the bar at the top of an installed copy looks by night
 
 ## Known gaps
 
-- 28 of the 55 pieces still rest only on encyclopedia articles. Replacing those with primary
-  sources is the main open job. `npm run validate` prints the current count.
+- One of the 56 pieces still rests only on encyclopedia articles. `npm run validate` prints the
+  current count.
 - Not yet in the collection: falling-water curtains, aerial imaging plates, grating light
   valves, switchable privacy glass, ferrofluid, light-activated paints.
 - The models were reviewed against text sources, not against photographs. See
