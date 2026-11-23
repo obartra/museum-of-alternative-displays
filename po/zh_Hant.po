@@ -3254,8 +3254,6 @@ msgstr "以真實速度觀看"
 
 #: hall-2/cathode-ray-tube
 #. Line shown while the visitor is at that place.
-#, fuzzy
-#| msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
 msgctxt "piece.cathode-ray-tube.view.speed.hint"
 msgid "At sixty fields a second the band is too fast to see. The screen's glow and the eye make the passes one steady picture."
 msgstr "每秒六十場時，光帶快得看不見。螢幕的餘輝和眼睛把一次次掃描連成一幅穩定的畫面。"
