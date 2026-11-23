@@ -14,6 +14,7 @@
  *
  * `sitemap.xml` lists every page. `404.html` is what the server sends for an address it does not have.
  */
+import { brief } from '../src/brief';
 import { halls } from '../src/data/halls';
 import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
@@ -131,7 +132,7 @@ ${ways}`,
   for (const hall of halls) {
     const name = hallName(hall), near = [halls[hall.id - 2], halls[hall.id]].filter((x) => !!x);
     out.push({
-      name: `hall-${hall.id}`, path: `hall/${hall.id}/`, title: titled(w.ui('hall.title', { n: hall.id, name: w.hall(hall).name })), short: name, says: w.hall(hall).intro, kind: 'CollectionPage', crumbs: [home, [name, `hall/${hall.id}/`]],
+      name: `hall-${hall.id}`, path: `hall/${hall.id}/`, title: titled(w.ui('hall.title', { n: hall.id, name: w.hall(hall).name })), short: name, says: brief(w.hall(hall).intro), kind: 'CollectionPage', crumbs: [home, [name, `hall/${hall.id}/`]],
       body: `<h1>${esc(name)}</h1>
 <p>${esc(w.hall(hall).intro)}</p>
 <ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}. ${esc(w.piece(p).lead)}</li>`).join('')}</ul>
@@ -212,7 +213,7 @@ ${ways}`,
     const life = bio?.born ? (bio.died ? w.ui('person.life', { born: bio.born, died: Array.isArray(bio.died) ? w.ui('person.either', { a: bio.died[0], b: bio.died[1] }) : bio.died }) : w.ui('person.born', { born: bio.born })) : '';
     const path = `person/${who.slug}/`;
     out.push({
-      name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: told?.own ? told.about.join(' ') : lines[0], kind: 'ProfilePage',
+      name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: brief(lines[0]), kind: 'ProfilePage',
       crumbs: [home, [w.ui('nav.people'), 'people/'], [who.name, path]],
       ...(pic ? { pictures: [`people/${pic.file}`] } : {}),
       more: {
@@ -279,10 +280,12 @@ function swap(page: string, find: RegExp, put: string): string {
  * engine is told to keep the page out of its list.
  */
 function missing(page: string, site: string): string {
-  const find = `<script>(function(){var site=${JSON.stringify(site)},root=location.href.indexOf(site)===0?site:location.origin+'/'+(location.pathname.split('/')[1]||'')+'/';if(root.slice(-2)==='//')root=location.origin+'/';document.write('<base href="'+root+'">');try{history.replaceState(null,'',root+'#missing')}catch(e){}document.documentElement.classList.add('js')})()</script>`;
+  const find = `<script>(function(){var site=${JSON.stringify(site)},root=location.href.indexOf(site)===0?site:location.origin+'/'+(location.pathname.split('/')[1]||'')+'/';if(root.slice(-2)==='//')root=location.origin+'/';document.write('<base href="'+root+'">');document.documentElement.classList.add('js')})()</script>`;
   let html = swap(page, /<base href="\.\/">\s*<script>[^<]*<\/script>/, find);
   html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(en['title.page'].replace('{page}', en['missing.title']).replace('{site}', en['site.name']))}</title>\n<meta name="robots" content="noindex">`);
   html = swap(html, /<link rel="canonical" href="[^"]*">/, '');
+  // the browser looks ahead for the page's own files before the base is set, so those are written from the museum's folder
+  html = html.replace(/(href|src)="\.\/(assets|fonts|icons|favicon)/g, `$1="${new URL(site).pathname}$2`);
   return swap(html, /<div id="app"><\/div>/, `<div id="app"><main id="main" data-plain class="stack prose" style="max-width: 70ch; margin: 0 auto; padding: 24px 16px"><h1>${esc(en['missing.title'])}</h1><p><a href="${site}">${esc(en['site.name'])}</a></p></main></div>`);
 }
 
@@ -292,6 +295,7 @@ function missing(page: string, site: string): string {
  * The address of the museum is read from the page's canonical link. `root` is the entrance in English: the page
  * itself, with its words written in.
  */
+
 export function staticPages(page: string, locales: Record<string, Locale>, changed: string): { root: string; files: { fileName: string; source: string }[] } {
   const site = /<link rel="canonical" href="([^"]+)">/.exec(page)?.[1];
   if (!site) throw new Error('static pages: the page names no canonical address');

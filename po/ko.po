@@ -1399,6 +1399,12 @@ msgstr "이 주소에는 아무것도 없습니다"
 
 #: interface
 #. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
+msgctxt "ui.missing.near"
+msgid "Did you mean {a}{name}{/a}?"
+msgstr "{a}{name}{/a}을(를) 찾으셨나요?"
+
+#: interface
+#. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
 msgctxt "ui.missing.text"
 msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}."
 msgstr "이 주소에는 전시실도 전시품도 없습니다. {a}입구로 돌아가거나{/a} {b}색인에서 찾아보세요{/b}."

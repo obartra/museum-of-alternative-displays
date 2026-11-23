@@ -1,3 +1,4 @@
+import { brief } from './brief';
 import './styles/fonts.css';
 import './styles/tokens.css';
 import './styles/base.css';
@@ -19,7 +20,7 @@ import { trailById, trails, type Trail } from './data/trails';
 import { tourById, tourStops, type Tour } from './data/tours';
 import { visit } from './data/visit';
 import { findKept, greet, hush, justAsked, keepTrail, preview, resumed, spokenMinutes, tourAt, tourName, tourPageHtml, toursNow } from './tour';
-import { goTo, langOfAddress, link, nameNow, settle, wirePlaces } from './place';
+import { goTo, langOfAddress, link, nameNow, settle, typedPath, wirePlaces } from './place';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
 import { elsewhereItem, lifeOf, portraitCredit, sourceItems } from './profile';
@@ -285,7 +286,7 @@ function hallView(n: number): void {
   if (!hall) return notFound();
   const words = said.hall(hall), named = (x: typeof hall) => ({ n: x.id, name: said.hall(x).name });
   document.title = titled(t('hall.title', { n, name: words.name }));
-  says(words.intro);
+  says(brief(words.intro));
   const list = inHall(n);
   const prev = halls[n - 2], next = halls[n];
   shell(`
@@ -314,7 +315,7 @@ const portraitHtml = (name: string, named = false): string => {
   const pic = portraits[name];
   if (!pic) return '';
   const credit = portraitCredit(name);
-  return `<figure class="person__pic"><img src="./people/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}${credit}</figcaption></figure>`;
+  return `<figure class="person__pic"><img src="./people/small/${esc(pic.file)}" alt="${esc(name)}" width="84" height="105" loading="lazy" decoding="async"><figcaption>${named ? `<span class="person__name">${esc(name)}</span>` : ''}${credit}</figcaption></figure>`;
 };
 /** A name, as a link to the person's own page in the museum. What is written of them elsewhere is linked from there. */
 const personNameHtml = (name: string): string => {
@@ -339,7 +340,7 @@ function personView(slug: string): void {
   document.title = titled(who.name);
   // the account in the language in use or, where it is not translated yet, in English and marked as English
   const about = bio ? said.bio(who.slug, bio.about) : [], english = bio ? standIn.bio(who.slug, bio.about) : '';
-  says(bio && !english ? about.join(' ') : lines[0]);
+  says(brief(lines[0]));
   const life = lifeOf(bio);
   const told = toursNow();
   // the guided tours that tell of this person, each on the card the entrance shows it on
@@ -927,7 +928,27 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
 function notFound(): void {
   lost = true;
   document.title = titled(t('missing.page'));
-  shell(`<div class="pagehead"><h1 class="title">${tx('missing.title')}</h1><p class="prose">${rich('missing.text', { a: link(''), b: link('index') })}</p></div>`);
+  // one letter off a piece or a person, and the page names the place the visitor most likely meant
+  const typed = typedPath(), m = /^(piece|person)\/([a-z0-9-]+)$/.exec(typed);
+  const near = m ? closest(m[2], m[1] === 'piece' ? pieces.map((p) => p.id) : persons.map((x) => x.slug)) : undefined;
+  const meant = near ? `<p class="prose">${rich('missing.near', { a: link(`${m![1]}-${near}`) }, { name: m![1] === 'piece' ? said.piece(pieces.find((p) => p.id === near)!).name : personBySlug(near)!.name })}</p>` : '';
+  shell(`<div class="pagehead"><h1 class="title">${tx('missing.title')}</h1>${meant}<p class="prose">${rich('missing.text', { a: link(''), b: link('index') })}</p></div>`);
+}
+
+/** The word in `list` fewest edits away from `word`, if it is no more than two edits and a third of the word away. */
+function closest(word: string, list: string[]): string | undefined {
+  const far = (a: string, b: string) => {
+    let row = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const next = [i];
+      for (let j = 1; j <= b.length; j++) next[j] = Math.min(row[j] + 1, next[j - 1] + 1, row[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      row = next;
+    }
+    return row[b.length];
+  };
+  let best: string | undefined, least = Math.min(2, Math.ceil(word.length / 3));
+  for (const w of list) { const d = far(word, w); if (d <= least) { best = w; least = d - 1; } }
+  return best;
 }
 
 // ---------- contact sheet, for checking every model at once ----------
@@ -1015,6 +1036,14 @@ function route(): void {
     seat = ++newest;
     try { history.replaceState({ ...(history.state as object | null ?? {}), seat }, ''); } catch { /* the place is not kept */ }
     window.scrollTo(0, 0);
+  }
+  // After a step inside the site the link that was pressed is gone, and focus with it. A screen reader or a
+  // keyboard then starts at the new page's heading, as it would on a page fresh from the server. The first page
+  // and the walk keep the browser's own start.
+  const was = document.activeElement;
+  if (shown !== '' && !walk && !toured && !visited && (!was || was === document.body || !was.isConnected)) {
+    const h = app.querySelector<HTMLElement>('h1');
+    if (h) { if (!h.hasAttribute('tabindex')) h.tabIndex = -1; h.focus({ preventScroll: true }); }
   }
   document.body.dataset.ready = '1';
   shown = name;

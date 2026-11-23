@@ -62,7 +62,7 @@ export function openWho(card: HTMLElement, sheet: HTMLDialogElement, o: WhoOptio
     const who = personByName(name), pic = portraits[name];
     // a face where the museum has a portrait, the initials where it has none. The name is there for a screen
     // reader, and under the pointer
-    const inner = `${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : `<i class="walk__ini" aria-hidden="true">${esc(initials(name))}</i>`}<span>${esc(name)}</span>`;
+    const inner = `${pic ? `<img src="./people/small/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : `<i class="walk__ini" aria-hidden="true">${esc(initials(name))}</i>`}<span>${esc(name)}</span>`;
     return who ? `<button type="button" class="walk__face" data-who="${who.slug}" aria-haspopup="dialog" title="${esc(name)}">${inner}</button>` : `<span class="walk__face" title="${esc(name)}">${inner}</span>`;
   };
 
@@ -73,7 +73,7 @@ export function openWho(card: HTMLElement, sheet: HTMLDialogElement, o: WhoOptio
     const p = pieceById(piece)!;
     const rows = names.map((name) => {
       const who = personByName(name), pic = portraits[name], life = lifeOf(bios[name]);
-      const inner = `${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" loading="lazy" decoding="async">` : '<i aria-hidden="true"></i>'}<span><b>${esc(name)}</b>${life ? `<small>${life}</small>` : ''}</span>`;
+      const inner = `${pic ? `<img src="./people/small/${esc(pic.file)}" alt="" width="84" height="105" loading="lazy" decoding="async">` : '<i aria-hidden="true"></i>'}<span><b>${esc(name)}</b>${life ? `<small>${life}</small>` : ''}</span>`;
       return `<li>${who ? `<button type="button" class="sheet__person" data-who="${who.slug}">${inner}</button>` : `<span class="sheet__person">${inner}</span>`}</li>`;
     }).join('');
     return `${bar(false)}<div class="sheet__body" data-hall="${p.hall}"><h2 class="sheet__title" id="walk-sheet-title" tabindex="-1">${tx('walk.who')}</h2><p class="sheet__piece"><b class="walk__no" aria-hidden="true">${p.hall}</b><span>${esc(said.piece(p).name)}</span></p><ul class="sheet__list">${rows}</ul></div>`;

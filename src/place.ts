@@ -57,7 +57,11 @@ export function placeOf(url: URL | Location = location): { name: string; lang: L
 /** The name of the place the address bar shows: `piece-nixie-tube`, `hall-2`, `index`, `walk`, and '' for the entrance. */
 export const nameNow = (): string => placeOf()?.name ?? 'missing';
 /** The language the address bar names, or '' where it names none. */
-export const langOfAddress = (): Lang | '' => placeOf()?.lang ?? '';
+export const langOfAddress = (): Lang | '' =>
+  placeOf()?.lang ?? (location.origin === HOME.origin && location.pathname.startsWith(HOME.pathname) ? split(location.pathname.slice(HOME.pathname.length)).lang : '');
+/** What the visitor typed after the museum's folder and its language, for an address that is no place: `piece/split-flp`. */
+export const typedPath = (): string =>
+  location.pathname.startsWith(HOME.pathname) ? split(location.pathname.slice(HOME.pathname.length)).rest.replace(/\/+$/, '') : '';
 
 /**
  * The address of a place, to write in a link or to go to. It is written from the museum's folder, in the language

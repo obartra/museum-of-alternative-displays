@@ -1400,6 +1400,12 @@ msgstr "Rien à cette adresse"
 
 #: interface
 #. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
+msgctxt "ui.missing.near"
+msgid "Did you mean {a}{name}{/a}?"
+msgstr "Vouliez-vous dire {a}{name}{/a} ?"
+
+#: interface
+#. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
 msgctxt "ui.missing.text"
 msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}."
 msgstr "Il n’y a ni galerie ni pièce à cette adresse. {a}Retournez à l’entrée{/a} ou {b}consultez l’index{/b}."

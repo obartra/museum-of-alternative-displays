@@ -76,7 +76,7 @@ export function buildDecals(o: DecalOptions): { mesh?: THREE.Mesh; hung: Hung[] 
       c.putImageData(px, cx, cy);
       tex.needsUpdate = true;
     };
-    img.src = `./people/${portraits[d.name].file}`;
+    img.src = `./people/${o.lite ? 'small/' : ''}${portraits[d.name].file}`;
     // the wall faces the hall, so left and right are turned about for whoever stands in front of it
     const x0 = d.x + d.w / 2, x1 = d.x - d.w / 2, y0 = FOOT, y1 = FOOT + d.w * TALL, z = HALF - 0.012, n = pos.length / 3;
     pos.push(x0, y0, z, x1, y0, z, x1, y1, z, x0, y1, z);

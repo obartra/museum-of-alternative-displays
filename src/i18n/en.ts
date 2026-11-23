@@ -243,6 +243,7 @@ export const en = {
 
   'missing.page': 'Not found',
   'missing.title': 'Nothing at this address',
+  'missing.near': 'Did you mean {a}{name}{/a}?',
   'missing.text': 'There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}.',
 
   'about.app': 'The museum as an app',

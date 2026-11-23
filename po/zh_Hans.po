@@ -1394,6 +1394,12 @@ msgstr "这个地址下什么也没有"
 
 #: interface
 #. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
+msgctxt "ui.missing.near"
+msgid "Did you mean {a}{name}{/a}?"
+msgstr "你要找的是不是{a}{name}{/a}？"
+
+#: interface
+#. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
 msgctxt "ui.missing.text"
 msgid "There is no hall or piece at this address. {a}Go back to the entrance{/a} or {b}look in the index{/b}."
 msgstr "这个地址下没有展厅，也没有展品。{a}返回入口{/a}，或者{b}到索引里找一找{/b}。"
