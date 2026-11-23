@@ -182,6 +182,6 @@ export const h2: Piece[] = [
     good: ['Is very bright, and big enough for a stadium', 'Uses parts that any electrician stocks'],
     bad: ['Bulbs fail one at a time, and each failed bulb is a missing dot', 'Runs hot and uses a lot of power', 'Is coarse: it shows a few characters and no pictures'],
     look: 'Watch the minute change, or watch the colon blink. The lamps do not switch on and off sharply. They brighten and fade.',
-    sources: [wiki('Text_display', 'Text display'), wiki('History_of_display_technology', 'History of display technology')],
+    sources: [wiki('Text_display', 'Text display'), wiki('History_of_display_technology', 'History of display technology'), src('archive', 'The Display Field Guide, written in 1998 for the newsgroup alt.tv.game-shows: the eggcrate, first seen in 1968, and the shows that used it', 'http://tpirepguide.com/qwizx/gameshows/dfg/dfg.html')],
   },
 ];
