@@ -2265,127 +2265,127 @@ msgstr "線画。丸い穴が何列も並んだ板、コイルの横に磁石の
 #. Name of a piece.
 msgctxt "piece.water-curtain.name"
 msgid "Water curtain display"
-msgstr ""
+msgstr "ウォーターカーテン"
 
 #: hall-1/water-curtain
 #. Other names the piece goes by.
 msgctxt "piece.water-curtain.aka"
 msgid "Digital water curtain, bit.fall"
-msgstr ""
+msgstr "デジタル・ウォーターカーテン、bit.fall"
 
 #: hall-1/water-curtain
 #. The date of the piece, as its label gives it.
 msgctxt "piece.water-curtain.yearText"
 msgid "patent applied for in 1978"
-msgstr ""
+msgstr "1978年に特許出願"
 
 #: hall-1/water-curtain
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.water-curtain.origin"
 msgid "A fountain of drops released by computer, United States patent applied for in 1978. Julius Popp's bit.fall, Germany, from 2001"
-msgstr ""
+msgstr "コンピュータが落とす水滴の噴水、1978年に出願された米国特許。ユリウス・ポップの bit.fall、ドイツ、2001年から"
 
 #: hall-1/water-curtain
 #. Where this kind of display stands today.
 msgctxt "piece.water-curtain.statusNote"
 msgid "Built for exhibitions, fairs and public spaces. Several companies make modules of valves for it, and Julius Popp's bit.fall is still shown."
-msgstr ""
+msgstr "展示会、見本市、公共の場のために作られます。バルブのモジュールを作る会社がいくつもあり、ユリウス・ポップの bit.fall もいまも展示されています。"
 
 #: hall-1/water-curtain
 #. First sentence of the label.
 msgctxt "piece.water-curtain.lead"
 msgid "A row of valves lets water fall in drops, timed so that the drops spell a picture, which lasts as long as it takes to fall."
-msgstr ""
+msgstr "一列に並んだバルブが水を滴にして落とし、その滴が絵を描くようにタイミングを合わせます。絵は落ちきるまでのあいだだけ続きます。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.water-curtain.how.1"
 msgid "A bar hangs over a basin, with a nozzle every few centimetres and a fast magnetic valve behind each. A computer reads the picture one row at a time and opens a valve for each dark dot. The bottom row leaves first and each row above leaves a moment later, so the drops keep their places and the picture falls whole."
-msgstr ""
+msgstr "水槽の上に横棒が吊られ、数センチごとにノズルがあり、そのそれぞれの後ろに速く動く電磁弁があります。コンピュータは絵を一行ずつ読み、暗い点ごとにバルブを開きます。いちばん下の行が最初に落ち、その上の行は一瞬ずつ遅れて落ちるので、滴はそれぞれの位置を保ち、絵はまるごと落ちていきます。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.water-curtain.how.2"
 msgid "The picture can be read for about a second, and better from across the room than from close up. Lamps under the water or behind the curtain make the drops shine."
-msgstr ""
+msgstr "絵が読めるのはおよそ一秒で、近くより部屋の反対側からのほうがよく読めます。水の下やカーテンの後ろのランプが滴を光らせます。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.water-curtain.how.3"
 msgid "A United States patent applied for in 1978 describes a fountain whose drops are released by computer and lit by a strobe, to show pictures in space. The artist Julius Popp began bit.fall in 2001 with eight nozzles. A version with 128 valves showed words taken from news websites at the Nuit Blanche in Paris in 2005."
-msgstr ""
+msgstr "1978年に出願された米国特許は、コンピュータが滴を落とし、ストロボが照らして、空中に絵を見せる噴水を説明しています。アーティストのユリウス・ポップは2001年に八つのノズルで bit.fall を始めました。128個のバルブを持つ版は、2005年のパリのニュイ・ブランシュで、ニュースサイトから取った言葉を見せました。"
 
 #: hall-1/water-curtain
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.1"
 msgid "Draws with nothing but water and light"
-msgstr ""
+msgstr "水と光だけで描く"
 
 #: hall-1/water-curtain
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.2"
 msgid "Can be read from across a hall"
-msgstr ""
+msgstr "ホールの向こうからでも読める"
 
 #: hall-1/water-curtain
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.3"
 msgid "Gives every picture a life of about a second"
-msgstr ""
+msgstr "どの絵にも一秒ほどの命を与える"
 
 #: hall-1/water-curtain
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.1"
 msgid "Shows one colour, the light on the drops"
-msgstr ""
+msgstr "色はひとつ、滴に当たる光の色だけ"
 
 #: hall-1/water-curtain
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.2"
 msgid "Needs a basin, a pump and still air, since wind breaks the picture up"
-msgstr ""
+msgstr "水槽とポンプと静かな空気がいる。風が吹くと絵が崩れる"
 
 #: hall-1/water-curtain
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.3"
 msgid "Is hard to read from close up"
-msgstr ""
+msgstr "近くからは読みにくい"
 
 #: hall-1/water-curtain
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.water-curtain.look"
 msgid "Stand across the room and watch the time form under the bar and fall into the basin. Then switch the daylight off: lamps under the water light the drops."
-msgstr ""
+msgstr "部屋の反対側に立ち、横棒の下で時刻ができあがり、水槽へ落ちていくのを見てください。それから昼の光を消すと、水の下のランプが滴を照らします。"
 
 #: hall-1/water-curtain
 #. People section: what Julius Popp did. The names stand above this line.
 msgctxt "piece.water-curtain.people.1"
 msgid "Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites."
-msgstr ""
+msgstr "ライプツィヒのアーティスト。2001年に八つのノズルで bit.fall を始めました。2005年にパリで見せた版は128個のバルブを持ち、ニュースサイトから取った言葉を書きました。"
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.across.label"
 msgid "Stand across the room"
-msgstr ""
+msgstr "部屋の反対側に立つ"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.across.hint"
 msgid "From here the drops read as a picture: the time, falling whole into the basin. Each lasts about a second."
-msgstr ""
+msgstr "ここからだと滴はひとつの絵として読めます。時刻がまるごと水槽へ落ちていきます。どの絵も一秒ほど続きます。"
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.under.label"
 msgid "Look up at the valves"
-msgstr ""
+msgstr "バルブを見上げる"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.under.hint"
 msgid "The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls."
-msgstr ""
+msgstr "絵のいちばん下の行が最初に落ちます。その上の行は一瞬ずつ遅れて落ちるので、形は落ちながらも崩れません。"
 
 #: hall-1/mechanical-television
 #. Name of a piece.
@@ -5655,253 +5655,253 @@ msgstr "線画。電池に配線されたセルの断面図、交差する向き
 #. Name of a piece.
 msgctxt "piece.hidden-lcd.name"
 msgid "Hidden-image screen"
-msgstr ""
+msgstr "隠し画像のスクリーン"
 
 #: hall-4/hidden-lcd
 #. Other names the piece goes by.
 msgctxt "piece.hidden-lcd.aka"
 msgid "Secret monitor, LCD without its front polariser"
-msgstr ""
+msgstr "シークレットモニター、前面の偏光板を外した液晶"
 
 #: hall-4/hidden-lcd
 #. The date of the piece, as its label gives it.
 msgctxt "piece.hidden-lcd.yearText"
 msgid "reported in 1999"
-msgstr ""
+msgstr "1999年に報告"
 
 #: hall-4/hidden-lcd
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.hidden-lcd.origin"
 msgid "A liquid-crystal monitor with its front polariser removed. One sold with glasses by Sceptre, United States, was reported in 1999"
-msgstr ""
+msgstr "前面の偏光板を外した液晶モニター。米国の Sceptre が眼鏡と一緒に売ったものが1999年に報告されました"
 
 #: hall-4/hidden-lcd
 #. Where this kind of display stands today.
 msgctxt "piece.hidden-lcd.statusNote"
 msgid "Made by hobbyists from old monitors, and shown in physics teaching. A stripped panel laid over a working one shows a second picture that only a filter reveals."
-msgstr ""
+msgstr "古いモニターから趣味で作られ、物理の授業でも見せられます。偏光板をはがしたパネルを動いているパネルに重ねると、フィルターでしか見えない二つ目の絵が出ます。"
 
 #: hall-4/hidden-lcd
 #. First sentence of the label.
 msgctxt "piece.hidden-lcd.lead"
 msgid "A liquid-crystal screen with its front filter peeled off looks blank and white, until you look at it through a polarising filter."
-msgstr ""
+msgstr "前面のフィルターをはがした液晶画面は、偏光フィルター越しに見るまで、真っ白で何も映っていないように見えます。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.hidden-lcd.how.1"
 msgid "A liquid-crystal screen makes its picture with two polarising filters. The back one polarises the light of the lamp behind it. The liquid crystal turns that light by a different amount at each dot, and the front filter passes or stops each dot by how far its light was turned."
-msgstr ""
+msgstr "液晶画面は二枚の偏光フィルターで絵を作ります。後ろの一枚は、その後ろにあるランプの光を偏光にします。液晶はその光を点ごとに違う量だけねじり、前のフィルターは、光がどれだけねじれたかに応じて点ごとに通したり止めたりします。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.hidden-lcd.how.2"
 msgid "Without the front filter, every dot lets out the same amount of light, so the eye sees an even white. The picture is still there, written in the angle of the light. A polarising filter held in front, or worn as glasses, brings it back. Turned a quarter turn, the filter shows the picture in its opposite colours."
-msgstr ""
+msgstr "前のフィルターがないと、どの点も同じだけの光を出すので、目には一様な白が見えます。絵はまだそこにあり、光の向きに書きこまれています。前に偏光フィルターをかざすか、眼鏡としてかけると、絵が戻ってきます。四分の一回転させると、フィルターは絵を反対の色で見せます。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.hidden-lcd.how.3"
 msgid "A monitor sold with glasses for this was reported in 1999. Since 2011, hobbyists have made their own from old monitors, moving the filter from the screen to a pair of glasses."
-msgstr ""
+msgstr "このための眼鏡つきで売られたモニターが1999年に報告されました。2011年からは、趣味の人たちが古いモニターで自作し、画面のフィルターを眼鏡に移しています。"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.1"
 msgid "Looks blank to anyone without a filter"
-msgstr ""
+msgstr "フィルターを持たない人には何も映っていないように見える"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.2"
 msgid "Needs no new part, only one taken away"
-msgstr ""
+msgstr "新しい部品はいらない。一枚取り除くだけ"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.3"
 msgid "Shows plainly how a liquid-crystal screen works"
-msgstr ""
+msgstr "液晶画面のしくみがはっきりわかる"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.1"
 msgid "Anyone wearing polarised sunglasses can read it"
-msgstr ""
+msgstr "偏光サングラスをかけた人なら誰でも読める"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.2"
 msgid "Looks bright white and glaring to everyone else"
-msgstr ""
+msgstr "ほかの人にはまぶしい白に見える"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.3"
 msgid "Dims and changes colour when the filter is tilted"
-msgstr ""
+msgstr "フィルターを傾けると暗くなり、色が変わる"
 
 #: hall-4/hidden-lcd
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.hidden-lcd.look"
 msgid "Sit in front: the screen is white. Look through the filter on its stand and the clock appears. Watch the filter turn: at a quarter turn, the colours of the picture reverse."
-msgstr ""
+msgstr "前に座ってください。画面は白です。台の上のフィルター越しに見ると、時計が現れます。フィルターが回るのを見てください。四分の一回転で、絵の色が反転します。"
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "前に座る"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.front.hint"
 msgid "The screen looks white. Through the turning filter the clock comes back, and at a quarter turn its colours reverse."
-msgstr ""
+msgstr "画面は白く見えます。回るフィルター越しに時計が戻り、四分の一回転で色が反転します。"
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.close.label"
 msgid "Look through the filter"
-msgstr ""
+msgstr "フィルター越しに見る"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.close.hint"
 msgid "Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees."
-msgstr ""
+msgstr "どの点も隣と同じ明るさです。点ごとに違うのは光の向きで、それはフィルターにしか見えません。"
 
 #: hall-4/switchable-glass
 #. Name of a piece.
 msgctxt "piece.switchable-glass.name"
 msgid "Switchable glass"
-msgstr ""
+msgstr "調光ガラス"
 
 #: hall-4/switchable-glass
 #. Other names the piece goes by.
 msgctxt "piece.switchable-glass.aka"
 msgid "Smart glass, privacy glass, PDLC"
-msgstr ""
+msgstr "スマートガラス、プライバシーガラス、PDLC"
 
 #: hall-4/switchable-glass
 #. The date of the piece, as its label gives it.
 msgctxt "piece.switchable-glass.yearText"
 msgid "patented in 1984"
-msgstr ""
+msgstr "1984年に特許"
 
 #: hall-4/switchable-glass
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.switchable-glass.origin"
 msgid "Liquid crystal sealed in tiny capsules, patented by James Fergason, United States, 1984. Studied as polymer-dispersed liquid crystal at the Liquid Crystal Institute, Kent State University, from the mid-1980s"
-msgstr ""
+msgstr "小さなカプセルに閉じこめた液晶。ジェームズ・ファーガソンが特許を取得、米国、1984年。1980年代半ばからケント州立大学液晶研究所で高分子分散型液晶として研究された"
 
 #: hall-4/switchable-glass
 #. Where this kind of display stands today.
 msgctxt "piece.switchable-glass.statusNote"
 msgid "Sold as panes and as a film to stick on glass already in place, mostly for privacy in offices, meeting rooms and bathrooms."
-msgstr ""
+msgstr "ガラス板として、また取りつけ済みのガラスに貼るフィルムとして売られ、おもにオフィス、会議室、浴室の目隠しに使われます。"
 
 #: hall-4/switchable-glass
 #. First sentence of the label.
 msgctxt "piece.switchable-glass.lead"
 msgid "A pane that is frosted white with the power off turns clear in a moment when a voltage is put across it."
-msgstr ""
+msgstr "電気が切れていると白くくもっているガラスが、電圧をかけると一瞬で透明になります。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.switchable-glass.how.1"
 msgid "Between two sheets of glass or plastic, each coated with a clear conductor, lies a film of plastic full of tiny droplets of liquid crystal. With no voltage, the molecules in each droplet point every which way, and the droplets scatter light as frosted glass does."
-msgstr ""
+msgstr "透明な導電膜をつけた二枚のガラスかプラスチックのあいだに、液晶の小さな粒がたくさん入ったプラスチックのフィルムがはさまっています。電圧がないと、粒の中の分子はばらばらな方向を向き、粒はすりガラスのように光を散らします。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.switchable-glass.how.2"
 msgid "A voltage across the film lines the molecules up with it. The liquid crystal then bends light almost exactly as the plastic around it does, so light passes straight through and the pane looks clear. It is clear or frosted, and draws no picture of its own."
-msgstr ""
+msgstr "フィルムに電圧をかけると、分子がその向きにそろいます。すると液晶はまわりのプラスチックとほぼ同じように光を曲げ、光はまっすぐ通り、ガラスは透明に見えます。透明かくもりかのどちらかで、自分の絵は描きません。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.switchable-glass.how.3"
 msgid "James Fergason patented liquid crystal sealed in tiny capsules of polymer in 1984. The same year, John West began work on switchable windows at the Liquid Crystal Institute of Kent State University, where such films were studied as polymer-dispersed liquid crystals."
-msgstr ""
+msgstr "ジェームズ・ファーガソンは1984年、高分子の小さなカプセルに閉じこめた液晶の特許を取りました。同じ年、ジョン・ウェストはケント州立大学液晶研究所で調光窓の研究を始め、そこでこうしたフィルムが高分子分散型液晶として研究されました。"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.1"
 msgid "Changes from private to clear in a moment"
-msgstr ""
+msgstr "一瞬で目隠しから透明に変わる"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.2"
 msgid "Can be stuck as a film onto glass already in place"
-msgstr ""
+msgstr "取りつけ済みのガラスにフィルムとして貼れる"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.3"
 msgid "Makes a whole wall of glass a screen to hide behind"
-msgstr ""
+msgstr "ガラスの壁一面を、陰に隠れるための仕切りにする"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.1"
 msgid "Is clear or frosted, with little in between"
-msgstr ""
+msgstr "透明かくもりかで、そのあいだはほとんどない"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.2"
 msgid "Must stay powered to stay clear"
-msgstr ""
+msgstr "透明のままでいるには電気を流し続ける必要がある"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.3"
 msgid "Shows no picture of its own"
-msgstr ""
+msgstr "自分の絵は映さない"
 
 #: hall-4/switchable-glass
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.switchable-glass.look"
 msgid "The pane turns clear and frosted in turn. Watch the clock behind it: you can read it only while the pane is clear. Then go close and see the frosting from near."
-msgstr ""
+msgstr "ガラスは透明とくもりを交互にくり返します。後ろの時計を見てください。読めるのはガラスが透明なあいだだけです。それから近づいて、くもりを間近で見てください。"
 
 #: hall-4/switchable-glass
 #. People section: what James Fergason did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.1"
 msgid "Patented liquid crystal sealed in tiny capsules of polymer in 1984, the kind of film that switchable glass is made of."
-msgstr ""
+msgstr "1984年、高分子の小さなカプセルに閉じこめた液晶の特許を取りました。調光ガラスはこの種のフィルムでできています。"
 
 #: hall-4/switchable-glass
 #. People section: what John West did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.2"
 msgid "Worked on switchable windows at the Liquid Crystal Institute of Kent State University from 1984, by the university's account."
-msgstr ""
+msgstr "大学によると、1984年からケント州立大学液晶研究所で調光窓の研究をしました。"
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.front.label"
 msgid "Stand in front"
-msgstr ""
+msgstr "前に立つ"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.front.hint"
 msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
-msgstr ""
+msgstr "ガラスの後ろの時計は、ガラスが透明なあいだだけ見えます。電気が切れるとガラスはくもります。"
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.close.label"
 msgid "Go close to the pane"
-msgstr ""
+msgstr "ガラスに近づく"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.close.hint"
 msgid "Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on."
-msgstr ""
+msgstr "くもっているとき、フィルムは光をあらゆる方向に散らします。スイッチ箱のランプは電圧がかかっているときに点きます。"
 
 #: hall-4/micromirror
 #. Name of a piece.
@@ -8427,145 +8427,145 @@ msgstr "線画。曲がった支柱の先の丸く平たいケース。下半分
 #. Name of a piece.
 msgctxt "piece.stereo-glasses.name"
 msgid "Glasses that pick an eye"
-msgstr ""
+msgstr "片方の目を選ぶ眼鏡"
 
 #: hall-7/stereo-glasses
 #. Other names the piece goes by.
 msgctxt "piece.stereo-glasses.aka"
 msgid "Anaglyph, polarised and shutter glasses"
-msgstr ""
+msgstr "アナグリフ眼鏡、偏光眼鏡、シャッター眼鏡"
 
 #: hall-7/stereo-glasses
 #. The date of the piece, as its label gives it.
 msgctxt "piece.stereo-glasses.yearText"
 msgid "1853, 1922 and 1936"
-msgstr ""
+msgstr "1853年、1922年、1936年"
 
 #: hall-7/stereo-glasses
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.stereo-glasses.origin"
 msgid "Colour: described by Wilhelm Rollmann, Germany, 1853. Time: Laurens Hammond's Teleview, New York, 1922. Polarised light: Edwin H. Land, United States, 1936"
-msgstr ""
+msgstr "色：ヴィルヘルム・ロールマンが記述、ドイツ、1853年。時間：ローレンス・ハモンドのテレビュー、ニューヨーク、1922年。偏光：エドウィン・H・ランド、米国、1936年"
 
 #: hall-7/stereo-glasses
 #. Where this kind of display stands today.
 msgctxt "piece.stereo-glasses.statusNote"
 msgid "Cinemas still show films in 3D with polarised glasses, and red and cyan glasses still come with printed pictures. Shutter glasses are used with some projectors and screens."
-msgstr ""
+msgstr "映画館はいまも偏光眼鏡で3D映画を上映し、赤と青緑の眼鏡はいまも印刷された絵についてきます。シャッター眼鏡は一部のプロジェクターや画面で使われます。"
 
 #: hall-7/stereo-glasses
 #. First sentence of the label.
 msgctxt "piece.stereo-glasses.lead"
 msgid "One screen carries a picture for each eye at once, and the glasses let each eye see only its own."
-msgstr ""
+msgstr "一つの画面が両目それぞれの絵を同時に運び、眼鏡がそれぞれの目に自分の絵だけを見せます。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.stereo-glasses.how.1"
 msgid "Each eye needs a picture of its own, taken from a little to the side of the other. A stereoscope gives each eye its own lens. Glasses do it with one shared picture, by filtering. A red filter passes the red picture and hides the cyan one, and a cyan filter does the opposite."
-msgstr ""
+msgstr "それぞれの目には、もう一方から少し横にずらして撮った自分の絵が必要です。ステレオスコープは目ごとにレンズを与えます。眼鏡はそれを、共有する一枚の絵でフィルターによって行います。赤いフィルターは赤い絵を通して青緑の絵を隠し、青緑のフィルターはその逆をします。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.stereo-glasses.how.2"
 msgid "Polarised light gives the same split without colour. The two pictures are projected through filters at right angles, and each lens passes only the light at its own angle. Shutter glasses split by time instead: the screen shows one eye's picture, then the other's, and each lens closes while the wrong picture is up."
-msgstr ""
+msgstr "偏光は色を使わずに同じ分け方をします。二つの絵を直角に向けたフィルター越しに映し、それぞれのレンズは自分の向きの光だけを通します。シャッター眼鏡は時間で分けます。画面は片方の目の絵、次にもう片方の絵を出し、それぞれのレンズは違う絵が出ているあいだ閉じます。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.stereo-glasses.how.3"
 msgid "Wilhelm Rollmann described pictures in two colours for two eyes in 1853. Louis Ducos du Hauron printed photographs that way in 1891 and called them anaglyphs. Laurens Hammond's Teleview showed films with shutters at the Selwyn Theatre in New York from 27 December 1922. Edwin Land showed films in polarised light in New York in 1936."
-msgstr ""
+msgstr "ヴィルヘルム・ロールマンは1853年、両目のための二色の絵を記述しました。ルイ・デュコ・デュ・オーロンは1891年にその方法で写真を印刷し、アナグリフと名づけました。ローレンス・ハモンドのテレビューは1922年12月27日から、ニューヨークのセルウィン劇場でシャッターを使って映画を上映しました。エドウィン・ランドは1936年、ニューヨークで偏光による映画を上映しました。"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.1"
 msgid "Lets a whole audience see depth at once, from one screen"
-msgstr ""
+msgstr "一つの画面から、観客全員が同時に奥行きを見られる"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.2"
 msgid "Red and cyan glasses cost almost nothing and work with print"
-msgstr ""
+msgstr "赤と青緑の眼鏡はほとんどお金がかからず、印刷物にも使える"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.3"
 msgid "Polarised glasses keep the colours of the picture"
-msgstr ""
+msgstr "偏光眼鏡は絵の色を保つ"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.1"
 msgid "Lets each eye have half of the light, or less"
-msgstr ""
+msgstr "どちらの目にも光の半分か、それより少ししか届かない"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.2"
 msgid "Red and cyan glasses spoil the colours of the picture"
-msgstr ""
+msgstr "赤と青緑の眼鏡は絵の色をそこなう"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.3"
 msgid "Shutter glasses need batteries and a signal from the screen, and can flicker"
-msgstr ""
+msgstr "シャッター眼鏡は電池と画面からの信号が必要で、ちらつくことがある"
 
 #: hall-7/stereo-glasses
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.stereo-glasses.look"
 msgid "Sit in front and watch for 24 seconds: the screen shows the same cube in three ways, and the glasses in use stand out on the table. If you have red and cyan glasses, press the glasses key and the whole model is drawn for them."
-msgstr ""
+msgstr "前に座って24秒間見てください。画面は同じ立方体を三つのやり方で見せ、使われている眼鏡がテーブルの上で目立ちます。赤と青緑の眼鏡があれば、眼鏡のボタンを押すと、模型全体がその眼鏡用に描かれます。"
 
 #: hall-7/stereo-glasses
 #. People section: what Wilhelm Rollmann did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.1"
 msgid "Described in 1853 how two pictures in two colours, seen through glasses of the same two colours, give each eye its own."
-msgstr ""
+msgstr "1853年、二色の絵を同じ二色の眼鏡で見ると、それぞれの目に自分の絵が届くことを記述しました。"
 
 #: hall-7/stereo-glasses
 #. People section: what Louis Ducos du Hauron did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.2"
 msgid "Printed stereoscopic photographs in red and blue in 1891, and named them anaglyphs."
-msgstr ""
+msgstr "1891年に赤と青で立体写真を印刷し、アナグリフと名づけました。"
 
 #: hall-7/stereo-glasses
 #. People section: what Laurens Hammond did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.3"
 msgid "Showed films through shutters that opened for each eye in turn, at the Selwyn Theatre in New York from December 1922."
-msgstr ""
+msgstr "1922年12月から、ニューヨークのセルウィン劇場で、目ごとに交互に開くシャッター越しに映画を上映しました。"
 
 #: hall-7/stereo-glasses
 #. People section: what Edwin H. Land did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.4"
 msgid "Made sheet polarisers and showed films in polarised light in New York in 1936, by the account of a newspaper of that year."
-msgstr ""
+msgstr "その年の新聞によると、シート状の偏光板を作り、1936年にニューヨークで偏光による映画を上映しました。"
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "前に座る"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.front.hint"
 msgid "Every eight seconds the screen and the glasses change together: colour, then time, then polarised light."
-msgstr ""
+msgstr "8秒ごとに、画面と眼鏡がいっしょに切り替わります。色、次に時間、次に偏光。"
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.table.label"
 msgid "Look at the glasses"
-msgstr ""
+msgstr "眼鏡を見る"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.table.hint"
 msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
-msgstr ""
+msgstr "まん中の眼鏡では、画面の絵に合わせて、レンズが交互に明るくなったり暗くなったりします。"
 
 #: hall-7/parallax-barrier
 #. Name of a piece.

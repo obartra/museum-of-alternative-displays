@@ -2260,127 +2260,127 @@ msgstr "線描圖：一塊排滿圓孔的板，一個圓片的剖視圖，圓片
 #. Name of a piece.
 msgctxt "piece.water-curtain.name"
 msgid "Water curtain display"
-msgstr ""
+msgstr "水簾顯示"
 
 #: hall-1/water-curtain
 #. Other names the piece goes by.
 msgctxt "piece.water-curtain.aka"
 msgid "Digital water curtain, bit.fall"
-msgstr ""
+msgstr "數位水簾，bit.fall"
 
 #: hall-1/water-curtain
 #. The date of the piece, as its label gives it.
 msgctxt "piece.water-curtain.yearText"
 msgid "patent applied for in 1978"
-msgstr ""
+msgstr "1978年申請專利"
 
 #: hall-1/water-curtain
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.water-curtain.origin"
 msgid "A fountain of drops released by computer, United States patent applied for in 1978. Julius Popp's bit.fall, Germany, from 2001"
-msgstr ""
+msgstr "由電腦釋放水滴的噴泉，1978年申請的美國專利。Julius Popp的bit.fall，德國，2001年起"
 
 #: hall-1/water-curtain
 #. Where this kind of display stands today.
 msgctxt "piece.water-curtain.statusNote"
 msgid "Built for exhibitions, fairs and public spaces. Several companies make modules of valves for it, and Julius Popp's bit.fall is still shown."
-msgstr ""
+msgstr "為展覽、博覽會和公共空間而建。有好幾家公司為它生產閥門模組，Julius Popp的bit.fall至今仍在展出。"
 
 #: hall-1/water-curtain
 #. First sentence of the label.
 msgctxt "piece.water-curtain.lead"
 msgid "A row of valves lets water fall in drops, timed so that the drops spell a picture, which lasts as long as it takes to fall."
-msgstr ""
+msgstr "一排閥門讓水一滴滴落下，時間算得正好，讓水滴拼出一幅圖，圖只存在於下落的那段時間。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.water-curtain.how.1"
 msgid "A bar hangs over a basin, with a nozzle every few centimetres and a fast magnetic valve behind each. A computer reads the picture one row at a time and opens a valve for each dark dot. The bottom row leaves first and each row above leaves a moment later, so the drops keep their places and the picture falls whole."
-msgstr ""
+msgstr "一根橫桿懸在水池上方，每隔幾公分有一個噴嘴，每個噴嘴後面有一個快速電磁閥。電腦逐行讀取圖像，每遇到一個暗點就打開一個閥門。最下面一行最先落下，上面每一行都晚一瞬間，所以水滴各守其位，整幅圖完整地落下。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.water-curtain.how.2"
 msgid "The picture can be read for about a second, and better from across the room than from close up. Lamps under the water or behind the curtain make the drops shine."
-msgstr ""
+msgstr "這幅圖大約能讀一秒，從房間另一頭看比湊近看更清楚。水下或水簾後面的燈讓水滴閃亮。"
 
 #: hall-1/water-curtain
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.water-curtain.how.3"
 msgid "A United States patent applied for in 1978 describes a fountain whose drops are released by computer and lit by a strobe, to show pictures in space. The artist Julius Popp began bit.fall in 2001 with eight nozzles. A version with 128 valves showed words taken from news websites at the Nuit Blanche in Paris in 2005."
-msgstr ""
+msgstr "1978年申請的一項美國專利描述了一種噴泉：水滴由電腦釋放，由頻閃燈照亮，用來在空中顯示圖像。藝術家Julius Popp在2001年用八個噴嘴開始做bit.fall。2005年在巴黎「白夜」展出的一個128閥版本，顯示從新聞網站取來的詞語。"
 
 #: hall-1/water-curtain
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.1"
 msgid "Draws with nothing but water and light"
-msgstr ""
+msgstr "只用水和光作畫"
 
 #: hall-1/water-curtain
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.2"
 msgid "Can be read from across a hall"
-msgstr ""
+msgstr "隔著整個大廳也能讀"
 
 #: hall-1/water-curtain
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.3"
 msgid "Gives every picture a life of about a second"
-msgstr ""
+msgstr "讓每幅圖只活一秒左右"
 
 #: hall-1/water-curtain
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.1"
 msgid "Shows one colour, the light on the drops"
-msgstr ""
+msgstr "只有一種顏色，即水滴上的光"
 
 #: hall-1/water-curtain
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.2"
 msgid "Needs a basin, a pump and still air, since wind breaks the picture up"
-msgstr ""
+msgstr "需要水池、水泵和靜止的空氣，因為風會把圖吹散"
 
 #: hall-1/water-curtain
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.3"
 msgid "Is hard to read from close up"
-msgstr ""
+msgstr "湊近了反而難讀"
 
 #: hall-1/water-curtain
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.water-curtain.look"
 msgid "Stand across the room and watch the time form under the bar and fall into the basin. Then switch the daylight off: lamps under the water light the drops."
-msgstr ""
+msgstr "站到房間另一頭，看時間在橫桿下成形，再落進水池。然後關掉日光：水下的燈會照亮水滴。"
 
 #: hall-1/water-curtain
 #. People section: what Julius Popp did. The names stand above this line.
 msgctxt "piece.water-curtain.people.1"
 msgid "Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites."
-msgstr ""
+msgstr "萊比錫的藝術家。2001年用八個噴嘴開始做bit.fall。2005年在巴黎展出的版本有128個閥門，拼寫從新聞網站取來的詞語。"
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.across.label"
 msgid "Stand across the room"
-msgstr ""
+msgstr "站到房間另一頭"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.across.hint"
 msgid "From here the drops read as a picture: the time, falling whole into the basin. Each lasts about a second."
-msgstr ""
+msgstr "從這裡看，水滴讀起來是一幅圖：時間，完整地落進水池。每幅圖大約持續一秒。"
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.under.label"
 msgid "Look up at the valves"
-msgstr ""
+msgstr "抬頭看閥門"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.under.hint"
 msgid "The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls."
-msgstr ""
+msgstr "圖的最下面一行最先落下。上面每一行晚一瞬間，所以形狀在下落時保持不散。"
 
 #: hall-1/mechanical-television
 #. Name of a piece.
@@ -5650,253 +5650,253 @@ msgstr "線描圖：一個接著電池的液晶盒剖面，兩塊板上的線條
 #. Name of a piece.
 msgctxt "piece.hidden-lcd.name"
 msgid "Hidden-image screen"
-msgstr ""
+msgstr "隱藏圖像螢幕"
 
 #: hall-4/hidden-lcd
 #. Other names the piece goes by.
 msgctxt "piece.hidden-lcd.aka"
 msgid "Secret monitor, LCD without its front polariser"
-msgstr ""
+msgstr "祕密顯示器，去掉前偏光片的液晶螢幕"
 
 #: hall-4/hidden-lcd
 #. The date of the piece, as its label gives it.
 msgctxt "piece.hidden-lcd.yearText"
 msgid "reported in 1999"
-msgstr ""
+msgstr "1999年見於報導"
 
 #: hall-4/hidden-lcd
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.hidden-lcd.origin"
 msgid "A liquid-crystal monitor with its front polariser removed. One sold with glasses by Sceptre, United States, was reported in 1999"
-msgstr ""
+msgstr "去掉前偏光片的液晶顯示器。美國Sceptre公司搭配眼鏡出售的一款，1999年見於報導"
 
 #: hall-4/hidden-lcd
 #. Where this kind of display stands today.
 msgctxt "piece.hidden-lcd.statusNote"
 msgid "Made by hobbyists from old monitors, and shown in physics teaching. A stripped panel laid over a working one shows a second picture that only a filter reveals."
-msgstr ""
+msgstr "愛好者用舊顯示器改裝，物理課上也會示範。把剝掉偏光片的面板疊在一塊正常運作的面板上，會出現第二幅只有濾光片才看得見的圖。"
 
 #: hall-4/hidden-lcd
 #. First sentence of the label.
 msgctxt "piece.hidden-lcd.lead"
 msgid "A liquid-crystal screen with its front filter peeled off looks blank and white, until you look at it through a polarising filter."
-msgstr ""
+msgstr "剝掉前面濾光片的液晶螢幕看上去一片空白，直到你透過偏光濾光片去看。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.hidden-lcd.how.1"
 msgid "A liquid-crystal screen makes its picture with two polarising filters. The back one polarises the light of the lamp behind it. The liquid crystal turns that light by a different amount at each dot, and the front filter passes or stops each dot by how far its light was turned."
-msgstr ""
+msgstr "液晶螢幕用兩片偏光濾光片成像。後面那片把背後的燈光變成偏振光。液晶在每個點把這道光旋轉不同的角度，前面那片濾光片再根據每個點的光轉了多少，讓它通過或把它擋住。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.hidden-lcd.how.2"
 msgid "Without the front filter, every dot lets out the same amount of light, so the eye sees an even white. The picture is still there, written in the angle of the light. A polarising filter held in front, or worn as glasses, brings it back. Turned a quarter turn, the filter shows the picture in its opposite colours."
-msgstr ""
+msgstr "沒有前面的濾光片，每個點放出的光一樣多，眼睛看到的是均勻的白色。圖像仍然在那裡，寫在光的角度裡。在前面舉一片偏光濾光片，或者戴成眼鏡，圖像就回來了。把濾光片轉四分之一圈，圖像會以相反的顏色出現。"
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.hidden-lcd.how.3"
 msgid "A monitor sold with glasses for this was reported in 1999. Since 2011, hobbyists have made their own from old monitors, moving the filter from the screen to a pair of glasses."
-msgstr ""
+msgstr "1999年有報導提到一款為此搭配眼鏡出售的顯示器。2011年以來，愛好者用舊顯示器自己動手做，把螢幕上的濾光片移到一副眼鏡上。"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.1"
 msgid "Looks blank to anyone without a filter"
-msgstr ""
+msgstr "沒有濾光片的人看來是一片空白"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.2"
 msgid "Needs no new part, only one taken away"
-msgstr ""
+msgstr "不需要新零件，只要拿掉一片"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.3"
 msgid "Shows plainly how a liquid-crystal screen works"
-msgstr ""
+msgstr "清楚地展示液晶螢幕如何運作"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.1"
 msgid "Anyone wearing polarised sunglasses can read it"
-msgstr ""
+msgstr "戴偏光太陽眼鏡的人都能看到"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.2"
 msgid "Looks bright white and glaring to everyone else"
-msgstr ""
+msgstr "在其他人看來是刺眼的白色"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.3"
 msgid "Dims and changes colour when the filter is tilted"
-msgstr ""
+msgstr "濾光片一傾斜就變暗、變色"
 
 #: hall-4/hidden-lcd
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.hidden-lcd.look"
 msgid "Sit in front: the screen is white. Look through the filter on its stand and the clock appears. Watch the filter turn: at a quarter turn, the colours of the picture reverse."
-msgstr ""
+msgstr "坐在前面：螢幕是白的。透過支架上的濾光片看，時鐘就出現了。看濾光片轉動：轉到四分之一圈時，圖像的顏色會反過來。"
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "坐在前面"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.front.hint"
 msgid "The screen looks white. Through the turning filter the clock comes back, and at a quarter turn its colours reverse."
-msgstr ""
+msgstr "螢幕看上去是白的。透過轉動的濾光片，時鐘又回來了，轉到四分之一圈時顏色反過來。"
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.close.label"
 msgid "Look through the filter"
-msgstr ""
+msgstr "透過濾光片看"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.close.hint"
 msgid "Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees."
-msgstr ""
+msgstr "每個點都和旁邊的點一樣亮。點與點之間不同的是光的角度，而這只有濾光片看得見。"
 
 #: hall-4/switchable-glass
 #. Name of a piece.
 msgctxt "piece.switchable-glass.name"
 msgid "Switchable glass"
-msgstr ""
+msgstr "調光玻璃"
 
 #: hall-4/switchable-glass
 #. Other names the piece goes by.
 msgctxt "piece.switchable-glass.aka"
 msgid "Smart glass, privacy glass, PDLC"
-msgstr ""
+msgstr "智慧玻璃、隱私玻璃、PDLC"
 
 #: hall-4/switchable-glass
 #. The date of the piece, as its label gives it.
 msgctxt "piece.switchable-glass.yearText"
 msgid "patented in 1984"
-msgstr ""
+msgstr "1984年取得專利"
 
 #: hall-4/switchable-glass
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.switchable-glass.origin"
 msgid "Liquid crystal sealed in tiny capsules, patented by James Fergason, United States, 1984. Studied as polymer-dispersed liquid crystal at the Liquid Crystal Institute, Kent State University, from the mid-1980s"
-msgstr ""
+msgstr "封在微小膠囊裡的液晶，James Fergason取得專利，美國，1984年。1980年代中期起在Kent State University液晶研究所作為聚合物分散液晶加以研究"
 
 #: hall-4/switchable-glass
 #. Where this kind of display stands today.
 msgctxt "piece.switchable-glass.statusNote"
 msgid "Sold as panes and as a film to stick on glass already in place, mostly for privacy in offices, meeting rooms and bathrooms."
-msgstr ""
+msgstr "以玻璃板和可貼在現有玻璃上的薄膜兩種形式出售，主要用於辦公室、會議室和浴室的隱私遮擋。"
 
 #: hall-4/switchable-glass
 #. First sentence of the label.
 msgctxt "piece.switchable-glass.lead"
 msgid "A pane that is frosted white with the power off turns clear in a moment when a voltage is put across it."
-msgstr ""
+msgstr "一塊斷電時呈乳白色的霧面玻璃，一加上電壓，轉眼就變得透明。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.switchable-glass.how.1"
 msgid "Between two sheets of glass or plastic, each coated with a clear conductor, lies a film of plastic full of tiny droplets of liquid crystal. With no voltage, the molecules in each droplet point every which way, and the droplets scatter light as frosted glass does."
-msgstr ""
+msgstr "兩片各鍍有透明導電層的玻璃或塑膠之間，夾著一層布滿液晶微滴的塑膠薄膜。沒有電壓時，每個微滴裡的分子指向四面八方，微滴像毛玻璃一樣把光散射開。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.switchable-glass.how.2"
 msgid "A voltage across the film lines the molecules up with it. The liquid crystal then bends light almost exactly as the plastic around it does, so light passes straight through and the pane looks clear. It is clear or frosted, and draws no picture of its own."
-msgstr ""
+msgstr "在薄膜上加電壓，分子就順著電場排齊。這時液晶對光的折射幾乎和周圍的塑膠完全一樣，光直直穿過，玻璃看上去透明。它要麼透明，要麼霧面，自己不顯示任何圖像。"
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.switchable-glass.how.3"
 msgid "James Fergason patented liquid crystal sealed in tiny capsules of polymer in 1984. The same year, John West began work on switchable windows at the Liquid Crystal Institute of Kent State University, where such films were studied as polymer-dispersed liquid crystals."
-msgstr ""
+msgstr "James Fergason在1984年為封在微小聚合物膠囊裡的液晶申請了專利。同一年，John West在Kent State University液晶研究所開始研究可切換的窗戶，那裡把這類薄膜作為聚合物分散液晶來研究。"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.1"
 msgid "Changes from private to clear in a moment"
-msgstr ""
+msgstr "轉眼間從遮擋變成透明"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.2"
 msgid "Can be stuck as a film onto glass already in place"
-msgstr ""
+msgstr "可以作為薄膜貼在現有玻璃上"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.3"
 msgid "Makes a whole wall of glass a screen to hide behind"
-msgstr ""
+msgstr "把整面玻璃牆變成可以躲在後面的屏障"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.1"
 msgid "Is clear or frosted, with little in between"
-msgstr ""
+msgstr "只有透明和霧面兩種狀態，中間幾乎沒有過渡"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.2"
 msgid "Must stay powered to stay clear"
-msgstr ""
+msgstr "要保持透明就得一直通電"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.3"
 msgid "Shows no picture of its own"
-msgstr ""
+msgstr "自己不顯示圖像"
 
 #: hall-4/switchable-glass
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.switchable-glass.look"
 msgid "The pane turns clear and frosted in turn. Watch the clock behind it: you can read it only while the pane is clear. Then go close and see the frosting from near."
-msgstr ""
+msgstr "玻璃輪流變得透明和霧面。看後面的時鐘：只有玻璃透明時你才能讀到它。然後走近，近看霧面的樣子。"
 
 #: hall-4/switchable-glass
 #. People section: what James Fergason did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.1"
 msgid "Patented liquid crystal sealed in tiny capsules of polymer in 1984, the kind of film that switchable glass is made of."
-msgstr ""
+msgstr "1984年為封在微小聚合物膠囊裡的液晶申請了專利，調光玻璃用的正是這類薄膜。"
 
 #: hall-4/switchable-glass
 #. People section: what John West did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.2"
 msgid "Worked on switchable windows at the Liquid Crystal Institute of Kent State University from 1984, by the university's account."
-msgstr ""
+msgstr "據該校介紹，他從1984年起在Kent State University液晶研究所研究可切換的窗戶。"
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.front.label"
 msgid "Stand in front"
-msgstr ""
+msgstr "站在前面"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.front.hint"
 msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
-msgstr ""
+msgstr "玻璃後面的時鐘只有在玻璃透明時才看得見。斷電時，玻璃是霧面的。"
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.close.label"
 msgid "Go close to the pane"
-msgstr ""
+msgstr "走近玻璃"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.close.hint"
 msgid "Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on."
-msgstr ""
+msgstr "霧面時，薄膜把光散向四面八方。開關盒上的燈亮著，表示加上了電壓。"
 
 #: hall-4/micromirror
 #. Name of a piece.
@@ -8422,145 +8422,145 @@ msgstr "線描圖：一個扁圓形的盒子裝在一根彎柄上，下半部分
 #. Name of a piece.
 msgctxt "piece.stereo-glasses.name"
 msgid "Glasses that pick an eye"
-msgstr ""
+msgstr "挑選眼睛的眼鏡"
 
 #: hall-7/stereo-glasses
 #. Other names the piece goes by.
 msgctxt "piece.stereo-glasses.aka"
 msgid "Anaglyph, polarised and shutter glasses"
-msgstr ""
+msgstr "互補色眼鏡、偏光眼鏡和快門眼鏡"
 
 #: hall-7/stereo-glasses
 #. The date of the piece, as its label gives it.
 msgctxt "piece.stereo-glasses.yearText"
 msgid "1853, 1922 and 1936"
-msgstr ""
+msgstr "1853年、1922年和1936年"
 
 #: hall-7/stereo-glasses
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.stereo-glasses.origin"
 msgid "Colour: described by Wilhelm Rollmann, Germany, 1853. Time: Laurens Hammond's Teleview, New York, 1922. Polarised light: Edwin H. Land, United States, 1936"
-msgstr ""
+msgstr "顏色：Wilhelm Rollmann描述，德國，1853年。時間：Laurens Hammond的Teleview，紐約，1922年。偏振光：Edwin H. Land，美國，1936年"
 
 #: hall-7/stereo-glasses
 #. Where this kind of display stands today.
 msgctxt "piece.stereo-glasses.statusNote"
 msgid "Cinemas still show films in 3D with polarised glasses, and red and cyan glasses still come with printed pictures. Shutter glasses are used with some projectors and screens."
-msgstr ""
+msgstr "電影院至今仍用偏光眼鏡放映3D電影，印刷圖片也仍然附帶紅青眼鏡。快門眼鏡用於一些投影機和螢幕。"
 
 #: hall-7/stereo-glasses
 #. First sentence of the label.
 msgctxt "piece.stereo-glasses.lead"
 msgid "One screen carries a picture for each eye at once, and the glasses let each eye see only its own."
-msgstr ""
+msgstr "一塊螢幕同時承載兩隻眼睛各自的圖像，眼鏡讓每隻眼睛只看到自己的那幅。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.stereo-glasses.how.1"
 msgid "Each eye needs a picture of its own, taken from a little to the side of the other. A stereoscope gives each eye its own lens. Glasses do it with one shared picture, by filtering. A red filter passes the red picture and hides the cyan one, and a cyan filter does the opposite."
-msgstr ""
+msgstr "每隻眼睛都需要自己的圖像，拍攝位置比另一幅稍微偏旁邊一點。立體鏡給每隻眼睛一個鏡片。眼鏡則只用一幅共用的圖像，靠過濾來做到。紅色濾光片讓紅色圖像通過、把青色圖像藏起來，青色濾光片正好相反。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.stereo-glasses.how.2"
 msgid "Polarised light gives the same split without colour. The two pictures are projected through filters at right angles, and each lens passes only the light at its own angle. Shutter glasses split by time instead: the screen shows one eye's picture, then the other's, and each lens closes while the wrong picture is up."
-msgstr ""
+msgstr "偏振光不用顏色也能做同樣的分離。兩幅圖像透過互相垂直的濾光片投射，每片鏡片只讓自己角度的光通過。快門眼鏡則按時間分開：螢幕先顯示一隻眼睛的圖像，再顯示另一隻眼睛的，錯的圖像出現時，對應的鏡片就關上。"
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.stereo-glasses.how.3"
 msgid "Wilhelm Rollmann described pictures in two colours for two eyes in 1853. Louis Ducos du Hauron printed photographs that way in 1891 and called them anaglyphs. Laurens Hammond's Teleview showed films with shutters at the Selwyn Theatre in New York from 27 December 1922. Edwin Land showed films in polarised light in New York in 1936."
-msgstr ""
+msgstr "Wilhelm Rollmann在1853年描述了給兩隻眼睛看的雙色圖像。Louis Ducos du Hauron在1891年用這種方法印出照片，並把它們命名為anaglyph（互補色立體圖）。Laurens Hammond的Teleview從1922年12月27日起在紐約Selwyn Theatre用快門放映電影。Edwin Land在1936年於紐約用偏振光放映電影。"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.1"
 msgid "Lets a whole audience see depth at once, from one screen"
-msgstr ""
+msgstr "一塊螢幕就能讓全場觀眾同時看到縱深"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.2"
 msgid "Red and cyan glasses cost almost nothing and work with print"
-msgstr ""
+msgstr "紅青眼鏡幾乎不花錢，也能用於印刷品"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.3"
 msgid "Polarised glasses keep the colours of the picture"
-msgstr ""
+msgstr "偏光眼鏡保留圖像的顏色"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.1"
 msgid "Lets each eye have half of the light, or less"
-msgstr ""
+msgstr "每隻眼睛只得到一半的光，甚至更少"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.2"
 msgid "Red and cyan glasses spoil the colours of the picture"
-msgstr ""
+msgstr "紅青眼鏡會破壞圖像的顏色"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.3"
 msgid "Shutter glasses need batteries and a signal from the screen, and can flicker"
-msgstr ""
+msgstr "快門眼鏡需要電池和來自螢幕的訊號，而且可能閃爍"
 
 #: hall-7/stereo-glasses
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.stereo-glasses.look"
 msgid "Sit in front and watch for 24 seconds: the screen shows the same cube in three ways, and the glasses in use stand out on the table. If you have red and cyan glasses, press the glasses key and the whole model is drawn for them."
-msgstr ""
+msgstr "坐在前面看24秒：螢幕用三種方式顯示同一個立方體，正在使用的那副眼鏡在桌上格外醒目。如果你有紅青眼鏡，按下眼鏡鍵，整個模型就會為它重新繪製。"
 
 #: hall-7/stereo-glasses
 #. People section: what Wilhelm Rollmann did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.1"
 msgid "Described in 1853 how two pictures in two colours, seen through glasses of the same two colours, give each eye its own."
-msgstr ""
+msgstr "1853年描述了兩種顏色的兩幅圖像，透過同樣兩種顏色的眼鏡去看，就能讓每隻眼睛看到自己的那幅。"
 
 #: hall-7/stereo-glasses
 #. People section: what Louis Ducos du Hauron did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.2"
 msgid "Printed stereoscopic photographs in red and blue in 1891, and named them anaglyphs."
-msgstr ""
+msgstr "1891年用紅色和藍色印出立體照片，並把它們命名為anaglyph（互補色立體圖）。"
 
 #: hall-7/stereo-glasses
 #. People section: what Laurens Hammond did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.3"
 msgid "Showed films through shutters that opened for each eye in turn, at the Selwyn Theatre in New York from December 1922."
-msgstr ""
+msgstr "從1922年12月起，在紐約Selwyn Theatre透過為兩隻眼睛輪流打開的快門放映電影。"
 
 #: hall-7/stereo-glasses
 #. People section: what Edwin H. Land did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.4"
 msgid "Made sheet polarisers and showed films in polarised light in New York in 1936, by the account of a newspaper of that year."
-msgstr ""
+msgstr "據當年一份報紙報導，他製作了片狀偏光片，並於1936年在紐約用偏振光放映電影。"
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "坐在前面"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.front.hint"
 msgid "Every eight seconds the screen and the glasses change together: colour, then time, then polarised light."
-msgstr ""
+msgstr "每隔八秒，螢幕和眼鏡一起切換：顏色，然後時間，然後偏振光。"
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.table.label"
 msgid "Look at the glasses"
-msgstr ""
+msgstr "看看眼鏡"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.table.hint"
 msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
-msgstr ""
+msgstr "中間那副眼鏡的鏡片隨著螢幕上的圖像，輪流變亮、變暗。"
 
 #: hall-7/parallax-barrier
 #. Name of a piece.

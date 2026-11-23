@@ -2262,127 +2262,127 @@ msgstr "Rysunki kreskowe: tablica z rzędami okrągłych otworów, przekrój jed
 #. Name of a piece.
 msgctxt "piece.water-curtain.name"
 msgid "Water curtain display"
-msgstr ""
+msgstr "Kurtyna wodna"
 
 #: hall-1/water-curtain
 #. Other names the piece goes by.
 msgctxt "piece.water-curtain.aka"
 msgid "Digital water curtain, bit.fall"
-msgstr ""
+msgstr "Cyfrowa kurtyna wodna, bit.fall"
 
 #: hall-1/water-curtain
 #. The date of the piece, as its label gives it.
 msgctxt "piece.water-curtain.yearText"
 msgid "patent applied for in 1978"
-msgstr ""
+msgstr "patent zgłoszony w 1978"
 
 #: hall-1/water-curtain
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.water-curtain.origin"
 msgid "A fountain of drops released by computer, United States patent applied for in 1978. Julius Popp's bit.fall, Germany, from 2001"
-msgstr ""
+msgstr "Fontanna kropel wypuszczanych przez komputer, patent amerykański zgłoszony w 1978. bit.fall Juliusa Poppa, Niemcy, od 2001"
 
 #: hall-1/water-curtain
 #. Where this kind of display stands today.
 msgctxt "piece.water-curtain.statusNote"
 msgid "Built for exhibitions, fairs and public spaces. Several companies make modules of valves for it, and Julius Popp's bit.fall is still shown."
-msgstr ""
+msgstr "Budowana na wystawy, targi i do przestrzeni publicznych. Kilka firm produkuje do niej moduły zaworów, a bit.fall Juliusa Poppa nadal jest pokazywany."
 
 #: hall-1/water-curtain
 #. First sentence of the label.
 msgctxt "piece.water-curtain.lead"
 msgid "A row of valves lets water fall in drops, timed so that the drops spell a picture, which lasts as long as it takes to fall."
-msgstr ""
+msgstr "Rząd zaworów wypuszcza wodę kroplami, tak zgranymi w czasie, że krople układają się w obraz, który trwa tyle, ile spada."
 
 #: hall-1/water-curtain
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.water-curtain.how.1"
 msgid "A bar hangs over a basin, with a nozzle every few centimetres and a fast magnetic valve behind each. A computer reads the picture one row at a time and opens a valve for each dark dot. The bottom row leaves first and each row above leaves a moment later, so the drops keep their places and the picture falls whole."
-msgstr ""
+msgstr "Nad basenem wisi belka, co kilka centymetrów dysza, a za każdą szybki zawór elektromagnetyczny. Komputer czyta obraz rząd po rzędzie i otwiera zawór dla każdego ciemnego punktu. Dolny rząd spada pierwszy, a każdy rząd wyżej chwilę później, więc krople zachowują swoje miejsca i obraz spada w całości."
 
 #: hall-1/water-curtain
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.water-curtain.how.2"
 msgid "The picture can be read for about a second, and better from across the room than from close up. Lamps under the water or behind the curtain make the drops shine."
-msgstr ""
+msgstr "Obraz da się odczytać przez mniej więcej sekundę, i lepiej z drugiego końca sali niż z bliska. Lampy pod wodą albo za kurtyną sprawiają, że krople lśnią."
 
 #: hall-1/water-curtain
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.water-curtain.how.3"
 msgid "A United States patent applied for in 1978 describes a fountain whose drops are released by computer and lit by a strobe, to show pictures in space. The artist Julius Popp began bit.fall in 2001 with eight nozzles. A version with 128 valves showed words taken from news websites at the Nuit Blanche in Paris in 2005."
-msgstr ""
+msgstr "Patent amerykański zgłoszony w 1978 opisuje fontannę, której krople wypuszcza komputer i oświetla stroboskop, aby pokazywać obrazy w przestrzeni. Artysta Julius Popp zaczął bit.fall w 2001 z ośmioma dyszami. Wersja ze 128 zaworami pokazywała słowa wzięte z serwisów informacyjnych na Nuit Blanche w Paryżu w 2005."
 
 #: hall-1/water-curtain
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.1"
 msgid "Draws with nothing but water and light"
-msgstr ""
+msgstr "Rysuje samą wodą i światłem"
 
 #: hall-1/water-curtain
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.2"
 msgid "Can be read from across a hall"
-msgstr ""
+msgstr "Da się ją czytać z drugiego końca hali"
 
 #: hall-1/water-curtain
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.good.3"
 msgid "Gives every picture a life of about a second"
-msgstr ""
+msgstr "Daje każdemu obrazowi życie około sekundy"
 
 #: hall-1/water-curtain
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.1"
 msgid "Shows one colour, the light on the drops"
-msgstr ""
+msgstr "Pokazuje jeden kolor, światło na kroplach"
 
 #: hall-1/water-curtain
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.2"
 msgid "Needs a basin, a pump and still air, since wind breaks the picture up"
-msgstr ""
+msgstr "Potrzebuje basenu, pompy i spokojnego powietrza, bo wiatr rozbija obraz"
 
 #: hall-1/water-curtain
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.water-curtain.bad.3"
 msgid "Is hard to read from close up"
-msgstr ""
+msgstr "Trudno ją czytać z bliska"
 
 #: hall-1/water-curtain
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.water-curtain.look"
 msgid "Stand across the room and watch the time form under the bar and fall into the basin. Then switch the daylight off: lamps under the water light the drops."
-msgstr ""
+msgstr "Stań na drugim końcu sali i patrz, jak godzina powstaje pod belką i spada do basenu. Potem wyłącz światło dzienne: lampy pod wodą oświetlają krople."
 
 #: hall-1/water-curtain
 #. People section: what Julius Popp did. The names stand above this line.
 msgctxt "piece.water-curtain.people.1"
 msgid "Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites."
-msgstr ""
+msgstr "Artysta z Lipska. Zaczął bit.fall w 2001 z ośmioma dyszami. Wersja pokazana w Paryżu w 2005 miała 128 zaworów i pisała słowa wzięte z serwisów informacyjnych."
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.across.label"
 msgid "Stand across the room"
-msgstr ""
+msgstr "Stań na drugim końcu sali"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.across.hint"
 msgid "From here the drops read as a picture: the time, falling whole into the basin. Each lasts about a second."
-msgstr ""
+msgstr "Stąd krople czyta się jak obraz: godzinę, która spada w całości do basenu. Każdy trwa około sekundy."
 
 #: hall-1/water-curtain
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.water-curtain.view.under.label"
 msgid "Look up at the valves"
-msgstr ""
+msgstr "Spójrz w górę na zawory"
 
 #: hall-1/water-curtain
 #. Line shown while the visitor is at that place.
 msgctxt "piece.water-curtain.view.under.hint"
 msgid "The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls."
-msgstr ""
+msgstr "Dolny rząd obrazu spada pierwszy. Każdy rząd wyżej rusza chwilę później, więc kształt trzyma się w czasie spadania."
 
 #: hall-1/mechanical-television
 #. Name of a piece.
@@ -5652,253 +5652,253 @@ msgstr "Rysunki liniowe: komórka w przekroju podłączona do baterii, dwie pły
 #. Name of a piece.
 msgctxt "piece.hidden-lcd.name"
 msgid "Hidden-image screen"
-msgstr ""
+msgstr "Ekran z ukrytym obrazem"
 
 #: hall-4/hidden-lcd
 #. Other names the piece goes by.
 msgctxt "piece.hidden-lcd.aka"
 msgid "Secret monitor, LCD without its front polariser"
-msgstr ""
+msgstr "Tajny monitor, LCD bez przedniego polaryzatora"
 
 #: hall-4/hidden-lcd
 #. The date of the piece, as its label gives it.
 msgctxt "piece.hidden-lcd.yearText"
 msgid "reported in 1999"
-msgstr ""
+msgstr "opisany w 1999"
 
 #: hall-4/hidden-lcd
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.hidden-lcd.origin"
 msgid "A liquid-crystal monitor with its front polariser removed. One sold with glasses by Sceptre, United States, was reported in 1999"
-msgstr ""
+msgstr "Monitor ciekłokrystaliczny bez przedniego polaryzatora. Jeden, sprzedawany z okularami przez firmę Sceptre w Stanach Zjednoczonych, opisano w 1999"
 
 #: hall-4/hidden-lcd
 #. Where this kind of display stands today.
 msgctxt "piece.hidden-lcd.statusNote"
 msgid "Made by hobbyists from old monitors, and shown in physics teaching. A stripped panel laid over a working one shows a second picture that only a filter reveals."
-msgstr ""
+msgstr "Robiony przez hobbystów ze starych monitorów i pokazywany na lekcjach fizyki. Ogołocony panel położony na działającym pokazuje drugi obraz, który odsłania tylko filtr."
 
 #: hall-4/hidden-lcd
 #. First sentence of the label.
 msgctxt "piece.hidden-lcd.lead"
 msgid "A liquid-crystal screen with its front filter peeled off looks blank and white, until you look at it through a polarising filter."
-msgstr ""
+msgstr "Ekran ciekłokrystaliczny bez przedniego filtra wygląda na pusty i biały, dopóki nie spojrzysz na niego przez filtr polaryzacyjny."
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.hidden-lcd.how.1"
 msgid "A liquid-crystal screen makes its picture with two polarising filters. The back one polarises the light of the lamp behind it. The liquid crystal turns that light by a different amount at each dot, and the front filter passes or stops each dot by how far its light was turned."
-msgstr ""
+msgstr "Ekran ciekłokrystaliczny tworzy obraz za pomocą dwóch filtrów polaryzacyjnych. Tylny polaryzuje światło lampy za nim. Ciekły kryształ skręca to światło o inną wartość w każdym punkcie, a przedni filtr przepuszcza albo zatrzymuje każdy punkt zależnie od tego, jak bardzo skręciło się jego światło."
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.hidden-lcd.how.2"
 msgid "Without the front filter, every dot lets out the same amount of light, so the eye sees an even white. The picture is still there, written in the angle of the light. A polarising filter held in front, or worn as glasses, brings it back. Turned a quarter turn, the filter shows the picture in its opposite colours."
-msgstr ""
+msgstr "Bez przedniego filtra każdy punkt wypuszcza tyle samo światła i oko widzi równą biel. Obraz wciąż tam jest, zapisany w kącie światła. Filtr polaryzacyjny trzymany z przodu albo noszony jako okulary przywraca go. Obrócony o ćwierć obrotu filtr pokazuje obraz w przeciwnych kolorach."
 
 #: hall-4/hidden-lcd
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.hidden-lcd.how.3"
 msgid "A monitor sold with glasses for this was reported in 1999. Since 2011, hobbyists have made their own from old monitors, moving the filter from the screen to a pair of glasses."
-msgstr ""
+msgstr "Monitor sprzedawany do tego z okularami opisano w 1999. Od 2011 hobbyści robią własne ze starych monitorów, przenosząc filtr z ekranu do okularów."
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.1"
 msgid "Looks blank to anyone without a filter"
-msgstr ""
+msgstr "Wygląda na pusty dla każdego bez filtra"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.2"
 msgid "Needs no new part, only one taken away"
-msgstr ""
+msgstr "Nie potrzebuje nowej części, tylko jednej mniej"
 
 #: hall-4/hidden-lcd
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.good.3"
 msgid "Shows plainly how a liquid-crystal screen works"
-msgstr ""
+msgstr "Wyraźnie pokazuje, jak działa ekran ciekłokrystaliczny"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.1"
 msgid "Anyone wearing polarised sunglasses can read it"
-msgstr ""
+msgstr "Każdy w polaryzacyjnych okularach przeciwsłonecznych może go czytać"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.2"
 msgid "Looks bright white and glaring to everyone else"
-msgstr ""
+msgstr "Wszystkim innym wydaje się jaskrawo biały i oślepiający"
 
 #: hall-4/hidden-lcd
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.hidden-lcd.bad.3"
 msgid "Dims and changes colour when the filter is tilted"
-msgstr ""
+msgstr "Ciemnieje i zmienia kolor, gdy filtr się przechyla"
 
 #: hall-4/hidden-lcd
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.hidden-lcd.look"
 msgid "Sit in front: the screen is white. Look through the filter on its stand and the clock appears. Watch the filter turn: at a quarter turn, the colours of the picture reverse."
-msgstr ""
+msgstr "Usiądź z przodu: ekran jest biały. Spójrz przez filtr na stojaku, a pojawi się zegar. Patrz, jak filtr się obraca: przy ćwierci obrotu kolory obrazu się odwracają."
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "Usiądź z przodu"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.front.hint"
 msgid "The screen looks white. Through the turning filter the clock comes back, and at a quarter turn its colours reverse."
-msgstr ""
+msgstr "Ekran wygląda na biały. Przez obracający się filtr zegar wraca, a przy ćwierci obrotu jego kolory się odwracają."
 
 #: hall-4/hidden-lcd
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.hidden-lcd.view.close.label"
 msgid "Look through the filter"
-msgstr ""
+msgstr "Spójrz przez filtr"
 
 #: hall-4/hidden-lcd
 #. Line shown while the visitor is at that place.
 msgctxt "piece.hidden-lcd.view.close.hint"
 msgid "Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees."
-msgstr ""
+msgstr "Każdy punkt jest tak jasny jak sąsiedni. Od punktu do punktu zmienia się kąt jego światła, a to widzi tylko filtr."
 
 #: hall-4/switchable-glass
 #. Name of a piece.
 msgctxt "piece.switchable-glass.name"
 msgid "Switchable glass"
-msgstr ""
+msgstr "Szkło przełączalne"
 
 #: hall-4/switchable-glass
 #. Other names the piece goes by.
 msgctxt "piece.switchable-glass.aka"
 msgid "Smart glass, privacy glass, PDLC"
-msgstr ""
+msgstr "Inteligentne szkło, szkło prywatyzujące, PDLC"
 
 #: hall-4/switchable-glass
 #. The date of the piece, as its label gives it.
 msgctxt "piece.switchable-glass.yearText"
 msgid "patented in 1984"
-msgstr ""
+msgstr "opatentowane w 1984"
 
 #: hall-4/switchable-glass
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.switchable-glass.origin"
 msgid "Liquid crystal sealed in tiny capsules, patented by James Fergason, United States, 1984. Studied as polymer-dispersed liquid crystal at the Liquid Crystal Institute, Kent State University, from the mid-1980s"
-msgstr ""
+msgstr "Ciekły kryształ zamknięty w maleńkich kapsułkach, opatentowany przez Jamesa Fergasona, Stany Zjednoczone, 1984. Badany jako ciekły kryształ rozproszony w polimerze w Liquid Crystal Institute na Kent State University od połowy lat osiemdziesiątych"
 
 #: hall-4/switchable-glass
 #. Where this kind of display stands today.
 msgctxt "piece.switchable-glass.statusNote"
 msgid "Sold as panes and as a film to stick on glass already in place, mostly for privacy in offices, meeting rooms and bathrooms."
-msgstr ""
+msgstr "Sprzedawane jako szyby i jako folia do naklejenia na już zamontowane szkło, głównie dla prywatności w biurach, salach konferencyjnych i łazienkach."
 
 #: hall-4/switchable-glass
 #. First sentence of the label.
 msgctxt "piece.switchable-glass.lead"
 msgid "A pane that is frosted white with the power off turns clear in a moment when a voltage is put across it."
-msgstr ""
+msgstr "Szyba, która bez prądu jest matowo biała, w jednej chwili staje się przezroczysta, gdy przyłoży się do niej napięcie."
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.switchable-glass.how.1"
 msgid "Between two sheets of glass or plastic, each coated with a clear conductor, lies a film of plastic full of tiny droplets of liquid crystal. With no voltage, the molecules in each droplet point every which way, and the droplets scatter light as frosted glass does."
-msgstr ""
+msgstr "Między dwiema warstwami szkła lub plastiku, każdą pokrytą przezroczystym przewodnikiem, leży plastikowa folia pełna maleńkich kropelek ciekłego kryształu. Bez napięcia cząsteczki w każdej kropelce wskazują w różne strony, a kropelki rozpraszają światło jak szkło matowe."
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.switchable-glass.how.2"
 msgid "A voltage across the film lines the molecules up with it. The liquid crystal then bends light almost exactly as the plastic around it does, so light passes straight through and the pane looks clear. It is clear or frosted, and draws no picture of its own."
-msgstr ""
+msgstr "Napięcie przyłożone do folii ustawia cząsteczki wzdłuż pola. Wtedy ciekły kryształ załamuje światło niemal dokładnie tak jak otaczający go plastik, światło przechodzi prosto i szyba wygląda na przezroczystą. Jest przezroczysta albo matowa i nie rysuje własnego obrazu."
 
 #: hall-4/switchable-glass
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.switchable-glass.how.3"
 msgid "James Fergason patented liquid crystal sealed in tiny capsules of polymer in 1984. The same year, John West began work on switchable windows at the Liquid Crystal Institute of Kent State University, where such films were studied as polymer-dispersed liquid crystals."
-msgstr ""
+msgstr "James Fergason opatentował w 1984 ciekły kryształ zamknięty w maleńkich kapsułkach z polimeru. W tym samym roku John West zaczął pracę nad przełączalnymi oknami w Liquid Crystal Institute na Kent State University, gdzie takie folie badano jako ciekłe kryształy rozproszone w polimerze."
 
 #: hall-4/switchable-glass
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.1"
 msgid "Changes from private to clear in a moment"
-msgstr ""
+msgstr "Zmienia się z nieprzejrzystego w przezroczyste w jednej chwili"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.2"
 msgid "Can be stuck as a film onto glass already in place"
-msgstr ""
+msgstr "Można je nakleić jako folię na już zamontowane szkło"
 
 #: hall-4/switchable-glass
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.good.3"
 msgid "Makes a whole wall of glass a screen to hide behind"
-msgstr ""
+msgstr "Zmienia całą szklaną ścianę w zasłonę, za którą można się schować"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.1"
 msgid "Is clear or frosted, with little in between"
-msgstr ""
+msgstr "Jest przezroczyste albo matowe, z niewielkim stanem pośrednim"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.2"
 msgid "Must stay powered to stay clear"
-msgstr ""
+msgstr "Musi być zasilane, żeby pozostać przezroczyste"
 
 #: hall-4/switchable-glass
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.switchable-glass.bad.3"
 msgid "Shows no picture of its own"
-msgstr ""
+msgstr "Nie pokazuje własnego obrazu"
 
 #: hall-4/switchable-glass
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.switchable-glass.look"
 msgid "The pane turns clear and frosted in turn. Watch the clock behind it: you can read it only while the pane is clear. Then go close and see the frosting from near."
-msgstr ""
+msgstr "Szyba na zmianę staje się przezroczysta i matowa. Patrz na zegar za nią: możesz go odczytać tylko wtedy, gdy szyba jest przezroczysta. Potem podejdź bliżej i obejrzyj matowienie z bliska."
 
 #: hall-4/switchable-glass
 #. People section: what James Fergason did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.1"
 msgid "Patented liquid crystal sealed in tiny capsules of polymer in 1984, the kind of film that switchable glass is made of."
-msgstr ""
+msgstr "Opatentował w 1984 ciekły kryształ zamknięty w maleńkich kapsułkach z polimeru, rodzaj folii, z której robi się szkło przełączalne."
 
 #: hall-4/switchable-glass
 #. People section: what John West did. The names stand above this line.
 msgctxt "piece.switchable-glass.people.2"
 msgid "Worked on switchable windows at the Liquid Crystal Institute of Kent State University from 1984, by the university's account."
-msgstr ""
+msgstr "Według uczelni od 1984 pracował nad przełączalnymi oknami w Liquid Crystal Institute na Kent State University."
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.front.label"
 msgid "Stand in front"
-msgstr ""
+msgstr "Stań z przodu"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.front.hint"
 msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
-msgstr ""
+msgstr "Zegar za szybą widać tylko wtedy, gdy szyba jest przezroczysta. Bez prądu szyba jest matowa."
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.close.label"
 msgid "Go close to the pane"
-msgstr ""
+msgstr "Podejdź do szyby"
 
 #: hall-4/switchable-glass
 #. Line shown while the visitor is at that place.
 msgctxt "piece.switchable-glass.view.close.hint"
 msgid "Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on."
-msgstr ""
+msgstr "Matowa folia rozprasza światło we wszystkie strony. Lampka na skrzynce z wyłącznikiem pokazuje, kiedy jest napięcie."
 
 #: hall-4/micromirror
 #. Name of a piece.
@@ -8424,145 +8424,145 @@ msgstr "Rysunki kreskowe: okrągła płaska obudowa na wygiętej nóżce, z okie
 #. Name of a piece.
 msgctxt "piece.stereo-glasses.name"
 msgid "Glasses that pick an eye"
-msgstr ""
+msgstr "Okulary, które wybierają oko"
 
 #: hall-7/stereo-glasses
 #. Other names the piece goes by.
 msgctxt "piece.stereo-glasses.aka"
 msgid "Anaglyph, polarised and shutter glasses"
-msgstr ""
+msgstr "Okulary anaglifowe, polaryzacyjne i migawkowe"
 
 #: hall-7/stereo-glasses
 #. The date of the piece, as its label gives it.
 msgctxt "piece.stereo-glasses.yearText"
 msgid "1853, 1922 and 1936"
-msgstr ""
+msgstr "1853, 1922 i 1936"
 
 #: hall-7/stereo-glasses
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.stereo-glasses.origin"
 msgid "Colour: described by Wilhelm Rollmann, Germany, 1853. Time: Laurens Hammond's Teleview, New York, 1922. Polarised light: Edwin H. Land, United States, 1936"
-msgstr ""
+msgstr "Kolor: opisany przez Wilhelma Rollmanna, Niemcy, 1853. Czas: Teleview Laurensa Hammonda, Nowy Jork, 1922. Światło spolaryzowane: Edwin H. Land, Stany Zjednoczone, 1936"
 
 #: hall-7/stereo-glasses
 #. Where this kind of display stands today.
 msgctxt "piece.stereo-glasses.statusNote"
 msgid "Cinemas still show films in 3D with polarised glasses, and red and cyan glasses still come with printed pictures. Shutter glasses are used with some projectors and screens."
-msgstr ""
+msgstr "Kina wciąż wyświetlają filmy w 3D z okularami polaryzacyjnymi, a okulary czerwono-cyjanowe wciąż dołącza się do drukowanych obrazów. Okulary migawkowe służą do niektórych projektorów i ekranów."
 
 #: hall-7/stereo-glasses
 #. First sentence of the label.
 msgctxt "piece.stereo-glasses.lead"
 msgid "One screen carries a picture for each eye at once, and the glasses let each eye see only its own."
-msgstr ""
+msgstr "Jeden ekran niesie jednocześnie obraz dla każdego oka, a okulary pozwalają każdemu oku zobaczyć tylko swój."
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 1 of 3.
 msgctxt "piece.stereo-glasses.how.1"
 msgid "Each eye needs a picture of its own, taken from a little to the side of the other. A stereoscope gives each eye its own lens. Glasses do it with one shared picture, by filtering. A red filter passes the red picture and hides the cyan one, and a cyan filter does the opposite."
-msgstr ""
+msgstr "Każde oko potrzebuje własnego obrazu, zrobionego trochę z boku względem drugiego. Stereoskop daje każdemu oku osobną soczewkę. Okulary robią to z jednym wspólnym obrazem, filtrując. Czerwony filtr przepuszcza czerwony obraz i ukrywa cyjanowy, a cyjanowy filtr robi odwrotnie."
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 2 of 3.
 msgctxt "piece.stereo-glasses.how.2"
 msgid "Polarised light gives the same split without colour. The two pictures are projected through filters at right angles, and each lens passes only the light at its own angle. Shutter glasses split by time instead: the screen shows one eye's picture, then the other's, and each lens closes while the wrong picture is up."
-msgstr ""
+msgstr "Światło spolaryzowane dzieli tak samo, bez koloru. Oba obrazy rzuca się przez filtry ustawione pod kątem prostym, a każde szkło przepuszcza tylko światło pod swoim kątem. Okulary migawkowe dzielą zamiast tego czasem: ekran pokazuje obraz jednego oka, potem drugiego, a każde szkło zamyka się, gdy na ekranie jest nie ten obraz."
 
 #: hall-7/stereo-glasses
 #. How it works, paragraph 3 of 3.
 msgctxt "piece.stereo-glasses.how.3"
 msgid "Wilhelm Rollmann described pictures in two colours for two eyes in 1853. Louis Ducos du Hauron printed photographs that way in 1891 and called them anaglyphs. Laurens Hammond's Teleview showed films with shutters at the Selwyn Theatre in New York from 27 December 1922. Edwin Land showed films in polarised light in New York in 1936."
-msgstr ""
+msgstr "Wilhelm Rollmann opisał w 1853 obrazy w dwóch kolorach dla dwojga oczu. Louis Ducos du Hauron wydrukował tak fotografie w 1891 i nazwał je anaglifami. Teleview Laurensa Hammonda wyświetlał filmy z migawkami w Selwyn Theatre w Nowym Jorku od 27 grudnia 1922. Edwin Land wyświetlał filmy w świetle spolaryzowanym w Nowym Jorku w 1936."
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.1"
 msgid "Lets a whole audience see depth at once, from one screen"
-msgstr ""
+msgstr "Pozwala całej widowni zobaczyć głębię naraz, z jednego ekranu"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.2"
 msgid "Red and cyan glasses cost almost nothing and work with print"
-msgstr ""
+msgstr "Okulary czerwono-cyjanowe kosztują prawie nic i działają z drukiem"
 
 #: hall-7/stereo-glasses
 #. What it is good at, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.good.3"
 msgid "Polarised glasses keep the colours of the picture"
-msgstr ""
+msgstr "Okulary polaryzacyjne zachowują kolory obrazu"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 1 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.1"
 msgid "Lets each eye have half of the light, or less"
-msgstr ""
+msgstr "Daje każdemu oku połowę światła albo mniej"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 2 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.2"
 msgid "Red and cyan glasses spoil the colours of the picture"
-msgstr ""
+msgstr "Okulary czerwono-cyjanowe psują kolory obrazu"
 
 #: hall-7/stereo-glasses
 #. Where it fails, point 3 of 3. No full stop at the end.
 msgctxt "piece.stereo-glasses.bad.3"
 msgid "Shutter glasses need batteries and a signal from the screen, and can flicker"
-msgstr ""
+msgstr "Okulary migawkowe potrzebują baterii i sygnału z ekranu, i mogą migotać"
 
 #: hall-7/stereo-glasses
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.stereo-glasses.look"
 msgid "Sit in front and watch for 24 seconds: the screen shows the same cube in three ways, and the glasses in use stand out on the table. If you have red and cyan glasses, press the glasses key and the whole model is drawn for them."
-msgstr ""
+msgstr "Usiądź z przodu i patrz przez 24 sekundy: ekran pokazuje ten sam sześcian na trzy sposoby, a używane okulary wyróżniają się na stole. Jeśli masz okulary czerwono-cyjanowe, naciśnij przycisk okularów, a cały model narysuje się dla nich."
 
 #: hall-7/stereo-glasses
 #. People section: what Wilhelm Rollmann did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.1"
 msgid "Described in 1853 how two pictures in two colours, seen through glasses of the same two colours, give each eye its own."
-msgstr ""
+msgstr "Opisał w 1853, jak dwa obrazy w dwóch kolorach, oglądane przez okulary w tych samych dwóch kolorach, dają każdemu oku jego własny."
 
 #: hall-7/stereo-glasses
 #. People section: what Louis Ducos du Hauron did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.2"
 msgid "Printed stereoscopic photographs in red and blue in 1891, and named them anaglyphs."
-msgstr ""
+msgstr "Wydrukował w 1891 fotografie stereoskopowe w czerwieni i błękicie i nazwał je anaglifami."
 
 #: hall-7/stereo-glasses
 #. People section: what Laurens Hammond did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.3"
 msgid "Showed films through shutters that opened for each eye in turn, at the Selwyn Theatre in New York from December 1922."
-msgstr ""
+msgstr "Wyświetlał filmy przez migawki otwierające się na zmianę dla każdego oka, w Selwyn Theatre w Nowym Jorku od grudnia 1922."
 
 #: hall-7/stereo-glasses
 #. People section: what Edwin H. Land did. The names stand above this line.
 msgctxt "piece.stereo-glasses.people.4"
 msgid "Made sheet polarisers and showed films in polarised light in New York in 1936, by the account of a newspaper of that year."
-msgstr ""
+msgstr "Wytwarzał polaryzatory w arkuszach i wyświetlał filmy w świetle spolaryzowanym w Nowym Jorku w 1936, według gazety z tamtego roku."
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.front.label"
 msgid "Sit in front"
-msgstr ""
+msgstr "Usiądź z przodu"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.front.hint"
 msgid "Every eight seconds the screen and the glasses change together: colour, then time, then polarised light."
-msgstr ""
+msgstr "Co osiem sekund ekran i okulary zmieniają się razem: kolor, potem czas, potem światło spolaryzowane."
 
 #: hall-7/stereo-glasses
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.stereo-glasses.view.table.label"
 msgid "Look at the glasses"
-msgstr ""
+msgstr "Spójrz na okulary"
 
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.table.hint"
 msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
-msgstr ""
+msgstr "W środkowej parze szkła na zmianę jaśnieją i ciemnieją, w rytmie obrazu na ekranie."
 
 #: hall-7/parallax-barrier
 #. Name of a piece.
