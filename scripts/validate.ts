@@ -132,6 +132,13 @@ for (const tour of tours) {
   if (at && WORDS[women.size] !== at[1].toLowerCase()) errors.push(`tour women: it says ${at[1].toLowerCase()} women are named at its stops, and the labels there name ${women.size}`);
   if (at && WORDS[stops.length] !== at[2]) errors.push(`tour women: it says it has ${at[2]} stops, and it has ${stops.length}`);
   if (/\bmore than a hundred people\b/.test(said) && named.size <= 100) errors.push(`tour women: it says the labels name more than a hundred people, and they name ${named.size}`);
+  // the blue line counts its people the same way: the names its trail picks from the labels at its stops
+  const blue = tours.find((t) => t.id === 'black'), told = blue ? blue.parts.flatMap((p) => p.text).join(' ') : '';
+  const lane = trails.find((t) => t.id === 'black'), blueStops = blue ? blue.parts.map((p) => p.id).filter((id) => people[id]) : [];
+  const theirs = new Set(lane ? blueStops.flatMap((id) => people[id].people.flatMap((e) => lane.who(e))) : []);
+  const counted = /\b([A-Za-z]+) people are named at these ([a-z]+) stops\b/.exec(told);
+  if (counted && WORDS[theirs.size] !== counted[1].toLowerCase()) errors.push(`tour black: it says ${counted[1].toLowerCase()} people are named at its stops, and the labels there name ${theirs.size}`);
+  if (counted && WORDS[blueStops.length] !== counted[2]) errors.push(`tour black: it says it has ${counted[2]} stops, and it has ${blueStops.length}`);
   if (/\bmore than forty other displays\b/.test(said) && pieces.length - stops.length <= 40) errors.push(`tour women: it says the line passed more than forty other displays, and it is ${pieces.length - stops.length}`);
 }
 // a portrait is a file that is really there, under a name that a label uses, with its credit filled in

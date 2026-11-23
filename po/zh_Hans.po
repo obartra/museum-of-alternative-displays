@@ -9153,14 +9153,14 @@ msgstr "这块显示器靠触摸来读。一排排小针升起、落下，拼出
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
-msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr "每个点的下面有一块晶体，加上电压就会弯曲；一根杠杆把这点小小的弯曲变成小针的升起。Andrée Tretiakoff和Oleg Tretiakoff为这种顶起盲文点的办法取得了专利。他们1974年首先在法国提出申请。"
+msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff's name is on the patent for it, beside Oleg Tretiakoff's: a United States patent filed in 1975, which goes back to a French filing of August 1974."
+msgstr "每个点的下面有一块晶体，加上电压就会弯曲；一根杠杆把这点小小的弯曲变成小针的升起。这项专利上有Andrée Tretiakoff的名字，与Oleg Tretiakoff并列：一项1975年申请的美国专利，可追溯到1974年8月在法国的申请。"
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
-msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr "它是博物馆里唯一完全不需要光的展品。绿线上的其他各站都靠光工作。下一站是2号展厅的阴极射线管，在那里，一束电子让屏幕发光。"
+msgid "It is the only piece in the museum that needs no light at all. The next is the cathode ray tube in hall 2. The woman there is on no patent: a news agency kept her part."
+msgstr "这是博物馆里唯一完全不需要光的展品。下一站是第2展厅的阴极射线管。那里的女性不在任何专利上：是一家通讯社留下了她的那一份。"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
@@ -9177,8 +9177,8 @@ msgstr "看屏幕。那条向下移动的亮带，就是一束电子刚刚画过
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent."
-msgstr "台座上的铭牌写着Ferdinand Braun，他1897年在斯特拉斯堡造出了自己的阴极射线管。三十年后，Philo Farnsworth的团队在旧金山传送出一幅全电子电视图像。加州的一处历史地标称它是第一幅这样的图像。Elma Farnsworth，人称Pem，是这个团队的一员。她记实验日志，绘制技术图纸，还焊接管子的部件。她的面孔是这套系统最早传送的图像之一。"
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent. We know it because the Associated Press reported it, citing the historian Donald G. Godfrey."
+msgstr "台座上的铭牌写着Ferdinand Braun，他1897年在斯特拉斯堡造出了自己的阴极射线管。三十年后，Philo Farnsworth的团队在旧金山传送出一幅全电子电视图像。加州的一处历史地标称它是第一幅这样的图像。Elma Farnsworth，人称Pem，是这个团队的一员。她记实验日志，绘制技术图纸，还焊接管子的部件。她的面孔是这套系统最早传送的图像之一。我们知道这一点，是因为美联社援引历史学家Donald G. Godfrey作了报道。"
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9225,8 +9225,8 @@ msgstr "这是一个像素，剖开后放大了许多倍。蓝光从电路板上
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
-msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr "这些晶体叫作量子点。大多数屏幕像这个模型一样用它们：把蓝光变成红光和绿光。1994年，在伯克利，Vicki Colvin和两位同事走了另一条路。他们让电流通过一层量子点，使它发光。Colvin是那篇论文的第一作者。"
+msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Her name stands first on the paper of 1994."
+msgstr "这些晶体叫作量子点。大多数屏幕像这个模型一样用它们：把蓝光变成红光和绿光。1994年，在伯克利，Vicki Colvin和两位同事走了另一条路。他们让电流通过一层量子点，使它发光。1994年的论文上，她的名字排在第一位。"
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9249,8 +9249,8 @@ msgstr "看这块布幕。幕后燃着一团火焰，火焰和布之间立着三
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature. Stay a minute: the cloth plays a second act in her manner."
-msgstr "没人知道是谁最先这样做的。大约一千年前，爪哇和中国就有记载，今天也还在演出。在人物上剪出孔洞，光就能透过去，在影子里画出眼睛或羽毛。在柏林，Lotte Reiniger用黑卡纸剪出人物，一格一格地拍摄。她1926年的《阿赫迈德王子历险记》是现存最早的动画长片。请稍等一分钟：幕布会照她的方式演出第二幕。"
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature, and her name is in its credits for the silhouettes. Stay a minute: the cloth plays a second act in her manner."
+msgstr "没人知道是谁最先这样做的。大约一千年前，爪哇和中国就有记载，今天也还在演出。在人物上剪出孔洞，光就能透过去，在影子里画出眼睛或羽毛。在柏林，Lotte Reiniger用黑卡纸剪出人物，一格一格地拍摄。她1926年的《阿赫迈德王子历险记》是现存最早的动画长片，片头字幕里有她的名字，署的是剪影。请稍等一分钟：幕布会照她的方式演出第二幕。"
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9273,8 +9273,8 @@ msgstr "从左到右跟着光束看。三台激光器的光合成一束白光。
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
-msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, with Garmire as its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
-msgstr "铭牌上写着Joseph Ostoja-Kotkowski，他1968年在阿德莱德上演过一场早期的激光表演。Elsa Garmire是加州理工学院的物理学家，她用激光制作图像。电影人Ivan Dryer从1970年底开始拍摄这些图像。两人创办了推出Laserium的公司，由Garmire担任总裁。Laserium于1973年在洛杉矶格里菲斯天文台开演。"
+msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, and Garmire was its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
+msgstr "铭牌上写着Joseph Ostoja-Kotkowski，他1968年在阿德莱德上演过一场早期的激光表演。Elsa Garmire是加州理工学院的物理学家，她用激光制作图像。电影人Ivan Dryer从1970年底开始拍摄这些图像。两人创办了推出Laserium的公司，Garmire是公司总裁。Laserium于1973年在洛杉矶格里菲斯天文台开演。"
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9297,8 +9297,8 @@ msgstr "找到标着“日光”的开关，把它关掉。白天，这幅画面
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
-msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr "1969年，迪士尼乐园的Haunted Mansion用这个办法做出了会唱歌的胸像。先拍下几位歌手的脸，再把影片投到按同样的脸做成的石膏胸像上。在同一座宅子里，有一个水晶球，里面是一颗素面头像。Leota Toombs是迪士尼设计工坊的艺术家，她把自己的脸给了它：投在那颗头像上的影片，拍的就是她。"
+msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face. No paper or patent carries her name here. The film on that head is of her."
+msgstr "1969年，迪士尼乐园的Haunted Mansion用这个办法做出了会唱歌的胸像。先拍下几位歌手的脸，再把影片投到按同样的脸做成的石膏胸像上。在同一座宅子里，有一个水晶球，里面是一颗素面头像。迪士尼设计工坊的艺术家Leota Toombs把自己的脸给了它。这里没有任何论文或专利写着她的名字。那颗头上的影片，就是她。"
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9321,8 +9321,8 @@ msgstr "这是电子书阅读器的一页。它不发光。几百万个微胶囊
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
-msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr "铭牌上写着Barrett Comiskey、J. D. Albert和Joseph Jacobson，他们从1990年代中期起在MIT媒体实验室研制这种墨水。2001年，在贝尔实验室，John Rogers和Zhenan Bao把它铺在一张塑料薄片上。Bao是化学家，设计能导电的塑料。他们用一枚橡皮图章在薄片上压印出256个塑料晶体管，图像的每个点一个。这一页可以弯曲。"
+msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend. Bao is a chemist who designs plastics that carry a current."
+msgstr "铭牌上写着Barrett Comiskey、J. D. Albert和Joseph Jacobson，他们从1990年代中期起在MIT媒体实验室研制这种墨水。2001年，在贝尔实验室，John Rogers和Zhenan Bao把它铺在一张塑料薄片上。他们用一枚橡皮图章在薄片上压印出256个塑料晶体管，图像的每个点一个。这一页可以弯曲。Bao是化学家，设计能导电的塑料。"
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9345,8 +9345,8 @@ msgstr "这是12个小格，放大了很多倍。每个小格里，水的下面�
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
-msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981. Hackwood is credited with the name of the effect: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr "在第一站，电压让一块晶体弯曲，顶起一根小针。在这里，电压让水把油推到一边。Susan Hackwood和Gerardo Beni于1981年在贝尔实验室提出这种显示屏。这一效应的名称被归于Hackwood：电润湿。铭牌上的年份2003年，是荷兰的一个实验室把它做到能放视频的那一年。"
+msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, in a paper and a patent the same year. Hackwood's name went further: Cambridge's Centre for Science and Policy credits her with naming the effect, electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
+msgstr "在第一站，电压让一块晶体弯曲，顶起一根小针。在这里，电压让水把油推到一边。Susan Hackwood和Gerardo Beni于1981年在贝尔实验室提出了这种显示器，同一年有论文也有专利。Hackwood的名字走得更远：剑桥的Centre for Science and Policy认为这个效应的名字“电润湿”是她起的。铭牌上的年份2003年，是荷兰的一个实验室把它做到能放视频的那一年。"
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9369,8 +9369,8 @@ msgstr "这张印刷标签显示的是整点过后的分钟数。在这个展厅
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
-msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
-msgstr "铭牌上写着S. K. Deb。他从1960年代开始的关于氧化钨薄膜的研究，是这类显示屏的起点。在麻省理工学院，Paula Hammond指导Dean DeLongchamp，DeLongchamp用另一种办法做出这样的薄膜：一层分子一层分子地叠。他2003年的学位论文发现，这种薄膜在对比度和切换上总体优于用其他方法制成的薄膜。他还把几种材料组合起来，做出了不止一种颜色的薄膜。"
+msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour. The thesis carries his name. Hers is on it as the one who supervised it."
+msgstr "铭牌上写着S. K. Deb。他从1960年代开始的关于氧化钨薄膜的研究，是这类显示屏的起点。在麻省理工学院，Paula Hammond指导Dean DeLongchamp，DeLongchamp用另一种办法做出这样的薄膜：一层分子一层分子地叠。他2003年的学位论文发现，这种薄膜在对比度和切换上总体优于用其他方法制成的薄膜。他还把几种材料组合起来，做出了不止一种颜色的薄膜。论文上是他的名字。她的名字作为导师写在上面。"
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9393,8 +9393,8 @@ msgstr "看这两个箱子。左边，一只真灯泡藏在灯座下方，一面
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
-msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr "在3号展厅，有一个问题是在晚餐桌上提出的。这一个是1976年在一场展览上提出的。Valerie Thomas看到，一只灯泡从灯座上取下之后，一面曲面镜还能让它看起来亮着，她想知道这个像能不能传送出去。发明幻象传送器的时候，她在NASA主管Landsat的图像处理系统。那场展览四年之后，她获得了专利。"
+msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. Four years after that exhibition, the patent was granted in her name."
+msgstr "在3号展厅，有一个问题是在晚餐桌上提出的。这一个是1976年在一场展览上提出的。Valerie Thomas看到，一只灯泡从灯座上取下之后，一面曲面镜还能让它看起来亮着，她想知道这个像能不能传送出去。发明幻象传送器的时候，她在NASA主管Landsat的图像处理系统。那次展览四年后，专利以她的名字获批。"
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9423,8 +9423,8 @@ msgstr "现在看叠层旁边的那块玻璃。它只在两束看不见的光交
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
-msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
-msgstr "Elizabeth Downing和三位同事就是这样在玻璃内部画出彩色光点的。这项研究1996年由斯坦福大学发表，Downing是第一作者。原型是一个边长约15毫米的立方体，模型把它放大了许多倍。下一站是全息术，在7号展厅。"
+msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their paper appeared in Science in 1996 with Downing's name first. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
+msgstr "Elizabeth Downing和三位同事就是这样在玻璃内部画出彩色光点的。他们的论文1996年发表在《科学》上，Downing的名字排在第一位。原型是一个边长约15毫米的立方体，模型把它放大了许多倍。下一站是全息术，在7号展厅。"
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
@@ -9441,8 +9441,8 @@ msgstr "透过这块玻璃板看。后面好像立着一辆玩具火车头。往
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
-msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a thesis that sets out the design and the building of a holographic video display."
-msgstr "Dennis Gabor在1947年构想出全息术，并于1948年发表。在那之后二十年，画家Margaret Benyon开始把全息图当作艺术来创作。这样的全息图是静止的。1989年，Mary Lou Jepsen在MIT媒体实验室写了一篇学位论文，阐述一台全息视频显示器的设计与实现。"
+msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art, and showed them a year later. Her record is her exhibitions. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a master's thesis that sets out the design and the building of a holographic video display."
+msgstr "Dennis Gabor于1947年构想出全息术，1948年发表。二十年后，画家Margaret Benyon开始把全息图当作艺术来做，一年后展出。她的记录就是她的展览。像这样的全息图是静止的。1989年，在MIT媒体实验室，Mary Lou Jepsen写了一篇硕士论文，阐述一种全息视频显示器的设计与制作。"
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9465,8 +9465,8 @@ msgstr "站到房间敞开的那一面。三面墙和地板都是屏幕。里面
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cave.text.2"
-msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
-msgstr "铭牌上写着伊利诺伊大学芝加哥分校Electronic Visualization Laboratory的三个人。阐述这个房间的两篇论文，第一作者都是Carolina Cruz-Neira，房间的设计与实现是她的博士研究课题。她的实验室1992年在芝加哥SIGGRAPH上展出了它。"
+msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room. The sources then part ways. A SIGGRAPH biography of 1997 calls the room her doctoral research. One of 2022 says she invented it."
+msgstr "铭牌上写着伊利诺伊大学芝加哥分校Electronic Visualization Laboratory的三个人。阐述这个房间的两篇论文，第一作者都是Carolina Cruz-Neira。说法在这里分开了。1997年的一份SIGGRAPH简介称这个房间是她的博士研究。2022年的一份说是她发明的。"
 
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9489,8 +9489,8 @@ msgstr "绿线到这里结束。它从靠触摸来读的小针开始。它以一
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Seventeen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "这十四站一共提到了十七位女性，你已经在每一位的成果前停留过。这些展厅的展品说明里，总共提到了一百多个人。"
+msgid "Seventeen women are named at these fourteen stops. Some are on patents, some lead a paper, and one is known from a news report. In all, the labels in these halls name more than a hundred people."
+msgstr "这十四站一共提到了十七位女性。有的在专利上，有的是论文的第一作者，还有一位是靠一则新闻报道为人所知。这些展厅的展品说明里，总共提到了一百多个人。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9549,14 +9549,14 @@ msgstr "看屏幕。那条向下移动的亮带，就是一束电子刚刚画过
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr "台座上的铭牌写着Ferdinand Braun，他1897年在斯特拉斯堡造出了自己的阴极射线管。这份说明上有两个人让这种管子派上了用场。Marie Van Brittan Brown是纽约的一位护士，她的丈夫Albert是电子技师。1966年，他们为自己的家造了一套安防系统。一台摄像机在门上的四个窥视孔之间移动，一台电视监视器显示出来访的人。他们在1969年取得了专利。Mark Dean是IBM的工程师。他在IBM个人计算机上的三项专利中，有两项是驱动显示器的适配器，一项用于单色显示器，一项用于彩色显示器。"
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969, with both their names on the patent. Mark Dean was an engineer at IBM. His name is on three patents for the IBM personal computer. Two are for the adapters that drove its monitors, one monochrome and one colour."
+msgstr "台座上的铭牌写着Ferdinand Braun，他1897年在斯特拉斯堡造出了自己的阴极射线管。这份说明上有两个人让这种管子派上了用场。Marie Van Brittan Brown是纽约的一位护士，她的丈夫Albert是电子技师。1966年，他们为自己的家造了一套安防系统。一台摄像机在门上的四个窥视孔之间移动，一台电视监视器显示出来访的人。他们在1969年获得专利，专利上有两人的名字。Mark Dean是IBM的工程师。IBM个人电脑的三项专利上有他的名字。其中两项是驱动显示器的适配卡，一块用于单色，一块用于彩色。"
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.3"
-msgid "The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments."
-msgstr "下一站也在这个展厅。去看Numitron数码管，就是那个装着七根细小灯丝的玻璃泡。"
+msgid "The next stop is in this hall as well. There the patent is nearly ninety years older than the display. Go to the Numitron, the glass bulb with seven small filaments."
+msgstr "下一站也在这个展厅。那里的专利比显示器早了将近九十年。去看Numitron数码管，就是那个装着七根细小灯丝的玻璃泡。"
 
 #: tour-black
 #. Guided tour, at the piece Numitron: the title of this part.
@@ -9597,8 +9597,8 @@ msgstr "模型展示的是面板的一个角，已经剖开，并放大了很多
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.2"
-msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one."
-msgstr "这种显示器是一只压扁到几毫米厚的阴极射线管，每个点后面都有一个微小的电子源。制造尖锥的方法是在Stanford Research Institute取得专利的。Akintunde Akinwande先后在尼日利亚和斯坦福大学求学。他1986年进入Honeywell，在那里研究薄膜场发射器件和显示器。在MIT，他研究可以逐个开关的发射体阵列。"
+msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked with Luis Fernando Velásquez-García on arrays of emitters, each switched by its own transistor."
+msgstr "这种显示器是一只压扁到几毫米厚的阴极射线管，每个点后面都有一个微小的电子源。制造尖锥的方法是在Stanford Research Institute取得专利的。Akintunde Akinwande先后在尼日利亚和斯坦福大学求学。他1986年进入Honeywell，在那里研究薄膜场发射器件和显示器。在MIT，他和Luis Fernando Velásquez-García一起研究发射体阵列，每个发射体由自己的晶体管控制。"
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9621,8 +9621,8 @@ msgstr "看那几个白色的石膏形体，还有架在三脚架上的投影机
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.2"
-msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room."
-msgstr "铭牌上的年份1969，是迪士尼乐园Haunted Mansion的年份。在那里，一张拍下来的脸被投到水晶球里的一颗素面头像上。这颗头像叫Madame Leota。Lanny Smoot是迪士尼的资深研究员，拥有100多项专利。Madame Leota能在降神会的房间里飘浮，被认为是他的功劳。"
+msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow, and his name is on more than 100 patents. He is credited with making Madame Leota float in her séance room."
+msgstr "铭牌上的年份1969，是迪士尼乐园Haunted Mansion的年份。在那里，一张拍下来的脸被投到水晶球里的一颗素面头像上。这颗头像叫Madame Leota。Lanny Smoot是迪士尼的资深研究员，他的名字出现在一百多项专利上。Madame Leota能在降神会的房间里飘浮，被认为是他的功劳。"
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9669,8 +9669,8 @@ msgstr "左边，一只真灯泡藏在灯座下方，它的像立在上面那个
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
-msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr "在这里，铭牌上写的正是这条导览要来看的那个人。Valerie Thomas于1943年生于马里兰州。据一种说法，她是摩根州立大学同年级中仅有的两名主修物理的女生之一。她以数据分析员的身份进入NASA，并在那里发明了幻象传送器。铭牌上的年份是1980年。"
+msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The patent is in her name, and the plate gives its year, 1980."
+msgstr "在这里，铭牌上写的正是这条导览要来看的那个人。Valerie Thomas于1943年生于马里兰州。据一种说法，她是摩根州立大学同年级中仅有的两名主修物理的女生之一。她以数据分析员的身份进入NASA，并在那里发明了幻象传送器。专利是她的名字，说明牌上写着它的年份，1980年。"
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9693,8 +9693,8 @@ msgstr "一只手持式立体镜立在支柱上，片夹里插着一张立体卡
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
-msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr "铭牌上写着Charles Wheatstone，他1838年在伦敦发表了立体镜。这份说明上有两个人来得晚得多。Charles Harrison是芝加哥的工业设计师。1957年或1958年，他用轻便的注塑塑料重新设计了手持立体镜View-Master。它从摄影师的配件变成了儿童玩具。Kenneth Dunkley是宾夕法尼亚州的物理学家。他1989年的专利是一副没有镜片的眼镜：两个针孔，两个空框。专利说，戴上它，普通的平面图片看起来就有了深度。"
+msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. His record is the object itself: sold from 1962, it went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania, and his record is a patent. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
+msgstr "铭牌上写着Charles Wheatstone，他1838年在伦敦发表了立体镜。这份说明上有两个人来得晚得多。Charles Harrison是芝加哥的工业设计师。1957年或1958年，他用轻便的注塑塑料重新设计了手持立体镜View-Master。他的记录就是这件东西本身：它从1962年开始出售，从摄影师的配件变成了儿童玩具。Kenneth Dunkley是宾夕法尼亚州的物理学家，他的记录是一项专利。他1989年的专利是一副没有镜片的眼镜：两个针孔，两个空框。专利说，戴上它，普通的平面图片看起来就有了深度。"
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9717,8 +9717,8 @@ msgstr "看这张卡片。上面印着一只眼睛，共有九个视图。转动
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.2"
-msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
-msgstr "一张由细条拼成的图片上，盖着一片排满细小柱镜的薄板；你站的位置不同，每条柱镜显示的细条也不同。铭牌上写着Walter Hess，他在1912年申请了专利。Hank Willis Thomas是纽约的艺术家。他的光栅立体画作品上有文字，观众从前面走过，文字就会变。其中一件上，Black Imitates White（黑模仿白）会变成White Imitates Black（白模仿黑）。"
+msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York, and here the work is the record. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
+msgstr "一张由细条拼成的图片上，盖着一片排满细小柱镜的薄板；你站的位置不同，每条柱镜显示的细条也不同。铭牌上写着Walter Hess，他在1912年申请了专利。Hank Willis Thomas是纽约的艺术家，在这里，作品本身就是记录。他的光栅立体画作品上有文字，观众从前面走过，文字就会变。其中一件上，Black Imitates White（黑模仿白）会变成White Imitates Black（白模仿黑）。"
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9741,8 +9741,8 @@ msgstr "模型展示的是戴在假人头上的一台头显。旁边是供一只
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
-msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr "铭牌上写着Ivan Sutherland和Bob Sproull，他们1968年在哈佛大学造出了一台能显示计算机所绘图形的头显。有的资料称它为第一台虚拟现实头显，有的称它为早期的一台。Samuel Achilefu生于尼日利亚。他在圣路易斯华盛顿大学的团队为外科医生造出了带屏幕的护目镜。一种染料让癌细胞在那块屏幕上发光。2014年，这副护目镜第一次在手术中使用。"
+msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The university dates their first use in an operation to 2014."
+msgstr "铭牌上写着Ivan Sutherland和Bob Sproull，他们1968年在哈佛大学造出了一台能显示计算机所绘图形的头显。有的资料称它为第一台虚拟现实头显，有的称它为早期的一台。Samuel Achilefu生于尼日利亚。他在圣路易斯华盛顿大学的团队为外科医生造出了带屏幕的护目镜。一种染料让癌细胞在那块屏幕上发光。大学把它们第一次用于手术的时间定在2014年。"
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9765,8 +9765,8 @@ msgstr "蓝线到这里结束。它从一户人家门口的摄像机开始。它
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.2"
-msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
-msgstr "这十站一共提到了十二个人。每个人之所以在这条线上，是因为有资料把此人描述为黑人、非裔美国人，或在非洲国家出生并长大的人。“人物”页给出了每个名字的资料来源。"
+msgid "Eleven people are named at these nine stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
+msgstr "这九站一共提到了十一个人。每个人之所以在这条线上，是因为有资料把此人描述为黑人、非裔美国人，或在非洲国家出生并长大的人。“人物”页给出了每个名字的资料来源。"
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.

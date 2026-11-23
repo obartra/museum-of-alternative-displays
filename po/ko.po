@@ -9158,14 +9158,14 @@ msgstr "이 디스플레이는 손끝으로 읽습니다. 핀의 줄이 오르�
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.2"
-msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff and Oleg Tretiakoff patented this way of raising the dots. They filed first in France, in 1974."
-msgstr "점마다 그 아래에 전압이 닿으면 휘는 결정이 있고, 지렛대가 그 작은 휨을 핀이 올라오는 움직임으로 바꿉니다. 앙드레 트레티아코프와 올레그 트레티아코프가 점을 들어 올리는 이 방법의 특허를 받았습니다. 첫 출원은 1974년 프랑스에서 했습니다."
+msgid "Under each dot is a crystal that bends when a voltage reaches it, and a lever turns that small bend into the rise of a pin. Andrée Tretiakoff's name is on the patent for it, beside Oleg Tretiakoff's: a United States patent filed in 1975, which goes back to a French filing of August 1974."
+msgstr "점마다 그 아래에 전압이 닿으면 휘는 결정이 있고, 지렛대가 그 작은 휨을 핀이 올라오는 움직임으로 바꿉니다. 이 방식의 특허에는 올레그 트레티아코프의 이름 옆에 앙드레 트레티아코프의 이름이 있습니다. 1975년에 출원한 미국 특허로, 1974년 8월의 프랑스 출원으로 거슬러 올라갑니다."
 
 #: tour-women
 #. Guided tour, at the piece Refreshable braille display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.braille-display.text.3"
-msgid "It is the only piece in the museum that needs no light at all. Every other stop on the green line works with light. The next is the cathode ray tube in hall 2, where a beam of electrons makes a screen glow."
-msgstr "박물관에서 빛이 전혀 필요 없는 전시품은 이것 하나뿐입니다. 초록 선의 다른 지점은 모두 빛으로 작동합니다. 다음은 제2전시실의 음극선관입니다. 그곳에서는 전자 빔이 화면을 빛나게 합니다."
+msgid "It is the only piece in the museum that needs no light at all. The next is the cathode ray tube in hall 2. The woman there is on no patent: a news agency kept her part."
+msgstr "박물관에서 빛이 전혀 필요 없는 작품은 이것 하나뿐입니다. 다음은 2번 전시실의 음극선관입니다. 그곳의 여성은 어떤 특허에도 이름이 없습니다. 그녀의 몫을 남긴 것은 통신사였습니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: the title of this part.
@@ -9182,8 +9182,8 @@ msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent."
-msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 30년 뒤 샌프란시스코에서 필로 판즈워스의 팀이 완전한 전자식 텔레비전 영상을 보냈습니다. 캘리포니아 역사 기념물은 이것을 그런 영상 가운데 최초라고 부릅니다. 펨이라는 이름으로 알려진 엘마 판즈워스는 그 팀의 일원이었습니다. 실험 일지를 쓰고, 기술 도면을 그리고, 관의 부품을 용접했습니다. 그 방식이 처음 보낸 얼굴 가운데 하나가 그녀의 얼굴이었습니다."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent. We know it because the Associated Press reported it, citing the historian Donald G. Godfrey."
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 30년 뒤 샌프란시스코에서 필로 판즈워스의 팀이 완전한 전자식 텔레비전 영상을 보냈습니다. 캘리포니아 역사 기념물은 이것을 그런 영상 가운데 최초라고 부릅니다. 펨이라는 이름으로 알려진 엘마 판즈워스는 그 팀의 일원이었습니다. 실험 일지를 쓰고, 기술 도면을 그리고, 관의 부품을 용접했습니다. 그 방식이 처음 보낸 얼굴 가운데 하나가 그녀의 얼굴이었습니다. 우리가 이것을 아는 것은 AP 통신이 역사학자 도널드 G. 고드프리를 인용해 보도했기 때문입니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9230,8 +9230,8 @@ msgstr "이것은 잘라 열어 크게 확대한 화소 하나입니다. 기판�
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.quantum-dot.text.2"
-msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper."
-msgstr "이 결정을 양자점이라고 합니다. 대부분의 화면은 이 모델처럼, 파란빛을 빨강과 초록으로 바꾸는 데 양자점을 씁니다. 1994년 버클리에서 비키 콜빈과 두 동료는 다른 길을 택했습니다. 양자점의 층에 전류를 흘려 빛나게 한 것입니다. 콜빈은 그 논문의 제1저자입니다."
+msgid "The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Her name stands first on the paper of 1994."
+msgstr "이 결정을 양자점이라고 합니다. 대부분의 화면은 이 모델처럼, 파란빛을 빨강과 초록으로 바꾸는 데 양자점을 씁니다. 1994년 버클리에서 비키 콜빈과 두 동료는 다른 길을 택했습니다. 양자점의 층에 전류를 흘려 빛나게 한 것입니다. 1994년 논문에는 그녀의 이름이 맨 앞에 있습니다."
 
 #: tour-women
 #. Guided tour, at the piece Quantum-dot display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9254,8 +9254,8 @@ msgstr "천을 보세요. 그 뒤에서 불꽃이 타고, 불꽃과 천 사이�
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature. Stay a minute: the cloth plays a second act in her manner."
-msgstr "누가 처음 했는지는 아무도 모릅니다. 자바와 중국에서 약 천 년 전의 기록이 있고, 오늘날에도 공연됩니다. 인형에 구멍을 뚫으면 빛이 지나가 그림자 안에 눈이나 깃털을 그립니다. 베를린에서 Lotte Reiniger는 검은 판지로 인형을 오려 한 프레임씩 촬영했습니다. 1926년의 「아흐메드 왕자의 모험」은 현존하는 가장 오래된 장편 애니메이션입니다. 1분만 기다려 보세요. 천 위에서 그녀의 방식으로 제2막이 펼쳐집니다."
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature, and her name is in its credits for the silhouettes. Stay a minute: the cloth plays a second act in her manner."
+msgstr "누가 처음 했는지는 아무도 모릅니다. 자바와 중국에서 약 천 년 전의 기록이 있고, 오늘날에도 공연됩니다. 인형에 구멍을 뚫으면 빛이 지나가 그림자 안에 눈이나 깃털을 그립니다. 베를린에서 Lotte Reiniger는 검은 판지로 인형을 오려 한 프레임씩 촬영했습니다. 1926년의 「아흐메드 왕자의 모험」은 현존하는 가장 오래된 장편 애니메이션이고, 실루엣 크레디트에 그녀의 이름이 있습니다. 1분만 기다려 보세요. 천 위에서 그녀의 방식으로 제2막이 펼쳐집니다."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9278,8 +9278,8 @@ msgstr "빔을 왼쪽에서 오른쪽으로 따라가 보세요. 레이저 세 �
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
-msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, with Garmire as its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
-msgstr "명판에는 요제프 오스토야코트코프스키의 이름이 있습니다. 1968년 애들레이드에서 초기의 레이저 쇼를 올린 사람입니다. 캘리포니아 공과대학교의 물리학자 엘사 가마이어는 레이저 영상을 만들었습니다. 영화 제작자 아이번 드라이어가 1970년 말부터 그 영상을 촬영했습니다. 두 사람은 레이저리움을 만든 회사를 세웠고, 가마이어가 사장을 맡았습니다. 레이저리움은 1973년 로스앤젤레스의 그리피스 천문대에서 문을 열었습니다."
+msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, and Garmire was its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
+msgstr "명판에는 요제프 오스토야코트코프스키의 이름이 있습니다. 1968년 애들레이드에서 초기의 레이저 쇼를 올린 사람입니다. 캘리포니아 공과대학교의 물리학자 엘사 가마이어는 레이저 영상을 만들었습니다. 영화 제작자 아이번 드라이어가 1970년 말부터 그 영상을 촬영했습니다. 두 사람은 레이저리움을 만든 회사를 세웠고, 가마이어가 그 회사의 사장이었습니다. 레이저리움은 1973년 로스앤젤레스의 그리피스 천문대에서 문을 열었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9302,8 +9302,8 @@ msgstr "햇빛이라고 적힌 스위치를 찾아 끄세요. 낮에는 이 그�
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.projection-mapping.text.2"
-msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face: the film projected onto that head is of her."
-msgstr "1969년 디즈니랜드의 헌티드 맨션은 노래하는 흉상에 이 방법을 썼습니다. 가수들의 얼굴을 촬영하고, 그 필름을 같은 얼굴을 본뜬 석고 흉상에 비추었습니다. 같은 저택에는 민얼굴 머리가 든 수정 구슬이 있습니다. 디즈니의 설계 공방에서 일한 미술가 리오타 툼스가 그 머리에 자기 얼굴을 주었습니다. 그 머리에 비치는 필름은 그녀를 찍은 것입니다."
+msgid "In 1969 the Haunted Mansion at Disneyland used this for its singing busts. The faces of singers were filmed, and the film was projected onto plaster busts of the same faces. In the same house a crystal ball holds a blank head. Leota Toombs, an artist at the Disney design workshop, gave it her face. No paper or patent carries her name here. The film on that head is of her."
+msgstr "1969년 디즈니랜드의 헌티드 맨션은 노래하는 흉상에 이 방법을 썼습니다. 가수들의 얼굴을 촬영하고, 그 필름을 같은 얼굴을 본뜬 석고 흉상에 비추었습니다. 같은 저택에는 민얼굴 머리가 든 수정 구슬이 있습니다. 디즈니의 설계 공방에서 일한 미술가 리오타 툼스가 그 머리에 자기 얼굴을 주었습니다. 여기서는 어떤 논문이나 특허에도 그녀의 이름이 없습니다. 그 머리에 비치는 필름이 바로 그녀입니다."
 
 #: tour-women
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9326,8 +9326,8 @@ msgstr "이것은 전자책 단말기의 지면입니다. 스스로 빛을 내�
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
-msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr "명판에는 배럿 코미스키, J. D. 앨버트, 조지프 제이컵슨의 이름이 있습니다. 1990년대 중반부터 MIT 미디어랩에서 이 잉크를 개발한 사람들입니다. 2001년 벨 연구소에서 존 로저스와 제난 바오가 이 잉크를 플라스틱 시트 위에 입혔습니다. 바오는 전기가 통하는 플라스틱을 설계하는 화학자입니다. 두 사람은 고무도장으로 시트 위에 플라스틱 트랜지스터 256개를 찍었습니다. 화면의 점 하나에 하나씩입니다. 지면은 휘어질 수 있었습니다."
+msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend. Bao is a chemist who designs plastics that carry a current."
+msgstr "명판에는 배럿 코미스키, J. D. 앨버트, 조지프 제이컵슨의 이름이 있습니다. 1990년대 중반부터 MIT 미디어랩에서 이 잉크를 개발한 사람들입니다. 2001년 벨 연구소에서 존 로저스와 제난 바오가 이 잉크를 플라스틱 시트 위에 입혔습니다. 두 사람은 고무도장으로 시트 위에 플라스틱 트랜지스터 256개를 찍었습니다. 화면의 점 하나에 하나씩입니다. 지면은 휘어질 수 있었습니다. 바오는 전기가 통하는 플라스틱을 설계하는 화학자입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9350,8 +9350,8 @@ msgstr "크게 확대한 셀 12개입니다. 셀마다 물 아래에 색을 입�
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
-msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981. Hackwood is credited with the name of the effect: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr "첫 지점에서는 전압이 결정을 휘게 해서 핀을 들어 올렸습니다. 여기서는 전압이 걸리면 물이 기름을 옆으로 밀어냅니다. 수전 해크우드와 제라르도 베니는 1981년 벨 연구소에서 이 디스플레이를 제안했습니다. 전기 습윤이라는 이 효과의 이름은 해크우드가 붙인 것으로 전해집니다. 명판의 연도인 2003년은 네덜란드의 한 연구소가 이것을 동영상을 보여 줄 만큼 빠르게 만든 해입니다."
+msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, in a paper and a patent the same year. Hackwood's name went further: Cambridge's Centre for Science and Policy credits her with naming the effect, electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
+msgstr "첫 지점에서는 전압이 결정을 휘게 해서 핀을 들어 올렸습니다. 여기서는 전압이 걸리면 물이 기름을 옆으로 밀어냅니다. 수전 해크우드와 제라르도 베니는 1981년 벨 연구소에서 이 디스플레이를 제안했습니다. 같은 해의 논문과 특허입니다. 해크우드의 이름은 더 멀리 갔습니다. 케임브리지의 Centre for Science and Policy는 이 효과의 이름, 전기 습윤을 그녀가 지었다고 봅니다. 명판의 연도인 2003년은 네덜란드의 한 연구소가 이것을 동영상을 보여 줄 만큼 빠르게 만든 해입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9374,8 +9374,8 @@ msgstr "이 인쇄 라벨은 정시에서 몇 분이 지났는지를 보여 줍�
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
-msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
-msgstr "명판에는 S. K. 데브의 이름이 있습니다. 1960년대에 시작한 산화 텅스텐 막에 관한 그의 연구에서 이런 디스플레이가 시작되었습니다. 매사추세츠 공과대학교에서 폴라 해먼드는 딘 들롱샴을 지도했고, 들롱샴은 그런 막을 다른 방법으로 만들었습니다. 분자층을 한 층씩 쌓은 것입니다. 그의 2003년 학위 논문은 이 막이 다른 방법으로 만든 막보다 대비와 전환에서 대체로 낫다고 보았습니다. 재료를 조합해 두 가지 이상의 색을 내는 막도 만들었습니다."
+msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour. The thesis carries his name. Hers is on it as the one who supervised it."
+msgstr "명판에는 S. K. 데브의 이름이 있습니다. 1960년대에 시작한 산화 텅스텐 막에 관한 그의 연구에서 이런 디스플레이가 시작되었습니다. 매사추세츠 공과대학교에서 폴라 해먼드는 딘 들롱샴을 지도했고, 들롱샴은 그런 막을 다른 방법으로 만들었습니다. 분자층을 한 층씩 쌓은 것입니다. 그의 2003년 학위 논문은 이 막이 다른 방법으로 만든 막보다 대비와 전환에서 대체로 낫다고 보았습니다. 재료를 조합해 두 가지 이상의 색을 내는 막도 만들었습니다. 논문에는 그의 이름이 있습니다. 그녀의 이름은 지도 교수로 올라 있습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9398,8 +9398,8 @@ msgstr "상자 두 개를 보세요. 왼쪽에는 진짜 전구가 소켓 아래
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.illusion-transmitter.text.2"
-msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. The patent was granted to her four years after that exhibition."
-msgstr "제3전시실에서는 저녁 식탁에서 질문이 나왔습니다. 이번 질문은 1976년, 어느 전시회에서 나왔습니다. 밸러리 토머스는 굽은 거울이 소켓에서 빼낸 전구를 아직 빛나는 것처럼 보이게 하는 것을 보고, 그 상을 보낼 수 있을지 물었습니다. 환영 전송기를 발명할 때 토머스는 NASA에서 랜드샛의 영상 처리 시스템을 관리하고 있었습니다. 특허는 그 전시회로부터 4년 뒤에 그녀에게 등록되었습니다."
+msgid "In hall 3 a question was asked at a dinner table. This one was asked at an exhibition, in 1976. Valerie Thomas saw a curved mirror make a bulb seem to glow after it had been taken out of its socket, and she asked whether the picture could be sent. When she invented the illusion transmitter, she was managing the image-processing systems for Landsat at NASA. Four years after that exhibition, the patent was granted in her name."
+msgstr "제3전시실에서는 저녁 식탁에서 질문이 나왔습니다. 이번 질문은 1976년, 어느 전시회에서 나왔습니다. 밸러리 토머스는 굽은 거울이 소켓에서 빼낸 전구를 아직 빛나는 것처럼 보이게 하는 것을 보고, 그 상을 보낼 수 있을지 물었습니다. 환영 전송기를 발명할 때 토머스는 NASA에서 랜드샛의 영상 처리 시스템을 관리하고 있었습니다. 그 전시회 4년 뒤, 특허가 그녀의 이름으로 나왔습니다."
 
 #: tour-women
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9428,8 +9428,8 @@ msgstr "이제 쌓은 판 옆의 유리 덩어리를 보세요. 유리는 보이
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
-msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
-msgstr "엘리자베스 다우닝과 세 동료는 이 방법으로 유리 안에 색이 있는 빛점을 그렸습니다. 이 연구는 1996년 스탠퍼드 대학교에서 발표되었고, 다우닝이 제1저자였습니다. 시제품은 한 변이 약 15밀리미터인 정육면체였고, 모델은 그것을 여러 배 크게 보여 줍니다. 다음 지점은 제7전시실의 홀로그래피입니다."
+msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their paper appeared in Science in 1996 with Downing's name first. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
+msgstr "엘리자베스 다우닝과 세 동료는 이 방법으로 유리 안에 색이 있는 빛점을 그렸습니다. 이들의 논문은 1996년 『사이언스』에 실렸고, 다우닝의 이름이 맨 앞에 있었습니다. 시제품은 한 변이 약 15밀리미터인 정육면체였고, 모델은 그것을 여러 배 크게 보여 줍니다. 다음 지점은 제7전시실의 홀로그래피입니다."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
@@ -9446,8 +9446,8 @@ msgstr "유리 건판 너머를 보세요. 장난감 기관차가 그 뒤에 서
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
-msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a thesis that sets out the design and the building of a holographic video display."
-msgstr "데니스 가보르는 1947년에 홀로그래피를 구상했고 1948년에 발표했습니다. 그로부터 20년 뒤 화가 마거릿 베니언이 홀로그램을 미술로 만들기 시작했습니다. 이런 홀로그램은 움직이지 않습니다. 1989년 메리 루 젭슨은 MIT 미디어랩에서 학위 논문을 썼습니다. 홀로그래피 동영상 디스플레이의 설계와 제작을 담은 논문입니다."
+msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art, and showed them a year later. Her record is her exhibitions. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a master's thesis that sets out the design and the building of a holographic video display."
+msgstr "데니스 가보르는 1947년에 홀로그래피를 구상하고 1948년에 발표했습니다. 20년 뒤 화가 마거릿 베니언이 예술로서 홀로그램을 만들기 시작했고, 1년 뒤 전시했습니다. 그녀의 기록은 그 전시들입니다. 이런 홀로그램은 정지해 있습니다. 1989년 MIT 미디어랩에서 메리 루 젭슨은 홀로그래픽 동영상 디스플레이의 설계와 제작을 다룬 석사 논문을 썼습니다."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9470,8 +9470,8 @@ msgstr "방의 열린 쪽에 서세요. 벽 세 면과 바닥이 화면입니다
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cave.text.2"
-msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
-msgstr "명판에는 일리노이 대학교 시카고 Electronic Visualization Laboratory의 세 사람이 적혀 있습니다. Carolina Cruz-Neira는 이 방을 설명한 두 논문 모두의 제1저자이고, 그 설계와 구현은 그녀의 박사 연구였습니다. 그녀의 연구실은 1992년 시카고의 SIGGRAPH에서 이것을 선보였습니다."
+msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room. The sources then part ways. A SIGGRAPH biography of 1997 calls the room her doctoral research. One of 2022 says she invented it."
+msgstr "명판에는 일리노이 대학교 시카고 Electronic Visualization Laboratory의 세 사람이 적혀 있습니다. Carolina Cruz-Neira는 이 방을 설명한 두 논문 모두의 제1저자입니다. 여기서 자료들이 갈립니다. 1997년 SIGGRAPH 약력은 이 방을 그녀의 박사 연구라고 합니다. 2022년 약력은 그녀가 발명했다고 합니다."
 
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9494,8 +9494,8 @@ msgstr "초록 선은 여기서 끝납니다. 손끝으로 읽는 핀에서 시�
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Seventeen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "이 열네 지점에는 여성 열일곱 명의 이름이 있고, 여러분은 이제 그 한 사람 한 사람의 작업 앞에 서 보았습니다. 이 전시실들의 라벨에는 모두 백 명이 넘는 사람의 이름이 있습니다."
+msgid "Seventeen women are named at these fourteen stops. Some are on patents, some lead a paper, and one is known from a news report. In all, the labels in these halls name more than a hundred people."
+msgstr "이 열네 지점에는 여성 열일곱 명의 이름이 있습니다. 특허에 이름이 있는 사람도, 논문의 맨 앞에 선 사람도 있고, 한 사람은 보도로 알려져 있습니다. 이 전시실들의 라벨에는 모두 백 명이 넘는 사람의 이름이 있습니다."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9554,14 +9554,14 @@ msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 이 라벨에 있는 두 사람은 이 관을 일에 썼습니다. 마리 밴 브리턴 브라운은 뉴욕의 간호사였고, 남편 앨버트는 전자 기술자였습니다. 1966년에 두 사람은 자기 집을 위한 보안 장치를 만들었습니다. 카메라가 현관문에 뚫린 네 개의 구멍 사이를 오르내리고, 텔레비전 모니터가 찾아온 사람을 비추었습니다. 두 사람은 1969년에 특허를 받았습니다. 마크 딘은 IBM의 기술자였습니다. IBM 개인용 컴퓨터에 관한 그의 특허 세 건 가운데 두 건은 모니터를 구동하는 어댑터에 관한 것입니다. 하나는 흑백용이고 하나는 컬러용입니다."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969, with both their names on the patent. Mark Dean was an engineer at IBM. His name is on three patents for the IBM personal computer. Two are for the adapters that drove its monitors, one monochrome and one colour."
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 이 라벨에 있는 두 사람은 이 관을 일에 썼습니다. 마리 밴 브리턴 브라운은 뉴욕의 간호사였고, 남편 앨버트는 전자 기술자였습니다. 1966년에 두 사람은 자기 집을 위한 보안 장치를 만들었습니다. 카메라가 현관문에 뚫린 네 개의 구멍 사이를 오르내리고, 텔레비전 모니터가 찾아온 사람을 비추었습니다. 두 사람은 1969년에 특허를 받았고, 특허에는 두 사람의 이름이 모두 있습니다. 마크 딘은 IBM의 기술자였습니다. 그의 이름은 IBM 개인용 컴퓨터의 특허 세 건에 있습니다. 그 가운데 두 건은 모니터를 구동하는 어댑터에 관한 것입니다. 하나는 흑백용이고 하나는 컬러용입니다."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.3"
-msgid "The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments."
-msgstr "다음 지점도 이 전시실에 있습니다. 누미트론으로 가세요. 작은 필라멘트 일곱 개가 든 유리구입니다."
+msgid "The next stop is in this hall as well. There the patent is nearly ninety years older than the display. Go to the Numitron, the glass bulb with seven small filaments."
+msgstr "다음 지점도 이 전시실에 있습니다. 그곳의 특허는 디스플레이보다 90년 가까이 오래되었습니다. 누미트론으로 가세요. 작은 필라멘트 일곱 개가 든 유리구입니다."
 
 #: tour-black
 #. Guided tour, at the piece Numitron: the title of this part.
@@ -9602,8 +9602,8 @@ msgstr "모델은 패널의 한 귀퉁이를 열어 크게 확대해 보여 줍�
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.2"
-msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one."
-msgstr "이 디스플레이는 몇 밀리미터 두께로 납작하게 누른 음극선관으로, 점마다 뒤에 아주 작은 전자원이 있습니다. 돌기를 만드는 방법은 스탠퍼드 연구소에서 특허를 받았습니다. 아킨툰데 아킨완데는 나이지리아와 스탠퍼드 대학교에서 공부했습니다. 1986년에 허니웰에 들어가 그곳에서 박막 전계 방출 소자와 디스플레이를 연구했습니다. MIT에서는 하나씩 따로 켜고 끄는 방출 소자의 배열을 연구했습니다."
+msgid "This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked with Luis Fernando Velásquez-García on arrays of emitters, each switched by its own transistor."
+msgstr "이 디스플레이는 몇 밀리미터 두께로 납작하게 누른 음극선관으로, 점마다 뒤에 아주 작은 전자원이 있습니다. 돌기를 만드는 방법은 스탠퍼드 연구소에서 특허를 받았습니다. 아킨툰데 아킨완데는 나이지리아와 스탠퍼드 대학교에서 공부했습니다. 1986년에 허니웰에 들어가 그곳에서 박막 전계 방출 소자와 디스플레이를 연구했습니다. MIT에서는 루이스 페르난도 벨라스케스가르시아와 함께, 저마다 자기 트랜지스터로 켜지는 이미터 배열을 연구했습니다."
 
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9626,8 +9626,8 @@ msgstr "흰 석고 입체들과 삼각대 위의 프로젝터를 보세요. 입�
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.projection-mapping.text.2"
-msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow with more than 100 patents. He is credited with making Madame Leota float in her séance room."
-msgstr "명판의 연도인 1969년은 디즈니랜드 헌티드 맨션의 연도입니다. 그곳에서는 촬영한 얼굴이 수정 구슬 안의 민얼굴 머리에 비칩니다. 그 머리를 마담 리오타라고 부릅니다. 래니 스무트는 100건이 넘는 특허를 가진 디즈니의 리서치 펠로입니다. 마담 리오타를 강령회 방에서 떠다니게 만든 사람으로 꼽힙니다."
+msgid "The year on the plate, 1969, belongs to the Haunted Mansion at Disneyland. There a filmed face is projected onto a blank head inside a crystal ball. The head is called Madame Leota. Lanny Smoot is a Disney research fellow, and his name is on more than 100 patents. He is credited with making Madame Leota float in her séance room."
+msgstr "명판의 연도인 1969년은 디즈니랜드 헌티드 맨션의 연도입니다. 그곳에서는 촬영한 얼굴이 수정 구슬 안의 민얼굴 머리에 비칩니다. 그 머리를 마담 리오타라고 부릅니다. 래니 스무트는 디즈니의 연구 펠로이고, 그의 이름은 특허 100건 이상에 올라 있습니다. 마담 리오타를 강령회 방에서 떠다니게 만든 사람으로 꼽힙니다."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9674,8 +9674,8 @@ msgstr "왼쪽에는 진짜 전구가 소켓 아래에 숨어 매달려 있고, 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
-msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr "여기 명판에는 이 투어가 찾아온 사람의 이름이 있습니다. 밸러리 토머스는 1943년 메릴랜드에서 태어났습니다. 한 기록에 따르면, 모건 주립 대학교의 같은 학년에서 물리학을 전공한 여성은 그녀를 포함해 단 두 명이었습니다. 데이터 분석가로 NASA에 들어가, 그곳에서 환영 전송기를 발명했습니다. 명판에 적힌 연도는 1980년입니다."
+msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The patent is in her name, and the plate gives its year, 1980."
+msgstr "여기 명판에는 이 투어가 찾아온 사람의 이름이 있습니다. 밸러리 토머스는 1943년 메릴랜드에서 태어났습니다. 한 기록에 따르면, 모건 주립 대학교의 같은 학년에서 물리학을 전공한 여성은 그녀를 포함해 단 두 명이었습니다. 데이터 분석가로 NASA에 들어가, 그곳에서 환영 전송기를 발명했습니다. 특허는 그녀의 이름으로 되어 있고, 명판에는 그 해인 1980년이 적혀 있습니다."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9698,8 +9698,8 @@ msgstr "손에 드는 뷰어가 기둥 위에 서 있고, 입체 카드가 꽂�
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
-msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr "명판에는 찰스 휘트스톤의 이름이 있습니다. 1838년 런던에서 입체경을 발표한 사람입니다. 이 라벨에 있는 두 사람은 훨씬 뒤의 사람입니다. 찰스 해리슨은 시카고의 산업 디자이너였습니다. 1957년이나 1958년에 손에 드는 입체경인 View-Master를 가벼운 성형 플라스틱으로 다시 디자인했습니다. 사진가의 부속품이던 것이 어린이의 장난감이 되었습니다. 케네스 던클리는 펜실베이니아의 물리학자입니다. 1989년의 특허는 렌즈가 없는 안경에 관한 것입니다. 작은 구멍 두 개와 빈 틀 두 개가 전부입니다. 특허는 이 안경이 평범한 평면 그림을 깊이가 있는 것처럼 보이게 한다고 밝힙니다."
+msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. His record is the object itself: sold from 1962, it went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania, and his record is a patent. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
+msgstr "명판에는 찰스 휘트스톤의 이름이 있습니다. 1838년 런던에서 입체경을 발표한 사람입니다. 이 라벨에 있는 두 사람은 훨씬 뒤의 사람입니다. 찰스 해리슨은 시카고의 산업 디자이너였습니다. 1957년이나 1958년에 손에 드는 입체경인 View-Master를 가벼운 성형 플라스틱으로 다시 디자인했습니다. 그의 기록은 그 물건 자체입니다. 1962년부터 팔리며, 사진가의 부속품이던 것이 어린이의 장난감이 되었습니다. 케네스 던클리는 펜실베이니아의 물리학자이고, 그의 기록은 특허입니다. 1989년의 특허는 렌즈가 없는 안경에 관한 것입니다. 작은 구멍 두 개와 빈 틀 두 개가 전부입니다. 특허는 이 안경이 평범한 평면 그림을 깊이가 있는 것처럼 보이게 한다고 밝힙니다."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9722,8 +9722,8 @@ msgstr "카드를 보세요. 아홉 시점으로 인쇄한 눈이 있습니다. 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.lenticular.text.2"
-msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
-msgstr "골이 진 아주 작은 렌즈의 판이 띠로 이루어진 그림 위에 놓여 있고, 서 있는 자리에 따라 골마다 다른 띠를 보여 줍니다. 명판에는 발터 헤스의 이름이 있습니다. 1912년에 특허를 출원한 사람입니다. 행크 윌리스 토머스는 뉴욕의 미술가입니다. 그의 렌티큘러 인쇄 작품에는 관람객이 앞을 지나가면 바뀌는 글이 들어 있습니다. 한 작품에서는 Black Imitates White(검정이 하양을 흉내 낸다)가 White Imitates Black(하양이 검정을 흉내 낸다)으로 바뀝니다."
+msgid "A sheet of tiny ribbed lenses lies over a picture made of strips, and each rib shows a different strip depending on where you stand. The plate names Walter Hess, who filed his patent in 1912. Hank Willis Thomas is an artist in New York, and here the work is the record. His lenticular prints carry text that changes as the visitor walks past. In one of them, Black Imitates White becomes White Imitates Black."
+msgstr "골이 진 아주 작은 렌즈의 판이 띠로 이루어진 그림 위에 놓여 있고, 서 있는 자리에 따라 골마다 다른 띠를 보여 줍니다. 명판에는 발터 헤스의 이름이 있습니다. 1912년에 특허를 출원한 사람입니다. 행크 윌리스 토머스는 뉴욕의 미술가이고, 여기서는 작품 자체가 기록입니다. 그의 렌티큘러 인쇄 작품에는 관람객이 앞을 지나가면 바뀌는 글이 들어 있습니다. 한 작품에서는 Black Imitates White(검정이 하양을 흉내 낸다)가 White Imitates Black(하양이 검정을 흉내 낸다)으로 바뀝니다."
 
 #: tour-black
 #. Guided tour, at the piece Lenticular display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9746,8 +9746,8 @@ msgstr "모델은 마네킹 머리에 씌운 헤드셋을 보여 줍니다. 그 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
-msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr "명판에는 아이번 서덜랜드와 밥 스프롤의 이름이 있습니다. 1968년 하버드 대학교에서 컴퓨터가 그린 그래픽을 보여 주는 헤드셋을 만든 사람들입니다. 이것을 최초의 가상 현실 헤드셋이라고 부르는 자료도 있고, 초기의 것 가운데 하나라고 부르는 자료도 있습니다. 새뮤얼 아칠레푸는 나이지리아에서 태어났습니다. 세인트루이스 워싱턴 대학교의 그의 연구진은 외과 의사를 위해 화면이 달린 고글을 만들었습니다. 염료가 암세포를 그 화면에서 빛나게 합니다. 이 고글은 2014년에 처음으로 수술에서 쓰였습니다."
+msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The university dates their first use in an operation to 2014."
+msgstr "명판에는 아이번 서덜랜드와 밥 스프롤의 이름이 있습니다. 1968년 하버드 대학교에서 컴퓨터가 그린 그래픽을 보여 주는 헤드셋을 만든 사람들입니다. 이것을 최초의 가상 현실 헤드셋이라고 부르는 자료도 있고, 초기의 것 가운데 하나라고 부르는 자료도 있습니다. 새뮤얼 아칠레푸는 나이지리아에서 태어났습니다. 세인트루이스 워싱턴 대학교의 그의 연구진은 외과 의사를 위해 화면이 달린 고글을 만들었습니다. 염료가 암세포를 그 화면에서 빛나게 합니다. 대학은 이 고글이 처음 수술에 쓰인 해를 2014년으로 봅니다."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9770,8 +9770,8 @@ msgstr "파란 선은 여기서 끝납니다. 어느 집 현관의 카메라에�
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.end.text.2"
-msgid "Twelve people are named at these ten stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
-msgstr "이 열 지점에는 열두 사람의 이름이 있습니다. 저마다 이 선에 들어 있는 까닭은, 출처가 그 사람을 흑인, 아프리카계 미국인, 또는 아프리카의 나라에서 태어나 자란 사람이라고 적고 있기 때문입니다. 인물 페이지에 이름마다 그 출처가 있습니다."
+msgid "Eleven people are named at these nine stops. Each of them is on this line because a source describes that person as Black, as African American, or as born and raised in an African country. The People page gives the source for every name."
+msgstr "이 아홉 지점에는 열한 명의 이름이 있습니다. 저마다 이 선에 들어 있는 까닭은, 출처가 그 사람을 흑인, 아프리카계 미국인, 또는 아프리카의 나라에서 태어나 자란 사람이라고 적고 있기 때문입니다. 인물 페이지에 이름마다 그 출처가 있습니다."
 
 #: tour-black
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
