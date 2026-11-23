@@ -1,6 +1,4 @@
 import { brief } from './brief';
-import { sheets, worksheet, type Words } from './teach';
-import type { UiKey } from './i18n/en';
 import './styles/fonts.css';
 import './styles/tokens.css';
 import './styles/base.css';
@@ -162,7 +160,7 @@ function shell(inner: string, hall?: number, current?: string): void {
   <nav class="tabs" aria-label="${tx('nav.halls')}">${halls.map((x) => tab(x.id)).join('')}<a class="tabs__word" href="${link('index')}"${current === 'depot' ? ' aria-current="true"' : ''}>${tx('nav.depot')}</a><a class="tabs__word tabs__about" href="${link('people')}"${current === 'people' ? ' aria-current="true"' : ''}>${tx('nav.people')}</a><a class="tabs__word tabs__about" href="${link('about')}"${current === 'about' ? ' aria-current="true"' : ''}>${tx('nav.about')}</a></nav>
 </header>
 <main id="main" class="frame" tabindex="-1"${hall ? ` data-hall="${hall}"` : ''}>${inner}
-<footer class="foot"><a href="${link('people')}">${tx('nav.people')}</a><a href="${link('teach')}">${tx('nav.teach')}</a><a href="${link('about')}">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button><button type="button" class="foot__calm" data-calm aria-pressed="${lowPower()}" title="${tx('foot.calm.says')}">${tx('foot.calm')}</button>${current === 'about' ? '' : appFoot()}</footer>
+<footer class="foot"><a href="${link('people')}">${tx('nav.people')}</a><a href="${link('about')}">${tx('foot.sourced')}</a><a href="${REPO}/issues">${tx('foot.repo')}</a><button type="button" class="foot__keys" data-keys>${tx('keys.title')}</button><button type="button" class="foot__calm" data-calm aria-pressed="${lowPower()}" title="${tx('foot.calm.says')}">${tx('foot.calm')}</button>${current === 'about' ? '' : appFoot()}</footer>
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
@@ -295,7 +293,7 @@ function hallView(n: number): void {
 <div class="stack">
   <div class="hallhead">
     <h1 class="plate"><span class="plate__no">${n}</span><span><span class="plate__title">${esc(words.name)}</span><span class="plate__sub" style="padding-left:0">${esc(count('count.pieces', list.length))}</span></span></h1>
-    <div class="stack" style="--gap: 16px"><p class="lead">${esc(words.intro)}</p>${list.length ? `<p class="ways"><a class="btn" href="${link(`walk-${list[0].id}`)}">${tx('walk.hall')}</a><a class="btn" href="${link(`teach-${n}`)}">${tx('teach.link')}</a></p>` : ''}</div>
+    <div class="stack" style="--gap: 16px"><p class="lead">${esc(words.intro)}</p>${list.length ? `<p class="ways"><a class="btn" href="${link(`walk-${list[0].id}`)}">${tx('walk.hall')}</a></p>` : ''}</div>
   </div>
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="${link(`hall-${prev.id}`)}">${tx('pager.backHall', named(prev))}</a>` : `<a href="${link('')}">${tx('pager.entrance')}</a>`}${next ? `<a href="${link(`hall-${next.id}`)}">${tx('pager.nextHall', named(next))}</a>` : `<a href="${link('index')}">${tx('pager.depot')}</a>`}</nav>
@@ -902,32 +900,6 @@ function about(): void {
  * `toured` is a guided tour to take up in the halls, at one of its parts. In a language that does not tell the
  * tour, its address opens the walk on the tour's trail.
  */
-/** A worksheet for a class, for one hall, or the list of them: see teach.ts. The displays chosen are in the address, `?p=a,b`. */
-function teachView(n?: number): void {
-  if (n !== undefined && !hallById(n)) return notFound();
-  const words: Words = {
-    ui: (key, vars) => t(key as UiKey, vars), piece: said.piece, hall: said.hall, credit: said.credit, view: said.view, principle: said.principle, kind: said.sourceKind,
-    href: (path) => link(path === 'teach/' ? 'teach' : path.replace(/^(hall|piece|teach)\/([a-z0-9-]+)\/$/, '$1-$2')),
-    full: (path) => new URL(link(path.replace(/^(hall|piece|teach)\/([a-z0-9-]+)\/$/, '$1-$2')), document.baseURI).href,
-  };
-  const hall = n === undefined ? undefined : hallById(n)!;
-  const ids = new URLSearchParams(location.search).get('p')?.split(',').filter(Boolean);
-  document.title = titled(hall ? t('teach.title', { n: hall.id, name: said.hall(hall).name }) : t('teach.head'));
-  says(hall ? t('teach.lead') : t('teach.says'));
-  shell(`${hall ? `<p class="ways ws__print"><button type="button" class="btn" data-print>${tx('teach.print')}</button></p>` : ''}${hall ? worksheet(hall.id, words, ids) : sheets(words)}`, undefined, 'teach');
-  app.querySelector('[data-print]')?.addEventListener('click', () => window.print());
-  // choosing the displays writes them in the address, so the sheet can be printed, kept and shared as chosen
-  app.querySelector<HTMLFormElement>('[data-choose]')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const picked = [...(e.target as HTMLFormElement).querySelectorAll<HTMLInputElement>('input[name="p"]:checked')].map((i) => i.value);
-    const url = new URL(location.href);
-    if (picked.length) url.searchParams.set('p', picked.join(',')); else url.searchParams.delete('p');
-    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
-    teachView(n);
-    app.querySelector<HTMLElement>('.ws h1')?.focus();
-  });
-}
-
 /**
  * A piece inside someone else's page, in an iframe: the stage alone, filling the frame, with the name of the piece
  * and a way into the museum. It is the piece's own page with everything but the stage put away, so it works as the
@@ -1094,8 +1066,6 @@ function route(): void {
   else if (name === 'index' || name === 'depot') depot();
   else if (name === 'about') about();
   else if (name === 'people') peopleView();
-  else if (name === 'teach') teachView();
-  else if (/^teach-\d+$/.test(name)) teachView(Number(name.slice(6)));
   else if (person) personView(person[1]);
   else if (walk) walkView(walk[1]);
   else if (toured) walkView(undefined, resumed(toured));

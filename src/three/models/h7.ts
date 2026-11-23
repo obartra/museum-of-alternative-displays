@@ -789,3 +789,105 @@ export function hud(): Built {
     },
   };
 }
+
+/**
+ * Glasses that pick an eye: one picture on the screen for both eyes, and three ways for glasses to let each eye
+ * see only its own half of it. The screen and the pair in use take turns: by colour (red and cyan filters, as
+ * Rollmann described in 1853), by time (shutters that close in turn, as in Hammond's Teleview of 1922) and by
+ * polarised light (filters at right angles, as Land showed in 1936). Each act lasts eight seconds.
+ */
+export function stereoGlasses(): Built {
+  const root = G.group();
+  const s = screen(512, 320);
+  const W = 1.7, H = 1.06, y = 1.0;
+  const dark = M.dark(), black = M.black();
+  // the screen: a plain panel on a stand, like a small cinema screen in its frame
+  root.add(G.rbox(W + 0.12, H + 0.12, 0.06, 0.02, dark, [0, y, -0.04]), G.plane(W, H, M.lit(s, 1.2, 0.25), [0, y, 0]));
+  root.add(G.box(0.07, y - H / 2 + 0.02, 0.07, M.steel(1), [0, (y - H / 2) / 2, -0.06]), G.rbox(0.7, 0.04, 0.4, 0.015, dark, [0, 0.02, -0.06]));
+  // a low table in front, with the three pairs of glasses on it
+  const top = 0.38;
+  root.add(G.rbox(1.6, 0.04, 0.42, 0.015, M.wood(0x6b4a2e), [0, top - 0.02, 0.85]));
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) root.add(G.box(0.04, top - 0.04, 0.04, M.wood(0x6b4a2e, 1), [sx * 0.68, (top - 0.04) / 2, 0.85 + sz * 0.17]));
+
+  /** One pair of glasses lying folded open on the table, with a lens on each side; returns the lens meshes. */
+  const pair = (x: number, frame: THREE.Material, left: THREE.Material, right: THREE.Material): [THREE.Mesh, THREE.Mesh] => {
+    const g = G.group();
+    g.add(G.rbox(0.3, 0.07, 0.012, 0.01, frame, [0, 0, 0]));
+    const l = G.plane(0.115, 0.056, left, [-0.072, 0, 0.007]), r = G.plane(0.115, 0.056, right, [0.072, 0, 0.007]);
+    g.add(l, r);
+    for (const sx of [-1, 1]) g.add(G.box(0.008, 0.012, 0.26, frame, [sx * 0.146, 0.02, -0.13]));
+    // each pair stands up on a small clear stand, facing the room, half again as large as life so it reads from a seat
+    g.position.set(x, top + 0.1, 0.86); g.rotation.x = -0.12; g.scale.setScalar(1.6);
+    root.add(G.pane(0.36, 0.012, 0.16, [x, top + 0.006, 0.86]));
+    root.add(g);
+    return [l, r];
+  };
+  const lens = (color: number, opacity = 0.75) => new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.25, transparent: true, opacity, roughness: 0.15, side: THREE.DoubleSide });
+  // colour: red for the left eye, cyan for the right, in card frames
+  const card = M.paper(0xf1ede2);
+  const colour = pair(-0.46, card, lens(0xff2a2a), lens(0x22e2ff));
+  // time: dark lenses that clear and close in turn, in a plastic frame with a small receiver on the bridge
+  const shutL = lens(0x111316, 0.92), shutR = lens(0x111316, 0.92);
+  const shutter = pair(0, M.plastic(0x202326, 0.4), shutL, shutR);
+  root.add(hush(G.box(0.08, 0.04, 0.03, black, [0, top + 0.17, 0.85])).rotateX(-0.12));
+  // polarised: grey lenses whose filters stand at right angles, drawn as fine lines that cross
+  const lines = (deg: number) => {
+    const p = screen(64, 64), c = p.ctx;
+    c.fillStyle = '#7d8286'; c.fillRect(0, 0, 64, 64); c.strokeStyle = 'rgba(30,32,36,.55)'; c.lineWidth = 2;
+    c.translate(32, 32); c.rotate((deg * Math.PI) / 180);
+    for (let i = -64; i < 64; i += 6) { c.beginPath(); c.moveTo(i, -64); c.lineTo(i, 64); c.stroke(); }
+    p.tex.needsUpdate = true;
+    return new THREE.MeshStandardMaterial({ map: p.tex, transparent: true, opacity: 0.8, roughness: 0.2, side: THREE.DoubleSide });
+  };
+  const polar = pair(0.46, M.plastic(0x2b2f33, 0.5), lines(45), lines(-45));
+  const pairs = [colour, shutter, polar];
+  fuse(root, pairs.flat());
+
+  /** A cube in perspective, as one eye sees it: shifted left or right. */
+  const cube = (c: CanvasRenderingContext2D, dx: number, stroke: string) => {
+    c.strokeStyle = stroke; c.lineWidth = 9; c.lineJoin = 'round';
+    const x = 256 + dx, yy = 170, a = 70, d = 34;
+    c.strokeRect(x - a, yy - a + d / 2, a * 2, a * 2);
+    c.strokeRect(x - a + d, yy - a - d / 2, a * 2, a * 2);
+    c.beginPath();
+    for (const [px, py] of [[-a, -a + d / 2], [a, -a + d / 2], [-a, a + d / 2], [a, a + d / 2]]) { c.moveTo(x + px, yy + py); c.lineTo(x + px + d, yy + py - d); }
+    c.stroke();
+  };
+  let shown = '';
+  return {
+    root, views: {
+      front: { at: [0, 1.05, 3.2], to: [0, 0.95, 0], fov: 34, play: 0.2 },
+      table: { at: [0, 0.75, 1.9], to: [0, 0.48, 0.85], fov: 32, play: 0.15 },
+    },
+    inDark: 'glows', glow: 0xbfe8ff, view: [12, 6], surface: s.canvas,
+    update: (env: Env) => {
+      const at = env.t % 24, act = Math.floor(at / 8), flip = Math.floor(env.t * 6) % 2;
+      // the pair in use stands out, the others sit back
+      pairs.forEach(([l, r], i) => { for (const m of [l, r]) ((m.material as THREE.MeshStandardMaterial).emissiveIntensity = i === act ? 0.6 : 0.05); });
+      // the shutters close in turn while their act plays, and stay dark otherwise
+      shutL.opacity = act === 1 && flip === 0 ? 0.2 : 0.92;
+      shutR.opacity = act === 1 && flip === 1 ? 0.2 : 0.92;
+      const key = `${act}${act === 1 ? flip : ''}`;
+      if (key === shown) return;
+      shown = key;
+      const c = s.ctx;
+      c.globalCompositeOperation = 'source-over';
+      c.fillStyle = '#f2f0ea'; c.fillRect(0, 0, 512, 320);
+      if (act === 0) {
+        // both pictures at once, one in red, one in cyan: through the glasses each eye sees only its own
+        c.globalCompositeOperation = 'multiply';
+        cube(c, -14, '#ff3b30'); cube(c, 14, '#14d8ff');
+      } else if (act === 1) {
+        // one picture at a time, many times a second: first the left eye's, then the right eye's
+        cube(c, flip === 0 ? -14 : 14, '#24282c');
+      } else {
+        // both pictures at once in grey, their light polarised at right angles: without glasses they look doubled
+        c.globalAlpha = 0.6; cube(c, -14, '#24282c'); cube(c, 14, '#24282c'); c.globalAlpha = 1;
+      }
+      c.globalCompositeOperation = 'source-over';
+      c.fillStyle = '#24282c'; c.font = '22px "PT Mono", monospace'; c.textAlign = 'center';
+      c.fillText(['red + cyan', 'left / right', '45° / 135°'][act], 256, 300);
+      s.tex.needsUpdate = true;
+    },
+  };
+}

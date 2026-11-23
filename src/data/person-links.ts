@@ -207,6 +207,36 @@ export const personLinks: Record<string, PersonLink> = {
     "label": "Lotte Reiniger, Wikipedia",
     "kind": "biography"
   },
+  "Wilhelm Rollmann": {
+    "url": "https://stereoscopictures.com/anaglyph/anaglyphs/",
+    "label": "Wilhelm Rollmann and the anaglyph, Stereoscopic Pictures",
+    "kind": "profile"
+  },
+  "Louis Ducos du Hauron": {
+    "url": "https://en.wikipedia.org/wiki/Louis_Arthur_Ducos_du_Hauron",
+    "label": "Louis Arthur Ducos du Hauron, Wikipedia",
+    "kind": "biography"
+  },
+  "Laurens Hammond": {
+    "url": "https://en.wikipedia.org/wiki/Laurens_Hammond",
+    "label": "Laurens Hammond, Wikipedia",
+    "kind": "biography"
+  },
+  "Edwin H. Land": {
+    "url": "https://www.library.hbs.edu/hc/polaroid/a-research-and-manufacturing-company/commercialization-of-the-polarizer",
+    "label": "Edwin Land and the polarizer, Polaroid Corporation collection, Harvard Business School",
+    "kind": "record"
+  },
+  "Julius Popp": {
+    "url": "https://hausmedienkunst.de/en/exhibitions/julius-popp-selected-words/",
+    "label": "Julius Popp, selected words, HMKV Hartware MedienKunstVerein",
+    "kind": "profile"
+  },
+  "John West": {
+    "url": "https://www.kent.edu/magazine/news/window-future",
+    "label": "Window on the future, Kent State Magazine, 2015",
+    "kind": "record"
+  },
   "Kara Walker": {
     "url": "https://en.wikipedia.org/wiki/Kara_Walker",
     "label": "Kara Walker, Wikipedia",

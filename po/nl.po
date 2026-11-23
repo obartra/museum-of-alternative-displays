@@ -603,312 +603,6 @@ msgstr "Personen"
 
 #: interface
 #. Interface.
-msgctxt "ui.teach.head"
-msgid "Worksheets for a class"
-msgstr "Werkbladen voor een klas"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.says"
-msgid "One worksheet for each hall, to print or to use on a screen. Choose three or four displays, and the sheet asks about each of them, asks the class to compare them, and ends on one open question. The answers are on a page of their own, taken from the museum's labels."
-msgstr "Een werkblad voor elke zaal, om te printen of op een scherm te gebruiken. Kies drie of vier displays: het blad stelt vragen over elk, laat de klas ze vergelijken en eindigt met een open vraag. De antwoorden staan op een eigen pagina, uit de tekstbordjes van het museum."
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.title"
-msgid "Worksheet for hall {n}: {name}"
-msgstr "Werkblad bij zaal {n}: {name}"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.lead"
-msgid "Three questions on each display chosen, three that compare them, and one open question. The answers are on the last page."
-msgstr "Drie vragen bij elk gekozen display, drie om ze te vergelijken en een open vraag. De antwoorden staan op de laatste pagina."
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.count"
-msgid "{n} displays"
-msgstr "{n} displays"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.hall"
-msgid "Go to the hall"
-msgstr "Naar de zaal"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.all"
-msgid "All worksheets"
-msgstr "Alle werkbladen"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.box"
-msgid "For the teacher"
-msgstr "Voor de docent"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.who.k"
-msgid "Ages:"
-msgstr "Leeftijd:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.who"
-msgid "11 to 16. About 40 minutes, alone or in pairs."
-msgstr "11 tot 16 jaar. Ongeveer 40 minuten, alleen of in tweetallen."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.goal.k"
-msgid "Goal:"
-msgstr "Doel:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.goal"
-msgid "Explain how a display makes its picture, compare displays by what they can do, and say how we know who made them."
-msgstr "Uitleggen hoe een display zijn beeld maakt, displays vergelijken op wat ze kunnen, en zeggen hoe we weten wie ze maakte."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.use.k"
-msgid "How:"
-msgstr "Zo werkt het:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.use"
-msgid "Choose the displays below, then print the sheet or share its address. On a screen, the names link to the 3D models. On paper, the QR codes do."
-msgstr "Kies hieronder de displays en print dan het blad of deel het adres. Op een scherm leiden de namen naar de 3D-modellen, op papier de QR-codes."
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.choose"
-msgid "Choose three or four of the {n} displays in this hall"
-msgstr "Kies drie of vier van de {n} displays in deze zaal"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.update"
-msgid "Make the sheet"
-msgstr "Maak het blad"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.name"
-msgid "Name:"
-msgstr "Naam:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.date"
-msgid "Date:"
-msgstr "Datum:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.a"
-msgid "Look closely"
-msgstr "Goed kijken"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.a.says"
-msgid "Open each display in the museum, on a screen or with its QR code."
-msgstr "Open elk display in het museum, op een scherm of met de QR-code."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.q.how"
-msgid "How does it make its picture?"
-msgstr "Hoe maakt het zijn beeld?"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.view"
-msgid "In the 3D model, press “{view}”. What do you notice?"
-msgstr "Druk in het 3D-model op ‘{view}’. Wat valt je op?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.q.try"
-msgid "In the 3D model:"
-msgstr "In het 3D-model:"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.who"
-msgid "{name} is named on its label. What did they do? How do we know: what kinds of sources does the label list?"
-msgstr "Het tekstbordje noemt {name}. Wat deed die persoon? Hoe weten we het: welke soorten bronnen noemt het bordje?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.b"
-msgid "Compare"
-msgstr "Vergelijken"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.b.grid"
-msgid "Fill in the grid with yes or no. Use the labels."
-msgstr "Vul de tabel in met ja of nee. Gebruik de tekstbordjes."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.g.day"
-msgid "Easy to read in sunlight?"
-msgstr "Goed te lezen in de zon?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.g.off"
-msgid "Keeps its picture with the power off?"
-msgstr "Houdt zijn beeld zonder stroom?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.g.made"
-msgid "Still made today?"
-msgstr "Wordt het nog gemaakt?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.b.order"
-msgid "Put these displays in order, from the oldest to the newest:"
-msgstr "Zet deze displays op volgorde, van oudste naar nieuwste:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.b.sort"
-msgid "Sort them by how they make their picture:"
-msgstr "Deel ze in naar hoe ze hun beeld maken:"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.c"
-msgid "Think"
-msgstr "Nadenken"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.1"
-msgid "A train station wants a departures board that people notice and that keeps working in a power cut. Which display in this hall would you start from, and why?"
-msgstr "Een station wil een vertrekbord dat mensen opmerken en dat blijft werken bij een stroomstoring. Van welk display in deze zaal zou je uitgaan, en waarom?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.2"
-msgid "Many of these tubes and panels are no longer made. Choose one and say what replaced it, and why."
-msgstr "Veel van deze buizen en panelen worden niet meer gemaakt. Kies er een en zeg wat het verving, en waarom."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.3"
-msgid "The screen of a phone is related to one of the displays in this hall. Which one, and what makes you think so?"
-msgstr "Het scherm van een telefoon is familie van een van de displays in deze zaal. Van welk, en waarom denk je dat?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.4"
-msgid "Some of these displays make no light of their own: they shape light from somewhere else. Choose two and say where their light comes from."
-msgstr "Sommige van deze displays maken geen eigen licht: ze vormen licht dat van elders komt. Kies er twee en zeg waar hun licht vandaan komt."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.5"
-msgid "Design a timetable for a bus stop on a sunny street. Which display from this hall would you use, and what would you give up?"
-msgstr "Ontwerp een dienstregeling voor een bushalte in een zonnige straat. Welk display uit deze zaal zou je gebruiken, en wat geef je op?"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.6"
-msgid "Some of these pictures really float in the air, and some only seem to. Choose one and explain how it works."
-msgstr "Sommige van deze beelden zweven echt in de lucht, andere lijken dat alleen. Kies er een en leg uit hoe het werkt."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.open.7"
-msgid "Our two eyes see slightly different pictures. Choose two displays from this hall and explain how each gives each eye a picture of its own."
-msgstr "Onze twee ogen zien net andere beelden. Kies twee displays uit deze zaal en leg uit hoe elk ieder oog zijn eigen beeld geeft."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.answers"
-msgid "Answers"
-msgstr "Antwoorden"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.source"
-msgid "Every answer is taken from the museum's own words about the display."
-msgstr "Elk antwoord komt uit wat het museum over het display zegt."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.k.own"
-msgid "Accept the idea in the student's own words."
-msgstr "Het idee in eigen woorden is goed."
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.k.records"
-msgid "Its label lists these kinds of source: {kinds}."
-msgstr "Het bordje noemt deze soorten bronnen: {kinds}."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.k.grid"
-msgid "The museum's own answers, from the details of each display. Accept another answer when the student gives a reason from the label."
-msgstr "De antwoorden van het museum, uit de gegevens van elk display. Een ander antwoord is goed als de leerling het met het bordje onderbouwt."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.k.open"
-msgid "Answers will vary. A good answer names a display and gives reasons from its label."
-msgstr "De antwoorden zullen verschillen. Een goed antwoord noemt een display en geeft redenen uit het tekstbordje."
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.yes"
-msgid "Yes"
-msgstr "Ja"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.no"
-msgid "No"
-msgstr "Nee"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.lab"
-msgid "Only in laboratories"
-msgstr "Alleen in laboratoria"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.print"
-msgid "Print"
-msgstr "Printen"
-
-#: interface
-#. Interface.
-msgctxt "ui.teach.link"
-msgid "Worksheet for this hall"
-msgstr "Werkblad bij deze zaal"
-
-#: interface
-#. Menu at the top.
-msgctxt "ui.nav.teach"
-msgid "For teachers"
-msgstr "Voor docenten"
-
-#: interface
-#. Interface.
 msgctxt "ui.embed.button"
 msgid "Embed"
 msgstr "Insluiten"
@@ -2562,6 +2256,132 @@ msgstr "Uit het octrooi van Maurice Taylor uit 1964 voor een magnetisch bediend 
 msgctxt "piece.flip-disc.media.patent-1.alt"
 msgid "Line drawings: a board with rows of round openings, a cut-away of one disc with a magnet beside a coil, and a grid of light and dark dots."
 msgstr "Lijntekeningen: een bord met rijen ronde openingen, een opengewerkt schijfje met een magneet naast een spoel, en een raster van lichte en donkere stippen."
+
+#: hall-1/water-curtain
+#. Name of a piece.
+msgctxt "piece.water-curtain.name"
+msgid "Water curtain display"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Other names the piece goes by.
+msgctxt "piece.water-curtain.aka"
+msgid "Digital water curtain, bit.fall"
+msgstr ""
+
+#: hall-1/water-curtain
+#. The date of the piece, as its label gives it.
+msgctxt "piece.water-curtain.yearText"
+msgid "patent applied for in 1978"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.water-curtain.origin"
+msgid "A fountain of drops released by computer, United States patent applied for in 1978. Julius Popp's bit.fall, Germany, from 2001"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Where this kind of display stands today.
+msgctxt "piece.water-curtain.statusNote"
+msgid "Built for exhibitions, fairs and public spaces. Several companies make modules of valves for it, and Julius Popp's bit.fall is still shown."
+msgstr ""
+
+#: hall-1/water-curtain
+#. First sentence of the label.
+msgctxt "piece.water-curtain.lead"
+msgid "A row of valves lets water fall in drops, timed so that the drops spell a picture, which lasts as long as it takes to fall."
+msgstr ""
+
+#: hall-1/water-curtain
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.water-curtain.how.1"
+msgid "A bar hangs over a basin, with a nozzle every few centimetres and a fast magnetic valve behind each. A computer reads the picture one row at a time and opens a valve for each dark dot. The bottom row leaves first and each row above leaves a moment later, so the drops keep their places and the picture falls whole."
+msgstr ""
+
+#: hall-1/water-curtain
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.water-curtain.how.2"
+msgid "The picture can be read for about a second, and better from across the room than from close up. Lamps under the water or behind the curtain make the drops shine."
+msgstr ""
+
+#: hall-1/water-curtain
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.water-curtain.how.3"
+msgid "A United States patent applied for in 1978 describes a fountain whose drops are released by computer and lit by a strobe, to show pictures in space. The artist Julius Popp began bit.fall in 2001 with eight nozzles. A version with 128 valves showed words taken from news websites at the Nuit Blanche in Paris in 2005."
+msgstr ""
+
+#: hall-1/water-curtain
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.good.1"
+msgid "Draws with nothing but water and light"
+msgstr ""
+
+#: hall-1/water-curtain
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.good.2"
+msgid "Can be read from across a hall"
+msgstr ""
+
+#: hall-1/water-curtain
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.good.3"
+msgid "Gives every picture a life of about a second"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.bad.1"
+msgid "Shows one colour, the light on the drops"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.bad.2"
+msgid "Needs a basin, a pump and still air, since wind breaks the picture up"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.water-curtain.bad.3"
+msgid "Is hard to read from close up"
+msgstr ""
+
+#: hall-1/water-curtain
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.water-curtain.look"
+msgid "Stand across the room and watch the time form under the bar and fall into the basin. Then switch the daylight off: lamps under the water light the drops."
+msgstr ""
+
+#: hall-1/water-curtain
+#. People section: what Julius Popp did. The names stand above this line.
+msgctxt "piece.water-curtain.people.1"
+msgid "Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites."
+msgstr ""
+
+#: hall-1/water-curtain
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.water-curtain.view.across.label"
+msgid "Stand across the room"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Line shown while the visitor is at that place.
+msgctxt "piece.water-curtain.view.across.hint"
+msgid "From here the drops read as a picture: the time, falling whole into the basin. Each lasts about a second."
+msgstr ""
+
+#: hall-1/water-curtain
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.water-curtain.view.under.label"
+msgid "Look up at the valves"
+msgstr ""
+
+#: hall-1/water-curtain
+#. Line shown while the visitor is at that place.
+msgctxt "piece.water-curtain.view.under.hint"
+msgid "The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls."
+msgstr ""
 
 #: hall-1/mechanical-television
 #. Name of a piece.
@@ -5827,6 +5647,258 @@ msgctxt "piece.liquid-crystal.media.patent-1.alt"
 msgid "Line drawings: a cell in cross-section wired to a battery, two plates ruled with lines in crossed directions, and a square cell between two discs before a light source."
 msgstr "Lijntekeningen: een cel in doorsnede aangesloten op een batterij, twee platen met lijnen in gekruiste richtingen, en een vierkante cel tussen twee schijven voor een lichtbron."
 
+#: hall-4/hidden-lcd
+#. Name of a piece.
+msgctxt "piece.hidden-lcd.name"
+msgid "Hidden-image screen"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Other names the piece goes by.
+msgctxt "piece.hidden-lcd.aka"
+msgid "Secret monitor, LCD without its front polariser"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. The date of the piece, as its label gives it.
+msgctxt "piece.hidden-lcd.yearText"
+msgid "reported in 1999"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.hidden-lcd.origin"
+msgid "A liquid-crystal monitor with its front polariser removed. One sold with glasses by Sceptre, United States, was reported in 1999"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Where this kind of display stands today.
+msgctxt "piece.hidden-lcd.statusNote"
+msgid "Made by hobbyists from old monitors, and shown in physics teaching. A stripped panel laid over a working one shows a second picture that only a filter reveals."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. First sentence of the label.
+msgctxt "piece.hidden-lcd.lead"
+msgid "A liquid-crystal screen with its front filter peeled off looks blank and white, until you look at it through a polarising filter."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.hidden-lcd.how.1"
+msgid "A liquid-crystal screen makes its picture with two polarising filters. The back one polarises the light of the lamp behind it. The liquid crystal turns that light by a different amount at each dot, and the front filter passes or stops each dot by how far its light was turned."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.hidden-lcd.how.2"
+msgid "Without the front filter, every dot lets out the same amount of light, so the eye sees an even white. The picture is still there, written in the angle of the light. A polarising filter held in front, or worn as glasses, brings it back. Turned a quarter turn, the filter shows the picture in its opposite colours."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.hidden-lcd.how.3"
+msgid "A monitor sold with glasses for this was reported in 1999. Since 2011, hobbyists have made their own from old monitors, moving the filter from the screen to a pair of glasses."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.good.1"
+msgid "Looks blank to anyone without a filter"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.good.2"
+msgid "Needs no new part, only one taken away"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.good.3"
+msgid "Shows plainly how a liquid-crystal screen works"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.bad.1"
+msgid "Anyone wearing polarised sunglasses can read it"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.bad.2"
+msgid "Looks bright white and glaring to everyone else"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.hidden-lcd.bad.3"
+msgid "Dims and changes colour when the filter is tilted"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.hidden-lcd.look"
+msgid "Sit in front: the screen is white. Look through the filter on its stand and the clock appears. Watch the filter turn: at a quarter turn, the colours of the picture reverse."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.hidden-lcd.view.front.label"
+msgid "Sit in front"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Line shown while the visitor is at that place.
+msgctxt "piece.hidden-lcd.view.front.hint"
+msgid "The screen looks white. Through the turning filter the clock comes back, and at a quarter turn its colours reverse."
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.hidden-lcd.view.close.label"
+msgid "Look through the filter"
+msgstr ""
+
+#: hall-4/hidden-lcd
+#. Line shown while the visitor is at that place.
+msgctxt "piece.hidden-lcd.view.close.hint"
+msgid "Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Name of a piece.
+msgctxt "piece.switchable-glass.name"
+msgid "Switchable glass"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Other names the piece goes by.
+msgctxt "piece.switchable-glass.aka"
+msgid "Smart glass, privacy glass, PDLC"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. The date of the piece, as its label gives it.
+msgctxt "piece.switchable-glass.yearText"
+msgid "patented in 1984"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.switchable-glass.origin"
+msgid "Liquid crystal sealed in tiny capsules, patented by James Fergason, United States, 1984. Studied as polymer-dispersed liquid crystal at the Liquid Crystal Institute, Kent State University, from the mid-1980s"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Where this kind of display stands today.
+msgctxt "piece.switchable-glass.statusNote"
+msgid "Sold as panes and as a film to stick on glass already in place, mostly for privacy in offices, meeting rooms and bathrooms."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. First sentence of the label.
+msgctxt "piece.switchable-glass.lead"
+msgid "A pane that is frosted white with the power off turns clear in a moment when a voltage is put across it."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.switchable-glass.how.1"
+msgid "Between two sheets of glass or plastic, each coated with a clear conductor, lies a film of plastic full of tiny droplets of liquid crystal. With no voltage, the molecules in each droplet point every which way, and the droplets scatter light as frosted glass does."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.switchable-glass.how.2"
+msgid "A voltage across the film lines the molecules up with it. The liquid crystal then bends light almost exactly as the plastic around it does, so light passes straight through and the pane looks clear. It is clear or frosted, and draws no picture of its own."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.switchable-glass.how.3"
+msgid "James Fergason patented liquid crystal sealed in tiny capsules of polymer in 1984. The same year, John West began work on switchable windows at the Liquid Crystal Institute of Kent State University, where such films were studied as polymer-dispersed liquid crystals."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.good.1"
+msgid "Changes from private to clear in a moment"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.good.2"
+msgid "Can be stuck as a film onto glass already in place"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.good.3"
+msgid "Makes a whole wall of glass a screen to hide behind"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.bad.1"
+msgid "Is clear or frosted, with little in between"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.bad.2"
+msgid "Must stay powered to stay clear"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.switchable-glass.bad.3"
+msgid "Shows no picture of its own"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.switchable-glass.look"
+msgid "The pane turns clear and frosted in turn. Watch the clock behind it: you can read it only while the pane is clear. Then go close and see the frosting from near."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. People section: what James Fergason did. The names stand above this line.
+msgctxt "piece.switchable-glass.people.1"
+msgid "Patented liquid crystal sealed in tiny capsules of polymer in 1984, the kind of film that switchable glass is made of."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. People section: what John West did. The names stand above this line.
+msgctxt "piece.switchable-glass.people.2"
+msgid "Worked on switchable windows at the Liquid Crystal Institute of Kent State University from 1984, by the university's account."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.switchable-glass.view.front.label"
+msgid "Stand in front"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Line shown while the visitor is at that place.
+msgctxt "piece.switchable-glass.view.front.hint"
+msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.switchable-glass.view.close.label"
+msgid "Go close to the pane"
+msgstr ""
+
+#: hall-4/switchable-glass
+#. Line shown while the visitor is at that place.
+msgctxt "piece.switchable-glass.view.close.hint"
+msgid "Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on."
+msgstr ""
+
 #: hall-4/micromirror
 #. Name of a piece.
 msgctxt "piece.micromirror.name"
@@ -8346,6 +8418,150 @@ msgstr "Een kijker voor het Teleview-systeem, uit het octrooi van Laurens Hammon
 msgctxt "piece.stereoscope.media.patent-1.alt"
 msgid "Line drawings: a round flat case on a curved stalk, with a window across its lower half and a cut-out disc inside, and beside it a section through its motor."
 msgstr "Lijntekeningen: een ronde platte behuizing op een gebogen steel, met een venster over de onderste helft en een uitgesneden schijf erin, en daarnaast een doorsnede van de motor."
+
+#: hall-7/stereo-glasses
+#. Name of a piece.
+msgctxt "piece.stereo-glasses.name"
+msgid "Glasses that pick an eye"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Other names the piece goes by.
+msgctxt "piece.stereo-glasses.aka"
+msgid "Anaglyph, polarised and shutter glasses"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. The date of the piece, as its label gives it.
+msgctxt "piece.stereo-glasses.yearText"
+msgid "1853, 1922 and 1936"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.stereo-glasses.origin"
+msgid "Colour: described by Wilhelm Rollmann, Germany, 1853. Time: Laurens Hammond's Teleview, New York, 1922. Polarised light: Edwin H. Land, United States, 1936"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Where this kind of display stands today.
+msgctxt "piece.stereo-glasses.statusNote"
+msgid "Cinemas still show films in 3D with polarised glasses, and red and cyan glasses still come with printed pictures. Shutter glasses are used with some projectors and screens."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. First sentence of the label.
+msgctxt "piece.stereo-glasses.lead"
+msgid "One screen carries a picture for each eye at once, and the glasses let each eye see only its own."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.stereo-glasses.how.1"
+msgid "Each eye needs a picture of its own, taken from a little to the side of the other. A stereoscope gives each eye its own lens. Glasses do it with one shared picture, by filtering. A red filter passes the red picture and hides the cyan one, and a cyan filter does the opposite."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.stereo-glasses.how.2"
+msgid "Polarised light gives the same split without colour. The two pictures are projected through filters at right angles, and each lens passes only the light at its own angle. Shutter glasses split by time instead: the screen shows one eye's picture, then the other's, and each lens closes while the wrong picture is up."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.stereo-glasses.how.3"
+msgid "Wilhelm Rollmann described pictures in two colours for two eyes in 1853. Louis Ducos du Hauron printed photographs that way in 1891 and called them anaglyphs. Laurens Hammond's Teleview showed films with shutters at the Selwyn Theatre in New York from 27 December 1922. Edwin Land showed films in polarised light in New York in 1936."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.good.1"
+msgid "Lets a whole audience see depth at once, from one screen"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.good.2"
+msgid "Red and cyan glasses cost almost nothing and work with print"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.good.3"
+msgid "Polarised glasses keep the colours of the picture"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.bad.1"
+msgid "Lets each eye have half of the light, or less"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.bad.2"
+msgid "Red and cyan glasses spoil the colours of the picture"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.stereo-glasses.bad.3"
+msgid "Shutter glasses need batteries and a signal from the screen, and can flicker"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.stereo-glasses.look"
+msgid "Sit in front and watch for 24 seconds: the screen shows the same cube in three ways, and the glasses in use stand out on the table. If you have red and cyan glasses, press the glasses key and the whole model is drawn for them."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. People section: what Wilhelm Rollmann did. The names stand above this line.
+msgctxt "piece.stereo-glasses.people.1"
+msgid "Described in 1853 how two pictures in two colours, seen through glasses of the same two colours, give each eye its own."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. People section: what Louis Ducos du Hauron did. The names stand above this line.
+msgctxt "piece.stereo-glasses.people.2"
+msgid "Printed stereoscopic photographs in red and blue in 1891, and named them anaglyphs."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. People section: what Laurens Hammond did. The names stand above this line.
+msgctxt "piece.stereo-glasses.people.3"
+msgid "Showed films through shutters that opened for each eye in turn, at the Selwyn Theatre in New York from December 1922."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. People section: what Edwin H. Land did. The names stand above this line.
+msgctxt "piece.stereo-glasses.people.4"
+msgid "Made sheet polarisers and showed films in polarised light in New York in 1936, by the account of a newspaper of that year."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.stereo-glasses.view.front.label"
+msgid "Sit in front"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Line shown while the visitor is at that place.
+msgctxt "piece.stereo-glasses.view.front.hint"
+msgid "Every eight seconds the screen and the glasses change together: colour, then time, then polarised light."
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.stereo-glasses.view.table.label"
+msgid "Look at the glasses"
+msgstr ""
+
+#: hall-7/stereo-glasses
+#. Line shown while the visitor is at that place.
+msgctxt "piece.stereo-glasses.view.table.hint"
+msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
+msgstr ""
 
 #: hall-7/parallax-barrier
 #. Name of a piece.

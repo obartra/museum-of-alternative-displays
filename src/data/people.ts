@@ -29,6 +29,11 @@ export const people: Record<string, Credit> = {
     ],
   },
   'flip-disc': { people: [{ who: ['Kenyon Taylor'], did: 'Devised the flip-disc at Ferranti-Packard in Canada, as John Vardalas tells it in a history for IEEE Canada. His first patent on it claims a Canadian application of 1960.' }] },
+  'water-curtain': {
+    people: [
+      { who: ['Julius Popp'], did: 'Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites.' },
+    ],
+  },
   'mechanical-television': {
     people: [
       { who: ['Paul Nipkow'], did: 'Patented the scanning disc in Germany in the 1880s.' },
@@ -202,6 +207,12 @@ export const people: Record<string, Credit> = {
       src('archive', 'Kara Walker, Fall Frum Grace, Miss Pipi\'s Blue Tale (2011), Sammlung Goetz', 'https://online.sammlung-goetz.de/en/work/fall-frum-grace-miss-pipis-blue-tale/'),
     ],
   },
+  'switchable-glass': {
+    people: [
+      { who: ['James Fergason'], did: 'Patented liquid crystal sealed in tiny capsules of polymer in 1984, the kind of film that switchable glass is made of.' },
+      { who: ['John West'], did: 'Worked on switchable windows at the Liquid Crystal Institute of Kent State University from 1984, by the university\'s account.' },
+    ],
+  },
   'liquid-crystal': {
     people: [
       { who: ['Martin Schadt', 'Wolfgang Helfrich'], did: 'Filed the patent for the twisted cell at Hoffmann-La Roche in Switzerland on 4 December 1970.' },
@@ -323,6 +334,19 @@ export const people: Record<string, Credit> = {
       src('archive', 'Charles Harrison, View-Master (model G), Museum of Modern Art', 'https://www.moma.org/collection/works/205547'),
       src('archive', 'Remembering Charles Harrison, Cooper Hewitt, Smithsonian Design Museum (2018)', 'https://www.cooperhewitt.org/2018/12/11/remembering-charles-harrison-1931-2018/'),
       src('archive', 'Expanding Views: Charles Harrison\'s Redesign of the View-Master, The Henry Ford', 'https://www.thehenryford.org/collections/explore/articles/expanding-views-charles-harrisons-redesign-of-the-view-master'),
+    ],
+  },
+  'stereo-glasses': {
+    people: [
+      { who: ['Wilhelm Rollmann'], did: 'Described in 1853 how two pictures in two colours, seen through glasses of the same two colours, give each eye its own.' },
+      { who: ['Louis Ducos du Hauron'], did: 'Printed stereoscopic photographs in red and blue in 1891, and named them anaglyphs.' },
+      { who: ['Laurens Hammond'], did: 'Showed films through shutters that opened for each eye in turn, at the Selwyn Theatre in New York from December 1922.' },
+      { who: ['Edwin H. Land'], did: 'Made sheet polarisers and showed films in polarised light in New York in 1936, by the account of a newspaper of that year.' },
+    ],
+    sources: [
+      src('archive', 'Wilhelm Rollmann and the anaglyph, Stereoscopic Pictures', 'https://stereoscopictures.com/anaglyph/anaglyphs/'),
+      src('archive', 'Commercialization of the polarizer, Polaroid Corporation collection, Harvard Business School', 'https://www.library.hbs.edu/hc/polaroid/a-research-and-manufacturing-company/commercialization-of-the-polarizer'),
+      src('press', 'Rownd, Early 3D: a case study, the Teleview and The Man from M.A.R.S., Bright Lights Film Journal', 'https://brightlightsfilm.com/early-3d-a-case-study-the-teleview-and-the-man-from-mars/'),
     ],
   },
   'parallax-barrier': {

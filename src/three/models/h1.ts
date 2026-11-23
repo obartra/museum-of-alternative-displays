@@ -1021,3 +1021,85 @@ export function droneShow(): Built {
     update: ({ t }) => fly(t),
   };
 }
+
+/** Five by seven dots for the digits and the colon, row by row from the top: the time is spelled in falling water. */
+const DROP_FONT: Record<string, string[]> = {
+  '0': ['01110', '10001', '10011', '10101', '11001', '10001', '01110'], '1': ['00100', '01100', '00100', '00100', '00100', '00100', '01110'],
+  '2': ['01110', '10001', '00001', '00010', '00100', '01000', '11111'], '3': ['11110', '00001', '00001', '01110', '00001', '00001', '11110'],
+  '4': ['00010', '00110', '01010', '10010', '11111', '00010', '00010'], '5': ['11111', '10000', '11110', '00001', '00001', '10001', '01110'],
+  '6': ['00110', '01000', '10000', '11110', '10001', '10001', '01110'], '7': ['11111', '00001', '00010', '00100', '01000', '01000', '01000'],
+  '8': ['01110', '10001', '10001', '01110', '10001', '10001', '01110'], '9': ['01110', '10001', '10001', '01111', '00001', '00010', '01100'],
+  ':': ['0', '1', '1', '0', '1', '1', '0'],
+};
+
+/**
+ * Water curtain display: a bar of valves over a basin. Each valve lets a drop fall when its dot of the picture is
+ * dark, row after row from the bottom of the picture up, so the drops fall in the shape of the picture and it lasts
+ * as long as the fall. Here the picture is the time, released every two and a half seconds, and the fall is slowed
+ * to about a second, as long as the words of Julius Popp's bit.fall last.
+ */
+export function waterCurtain(): Built {
+  const root = G.group();
+  const COLS = 32, PITCH = 0.05, W = COLS * PITCH, TOP = 2.05, FLOOR = 0.16, ROWS = 7;
+  const metal = M.steel(1), dark = M.dark();
+  // the frame: two posts on feet and a beam across, with the bar of valves under it
+  for (const sx of [-1, 1]) root.add(G.box(0.07, TOP + 0.12, 0.07, metal, [sx * (W / 2 + 0.16), (TOP + 0.12) / 2, 0]), G.box(0.3, 0.03, 0.4, metal, [sx * (W / 2 + 0.16), 0.015, 0]));
+  root.add(G.box(W + 0.42, 0.08, 0.1, metal, [0, TOP + 0.16, 0]), G.rbox(W + 0.06, 0.07, 0.07, 0.015, dark, [0, TOP + 0.06, 0]));
+  // a valve on every nozzle: small black cylinders in a row, each with its brass tip
+  const valves = new Swarm(new THREE.CylinderGeometry(0.014, 0.014, 0.05, 8), M.black(), COLS);
+  const tips = new Swarm(new THREE.CylinderGeometry(0.006, 0.003, 0.02, 6), M.brass(), COLS);
+  for (let i = 0; i < COLS; i++) { const x = (i - (COLS - 1) / 2) * PITCH; valves.put(i, x, TOP + 0.005, 0); tips.put(i, x, TOP - 0.03, 0); }
+  valves.done(); tips.done();
+  root.add(valves.mesh, tips.mesh);
+  // the supply: a pipe from the basin's pump up one post to the bar
+  root.add(G.wire([[W / 2 + 0.05, 0.12, 0.2], [W / 2 + 0.24, 0.12, 0.08], [W / 2 + 0.24, TOP + 0.06, 0.06], [W / 2, TOP + 0.06, 0.04]], 0.016, M.rubber(), false, 6));
+  // the basin: a long shallow trough with water in it, and lamps under the water that light the drops
+  root.add(G.rbox(W + 0.3, 0.14, 0.5, 0.03, dark, [0, 0.07, 0]));
+  const pool = new THREE.MeshStandardMaterial({ color: 0x2c4c5c, roughness: 0.05, metalness: 0.2, transparent: true, opacity: 0.85 });
+  root.add(G.plane(W + 0.22, 0.42, pool, [0, FLOOR - 0.005, 0]).rotateX(-Math.PI / 2));
+  const glow = M.glow(0xbfe6ff, 1.2);
+  for (let i = 0; i < 6; i++) root.add(G.box(0.12, 0.01, 0.06, glow, [(i - 2.5) * (W / 6), FLOOR - 0.02, 0.12], 0));
+  fuse(root);
+
+  // two pictures can be in the air at once: one falling, the next just leaving the valves
+  const MAX = COLS * ROWS * 2;
+  const drops = new Swarm(new THREE.SphereGeometry(0.015, 8, 6), new THREE.MeshStandardMaterial({ color: 0xe6f6ff, emissive: 0x9fd6ff, emissiveIntensity: 0.5, roughness: 0.05, transparent: true, opacity: 0.9 }), MAX);
+  drops.mesh.userData.noShadow = true;
+  root.add(drops.mesh);
+  /** The dots of the time, as columns and rows, centred on the bar. */
+  const bitmap = (text: string): [number, number][] => {
+    const glyphs = [...text].map((ch) => DROP_FONT[ch] ?? DROP_FONT['0']);
+    const wide = glyphs.reduce((n, g) => n + g[0].length + 1, -1);
+    let x0 = Math.floor((COLS - wide) / 2);
+    const dots: [number, number][] = [];
+    for (const g of glyphs) { g.forEach((row, r) => [...row].forEach((b, c) => { if (b === '1') dots.push([x0 + c, r]); })); x0 += g[0].length + 1; }
+    return dots;
+  };
+  const EVERY = 2.5, FALL = 1.05, G2 = (2 * (TOP - FLOOR)) / (FALL * FALL);
+  const away = new THREE.Matrix4().makeTranslation(0, -10, 0);
+  return {
+    root, views: {
+      across: { at: [0, 1.35, 4.2], to: [0, 1.15, 0], fov: 36, play: 0.25 },
+      under: { at: [0.3, 1.6, 0.9], to: [0, 2.0, 0], fov: 42, play: 0.15 },
+    },
+    inDark: 'glows', glow: 0xbfe6ff, view: [-14, 4],
+    update: (env) => {
+      let k = 0;
+      for (const back of [0, 1]) {
+        const start = (Math.floor(env.t / EVERY) - back) * EVERY, age = env.t - start;
+        if (age < 0 || age > FALL + ROWS * 0.09) continue;
+        for (const [c, r] of bitmap(now().hhmm)) {
+          // the bottom row leaves first; each row above leaves a moment later, so the picture keeps its shape
+          const tau = age - (ROWS - 1 - r) * 0.09;
+          if (tau < 0) continue;
+          const yy = TOP - 0.04 - 0.5 * G2 * tau * tau;
+          if (yy < FLOOR) continue;
+          drops.put(k++, (c - (COLS - 1) / 2) * PITCH, yy, 0, 0, 0, 0, 1, 1 + Math.min(1.6, tau * 2.2), 1);
+          if (k >= MAX) break;
+        }
+      }
+      for (let i = k; i < MAX; i++) drops.mesh.setMatrixAt(i, away);
+      drops.done();
+    },
+  };
+}

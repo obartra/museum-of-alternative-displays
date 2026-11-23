@@ -1266,42 +1266,6 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 .guide__name-plate i { display: grid; place-items: center; font-style: normal; font-size: 11px; background: color-mix(in srgb, var(--trail) 25%, transparent); }
 .guide__name-plate.is-said { opacity: 1; transform: translateY(-2px); background: color-mix(in srgb, var(--trail) 22%, transparent); border-color: var(--trail); }
 @media (prefers-reduced-motion: reduce) { .guide__name-plate { transition: opacity .4s; } .guide__name-plate.is-said { transform: none; } }
-/* worksheets for a class (src/teach.ts): plain to read on a screen, and plain on paper, with the answers on a page of their own */
-.ws { max-width: 74ch; margin-inline: auto; }
-.ws h1 { font-size: var(--t-xl, 1.8rem); margin: 0 0 12px; }
-.ws h2 { font-size: 1.3rem; margin: 28px 0 8px; }
-.ws__lead { margin: 0 0 12px; }
-.ws__teacher { padding: 14px 16px; border: 1px solid var(--rim); border-radius: 8px; background: var(--wash); }
-.ws__teacher h2 { margin: 0 0 8px; font-size: 1.05rem; }
-.ws__teacher p { margin: 0 0 6px; }
-.ws__choose fieldset { border: 0; padding: 0; margin: 10px 0 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); gap: 4px 16px; }
-.ws__choose legend { font-weight: 600; margin-bottom: 6px; }
-.ws__choose label { display: flex; gap: 6px; align-items: center; }
-.ws__keys { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0 0 !important; }
-.ws__name { margin: 20px 0 8px; }
-.ws__piece { display: grid; grid-template-columns: 1fr auto; gap: 0 16px; margin: 0 0 18px; break-inside: avoid; }
-.ws__piece h3, .ws__piece h4 { grid-column: 1; margin: 0 0 6px; font-size: 1.1rem; }
-.ws__qr { grid-column: 2; grid-row: 1 / span 2; width: 74px; height: 74px; }
-.ws__qr svg { width: 100%; height: 100%; display: block; }
-.ws__piece ol { grid-column: 1; margin: 0; padding-inline-start: 1.4em; }
-.ws__piece li { margin: 0 0 10px; padding-bottom: 1.8em; }
-.ws__answers .ws__piece li, .ws__answers li { padding-bottom: 0; }
-.ws__compare > li { margin: 0 0 18px; }
-.ws__names { margin: 6px 0 0; padding-bottom: 2.4em; }
-.ws__grid { border-collapse: collapse; margin: 8px 0; width: 100%; font-size: .95em; }
-.ws__grid th, .ws__grid td { border: 1px solid currentColor; padding: 6px 8px; text-align: start; vertical-align: top; }
-.ws__grid td { min-width: 5em; height: 1.8em; }
-.ws__open { padding-bottom: 6em; }
-.ws__answers { margin-top: 40px; padding-top: 16px; border-top: 1px solid currentColor; }
-.ws__answers h3 { margin: 18px 0 8px; }
-.ws__halls li { margin: 0 0 8px; }
-@media print {
-  .top, .tabs, .foot, .skip, .ws__print, .ws__teacher .ws__choose, .ws__keys, .guide, [data-noprint] { display: none !important; }
-  body { background: #fff !important; color: #000 !important; }
-  .ws a { color: inherit; text-decoration: none; }
-  .ws__teacher { background: none; }
-  .ws__answers { break-before: page; border-top: 0; margin-top: 0; }
-}
 /* the code that puts a piece into another page */
 .embed-code { display: grid; gap: 8px; margin: 4px 0 12px; }
 .embed-code p { margin: 0; font-size: var(--t-xs); }

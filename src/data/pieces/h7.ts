@@ -18,6 +18,22 @@ export const h7: Piece[] = [
     sources: [wiki('Stereoscopy'), wiki('Anaglyph_3D', 'Anaglyph 3D'), wiki('Teleview'), src('archive', 'Rollmann, 1853, the first description of the anaglyph', 'https://books.google.com/books?id=cmYEAAAAYAAJ')],
   },
   {
+    id: 'stereo-glasses', hall: 7, name: 'Glasses that pick an eye', aka: 'Anaglyph, polarised and shutter glasses',
+    year: 1853, yearText: '1853, 1922 and 1936', origin: 'Colour: described by Wilhelm Rollmann, Germany, 1853. Time: Laurens Hammond\'s Teleview, New York, 1922. Polarised light: Edwin H. Land, United States, 1936',
+    status: 'niche', statusNote: 'Cinemas still show films in 3D with polarised glasses, and red and cyan glasses still come with printed pictures. Shutter glasses are used with some projectors and screens.',
+    principle: 'directs', needs: ['depth'],
+    lead: 'One screen carries a picture for each eye at once, and the glasses let each eye see only its own.',
+    how: [
+      'Each eye needs a picture of its own, taken from a little to the side of the other. A stereoscope gives each eye its own lens. Glasses do it with one shared picture, by filtering. A red filter passes the red picture and hides the cyan one, and a cyan filter does the opposite.',
+      'Polarised light gives the same split without colour. The two pictures are projected through filters at right angles, and each lens passes only the light at its own angle. Shutter glasses split by time instead: the screen shows one eye\'s picture, then the other\'s, and each lens closes while the wrong picture is up.',
+      'Wilhelm Rollmann described pictures in two colours for two eyes in 1853. Louis Ducos du Hauron printed photographs that way in 1891 and called them anaglyphs. Laurens Hammond\'s Teleview showed films with shutters at the Selwyn Theatre in New York from 27 December 1922. Edwin Land showed films in polarised light in New York in 1936.',
+    ],
+    good: ['Lets a whole audience see depth at once, from one screen', 'Red and cyan glasses cost almost nothing and work with print', 'Polarised glasses keep the colours of the picture'],
+    bad: ['Lets each eye have half of the light, or less', 'Red and cyan glasses spoil the colours of the picture', 'Shutter glasses need batteries and a signal from the screen, and can flicker'],
+    look: 'Sit in front and watch for 24 seconds: the screen shows the same cube in three ways, and the glasses in use stand out on the table. If you have red and cyan glasses, press the glasses key and the whole model is drawn for them.',
+    sources: [wiki('Anaglyph_3D'), wiki('Teleview'), wiki('Polarized_3D_system'), src('patent', 'Hammond, US patent 1,435,520, stereoscopic motion pictures', 'https://patents.google.com/patent/US1435520'), src('archive', 'Teleview, magazine page of 1922, Jonathan Silent Film Collection, Chapman University', 'https://digitalcommons.chapman.edu/jonathan_silent_film/1382'), src('press', 'Polarised light and three-dimensional films, Evening Post, 8 April 1936, Papers Past', 'https://paperspast.natlib.govt.nz/newspapers/EP19360408.2.169'), src('paper', 'Wade, Stereoscopic depth and binocular rivalry, i-Perception', 'https://doi.org/10.1177/20416695261448396')],
+  },
+  {
     id: 'parallax-barrier', hall: 7, name: 'Parallax barrier',
     year: 1901, yearText: 'shown 1901, patent filed 1902', origin: 'Frederic Ives, Philadelphia, USA. Auguste Berthier had suggested the principle in 1896',
     status: 'niche', statusNote: 'In a hand-held games console, some phones and car screens that show the driver and the passenger different pictures.',

@@ -857,3 +857,106 @@ export function projectionMapping(): Built {
     },
   };
 }
+
+/**
+ * Hidden-image screen: a liquid-crystal monitor with its front polariser peeled off. Every dot lets out the same
+ * light, so the screen looks white. A round polarising filter on a stand in front of it turns slowly: through it the
+ * picture comes back, and a quarter turn later it shows in its opposite colours.
+ */
+export function hiddenLcd(): Built {
+  const root = G.group();
+  const W = 1.5, H = 0.94, y = 1.02;
+  const s = screen(512, 320), seen = screen(512, 320);
+  const dark = M.dark();
+  // the monitor: a thin panel in its bezel on a foot, its screen an even white
+  root.add(G.rbox(W + 0.1, H + 0.1, 0.05, 0.02, dark, [0, y, -0.03]), G.plane(W, H, M.lit(s, 1.05, 0.2), [0, y, 0]));
+  root.add(G.box(0.08, 0.5, 0.05, M.steel(1), [0, y - H / 2 - 0.2, -0.06]), G.rbox(0.5, 0.03, 0.32, 0.012, dark, [0, y - H / 2 - 0.44, -0.04]));
+  s.ctx.fillStyle = '#f4f6f6'; s.ctx.fillRect(0, 0, 512, 320); s.tex.needsUpdate = true;
+  // the filter: a disc of grey film in a ring, held on a post in front of the screen, turning about its centre
+  const R = 0.3, fx = 0, fy = y, fz = 0.04;
+  const disc = new THREE.Mesh(new THREE.CircleGeometry(R, 48), new THREE.MeshBasicMaterial({ map: seen.tex, transparent: true, opacity: 1 }));
+  disc.position.set(fx, fy, fz);
+  // the film's own tint, and the ring and post that hold it
+  const film = new THREE.Mesh(new THREE.CircleGeometry(R, 48), new THREE.MeshStandardMaterial({ color: 0x40464b, transparent: true, opacity: 0.18, roughness: 0.3 }));
+  film.position.set(fx, fy, fz + 0.002);
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(R + 0.01, 0.014, 8, 48), M.black());
+  ring.position.set(fx, fy, fz + 0.002);
+  root.add(disc, film, ring, G.box(0.03, fy - R - 0.0, 0.03, M.steel(1), [fx, (fy - R) / 2, fz + 0.02]), G.rbox(0.3, 0.03, 0.24, 0.012, dark, [fx, 0.015, fz + 0.02]));
+  // a mark on the ring shows the angle of the filter
+  const mark = G.box(0.012, 0.05, 0.01, M.glow(0xffd060, 1.2), [0, R + 0.02, 0]);
+  const turner = G.group(mark); turner.position.set(fx, fy, fz + 0.01); root.add(turner);
+
+  /** The picture as the panel writes it, in the angle of its light: a clock on a coloured field. */
+  const draw = (c: CanvasRenderingContext2D, flip: boolean) => {
+    c.fillStyle = flip ? '#1d5f8f' : '#f0b56a'; c.fillRect(0, 0, 512, 320);
+    bigTime(c, 512, 320, now().hhmm, flip ? '#fff0dc' : '#16222c', 800, 0.2);
+  };
+  let shown = '';
+  return {
+    root, views: {
+      front: { at: [0, 1.05, 3.0], to: [0, 1.0, 0], fov: 34, play: 0.2 },
+      close: { at: [0.1, 1.04, 1.1], to: [0, 1.02, 0], fov: 40, play: 0.1 },
+    },
+    inDark: 'glows', glow: 0xf4f6f6, view: [16, 4],
+    update: (env) => {
+      // a full turn every twenty seconds: the picture is darkest-on-light at 0° and 180°, and reversed at 90° and 270°
+      const a = (env.t / 20) * Math.PI * 2, c2 = Math.cos(a) ** 2;
+      turner.rotation.z = -a;
+      const key = `${now().hhmm}${c2 > 0.5}`;
+      if (key !== shown) { shown = key; draw(seen.ctx, c2 < 0.5); seen.tex.needsUpdate = true; }
+      // the disc shows the part of the screen behind it, strongest when the filter is square to the panel
+      const u = seen.tex;
+      u.repeat.set((2 * R) / W, (2 * R) / H); u.offset.set(0.5 - R / W, 0.5 - R / H);
+      (disc.material as THREE.MeshBasicMaterial).opacity = 0.35 + 0.65 * Math.abs(c2 - 0.5) * 2;
+    },
+  };
+}
+
+/**
+ * Switchable glass: a pane in a frame, frosted white with the power off and clear with it on. Behind it on the stand
+ * a small clock face is seen only while the pane is clear. The pane switches every five seconds, and a lamp on the
+ * frame shows when it is powered.
+ */
+export function switchableGlass(): Built {
+  const root = G.group();
+  const W = 1.3, H = 1.5, y = 1.05;
+  const dark = M.dark(), metal = M.steel(1);
+  const face = screen(256, 256);
+  // the frame: an aluminium surround on two feet, a lead running down one side to a switch box
+  for (const [w, h, p] of [[W + 0.1, 0.05, [0, y + H / 2 + 0.025, 0]], [W + 0.1, 0.05, [0, y - H / 2 - 0.025, 0]], [0.05, H, [-W / 2 - 0.025, y, 0]], [0.05, H, [W / 2 + 0.025, y, 0]]] as [number, number, [number, number, number]][]) root.add(G.box(w, h, 0.06, metal, p));
+  for (const sx of [-1, 1]) root.add(G.box(0.08, y - H / 2 - 0.05, 0.08, metal, [sx * (W / 2 - 0.1), (y - H / 2 - 0.05) / 2, 0]), G.box(0.3, 0.03, 0.4, metal, [sx * (W / 2 - 0.1), 0.015, 0]));
+  root.add(G.rbox(0.16, 0.1, 0.06, 0.01, dark, [W / 2 + 0.2, 0.3, 0.05]), G.wire([[W / 2 + 0.05, y - 0.4, 0], [W / 2 + 0.12, y - 0.45, 0.03], [W / 2 + 0.2, 0.36, 0.05]], 0.008, M.rubber(), false, 5));
+  const lamp = M.glow(0x50e070, 1.6);
+  const pilot = G.box(0.02, 0.02, 0.01, lamp, [W / 2 + 0.2, 0.3, 0.082], 0);
+  root.add(pilot);
+  // behind the pane, a clock on a small easel, to be seen through it
+  const clock = G.plane(0.5, 0.5, M.lit(face, 1.0, 0.25), [0, y - 0.1, -0.55]);
+  root.add(clock, G.box(0.04, y - 0.35, 0.04, metal, [0, (y - 0.35) / 2, -0.6]), G.rbox(0.4, 0.03, 0.3, 0.012, dark, [0, 0.015, -0.6]));
+  // the pane: clear glass with a milky film whose haze rises and falls with the voltage
+  const glass = G.pane(W, H, 0.012, [0, y, 0]);
+  const haze = new THREE.MeshStandardMaterial({ color: 0xf3f4f2, roughness: 0.9, transparent: true, opacity: 0.95, side: THREE.DoubleSide });
+  const film = G.plane(W, H, haze, [0, y, 0.008]);
+  root.add(glass, film);
+  let shown = '';
+  return {
+    root, views: {
+      front: { at: [0, 1.15, 3.1], to: [0, 1.05, 0], fov: 34, play: 0.2 },
+      close: { at: [0.25, 1.1, 0.75], to: [0, 1.05, 0], fov: 42, play: 0.1 },
+    },
+    inDark: 'vanishes', view: [-18, 4],
+    update: (env) => {
+      // five seconds frosted, five clear, switching in a fifth of a second as the molecules turn
+      const at = env.t % 10, on = at >= 5, edge = Math.min(1, Math.abs(at - (on ? 5 : 0)) / 0.2);
+      haze.opacity = on ? 0.95 - 0.9 * edge : at < 0.2 ? 0.05 + 0.9 * edge : 0.95;
+      (pilot.material as THREE.MeshStandardMaterial).emissiveIntensity = on ? 1.6 : 0.05;
+      const hhmm = now().hhmm;
+      if (hhmm !== shown) {
+        shown = hhmm;
+        const c = face.ctx;
+        c.fillStyle = '#f2ede2'; c.fillRect(0, 0, 256, 256); c.strokeStyle = '#1c2024'; c.lineWidth = 8; c.strokeRect(8, 8, 240, 240);
+        bigTime(c, 256, 256, hhmm, '#1c2024', 800, 0.36);
+        face.tex.needsUpdate = true;
+      }
+    },
+  };
+}

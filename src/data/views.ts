@@ -21,6 +21,10 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'hall', kind: 'person', label: 'Wait on the concourse', hint: 'People waiting learned to look up at the clatter. Here one leaf falls every second.' },
     { id: 'flaps', kind: 'detail', label: 'Go close to the leaves', hint: 'Behind each numeral stands a sheaf of waiting leaves, hinged on pins round a drum. Two pips hold the top one up.' },
   ],
+  'water-curtain': [
+    { id: 'across', kind: 'person', label: 'Stand across the room', hint: 'From here the drops read as a picture: the time, falling whole into the basin. Each lasts about a second.' },
+    { id: 'under', kind: 'detail', label: 'Look up at the valves', hint: 'The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls.' },
+  ],
   'flip-disc': [
     { id: 'kerb', kind: 'person', label: 'Wait at the stop', hint: 'As on the front of a bus. The board reflects daylight and makes none, and the bottom row fills a disc a second.' },
     { id: 'discs', kind: 'detail', label: 'Go close to the discs', hint: 'Each disc sits on an axle. A pulse through the copper coils under it kicks it over, and it stays with no current.' },
@@ -107,6 +111,14 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'audience', kind: 'person', label: 'Sit with the audience', hint: 'Only shadows reach this side. Held against the cloth, a figure is small and sharp. Out by the lamp it grows and blurs.' },
     { id: 'behind', kind: 'detail', label: 'Go behind the screen', hint: 'The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still.' },
   ],
+  'switchable-glass': [
+    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted.' },
+    { id: 'close', kind: 'detail', label: 'Go close to the pane', hint: 'Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on.' },
+  ],
+  'hidden-lcd': [
+    { id: 'front', kind: 'person', label: 'Sit in front', hint: 'The screen looks white. Through the turning filter the clock comes back, and at a quarter turn its colours reverse.' },
+    { id: 'close', kind: 'detail', label: 'Look through the filter', hint: 'Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees.' },
+  ],
   'liquid-crystal': [
     { id: 'layers', kind: 'detail', label: 'Go between the layers', hint: 'The crystal layer alone shows only grey. It sets how far each cell twists the light. The colour comes from the filter.' },
   ],
@@ -170,6 +182,10 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   // hall 7, depth
   'stereoscope': [{ id: 'eyepiece', kind: 'person', label: 'Look in' }],
+  'stereo-glasses': [
+    { id: 'front', kind: 'person', label: 'Sit in front', hint: 'Every eight seconds the screen and the glasses change together: colour, then time, then polarised light.' },
+    { id: 'table', kind: 'detail', label: 'Look at the glasses', hint: 'In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen.' },
+  ],
   'parallax-barrier': [
     { id: 'spot', kind: 'person', label: 'Stand in front', hint: 'Move your head. Through the slits, the columns for one eye give way to the columns for the other: L turns to R.' },
   ],

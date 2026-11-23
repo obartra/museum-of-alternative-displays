@@ -17,7 +17,6 @@
 import { readFileSync } from 'node:fs';
 import { brief } from '../src/brief';
 import { news } from '../src/data/news';
-import { sheets, worksheet, type Words } from '../src/teach';
 import { halls } from '../src/data/halls';
 import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
@@ -125,7 +124,7 @@ function pagesOf(w: Speech, site: string): Own[] {
   const list = (items: string[]) => `<ul>${items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const told = tours.filter((tour) => !tour.draft && w.tour(tour));
   // the way on from every page, for a reader and for a search engine that follows links
-  const ways = `<p><a href="${w.pre || './'}">${esc(w.ui('site.name'))}</a> / <a href="${w.pre}index/">${esc(w.ui('nav.depot'))}</a> / <a href="${w.pre}people/">${esc(w.ui('nav.people'))}</a> / <a href="${w.pre}about/">${esc(w.ui('nav.about'))}</a> / <a href="${w.pre}teach/">${esc(w.ui('nav.teach'))}</a>${told.map((tour) => ` / <a href="${w.pre}tour/${tour.id}/">${esc(w.tour(tour)!.title)}</a>`).join('')}</p>`;
+  const ways = `<p><a href="${w.pre || './'}">${esc(w.ui('site.name'))}</a> / <a href="${w.pre}index/">${esc(w.ui('nav.depot'))}</a> / <a href="${w.pre}people/">${esc(w.ui('nav.people'))}</a> / <a href="${w.pre}about/">${esc(w.ui('nav.about'))}</a>${told.map((tour) => ` / <a href="${w.pre}tour/${tour.id}/">${esc(w.tour(tour)!.title)}</a>`).join('')}</p>`;
   const home: [string, string] = [w.ui('site.name'), ''];
 
   // the entrance
@@ -203,20 +202,6 @@ ${ways}`,
   });
 
   // the people: everyone named on a label, under the piece they worked on
-  // worksheets for a class: the list, and one for each hall (src/teach.ts writes both, here and in the museum)
-  const taught: Words = { ui: (key, vars) => w.ui(key as UiKey, vars), piece: w.piece, hall: w.hall, credit: w.credit, view: w.view, principle: w.principle, kind: w.kind, href: (path) => w.pre + path, full: (path) => `${site}${w.pre}${path}` };
-  out.push({
-    name: 'teach', path: 'teach/', title: titled(w.ui('teach.head')), short: w.ui('nav.teach'), says: w.ui('teach.says'), kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/']],
-    body: `${sheets(taught)}\n${ways}`,
-  });
-  for (const hall of halls) {
-    const head = w.ui('teach.title', { n: hall.id, name: w.hall(hall).name });
-    out.push({
-      name: `teach-${hall.id}`, path: `teach/${hall.id}/`, title: titled(head), short: head, says: w.ui('teach.lead'), picture: { file: `og/hall-${hall.id}.jpg`, wide: 1200, high: 630, alt: hallName(hall) }, kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/'], [head, `teach/${hall.id}/`]],
-      body: `${worksheet(hall.id, taught)}\n${ways}`,
-    });
-  }
-
   out.push({
     name: 'people', path: 'people/', title: titled(w.ui('nav.people')), short: w.ui('nav.people'), says: w.ui('people.lead'), kind: 'WebPage', crumbs: [home, [w.ui('nav.people'), 'people/']],
     more: { mentions: [...new Set(pieces.flatMap((p) => people[p.id]?.people.flatMap((e) => e.who) ?? []))].map(person) },

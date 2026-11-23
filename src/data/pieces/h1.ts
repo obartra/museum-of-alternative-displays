@@ -33,6 +33,22 @@ export const h1: Piece[] = [
     sources: [wiki('Flip-disc_display'), src('patent', 'Taylor and Winrow, US patent 3,303,494, Magnetically operated signs, Ferranti-Packard', 'https://patents.google.com/patent/US3303494'), src('patent', 'US patent 3,140,553, Magnetically operated sign, Ferranti (priority date 1960)', 'https://patents.google.com/patent/US3140553'), src('archive', 'Ferranti-Packard brochures and manuals, Roll Sign Gallery', 'https://rollsigngallery.com/SignBrochures-Manuals/Ferranti-Packard/sbm-FP.html')],
   },
   {
+    id: 'water-curtain', hall: 1, name: 'Water curtain display', aka: 'Digital water curtain, bit.fall',
+    year: 1978, yearText: 'patent applied for in 1978', origin: 'A fountain of drops released by computer, United States patent applied for in 1978. Julius Popp\'s bit.fall, Germany, from 2001',
+    status: 'niche', statusNote: 'Built for exhibitions, fairs and public spaces. Several companies make modules of valves for it, and Julius Popp\'s bit.fall is still shown.',
+    principle: 'moves', needs: ['midair'],
+    lead: 'A row of valves lets water fall in drops, timed so that the drops spell a picture, which lasts as long as it takes to fall.',
+    how: [
+      'A bar hangs over a basin, with a nozzle every few centimetres and a fast magnetic valve behind each. A computer reads the picture one row at a time and opens a valve for each dark dot. The bottom row leaves first and each row above leaves a moment later, so the drops keep their places and the picture falls whole.',
+      'The picture can be read for about a second, and better from across the room than from close up. Lamps under the water or behind the curtain make the drops shine.',
+      'A United States patent applied for in 1978 describes a fountain whose drops are released by computer and lit by a strobe, to show pictures in space. The artist Julius Popp began bit.fall in 2001 with eight nozzles. A version with 128 valves showed words taken from news websites at the Nuit Blanche in Paris in 2005.',
+    ],
+    good: ['Draws with nothing but water and light', 'Can be read from across a hall', 'Gives every picture a life of about a second'],
+    bad: ['Shows one colour, the light on the drops', 'Needs a basin, a pump and still air, since wind breaks the picture up', 'Is hard to read from close up'],
+    look: 'Stand across the room and watch the time form under the bar and fall into the basin. Then switch the daylight off: lamps under the water light the drops.',
+    sources: [src('patent', 'US patent 4,294,406, Program controllable free falling water drop fountain, applied for in 1978', 'https://patents.google.com/patent/US4294406'), src('patent', 'Tom and Adams, US patent 8,556,190, Apparatus for creating a water formed image', 'https://patents.google.com/patent/US8556190'), src('archive', 'Julius Popp, Bit.Fall, Ludwig Museum, Budapest', 'https://www.ludwigmuseum.hu/en/node/969'), src('press', 'Dezeen loves Bitfall, Dezeen, 2007', 'https://www.dezeen.com/2007/11/01/dezeen-loves-bitfall/'), src('press', 'Julius Popp and Mark Lombardi, Artforum', 'https://www.artforum.com/events/julius-popp-and-mark-lombardi-198514/'), wiki('Julius_Popp')],
+  },
+  {
     id: 'mechanical-television', hall: 1, name: 'Mechanical television', aka: 'Nipkow disc, televisor',
     year: 1926, origin: 'Disc patented by Paul Nipkow, Germany, in the 1880s. Shown by John Logie Baird in London in 1926, after a showing of silhouettes at Selfridges in 1925',
     status: 'extinct', statusNote: 'Abandoned for electronic systems in the 1930s. The BBC replaced the system made by Baird with an all-electronic one in early 1937.',
