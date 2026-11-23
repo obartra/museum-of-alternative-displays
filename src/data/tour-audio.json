@@ -1133,6 +1133,1140 @@
     "cues": [0.1, 2.68, 5.42, 10.65, 15.39, 21.08, 24.91, 28.58, 31.02, 34.21, 36.33, 42.03, 45.74, 51.82, 56.49],
     "rests": [19.18, 44.74, 58.58]
    }
+  },
+  "fr": {
+   "start": {
+    "file": "00-start.212998.mp3",
+    "mark": "ebf08b6b",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 22.7,
+    "cues": [0.1, 1.49, 4.03, 7.98, 11.69, 13.92, 17.42, 19.29],
+    "rests": [10.69, 22.27]
+   },
+   "braille-display": {
+    "file": "01-braille-display.f3e32f.mp3",
+    "mark": "bc0e21b4",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 46.9,
+    "cues": [0.1, 2.23, 6.34, 8.07, 9.81, 13.42, 15.6, 17.88, 21.67, 26.89, 28.89, 30.88, 34.79, 38.27, 41.27, 44.25],
+    "rests": [11.52, 33.79, 46.54]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.df8c92.mp3",
+    "mark": "f34c7189",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 64.6,
+    "cues": [0.1, 1.33, 3.74, 6.55, 9.92, 15.26, 18.73, 22.73, 24.91, 27.36, 30.13, 34.43, 38.4, 40.35, 43.73, 47.08, 49.85, 53.16, 56.12, 59.24, 61.29],
+    "rests": [13.36, 52.16, 64.23]
+   },
+   "microled": {
+    "file": "03-microled.cb86f8.mp3",
+    "mark": "ad208936",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.7,
+    "cues": [0.1, 4.71, 7.49, 10.06, 15.02, 18.23, 20.07, 23.22, 26.77, 28.51, 33.15, 37.84, 39.51, 42.06],
+    "rests": [13.12, 36.84, 45.34]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.6a295e.mp3",
+    "mark": "1e5bf780",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.4,
+    "cues": [0.1, 4.27, 6.99, 10.18, 13.68, 17.05, 21.79, 24.11, 26.83, 29.65, 35.5, 39.04, 43.7, 45.1, 49.31, 51.51, 56.14],
+    "rests": [19.89, 42.7, 60.04]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.16dc1a.mp3",
+    "mark": "aadd87cb",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.7,
+    "cues": [0.1, 1.57, 3.13, 6.87, 9.55, 12.05, 13.25, 19.49, 21.6, 25.03, 26.59, 29.4, 32.47, 35.34, 38.75, 41.37, 44.95, 47.68, 52.49, 55.21, 57.51, 61.65],
+    "rests": [17.59, 51.49, 63.26]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.fbf8c1.mp3",
+    "mark": "9d2932d2",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.2,
+    "cues": [0.1, 2.57, 5.39, 8.89, 14.28, 17.91, 22.39, 26.58, 28.48, 33.52, 36.53, 38.8, 44.65, 45.73, 49.25, 53.29, 55.91, 57.84],
+    "rests": [12.38, 43.65, 61.85]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.0d4717.mp3",
+    "mark": "096732b6",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.1,
+    "cues": [0.1, 4.3, 6.85, 10.23, 14.77, 21.31, 24.31, 27.58, 29.6, 33.3, 37.02, 40.52, 42.19, 45.55, 49.13, 52.12, 54.18, 57.13, 59.35],
+    "rests": [19.41, 48.13, 62.71]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.76ffcb.mp3",
+    "mark": "81cb376a",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65,
+    "cues": [0.1, 1.91, 4, 7.86, 11.21, 12.74, 17.54, 22.65, 27.84, 30.45, 33.69, 35.58, 39.87, 41.71, 45.4, 47.66, 49.4, 53.84, 56.69, 58.71, 62.41],
+    "rests": [20.75, 52.84, 64.6]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.06fc41.mp3",
+    "mark": "bd524645",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.7,
+    "cues": [0.1, 3, 6.02, 10.13, 13.4, 15.18, 16.73, 21.34, 25.71, 29.31, 32.01, 34.84, 38.03, 39.93, 42.83, 45.85, 47.77, 52.73, 54.69, 56.84],
+    "rests": [19.44, 51.73, 59.28]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.d32403.mp3",
+    "mark": "1d43979b",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 74,
+    "cues": [0.1, 4.21, 8.5, 10.69, 15.44, 17.11, 21.17, 26.26, 29.12, 31.95, 36.17, 38.63, 41.73, 44.65, 46.88, 50.22, 53.73, 58.01, 59.83, 62.9, 66.52, 69.53],
+    "rests": [24.36, 61.9, 73.64]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.f88ce2.mp3",
+    "mark": "e166b945",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.7,
+    "cues": [0.1, 1.61, 4.89, 8.99, 11.95, 14.63, 16.92, 20.34, 24.22, 28.22, 31.7, 35.13, 38.46, 40.85, 44.51, 49.28, 52.98],
+    "rests": [18.44, 48.28, 55.27]
+   },
+   "static-volume": {
+    "file": "12-static-volume.c92186.mp3",
+    "mark": "7fcf1017",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53.2,
+    "cues": [0.1, 2.68, 5.14, 9.25, 12.13, 15.63, 19.01, 21.15, 24.06, 26.01, 29.17, 31.45, 34.64, 38.04, 43.67, 47.02, 49.45],
+    "rests": [10.23, 30.45, 52.81]
+   },
+   "holography": {
+    "file": "13-holography.50d949.mp3",
+    "mark": "b1f9ac51",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 64.1,
+    "cues": [0.1, 2.31, 5.3, 9.16, 10.83, 13.93, 17.07, 19.46, 25.1, 30.87, 33.48, 36.51, 38.41, 40.78, 43.51, 48.71, 55.17, 57.39, 59.57, 62.74],
+    "rests": [23.2, 54.17, 63.73]
+   },
+   "cave": {
+    "file": "14-cave.7dea73.mp3",
+    "mark": "5ae33f19",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53,
+    "cues": [0.1, 2.51, 5.1, 8.32, 10.64, 14, 19.25, 23.45, 25.91, 28.37, 31.11, 33.02, 35.76, 38.62, 42.17, 46.5, 50.27],
+    "rests": [17.35, 41.17, 52.63]
+   },
+   "end": {
+    "file": "15-end.3c00e2.mp3",
+    "mark": "5ed1a452",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 36.4,
+    "cues": [0.1, 2.01, 5.01, 9.02, 11.84, 15.79, 18.46, 23.09, 27.19, 30.04, 34.24],
+    "rests": [8.02, 22.09, 36]
+   }
+  },
+  "it": {
+   "start": {
+    "file": "00-start.072c54.mp3",
+    "mark": "26696573",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 28.5,
+    "cues": [0.1, 2.19, 5.51, 10.22, 14.78, 17.27, 22.09, 25.67],
+    "rests": [13.78, 28.08]
+   },
+   "braille-display": {
+    "file": "01-braille-display.2ed36b.mp3",
+    "mark": "42226634",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.7,
+    "cues": [0.1, 2.72, 7.56, 9.71, 11.59, 15.13, 20.26, 25.1, 30.56, 33.09, 36.23, 41.03, 44.74, 48.43, 51.94],
+    "rests": [13.23, 40.03, 55.27]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.386b60.mp3",
+    "mark": "6e40d518",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 72.9,
+    "cues": [0.1, 1.57, 4.48, 7.85, 11.64, 17.05, 21.32, 26.54, 28.66, 31.87, 35.2, 40.11, 42.53, 44.39, 50.27, 53.59, 56.66, 60.29, 63.41, 66.47, 70.27],
+    "rests": [15.15, 59.29, 72.51]
+   },
+   "microled": {
+    "file": "03-microled.67cc06.mp3",
+    "mark": "42106306",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.5,
+    "cues": [0.1, 2.81, 5.44, 8.17, 11.38, 16.83, 21.1, 23.51, 26.78, 30.7, 32.72, 38.16, 43.72, 45.33, 48.25],
+    "rests": [14.93, 42.72, 52.12]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.55c541.mp3",
+    "mark": "59f90bc4",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.9,
+    "cues": [0.1, 4.31, 7.37, 11.3, 14.97, 18.89, 24.53, 27.31, 31.22, 34.55, 40.27, 45.49, 50.88, 52.82, 57.36, 60.29, 64.13],
+    "rests": [22.63, 49.88, 68.46]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.743b12.mp3",
+    "mark": "67d68f3a",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 75.7,
+    "cues": [0.1, 1.5, 7.48, 10.56, 13.24, 14.64, 21.58, 24.04, 27.91, 30.02, 33.53, 37.49, 40.69, 44.41, 48.21, 52.87, 56.03, 62.1, 65.68, 68.48, 73.29],
+    "rests": [19.68, 61.1, 75.27]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.2b0d94.mp3",
+    "mark": "0bdf5182",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.7,
+    "cues": [0.1, 3.15, 6.41, 9.39, 15.95, 20.14, 25.73, 29.77, 31.75, 37, 42.9, 49.55, 54.44, 61.09, 63.63],
+    "rests": [14.05, 48.55, 68.26]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.69780e.mp3",
+    "mark": "ce07c77a",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 71.3,
+    "cues": [0.1, 4.43, 7.58, 10.88, 15.98, 22.61, 25.85, 29.57, 32.4, 37.03, 41.25, 45.39, 47.19, 51.01, 54.38, 57.98, 63.29, 66, 68.07],
+    "rests": [20.71, 53.38, 70.93]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.bd2c81.mp3",
+    "mark": "9e06080c",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 72.1,
+    "cues": [0.1, 3.68, 5.03, 8.82, 12.32, 14.38, 19.12, 24.11, 29.65, 35.73, 38, 42.6, 48.57, 50.65, 53.26, 58.67, 62.35, 64.38, 69.11],
+    "rests": [22.21, 57.67, 71.7]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.0973b4.mp3",
+    "mark": "a754dec0",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.7,
+    "cues": [0.1, 3.16, 7.38, 12.35, 16.22, 17.98, 19.44, 24.16, 29.01, 33.08, 35.95, 39.24, 43.17, 45.31, 48.55, 52.11, 53.97, 60.25, 62.75],
+    "rests": [22.26, 59.25, 67.27]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.238313.mp3",
+    "mark": "4a2aa5e9",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 81.3,
+    "cues": [0.1, 3.75, 8.79, 10.38, 15.45, 17.6, 22.66, 28.47, 31.63, 35.62, 40.05, 42.72, 46.43, 51.76, 55.32, 59.73, 64.09, 66.21, 69.68, 72.96, 75.78],
+    "rests": [26.57, 68.68, 80.91]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.8e390a.mp3",
+    "mark": "4affdbd2",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 64.4,
+    "cues": [0.1, 1.68, 6.32, 11.47, 15.07, 18.86, 21.72, 25.79, 29.52, 33.55, 37.31, 40.95, 44.66, 47.5, 52.15, 57.15, 61.09],
+    "rests": [23.89, 56.15, 64.04]
+   },
+   "static-volume": {
+    "file": "12-static-volume.4bc5d7.mp3",
+    "mark": "3e8fb233",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 58.8,
+    "cues": [0.1, 2.75, 5.52, 8.03, 10.66, 13.83, 17.36, 21.03, 23.41, 28.95, 34.8, 38.12, 41.63, 47.38, 51.41, 55.02],
+    "rests": [11.93, 33.8, 58.44]
+   },
+   "holography": {
+    "file": "13-holography.7932be.mp3",
+    "mark": "fcc9d24d",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.7,
+    "cues": [0.1, 2.52, 5.94, 9.41, 11.07, 13.86, 17.3, 19.91, 26.37, 33.87, 36.7, 41.41, 43.94, 47.2, 52.4, 58.97, 61.88, 67.22],
+    "rests": [24.47, 57.97, 68.28]
+   },
+   "cave": {
+    "file": "14-cave.3e1da0.mp3",
+    "mark": "a0a8bf7f",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.7,
+    "cues": [0.1, 2.77, 5.54, 8.95, 11.93, 16.15, 22.53, 27.44, 30.15, 32.71, 35.99, 37.78, 40.98, 44.57, 48.66, 53.74, 58.34],
+    "rests": [20.63, 47.66, 61.28]
+   },
+   "end": {
+    "file": "15-end.f8888f.mp3",
+    "mark": "3abc315a",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.2,
+    "cues": [0.1, 2.25, 5.83, 10.6, 14.83, 19.38, 22.64, 28.86, 33.9, 37.8, 42.88],
+    "rests": [9.6, 27.86, 44.77]
+   }
+  },
+  "nl": {
+   "start": {
+    "file": "00-start.fbcc74.mp3",
+    "mark": "cca98cb0",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 26.9,
+    "cues": [0.1, 2.01, 5.56, 9.95, 14.77, 17.32, 20.8],
+    "rests": [13.77, 26.53]
+   },
+   "braille-display": {
+    "file": "01-braille-display.abe46b.mp3",
+    "mark": "491983cc",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53.3,
+    "cues": [0.1, 2.74, 6.66, 8.97, 10.56, 14.28, 18.95, 23.55, 29.47, 31.01, 34.12, 39.23, 44.27, 47.9, 50.77],
+    "rests": [12.38, 38.23, 52.86]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.d89cd9.mp3",
+    "mark": "0730cda8",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 70.1,
+    "cues": [0.1, 1.64, 4.38, 8.71, 12.12, 17.38, 20.85, 25.18, 29.06, 33.48, 38.42, 40.92, 42.46, 47.81, 51.52, 54.42, 58.44, 61.14, 64.17, 67.25],
+    "rests": [15.48, 57.44, 69.68]
+   },
+   "microled": {
+    "file": "03-microled.5a7277.mp3",
+    "mark": "bcfd6251",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 49.8,
+    "cues": [0.1, 4.98, 10.32, 14.76, 18.8, 21.24, 27.49, 30.05, 35.22, 37.15, 41.11, 42.76, 45.39],
+    "rests": [12.86, 40.11, 49.42]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.ab9f43.mp3",
+    "mark": "2dd3114f",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66.9,
+    "cues": [0.1, 4.61, 8.43, 12.25, 16.09, 20.29, 25.36, 27.85, 31.14, 34.42, 40.61, 45.34, 50.3, 56.33, 60.23, 62.65],
+    "rests": [23.46, 49.3, 66.46]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.6dfa96.mp3",
+    "mark": "8bbcaf3c",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 71.9,
+    "cues": [0.1, 1.66, 3.49, 7.5, 10.32, 13.2, 14.49, 21.1, 23.58, 26.07, 30.25, 33.21, 36.51, 39.66, 43, 45.59, 49.02, 53.98, 59.49, 62.4, 64.96, 69.66],
+    "rests": [19.2, 58.49, 71.46]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.24cc48.mp3",
+    "mark": "ea472b2b",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.2,
+    "cues": [0.1, 2.72, 6.12, 9.18, 14.88, 17.84, 22.24, 26.61, 28.15, 32.44, 35.53, 37.51, 43.57, 48.25, 53.76, 56.19],
+    "rests": [12.98, 42.57, 59.79]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.d5f277.mp3",
+    "mark": "c3a04951",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65.3,
+    "cues": [0.1, 3.39, 6.14, 9.02, 10.57, 14.06, 20.25, 23.39, 26.79, 28.5, 33.79, 38.17, 42.17, 43.74, 47.02, 50.14, 53.16, 58.25, 60.55],
+    "rests": [18.35, 49.14, 64.89]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.4a07e5.mp3",
+    "mark": "87a4e92c",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 69.3,
+    "cues": [0.1, 2.83, 4.49, 7.71, 10.91, 12.68, 18.14, 23.13, 28.83, 32.43, 34.41, 37.64, 41.49, 46.34, 49.49, 51.39, 56.5, 60.09, 62.51, 66.72],
+    "rests": [21.23, 55.5, 68.87]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.6fc3c9.mp3",
+    "mark": "2b42b3b0",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68,
+    "cues": [0.1, 3.38, 7.49, 12.13, 15.56, 18.06, 19.8, 24.62, 29.38, 32.87, 36.19, 39.59, 42.8, 45.02, 48.36, 51.54, 52.93, 54.15, 59.88, 62.25, 65.14],
+    "rests": [22.72, 58.88, 67.58]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.7c01c9.mp3",
+    "mark": "c32a04eb",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 77.7,
+    "cues": [0.1, 4.37, 9.24, 11.43, 16.28, 18.27, 22.93, 28.05, 30.92, 33.61, 37.97, 40.91, 43.65, 48.67, 53.01, 57.17, 61.9, 64.29, 67.44, 70.92, 73.85],
+    "rests": [26.15, 66.44, 77.26]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.b1dcf7.mp3",
+    "mark": "10a457a7",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 58.1,
+    "cues": [0.1, 2.09, 5.52, 10.18, 13.24, 16.49, 19.08, 22.36, 25.98, 30.13, 33.61, 36.98, 40.15, 42.3, 46.49, 51.73, 55.22],
+    "rests": [20.46, 50.73, 57.73]
+   },
+   "static-volume": {
+    "file": "12-static-volume.d30a50.mp3",
+    "mark": "9eeee313",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 57.7,
+    "cues": [0.1, 2.96, 5.45, 10.4, 13.21, 16.71, 20.75, 23.01, 28.35, 34.37, 37.16, 40.15, 46.22, 50.94, 53.96],
+    "rests": [11.31, 33.37, 57.27]
+   },
+   "holography": {
+    "file": "13-holography.bb061a.mp3",
+    "mark": "5d76e759",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.3,
+    "cues": [0.1, 1.87, 4.87, 8.25, 10.2, 12.79, 15.86, 18.2, 23.7, 30.68, 33.35, 35.62, 38.13, 40.65, 43.28, 48.23, 54.39, 56.94, 61.79],
+    "rests": [21.8, 53.39, 62.86]
+   },
+   "cave": {
+    "file": "14-cave.d4dc35.mp3",
+    "mark": "0f2c814f",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.3,
+    "cues": [0.1, 2.98, 6, 8.6, 11.99, 15.69, 22.09, 27.19, 30.13, 32.96, 35.98, 38.04, 44.27, 48.65, 52.11, 54.7, 58.28],
+    "rests": [20.19, 47.65, 60.86]
+   },
+   "end": {
+    "file": "15-end.67e37a.mp3",
+    "mark": "5e7761f8",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 41.8,
+    "cues": [0.1, 2.74, 5.93, 10.27, 14.2, 18.53, 21.14, 26.41, 30.46, 34.05, 38.81],
+    "rests": [9.27, 25.41, 41.38]
+   }
+  },
+  "pl": {
+   "start": {
+    "file": "00-start.5ff39a.mp3",
+    "mark": "3848935b",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 27.6,
+    "cues": [0.1, 1.65, 5.44, 7.87, 10.75, 15.05, 18.1, 22.53],
+    "rests": [14.05, 27.19]
+   },
+   "braille-display": {
+    "file": "01-braille-display.c11d78.mp3",
+    "mark": "ba735830",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.7,
+    "cues": [0.1, 2.45, 7.62, 9.32, 10.92, 14.33, 16.46, 19.38, 23.57, 29.45, 31.75, 35.13, 40.38, 44.62, 47.46],
+    "rests": [12.43, 39.38, 52.25]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.b17e75.mp3",
+    "mark": "64118091",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 71.3,
+    "cues": [0.1, 1.65, 4.89, 9.24, 12.61, 18.01, 22.18, 27.24, 29.8, 32.24, 35.45, 39.6, 43.63, 45.8, 49.19, 52.78, 55.42, 59.52, 62.51, 65.75],
+    "rests": [16.11, 58.52, 70.94]
+   },
+   "microled": {
+    "file": "03-microled.6a1c79.mp3",
+    "mark": "92276d9f",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53.7,
+    "cues": [0.1, 2.71, 5.88, 9.32, 11.96, 16.49, 20.61, 25.3, 30.86, 33.71, 34.91, 38.61, 44.53, 46.27, 49.6],
+    "rests": [14.59, 43.53, 53.28]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.33cd78.mp3",
+    "mark": "661a3f82",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.1,
+    "cues": [0.1, 4.21, 7.46, 11.19, 15.21, 19.45, 24.07, 27.01, 29.75, 33.12, 36.84, 41.16, 45.85, 52.39, 57.77, 63.94],
+    "rests": [22.17, 51.39, 67.71]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.a07519.mp3",
+    "mark": "97bd2bee",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 69.7,
+    "cues": [0.1, 1.71, 3.62, 9.77, 12.37, 13.49, 19.81, 21.94, 24.92, 27.89, 33.99, 36.82, 40.28, 43.66, 47.64, 51.92, 56.95, 60.19, 62.42, 67.07],
+    "rests": [17.91, 55.95, 69.28]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.344db6.mp3",
+    "mark": "d7313d8d",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.9,
+    "cues": [0.1, 2.88, 6.09, 9.52, 15.69, 19.34, 24.63, 28.46, 30.38, 35.47, 40.78, 47.38, 51.77, 55.36, 57.75, 59.98],
+    "rests": [13.79, 46.38, 63.47]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.0971c9.mp3",
+    "mark": "1f00d618",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 64.2,
+    "cues": [0.1, 4.84, 7.7, 10.06, 14.74, 21.14, 24.46, 28.39, 30.23, 34.33, 37.95, 42.99, 46.48, 49.41, 52.85, 54.93, 59.66],
+    "rests": [19.24, 48.41, 63.8]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.e884a4.mp3",
+    "mark": "16249809",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.2,
+    "cues": [0.1, 2.2, 3.56, 7.05, 10.39, 12.08, 16.25, 20.92, 23.79, 28.28, 31.39, 34.74, 38.54, 43.73, 46.48, 48.57, 53.32, 56.61, 60.85, 64.23],
+    "rests": [19.02, 52.32, 66.76]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.e9b655.mp3",
+    "mark": "b263a6a1",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65.4,
+    "cues": [0.1, 3.06, 6.59, 10.95, 14.12, 16.53, 17.75, 22.21, 26.9, 30.28, 33.67, 37.43, 40.96, 43.25, 45.87, 49.18, 51.3, 57.06, 59.73, 62.19],
+    "rests": [20.31, 56.06, 65.02]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.91d21a.mp3",
+    "mark": "66a34ca8",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 77.2,
+    "cues": [0.1, 4.07, 7.98, 9.72, 14.61, 16.79, 20.9, 25.66, 27.55, 29.01, 36.45, 38.85, 41.74, 47.2, 51.78, 56.37, 60.94, 62.96, 66.91, 70.04, 73.02],
+    "rests": [23.76, 65.91, 76.79]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.0bede3.mp3",
+    "mark": "8fd457fd",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.1,
+    "cues": [0.1, 2.03, 5.42, 9.83, 11.74, 15.72, 18.01, 21.84, 25.6, 30.11, 33.82, 35.77, 40.48, 42.49, 46.93, 51.59, 56],
+    "rests": [19.94, 50.59, 58.74]
+   },
+   "static-volume": {
+    "file": "12-static-volume.614569.mp3",
+    "mark": "985fec86",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 58.3,
+    "cues": [0.1, 3.05, 4.99, 9.85, 12.89, 16.07, 20.03, 22.25, 26.82, 32.76, 36.79, 40.79, 44.31, 47.91, 51.32, 54.67],
+    "rests": [10.99, 31.76, 57.85]
+   },
+   "holography": {
+    "file": "13-holography.60f94a.mp3",
+    "mark": "6efeebb1",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.2,
+    "cues": [0.1, 2.27, 5.74, 8.96, 10.41, 13.01, 15.95, 18.19, 24.56, 32.86, 35.44, 38.32, 40.38, 42.57, 45.49, 51, 57.75, 60.24, 65.61],
+    "rests": [22.66, 56.75, 66.84]
+   },
+   "cave": {
+    "file": "14-cave.bc9ff3.mp3",
+    "mark": "a078495c",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.5,
+    "cues": [0.1, 2.61, 5.41, 10.7, 14.91, 21.04, 24.4, 27.66, 30.76, 33.28, 35.09, 41.4, 46.83, 51.99, 56.65],
+    "rests": [19.14, 45.83, 59.14]
+   },
+   "end": {
+    "file": "15-end.b9caca.mp3",
+    "mark": "764bd3a5",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 37.6,
+    "cues": [0.1, 1.89, 5.15, 9.21, 13.07, 17.18, 19.84, 24.05, 27.93, 31.33, 35.45],
+    "rests": [8.21, 23.05, 37.25]
+   }
+  },
+  "ru": {
+   "start": {
+    "file": "00-start.e72ae8.mp3",
+    "mark": "468c7d4b",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 27.4,
+    "cues": [0.1, 1.96, 5.14, 10.54, 14.53, 17.29, 21.16, 24.61],
+    "rests": [13.53, 27.01]
+   },
+   "braille-display": {
+    "file": "01-braille-display.fab4bd.mp3",
+    "mark": "e79dc2df",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.3,
+    "cues": [0.1, 2.5, 7.85, 9.63, 11.48, 15.3, 20.5, 23.17, 24.79, 31.72, 34.18, 40.15, 44.66, 48.95, 51.75],
+    "rests": [13.4, 39.15, 54.88]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.1f39b2.mp3",
+    "mark": "3be44b1a",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 75,
+    "cues": [0.1, 1.65, 5.13, 9.39, 12.54, 17.67, 21.4, 27.59, 30.69, 33.67, 36.22, 41.18, 43.74, 45.41, 51.19, 55.12, 58.72, 62.51, 66.07, 69.01, 72.5],
+    "rests": [15.77, 61.51, 74.64]
+   },
+   "microled": {
+    "file": "03-microled.9f573d.mp3",
+    "mark": "d26edeba",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.6,
+    "cues": [0.1, 5.73, 11.15, 15.69, 19.37, 21.42, 25.06, 29.09, 32.18, 37.66, 43.41, 45.27, 48.79],
+    "rests": [13.79, 42.41, 52.2]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.62b37f.mp3",
+    "mark": "9b5e9ea3",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.6,
+    "cues": [0.1, 4.38, 7.28, 10.79, 13.98, 18.15, 22.48, 25.56, 28.82, 31.8, 37.9, 41.89, 47.2, 49.1, 53.34, 59.37],
+    "rests": [20.58, 46.2, 63.24]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.c59881.mp3",
+    "mark": "48f39766",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66.1,
+    "cues": [0.1, 1.75, 7.05, 9.6, 11.27, 12.91, 19.28, 22.01, 26.3, 28.3, 32.9, 35.93, 39.3, 43.48, 47.19, 49.94, 55.13, 57.98, 60.11, 63.77],
+    "rests": [17.38, 54.13, 65.73]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.613cfc.mp3",
+    "mark": "8f87268f",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66.2,
+    "cues": [0.1, 2.78, 5.77, 9.2, 14.59, 18.05, 23.77, 28.06, 30.36, 36.08, 41.85, 48.44, 52.79, 54.79, 59.58, 62.01],
+    "rests": [12.69, 47.44, 65.79]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.dbf3ba.mp3",
+    "mark": "e2bde3de",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.6,
+    "cues": [0.1, 3.89, 6.64, 8.98, 10.49, 14.21, 20.01, 26.88, 28.71, 32.55, 36.4, 41.85, 45.18, 48.21, 51.81, 53.84, 58.1],
+    "rests": [18.11, 47.21, 62.18]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.6f535c.mp3",
+    "mark": "c6618c73",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 69.7,
+    "cues": [0.1, 2.73, 4.91, 8.32, 11.42, 13.33, 18.47, 23.23, 25.81, 28.88, 34.83, 38.34, 42.01, 47.52, 50.37, 52.36, 56.54, 60.03, 63.55, 66.57],
+    "rests": [21.33, 55.54, 69.28]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.4b5847.mp3",
+    "mark": "5b668401",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.2,
+    "cues": [0.1, 3.58, 6.71, 11.29, 14.84, 18, 19.64, 24.18, 28.83, 32.67, 36.01, 39.83, 42.37, 44.46, 47.17, 50.77, 53.16, 59.02, 61.84, 64.01],
+    "rests": [22.28, 58.02, 66.79]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.dc716c.mp3",
+    "mark": "c36126b5",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 78,
+    "cues": [0.1, 5.19, 9.12, 11.34, 16, 17.73, 21.82, 26.33, 29.61, 34.18, 36.28, 39.47, 42.92, 47.53, 49.96, 53.69, 56.35, 60.86, 63.08, 66.82, 70.46, 73.6],
+    "rests": [24.43, 65.82, 77.56]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.b6e1de.mp3",
+    "mark": "788c0757",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.3,
+    "cues": [0.1, 2.04, 5.46, 9.98, 12.91, 15.58, 18.35, 22.52, 26.27, 30.84, 32.27, 36.78, 41.61, 44.05, 48.44, 53.53, 57.77],
+    "rests": [20.62, 52.53, 60.93]
+   },
+   "static-volume": {
+    "file": "12-static-volume.06d80e.mp3",
+    "mark": "7078e9d4",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 54.5,
+    "cues": [0.1, 2.91, 5.52, 10.11, 13.27, 16.94, 20.87, 22.96, 27.58, 32.43, 35.28, 38.04, 44.2, 47.85, 50.82],
+    "rests": [11.37, 31.43, 54.11]
+   },
+   "holography": {
+    "file": "13-holography.65f4a4.mp3",
+    "mark": "31f2b25b",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 66.3,
+    "cues": [0.1, 2.63, 5.64, 8.94, 10.54, 13.1, 16.14, 18.92, 24.85, 32.32, 35.31, 39.65, 42.1, 44.79, 52.19, 56.99, 59.34, 64.68],
+    "rests": [22.95, 55.99, 65.89]
+   },
+   "cave": {
+    "file": "14-cave.e9ba80.mp3",
+    "mark": "188f85a7",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 58.9,
+    "cues": [0.1, 2.59, 5.21, 10.03, 14.09, 20.06, 23.84, 27.1, 32.77, 34.94, 38.52, 41.6, 46.98, 52.08, 55.89],
+    "rests": [18.16, 45.98, 58.54]
+   },
+   "end": {
+    "file": "15-end.9aeb1e.mp3",
+    "mark": "8869b049",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 41.1,
+    "cues": [0.1, 2.86, 6.13, 10.88, 14.95, 19.03, 21.96, 26.56, 30.88, 34.43, 38.7],
+    "rests": [9.88, 25.56, 40.66]
+   }
+  },
+  "ko": {
+   "start": {
+    "file": "00-start.57eef6.mp3",
+    "mark": "dab66b56",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 29,
+    "cues": [0.1, 2.73, 6.02, 11.24, 15.9, 18.48, 21.73, 25.55],
+    "rests": [14.9, 28.61]
+   },
+   "braille-display": {
+    "file": "01-braille-display.a7fe4c.mp3",
+    "mark": "fbfe4efb",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.8,
+    "cues": [0.1, 2.71, 6.47, 8.89, 10.57, 13.97, 22.79, 29.34, 37.35, 42.26, 45.73, 49.49],
+    "rests": [12.07, 36.35, 52.44]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.87a7d3.mp3",
+    "mark": "716b7fe7",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 80.8,
+    "cues": [0.1, 1.54, 7.46, 12.01, 18.06, 22.09, 27.79, 34.97, 40.77, 45.88, 51.25, 56.33, 60.59, 64.61, 68.46, 72.6, 77.22],
+    "rests": [16.16, 63.61, 80.42]
+   },
+   "microled": {
+    "file": "03-microled.28657f.mp3",
+    "mark": "739b3834",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53,
+    "cues": [0.1, 6.48, 12.28, 16.81, 20.33, 30.15, 32.66, 38.98, 44.01, 46.35],
+    "rests": [14.91, 43.01, 52.61]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.47502f.mp3",
+    "mark": "2b4a8ed7",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.7,
+    "cues": [0.1, 4.13, 7.39, 12.11, 16.06, 20.64, 25.29, 28.46, 35.34, 41.39, 45.41, 50.62, 56.6, 63.6, 65.22],
+    "rests": [23.39, 49.62, 68.34]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.55be51.mp3",
+    "mark": "796b84dd",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 69.7,
+    "cues": [0.1, 1.28, 8.05, 10.6, 13.27, 14.7, 21.89, 24.82, 30.18, 35.64, 41.64, 51.17, 52.84, 57.39, 60.53, 63.51, 67.91],
+    "rests": [19.99, 56.39, 69.31]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.d86926.mp3",
+    "mark": "f4a00a44",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 69.8,
+    "cues": [0.1, 3.6, 7.73, 17.61, 21.87, 27.39, 33.09, 39.17, 45.26, 52.48, 57.25, 63.38],
+    "rests": [15.71, 51.48, 69.42]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.825b9c.mp3",
+    "mark": "7ce90e52",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 70.3,
+    "cues": [0.1, 3.02, 6.47, 10.24, 12.22, 16.03, 22.63, 28.75, 35.31, 39.17, 45.58, 50.03, 54.29, 57.41, 60.24, 65.16, 67.57],
+    "rests": [20.73, 53.29, 69.87]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.4a5bfc.mp3",
+    "mark": "04721757",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 74.8,
+    "cues": [0.1, 3.1, 5.31, 12.22, 14.39, 19.63, 24.79, 27.06, 31.01, 37.13, 44.74, 51.05, 53.77, 56.25, 61.46, 65.43, 72.19],
+    "rests": [22.89, 60.46, 74.41]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.d5e68f.mp3",
+    "mark": "6d8a846a",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 71.5,
+    "cues": [0.1, 3.03, 7.25, 11.57, 15.45, 18.33, 20.58, 24.88, 29.61, 34.41, 41.61, 44.3, 47.21, 54.74, 63.16, 66.18, 68.77],
+    "rests": [22.98, 62.16, 71.11]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.5a23bf.mp3",
+    "mark": "1907d035",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 83.3,
+    "cues": [0.1, 4.47, 10.31, 12.67, 18.08, 19.9, 24.87, 30.15, 31.76, 33.55, 40.54, 49.27, 52.24, 60.44, 64.53, 67.02, 70.92, 75.05, 78.29, 79.82],
+    "rests": [28.25, 69.92, 82.86]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.a7bbc1.mp3",
+    "mark": "65836bd5",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.6,
+    "cues": [0.1, 2.51, 10.47, 13.62, 16.99, 19.57, 23.79, 27.86, 33, 42.7, 49.82, 55.33, 59.51],
+    "rests": [21.89, 54.33, 63.23]
+   },
+   "static-volume": {
+    "file": "12-static-volume.6cac95.mp3",
+    "mark": "ee6e7ab6",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.2,
+    "cues": [0.1, 2.34, 4.97, 10.44, 14.78, 18.22, 25.73, 31.85, 37.29, 43.74, 50.46, 58.11],
+    "rests": [12.88, 36.29, 61.78]
+   },
+   "holography": {
+    "file": "13-holography.a91525.mp3",
+    "mark": "ec378f30",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 70.8,
+    "cues": [0.1, 2.1, 6.09, 9.6, 12.73, 16.15, 20.02, 29.67, 36.45, 44.09, 46.74, 49.79, 60.2, 63.6, 69.26],
+    "rests": [27.77, 59.2, 70.38]
+   },
+   "cave": {
+    "file": "14-cave.8cca33.mp3",
+    "mark": "0f052e94",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.8,
+    "cues": [0.1, 2.08, 5.18, 10.89, 15.59, 20.93, 27.85, 33.59, 35.99, 41.96, 46.58, 51.63, 56.5],
+    "rests": [19.03, 45.58, 59.38]
+   },
+   "end": {
+    "file": "15-end.8ec052.mp3",
+    "mark": "1681c04f",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 43.4,
+    "cues": [0.1, 2.58, 5.56, 8.89, 13.29, 20.68, 26.23, 31.33, 35.43, 40.71],
+    "rests": [7.89, 25.23, 43.02]
+   }
+  },
+  "zh-hant": {
+   "start": {
+    "file": "00-start.66491e.mp3",
+    "mark": "cf642632",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 23.7,
+    "cues": [0.1, 1.91, 4.64, 9.12, 12.94, 14.98, 17.6],
+    "rests": [11.94, 23.35]
+   },
+   "braille-display": {
+    "file": "01-braille-display.ba5469.mp3",
+    "mark": "1d8420ef",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 48.4,
+    "cues": [0.1, 3.1, 7.45, 9.42, 14.89, 19.21, 23.41, 26.41, 28.5, 35.81, 39.64, 42.83],
+    "rests": [12.99, 34.81, 47.98]
+   },
+   "cathode-ray-tube": {
+    "file": "02-cathode-ray-tube.4e7de3.mp3",
+    "mark": "df189086",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 65.2,
+    "cues": [0.1, 1.33, 6.55, 9.26, 14.45, 17.46, 22.28, 25.87, 30.02, 34.16, 37.76, 42.58, 46.21, 48.67, 52.55, 56.09, 59.34],
+    "rests": [12.55, 51.55, 64.82]
+   },
+   "microled": {
+    "file": "03-microled.4cf94d.mp3",
+    "mark": "61d93f1f",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 46.8,
+    "cues": [0.1, 5.3, 10.55, 14.91, 19.46, 22.77, 26.59, 31.05, 34.35, 39.14, 41.22],
+    "rests": [13.01, 38.14, 46.37]
+   },
+   "quantum-dot": {
+    "file": "04-quantum-dot.e03db1.mp3",
+    "mark": "2133bb1f",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61.6,
+    "cues": [0.1, 4.11, 6.87, 10.87, 14.8, 18.85, 23.46, 25.86, 31.94, 37.37, 40.89, 45.48, 50.22, 57.32],
+    "rests": [21.56, 44.48, 61.17]
+   },
+   "shadow-play": {
+    "file": "05-shadow-play.740fc1.mp3",
+    "mark": "b3d4b29b",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 64,
+    "cues": [0.1, 1.78, 7.64, 10.62, 12.92, 14.36, 20.42, 23.17, 28.57, 34.73, 39.94, 45.23, 49.05, 54.05, 56.13, 58.43, 61.99],
+    "rests": [18.52, 53.05, 63.62]
+   },
+   "scanned-laser": {
+    "file": "06-scanned-laser.4240e9.mp3",
+    "mark": "9f8838a0",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.5,
+    "cues": [0.1, 2.84, 5.79, 14.95, 18.7, 23.38, 28.97, 34, 38.95, 44.41, 48.46, 54.14],
+    "rests": [13.05, 43.41, 60.06]
+   },
+   "projection-mapping": {
+    "file": "07-projection-mapping.667790.mp3",
+    "mark": "7ef2d9a6",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.9,
+    "cues": [0.1, 3.66, 6.89, 10.79, 15.44, 21.73, 24.59, 27.83, 33.63, 38.79, 43.53, 46.94, 50.12, 53.58, 59.87],
+    "rests": [19.83, 49.12, 63.48]
+   },
+   "electrophoretic-ink": {
+    "file": "08-electrophoretic-ink.09f419.mp3",
+    "mark": "901d9ba2",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 63.5,
+    "cues": [0.1, 2.4, 3.77, 10.69, 12.3, 17.11, 22.59, 27.79, 30.24, 33.23, 35.7, 39.63, 47, 48.85, 53.01, 56.03, 61.45],
+    "rests": [20.69, 52.01, 63.06]
+   },
+   "electrowetting": {
+    "file": "09-electrowetting.bb4194.mp3",
+    "mark": "72863fe2",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62,
+    "cues": [0.1, 3.47, 7.47, 11.74, 14.95, 16.96, 18.45, 22.8, 27.51, 30.98, 35.11, 39.64, 41.64, 45.58, 47.77, 50.09, 55.23, 57.2],
+    "rests": [20.9, 54.23, 61.62]
+   },
+   "electrochromic": {
+    "file": "10-electrochromic.95f797.mp3",
+    "mark": "8fe07cd2",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 77.4,
+    "cues": [0.1, 4.39, 9.45, 12.33, 17.06, 18.8, 23.79, 28.95, 31.57, 33.17, 37.86, 39.38, 45.48, 47.47, 50.05, 55.66, 60.46, 62.36, 65.78, 69.45, 72.54],
+    "rests": [27.05, 64.78, 76.97]
+   },
+   "illusion-transmitter": {
+    "file": "11-illusion-transmitter.10513d.mp3",
+    "mark": "0639d17a",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 56.9,
+    "cues": [0.1, 1.75, 5.41, 9.58, 15.9, 17.91, 21.99, 26.19, 29.96, 34.15, 40.22, 46.12, 50.46],
+    "rests": [20.09, 49.46, 56.48]
+   },
+   "static-volume": {
+    "file": "12-static-volume.a3ef6c.mp3",
+    "mark": "47264839",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 57.7,
+    "cues": [0.1, 2.66, 5.25, 10.72, 14.14, 17.13, 23.93, 30.03, 36.82, 39.52, 42.48, 48.3, 54.39],
+    "rests": [12.24, 35.82, 57.31]
+   },
+   "holography": {
+    "file": "13-holography.8fef08.mp3",
+    "mark": "93e52b69",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.8,
+    "cues": [0.1, 2.08, 5.18, 8.76, 10.64, 13.54, 16.56, 25.45, 30.99, 33.87, 37.12, 39.32, 42, 44.86, 48.08, 52.05, 54.4, 59.46],
+    "rests": [23.55, 51.05, 60.42]
+   },
+   "cave": {
+    "file": "14-cave.9e50fb.mp3",
+    "mark": "4d1b1984",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.3,
+    "cues": [0.1, 2.43, 4.89, 9.37, 13.26, 18.69, 21.98, 25.29, 26.79, 30.22, 31.97, 36.86, 40.34, 45.69, 49.86],
+    "rests": [16.79, 39.34, 51.88]
+   },
+   "end": {
+    "file": "15-end.de2644.mp3",
+    "mark": "186889b5",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 37.1,
+    "cues": [0.1, 2.1, 4.97, 8.97, 12.29, 18.86, 23.7, 27.41, 30.59, 34.96],
+    "rests": [7.97, 22.7, 36.72]
+   }
   }
  },
  "black": {
@@ -1918,6 +3052,790 @@
     "seconds": 36.4,
     "cues": [0.1, 2.1, 5.13, 8.53, 11.63, 17.09, 21.99, 25.96, 31.08, 34.23],
     "rests": [7.53, 24.96, 36]
+   }
+  },
+  "fr": {
+   "start": {
+    "file": "00-start.2d8ecb.mp3",
+    "mark": "f53e67eb",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 28.1,
+    "cues": [0.1, 2.67, 6.23, 11.32, 13.37, 16.86, 20.56, 23.74, 26.15],
+    "rests": [10.32, 22.74, 27.69]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.f431ef.mp3",
+    "mark": "27d9068a",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67,
+    "cues": [0.1, 1.4, 3.96, 6.93, 11.65, 15.22, 19.34, 22.19, 25.29, 28.61, 33.11, 36.47, 39.72, 44.05, 46.78, 50.61, 53.58, 56.58, 58.88, 62.89],
+    "rests": [9.75, 55.58, 66.6]
+   },
+   "numitron": {
+    "file": "02-numitron.53026d.mp3",
+    "mark": "20a9b149",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.9,
+    "cues": [0.1, 1.87, 5.11, 8.2, 14.11, 16.99, 22.06, 25.72, 29.72, 34.93, 37.75, 40.22, 43.38],
+    "rests": [12.21, 33.93, 45.46]
+   },
+   "field-emission": {
+    "file": "03-field-emission.ca3e3c.mp3",
+    "mark": "4a85bb73",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.5,
+    "cues": [0.1, 4.19, 6.1, 8.53, 11.11, 14.66, 18.58, 22.08, 25.55, 30.44, 34.73, 36.54, 41.57, 44.1, 46.86, 50.69, 53.65, 56.56, 58.77],
+    "rests": [16.68, 49.69, 62.13]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.405578.mp3",
+    "mark": "d83cc4fe",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 48.7,
+    "cues": [0.1, 4.55, 9.3, 15.11, 20.47, 24.91, 27.38, 29.48, 32.06, 37, 40.68, 42.71, 46.43],
+    "rests": [13.21, 36, 48.28]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.3036b9.mp3",
+    "mark": "1a68b71b",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.5,
+    "cues": [0.1, 4.15, 5.94, 10.81, 16.95, 19.98, 24.41, 26.52, 29.96, 34.4, 37.77, 41.3, 46.5, 49.13, 51.74],
+    "rests": [15.05, 45.5, 55.08]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.0f05dd.mp3",
+    "mark": "c8a69276",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.7,
+    "cues": [0.1, 3.47, 6.74, 9.22, 11.41, 16.01, 20.32, 24.24, 27.75, 31.74, 34.09, 36.76, 41.7, 45.23, 50.15],
+    "rests": [14.11, 40.7, 51.34]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.2a59e7.mp3",
+    "mark": "3a521acb",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 72.6,
+    "cues": [0.1, 2.81, 5.74, 10.44, 13.33, 19.15, 22.25, 25.58, 28.5, 31.97, 35.71, 39.84, 41.93, 47.47, 52.02, 55.97, 58.42, 60.84, 64.11, 67.3, 68.92],
+    "rests": [17.25, 63.11, 72.2]
+   },
+   "lenticular": {
+    "file": "08-lenticular.4f7644.mp3",
+    "mark": "8b9ef818",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 49.3,
+    "cues": [0.1, 1.53, 4.41, 5.97, 11.72, 14.24, 16.81, 18.71, 21.44, 26.52, 31.81, 36.42, 37.26, 40.84, 45.48, 47.66],
+    "rests": [9.82, 44.48, 48.89]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.da7440.mp3",
+    "mark": "dd5d8609",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 50.8,
+    "cues": [0.1, 3.06, 6.13, 9.18, 15.46, 19.4, 24.16, 26.42, 29.97, 31.7, 34.16, 36.72, 39.62, 42.65, 48.27],
+    "rests": [13.56, 47.27, 50.4]
+   },
+   "end": {
+    "file": "10-end.f19fd6.mp3",
+    "mark": "25805327",
+    "voice": "5OnMHwgTFgvPVwE8jP6B",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 32.1,
+    "cues": [0.1, 1.86, 4.83, 8.77, 11.36, 15.51, 19.54, 23.36, 27.7, 30.4],
+    "rests": [7.77, 22.36, 31.72]
+   }
+  },
+  "it": {
+   "start": {
+    "file": "00-start.09bf35.mp3",
+    "mark": "6fdde818",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 33.6,
+    "cues": [0.1, 3.96, 7.14, 13.38, 17, 20.28, 24.92, 28.18, 30.79],
+    "rests": [12.38, 27.18, 33.25]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.4efb7e.mp3",
+    "mark": "d6f735bf",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 76.6,
+    "cues": [0.1, 1.56, 4.46, 7.82, 13.16, 17.33, 22.45, 26.19, 29.65, 32.99, 38.51, 42.34, 45.6, 51.52, 54.4, 58.58, 62.27, 65.57, 67.92, 71.82],
+    "rests": [11.26, 64.57, 76.16]
+   },
+   "numitron": {
+    "file": "02-numitron.58a422.mp3",
+    "mark": "0e0d101e",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 50.2,
+    "cues": [0.1, 2.03, 5.43, 8.88, 15.21, 18.46, 23.42, 27.52, 30.96, 34.67, 38.85, 41.14, 43.87, 47.52],
+    "rests": [13.31, 37.85, 49.82]
+   },
+   "field-emission": {
+    "file": "03-field-emission.669f09.mp3",
+    "mark": "17ef73d9",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.2,
+    "cues": [0.1, 4.96, 7.23, 11.79, 15.99, 20.27, 24.9, 28.82, 33.98, 37.93, 41.49, 45.67, 50.68, 54.85, 57.84, 62.82],
+    "rests": [18.37, 53.85, 66.75]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.de743e.mp3",
+    "mark": "e3678a8a",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 57.3,
+    "cues": [0.1, 4.25, 9.32, 16.03, 22.3, 24.84, 27.8, 30.65, 33.28, 36.09, 39.3, 43.62, 48.14, 50.48, 54.78],
+    "rests": [14.13, 42.62, 56.88]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.500bbd.mp3",
+    "mark": "f10059e0",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.8,
+    "cues": [0.1, 5.54, 5.84, 9.61, 11.66, 18.04, 21.35, 27.18, 29.33, 33.88, 39.03, 42.42, 46.63, 51.62, 55.2, 58.91],
+    "rests": [16.14, 50.62, 62.38]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.65705d.mp3",
+    "mark": "46a9cfeb",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59,
+    "cues": [0.1, 4.65, 8.37, 11.44, 14.31, 19.08, 23.63, 27.81, 31.5, 35.5, 38.11, 41.31, 47.92, 51.86, 57.27],
+    "rests": [17.18, 46.92, 58.65]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.4ba482.mp3",
+    "mark": "3791cd7a",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 84.2,
+    "cues": [0.1, 3.03, 5.8, 10.17, 13.7, 20.02, 22.98, 27.02, 30.85, 34.52, 41.1, 45.25, 47.84, 54.13, 59, 64.77, 67.98, 70.47, 74.37, 78.04, 80.33],
+    "rests": [18.12, 73.37, 83.84]
+   },
+   "lenticular": {
+    "file": "08-lenticular.564511.mp3",
+    "mark": "d5b2b474",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 50.8,
+    "cues": [0.1, 1.61, 4.74, 6.26, 12.55, 17.85, 22.54, 28.73, 33.6, 36.25, 39.37, 45.83, 48.27],
+    "rests": [10.65, 44.83, 50.44]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.2e77ca.mp3",
+    "mark": "8f308979",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 56.1,
+    "cues": [0.1, 3.34, 6.1, 9.42, 15.73, 19.79, 24.93, 27.63, 30.76, 31.99, 34, 38.19, 43.8, 47.65, 53.34],
+    "rests": [13.83, 52.34, 55.67]
+   },
+   "end": {
+    "file": "10-end.22c5d0.mp3",
+    "mark": "8435fd12",
+    "voice": "HLbf5OcXzzI5RP4O3I3d",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 39.1,
+    "cues": [0.1, 2.01, 5.1, 9.28, 12.79, 18.48, 23.38, 28.08, 33.03, 37.11],
+    "rests": [8.28, 27.08, 38.65]
+   }
+  },
+  "nl": {
+   "start": {
+    "file": "00-start.44c702.mp3",
+    "mark": "971d2728",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 32,
+    "cues": [0.1, 3.81, 7.25, 9.7, 13.43, 15.92, 19.37, 23.85, 26.92, 29.47],
+    "rests": [12.43, 25.92, 31.56]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.6f8c31.mp3",
+    "mark": "2d472e60",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 72.1,
+    "cues": [0.1, 1.66, 4.38, 8.41, 13.12, 16.5, 20.72, 24.11, 27.58, 30.62, 34.94, 38.84, 41.89, 47.03, 50.09, 54.54, 57.68, 60.9, 63.45, 67.27],
+    "rests": [11.22, 59.9, 71.66]
+   },
+   "numitron": {
+    "file": "02-numitron.70ef13.mp3",
+    "mark": "5a0f7ded",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 49.3,
+    "cues": [0.1, 1.98, 5.11, 8.91, 15.18, 18.2, 22.87, 27.51, 32.13, 38.06, 40.54, 43.15, 46.96],
+    "rests": [13.28, 37.06, 48.88]
+   },
+   "field-emission": {
+    "file": "03-field-emission.fcecbc.mp3",
+    "mark": "50c06dea",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 62.7,
+    "cues": [0.1, 5.27, 7.07, 11.83, 15.31, 19.38, 24.5, 27.64, 29.7, 32.52, 37.04, 39.82, 43.23, 48.94, 52.15, 55.06, 59.27],
+    "rests": [17.48, 51.15, 62.3]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.c26875.mp3",
+    "mark": "77f1ab5a",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.5,
+    "cues": [0.1, 4.75, 9.64, 15.72, 22.2, 24.96, 27.83, 30.54, 33.35, 36.62, 42.41, 45.89, 48.21, 52.08],
+    "rests": [13.82, 41.41, 55.1]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.7612ea.mp3",
+    "mark": "9aaf1891",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.3,
+    "cues": [0.1, 4.46, 6.68, 10.77, 12.35, 17.79, 20.7, 25.53, 27.68, 30.33, 35.88, 40.09, 44.13, 49.5, 52.9, 56.11],
+    "rests": [15.89, 48.5, 58.86]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.3d7575.mp3",
+    "mark": "e624ecc8",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 54.5,
+    "cues": [0.1, 3.67, 7.3, 9.77, 16.62, 20.85, 25.46, 29.99, 33.5, 38.52, 44.47, 47.63, 52.6],
+    "rests": [14.72, 43.47, 54.08]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.9dc96b.mp3",
+    "mark": "6844f361",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 75,
+    "cues": [0.1, 2.77, 4.94, 9.3, 12.39, 17.62, 20.25, 24.08, 27.37, 30.98, 36.65, 40.14, 42.58, 48.1, 53.23, 57.84, 60.37, 65.64, 68.72, 70.53],
+    "rests": [15.72, 64.64, 74.65]
+   },
+   "lenticular": {
+    "file": "08-lenticular.9a45ef.mp3",
+    "mark": "df32aeea",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 50.5,
+    "cues": [0.1, 1.61, 5.54, 8.45, 13.61, 18.42, 23.19, 28.28, 33.78, 35.96, 39.16, 44.75, 47.82],
+    "rests": [11.71, 43.75, 50.07]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.92ebe1.mp3",
+    "mark": "3968e42d",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.7,
+    "cues": [0.1, 3.35, 8.58, 14.14, 17.39, 21.73, 24.64, 30.13, 33.4, 36.38, 39.61, 43.05, 48.82],
+    "rests": [12.24, 47.82, 51.27]
+   },
+   "end": {
+    "file": "10-end.3514ec.mp3",
+    "mark": "8afe1d6c",
+    "voice": "7kJ33vnB1HkX76L4U5km",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 40.8,
+    "cues": [0.1, 2.75, 5.68, 10.29, 14.06, 19.66, 24.84, 29.46, 32.6, 34.77, 38.64],
+    "rests": [9.29, 28.46, 40.35]
+   }
+  },
+  "pl": {
+   "start": {
+    "file": "00-start.c685d1.mp3",
+    "mark": "5ec3c30f",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 35.7,
+    "cues": [0.1, 3.83, 7.39, 11.07, 16.02, 18.4, 22.3, 27.09, 30.98, 33.49],
+    "rests": [15.02, 29.98, 35.34]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.974852.mp3",
+    "mark": "353c5863",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 76.9,
+    "cues": [0.1, 1.44, 4.54, 8.7, 13.86, 18.1, 23.23, 26.56, 30.26, 33.32, 38.69, 42.36, 45.56, 51.64, 54.54, 58.91, 62.53, 65.38, 68.06, 71.89],
+    "rests": [11.96, 64.38, 76.51]
+   },
+   "numitron": {
+    "file": "02-numitron.60d1c0.mp3",
+    "mark": "ba78ffae",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.7,
+    "cues": [0.1, 2.16, 4.75, 8.03, 15.21, 18.01, 20.45, 24.84, 28.65, 32.45, 35.52, 40.1, 42.52, 45.18, 48.86],
+    "rests": [13.31, 39.1, 51.3]
+   },
+   "field-emission": {
+    "file": "03-field-emission.a0b72a.mp3",
+    "mark": "d8c519f3",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.4,
+    "cues": [0.1, 4.66, 7.55, 11.92, 15.45, 19.73, 24.32, 27.73, 32.43, 37.21, 41.57, 46.55, 51.68, 55.51, 58.97, 63.78],
+    "rests": [17.83, 54.51, 66.98]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.fea183.mp3",
+    "mark": "83ba0f4d",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 53.2,
+    "cues": [0.1, 4.19, 8.88, 14.97, 21.53, 26.1, 28.92, 31.8, 34.96, 36.33, 41.3, 46.7, 50.36],
+    "rests": [13.07, 40.3, 52.85]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.f83ba5.mp3",
+    "mark": "e268ef53",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.2,
+    "cues": [0.1, 5, 7.27, 12.14, 16.94, 20.12, 24.3, 26.14, 27.04, 30.83, 36.14, 40.74, 45.34, 50.41, 53.48, 56.6],
+    "rests": [15.04, 49.41, 59.85]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.93ff50.mp3",
+    "mark": "0fa9dbc0",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 57.1,
+    "cues": [0.1, 3.64, 6.75, 9.3, 16.04, 20.09, 25.3, 29.71, 34.42, 39.94, 46.63, 50.06, 55.21],
+    "rests": [14.14, 45.63, 56.73]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.4e3242.mp3",
+    "mark": "7cac3350",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 82,
+    "cues": [0.1, 4.87, 9.04, 12.27, 18.2, 21.29, 26.22, 29.26, 32.75, 40.16, 43.56, 45.78, 52.7, 57.4, 63.81, 66.55, 72.47, 75.49, 78.08],
+    "rests": [16.3, 71.47, 81.62]
+   },
+   "lenticular": {
+    "file": "08-lenticular.663515.mp3",
+    "mark": "df2f04f0",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 49.4,
+    "cues": [0.1, 1.44, 4.81, 7.95, 12.75, 17.41, 22.03, 28, 33.5, 35.63, 38.83, 44.53, 47.09],
+    "rests": [10.85, 43.53, 49.04]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.d9c688.mp3",
+    "mark": "25f8ef65",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 56.1,
+    "cues": [0.1, 3.57, 8.44, 15.02, 19.06, 23.08, 27.74, 32.04, 34.11, 36.94, 39.87, 42.92, 47.07, 53.07],
+    "rests": [13.12, 52.07, 55.73]
+   },
+   "end": {
+    "file": "10-end.3f5f6c.mp3",
+    "mark": "f579fb2c",
+    "voice": "aAY9hMI6VU335JUszdRs",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 36.9,
+    "cues": [0.1, 1.97, 4.67, 8.16, 11.69, 14.37, 17.37, 22.45, 26.71, 31.22, 34.66],
+    "rests": [7.16, 25.71, 36.45]
+   }
+  },
+  "ru": {
+   "start": {
+    "file": "00-start.d82366.mp3",
+    "mark": "ba314e4b",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 31.6,
+    "cues": [0.1, 3.24, 6.79, 9.75, 13.37, 15.62, 19.25, 23.37, 26.9, 29.02],
+    "rests": [12.37, 25.9, 31.16]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.29d457.mp3",
+    "mark": "6a3473eb",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 77.8,
+    "cues": [0.1, 1.71, 5.28, 9.66, 14.35, 18.03, 24.47, 28.2, 31.84, 35.18, 40.61, 43.74, 46.73, 52.98, 55.75, 60.08, 63.74, 66.16, 68.95, 72.98],
+    "rests": [12.45, 65.16, 77.39]
+   },
+   "numitron": {
+    "file": "02-numitron.2ea64d.mp3",
+    "mark": "9224beb2",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 49.9,
+    "cues": [0.1, 2.26, 4.67, 9.16, 14.61, 17.27, 24, 27.52, 30.07, 35.38, 38.68, 41.18, 43.74, 47.27],
+    "rests": [12.71, 37.68, 49.52]
+   },
+   "field-emission": {
+    "file": "03-field-emission.db5afc.mp3",
+    "mark": "ad706248",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 68.5,
+    "cues": [0.1, 4.92, 7.5, 12.34, 15.96, 20.47, 24.08, 26.28, 29.68, 32.07, 34.85, 39.43, 43.42, 47.93, 53.73, 57.39, 60.18, 64.55],
+    "rests": [18.57, 56.39, 68.08]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.b4bb56.mp3",
+    "mark": "c53db714",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55,
+    "cues": [0.1, 4.51, 9, 15.02, 21.75, 24.21, 27.16, 29.69, 32.98, 36.18, 37.38, 42.36, 46.48, 48.9, 52.53],
+    "rests": [13.12, 41.36, 54.65]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.827e2b.mp3",
+    "mark": "41f3a01f",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.1,
+    "cues": [0.1, 4.61, 6.69, 11.81, 16.9, 20.04, 24.79, 26.97, 31.9, 36.12, 38.34, 41.74, 44.75, 49.75, 52.72, 56.4],
+    "rests": [15, 48.75, 59.67]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.760c02.mp3",
+    "mark": "e44b8fac",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 57.6,
+    "cues": [0.1, 3.52, 6.79, 9.06, 16.62, 21.42, 26.15, 30.93, 35.13, 40.31, 46.47, 50.17, 55.77],
+    "rests": [14.72, 45.47, 57.19]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.6f4e57.mp3",
+    "mark": "07c7a9a2",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 83.5,
+    "cues": [0.1, 4.57, 8.59, 11.85, 17.78, 20.45, 26.13, 29.64, 33.31, 37.76, 44.02, 46.18, 53.55, 58.86, 64.24, 67.67, 73.52, 76.64, 79.5],
+    "rests": [15.88, 72.52, 83.08]
+   },
+   "lenticular": {
+    "file": "08-lenticular.e620f0.mp3",
+    "mark": "8abc44c3",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.4,
+    "cues": [0.1, 1.78, 4.72, 7.68, 12.83, 17.29, 22.38, 28.73, 32.17, 35.16, 40.1, 46.05, 49.11],
+    "rests": [10.93, 45.05, 50.97]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.3d795c.mp3",
+    "mark": "8ce638f6",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 55.5,
+    "cues": [0.1, 3.18, 7.93, 14.47, 18.59, 23.4, 27.52, 31.86, 33.93, 36.74, 39.87, 42.56, 46.37, 52.21],
+    "rests": [12.57, 51.21, 55.08]
+   },
+   "end": {
+    "file": "10-end.aac31a.mp3",
+    "mark": "81cf9e69",
+    "voice": "QSM8BzHrVEW9vi9xYs4U",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 37.2,
+    "cues": [0.1, 2.58, 4.91, 8.41, 12.01, 14.18, 17.51, 22.55, 26.97, 31.75, 35.29],
+    "rests": [7.41, 25.97, 36.78]
+   }
+  },
+  "ko": {
+   "start": {
+    "file": "00-start.acd0c8.mp3",
+    "mark": "ee1f9e6f",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 35.7,
+    "cues": [0.1, 3.44, 7.63, 13.87, 16.56, 21.39, 26.88, 30.75, 33.65],
+    "rests": [12.87, 29.75, 35.3]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.f7ab21.mp3",
+    "mark": "95023bdd",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 83.3,
+    "cues": [0.1, 1.52, 7.47, 13.64, 17.58, 23.09, 26.81, 33.62, 39.37, 47.1, 54.07, 57.09, 61.78, 66.34, 70.59, 73.36, 78.05, 79.67],
+    "rests": [11.74, 69.59, 82.93]
+   },
+   "numitron": {
+    "file": "02-numitron.17229f.mp3",
+    "mark": "a1347322",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.8,
+    "cues": [0.1, 1.34, 9.16, 15.48, 19.13, 25.46, 30.52, 40.38, 44.14, 49.23],
+    "rests": [13.58, 39.38, 51.42]
+   },
+   "field-emission": {
+    "file": "03-field-emission.f9cf4a.mp3",
+    "mark": "7565e8dc",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 71.1,
+    "cues": [0.1, 4.6, 7.39, 13.14, 17.27, 21.44, 30.06, 34.95, 40.28, 47.79, 57.44, 60.82, 66.91],
+    "rests": [19.54, 56.44, 70.73]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.975ec0.mp3",
+    "mark": "b4e33f22",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 52.2,
+    "cues": [0.1, 3.82, 8.89, 14.15, 19.84, 24.51, 27.88, 34, 39.35, 45.6, 49.6],
+    "rests": [12.25, 38.35, 51.79]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.632e53.mp3",
+    "mark": "30b6863d",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.3,
+    "cues": [0.1, 3.31, 5.34, 11.02, 16.68, 18.28, 20.07, 27.35, 36.62, 44.96, 49.99, 53.26, 56.74],
+    "rests": [14.78, 48.99, 59.93]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.25a5f6.mp3",
+    "mark": "fdcdfde8",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.1,
+    "cues": [0.1, 7.47, 10.45, 13.16, 18.1, 22.31, 27.06, 35.38, 40.64, 47.64, 51.47, 57.35],
+    "rests": [16.2, 46.64, 58.74]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.d5a441.mp3",
+    "mark": "af5b7fdd",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 83.3,
+    "cues": [0.1, 5.05, 8.56, 11.82, 17.87, 21.22, 25.79, 29.45, 33.06, 41.99, 44.97, 51.62, 57.11, 62, 66.11, 73.12, 76.64, 79.54],
+    "rests": [15.97, 72.12, 82.86]
+   },
+   "lenticular": {
+    "file": "08-lenticular.c41ce8.mp3",
+    "mark": "c5914208",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 59.1,
+    "cues": [0.1, 1.36, 4.38, 6.14, 13.72, 22.68, 25.81, 29.41, 35.72, 41.62, 46.97, 53.46, 56.86],
+    "rests": [11.82, 52.46, 58.74]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.afae83.mp3",
+    "mark": "2f976047",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 60.3,
+    "cues": [0.1, 3.77, 9.89, 15.97, 20.37, 27.41, 35.9, 39.27, 46.39, 50.31, 56.36],
+    "rests": [14.07, 55.36, 59.91]
+   },
+   "end": {
+    "file": "10-end.6eaf63.mp3",
+    "mark": "c32f49bf",
+    "voice": "FlTCaRuQTEteyZKQYHfy",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 39.3,
+    "cues": [0.1, 2.55, 5.55, 8.74, 12.27, 18.01, 23.63, 27.82, 32.34, 36.48],
+    "rests": [7.74, 26.82, 38.9]
+   }
+  },
+  "zh-hant": {
+   "start": {
+    "file": "00-start.d79cdf.mp3",
+    "mark": "2c2be1ed",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 30.4,
+    "cues": [0.1, 3.07, 6.33, 12.48, 15.39, 18.37, 22.59, 26.01, 28.29],
+    "rests": [11.48, 25.01, 29.97]
+   },
+   "cathode-ray-tube": {
+    "file": "01-cathode-ray-tube.2ad8be.mp3",
+    "mark": "5f18b7b0",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 67.3,
+    "cues": [0.1, 1.31, 6.39, 10.67, 13.72, 18.5, 22.5, 26.06, 28.76, 32.77, 39.41, 43.93, 46.6, 50.1, 56.62, 58.67, 62.23],
+    "rests": [8.77, 55.62, 66.93]
+   },
+   "numitron": {
+    "file": "02-numitron.898b9c.mp3",
+    "mark": "3e9833b2",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 45.7,
+    "cues": [0.1, 1.85, 6.92, 13.52, 16.64, 22.05, 26.36, 31.71, 35.15, 38.23, 43.64],
+    "rests": [11.62, 34.15, 45.32]
+   },
+   "field-emission": {
+    "file": "03-field-emission.b19a91.mp3",
+    "mark": "57e2a5fb",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 61,
+    "cues": [0.1, 5.48, 7.91, 13.18, 16.83, 20.28, 24.77, 27.8, 31.92, 36.8, 42.26, 43.26, 47.91, 51.49, 53.93, 57.82],
+    "rests": [18.38, 50.49, 60.58]
+   },
+   "projection-mapping": {
+    "file": "04-projection-mapping.2f69f9.mp3",
+    "mark": "961d9990",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 50.9,
+    "cues": [0.1, 4.98, 9.64, 15.19, 20.77, 26.01, 28.7, 31.68, 34.5, 39.87, 45.76, 48.85],
+    "rests": [13.29, 38.87, 50.54]
+   },
+   "electrochromic": {
+    "file": "05-electrochromic.f8ccbc.mp3",
+    "mark": "aa596f27",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 56.6,
+    "cues": [0.1, 3.94, 5.75, 10.8, 16.96, 18.21, 19.68, 26, 27.44, 30.01, 34.32, 36.72, 42.02, 47.2, 50.05, 53.19],
+    "rests": [15.06, 46.2, 56.17]
+   },
+   "illusion-transmitter": {
+    "file": "06-illusion-transmitter.fa8fe2.mp3",
+    "mark": "5241e64d",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.5,
+    "cues": [0.1, 6.92, 9.13, 16.14, 20.84, 24.69, 31.08, 36.64, 42.48, 45.39, 50.09],
+    "rests": [14.24, 41.48, 51.07]
+   },
+   "stereoscope": {
+    "file": "07-stereoscope.e2dd22.mp3",
+    "mark": "87c3e693",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 73.8,
+    "cues": [0.1, 6.31, 13.7, 18.75, 21.41, 25.1, 27.96, 31.43, 37.73, 39.82, 44.72, 48.14, 51.58, 53.67, 60.5, 65.46, 68.71, 70.22],
+    "rests": [16.85, 64.46, 73.39]
+   },
+   "lenticular": {
+    "file": "08-lenticular.0d705f.mp3",
+    "mark": "ad71300c",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 48.7,
+    "cues": [0.1, 1.57, 5.05, 13.1, 18.74, 22.8, 25.2, 27.9, 31.43, 35.82, 39.86, 44.52, 46.7],
+    "rests": [11.2, 43.52, 48.31]
+   },
+   "head-mounted": {
+    "file": "09-head-mounted.381519.mp3",
+    "mark": "f58d1de9",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 51.5,
+    "cues": [0.1, 4.51, 10.18, 15.4, 19.21, 25.68, 32.18, 34.98, 40.55, 44.15, 49.32],
+    "rests": [13.5, 48.32, 51.1]
+   },
+   "end": {
+    "file": "10-end.64c47f.mp3",
+    "mark": "aa70cd02",
+    "voice": "Z8Aisvg1z70p27kGvkZZ",
+    "model": "eleven_v4",
+    "recipe": "d78e16c3",
+    "seconds": 33.6,
+    "cues": [0.1, 2.16, 5.05, 8.27, 10.89, 16.01, 20.21, 24.06, 28.5, 31.62],
+    "rests": [7.27, 23.06, 33.22]
    }
   }
  }
