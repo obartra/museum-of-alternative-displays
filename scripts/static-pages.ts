@@ -14,6 +14,7 @@
  *
  * `sitemap.xml` lists every page. `404.html` is what the server sends for an address it does not have.
  */
+import { readFileSync } from 'node:fs';
 import { brief } from '../src/brief';
 import { halls } from '../src/data/halls';
 import { media, type Media } from '../src/data/media';
@@ -132,7 +133,7 @@ ${ways}`,
   for (const hall of halls) {
     const name = hallName(hall), near = [halls[hall.id - 2], halls[hall.id]].filter((x) => !!x);
     out.push({
-      name: `hall-${hall.id}`, path: `hall/${hall.id}/`, title: titled(w.ui('hall.title', { n: hall.id, name: w.hall(hall).name })), short: name, says: brief(w.hall(hall).intro), kind: 'CollectionPage', crumbs: [home, [name, `hall/${hall.id}/`]],
+      name: `hall-${hall.id}`, path: `hall/${hall.id}/`, title: titled(w.ui('hall.title', { n: hall.id, name: w.hall(hall).name })), short: name, says: brief(w.hall(hall).intro), picture: { file: `og/hall-${hall.id}.jpg`, wide: 1200, high: 630, alt: name }, kind: 'CollectionPage', crumbs: [home, [name, `hall/${hall.id}/`]],
       body: `<h1>${esc(name)}</h1>
 <p>${esc(w.hall(hall).intro)}</p>
 <ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}. ${esc(w.piece(p).lead)}</li>`).join('')}</ul>
@@ -216,6 +217,8 @@ ${ways}`,
       name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: brief(lines[0]), kind: 'ProfilePage',
       crumbs: [home, [w.ui('nav.people'), 'people/'], [who.name, path]],
       ...(pic ? { pictures: [`people/${pic.file}`] } : {}),
+      // a link to a person shows their portrait, or else the first piece they are on
+      picture: faceSize(pic?.file) ? { file: `og/people/${pic!.file.replace(/\.webp$/, '.jpg')}`, wide: faceSize(pic!.file)![0], high: faceSize(pic!.file)![1], alt: who.name } : { file: `og/${who.on[0].piece}.jpg`, wide: 760, high: 760, alt: w.ui('stage.poster', { name: w.piece(pieces.find((p) => p.id === who.on[0].piece)!).name }) },
       more: {
         mainEntity: { ...person(who.name), description: told?.own ? told.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died && !Array.isArray(bio.died) ? { deathDate: String(bio.died) } : {}) },
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
@@ -296,6 +299,10 @@ function missing(page: string, site: string): string {
  * itself, with its words written in.
  */
 
+/** The size of a person's portrait as a link shows it, made by scripts/og.py; none for a portrait too small to stand alone. */
+const faceSizes = JSON.parse(readFileSync(new URL('../public/og/people/sizes.json', import.meta.url), 'utf8')) as Record<string, [number, number]>;
+const faceSize = (file?: string): [number, number] | undefined => (file ? faceSizes[file.replace(/\.webp$/, '')] : undefined);
+
 export function staticPages(page: string, locales: Record<string, Locale>, changed: string): { root: string; files: { fileName: string; source: string }[] } {
   const site = /<link rel="canonical" href="([^"]+)">/.exec(page)?.[1];
   if (!site) throw new Error('static pages: the page names no canonical address');
@@ -340,7 +347,7 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
         html = swap(html, /<meta property="og:image:width" content="[^"]*">/, `<meta property="og:image:width" content="${o.picture.wide}">`);
         html = swap(html, /<meta property="og:image:height" content="[^"]*">/, `<meta property="og:image:height" content="${o.picture.high}">`);
         html = swap(html, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${esc(o.picture.alt)}">`);
-        html = swap(html, /<meta name="twitter:card" content="[^"]*">/, '<meta name="twitter:card" content="summary">');
+        html = swap(html, /<meta name="twitter:card" content="[^"]*">/, `<meta name="twitter:card" content="${o.picture.wide > o.picture.high * 1.5 ? 'summary_large_image' : 'summary'}">`);
       }
       // the name of the place and its language go with the data, so that the museum can tell when it has drawn another place over it
       html = swap(html, /<\/head>/, `<script type="application/ld+json" data-place="${w.code === 'en' ? '' : w.code} ${o.name}">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>\n</head>`);

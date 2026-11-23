@@ -12,7 +12,7 @@ Either kind is shown only when the check of who it shows has passed: every page 
 
 A drawing whose photographs are small or soft is shown only at the size of a label (`small` in the data): it is not hung on the wall of the walk, and its file is no larger than a label needs.
 
-Each portrait also has a small copy, 168 by 210, in `public/people/small/`, for the rows of faces and the walk on a phone. Run `python3 scripts/small-portraits.py` after adding one; the check fails until it is there.
+Each portrait also has a small copy, 168 by 210, in `public/people/small/`, for the rows of faces and the walk on a phone. Run `python3 scripts/small-portraits.py` and `python3 scripts/og.py` after adding one: the first makes the small copy (the check fails until it is there), the second the picture a link to the person shows.
 
 ## Adding a portrait
 
