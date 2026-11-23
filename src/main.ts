@@ -902,15 +902,30 @@ function about(): void {
  * `toured` is a guided tour to take up in the halls, at one of its parts. In a language that does not tell the
  * tour, its address opens the walk on the tour's trail.
  */
-/** A worksheet for a class, for one hall, or the list of them: see teach.ts. */
+/** A worksheet for a class, for one hall, or the list of them: see teach.ts. The displays chosen are in the address, `?p=a,b`. */
 function teachView(n?: number): void {
   if (n !== undefined && !hallById(n)) return notFound();
-  const words: Words = { ui: (key, vars) => t(key as UiKey, vars), piece: said.piece, hall: said.hall, credit: said.credit, href: (path) => link(path === 'teach/' ? 'teach' : path.replace(/^(hall|piece|teach)\/([a-z0-9-]+)\/$/, '$1-$2')) };
+  const words: Words = {
+    ui: (key, vars) => t(key as UiKey, vars), piece: said.piece, hall: said.hall, credit: said.credit, view: said.view, principle: said.principle, kind: said.sourceKind,
+    href: (path) => link(path === 'teach/' ? 'teach' : path.replace(/^(hall|piece|teach)\/([a-z0-9-]+)\/$/, '$1-$2')),
+    full: (path) => new URL(link(path.replace(/^(hall|piece|teach)\/([a-z0-9-]+)\/$/, '$1-$2')), document.baseURI).href,
+  };
   const hall = n === undefined ? undefined : hallById(n)!;
+  const ids = new URLSearchParams(location.search).get('p')?.split(',').filter(Boolean);
   document.title = titled(hall ? t('teach.title', { n: hall.id, name: said.hall(hall).name }) : t('teach.head'));
-  says(hall ? t('teach.lead', { n: inHall(hall.id).length }) : t('teach.says'));
-  shell(`${hall ? `<p class="ways ws__print"><button type="button" class="btn" data-print>${tx('teach.print')}</button></p>` : ''}${hall ? worksheet(hall.id, words) : sheets(words)}`, undefined, 'teach');
+  says(hall ? t('teach.lead') : t('teach.says'));
+  shell(`${hall ? `<p class="ways ws__print"><button type="button" class="btn" data-print>${tx('teach.print')}</button></p>` : ''}${hall ? worksheet(hall.id, words, ids) : sheets(words)}`, undefined, 'teach');
   app.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+  // choosing the displays writes them in the address, so the sheet can be printed, kept and shared as chosen
+  app.querySelector<HTMLFormElement>('[data-choose]')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const picked = [...(e.target as HTMLFormElement).querySelectorAll<HTMLInputElement>('input[name="p"]:checked')].map((i) => i.value);
+    const url = new URL(location.href);
+    if (picked.length) url.searchParams.set('p', picked.join(',')); else url.searchParams.delete('p');
+    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+    teachView(n);
+    app.querySelector<HTMLElement>('.ws h1')?.focus();
+  });
 }
 
 /**

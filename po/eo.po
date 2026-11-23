@@ -616,8 +616,8 @@ msgstr "Laborfolioj por klaso"
 #: interface
 #. Interface.
 msgctxt "ui.teach.says"
-msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
-msgstr "Unu laborfolio por ĉiu halo, por presi aŭ uzi sur ekrano. La demandoj temas pri ĉiu vidigilo, kaj la respondoj, sur aparta paĝo ĉe la fino, venas el la etikedoj de la muzeo."
+msgid "One worksheet for each hall, to print or to use on a screen. Choose three or four displays, and the sheet asks about each of them, asks the class to compare them, and ends on one open question. The answers are on a page of their own, taken from the museum's labels."
+msgstr "Unu laborfolio por ĉiu halo, por presi aŭ uzi sur ekrano. Elektu tri aŭ kvar vidigilojn: la folio demandas pri ĉiu, petas la klason kompari ilin kaj finiĝas per malferma demando. La respondoj estas sur aparta paĝo, prenitaj el la etikedoj de la muzeo."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -626,10 +626,10 @@ msgid "Worksheet for hall {n}: {name}"
 msgstr "Laborfolio por halo {n}: {name}"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.teach.lead"
-msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
-msgstr "{n} vidigiloj, po tri demandoj kaj unu afero por provi en la 3D-modelo. La respondoj estas sur la lasta paĝo."
+msgid "Three questions on each display chosen, three that compare them, and one open question. The answers are on the last page."
+msgstr "Tri demandoj pri ĉiu elektita vidigilo, tri por kompari ilin kaj unu malferma demando. La respondoj estas sur la lasta paĝo."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -651,27 +651,93 @@ msgstr "Ĉiuj laborfolioj"
 
 #: interface
 #. Interface.
+msgctxt "ui.teach.box"
+msgid "For the teacher"
+msgstr "Por la instruisto"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who.k"
+msgid "Ages:"
+msgstr "Aĝoj:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who"
+msgid "11 to 16. About 40 minutes, alone or in pairs."
+msgstr "11 ĝis 16 jaroj. Ĉirkaŭ 40 minutoj, sole aŭ duope."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal.k"
+msgid "Goal:"
+msgstr "Celo:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal"
+msgid "Explain how a display makes its picture, compare displays by what they can do, and say how we know who made them."
+msgstr "Klarigi, kiel vidigilo faras sian bildon, kompari vidigilojn laŭ tio, kion ili povas fari, kaj diri, kiel ni scias, kiu faris ilin."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use.k"
+msgid "How:"
+msgstr "Kiel:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use"
+msgid "Choose the displays below, then print the sheet or share its address. On a screen, the names link to the 3D models. On paper, the QR codes do."
+msgstr "Elektu la vidigilojn sube, poste presu la folion aŭ kunhavigu ĝian adreson. Sur ekrano la nomoj kondukas al la 3D-modeloj, sur papero la QR-kodoj."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.choose"
+msgid "Choose three or four of the {n} displays in this hall"
+msgstr "Elektu tri aŭ kvar el la {n} vidigiloj en ĉi tiu halo"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.update"
+msgid "Make the sheet"
+msgstr "Fari la folion"
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.name"
 msgid "Name:"
 msgstr "Nomo:"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
+msgctxt "ui.teach.date"
+msgid "Date:"
+msgstr "Dato:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a"
+msgid "Look closely"
+msgstr "Rigardu atente"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a.says"
+msgid "Open each display in the museum, on a screen or with its QR code."
+msgstr "Malfermu ĉiun vidigilon en la muzeo, sur ekrano aŭ per ĝia QR-kodo."
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.q.how"
-msgid "{name}: how does it make its picture?"
-msgstr "{name}: kiel ĝi faras sian bildon?"
+msgid "How does it make its picture?"
+msgstr "Kiel ĝi faras sian bildon?"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.who"
-msgid "The label names {name}. What did they do?"
-msgstr "La etikedo nomas {name}. Kion tiu persono faris?"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.trade"
-msgid "{name}: name one thing it does well, and one thing that holds it back."
-msgstr "{name}: nomu unu aferon, kiun ĝi faras bone, kaj unu, kiu ĝin limigas."
+msgctxt "ui.teach.q.view"
+msgid "In the 3D model, press “{view}”. What do you notice?"
+msgstr "En la 3D-modelo, premu „{view}“. Kion vi rimarkas?"
 
 #: interface
 #. Interface.
@@ -680,10 +746,100 @@ msgid "In the 3D model:"
 msgstr "En la 3D-modelo:"
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "{name} is named on its label. What did they do? How do we know: what kinds of sources does the label list?"
+msgstr "La etikedo nomas {name}. Kion tiu persono faris? Kiel ni scias: kiajn fontojn la etikedo listigas?"
+
+#: interface
 #. Interface.
-msgctxt "ui.teach.but"
-msgid "But:"
-msgstr "Sed:"
+msgctxt "ui.teach.b"
+msgid "Compare"
+msgstr "Komparu"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.grid"
+msgid "Fill in the grid with yes or no. Use the labels."
+msgstr "Plenigu la tabelon per jes aŭ ne. Uzu la etikedojn."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.day"
+msgid "Easy to read in sunlight?"
+msgstr "Facile legebla en sunlumo?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.off"
+msgid "Keeps its picture with the power off?"
+msgstr "Tenas sian bildon sen kurento?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.made"
+msgid "Still made today?"
+msgstr "Ankoraŭ fabrikata?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.order"
+msgid "Put these displays in order, from the oldest to the newest:"
+msgstr "Ordigu ĉi tiujn vidigilojn de la plej malnova al la plej nova:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.sort"
+msgid "Sort them by how they make their picture:"
+msgstr "Ordigu ilin laŭ tio, kiel ili faras sian bildon:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.c"
+msgid "Think"
+msgstr "Pripensu"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.1"
+msgid "A train station wants a departures board that people notice and that keeps working in a power cut. Which display in this hall would you start from, and why?"
+msgstr "Stacidomo volas forirtabulon, kiun homoj rimarkas kaj kiu funkcias dum elektropaneo. De kiu vidigilo en ĉi tiu halo vi komencus, kaj kial?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.2"
+msgid "Many of these tubes and panels are no longer made. Choose one and say what replaced it, and why."
+msgstr "Multaj el ĉi tiuj tuboj kaj paneloj ne plu estas fabrikataj. Elektu unu kaj diru, kio anstataŭis ĝin, kaj kial."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.3"
+msgid "The screen of a phone is related to one of the displays in this hall. Which one, and what makes you think so?"
+msgstr "La ekrano de telefono parencas al unu el la vidigiloj en ĉi tiu halo. Al kiu, kaj kial vi pensas tion?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.4"
+msgid "Some of these displays make no light of their own: they shape light from somewhere else. Choose two and say where their light comes from."
+msgstr "Iuj el ĉi tiuj vidigiloj faras neniun propran lumon: ili formas lumon venantan el aliloke. Elektu du kaj diru, de kie venas ilia lumo."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.5"
+msgid "Design a timetable for a bus stop on a sunny street. Which display from this hall would you use, and what would you give up?"
+msgstr "Desegnu horaron por bushaltejo en suna strato. Kiun vidigilon el ĉi tiu halo vi uzus, kaj al kio vi rezignus?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.6"
+msgid "Some of these pictures really float in the air, and some only seem to. Choose one and explain how it works."
+msgstr "Iuj el ĉi tiuj bildoj vere flosas en la aero, aliaj nur ŝajnas. Elektu unu kaj klarigu, kiel ĝi funkcias."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.7"
+msgid "Our two eyes see slightly different pictures. Choose two displays from this hall and explain how each gives each eye a picture of its own."
+msgstr "Niaj du okuloj vidas iom malsamajn bildojn. Elektu du vidigilojn el ĉi tiu halo kaj klarigu, kiel ĉiu donas al ĉiu okulo propran bildon."
 
 #: interface
 #. Interface.
@@ -696,6 +852,48 @@ msgstr "Respondoj"
 msgctxt "ui.teach.source"
 msgid "Every answer is taken from the museum's own words about the display."
 msgstr "Ĉiu respondo venas el tio, kion la muzeo diras pri la vidigilo."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.own"
+msgid "Accept the idea in the student's own words."
+msgstr "Akceptu la ideon per la propraj vortoj de la lernanto."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.k.records"
+msgid "Its label lists these kinds of source: {kinds}."
+msgstr "La etikedo listigas ĉi tiajn fontojn: {kinds}."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.grid"
+msgid "The museum's own answers, from the details of each display. Accept another answer when the student gives a reason from the label."
+msgstr "La respondoj de la muzeo, el la datumoj de ĉiu vidigilo. Akceptu alian respondon, se la lernanto pravigas ĝin per la etikedo."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.open"
+msgid "Answers will vary. A good answer names a display and gives reasons from its label."
+msgstr "La respondoj varios. Bona respondo nomas vidigilon kaj donas kialojn el ĝia etikedo."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.yes"
+msgid "Yes"
+msgstr "Jes"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.no"
+msgid "No"
+msgstr "Ne"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.lab"
+msgid "Only in laboratories"
+msgstr "Nur en laboratorioj"
 
 #: interface
 #. Interface.

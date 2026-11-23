@@ -23,10 +23,12 @@ import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
 import { people, type Credit } from '../src/data/people';
 import { personLinks } from '../src/data/person-links';
-import type { Hall, Piece } from '../src/data/schema';
+import type { Hall, Piece, Principle, SourceKind } from '../src/data/schema';
+import { PRINCIPLE_LABEL } from '../src/data/schema';
+import type { ViewInfo } from '../src/data/views';
 import { tours, type Tour } from '../src/data/tours';
 import { en, type UiKey } from '../src/i18n/en';
-import { LANGS, type CreditText, type HallText, type Lang, type Locale, type PieceText, type TourText } from '../src/i18n/types';
+import { LANGS, SOURCE_KIND, type CreditText, type HallText, type Lang, type Locale, type PieceText, type TourText, type ViewText } from '../src/i18n/types';
 import { AUTHOR, LICENCE, REPO } from '../src/site';
 import { personByName, persons } from '../src/data/persons';
 import { bios, personSources } from '../src/data/person-bios';
@@ -61,6 +63,9 @@ interface Speech {
   bio: (slug: string, about: string[]) => { about: string[]; own: boolean };
   /** What an archive picture shows, and what stands in for it for someone who cannot see it. */
   media: (pieceId: string, m: Media) => { caption: string; alt: string; year?: string };
+  view: (pieceId: string, v: ViewInfo) => ViewText;
+  principle: (p: Principle) => string;
+  kind: (k: SourceKind) => string;
 }
 function speech(code: Lang, loc?: Locale): Speech {
   const put = (s: string, vars?: Record<string, string | number>) => (vars ? s.replace(/\{(\w+)\}/g, (all, k: string) => (k in vars ? String(vars[k]) : all)) : s);
@@ -75,6 +80,9 @@ function speech(code: Lang, loc?: Locale): Speech {
     },
     bio: (slug, about) => { const own = loc?.bios?.[slug]; return !loc ? { about, own: true } : own && own.length === about.length ? { about: own, own: true } : { about, own: false }; },
     tour: (tour) => (loc ? loc.tours?.[tour.id] : { title: tour.title, lead: tour.lead, parts: Object.fromEntries(tour.parts.map((p) => [p.id, { title: p.title, text: p.text }])) }),
+    view: (pieceId, v) => loc?.views[pieceId]?.[v.id] ?? v,
+    principle: (p) => loc?.principle[p] ?? PRINCIPLE_LABEL[p],
+    kind: (k) => loc?.sourceKind[k] ?? SOURCE_KIND[k],
     media: (pieceId, m) => {
       const own = loc?.media[pieceId]?.[m.id];
       return own ? { caption: own.caption, alt: own.alt, year: own.year ?? m.year } : m;
@@ -109,7 +117,7 @@ const rich = (text: string, links: Record<string, string>): string =>
   esc(text).replace(/\{(\w+)\}(.*?)\{\/\1\}/g, (_, k: string, words: string) => `<a href="${esc(links[k] ?? './')}"${/^https?:/.test(links[k] ?? '') ? ' rel="noopener"' : ''}>${words}</a>`);
 
 /** The pages of one language. Addresses in them are written from the museum's folder: the `base` of the page points there. */
-function pagesOf(w: Speech): Own[] {
+function pagesOf(w: Speech, site: string): Own[] {
   const out: Own[] = [];
   const titled = (page: string) => w.ui('title.page', { page, site: w.ui('site.name') });
   const hallName = (hall: Hall) => w.ui('nav.hall', { n: hall.id, name: w.hall(hall).name });
@@ -196,7 +204,7 @@ ${ways}`,
 
   // the people: everyone named on a label, under the piece they worked on
   // worksheets for a class: the list, and one for each hall (src/teach.ts writes both, here and in the museum)
-  const taught: Words = { ui: (key, vars) => w.ui(key as UiKey, vars), piece: w.piece, hall: w.hall, credit: w.credit, href: (path) => w.pre + path };
+  const taught: Words = { ui: (key, vars) => w.ui(key as UiKey, vars), piece: w.piece, hall: w.hall, credit: w.credit, view: w.view, principle: w.principle, kind: w.kind, href: (path) => w.pre + path, full: (path) => `${site}${w.pre}${path}` };
   out.push({
     name: 'teach', path: 'teach/', title: titled(w.ui('teach.head')), short: w.ui('nav.teach'), says: w.ui('teach.says'), kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/']],
     body: `${sheets(taught)}\n${ways}`,
@@ -204,7 +212,7 @@ ${ways}`,
   for (const hall of halls) {
     const head = w.ui('teach.title', { n: hall.id, name: w.hall(hall).name });
     out.push({
-      name: `teach-${hall.id}`, path: `teach/${hall.id}/`, title: titled(head), short: head, says: w.ui('teach.lead', { n: inHall(hall.id).length }), picture: { file: `og/hall-${hall.id}.jpg`, wide: 1200, high: 630, alt: hallName(hall) }, kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/'], [head, `teach/${hall.id}/`]],
+      name: `teach-${hall.id}`, path: `teach/${hall.id}/`, title: titled(head), short: head, says: w.ui('teach.lead'), picture: { file: `og/hall-${hall.id}.jpg`, wide: 1200, high: 630, alt: hallName(hall) }, kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/'], [head, `teach/${hall.id}/`]],
       body: `${worksheet(hall.id, taught)}\n${ways}`,
     });
   }
@@ -323,7 +331,7 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
   const site = /<link rel="canonical" href="([^"]+)">/.exec(page)?.[1];
   if (!site) throw new Error('static pages: the page names no canonical address');
   const speeches = [speech('en'), ...Object.keys(locales).sort().map((code) => speech(code as Lang, locales[code]))];
-  const all = speeches.map((w) => ({ w, pages: pagesOf(w) }));
+  const all = speeches.map((w) => ({ w, pages: pagesOf(w, site) }));
   // the same place in the other languages: only those that have a page for it, since a tour is not told in all of them
   const others = (name: string) => all.filter(({ pages }) => pages.some((o) => o.name === name)).map(({ w, pages }) => ({ w, path: pages.find((o) => o.name === name)!.path }));
   const files: { fileName: string; source: string }[] = [];

@@ -609,8 +609,8 @@ msgstr "课堂学习单"
 #: interface
 #. Interface.
 msgctxt "ui.teach.says"
-msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
-msgstr "每个展厅一份学习单，可以打印，也可以在屏幕上用。问题针对每件展品，答案在最后单独一页，取自博物馆的说明牌。"
+msgid "One worksheet for each hall, to print or to use on a screen. Choose three or four displays, and the sheet asks about each of them, asks the class to compare them, and ends on one open question. The answers are on a page of their own, taken from the museum's labels."
+msgstr "每个展厅一份学习单，可以打印，也可以在屏幕上用。选三四件展品：学习单逐件提问，请全班比较它们，最后留一个开放问题。答案单独放在最后一页，取自博物馆的说明牌。"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -619,10 +619,10 @@ msgid "Worksheet for hall {n}: {name}"
 msgstr "第{n}展厅学习单：{name}"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.teach.lead"
-msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
-msgstr "{n}件展品，每件三个问题，外加一项在三维模型里试一试。答案在最后一页。"
+msgid "Three questions on each display chosen, three that compare them, and one open question. The answers are on the last page."
+msgstr "每件所选展品三个问题，三个比较题，再加一个开放问题。答案在最后一页。"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -644,27 +644,93 @@ msgstr "全部学习单"
 
 #: interface
 #. Interface.
+msgctxt "ui.teach.box"
+msgid "For the teacher"
+msgstr "给老师"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who.k"
+msgid "Ages:"
+msgstr "年龄："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who"
+msgid "11 to 16. About 40 minutes, alone or in pairs."
+msgstr "11至16岁。约40分钟，独自或两人一组。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal.k"
+msgid "Goal:"
+msgstr "目标："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal"
+msgid "Explain how a display makes its picture, compare displays by what they can do, and say how we know who made them."
+msgstr "说明一种显示器怎样形成画面，按能做的事比较显示器，并说出我们怎样知道是谁做的。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use.k"
+msgid "How:"
+msgstr "用法："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use"
+msgid "Choose the displays below, then print the sheet or share its address. On a screen, the names link to the 3D models. On paper, the QR codes do."
+msgstr "在下面选好展品，然后打印学习单或分享它的网址。在屏幕上，名称链接到三维模型；在纸上，用二维码。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.choose"
+msgid "Choose three or four of the {n} displays in this hall"
+msgstr "从本展厅{n}件展品中选三四件"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.update"
+msgid "Make the sheet"
+msgstr "生成学习单"
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.name"
 msgid "Name:"
 msgstr "姓名："
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
+msgctxt "ui.teach.date"
+msgid "Date:"
+msgstr "日期："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a"
+msgid "Look closely"
+msgstr "仔细看"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a.says"
+msgid "Open each display in the museum, on a screen or with its QR code."
+msgstr "在博物馆里打开每件展品，用屏幕或扫二维码都可以。"
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.q.how"
-msgid "{name}: how does it make its picture?"
-msgstr "{name}：它是怎样形成画面的？"
+msgid "How does it make its picture?"
+msgstr "它是怎样形成画面的？"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.who"
-msgid "The label names {name}. What did they do?"
-msgstr "说明牌上有{name}的名字。这个人做了什么？"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.trade"
-msgid "{name}: name one thing it does well, and one thing that holds it back."
-msgstr "{name}：说出它的一个长处和一个短处。"
+msgctxt "ui.teach.q.view"
+msgid "In the 3D model, press “{view}”. What do you notice?"
+msgstr "在三维模型里按“{view}”。你注意到了什么？"
 
 #: interface
 #. Interface.
@@ -673,10 +739,100 @@ msgid "In the 3D model:"
 msgstr "在三维模型里："
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "{name} is named on its label. What did they do? How do we know: what kinds of sources does the label list?"
+msgstr "说明牌上有{name}的名字。这个人做了什么？我们怎么知道：说明牌列出了哪些种类的资料？"
+
+#: interface
 #. Interface.
-msgctxt "ui.teach.but"
-msgid "But:"
-msgstr "但是："
+msgctxt "ui.teach.b"
+msgid "Compare"
+msgstr "比较"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.grid"
+msgid "Fill in the grid with yes or no. Use the labels."
+msgstr "用“是”或“否”填表。参考说明牌。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.day"
+msgid "Easy to read in sunlight?"
+msgstr "在阳光下容易看清吗？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.off"
+msgid "Keeps its picture with the power off?"
+msgstr "断电后画面还在吗？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.made"
+msgid "Still made today?"
+msgstr "现在还在生产吗？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.order"
+msgid "Put these displays in order, from the oldest to the newest:"
+msgstr "把这些展品按从旧到新排序："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.sort"
+msgid "Sort them by how they make their picture:"
+msgstr "按形成画面的方式给它们分类："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.c"
+msgid "Think"
+msgstr "想一想"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.1"
+msgid "A train station wants a departures board that people notice and that keeps working in a power cut. Which display in this hall would you start from, and why?"
+msgstr "火车站想要一块人们注意得到、停电时也能继续工作的出发信息牌。你会从本展厅的哪件展品入手？为什么？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.2"
+msgid "Many of these tubes and panels are no longer made. Choose one and say what replaced it, and why."
+msgstr "这些管子和面板很多已经不再生产。选一个，说说是什么取代了它，以及原因。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.3"
+msgid "The screen of a phone is related to one of the displays in this hall. Which one, and what makes you think so?"
+msgstr "手机屏幕和本展厅的一件展品是亲戚。是哪一件？你为什么这样想？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.4"
+msgid "Some of these displays make no light of their own: they shape light from somewhere else. Choose two and say where their light comes from."
+msgstr "有些显示器自己不发光，而是塑造来自别处的光。选两件，说说它们的光从哪里来。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.5"
+msgid "Design a timetable for a bus stop on a sunny street. Which display from this hall would you use, and what would you give up?"
+msgstr "为阳光充足的街道上的公交站设计一张时刻表。你会用本展厅的哪件展品？又会放弃什么？"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.6"
+msgid "Some of these pictures really float in the air, and some only seem to. Choose one and explain how it works."
+msgstr "这些画面有的真的浮在空中，有的只是看起来如此。选一个，解释它的原理。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.7"
+msgid "Our two eyes see slightly different pictures. Choose two displays from this hall and explain how each gives each eye a picture of its own."
+msgstr "我们两只眼睛看到的画面略有不同。从本展厅选两件展品，解释每一件怎样让两只眼睛各自看到自己的画面。"
 
 #: interface
 #. Interface.
@@ -689,6 +845,48 @@ msgstr "答案"
 msgctxt "ui.teach.source"
 msgid "Every answer is taken from the museum's own words about the display."
 msgstr "每个答案都取自博物馆对这件展品的介绍。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.own"
+msgid "Accept the idea in the student's own words."
+msgstr "学生用自己的话表达出意思即可。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.k.records"
+msgid "Its label lists these kinds of source: {kinds}."
+msgstr "说明牌列出的资料种类：{kinds}。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.grid"
+msgid "The museum's own answers, from the details of each display. Accept another answer when the student gives a reason from the label."
+msgstr "博物馆的答案，取自每件展品的资料。学生如能用说明牌说明理由，其他答案也可接受。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.open"
+msgid "Answers will vary. A good answer names a display and gives reasons from its label."
+msgstr "答案因人而异。好的答案会说出一件展品，并从它的说明牌里找出理由。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.yes"
+msgid "Yes"
+msgstr "是"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.no"
+msgid "No"
+msgstr "否"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.lab"
+msgid "Only in laboratories"
+msgstr "仅在实验室"
 
 #: interface
 #. Interface.

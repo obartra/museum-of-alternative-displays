@@ -614,8 +614,8 @@ msgstr "수업용 활동지"
 #: interface
 #. Interface.
 msgctxt "ui.teach.says"
-msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
-msgstr "전시실마다 활동지가 하나씩 있습니다. 인쇄해도 되고 화면으로 써도 됩니다. 질문은 디스플레이마다 있고, 답은 끝의 따로 된 쪽에 있으며 박물관 라벨에서 가져왔습니다."
+msgid "One worksheet for each hall, to print or to use on a screen. Choose three or four displays, and the sheet asks about each of them, asks the class to compare them, and ends on one open question. The answers are on a page of their own, taken from the museum's labels."
+msgstr "전시실마다 활동지가 하나씩 있습니다. 인쇄해도 되고 화면으로 써도 됩니다. 디스플레이를 서너 개 고르면, 활동지가 각각에 대해 묻고, 반 학생들에게 비교하게 한 뒤, 정답이 없는 질문 하나로 끝납니다. 답은 따로 된 쪽에 있으며 박물관 라벨에서 가져왔습니다."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -624,10 +624,10 @@ msgid "Worksheet for hall {n}: {name}"
 msgstr "{n}번 전시실 활동지: {name}"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.teach.lead"
-msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
-msgstr "디스플레이 {n}점, 각각 질문 세 개와 3D 모델에서 해 볼 것 하나. 답은 마지막 쪽에 있습니다."
+msgid "Three questions on each display chosen, three that compare them, and one open question. The answers are on the last page."
+msgstr "고른 디스플레이마다 질문 세 개, 비교 질문 세 개, 정답이 없는 질문 하나. 답은 마지막 쪽에 있습니다."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -649,27 +649,93 @@ msgstr "모든 활동지"
 
 #: interface
 #. Interface.
+msgctxt "ui.teach.box"
+msgid "For the teacher"
+msgstr "교사용"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who.k"
+msgid "Ages:"
+msgstr "대상:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who"
+msgid "11 to 16. About 40 minutes, alone or in pairs."
+msgstr "11세에서 16세. 약 40분, 혼자 또는 짝과 함께."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal.k"
+msgid "Goal:"
+msgstr "목표:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal"
+msgid "Explain how a display makes its picture, compare displays by what they can do, and say how we know who made them."
+msgstr "디스플레이가 어떻게 상을 만드는지 설명하고, 할 수 있는 일로 디스플레이를 비교하고, 누가 만들었는지 어떻게 아는지 말할 수 있다."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use.k"
+msgid "How:"
+msgstr "방법:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use"
+msgid "Choose the displays below, then print the sheet or share its address. On a screen, the names link to the 3D models. On paper, the QR codes do."
+msgstr "아래에서 디스플레이를 고른 뒤, 활동지를 인쇄하거나 주소를 공유하세요. 화면에서는 이름이, 종이에서는 QR 코드가 3D 모델로 이어집니다."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.choose"
+msgid "Choose three or four of the {n} displays in this hall"
+msgstr "이 전시실의 디스플레이 {n}점 가운데 서너 개를 고르세요"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.update"
+msgid "Make the sheet"
+msgstr "활동지 만들기"
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.name"
 msgid "Name:"
 msgstr "이름:"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
+msgctxt "ui.teach.date"
+msgid "Date:"
+msgstr "날짜:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a"
+msgid "Look closely"
+msgstr "자세히 보기"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a.says"
+msgid "Open each display in the museum, on a screen or with its QR code."
+msgstr "박물관에서 각 디스플레이를 여세요. 화면으로도, QR 코드로도 됩니다."
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.q.how"
-msgid "{name}: how does it make its picture?"
-msgstr "{name}: 어떻게 상을 만드나요?"
+msgid "How does it make its picture?"
+msgstr "어떻게 상을 만드나요?"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.who"
-msgid "The label names {name}. What did they do?"
-msgstr "라벨에 {name}의 이름이 있습니다. 그 사람은 무엇을 했나요?"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.trade"
-msgid "{name}: name one thing it does well, and one thing that holds it back."
-msgstr "{name}: 잘하는 점 하나와 한계 하나를 말해 보세요."
+msgctxt "ui.teach.q.view"
+msgid "In the 3D model, press “{view}”. What do you notice?"
+msgstr "3D 모델에서 ‘{view}’를 누르세요. 무엇이 눈에 띄나요?"
 
 #: interface
 #. Interface.
@@ -678,10 +744,100 @@ msgid "In the 3D model:"
 msgstr "3D 모델에서:"
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "{name} is named on its label. What did they do? How do we know: what kinds of sources does the label list?"
+msgstr "라벨에 {name}의 이름이 있습니다. 그 사람은 무엇을 했나요? 어떻게 알 수 있나요: 라벨은 어떤 종류의 자료를 들고 있나요?"
+
+#: interface
 #. Interface.
-msgctxt "ui.teach.but"
-msgid "But:"
-msgstr "하지만:"
+msgctxt "ui.teach.b"
+msgid "Compare"
+msgstr "비교하기"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.grid"
+msgid "Fill in the grid with yes or no. Use the labels."
+msgstr "표에 예 또는 아니요를 쓰세요. 라벨을 활용하세요."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.day"
+msgid "Easy to read in sunlight?"
+msgstr "햇빛 아래에서도 잘 보이나요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.off"
+msgid "Keeps its picture with the power off?"
+msgstr "전원을 꺼도 상이 남나요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.made"
+msgid "Still made today?"
+msgstr "지금도 만드나요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.order"
+msgid "Put these displays in order, from the oldest to the newest:"
+msgstr "이 디스플레이들을 오래된 것부터 새것 순서로 놓으세요:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.sort"
+msgid "Sort them by how they make their picture:"
+msgstr "상을 만드는 방식에 따라 나누세요:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.c"
+msgid "Think"
+msgstr "생각하기"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.1"
+msgid "A train station wants a departures board that people notice and that keeps working in a power cut. Which display in this hall would you start from, and why?"
+msgstr "기차역에서 사람들 눈에 잘 띄고 정전에도 계속 작동하는 출발 안내판을 원합니다. 이 전시실의 어떤 디스플레이에서 시작하겠어요? 왜 그런가요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.2"
+msgid "Many of these tubes and panels are no longer made. Choose one and say what replaced it, and why."
+msgstr "이 관과 패널 가운데 많은 것이 이제는 만들어지지 않습니다. 하나를 골라 무엇이 그것을 대신했는지, 왜 그런지 말해 보세요."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.3"
+msgid "The screen of a phone is related to one of the displays in this hall. Which one, and what makes you think so?"
+msgstr "휴대폰 화면은 이 전시실의 디스플레이 가운데 하나와 친척입니다. 어느 것일까요? 왜 그렇게 생각하나요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.4"
+msgid "Some of these displays make no light of their own: they shape light from somewhere else. Choose two and say where their light comes from."
+msgstr "이 가운데 어떤 디스플레이는 스스로 빛을 내지 않고 다른 곳에서 오는 빛을 다듬습니다. 두 개를 골라 그 빛이 어디서 오는지 말해 보세요."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.5"
+msgid "Design a timetable for a bus stop on a sunny street. Which display from this hall would you use, and what would you give up?"
+msgstr "햇볕이 잘 드는 거리의 버스 정류장 시간표를 설계해 보세요. 이 전시실의 어떤 디스플레이를 쓰겠어요? 그 대신 무엇을 포기하겠어요?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.6"
+msgid "Some of these pictures really float in the air, and some only seem to. Choose one and explain how it works."
+msgstr "이 상들 가운데 어떤 것은 정말 공중에 떠 있고, 어떤 것은 그렇게 보일 뿐입니다. 하나를 골라 어떻게 작동하는지 설명하세요."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.7"
+msgid "Our two eyes see slightly different pictures. Choose two displays from this hall and explain how each gives each eye a picture of its own."
+msgstr "우리의 두 눈은 조금씩 다른 상을 봅니다. 이 전시실의 디스플레이 두 개를 골라 각각이 어떻게 두 눈에 저마다의 상을 주는지 설명하세요."
 
 #: interface
 #. Interface.
@@ -694,6 +850,48 @@ msgstr "답"
 msgctxt "ui.teach.source"
 msgid "Every answer is taken from the museum's own words about the display."
 msgstr "모든 답은 박물관이 그 디스플레이에 대해 하는 말에서 가져왔습니다."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.own"
+msgid "Accept the idea in the student's own words."
+msgstr "학생 자신의 말로 쓴 생각도 정답으로 인정하세요."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.k.records"
+msgid "Its label lists these kinds of source: {kinds}."
+msgstr "라벨이 드는 자료의 종류: {kinds}."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.grid"
+msgid "The museum's own answers, from the details of each display. Accept another answer when the student gives a reason from the label."
+msgstr "박물관의 답으로, 각 디스플레이의 정보에서 가져왔습니다. 학생이 라벨을 근거로 이유를 대면 다른 답도 인정하세요."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.open"
+msgid "Answers will vary. A good answer names a display and gives reasons from its label."
+msgstr "답은 저마다 다릅니다. 좋은 답은 디스플레이 하나를 들고 그 라벨에서 이유를 찾습니다."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.yes"
+msgid "Yes"
+msgstr "예"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.no"
+msgid "No"
+msgstr "아니요"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.lab"
+msgid "Only in laboratories"
+msgstr "연구실에서만"
 
 #: interface
 #. Interface.

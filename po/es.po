@@ -616,8 +616,8 @@ msgstr "Fichas para una clase"
 #: interface
 #. Interface.
 msgctxt "ui.teach.says"
-msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
-msgstr "Una ficha para cada sala, para imprimir o para usar en pantalla. Las preguntas son sobre cada pantalla, y las respuestas, en una página aparte al final, salen de las cartelas del museo."
+msgid "One worksheet for each hall, to print or to use on a screen. Choose three or four displays, and the sheet asks about each of them, asks the class to compare them, and ends on one open question. The answers are on a page of their own, taken from the museum's labels."
+msgstr "Una ficha para cada sala, para imprimir o para usar en pantalla. Elige tres o cuatro pantallas: la ficha pregunta por cada una, pide a la clase que las compare y termina con una pregunta abierta. Las respuestas están en una página aparte, tomadas de las cartelas del museo."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -626,10 +626,10 @@ msgid "Worksheet for hall {n}: {name}"
 msgstr "Ficha de la sala {n}: {name}"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.teach.lead"
-msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
-msgstr "{n} pantallas, tres preguntas para cada una y algo para probar en el modelo 3D. Las respuestas están en la última página."
+msgid "Three questions on each display chosen, three that compare them, and one open question. The answers are on the last page."
+msgstr "Tres preguntas para cada pantalla elegida, tres para compararlas y una pregunta abierta. Las respuestas están en la última página."
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
@@ -651,27 +651,93 @@ msgstr "Todas las fichas"
 
 #: interface
 #. Interface.
+msgctxt "ui.teach.box"
+msgid "For the teacher"
+msgstr "Para el docente"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who.k"
+msgid "Ages:"
+msgstr "Edades:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.who"
+msgid "11 to 16. About 40 minutes, alone or in pairs."
+msgstr "De 11 a 16 años. Unos 40 minutos, en forma individual o en parejas."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal.k"
+msgid "Goal:"
+msgstr "Objetivo:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.goal"
+msgid "Explain how a display makes its picture, compare displays by what they can do, and say how we know who made them."
+msgstr "Explicar cómo una pantalla forma su imagen, comparar pantallas por lo que pueden hacer y decir cómo sabemos quién las hizo."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use.k"
+msgid "How:"
+msgstr "Cómo:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.use"
+msgid "Choose the displays below, then print the sheet or share its address. On a screen, the names link to the 3D models. On paper, the QR codes do."
+msgstr "Elige las pantallas abajo y luego imprime la ficha o comparte su dirección. En pantalla, los nombres llevan a los modelos 3D. En papel, lo hacen los códigos QR."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.choose"
+msgid "Choose three or four of the {n} displays in this hall"
+msgstr "Elige tres o cuatro de las {n} pantallas de esta sala"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.update"
+msgid "Make the sheet"
+msgstr "Hacer la ficha"
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.name"
 msgid "Name:"
 msgstr "Nombre:"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
+msgctxt "ui.teach.date"
+msgid "Date:"
+msgstr "Fecha:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a"
+msgid "Look closely"
+msgstr "Mira de cerca"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.a.says"
+msgid "Open each display in the museum, on a screen or with its QR code."
+msgstr "Abre cada pantalla en el museo, en una pantalla o con su código QR."
+
+#: interface
+#. Interface.
 msgctxt "ui.teach.q.how"
-msgid "{name}: how does it make its picture?"
-msgstr "{name}: ¿cómo forma su imagen?"
+msgid "How does it make its picture?"
+msgstr "¿Cómo forma su imagen?"
 
 #: interface
 #. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.who"
-msgid "The label names {name}. What did they do?"
-msgstr "La cartela nombra a {name}. ¿Qué hizo?"
-
-#: interface
-#. Interface. Keep the words in curly brackets as they are.
-msgctxt "ui.teach.q.trade"
-msgid "{name}: name one thing it does well, and one thing that holds it back."
-msgstr "{name}: di algo que hace bien y algo que la limita."
+msgctxt "ui.teach.q.view"
+msgid "In the 3D model, press “{view}”. What do you notice?"
+msgstr "En el modelo 3D, pulsa «{view}». ¿Qué notas?"
 
 #: interface
 #. Interface.
@@ -680,10 +746,100 @@ msgid "In the 3D model:"
 msgstr "En el modelo 3D:"
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "{name} is named on its label. What did they do? How do we know: what kinds of sources does the label list?"
+msgstr "La cartela nombra a {name}. ¿Qué hizo? ¿Cómo lo sabemos: qué tipos de fuentes cita la cartela?"
+
+#: interface
 #. Interface.
-msgctxt "ui.teach.but"
-msgid "But:"
-msgstr "Pero:"
+msgctxt "ui.teach.b"
+msgid "Compare"
+msgstr "Compara"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.grid"
+msgid "Fill in the grid with yes or no. Use the labels."
+msgstr "Completa la tabla con sí o no. Usa las cartelas."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.day"
+msgid "Easy to read in sunlight?"
+msgstr "¿Se lee bien a pleno sol?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.off"
+msgid "Keeps its picture with the power off?"
+msgstr "¿Conserva la imagen sin corriente?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.g.made"
+msgid "Still made today?"
+msgstr "¿Se sigue fabricando?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.order"
+msgid "Put these displays in order, from the oldest to the newest:"
+msgstr "Ordena estas pantallas de la más antigua a la más nueva:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.b.sort"
+msgid "Sort them by how they make their picture:"
+msgstr "Clasifícalas según cómo forman su imagen:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.c"
+msgid "Think"
+msgstr "Piensa"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.1"
+msgid "A train station wants a departures board that people notice and that keeps working in a power cut. Which display in this hall would you start from, and why?"
+msgstr "Una estación de tren quiere un tablero de salidas que la gente note y que siga funcionando en un corte de luz. ¿De qué pantalla de esta sala partirías, y por qué?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.2"
+msgid "Many of these tubes and panels are no longer made. Choose one and say what replaced it, and why."
+msgstr "Muchos de estos tubos y paneles ya no se fabrican. Elige uno y di qué lo reemplazó, y por qué."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.3"
+msgid "The screen of a phone is related to one of the displays in this hall. Which one, and what makes you think so?"
+msgstr "La pantalla de un teléfono es pariente de una de las pantallas de esta sala. ¿De cuál, y por qué lo piensas?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.4"
+msgid "Some of these displays make no light of their own: they shape light from somewhere else. Choose two and say where their light comes from."
+msgstr "Algunas de estas pantallas no hacen luz propia: dan forma a luz que viene de otra parte. Elige dos y di de dónde les viene la luz."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.5"
+msgid "Design a timetable for a bus stop on a sunny street. Which display from this hall would you use, and what would you give up?"
+msgstr "Diseña un horario para una parada de colectivo en una calle soleada. ¿Qué pantalla de esta sala usarías, y a qué renunciarías?"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.6"
+msgid "Some of these pictures really float in the air, and some only seem to. Choose one and explain how it works."
+msgstr "Algunas de estas imágenes flotan de verdad en el aire, y otras solo lo parecen. Elige una y explica cómo funciona."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.open.7"
+msgid "Our two eyes see slightly different pictures. Choose two displays from this hall and explain how each gives each eye a picture of its own."
+msgstr "Nuestros dos ojos ven imágenes un poco distintas. Elige dos pantallas de esta sala y explica cómo cada una le da a cada ojo su propia imagen."
 
 #: interface
 #. Interface.
@@ -696,6 +852,48 @@ msgstr "Respuestas"
 msgctxt "ui.teach.source"
 msgid "Every answer is taken from the museum's own words about the display."
 msgstr "Cada respuesta sale de las palabras del museo sobre la pantalla."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.own"
+msgid "Accept the idea in the student's own words."
+msgstr "Acepta la idea con las palabras del alumno."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.k.records"
+msgid "Its label lists these kinds of source: {kinds}."
+msgstr "La cartela cita estos tipos de fuentes: {kinds}."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.grid"
+msgid "The museum's own answers, from the details of each display. Accept another answer when the student gives a reason from the label."
+msgstr "Las respuestas del museo, tomadas de los datos de cada pantalla. Acepta otra respuesta si el alumno la justifica con la cartela."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.k.open"
+msgid "Answers will vary. A good answer names a display and gives reasons from its label."
+msgstr "Las respuestas variarán. Una buena respuesta nombra una pantalla y da razones tomadas de su cartela."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.yes"
+msgid "Yes"
+msgstr "Sí"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.no"
+msgid "No"
+msgstr "No"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.lab"
+msgid "Only in laboratories"
+msgstr "Solo en laboratorios"
 
 #: interface
 #. Interface.
