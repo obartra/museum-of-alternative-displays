@@ -39,6 +39,13 @@ const FEW = 4;
 const CROSS = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 4.6L12 10.2l5.6-5.6 1.8 1.8-5.6 5.6 5.6 5.6-1.8 1.8-5.6-5.6-5.6 5.6-1.8-1.8 5.6-5.6-5.6-5.6z"/></svg>';
 const BACK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 5L3.5 12l7 7v-4.6h10V9.6h-10z"/></svg>';
 
+/** The first letters of the first and the last word of a name: Greg Dawe is GD, Mozi is M. */
+const initials = (name: string): string => {
+  const words = name.replace(/[.,]/g, ' ').split(/\s+/).filter((w) => /\p{L}/u.test(w));
+  const first = words[0]?.[0] ?? '', last = words.length > 1 ? words[words.length - 1][0] : '';
+  return (first + last).toUpperCase();
+};
+
 /** The people of the label of a piece, each once and in the label's order, without those of a line set aside. */
 export const labelPeople = (piece: string): string[] =>
   [...new Set((people[piece]?.people ?? []).filter((e) => !e.aside).flatMap((e) => e.who))];
@@ -53,8 +60,10 @@ export function openWho(card: HTMLElement, sheet: HTMLDialogElement, o: WhoOptio
 
   const face = (name: string) => {
     const who = personByName(name), pic = portraits[name];
-    const inner = `${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : ''}<span>${esc(name)}</span>`;
-    return who ? `<button type="button" class="walk__face" data-who="${who.slug}" aria-haspopup="dialog">${inner}</button>` : `<span class="walk__face">${inner}</span>`;
+    // a face where the museum has a portrait, the initials where it has none. The name is there for a screen
+    // reader, and under the pointer
+    const inner = `${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : `<i class="walk__ini" aria-hidden="true">${esc(initials(name))}</i>`}<span>${esc(name)}</span>`;
+    return who ? `<button type="button" class="walk__face" data-who="${who.slug}" aria-haspopup="dialog" title="${esc(name)}">${inner}</button>` : `<span class="walk__face" title="${esc(name)}">${inner}</span>`;
   };
 
   const bar = (back: boolean) => `<div class="sheet__bar">${back ? `<button type="button" class="btn sheet__back" data-sheet="list">${BACK}<span>${tx('walk.who.back')}</span></button>` : ''}<button type="button" class="walk__key sheet__close" data-sheet="close" aria-label="${tx('stage.close')}" title="${tx('stage.close')}">${CROSS}</button></div>`;
@@ -160,7 +169,7 @@ export function openWho(card: HTMLElement, sheet: HTMLDialogElement, o: WhoOptio
       card.style.setProperty('--trail', trail ?? 'var(--hall)');
       const few = names.length > FEW ? names.slice(0, FEW) : names, rest = names.length - few.length;
       card.classList.toggle('walk__who--many', few.length + (rest ? 1 : 0) > 2);
-      card.innerHTML = few.map(face).join('') + (rest ? `<button type="button" class="walk__face walk__more" data-who-all aria-haspopup="dialog"><span>${tx('walk.who.more', { n: rest })}</span></button>` : '');
+      card.innerHTML = few.map(face).join('') + (rest ? `<button type="button" class="walk__face walk__more" data-who-all aria-haspopup="dialog" title="${tx('walk.who.more', { n: rest })}"><b aria-hidden="true">+${rest}</b><span>${tx('walk.who.more', { n: rest })}</span></button>` : '');
       if (piece) card.dataset.hall = String(pieceById(piece)!.hall); else delete card.dataset.hall;
     },
     get open() { return sheet.open; },

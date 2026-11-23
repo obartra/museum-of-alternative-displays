@@ -549,6 +549,12 @@ msgstr "La tabulo en la stacidomo 30th Street, Filadelfio, dum ĝi turniĝas"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Unu modulo de Pragotron-tabulo, de proksime"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "Televidilo ŝaltata, kun la fajfo de siaj linioj"

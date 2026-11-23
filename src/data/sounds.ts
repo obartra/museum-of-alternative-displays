@@ -17,6 +17,7 @@ export interface Sound {
 export const sounds: Record<string, Sound[]> = {
   'split-flap': [
     { file: 'split-flap.mp3', seconds: 16, title: 'mab-bigboard-mono-lowcut.wav', by: 'mab', licence: 'CC BY 3.0', url: 'https://freesound.org/s/23025/' },
+    { file: 'pragotron.mp3', seconds: 12, title: 'pragotron_split-flap-display.wav', by: 'matucha', licence: 'CC BY-NC 4.0', url: 'https://freesound.org/s/174056/' },
   ],
   'cathode-ray-tube': [
     { file: 'crt-on.mp3', seconds: 10, title: 'TV_CRT_PAL_TurnOn.wav', by: 'firefreak', licence: 'CC BY 3.0', url: 'https://freesound.org/s/65400/' },

@@ -547,6 +547,12 @@ msgstr "필라델피아 30번가역의 안내판이 넘어가는 소리"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Pragotron 안내판의 모듈 하나를 가까이서 녹음한 소리"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "텔레비전을 켜는 소리와 주사선의 높은 소리"

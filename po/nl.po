@@ -543,6 +543,12 @@ msgstr "Het bord in station 30th Street, Philadelphia, terwijl het omslaat"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Eén module van een Pragotron-bord, van dichtbij"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "Een televisie die wordt aangezet, met het fluiten van de lijnen"

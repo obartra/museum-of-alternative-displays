@@ -542,6 +542,12 @@ msgstr "费城30街车站的翻牌显示板翻动的声音"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "近距离录下的一块Pragotron翻牌显示板模块的声音"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "电视机开机的声音，带着扫描线的尖啸"

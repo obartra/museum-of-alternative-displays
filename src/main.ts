@@ -27,7 +27,8 @@ import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
 import { AUTHOR, LICENCE, REPO } from './site';
 import { markSvg } from './mark';
-import { GLASSES, daylightKey, fullKey, nameFullKey } from './icons';
+import { GLASSES, bareKey, daylightKey, fullKey, nameFullKey } from './icons';
+import { openBare, onTap } from './bare';
 import { calm as lowPower, setCalm, spread, wantsBeyond } from './beyond';
 import type { Stage } from './three/stage';
 
@@ -532,7 +533,8 @@ ${step === undefined ? '' : visitBand(step)}
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
-    <div class="stage__tools">${daylightKey(lightsOn, tx('switch.daylight'))}<button type="button" class="btn btn--icon" data-act="stereo" aria-pressed="false" aria-label="${tx('stage.stereo')}" title="${tx('stage.stereo')}" disabled${p.hall === DEPTH ? '' : ' hidden'}>${GLASSES}</button>${fullKey('data-act="full"', tx('stage.expand'))}</div>
+    <div class="stage__tools">${daylightKey(lightsOn, tx('switch.daylight'))}<button type="button" class="btn btn--icon" data-act="stereo" aria-pressed="false" aria-label="${tx('stage.stereo')}" title="${tx('stage.stereo')}" disabled${p.hall === DEPTH ? '' : ' hidden'}>${GLASSES}</button>${bareKey('data-act="bare"', tx('stage.clear'))}${fullKey('data-act="full"', tx('stage.expand'))}</div>
+    <p class="bare__hint" id="stage-bare" aria-live="polite"></p>
   </div>
   <div class="stack">
     <p class="crumbs"><a class="crumb" href="${link(`hall-${hall.id}`)}"><b>${hall.id}</b><span>${esc(said.hall(hall).name)}</span></a><a class="crumbs__walk" href="${link(`walk-${p.id}`)}">${tx('walk.piece')}</a><button type="button" class="btn crumbs__share" data-share="${link(`piece-${p.id}`)}" data-title="${esc(x.name)}">${tx('piece.share')}</button></p>
@@ -711,6 +713,7 @@ ${step === undefined ? '' : visitBand(step)}
         .finally(() => { arBtn.disabled = false; });
     }
     if (name === 'full') setFull(!wrap.classList.contains('is-full'));
+    if (name === 'bare') bare.set(!bare.on);
   });
   document.addEventListener('keydown', onKey);
   const onBack = () => setFull(false, true);
@@ -761,9 +764,17 @@ ${step === undefined ? '' : visitBand(step)}
   }, { passive: true });
 
   const unsound = wireSounds(document.querySelector('.piece')!);
+  // picture only: the piece on its stand, and nothing else on it
+  const bare = openBare({
+    root: wrap, hint: document.getElementById('stage-bare')!,
+    keys: () => [act('bare')],
+    canvas: () => wrap.querySelector<HTMLElement>('canvas.gl'),
+    active: () => alive && seen,
+  });
+  const untap = onTap(box, () => { if (bare.on) bare.set(false); });
   leave = () => {
     alive = false; live = false;
-    unsound();
+    unsound(); bare.close(); untap();
     window.clearTimeout(resting);
     unwire();
     window.removeEventListener('popstate', onBack);

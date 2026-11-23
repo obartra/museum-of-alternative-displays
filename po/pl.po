@@ -544,6 +544,12 @@ msgstr "Tablica na stacji 30th Street w Filadelfii w trakcie zmiany"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Jeden moduł tablicy Pragotron z bliska"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "Telewizor przy włączaniu, z piskiem swoich linii"

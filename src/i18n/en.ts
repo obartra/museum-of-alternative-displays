@@ -96,6 +96,7 @@ export const en = {
   'piece.sound': 'Hear it',
   'piece.sound.credit': 'Recording: {a}{title}{/a} by {by}, {licence}',
   'sound.split-flap': 'The board at 30th Street Station, Philadelphia, turning over',
+  'sound.pragotron': 'One module of a Pragotron board, close up',
   'sound.crt-on': 'A television switched on, with the whistle of its lines',
   'sound.crt-degauss': 'A computer monitor switched on, degaussed and switched off',
   'sound.view-master': 'The lever of a View-Master, pressed again and again',

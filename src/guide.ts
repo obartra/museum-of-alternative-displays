@@ -36,6 +36,8 @@ export interface GuideHooks {
   onPart(): void;
   /** A key of the band was pressed: the walk starts if it had not. */
   onKey(): void;
+  /** The guide has said all of a part, and waits for the visitor. */
+  onTold?(): void;
 }
 export interface Guide {
   /** The tour being taken, if one is, and the part it is at. */
@@ -299,7 +301,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
     if (!box.matches?.('details.guide__words')) return;
     if (setting) setting = false; else words = box.open;
   };
-  const onEnded = () => { sync(); keepUp(); };
+  const onEnded = () => { sync(); keepUp(); if (mine()) hooks.onTold?.(); };
   /** Once she is speaking, the recording of the next part is fetched, so that it starts without a wait. */
   const onPlaying = () => {
     sync();

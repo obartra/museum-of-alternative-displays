@@ -27,7 +27,7 @@ television switched on with its degauss clicks (https://freesound.org/people/Fis
 | Piece | Recording | Why it waits |
 | --- | --- | --- |
 | Drone show | One quadcopter taking off and landing (https://freesound.org/s/263022/, Alcappuccino, CC0) | It is the real machine, but one of them, not a show of hundreds. Layering copies would be a made sound. |
-| Split-flap board | One Pragotron module, close, with a contact microphone (https://freesound.org/s/174056, matucha) | The closest recording found, but its licence is non-commercial. The author could be asked. |
+| Split-flap board | One Pragotron module, close, with a contact microphone (https://freesound.org/s/174056, matucha, CC BY-NC 4.0) | Used: the owner decided on 22 November 2026 that the museum, which is non-commercial, takes it under its own licence, credited. |
 
 ## Left out on purpose
 

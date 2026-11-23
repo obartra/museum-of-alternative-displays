@@ -91,6 +91,8 @@ export class Gallery {
   private owed = 4;
   private beat = 0;
   private free = false;
+  /** A tap on the hall, offered first to whoever opened it: true takes it, and the visitor does not walk. */
+  tapped?: () => boolean;
   private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean };
   /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
   private twin?: number;
@@ -301,6 +303,7 @@ export class Gallery {
     if (!d || d.id !== e.pointerId) return;
     this.drag = undefined;
     if (d.moved || performance.now() - d.t0 > 600) return;
+    if (this.tapped?.()) return;
     // a click or a tap: go to the piece under it, or walk to that place on the floor
     const r = this.canvas.getBoundingClientRect();
     this.camera.updateMatrixWorld();

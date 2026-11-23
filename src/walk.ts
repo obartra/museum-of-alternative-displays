@@ -7,7 +7,8 @@ import { nearHtml, openNear, type Lent } from './near';
 import { labelPeople, openWho } from './who';
 import { hush, tourName, toursNow, keepStop } from './tour';
 import { goTo, link, nameNow, placeOf, setAddress } from './place';
-import { fullKey, nameFullKey } from './icons';
+import { bareKey, fullKey, nameFullKey } from './icons';
+import { openBare, onTap } from './bare';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -87,6 +88,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <button type="button" class="walk__key walk__look" id="walk-look" hidden>${LOOK}<span>${tx('walk.near')}</span></button>
   <p class="walk__cc" id="walk-cc" aria-hidden="true" hidden></p>
   ${nearHtml()}
+  <p class="bare__hint" id="walk-bare" aria-live="polite"></p>
 </div>
 <section class="guide" id="walk-guide" aria-label="${tx('tour.label')}" hidden></section>
 <p class="walk__where" id="walk-where" aria-live="polite"></p>
@@ -114,6 +116,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <span class="gap"></span>
   ${o.switchHtml}
   <button type="button" class="btn" data-walk="vr" hidden>${tx('walk.vr')}</button>
+  ${bareKey('data-walk="bare"', tx('stage.clear'))}
   ${fullKey('data-walk="full"', tx('stage.expand'))}
 </div>
 <p class="walk__intro" id="walk-intro"></p>
@@ -207,6 +210,17 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       if (within) (look.hidden ? canvas : look)?.focus({ preventScroll: true });
     },
   });
+  // picture only: the hall or the piece up close, and nothing else on it
+  const bare = openBare({
+    root: host,
+    hint: document.getElementById('walk-bare')!,
+    keys: () => [...host.querySelectorAll<HTMLElement>('[data-walk="bare"]')],
+    canvas: () => host.querySelector<HTMLElement>('#walk-near canvas.gl') ?? canvas,
+    active: () => !closed && !who.open && host.isConnected,
+    show: () => { const r = view.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) view.scrollIntoView({ block: r.height > innerHeight ? 'start' : 'center', behavior: calm ? 'auto' : 'smooth' }); },
+  });
+  // up close, a tap on the piece brings the controls back. In the hall the hall itself is asked (gallery.tapped)
+  const untapNear = onTap(document.getElementById('walk-near')!, () => { if (bare.on) bare.set(false); });
   /** Bring the piece the visitor stands in front of up close. Not on the way somewhere: the hall has to have come to rest. */
   const lookAt = (id?: string) => {
     if (!id || !gallery || !o.stage || gallery.gliding || near.piece === id) return;
@@ -227,6 +241,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     enter: (id) => { follow(id, { say: true }); if (guide.tour && small()) setFull(true); else void go(); },
     leave: () => { follow(''); (host.querySelector<HTMLElement>('.guide__start') ?? canvas)?.focus({ preventScroll: true }); },
     onPart: () => { mark(); layWho(); },
+    onTold: () => bare.set(false),
     onKey: () => { if (gallery) quiet(); void go(); },
   });
   /**
@@ -288,6 +303,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
           onStep: (by) => guide.step(by),
           onLook: (id) => lookAt(id),
         });
+        gallery.tapped = () => { if (!bare.on) return false; bare.set(false); return true; };
       } catch {
         canvas.remove(); canvas = null;
         return fail(t('walk.fail.graphics'));
@@ -394,6 +410,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (name === 'prev') gallery?.next(-1);
     if (name === 'next') gallery?.next(1);
     if (name === 'full') setFull(!host.classList.contains('is-full'));
+    if (name === 'bare') bare.set(!bare.on);
     if (name === 'vr' && gallery) {
       vrBtn.disabled = true;
       void gallery.enterVR(() => { vrBtn.disabled = false; }).catch(() => { vrBtn.disabled = false; note.textContent = t('walk.vr.fail'); });
@@ -480,6 +497,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       guide.close();
       who.close();
       near.close();
+      bare.set(false); bare.close(); untapNear();
       gallery?.dispose(); gallery = null;
     },
   };

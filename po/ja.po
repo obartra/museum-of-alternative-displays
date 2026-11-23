@@ -547,6 +547,12 @@ msgstr "フィラデルフィアの30丁目駅の案内板が切り替わる音"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Pragotronの案内板の一つのモジュールを間近で録った音"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "テレビの電源を入れた音と、走査線のかん高い音"

@@ -544,6 +544,12 @@ msgstr "Табло на вокзале 30th Street в Филадельфии, к
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Один модуль табло Pragotron, вблизи"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "Телевизор включается, со свистом своих строк"

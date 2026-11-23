@@ -548,6 +548,12 @@ msgstr "O painel da estação 30th Street, na Filadélfia, virando"
 
 #: interface
 #. Interface.
+msgctxt "ui.sound.pragotron"
+msgid "One module of a Pragotron board, close up"
+msgstr "Um módulo de um painel Pragotron, de perto"
+
+#: interface
+#. Interface.
 msgctxt "ui.sound.crt-on"
 msgid "A television switched on, with the whistle of its lines"
 msgstr "Um televisor sendo ligado, com o assobio das suas linhas"
