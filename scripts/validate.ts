@@ -259,9 +259,9 @@ const marks = (x: string) => (x.match(/\{\/?\w+\}/g) ?? []).sort().join(' ');
 /** What a word after a figure multiplies it by, in the languages of the museum. The longer words come first. */
 const UNITS: [string, number][] = [
   ['mil millones', 1e9], ['mil milions', 1e9], ['milliards', 1e9], ['milliard', 1e9], ['milliarden', 1e9], ['milliarde', 1e9], ['mrd.', 1e9], ['billion', 1e9], ['十亿', 1e9], ['十億', 1e9], ['십억', 1e9],
-  ['bilhões', 1e9], ['bilhão', 1e9], ['miliardi', 1e9], ['miliardoj', 1e9], ['miliardów', 1e9], ['miliardy', 1e9], ['miliardo', 1e9], ['miliard', 1e9], ['miljard', 1e9], ['mld', 1e9], ['миллиардов', 1e9], ['миллиарда', 1e9], ['миллиард', 1e9], ['млрд', 1e9],
+  ['bilhões', 1e9], ['bilhão', 1e9], ['miliardi', 1e9], ['miliardoj', 1e9], ['miliardów', 1e9], ['miliardy', 1e9], ['miliardo', 1e9], ['miliard', 1e9], ['miljard', 1e9], ['mld', 1e9], ['миллиардами', 1e9], ['миллиардам', 1e9], ['миллиардах', 1e9], ['миллиардов', 1e9], ['миллиарда', 1e9], ['миллиард', 1e9], ['млрд', 1e9],
   ['millones', 1e6], ['millón', 1e6], ['milions', 1e6], ['milió', 1e6], ['millionen', 1e6], ['millions', 1e6], ['million', 1e6], ['mio.', 1e6], ['百万', 1e6], ['百萬', 1e6], ['백만', 1e6],
-  ['milhões', 1e6], ['milhão', 1e6], ['milioni', 1e6], ['milionoj', 1e6], ['milionów', 1e6], ['miliony', 1e6], ['milione', 1e6], ['miliono', 1e6], ['milion', 1e6], ['miljoen', 1e6], ['mln', 1e6], ['миллионов', 1e6], ['миллиона', 1e6], ['миллион', 1e6], ['млн', 1e6],
+  ['milhões', 1e6], ['milhão', 1e6], ['milioni', 1e6], ['milionoj', 1e6], ['milionów', 1e6], ['miliony', 1e6], ['milione', 1e6], ['miliono', 1e6], ['milion', 1e6], ['miljoen', 1e6], ['mln', 1e6], ['миллионами', 1e6], ['миллионам', 1e6], ['миллионах', 1e6], ['миллионов', 1e6], ['миллиона', 1e6], ['миллион', 1e6], ['млн', 1e6],
   ['千万', 1e7], ['千萬', 1e7], ['천만', 1e7], ['亿', 1e8], ['億', 1e8], ['억', 1e8], ['万', 1e4], ['萬', 1e4], ['만', 1e4],
   ['thousand', 1e3], ['tausend', 1e3], ['mille', 1e3], ['mila', 1e3], ['mil', 1e3], ['duizend', 1e3], ['тысячи', 1e3], ['тысяча', 1e3], ['тысяч', 1e3], ['тыс.', 1e3], ['tysięcy', 1e3], ['tysiące', 1e3], ['tysiąc', 1e3], ['tys.', 1e3], ['千', 1e3],
 ];
