@@ -35,10 +35,10 @@ export const tours: Tour[] = [
   {
     id: 'women',
     title: 'Women in the museum',
-    lead: 'A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors.',
+    lead: 'A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman on its label.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors.',
+        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman on its label.',
         'The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins.',
       ] },
       { id: 'braille-display', title: 'Read by touch', stand: { wide: 2.1, aim: 0.2 }, who: ['Andrée Tretiakoff'], text: [
@@ -108,7 +108,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'cave', title: 'A room drawn for one head', who: ['Carolina Cruz-Neira'], text: [
         'Stand at the open side of the room. Three walls and the floor are screens. The figure inside wears shutter glasses, and the picture is drawn for its eyes. So from where you stand, the scene breaks at the corners. Press the Take the figure\'s place button, and it joins up.',
-        'The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992.',
+        'The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992.',
         'A headset, nearby in this hall, turns its screens with the head. Here the screens stay still, and the visitor walks among them. That was the last stop of the green line.',
       ] },
       { id: 'end', title: 'The end of the green line', text: [

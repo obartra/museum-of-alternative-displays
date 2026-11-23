@@ -100,3 +100,8 @@ export const standIn = {
   view: (pieceId: string, id: string): string => (loc && !loc.views?.[pieceId]?.[id] ? ' lang="en"' : ''),
   media: (pieceId: string, id: string): string => (loc && !loc.media?.[pieceId]?.[id] ? ' lang="en"' : ''),
 };
+
+/** The words of a picture credit that are the museum's own, said in the language in use: the licence named
+ * 'Public domain' and the author 'Unknown artist'. Names and other licences stay as their source writes them. */
+export const creditWords = (text: string): string =>
+  text.replace(/^Public domain$/, t('credit.pd')).replace(/\bUnknown artist\b/, t('credit.unknown'));

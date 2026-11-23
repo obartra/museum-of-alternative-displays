@@ -141,6 +141,7 @@ ${ways}`,
   }
 
   for (const p of pieces) {
+    const words = (text: string) => text.replace(/^Public domain$/, w.ui('credit.pd')).replace(/\bUnknown artist\b/, w.ui('credit.unknown'));
     const x = w.piece(p), hall = halls.find((h) => h.id === p.hall)!, credit = people[p.id], did = credit ? w.credit(p.id, credit) : undefined;
     const sources = [...p.sources, ...(credit?.sources ?? []).filter((s) => !p.sources.some((own) => own.url === s.url))];
     const i = pieces.indexOf(p), near = [pieces[i - 1], pieces[i + 1]].filter((q) => !!q);
@@ -172,7 +173,7 @@ ${x.aka ? `<p>${esc(w.ui('piece.aka', { names: x.aka }))}</p>` : ''}
 <h2>${esc(w.ui('piece.bad'))}</h2>${list(x.bad)}
 <p>${esc(x.statusNote)}</p>
 ${credit && did ? `<h2>${esc(w.ui('piece.people'))}</h2>${credit.people.map((e, k) => `<p><strong>${e.who.map((n) => personName(n, w.pre)).join(', ')}.</strong> ${esc(did.did[k])}</p>`).join('')}${did.note ? `<p>${esc(did.note)}</p>` : ''}` : ''}
-${held.length ? `<h2>${esc(w.ui('archive.title'))}</h2><ul>${held.map(({ m, own, file }) => `<li><a href="${esc(file)}">${esc(own.caption)}</a>${own.year ? ` ${esc(own.year)}.` : ''} ${esc(w.ui(`archive.kind.${m.kind}`))}, ${esc(w.ui('archive.by', { author: m.credit.author }))}. ${esc(m.credit.licence)}. <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.archive ?? w.ui('archive.commons'))}</a></li>`).join('')}</ul>` : ''}
+${held.length ? `<h2>${esc(w.ui('archive.title'))}</h2><ul>${held.map(({ m, own, file }) => `<li><a href="${esc(file)}">${esc(own.caption)}</a>${own.year ? ` ${esc(own.year)}.` : ''} ${esc(w.ui(`archive.kind.${m.kind}`))}, ${esc(w.ui('archive.by', { author: words(m.credit.author) }))}. ${esc(words(m.credit.licence))}. <a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.archive ?? w.ui('archive.commons'))}</a></li>`).join('')}</ul>` : ''}
 <h2>${esc(w.ui('piece.sources'))}</h2><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul>
 <p>${near.map((q) => `<a href="${w.pre}piece/${q.id}/">${esc(w.piece(q).name)}</a>`).join(' / ')}</p>
 ${ways}`,
@@ -208,14 +209,14 @@ ${ways}`,
     const lines = who.on.map(({ piece, k }) => w.credit(piece, people[piece]).did[k]);
     const sources = personSources(who);
     const told = bio ? w.bio(who.slug, bio.about) : undefined;
-    const life = bio?.born ? (bio.died ? w.ui('person.life', { born: bio.born, died: bio.died }) : w.ui('person.born', { born: bio.born })) : '';
+    const life = bio?.born ? (bio.died ? w.ui('person.life', { born: bio.born, died: Array.isArray(bio.died) ? w.ui('person.either', { a: bio.died[0], b: bio.died[1] }) : bio.died }) : w.ui('person.born', { born: bio.born })) : '';
     const path = `person/${who.slug}/`;
     out.push({
       name: `person-${who.slug}`, path, title: titled(who.name), short: who.name, says: told?.own ? told.about.join(' ') : lines[0], kind: 'ProfilePage',
       crumbs: [home, [w.ui('nav.people'), 'people/'], [who.name, path]],
       ...(pic ? { pictures: [`people/${pic.file}`] } : {}),
       more: {
-        mainEntity: { ...person(who.name), description: told?.own ? told.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died ? { deathDate: String(bio.died) } : {}) },
+        mainEntity: { ...person(who.name), description: told?.own ? told.about.join(' ') : lines[0], ...(bio?.born ? { birthDate: String(bio.born) } : {}), ...(bio?.died && !Array.isArray(bio.died) ? { deathDate: String(bio.died) } : {}) },
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url })),
       },
       body: `<p><a href="${w.pre}people/">${esc(w.ui('people.more'))}</a></p>

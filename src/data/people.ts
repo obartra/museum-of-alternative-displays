@@ -21,7 +21,7 @@ export const people: Record<string, Credit> = {
       { who: ['Gino Valle'], did: 'Designer credited with the form of the boards made by Solari.' },
       { who: ['John Myer'], did: 'Worked with Valle on the Cifra 5, Solari\'s flap clock of the mid 1950s. Finestre sull\'Arte calls him a Belgian inventor and gives him the idea of its two numbered rollers.' },
     ],
-    note: 'No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège.',
+    note: 'No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. Finestre sull\'Arte says Solari\'s numerals first changed in station clocks, such as one at Florence\'s Santa Maria Novella from the 1930s. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège.',
     sources: [
       src('archive', 'Cifra 5 Electro-mechanical clock, ADI Design Museum', 'https://www.adidesignmuseum.org/en/collection/cifra-5-electro-mechanical-clock/'),
       src('press', 'The Cifra 5 electromechanical clock: the Solari revolution, Finestre sull\'Arte', 'https://www.finestresullarte.info/en/works-and-artists/the-cifra-5-electromechanical-clock-the-solari-revolution'),
@@ -48,11 +48,12 @@ export const people: Record<string, Credit> = {
   'braille-display': {
     people: [
       { who: ['Oleg Tretiakoff', 'Andrée Tretiakoff'], she: ['Andrée Tretiakoff'], did: 'Patented braille dots raised by bending piezoelectric reeds, in a United States patent filed in 1975 and granted in 1977. A later patent of theirs claims a French application of August 1974.' },
-      { who: ['Klaus Peter Schönherr'], did: 'A collector\'s history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm\'s braille terminal in use at the University of Tübingen from December 1976.' },
+      { who: ['Klaus Peter Schönherr'], did: 'Invented in 1975 a braille element that could show and erase characters, by a collector\'s history; piezoelectric, by the National Federation of the Blind. His firm\'s terminal served Tübingen University from 1976.' },
       { who: ['James Bryce'], did: 'Began at IBM a working braille display. It is the earliest in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949.' },
     ],
     sources: [
       src('patent', 'Tretiakoff and Tretiakoff, US patent 4,044,350', 'https://patents.google.com/patent/US4044350'),
+      src('archive', 'The Information Age Braille Technology Timeline, National Federation of the Blind, Future Reflections', 'https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm'),
       src('archive', 'A Brief History of the Refreshable Braille Display, American Printing House for the Blind', 'https://aph.org/blog/blindness-history-basics-a-brief-history-of-the-refreshable-braille-display/'),
       src('archive', 'A timeline of braille, Future Reflections, National Federation of the Blind', 'https://nfb.org/images/nfb/publications/fr/fr45/2/fr450210.htm'),
     ],
@@ -69,7 +70,7 @@ export const people: Record<string, Credit> = {
       { who: ['Ferdinand Braun'], did: 'Built a cathode ray oscillograph at Strasbourg in 1897, the Braun tube. Britannica calls it the first oscilloscope.' },
       { who: ['Kenjiro Takayanagi'], did: 'Showed a television receiver built on a cathode ray tube, in Japan in 1926.' },
       { who: ['Philo Farnsworth'], did: 'His team at 202 Green Street, San Francisco, sent its first television picture on 7 September 1927. California Historical Landmark 941 calls it the first all-electronic television image.' },
-      { who: ['Elma Farnsworth'], she: ['Elma Farnsworth'], did: 'Known as Pem. On the laboratory team in San Francisco she kept the logbooks, made technical drawings and spot welded the tube elements. Hers was among the first faces the system sent.' },
+      { who: ['Elma Farnsworth'], she: ['Elma Farnsworth'], did: 'Known as Pem. On the laboratory team she kept the logbooks, made drawings and spot welded tube elements. Hers was among the first faces it sent, the Associated Press reported, citing Donald G. Godfrey.' },
       { who: ['Marie Van Brittan Brown', 'Albert Brown'], she: ['Marie Van Brittan Brown'], did: 'A nurse in New York and her husband, an electronics technician. Their home security system of 1966 showed the caller on a television monitor, through a camera sliding between four peepholes. Patented in 1969.' },
       { who: ['Mark Dean'], did: 'Engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monochrome and its colour monitor.' },
     ],
@@ -82,7 +83,7 @@ export const people: Record<string, Credit> = {
   'colour-wheel-television': {
     people: [
       { who: ['Guillermo González Camarena'], did: 'Mexican electrical engineer. He patented the adapter in Mexico in 1940, at the age of 23, and in the United States two years later.' },
-      { who: ['A. Frankenstein', 'W. von Jaworski'], aside: true, did: 'Named on German patent 172 376, for seeing pictures at a distance by selenium cells, three colour filters and mirrors. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903.' },
+      { who: ['A. Frankenstein', 'W. von Jaworski'], aside: true, did: 'Named on German patent 172 376: selenium cells, mirrors and turning discs of red, blue and yellow glass. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903.' },
       { who: ['Peter Goldmark'], did: 'Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years.' },
     ],
   },
@@ -293,7 +294,8 @@ export const people: Record<string, Credit> = {
     note: 'Projection onto fountains and curtains of water is older. A patent for an ornamental fountain screen dates from 1899.',
   },
   'persistence-of-vision': {
-    people: [{ who: ['Joseph Plateau'], did: 'Used the effect in his spinning picture discs of 1832.' }],
+    people: [{ who: ['Joseph Plateau'], did: 'Used the effect in his spinning picture discs of 1832. The Museum of the History of Science at Oxford says Simon Stampfer in Vienna made the same disc independently, and patented it first.' }],
+    sources: [src('archive', 'Phenakistiscope, History of Science Museum, University of Oxford', 'https://www.mhs.ox.ac.uk/exhibits/fancy-names-and-fun-toys/phenakistiscopes/index.html')],
     note: 'Persistence of vision is the traditional name, not a full explanation. The way the eye and brain merge flicker and perceive motion is more complex. No first maker of the spinning LED kind is agreed.',
   },
   'swept-volume': {

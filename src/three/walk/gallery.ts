@@ -93,7 +93,7 @@ export class Gallery {
   private free = false;
   /** A tap on the hall, offered first to whoever opened it: true takes it, and the visitor does not walk. */
   tapped?: () => boolean;
-  private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean };
+  private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean; two?: boolean };
   /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
   private twin?: number;
   private stops?: number[];
@@ -275,7 +275,8 @@ export class Gallery {
   private onLost = (e: Event): void => { e.preventDefault(); this.stop(); };
 
   private onDown = (e: PointerEvent): void => {
-    if (this.drag) { if (e.pointerType === 'touch' && this.twin === undefined) this.twin = e.pointerId; return; }
+    // a second finger makes it a two-finger gesture: it turns, and it is never a tap
+    if (this.drag) { this.drag.two = true; if (e.pointerType === 'touch' && this.twin === undefined) this.twin = e.pointerId; return; }
     if (e.pointerType === 'mouse' && e.button !== 0) return;
     this.drag = { id: e.pointerId, x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t0: performance.now(), moved: false };
     try { this.canvas.setPointerCapture(e.pointerId); } catch { /* the pointer has already gone */ }
@@ -302,7 +303,7 @@ export class Gallery {
     const d = this.drag;
     if (!d || d.id !== e.pointerId) return;
     this.drag = undefined;
-    if (d.moved || performance.now() - d.t0 > 600) return;
+    if (d.moved || d.two || performance.now() - d.t0 > 600) return;
     if (this.tapped?.()) return;
     // a click or a tap: go to the piece under it, or walk to that place on the floor
     const r = this.canvas.getBoundingClientRect();

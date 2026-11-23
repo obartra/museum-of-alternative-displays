@@ -154,7 +154,8 @@ for (const tour of tours) {
     if (!bio.about.length || bio.about.length > 4) errors.push(`${at}: one to four short paragraphs, not ${bio.about.length}`);
     if (!bio.sources.length) errors.push(`${at}: needs the sources it rests on`);
     if (bio.sources.every((s) => s.kind === 'reference')) errors.push(`${at}: needs a source that is not an encyclopedia`);
-    if (bio.born && bio.died && bio.died <= bio.born) errors.push(`${at}: died before being born`);
+    const last = Array.isArray(bio.died) ? bio.died[0] : bio.died;
+    if (bio.born && last && last <= bio.born) errors.push(`${at}: died before being born`);
     if (bio.died && !bio.born) errors.push(`${at}: a year of death without a year of birth`);
     for (const line of bio.about) {
       const words = line.split(/\s+/).length;

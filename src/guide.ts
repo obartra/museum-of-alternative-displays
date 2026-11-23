@@ -88,9 +88,18 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
 
   const told = () => said.tour(tour!)!;
   const index = () => tour!.parts.findIndex((p) => p.id === at);
-  const clip = () => (tour ? clipOf(tour, at) : '');
+  // a recording that would not load (offline and not kept, or missing) counts as none: the stop is read, not heard
+  const failed = new Set<string>();
+  const clip = () => { const url = tour ? clipOf(tour, at) : ''; return url && !failed.has(url) ? url : ''; };
   /** The player holds the recording of the part the tour is at. */
   const mine = () => { const url = clip(); return !!url && a.src === url; };
+  const onError = () => {
+    const url = tour ? clipOf(tour, at) : '';
+    if (!url || a.src !== url || failed.has(url)) return;
+    failed.add(url); drop(); waiting = '';
+    // the words open, since they are now the only way to have this stop
+    words = undefined; draw();
+  };
   /** The guide is in the middle of this part: about to speak, speaking, or stopped part of the way through it. */
   const busy = () => sound && (!!waiting || (mine() && !a.ended && (!a.paused || a.currentTime > 0)));
   /** The stop at which a part is told: its own, and for the closing words the last one. */
@@ -314,6 +323,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   root.addEventListener('toggle', onToggle, true);
   for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.addEventListener(name, sync);
   a.addEventListener('ended', onEnded);
+  a.addEventListener('error', onError);
   a.addEventListener('playing', onPlaying);
   try {
     navigator.mediaSession?.setActionHandler('previoustrack', () => { guide.step(-1); });
@@ -370,6 +380,7 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
       root.removeEventListener('click', onClick);
       root.removeEventListener('toggle', onToggle, true);
       for (const name of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'error', 'emptied'] as const) a.removeEventListener(name, sync);
+      a.removeEventListener('error', onError);
       a.removeEventListener('ended', onEnded);
       a.removeEventListener('playing', onPlaying);
       try {

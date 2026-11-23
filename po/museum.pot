@@ -528,6 +528,18 @@ msgid "Hear it"
 msgstr ""
 
 #: interface
+#. Interface.
+msgctxt "ui.credit.pd"
+msgid "Public domain"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.credit.unknown"
+msgid "Unknown artist"
+msgstr ""
+
+#: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.
 msgctxt "ui.piece.sound.credit"
 msgid "Recording: {a}{title}{/a} by {by}, {licence}"
@@ -1452,6 +1464,12 @@ msgid "Born {born}"
 msgstr ""
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.either"
+msgid "{a} or {b}"
+msgstr ""
+
+#: interface
 #. Interface.
 msgctxt "ui.person.elsewhere"
 msgid "Read more elsewhere"
@@ -1958,7 +1976,7 @@ msgstr ""
 #: hall-1/split-flap
 #. Note under the People section.
 msgctxt "piece.split-flap.note"
-msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
+msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. Finestre sull'Arte says Solari's numerals first changed in station clocks, such as one at Florence's Santa Maria Novella from the 1930s. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
 msgstr ""
 
 #: hall-1/split-flap
@@ -2690,7 +2708,7 @@ msgstr ""
 #: hall-1/braille-display
 #. People section: what Klaus Peter Schönherr did. The names stand above this line.
 msgctxt "piece.braille-display.people.2"
-msgid "A collector's history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm's braille terminal in use at the University of Tübingen from December 1976."
+msgid "Invented in 1975 a braille element that could show and erase characters, by a collector's history; piezoelectric, by the National Federation of the Blind. His firm's terminal served Tübingen University from 1976."
 msgstr ""
 
 #: hall-1/braille-display
@@ -2960,7 +2978,7 @@ msgstr ""
 #: hall-2/cathode-ray-tube
 #. People section: what Elma Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.4"
-msgid "Known as Pem. On the laboratory team in San Francisco she kept the logbooks, made technical drawings and spot welded the tube elements. Hers was among the first faces the system sent."
+msgid "Known as Pem. On the laboratory team she kept the logbooks, made drawings and spot welded tube elements. Hers was among the first faces it sent, the Associated Press reported, citing Donald G. Godfrey."
 msgstr ""
 
 #: hall-2/cathode-ray-tube
@@ -3158,7 +3176,7 @@ msgstr ""
 #: hall-2/colour-wheel-television
 #. People section: what A. Frankenstein, W. von Jaworski did. The names stand above this line.
 msgctxt "piece.colour-wheel-television.people.2"
-msgid "Named on German patent 172 376, for seeing pictures at a distance by selenium cells, three colour filters and mirrors. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
+msgid "Named on German patent 172 376: selenium cells, mirrors and turning discs of red, blue and yellow glass. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
 msgstr ""
 
 #: hall-2/colour-wheel-television
@@ -7232,7 +7250,7 @@ msgstr ""
 #: hall-6/persistence-of-vision
 #. People section: what Joseph Plateau did. The names stand above this line.
 msgctxt "piece.persistence-of-vision.people.1"
-msgid "Used the effect in his spinning picture discs of 1832."
+msgid "Used the effect in his spinning picture discs of 1832. The Museum of the History of Science at Oxford says Simon Stampfer in Vienna made the same disc independently, and patented it first."
 msgstr ""
 
 #: hall-6/persistence-of-vision
@@ -9074,7 +9092,7 @@ msgstr ""
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors."
+msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman on its label."
 msgstr ""
 
 #: tour-women
@@ -9086,7 +9104,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman on its label."
 msgstr ""
 
 #: tour-women
@@ -9422,7 +9440,7 @@ msgstr ""
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cave.text.2"
-msgid "The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
+msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
 msgstr ""
 
 #: tour-women
@@ -10286,7 +10304,7 @@ msgstr ""
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.philo-farnsworth.about.3"
-msgid "The Radio Corporation of America challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court ruled in his favour in 1935, and in 1939 the company agreed to pay him royalties."
+msgid "The Radio Corporation of America challenged his patent in 1932. The Patent Office ruled for him in 1935, and upheld its ruling in 1936. The Linda Hall Library says Tolman's copy of the 1922 sketch helped. In 1939 the company agreed to pay him royalties."
 msgstr ""
 
 #: people
@@ -10406,7 +10424,7 @@ msgstr ""
 #: people
 #. About A. Frankenstein, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.a-frankenstein.about.1"
-msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The listing describes selenium cells, three colour filters and mirrors that split the picture into groups of points."
+msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The patent describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
 msgstr ""
 
 #: people
@@ -10418,7 +10436,7 @@ msgstr ""
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.1"
-msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. Its title spoke of making pictures and objects visible at a distance with selenium cells, three colour filters and mirrors."
+msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. It describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
 msgstr ""
 
 #: people
@@ -12470,7 +12488,7 @@ msgstr ""
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.ivan-sutherland.about.3"
-msgid "In 1968, with the help of the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
+msgid "In 1968, with the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
 msgstr ""
 
 #: people
@@ -12596,7 +12614,7 @@ msgstr ""
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.samuel-achilefu.about.2"
-msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with help from Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
+msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
 msgstr ""
 
 #: people

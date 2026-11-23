@@ -200,8 +200,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     wait: () => coarse,
     // the hall is covered: it stops drawing, and its keys and its canvas are out of reach until it is uncovered
     onOpen: () => { gallery?.stop(); host.classList.add('is-near'); if (canvas) canvas.inert = true; layLook(); layWho(); },
-    onShut: () => {
-      const within = host.querySelector('#walk-near')!.contains(document.activeElement);
+    onShut: (had) => {
+      // also from a face on the plate, which stands outside the look
+      const within = had || host.querySelector('#walk-who')!.contains(document.activeElement);
+      bare.set(false);
       host.classList.remove('is-near');
       if (canvas) canvas.inert = false;
       if (!closed && !document.hidden) gallery?.start();
@@ -333,6 +335,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   let stepped = false;
   const setFull = (full: boolean, byBack = false) => {
     if (full === host.classList.contains('is-full')) return;
+    if (!full) bare.set(false);
     // leaving full view by its button ends a closer look as well: the step back is then full view's own
     if (!full && !byBack) near.shut();
     // closing by the button takes the step back, and the browser tells us when it has: `onPop` then sees to the address

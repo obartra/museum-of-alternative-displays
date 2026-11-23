@@ -2,7 +2,7 @@ import { media, type Media } from './data/media';
 import { pieces } from './data/pieces';
 import { esc } from './html';
 import { link } from './place';
-import { comma, said, standIn, t, tx } from './i18n';
+import { comma, creditWords, said, standIn, t, tx } from './i18n';
 
 /**
  * "From the archive": real photographs, drawings and short films beside the model, each with its credit.
@@ -11,7 +11,7 @@ import { comma, said, standIn, t, tx } from './i18n';
 
 /** "Photograph, 1936" or "Film, 12 seconds, silent, 2019": what kind of thing it is, as an archive card would put it. */
 const kindLine = (m: Media) => [t(`archive.kind.${m.kind}`), m.kind === 'film' ? t('archive.film.length', { n: Math.round(m.seconds) }) : '', m.year ?? ''].filter(Boolean).join(comma());
-const licence = (m: Media) => (m.credit.licenceUrl ? `<a href="${esc(m.credit.licenceUrl)}" rel="noopener license">${esc(m.credit.licence)}</a>` : esc(m.credit.licence));
+const licence = (m: Media) => (m.credit.licenceUrl ? `<a href="${esc(m.credit.licenceUrl)}" rel="noopener license">${esc(creditWords(m.credit.licence))}</a>` : esc(creditWords(m.credit.licence)));
 /** The small picture for the row. A film is shown by one frame of it. */
 const small = (m: Media) => (m.kind === 'film' ? m.poster.replace(/-poster\.webp$/, '-poster-480.webp') : m.small);
 
@@ -25,7 +25,7 @@ export function archiveSection(pieceId: string): string {
   <button type="button" class="mount__open" data-media="${i}"><span class="vh">${tx(m.kind === 'film' ? 'archive.playFilm' : 'archive.enlarge')}. </span><img src="${esc(small(m))}" alt="${esc(m.alt)}"${standIn.media(pieceId, m.id)} width="${m.width}" height="${m.height}" loading="lazy" decoding="async">${m.kind === 'film' ? `<span class="mount__play" aria-hidden="true">${tx('archive.film.badge', { n: Math.round(m.seconds) })}</span>` : ''}</button>
   <p class="mount__kind">${esc(kindLine(m))}</p>
   <p class="mount__cap"${standIn.media(pieceId, m.id)}>${esc(m.caption)}</p>
-  <p class="mount__credit">${esc(m.credit.author)}${comma()}${licence(m)}</p>
+  <p class="mount__credit">${esc(creditWords(m.credit.author))}${comma()}${licence(m)}</p>
 </li>`;
   return `<section class="archive stack" style="--gap: 12px" aria-labelledby="archive-h">
   <h2 class="h-sec" id="archive-h">${tx('archive.title')}</h2>
@@ -58,7 +58,7 @@ export function wireArchive(root: HTMLElement, pieceId: string, pieceName: strin
   <div class="viewer__head"><p class="viewer__kind">${esc(kindLine(m))}</p><button type="button" class="btn" data-v="close" autofocus>${tx('stage.close')}</button></div>
   <p class="viewer__cap"${en}>${esc(m.caption)}</p>
   <dl class="card">
-    ${row(tx('archive.madeBy'), esc(m.credit.author))}
+    ${row(tx('archive.madeBy'), esc(creditWords(m.credit.author)))}
     ${row(tx('archive.licence'), licence(m))}
     ${row(tx('archive.source'), `<a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${esc(m.credit.archive ?? t('archive.commons'))}`)}
     ${row(tx('archive.changes'), `<span${en}>${esc(m.credit.changes)}</span>`)}
@@ -130,7 +130,7 @@ export function creditsList(): string {
   for (const p of pieces) {
     const list = archiveOf(p.id);
     if (!list.length) continue;
-    const lines = list.map((m) => `<li><a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${tx('archive.by', { author: m.credit.author })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. <span${standIn.media(p.id, m.id)}>${esc(m.credit.changes)}</span>.</li>`);
+    const lines = list.map((m) => `<li><a href="${esc(m.credit.source)}" rel="noopener">${esc(m.credit.title)}</a>${comma()}${tx('archive.by', { author: creditWords(m.credit.author) })}. ${esc(m.credit.archive ?? t('archive.commons'))}. ${licence(m)}. <span${standIn.media(p.id, m.id)}>${esc(m.credit.changes)}</span>.</li>`);
     blocks.push(`<li><a class="credits__piece" href="${link(`piece-${p.id}`)}">${esc(said.piece(p).name)}</a><ul>${lines.join('')}</ul></li>`);
   }
   return blocks.length ? `<ul class="credits">${blocks.join('')}</ul>` : '';

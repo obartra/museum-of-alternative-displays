@@ -2,6 +2,8 @@
 # How to work on this file: TRANSLATING.md at the top of the repository.
 # 
 # Español. The Spanish of Spain, with the visitor addressed as "tú".
+# The guided tours (tour.*) are spoken by a guide from the River Plate, with voseo, by the owner's choice.
+# Button names quoted in them stay as the screen shows them.
 # A display with a picture surface is a "pantalla", a readout of fixed segments is a "visualizador", a board is a "panel".
 # The room every piece stands in is "la habitación", so that "sala" stays free for the seven halls.
 msgid ""
@@ -532,6 +534,18 @@ msgstr "Fuente: {a}{label}{/a}"
 msgctxt "ui.piece.sound"
 msgid "Hear it"
 msgstr "Escúchalo"
+
+#: interface
+#. Interface.
+msgctxt "ui.credit.pd"
+msgid "Public domain"
+msgstr "Dominio público"
+
+#: interface
+#. Interface.
+msgctxt "ui.credit.unknown"
+msgid "Unknown artist"
+msgstr "Artista desconocido"
 
 #: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.
@@ -1458,6 +1472,12 @@ msgid "Born {born}"
 msgstr "Nacimiento: {born}"
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.either"
+msgid "{a} or {b}"
+msgstr "{a} o {b}"
+
+#: interface
 #. Interface.
 msgctxt "ui.person.elsewhere"
 msgid "Read more elsewhere"
@@ -1964,8 +1984,8 @@ msgstr "Trabajó con Valle en el Cifra 5, el reloj de láminas de Solari de medi
 #: hall-1/split-flap
 #. Note under the People section.
 msgctxt "piece.split-flap.note"
-msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
-msgstr "No consta ningún inventor del mecanismo en sí. El panel más antiguo documentado se instaló en la estación de Lieja en 1956. Las fuentes encontradas vinculan a Valle y a Myer con el reloj, y a Valle con los paneles posteriores. Ninguna vincula a ninguno de los dos con Lieja."
+msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. Finestre sull'Arte says Solari's numerals first changed in station clocks, such as one at Florence's Santa Maria Novella from the 1930s. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
+msgstr "No consta ningún inventor del mecanismo en sí. El panel más antiguo documentado se instaló en la estación de Lieja en 1956. Finestre sull'Arte dice que las cifras de Solari cambiaron primero en relojes de estación, como uno de Santa Maria Novella, en Florencia, de los años 1930. Las fuentes encontradas vinculan a Valle y a Myer con el reloj, y a Valle con los paneles posteriores. Ninguna vincula a ninguno de los dos con Lieja."
 
 #: hall-1/split-flap
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -2696,8 +2716,8 @@ msgstr "Patentaron puntos braille levantados por láminas piezoeléctricas que s
 #: hall-1/braille-display
 #. People section: what Klaus Peter Schönherr did. The names stand above this line.
 msgctxt "piece.braille-display.people.2"
-msgid "A collector's history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm's braille terminal in use at the University of Tübingen from December 1976."
-msgstr "Una historia escrita por un coleccionista dice que en 1975 inventó un elemento braille capaz de mostrar y borrar caracteres. Computerwoche informó de que el terminal braille de su empresa se usaba en la Universidad de Tubinga desde diciembre de 1976."
+msgid "Invented in 1975 a braille element that could show and erase characters, by a collector's history; piezoelectric, by the National Federation of the Blind. His firm's terminal served Tübingen University from 1976."
+msgstr "Inventó en 1975 un elemento braille que podía mostrar y borrar caracteres, según la historia de un coleccionista; piezoeléctrico, según la National Federation of the Blind. El terminal de su empresa sirvió a la Universidad de Tubinga desde 1976."
 
 #: hall-1/braille-display
 #. People section: what James Bryce did. The names stand above this line.
@@ -2966,8 +2986,8 @@ msgstr "Su equipo, en el 202 de Green Street, en San Francisco, transmitió su p
 #: hall-2/cathode-ray-tube
 #. People section: what Elma Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.4"
-msgid "Known as Pem. On the laboratory team in San Francisco she kept the logbooks, made technical drawings and spot welded the tube elements. Hers was among the first faces the system sent."
-msgstr "Conocida como Pem. En el equipo del laboratorio de San Francisco llevaba los cuadernos de registro, hacía dibujos técnicos y soldaba por puntos los elementos del tubo. El suyo estuvo entre los primeros rostros que transmitió el sistema."
+msgid "Known as Pem. On the laboratory team she kept the logbooks, made drawings and spot welded tube elements. Hers was among the first faces it sent, the Associated Press reported, citing Donald G. Godfrey."
+msgstr "Conocida como Pem. En el equipo del laboratorio llevaba los cuadernos, hacía dibujos y soldaba por puntos elementos del tubo. Su cara fue una de las primeras que transmitió, según la Associated Press, que citaba a Donald G. Godfrey."
 
 #: hall-2/cathode-ray-tube
 #. People section: what Marie Van Brittan Brown, Albert Brown did. The names stand above this line.
@@ -3164,8 +3184,8 @@ msgstr "Ingeniero eléctrico mexicano. Patentó el adaptador en México en 1940,
 #: hall-2/colour-wheel-television
 #. People section: what A. Frankenstein, W. von Jaworski did. The names stand above this line.
 msgctxt "piece.colour-wheel-television.people.2"
-msgid "Named on German patent 172 376, for seeing pictures at a distance by selenium cells, three colour filters and mirrors. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
-msgstr "Figuran en la patente alemana 172 376, para ver imágenes a distancia mediante células de selenio, tres filtros de color y espejos. Histoire de la télévision la fecha el 20 de agosto de 1904, y el VDE fecha sus propuestas en 1903."
+msgid "Named on German patent 172 376: selenium cells, mirrors and turning discs of red, blue and yellow glass. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
+msgstr "Figuran en la patente alemana 172 376: células de selenio, espejos y discos giratorios de vidrio rojo, azul y amarillo. Histoire de la télévision la fecha el 20 de agosto de 1904, y la VDE fecha sus propuestas en 1903."
 
 #: hall-2/colour-wheel-television
 #. People section: what Peter Goldmark did. The names stand above this line.
@@ -7238,8 +7258,8 @@ msgstr "Isaac Newton describió el efecto con una brasa. Si se mueve deprisa en 
 #: hall-6/persistence-of-vision
 #. People section: what Joseph Plateau did. The names stand above this line.
 msgctxt "piece.persistence-of-vision.people.1"
-msgid "Used the effect in his spinning picture discs of 1832."
-msgstr "Usó el efecto en sus discos giratorios de imágenes de 1832."
+msgid "Used the effect in his spinning picture discs of 1832. The Museum of the History of Science at Oxford says Simon Stampfer in Vienna made the same disc independently, and patented it first."
+msgstr "Usó el efecto en sus discos giratorios de imágenes de 1832. El Museum of the History of Science de Oxford dice que Simon Stampfer, en Viena, hizo el mismo disco por su cuenta, y lo patentó primero."
 
 #: hall-6/persistence-of-vision
 #. Note under the People section.
@@ -9080,8 +9100,8 @@ msgstr "Mujeres en el museo"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors."
-msgstr "Una visita guiada por las siete salas. Catorce pantallas, de los puntos del braille a una habitación de pantallas, cada una con al menos una mujer entre quienes la inventaron o contribuyeron a ella."
+msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman on its label."
+msgstr "Una visita guiada por las siete salas. Catorce pantallas, de los puntos del braille a una sala de pantallas, cada una con al menos una mujer en su ficha."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -9092,8 +9112,8 @@ msgstr "Antes de la primera parada"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors."
-msgstr "Bienvenidos al museo. Esta visita sigue la línea verde del piso. Recorre las siete salas y se detiene frente a catorce pantallas. Cada una tiene al menos una mujer entre quienes la inventaron o contribuyeron a ella."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman on its label."
+msgstr "Bienvenidos al museo. Esta visita sigue la línea verde del piso. Recorre las siete salas y se detiene frente a catorce pantallas. Cada una tiene al menos una mujer en su ficha."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9428,8 +9448,8 @@ msgstr "Colócate en el lado abierto de la habitación. Tres paredes y el piso s
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cave.text.2"
-msgid "The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
-msgstr "La placa nombra a cuatro personas del Electronic Visualization Laboratory, de la Universidad de Illinois en Chicago. Carolina Cruz-Neira es la primera autora de los dos artículos que describen la habitación, y su diseño y su implementación fueron la investigación doctoral de ella. Su laboratorio la mostró en SIGGRAPH, en Chicago, en 1992."
+msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
+msgstr "La placa nombra a tres personas del Electronic Visualization Laboratory, de la Universidad de Illinois en Chicago. Carolina Cruz-Neira es la primera autora de los dos artículos que describen la habitación, y su diseño y su implementación fueron la investigación doctoral de ella. Su laboratorio la mostró en SIGGRAPH, en Chicago, en 1992."
 
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -10292,8 +10312,8 @@ msgstr "Con el respaldo de los recaudadores de fondos George Everson y Leslie Go
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.philo-farnsworth.about.3"
-msgid "The Radio Corporation of America challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court ruled in his favour in 1935, and in 1939 the company agreed to pay him royalties."
-msgstr "La Radio Corporation of America impugnó su patente en 1932. Sus abogados presentaron la copia de Tolman del boceto de 1922, el tribunal falló a su favor en 1935 y en 1939 la empresa aceptó pagarle derechos."
+msgid "The Radio Corporation of America challenged his patent in 1932. The Patent Office ruled for him in 1935, and upheld its ruling in 1936. The Linda Hall Library says Tolman's copy of the 1922 sketch helped. In 1939 the company agreed to pay him royalties."
+msgstr "La Radio Corporation of America impugnó su patente en 1932. La Oficina de Patentes le dio la razón en 1935, y lo confirmó en 1936. La Linda Hall Library dice que la copia del boceto de 1922 que conservaba Tolman ayudó. En 1939 la empresa aceptó pagarle regalías."
 
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10412,8 +10432,8 @@ msgstr "La emisora XHGC de Ciudad de México, el Canal 5, lleva sus iniciales, G
 #: people
 #. About A. Frankenstein, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.a-frankenstein.about.1"
-msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The listing describes selenium cells, three colour filters and mirrors that split the picture into groups of points."
-msgstr "Según Histoire de la télévision, A. Frankenstein figuraba con W. von Jaworski en la patente alemana 172 376, fechada el 20 de agosto de 1904. La ficha describe células de selenio, tres filtros de color y espejos que dividían la imagen en grupos de puntos."
+msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The patent describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
+msgstr "Según Histoire de la télévision, el nombre de A. Frankenstein figura junto al de W. von Jaworski en la patente alemana 172 376, del 20 de agosto de 1904. La patente describe células de selenio, espejos y discos giratorios de vidrio rojo, azul y amarillo."
 
 #: people
 #. About A. Frankenstein, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10424,8 +10444,8 @@ msgstr "La VDE, la asociación alemana de ingenieros electrotécnicos, sitúa en
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.1"
-msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. Its title spoke of making pictures and objects visible at a distance with selenium cells, three colour filters and mirrors."
-msgstr "Histoire de la télévision cita a W. von Jaworski, por delante de A. Frankenstein, en la patente alemana 172 376, fechada el 20 de agosto de 1904. Su título hablaba de hacer visibles a distancia imágenes y objetos mediante células de selenio, tres filtros de color y espejos."
+msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. It describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
+msgstr "Histoire de la télévision pone a W. von Jaworski, delante de A. Frankenstein, en la patente alemana 172 376, del 20 de agosto de 1904. Describe células de selenio, espejos y discos giratorios de vidrio rojo, azul y amarillo."
 
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12476,8 +12496,8 @@ msgstr "En 1964 sucedió a J. C. R. Licklider al frente de la Information Proces
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.ivan-sutherland.about.3"
-msgid "In 1968, with the help of the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
-msgstr "En 1968, con la ayuda del estudiante Bob Sproull, construyó un casco que colgaba del techo y que recibió el apodo de la Espada de Damocles. La Association for Computing Machinery lo considera la primera pantalla montada en la cabeza para realidad virtual y aumentada."
+msgid "In 1968, with the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
+msgstr "En 1968, con el estudiante Bob Sproull, construyó un casco que colgaba del techo y que recibió el apodo de la Espada de Damocles. La Association for Computing Machinery lo considera la primera pantalla montada en la cabeza para realidad virtual y aumentada."
 
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12602,8 +12622,8 @@ msgstr "Tras sus estudios universitarios en Nigeria, una beca del Gobierno franc
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.samuel-achilefu.about.2"
-msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with help from Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
-msgstr "En la Universidad Washington fue catedrático de radiología y de ingeniería biomédica. Un equipo que él dirigía desarrolló las gafas, con ayuda de Viktor Gruev, de la escuela de ingeniería, y de Ron Liang, de la Universidad de Arizona. El National Cancer Institute financió el trabajo."
+msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
+msgstr "En la Universidad Washington fue catedrático de radiología y de ingeniería biomédica. Un equipo que él dirigía desarrolló las gafas, con Viktor Gruev, de la escuela de ingeniería, y Ron Liang, de la Universidad de Arizona. El National Cancer Institute financió el trabajo."
 
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

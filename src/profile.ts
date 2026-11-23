@@ -3,7 +3,7 @@ import type { PersonLink } from './data/person-links';
 import { portraits } from './data/portraits';
 import type { Source } from './data/schema';
 import { esc } from './html';
-import { comma, said, tx } from './i18n';
+import { comma, creditWords, said, tx } from './i18n';
 
 /**
  * The parts of a person's profile that the person page and the sheet in the walk both show, written once so that
@@ -23,12 +23,12 @@ export const portraitCredit = (name: string): string => {
     const once = pic.study.filter((x, i) => pic.study.findIndex((y) => y.by === x.by) === i);
     return tx('people.study', { by: '\u0001' }).replace('\u0001', once.map((x) => `<a href="${esc(x.source)}" rel="noopener">${esc(x.by)}</a>`).join(esc(comma())));
   }
-  return `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
+  return `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: creditWords(pic.by), licence: creditWords(pic.licence) }) : tx('people.portrait.anon', { licence: creditWords(pic.licence) })}</a>`;
 };
 
 /** The years of a life, where the museum has them: both, or the year of birth alone. */
 export const lifeOf = (bio: Bio | undefined): string =>
-  bio?.born ? (bio.died ? tx('person.life', { born: bio.born, died: bio.died }) : tx('person.born', { born: bio.born })) : '';
+  bio?.born ? (bio.died ? tx('person.life', { born: bio.born, died: Array.isArray(bio.died) ? tx('person.either', { a: bio.died[0], b: bio.died[1] }) : bio.died }) : tx('person.born', { born: bio.born })) : '';
 
 /** The items of a list of sources, each with its kind. */
 export const sourceItems = (sources: Source[]): string =>

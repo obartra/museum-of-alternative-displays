@@ -5,7 +5,7 @@
 <!-- Every address in the museum is written from the museum's own folder. This page lies in that folder. A page in a folder further in has the way back out written here by the build. The address is then fixed in full, so that it still holds when the address bar changes. With scripts running, the plain words a page was sent with are hidden while the museum starts, so that they do not show for a moment first. -->
 <base href="./">
 <script>(function(){var b=document.querySelector('base');b.href=b.href;document.documentElement.classList.add('js')})()</script>
-<style>.js [data-plain]{visibility:hidden}</style>
+<style>.js [data-plain]{visibility:hidden;animation:plain 0s 1.2s forwards}@keyframes plain{to{visibility:visible}}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Museum of Alternative Displays</title>
 <meta name="description" content="A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture.">
@@ -83,14 +83,14 @@
 <script>
 // The two faces every page is set in are asked for now, while the script of the pages is still on its way, so that
 // the first picture of the page does not wait for one after the other.
-try { document.fonts.load('800 1em "Sofia Sans Extra Condensed Variable"'); document.fonts.load('500 1em "Sofia Sans Variable"'); } catch (e) {}
+try { document.fonts.load('800 1em "Sofia Sans Extra Condensed Variable"').catch(function () {}); document.fonts.load('500 1em "Sofia Sans Variable"').catch(function () {}); } catch (e) {}
 </script>
 <script>
-// The plain words a page came with are hidden while the museum starts. If its script does not arrive or cannot run
-// here, they are shown after all: a reader then has the label, and the links to the other pages.
+// The plain words a page came with are hidden while the museum starts, for 1.2 seconds at most (the style above):
+// on a slow line a reader then has the label, and the links to the other pages, while the rest arrives. If the
+// script cannot run here they are shown at once.
 (function () {
   var show = function () { if (!document.body.dataset.ready) document.documentElement.classList.remove('js'); };
-  setTimeout(show, 8000);
   window.addEventListener('error', function (e) { if (e.target && e.target.tagName === 'SCRIPT') show(); }, true);
 })();
 </script>

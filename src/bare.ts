@@ -57,7 +57,10 @@ export function openBare(o: BareOptions): Bare {
     const inField = (e.target as Element | null)?.closest?.(EDITABLE);
     if (inField) return;
     const k = e.key;
-    if (on && (k === 'Escape' || k === ' ' || k === 'Enter')) { e.preventDefault(); e.stopImmediatePropagation(); set(false); return; }
+    // Escape anywhere. Space and Enter only where they would do nothing else: on the picture or the page itself,
+    // not on a link or a key, which keep their own work
+    const t = e.target as HTMLElement | null, bare = !t || t === document.body || t.tagName === 'CANVAS' || t.tagName === 'MAIN';
+    if (on && (k === 'Escape' || ((k === ' ' || k === 'Enter') && bare))) { e.preventDefault(); e.stopImmediatePropagation(); set(false); return; }
     if ((k === 'h' || k === 'H') && !e.repeat) { e.preventDefault(); set(!on); }
   };
   window.addEventListener('keydown', onKey, true);

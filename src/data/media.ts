@@ -325,7 +325,7 @@ const pictures: Record<string, Media[]> = {
       year: '1865',
       width: 1100, height: 1004,
       credit: {
-        author: 'Bertrand (no first name given), Le Monde Illustré',
+        author: 'Bertrand, Le Monde Illustré',
         licence: 'Public domain',
         source: 'https://commons.wikimedia.org/wiki/File:Peppers_Ghost.jpg',
         title: 'Peppers Ghost.jpg',

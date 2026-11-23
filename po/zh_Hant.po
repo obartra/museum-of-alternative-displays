@@ -529,6 +529,18 @@ msgid "Hear it"
 msgstr "聽一聽"
 
 #: interface
+#. Interface.
+msgctxt "ui.credit.pd"
+msgid "Public domain"
+msgstr "公有領域"
+
+#: interface
+#. Interface.
+msgctxt "ui.credit.unknown"
+msgid "Unknown artist"
+msgstr "佚名"
+
+#: interface
 #. Headings on the page of a piece. Keep the words in curly brackets as they are.
 msgctxt "ui.piece.sound.credit"
 msgid "Recording: {a}{title}{/a} by {by}, {licence}"
@@ -1453,6 +1465,12 @@ msgid "Born {born}"
 msgstr "生於{born}年"
 
 #: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.person.either"
+msgid "{a} or {b}"
+msgstr "{a}或{b}"
+
+#: interface
 #. Interface.
 msgctxt "ui.person.elsewhere"
 msgid "Read more elsewhere"
@@ -1959,8 +1977,8 @@ msgstr "與Valle合作設計了Cifra 5，這是Solari公司在1950年代中期�
 #: hall-1/split-flap
 #. Note under the People section.
 msgctxt "piece.split-flap.note"
-msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
-msgstr "機構本身的發明者沒有記載。有記錄的最早一塊顯示器，1956年裝在列日火車站。已找到的資料把Valle和Myer與這款時鐘聯繫在一起，又把Valle與後來的顯示器聯繫在一起。沒有一份資料把他們中的任何一人與列日聯繫起來。"
+msgid "No inventor is recorded for the mechanism itself. The earliest board on record went up at Liège station in 1956. Finestre sull'Arte says Solari's numerals first changed in station clocks, such as one at Florence's Santa Maria Novella from the 1930s. The sources found tie Valle and Myer to the clock and Valle to the later boards. None ties either of them to Liège."
+msgstr "機構本身的發明者沒有記載。有記錄的最早一塊顯示器，1956年裝在列日火車站。據Finestre sull'Arte，Solari的數字最先在車站時鐘上翻動，例如佛羅倫斯新聖母瑪利亞車站一座1930年代的時鐘。已找到的資料把Valle和Myer與這款時鐘聯繫在一起，又把Valle與後來的顯示器聯繫在一起。沒有一份資料把他們中的任何一人與列日聯繫起來。"
 
 #: hall-1/split-flap
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -2691,8 +2709,8 @@ msgstr "為由壓電簧片彎曲頂起的點字點取得專利，這項美國專
 #: hall-1/braille-display
 #. People section: what Klaus Peter Schönherr did. The names stand above this line.
 msgctxt "piece.braille-display.people.2"
-msgid "A collector's history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm's braille terminal in use at the University of Tübingen from December 1976."
-msgstr "一位收藏者撰寫的歷史稱，他在1975年發明了一種能顯示和擦除字元的點字元件。據Computerwoche報導，他公司的點字終端機從1976年12月起在杜賓根大學使用。"
+msgid "Invented in 1975 a braille element that could show and erase characters, by a collector's history; piezoelectric, by the National Federation of the Blind. His firm's terminal served Tübingen University from 1976."
+msgstr "據一位收藏者撰寫的歷史，他在1975年發明了一種能顯示和擦除字元的點字元件；美國盲人聯合會說它是壓電式的。他公司的終端機從1976年起為杜賓根大學服務。"
 
 #: hall-1/braille-display
 #. People section: what James Bryce did. The names stand above this line.
@@ -2961,8 +2979,8 @@ msgstr "1927年9月7日，他在舊金山Green Street 202號的團隊傳送出�
 #: hall-2/cathode-ray-tube
 #. People section: what Elma Farnsworth did. The names stand above this line.
 msgctxt "piece.cathode-ray-tube.people.4"
-msgid "Known as Pem. On the laboratory team in San Francisco she kept the logbooks, made technical drawings and spot welded the tube elements. Hers was among the first faces the system sent."
-msgstr "人稱Pem。在舊金山的實驗室團隊裡，她記錄實驗日誌，繪製技術圖紙，還點焊管子的元件。她的面孔是這套系統最早傳送的面孔之一。"
+msgid "Known as Pem. On the laboratory team she kept the logbooks, made drawings and spot welded tube elements. Hers was among the first faces it sent, the Associated Press reported, citing Donald G. Godfrey."
+msgstr "人稱Pem。在實驗室團隊裡，她記錄日誌，繪製圖紙，還點焊管子的元件。美聯社引述Donald G. Godfrey的話報導，她的面孔是這套系統最早傳送的面孔之一。"
 
 #: hall-2/cathode-ray-tube
 #. People section: what Marie Van Brittan Brown, Albert Brown did. The names stand above this line.
@@ -3159,8 +3177,8 @@ msgstr "墨西哥電機工程師。1940年，23歲的他在墨西哥為這種轉
 #: hall-2/colour-wheel-television
 #. People section: what A. Frankenstein, W. von Jaworski did. The names stand above this line.
 msgctxt "piece.colour-wheel-television.people.2"
-msgid "Named on German patent 172 376, for seeing pictures at a distance by selenium cells, three colour filters and mirrors. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
-msgstr "名字見於德國第172 376號專利，這項專利藉助硒光電池、三種濾色片和鏡子遠距離觀看影像。Histoire de la télévision把它的日期定為1904年8月20日，VDE則把兩人的提議定在1903年。"
+msgid "Named on German patent 172 376: selenium cells, mirrors and turning discs of red, blue and yellow glass. Histoire de la télévision dates it 20 August 1904, the VDE their proposals 1903."
+msgstr "名字見於德國第172 376號專利：硒光電池、鏡子，以及紅、藍、黃三色玻璃做的旋轉圓盤。Histoire de la télévision把它的日期定為1904年8月20日，VDE則把兩人的提議定在1903年。"
 
 #: hall-2/colour-wheel-television
 #. People section: what Peter Goldmark did. The names stand above this line.
@@ -7233,8 +7251,8 @@ msgstr "牛頓（Isaac Newton）用一塊燒紅的炭描述過這種效應。他
 #: hall-6/persistence-of-vision
 #. People section: what Joseph Plateau did. The names stand above this line.
 msgctxt "piece.persistence-of-vision.people.1"
-msgid "Used the effect in his spinning picture discs of 1832."
-msgstr "在他1832年的旋轉畫盤裡用到了這種效應。"
+msgid "Used the effect in his spinning picture discs of 1832. The Museum of the History of Science at Oxford says Simon Stampfer in Vienna made the same disc independently, and patented it first."
+msgstr "在他1832年的旋轉畫盤裡用到了這種效應。牛津科學史博物館說，維也納的Simon Stampfer獨立做出了同樣的圓盤，並且先申請了專利。"
 
 #: hall-6/persistence-of-vision
 #. Note under the People section.
@@ -9075,8 +9093,8 @@ msgstr "博物館裡的女性"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors."
-msgstr "一條走遍七個展廳的導覽路線。十四件展品，從點字的小針到一個由螢幕圍成的房間，每一件的發明者或貢獻者當中至少有一位女性。"
+msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman on its label."
+msgstr "一條走遍七個展廳的導覽路線。十四件展品，從點字的小針到一個由螢幕圍成的房間，每一件的銘牌上至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -9087,8 +9105,8 @@ msgstr "第一站之前"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors."
-msgstr "歡迎來到博物館。這條導覽沿著地上的綠線走。它穿過全部七個展廳，在十四件展品前停下。每一件的發明者或貢獻者當中，至少有一位女性。"
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman on its label."
+msgstr "歡迎來到博物館。這條導覽沿著地上的綠線走。它穿過全部七個展廳，在十四件展品前停下。每一件的銘牌上，至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9423,8 +9441,8 @@ msgstr "站到房間敞開的那一面。三面牆和地板都是螢幕。裡面
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cave.text.2"
-msgid "The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
-msgstr "銘牌上寫著伊利諾大學芝加哥分校Electronic Visualization Laboratory的四個人。闡述這個房間的兩篇論文，第一作者都是Carolina Cruz-Neira，房間的設計與實作是她的博士研究課題。她的實驗室1992年在芝加哥SIGGRAPH上展出了它。"
+msgid "The plate names three people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
+msgstr "銘牌上寫著伊利諾大學芝加哥分校Electronic Visualization Laboratory的三個人。闡述這個房間的兩篇論文，第一作者都是Carolina Cruz-Neira，房間的設計與實作是她的博士研究課題。她的實驗室1992年在芝加哥SIGGRAPH上展出了它。"
 
 #: tour-women
 #. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -10287,8 +10305,8 @@ msgstr "在募資人George Everson和Leslie Gorrell的支持下，他在舊金�
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.philo-farnsworth.about.3"
-msgid "The Radio Corporation of America challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court ruled in his favour in 1935, and in 1939 the company agreed to pay him royalties."
-msgstr "1932年，美國無線電公司對他的專利提出質疑。他的律師拿出了Tolman保存的那份1922年草圖的副本，法院於1935年作出有利於他的裁決，1939年該公司同意向他支付專利使用費。"
+msgid "The Radio Corporation of America challenged his patent in 1932. The Patent Office ruled for him in 1935, and upheld its ruling in 1936. The Linda Hall Library says Tolman's copy of the 1922 sketch helped. In 1939 the company agreed to pay him royalties."
+msgstr "1932年，美國無線電公司對他的專利提出質疑。專利局於1935年作出有利於他的裁定，並於1936年維持原裁定。琳達·霍爾圖書館說，Tolman保存的那份1922年草圖副本起了作用。1939年，該公司同意向他支付專利使用費。"
 
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10407,8 +10425,8 @@ msgstr "墨西哥城的XHGC電視臺（第5頻道）帶有他姓名的首字母G
 #: people
 #. About A. Frankenstein, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.a-frankenstein.about.1"
-msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The listing describes selenium cells, three colour filters and mirrors that split the picture into groups of points."
-msgstr "據Histoire de la télévision記載，日期為1904年8月20日的德國專利172 376列有A. Frankenstein與W. von Jaworski的名字。該條目描述了硒光電池、三色濾光片，以及把影像分成若干組點的反射鏡。"
+msgid "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The patent describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
+msgstr "據Histoire de la télévision記載，日期為1904年8月20日的德國專利172 376列有A. Frankenstein與W. von Jaworski的名字。該專利描述了硒光電池、反射鏡，以及紅、藍、黃三色玻璃做的旋轉圓盤。"
 
 #: people
 #. About A. Frankenstein, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10419,8 +10437,8 @@ msgstr "德國電機工程師協會VDE把Jaworsky和Frankenstein等人的電視�
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.w-von-jaworski.about.1"
-msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. Its title spoke of making pictures and objects visible at a distance with selenium cells, three colour filters and mirrors."
-msgstr "Histoire de la télévision把W. von Jaworski列在A. Frankenstein之前，見於日期為1904年8月20日的德國專利172 376。專利名稱講的是利用硒光電池、三色濾光片和反射鏡，使影像和物體能在遠處被看見。"
+msgid "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. It describes selenium cells, mirrors and turning discs of red, blue and yellow glass."
+msgstr "Histoire de la télévision把W. von Jaworski列在A. Frankenstein之前，見於日期為1904年8月20日的德國專利172 376。該專利描述了硒光電池、反射鏡，以及紅、藍、黃三色玻璃做的旋轉圓盤。"
 
 #: people
 #. About W. von Jaworski, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12471,8 +12489,8 @@ msgstr "1964年，他接替J. C. R. Licklider，出任美國國防部高等研�
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.ivan-sutherland.about.3"
-msgid "In 1968, with the help of the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
-msgstr "1968年，他在學生Bob Sproull的幫助下，造出一台從天花板上懸掛下來的頭戴式顯示器，綽號「達摩克利斯之劍」。美國計算機協會稱它是第一台用於虛擬實境和擴增實境的頭戴式顯示器。"
+msgid "In 1968, with the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality."
+msgstr "1968年，他和學生Bob Sproull一起，造出一台從天花板上懸掛下來的頭戴式顯示器，綽號「達摩克利斯之劍」。美國計算機協會稱它是第一台用於虛擬實境和擴增實境的頭戴式顯示器。"
 
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12597,8 +12615,8 @@ msgstr "在奈及利亞讀完大學後，他獲得法國政府獎學金，來到
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.samuel-achilefu.about.2"
-msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with help from Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
-msgstr "在華盛頓大學，他擔任放射學教授和生物醫學工程教授。他領導的團隊研製出這種護目鏡，工學院的Viktor Gruev和亞利桑那大學的Ron Liang提供了幫助。美國國家癌症研究所資助了這項工作。"
+msgid "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work."
+msgstr "在華盛頓大學，他擔任放射學教授和生物醫學工程教授。他領導的團隊與工學院的Viktor Gruev和亞利桑那大學的Ron Liang一起，研製出這種護目鏡。美國國家癌症研究所資助了這項工作。"
 
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

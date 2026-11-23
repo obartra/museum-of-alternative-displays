@@ -15,7 +15,7 @@ export const h6: Piece[] = [
     good: ['Shows a bright, full-colour figure that seems to stand in real space', 'Needs no special glasses, and a whole audience can see it', 'Mixes with real actors and scenery'],
     bad: ['Gives a flat reflection at one fixed depth, not a three-dimensional picture', 'Needs a dark stage, a hidden bright area and careful control of what the audience can see', 'Is not a hologram, although concerts that use it are advertised as holograms'],
     look: 'Press the Sit down button for a seat in the audience. A pale figure walks on the stage, and the chair shows through it. Move your head: the figure keeps its place, as a true mirror image does, and ends at the edge of the glass. Then press the Whole piece button and look into the pit in front of the stage. The real figure lies there in limelight, a bright stage lamp, under the leaning glass.',
-    sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/archive-blog/ghosts-and-pantos-at-the-rpi/'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
+    sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/ghosts-and-pantos-at-the-rpi'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
   },
   {
     id: 'illusion-transmitter', hall: 6, name: 'Illusion transmitter', aka: 'Real-image mirror display',
@@ -75,7 +75,7 @@ export const h6: Piece[] = [
     good: ['Gives real depth from every direction at once', 'Lets the eyes focus where the object is, so there is no strain', 'Needs nothing worn on the head'],
     bad: ['Makes everything see-through, because points of light cannot hide what is behind them', 'Has a large, fast-moving part inside a dome', 'Needs a very large amount of data'],
     look: 'The model turns the screen slowly so that you can see it. Points near the screen brighten as it passes. The figure is a helix, a spiral. Turn the model all the way round to see that the spiral really has depth.',
-    sources: [src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
+    sources: [src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'https://web.archive.org/web/2016/http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
   },
   {
     id: 'static-volume', hall: 6, name: 'Static-volume display',
@@ -90,7 +90,7 @@ export const h6: Piece[] = [
     good: ['Gives true depth with no moving parts', 'Serves several viewers at once, without glasses'],
     bad: ['Has only as many steps of depth as it has sheets', 'Gives a translucent picture, like all displays that fill a volume', 'Is bulky for the size of its picture'],
     look: 'The figure in the stack is a knot. The lit sheet moves from front to back, and the model slows it to a few steps a second. Look along the stack from the side to see the knot divided into slices. Beside the stack stands the block of glass, many times its real size. Its two beams are drawn in red so that they can be seen. The point where they cross draws a knot too, in the colour of the layer it passes through.',
-    sources: [src('paper', 'Downing and others, Science (1996)', 'https://doi.org/10.1126/science.273.5279.1185'), src('press', 'Drake, An Added Dimension in Display Technology, MIT Technology Review (1997)', 'https://www.technologyreview.com/1997/05/01/237287/an-added-dimension-in-display-technology/amp/'), src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
+    sources: [src('paper', 'Downing and others, Science (1996)', 'https://doi.org/10.1126/science.273.5279.1185'), src('press', 'Drake, An Added Dimension in Display Technology, MIT Technology Review (1997)', 'https://www.technologyreview.com/1997/05/01/237287/an-added-dimension-in-display-technology/amp/'), src('paper', 'Favalora, Progress in Volumetric Three-dimensional Displays and Their Applications (2009)', 'https://web.archive.org/web/2016/http://greggandjenny.com/blog/wp-content/uploads/files/Favalora_publications/2009_OSA_FiO_Favalora_Volumetric.pdf'), wiki('Volumetric_display', 'Volumetric display')],
   },
   {
     id: 'optical-trap', hall: 6, name: 'Optical trap display', aka: 'Photophoretic trap display',

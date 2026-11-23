@@ -32,9 +32,9 @@ export interface NearOptions {
   paused(): boolean;
   /** A phone: the still picture stands in, and the model is made only when the visitor asks for it. */
   wait(): boolean;
-  /** The look covers the hall, or has uncovered it again. */
+  /** The look covers the hall, or has uncovered it again. `hadFocus`: the focus was in the look, or on the page body. */
   onOpen(): void;
-  onShut(): void;
+  onShut(hadFocus: boolean): void;
 }
 export interface Near {
   /** The piece being looked at, or nothing. */
@@ -171,12 +171,14 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
     },
     shut() {
       if (!piece) return;
+      // asked before the canvas goes: once it is gone the focus it had is on the page body
+      const a = document.activeElement, had = root.contains(a) || !a || a === document.body;
       turn++; piece = ''; live = false;
       lent?.stage.stop();
       if (lent) { lent.stage.onTouch = undefined; lent.canvas.classList.remove('is-live'); lent.canvas.remove(); }
       root.hidden = true;
       views.innerHTML = ''; say.textContent = ''; tell('');
-      o.onShut();
+      o.onShut(had);
     },
     setLights(on) {
       if (!piece) return;

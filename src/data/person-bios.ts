@@ -9,7 +9,8 @@ import { people } from './people';
 import type { Person } from './persons';
 import type { Source } from './schema';
 
-export interface Bio { born?: number; died?: number; about: string[]; sources: Source[] }
+/** `died` may be two years, as [2023, 2024], where a source gives an age at death and no date. */
+export interface Bio { born?: number; died?: number | [number, number]; about: string[]; sources: Source[] }
 
 const s = (kind: Source['kind'], label: string, url: string): Source => ({ kind, label, url });
 
@@ -326,11 +327,12 @@ export const bios: Record<string, Bio> = {
     born: 1906, died: 1971, about: [
       "Born in Beaver City, Utah, he sketched an electronic camera tube for his school science teacher, Justin Tolman, in 1922. He enrolled briefly at Brigham Young University and left for lack of money.",
       "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory one floor above the street at 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide.",
-      "The Radio Corporation of America challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court ruled in his favour in 1935, and in 1939 the company agreed to pay him royalties.",
+      "The Radio Corporation of America challenged his patent in 1932. The Patent Office ruled for him in 1935, and upheld its ruling in 1936. The Linda Hall Library says Tolman's copy of the 1922 sketch helped. In 1939 the company agreed to pay him royalties.",
       "He bought a radio plant at Fort Wayne, Indiana, hoping to make television receivers. It was sold to International Telephone and Telegraph in 1949. He was that company's consultant until 1967 and later worked on nuclear fusion as a source of power.",
     ],
     sources: [
       s("archive", "Philo Farnsworth, Linda Hall Library", "https://www.lindahall.org/philo-farnsworth"),
+      s("archive", "Philo T. Farnsworth, the Father of Television, Part II, Indiana Historical Bureau", "https://www.in.gov/history/about-indiana-history-and-trivia/explore-indiana-history-by-topic/marking-hoosier-history-archive/philo-t-farnsworth-the-father-of-television-part-ii/"),
     ],
   },
   "Elma Farnsworth": {
@@ -393,7 +395,7 @@ export const bios: Record<string, Bio> = {
   },
   "A. Frankenstein": {
     about: [
-      "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The listing describes selenium cells, three colour filters and mirrors that split the picture into groups of points.",
+      "According to Histoire de la télévision, A. Frankenstein was named with W. von Jaworski on German patent 172 376, dated 20 August 1904. The patent describes selenium cells, mirrors and turning discs of red, blue and yellow glass.",
       "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903. Jaworsky is its spelling of the same co-applicant's name.",
     ],
     sources: [
@@ -403,7 +405,7 @@ export const bios: Record<string, Bio> = {
   },
   "W. von Jaworski": {
     about: [
-      "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. Its title spoke of making pictures and objects visible at a distance with selenium cells, three colour filters and mirrors.",
+      "Histoire de la télévision lists W. von Jaworski, ahead of A. Frankenstein, on German patent 172 376, dated 20 August 1904. It describes selenium cells, mirrors and turning discs of red, blue and yellow glass.",
       "The VDE, the German association of electrical engineers, places television proposals by Jaworsky and Frankenstein, among others, in 1903, spelling the name with a final y. Neither source gives a first name.",
     ],
     sources: [
@@ -425,7 +427,7 @@ export const bios: Record<string, Bio> = {
     ],
   },
   "Andrew Haeff": {
-    born: 1904, about: [
+    born: 1905, died: 1990, about: [
       "Born in Moscow, he qualified as an engineer at the Russian Polytechnic Institute in Harbin in 1928 and took master's and doctoral degrees at the California Institute of Technology in 1929 and 1932. He worked at the RCA research laboratories from 1934 to 1941.",
       "He then joined the Naval Research Laboratory as a consultant in electronics. He was granted a patent for the Memory Tube in August 1947, and a tube of his type was used in the Whirlwind computer at the Massachusetts Institute of Technology.",
       "In 1950 he moved to Hughes Aircraft, where he set up its Electron Tube Laboratory, developed the Typotron for computer output, and became vice president and director of research. The IEEE History Center records him as first to receive the Harry Diamond Memorial Award.",
@@ -433,6 +435,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("archive", "Andrew V. Haeff, Engineering and Technology History Wiki, IEEE History Center", "https://ethw.org/Andrew_V._Haeff"),
+      s("paper", "Copeland and Haeff, Andrew V. Haeff: Enigma of the Tube Era and Forgotten Computing Pioneer, IEEE Annals of the History of Computing (2015), record", "https://manuscript.isc.ac/Inventory/49/1760679.htm"),
       s("paper", "The Haeff Memory and Graphics Tube of 1940s Opened a New Era of Computing, IEEE Annals of the History of Computing (2017)", "https://publications.computer.org/annals/2017/06/05/the-haeff-memory-and-graphics-tube/"),
       s("press", "Andrei Haeff and the Amazing Microwave Amplifier, IEEE Spectrum", "https://spectrum.ieee.org/tech-history/dawn-of-electronics/andrei-haeff-and-the-amazing-microwave-amplifier"),
     ],
@@ -500,7 +503,7 @@ export const bios: Record<string, Bio> = {
     ],
   },
   "Charles Spindt": {
-    born: 1931, about: [
+    born: 1931, died: [2023, 2024], about: [
       "Born in San Jose, California, he left architecture studies at Berkeley for the United States Air Force and flew as an all-weather fighter interceptor pilot. He then took a degree in electrical engineering at San Jose State.",
       "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The International Vacuum Nanoelectronics Conference says he worked out in 1966 how to make the cathode named after him, an array of microscopic tips emitting electrons at under 100 volts.",
       "He published it in the Journal of Applied Physics in 1968. SRI's own history dates the cathode to 1973. He, Shoulders and Louis Heynick were named on patents for its structures, granted in 1973, and for methods of making them, granted in 1974.",
@@ -1627,7 +1630,7 @@ export const bios: Record<string, Bio> = {
     born: 1938, about: [
       "Born in Hastings, Nebraska, he studied at the Carnegie Institute of Technology and Caltech and took his doctorate at MIT in 1963 under Claude Shannon, with a thesis on Sketchpad, a graphical system for drawing with a computer.",
       "In 1964 he succeeded J. C. R. Licklider as head of the Information Processing Techniques Office of the Advanced Research Projects Agency, in the United States Department of Defense. From 1965 to 1968 he was an associate professor at Harvard University.",
-      "In 1968, with the help of the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality.",
+      "In 1968, with the student Bob Sproull, he built a headset that hung from the ceiling and was nicknamed the Sword of Damocles. The Association for Computing Machinery calls it the first head-mounted display for virtual and augmented reality.",
       "He taught at the University of Utah from 1968 to 1974 and co-founded Evans and Sutherland with David Evans. He received the Turing Award in 1988. In 1990 Sun Microsystems bought Sutherland, Sproull and Associates, the consulting firm he founded in 1980.",
     ],
     sources: [
@@ -1705,7 +1708,7 @@ export const bios: Record<string, Bio> = {
   "Samuel Achilefu": {
     about: [
       "After college in Nigeria, a French government scholarship took him to the University of Nancy, where he took a doctorate in molecular and materials chemistry. He trained at Oxford, then joined the discovery research department of Mallinckrodt Medical in St. Louis in 1993.",
-      "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with help from Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work.",
+      "At Washington University he was professor of radiology and of biomedical engineering. A team he led developed the goggles, with Viktor Gruev of the engineering school and Ron Liang of the University of Arizona. The National Cancer Institute funded the work.",
       "In 2016 he was installed as Michel M. Ter-Pogossian Professor of Radiology. In February 2022 he moved to UT Southwestern Medical Center to chair its department of biomedical engineering.",
     ],
     sources: [
