@@ -2,9 +2,38 @@
 
 Feedback on the 42 drawings of round 6, one by one and as a set, is in [docs/portraits/v6/REVIEW.md](docs/portraits/v6/REVIEW.md): what to export larger, which five are too pale, which poses and eyes to redo, and three things to put right in the records.
 
-The labels name **147 people**. **130 have connected portraits in this branch; 17 remain empty**. The CAVE supplement adds Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, with [source records and review](docs/portraits/cave/README.md). Greg Dawe is also on the new CAVE label and awaits a portrait; the earlier Ralston drawing was withdrawn on main because its identity chain was not established. The historical round 6 manifest still accounts for its 69 incoming cases. Counts describe repository data, not a claim that the branch is already deployed.
+The labels name **169 people**. **130 have portraits; 39 remain empty**: the 17 harder cases below, which earlier rounds could not settle, and 22 people added with the newest pieces, listed first. The CAVE supplement adds Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, with [source records and review](docs/portraits/cave/README.md). Greg Dawe is also on the CAVE label and awaits a portrait; the earlier Ralston drawing was withdrawn on main because its identity chain was not established. Counts describe repository data.
 
 The user accepts clearly named historical engravings where detail supports a likeness; a posthumous date alone is not a hold. No special historical note is added beside a portrait. Dates, identity evidence and uncertain source-photo rights stay in the records. Redrawing does not clear rights.
+
+## New with the latest pieces
+
+Nobody here has been searched yet. Each line says where a picture is most likely to be, not that one has been found. The same rule applies: the page must name the person with a fact from the label.
+
+| Person | Piece | Where to look first |
+|---|---|---|
+| Julius Popp | Water curtain display | Living artist. Exhibition and press photos; likely a study. |
+| Georges Claude | Neon sign | Early 20th century press photographs; a public-domain one is likely. |
+| Jacques Fonsèque | Neon sign | Little known. French trade press of the 1910s and 1920s. |
+| Daniel McFarlan Moore | Neon sign | Early 20th century electrical press portraits. |
+| Earle C. Anthony | Neon sign | Los Angeles business and radio (KFI) histories. A common name. |
+| Francis E. J. Wilde | Moving-letter news sign | Little known. Dale Cressman's 2018 article and Motogram records. |
+| Frank C. Reilly | Moving-letter news sign | New York Times coverage of 1928. A common name. |
+| Everett Bickley | Moving-letter news sign | Little known. Sign trade press of the 1910s. |
+| Lotte Reiniger | Shadow play | Well photographed at work; check which pictures are free. |
+| Christiaan Huygens | Magic lantern | Painted and engraved portraits of the 17th century, in the public domain. |
+| Thomas Rasmussen Walgensten | Magic lantern | Probably no portrait. Magic Lantern Society and Danish sources. |
+| Athanasius Kircher | Magic lantern | 17th century engravings, in the public domain. |
+| John West | Switchable glass | Kent State University pages. A common name. |
+| Eric J. Seibel | Scanning fibre display | Living researcher. University of Washington pages; likely a study. |
+| Thomas A. Furness III | Scanning fibre display | Living. University of Washington and HIT Lab pages; likely a study. |
+| Brian T. Schowengerdt | Scanning fibre display | Living. Magic Leap and conference photos; likely a study. |
+| C. T. Brock | Firework set piece | Victorian press engravings; Brock family firm histories. |
+| Alan St. H. Brock | Firework set piece | His 1922 book and later firm histories. |
+| Wilhelm Rollmann | Glasses that pick an eye | Little known 19th century teacher. Probably no portrait. |
+| Louis Ducos du Hauron | Glasses that pick an eye | 19th century photographs, in the public domain. |
+| Laurens Hammond | Glasses that pick an eye | Mid 20th century press photographs. |
+| Edwin H. Land | Glasses that pick an eye | Many photographs; check which are free. |
 
 ## John Myer
 

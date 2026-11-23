@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 147 people, and 130 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 169 people, and 130 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -58,6 +58,7 @@ Take the picture from the person's own article or file page, where the caption s
 | Klaus Peter Schönherr | Refreshable braille display | Invented a piezoelectric braille module in Germany in 1975. | yes | `public/people/klaus-peter-schonherr.webp` |
 | James Bryce | Refreshable braille display | The IBM engineer. A British statesman, Viscount Bryce, shares the name. | yes | `public/people/james-bryce.webp` |
 | Horst Hörtner | Drone light show | Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015. | yes | `public/people/horst-hortner.webp` |
+| Julius Popp | Water curtain display | Leipzig artist who built bit.fall, a curtain of falling water drops that spells words, from 2001. |  | `public/people/julius-popp.jpg` |
 
 ## Hall 2, Glass and glow
 
@@ -88,6 +89,13 @@ Take the picture from the person's own article or file page, where the caption s
 | Kenneth Shoulders | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. | yes | `public/people/kenneth-shoulders.webp` |
 | Louis Heynick | Field emission display | Patented the way of making the microscopic tips, at Stanford Research Institute. | yes | `public/people/louis-heynick.webp` |
 | Akintunde Akinwande | Field emission display | Engineer, educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays, and at MIT on arrays of emitters switched one by one. | yes | `public/people/akintunde-akinwande.webp` |
+| Georges Claude | Neon sign | French engineer and founder of Air Liquide who showed neon tubes in Paris in December 1910. |  | `public/people/georges-claude.jpg` |
+| Jacques Fonsèque | Neon sign | Claude's associate who sold the first neon sign, to a Paris barbershop, in 1912. |  | `public/people/jacques-fonseque.jpg` |
+| Daniel McFarlan Moore | Neon sign | American inventor of the Moore tube, a long glowing tube for lighting, in the 1890s. |  | `public/people/daniel-mcfarlan-moore.jpg` |
+| Earle C. Anthony | Neon sign | Los Angeles Packard dealer and broadcaster who bought two Claude Neon signs. A common name. |  | `public/people/earle-c-anthony.jpg` |
+| Francis E. J. Wilde | Moving-letter news sign | Engineer at the Motogram company in New York who patented its letter and brush system in 1925. |  | `public/people/francis-e-j-wilde.jpg` |
+| Frank C. Reilly | Moving-letter news sign | Motogram's partner who sold the Times Square sign to The New York Times in 1928. A common name. |  | `public/people/frank-c-reilly.jpg` |
+| Everett Bickley | Moving-letter news sign | Made the first motograph moving sign, driven by punched paper rolls, in 1911. |  | `public/people/everett-bickley.jpg` |
 
 ## Hall 3, Solid light
 
@@ -147,6 +155,14 @@ Take the picture from the person's own article or file page, where the caption s
 | Kok-Lim Low | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/kok-lim-low.webp` |
 | Deepak Bandyopadhyay | Projection mapping | Described the technique in 2001 under the name shader lamps. | yes | `public/people/deepak-bandyopadhyay.webp` |
 | Lanny Smoot | Projection mapping | Disney research fellow with more than 100 patents. He is credited with making Madame Leota, the head in the crystal ball of the Haunted Mansion, float in her séance room. | yes | `public/people/lanny-smoot.webp` |
+| Lotte Reiniger | Shadow play | German silhouette animator who made The Adventures of Prince Achmed in 1926. |  | `public/people/lotte-reiniger.jpg` |
+| Christiaan Huygens | Magic lantern | Dutch physicist and astronomer of The Hague who sketched a lantern show in 1659. |  | `public/people/christiaan-huygens.jpg` |
+| Thomas Rasmussen Walgensten | Magic lantern | Danish mathematician who showed magic lanterns at European courts in the 1660s. |  | `public/people/thomas-rasmussen-walgensten.jpg` |
+| Athanasius Kircher | Magic lantern | German Jesuit scholar in Rome, author of Ars Magna Lucis et Umbrae. |  | `public/people/athanasius-kircher.jpg` |
+| John West | Switchable glass | Worked at the Liquid Crystal Institute of Kent State University from 1984. A common name. |  | `public/people/john-west.jpg` |
+| Eric J. Seibel | Scanning fibre display | Engineer at the University of Washington who made the scanning fibre endoscope. |  | `public/people/eric-j-seibel.jpg` |
+| Thomas A. Furness III | Scanning fibre display | Founded the Human Interface Technology Laboratory at the University of Washington. Earlier built cockpit displays for the US Air Force. |  | `public/people/thomas-a-furness-iii.jpg` |
+| Brian T. Schowengerdt | Scanning fibre display | Worked at the University of Washington laboratory, later co-founded Magic Leap. |  | `public/people/brian-t-schowengerdt.jpg` |
 
 ## Hall 5, Paper
 
@@ -190,6 +206,8 @@ Take the picture from the person's own article or file page, where the caption s
 | Nobuyuki Masuda | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/nobuyuki-masuda.webp` |
 | Sriram Subramanian | Acoustic levitation display | Built the display at the University of Sussex and published it in 2019. | yes | `public/people/sriram-subramanian.webp` |
 | Yoichi Ochiai | Laser plasma display | Led the version of 2015, which uses far shorter laser pulses. | yes | `public/people/yoichi-ochiai.webp` |
+| C. T. Brock | Firework set piece | Head of the Brock fireworks firm that staged displays at the Crystal Palace from 1865. |  | `public/people/c-t-brock.jpg` |
+| Alan St. H. Brock | Firework set piece | Of the same Brock firm, author of a history of fireworks in 1922. |  | `public/people/alan-st-h-brock.jpg` |
 
 ## Hall 7, Depth
 
@@ -221,5 +239,9 @@ Take the picture from the person's own article or file page, where the caption s
 | Greg Dawe | CAVE | EVL staff member credited in its retrospective with designing and building the CAVE room and its portable SIGGRAPH 92 version. |  | `public/people/greg-dawe.jpg` |
 | Kazuo Yoshinaka | Virtual retinal display | Proposed the display at Nippon Electric in Japan in 1986. |  | `public/people/kazuo-yoshinaka.jpg` |
 | J. M. Naish | Head-up display | Worked out the system first called a head-up display, at Farnborough from 1956. |  | `public/people/j-m-naish.jpg` |
+| Wilhelm Rollmann | Glasses that pick an eye | German teacher who described two-colour stereo pictures in 1853. |  | `public/people/wilhelm-rollmann.jpg` |
+| Louis Ducos du Hauron | Glasses that pick an eye | French pioneer of colour photography who named the anaglyph in 1891. |  | `public/people/louis-ducos-du-hauron.jpg` |
+| Laurens Hammond | Glasses that pick an eye | Inventor of the Hammond organ, who showed Teleview shutter films in New York in 1922. |  | `public/people/laurens-hammond.jpg` |
+| Edwin H. Land | Glasses that pick an eye | Founder of Polaroid, who made sheet polarisers in the 1930s. |  | `public/people/edwin-h-land.jpg` |
 
 The CAVE supplement and its photo evidence are in [docs/portraits/cave/](docs/portraits/cave/README.md). Its three drawings are on the site.
