@@ -6,6 +6,8 @@
 export interface News { date: string; title: string; says: string; link: string }
 
 export const news: News[] = [
+  { date: '2026-11-23', title: 'Five more pieces', says: 'A neon sign that tells the time in bent glass, the news ticker that ran around the Times Tower, a magic lantern throwing a painted slide on the wall, a single glass fibre that draws a picture in a spiral, and a fireworks frame that lights up all at once.', link: 'piece/neon-sign/' },
+  { date: '2026-11-23', title: 'New places to stand', says: 'Many pieces have new views chosen with a historian: some hold a piece at full speed or slowed down, some dim the hall to show what happens after dark, and some let you sway past a lenticular print or walk around a hologram.', link: 'piece/lenticular/' },
   { date: '2026-11-23', title: 'Four new pieces', says: 'A water curtain that drops the time in falling water, a screen that looks blank until you hold a polarising filter to it, glass that switches from frosted to clear, and the three kinds of glasses that give each eye its own picture.', link: 'piece/water-curtain/' },
   { date: '2026-11-23', title: 'Put a piece in your own page', says: 'Every piece now has an Embed button. It gives the code that shows the 3D model in another web page, with a link back to the museum.', link: 'piece/nixie-tube/' },
   { date: '2026-11-22', title: 'Where each name is written', says: 'The two guided tours now say, at every stop, how a person\'s part is on record: on a patent, first on a paper, in a news report, in their own account, or in sources that disagree.', link: 'tour/women/' },

@@ -2186,6 +2186,18 @@ msgstr "在加拿大Ferranti-Packard公司设计了翻转点阵显示屏，John 
 
 #: hall-1/flip-disc
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.flip-disc.view.night.label"
+msgid "Wait after dark"
+msgstr "等到天黑"
+
+#: hall-1/flip-disc
+#. Line shown while the visitor is at that place.
+msgctxt "piece.flip-disc.view.night.hint"
+msgid "The discs still hold the time, but the board makes no light of its own, so after dark it cannot be read."
+msgstr "圆片仍在显示时间，但它们自己不发光，天黑后就看不清了。"
+
+#: hall-1/flip-disc
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.flip-disc.view.kerb.label"
 msgid "Wait at the stop"
 msgstr "在车站等车"
@@ -2501,6 +2513,18 @@ msgstr "顺着螺旋线看"
 msgctxt "piece.mechanical-television.view.disc.hint"
 msgid "Thirty holes, each one hole's width nearer the centre than the last. One turn of the disc is one picture."
 msgstr "三十个小孔，每一个都比前一个向圆心靠近一个孔的宽度。圆盘转一圈，就是一幅画面。"
+
+#: hall-1/mechanical-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.mechanical-television.view.sync.label"
+msgid "See what keeps step"
+msgstr "看同步装置"
+
+#: hall-1/mechanical-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.mechanical-television.view.sync.hint"
+msgid "A toothed wheel turns between two coils fed by the signal. Their pull holds this disc in step with the sender's."
+msgstr "信号经过两个线圈，一个齿轮在中间转动。线圈的拉力让这个圆盘与发射端的圆盘保持同一节拍。"
 
 #: hall-1/mechanical-television
 #. Caption of a picture or film from an archive.
@@ -2888,6 +2912,18 @@ msgstr "在IBM着手研制一台可用的盲文显示器。它是美国盲人印
 
 #: hall-1/braille-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.braille-display.view.dark.label"
+msgid "Read in the dark"
+msgstr "在黑暗中读"
+
+#: hall-1/braille-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.braille-display.view.dark.hint"
+msgid "Every light is off. A finger finds the same pins as before."
+msgstr "灯全灭了。手指照样找到同样的点。"
+
+#: hall-1/braille-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.braille-display.view.touch.label"
 msgid "Run a finger along it"
 msgstr "用手指摸一遍"
@@ -3011,6 +3047,18 @@ msgstr "2018年冬奥会开幕式上播出的那场创纪录的飞行，是事�
 msgctxt "piece.drone-show.people.1"
 msgid "Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015."
 msgstr "林茨Ars Electronica Futurelab的负责人。2015年11月，他的团队与英特尔在汉堡附近放飞了100架带灯的无人机。"
+
+#: hall-1/drone-show
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.drone-show.view.night.label"
+msgid "Watch after dark"
+msgstr "天黑后观看"
+
+#: hall-1/drone-show
+#. Line shown while the visitor is at that place.
+msgctxt "piece.drone-show.view.night.hint"
+msgid "After dark the aircraft vanish, and only their lamps are left to draw the figure."
+msgstr "天黑后看不见无人机，只剩灯光画出图形。"
 
 #: hall-1/drone-show
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3183,8 +3231,8 @@ msgstr "凑近看屏面"
 #: hall-2/cathode-ray-tube
 #. Line shown while the visitor is at that place.
 msgctxt "piece.cathode-ray-tube.view.raster.hint"
-msgid "The picture is made of horizontal lines. The beam sweeps them from top to bottom, over and over."
-msgstr "画面是由一条条水平线组成的。电子束从上到下扫过它们，一遍又一遍。"
+msgid "Close to, the picture comes apart into horizontal lines with dark gaps between them."
+msgstr "走近看，画面分成一条条横线，线与线之间有暗缝。"
 
 #: hall-2/cathode-ray-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3245,6 +3293,150 @@ msgstr "彩色显像管背后的想法，出自Alfred Schroeder在1947年为RCA�
 msgctxt "piece.cathode-ray-tube.media.patent-1.alt"
 msgid "Line drawings: a picture tube with three guns in its neck and coils round it, three beams crossing at a plate before a screen, and an enlargement labelled with colours."
 msgstr "线描图：一只显像管，管颈里有三支电子枪，外面套着线圈。三束电子在屏幕前的一块板处交叉。还有一幅标着颜色的放大图。"
+
+#: hall-2/neon-sign
+#. Name of a piece.
+msgctxt "piece.neon-sign.name"
+msgid "Neon sign"
+msgstr "霓虹灯招牌"
+
+#: hall-2/neon-sign
+#. Other names the piece goes by.
+msgctxt "piece.neon-sign.aka"
+msgid "Luminous tube sign"
+msgstr "发光灯管招牌"
+
+#: hall-2/neon-sign
+#. The date of the piece, as its label gives it.
+msgctxt "piece.neon-sign.yearText"
+msgid "tubes shown in 1910, a first sign sold in 1912"
+msgstr "1910年展出灯管，1912年卖出第一块招牌"
+
+#: hall-2/neon-sign
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.neon-sign.origin"
+msgid "Georges Claude, Paris. Tubes shown at the Paris Motor Show in December 1910. His associate Jacques Fonsèque sold a sign to a barbershop on the Boulevard Montmartre in 1912"
+msgstr "Georges Claude，巴黎。1910年12月在巴黎车展上展出灯管。合伙人 Jacques Fonsèque 于1912年把一块招牌卖给蒙马特大道上的一家理发店"
+
+#: hall-2/neon-sign
+#. Where this kind of display stands today.
+msgctxt "piece.neon-sign.statusNote"
+msgid "Still bent by hand for signs and art. Plastics, fluorescent tubes and later LEDs replaced most neon signs, and a small revival began in the late 1970s."
+msgstr "至今仍为招牌和艺术品手工弯制。塑料、荧光灯，后来还有 LED，取代了大部分霓虹灯招牌。1970年代末开始有小规模的复兴。"
+
+#: hall-2/neon-sign
+#. First sentence of the label.
+msgctxt "piece.neon-sign.lead"
+msgid "A glass tube bent into letters holds a little neon, which glows red-orange along its whole length when a high voltage is put across it."
+msgstr "玻璃管弯成字的形状，里面有少量氖气，加上高电压后整根管子都发出红橙色的光。"
+
+#: hall-2/neon-sign
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.neon-sign.how.1"
+msgid "A sign maker heats glass tubing over a flame and bends it into letters, blowing into it so that it keeps its round shape. An electrode is sealed into each end, the air is pumped out, and a little gas is let in."
+msgstr "招牌师傅把玻璃管放在火上烤软，弯成字形，同时往里吹气让管子保持圆形。两端封入电极，抽出空气，再充入少量气体。"
+
+#: hall-2/neon-sign
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.neon-sign.how.2"
+msgid "A transformer puts a high voltage across the two electrodes. Current flows through the gas from one end to the other and makes it glow along the whole tube. Neon glows red-orange and argon purple. A drop of mercury, tinted glass or a coating inside the tube gives other colours. A sign can only switch its tubes on and off."
+msgstr "变压器在两个电极之间加上高电压。电流从一端流到另一端，穿过气体，让整根管子发光。氖发红橙色，氩发紫色。一滴汞、彩色玻璃或管内的涂层能带来其他颜色。招牌只能把灯管打开或关上。"
+
+#: hall-2/neon-sign
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.neon-sign.how.3"
+msgid "Daniel McFarlan Moore lit rooms in the late 1890s with long tubes of glowing nitrogen or carbon dioxide. Georges Claude, whose company made neon as a by-product of liquefying air, cured the dimming of his tubes with larger, cooler electrodes. He showed red tubes at the Paris Motor Show in December 1910. Signs in the United States are usually dated from two that the Los Angeles car dealer Earle C. Anthony bought in 1923, though the trade paper Signs of the Times found no permit for them before December 1924."
+msgstr "Daniel McFarlan Moore 在1890年代末用长长的发光氮气或二氧化碳灯管照亮房间。Georges Claude 的公司在液化空气时得到副产品氖气，他用更大、更冷的电极解决了灯管变暗的问题。1910年12月，他在巴黎车展上展出红色灯管。美国的招牌通常从洛杉矶汽车经销商 Earle C. Anthony 在1923年买下的两块算起，但行业杂志《Signs of the Times》找不到早于1924年12月的许可记录。"
+
+#: hall-2/neon-sign
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.1"
+msgid "Draws an even line of light in any shape a hand can bend"
+msgstr "能把均匀的光线弯成任何手工做得出的形状"
+
+#: hall-2/neon-sign
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.2"
+msgid "Can be read from far away by night"
+msgstr "晚上远处也看得清"
+
+#: hall-2/neon-sign
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.3"
+msgid "Needs no screen: the tube itself is the letter"
+msgstr "不需要屏幕，灯管本身就是字"
+
+#: hall-2/neon-sign
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.1"
+msgid "Can only switch its tubes on and off, not change what it says"
+msgstr "灯管只能开或关，不能改换上面的字"
+
+#: hall-2/neon-sign
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.2"
+msgid "Needs a high voltage"
+msgstr "需要高电压"
+
+#: hall-2/neon-sign
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.3"
+msgid "Is made of thin glass and breaks"
+msgstr "用薄玻璃做成，容易碎"
+
+#: hall-2/neon-sign
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.neon-sign.look"
+msgid "Real signs could only switch whole tubes on and off, so this one shows the time with seven tubes to each figure, as an animated sign would. Switch the daylight off: the glow lights the wall behind it."
+msgstr "真正的招牌只能把整根灯管打开或关上。所以这块招牌像动态招牌那样，每个数字用七根灯管来显示时间。关掉日光，灯光会照亮后面的墙。"
+
+#: hall-2/neon-sign
+#. People section: what Georges Claude did. The names stand above this line.
+msgctxt "piece.neon-sign.people.1"
+msgid "Showed long red neon tubes at the Paris Motor Show in December 1910, after curing their dimming with larger, cooler electrodes."
+msgstr "1910年12月在巴黎车展上展出长长的红色霓虹灯管。此前他用更大、更冷的电极解决了灯管变暗的问题。"
+
+#: hall-2/neon-sign
+#. People section: what Jacques Fonsèque did. The names stand above this line.
+msgctxt "piece.neon-sign.people.2"
+msgid "Claude's associate, who saw a business in signs and sold one to a barbershop on the Boulevard Montmartre in 1912, by American Heritage's account."
+msgstr "Claude 的合伙人，看出招牌里的商机，于1912年把一块卖给蒙马特大道上的一家理发店，据《American Heritage》记载。"
+
+#: hall-2/neon-sign
+#. People section: what Daniel McFarlan Moore did. The names stand above this line.
+msgctxt "piece.neon-sign.people.3"
+msgid "Lit rooms in the late 1890s with long tubes of glowing nitrogen or carbon dioxide, which tungsten lamps displaced after 1910."
+msgstr "1890年代末用长长的发光氮气或二氧化碳灯管照亮房间。1910年后这种灯管被钨丝灯泡取代。"
+
+#: hall-2/neon-sign
+#. People section: what Earle C. Anthony did. The names stand above this line.
+msgctxt "piece.neon-sign.people.4"
+msgid "Los Angeles Packard dealer who bought two signs from Claude Neon, usually dated 1923. Signs of the Times found no permit for them before December 1924."
+msgstr "洛杉矶的帕卡德汽车经销商，向 Claude Neon 买了两块招牌。通常记为1923年，但《Signs of the Times》找不到早于1924年12月的许可记录。"
+
+#: hall-2/neon-sign
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.neon-sign.view.street.label"
+msgid "Stand across the street"
+msgstr "站在街对面"
+
+#: hall-2/neon-sign
+#. Line shown while the visitor is at that place.
+msgctxt "piece.neon-sign.view.street.hint"
+msgid "From here each tube reads as one even line of light. When the minute changes, the tubes switch one by one."
+msgstr "从这里看，每根灯管都是一条均匀的光线。分钟一变，灯管就一根根亮起来。"
+
+#: hall-2/neon-sign
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.neon-sign.view.tube.label"
+msgid "Go close to a tube"
+msgstr "走近灯管"
+
+#: hall-2/neon-sign
+#. Line shown while the visitor is at that place.
+msgctxt "piece.neon-sign.view.tube.hint"
+msgid "Each tube bends back through the board to an electrode. The gas glows along the whole length between its two ends."
+msgstr "每根灯管都绕回招牌板后面，接到电极上。气体在两端之间的整段长度上发光。"
 
 #: hall-2/colour-wheel-television
 #. Name of a piece.
@@ -3353,6 +3545,30 @@ msgstr "名字见于德国第172 376号专利：硒光电池、镜子，以及�
 msgctxt "piece.colour-wheel-television.people.3"
 msgid "Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years."
 msgstr "哥伦比亚广播公司（CBS）的工程师，该公司在同一时期造出了自己的色轮电视。"
+
+#: hall-2/colour-wheel-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.colour-wheel-television.view.set.label"
+msgid "Watch it at speed"
+msgstr "全速观看"
+
+#: hall-2/colour-wheel-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.colour-wheel-television.view.set.hint"
+msgid "Held at full speed: the three pictures follow so fast that they merge into one in colour."
+msgstr "固定为全速：三幅画面接得太快，合成一幅彩色画面。"
+
+#: hall-2/colour-wheel-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.colour-wheel-television.view.wheel.label"
+msgid "Turn the wheel slowly"
+msgstr "慢慢转动色轮"
+
+#: hall-2/colour-wheel-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.colour-wheel-television.view.wheel.hint"
+msgid "Held slow: one filter at a time, while the tube shows the red, the green and the blue picture in turn."
+msgstr "固定为慢速：滤光片一片一片经过，显像管依次显示红、绿、蓝画面。"
 
 #: hall-2/vector-display
 #. Name of a piece.
@@ -3467,6 +3683,18 @@ msgstr "凑近看笔迹"
 msgctxt "piece.vector-display.view.trace.hint"
 msgid "No dots and no scan lines. Each stroke is one smooth pass of the beam, at any angle."
 msgstr "没有点，也没有扫描线。每一笔都是电子束一次平滑的走笔，什么角度都行。"
+
+#: hall-2/vector-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.vector-display.view.pen.label"
+msgid "Look at the light pen"
+msgstr "看光笔"
+
+#: hall-2/vector-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.vector-display.view.pen.hint"
+msgid "The pen sees the flash as the beam passes under its tip, which tells the computer what it points at."
+msgstr "光束从笔尖下扫过时，笔会看到一闪，电脑由此知道笔指着哪里。"
 
 #: hall-2/storage-tube
 #. Name of a piece.
@@ -3583,6 +3811,18 @@ msgid "The plot is drawn once and stays lit, stored in the tube itself. The flas
 msgstr "曲线图只画一次，就一直亮着，存在管子本身里面。要擦掉它，只有靠那一闪。"
 
 #: hall-2/storage-tube
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.storage-tube.view.wheels.label"
+msgid "Look at the thumbwheels"
+msgstr "看拇指轮"
+
+#: hall-2/storage-tube
+#. Line shown while the visitor is at that place.
+msgctxt "piece.storage-tube.view.wheels.hint"
+msgid "Two wheels at right angles steer the crosshair: one up and down, the other from side to side."
+msgstr "两个互成直角的轮子移动十字线，一个管上下，一个管左右。"
+
+#: hall-2/storage-tube
 #. Caption of a picture or film from an archive.
 msgctxt "piece.storage-tube.media.patent-1.caption"
 msgid "The storage tube, from Robert Anderson's patent of 1966 for Tektronix. The second view is cut away to show the inside. The patent itself concerns the thin layer on the face that holds the picture."
@@ -3693,8 +3933,8 @@ msgstr "这项发明该归功于谁，尚无定论。波士顿的The Computer Mu
 #: hall-2/nixie-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.nixie-tube.view.stack.label"
-msgid "Go close to one tube"
-msgstr "凑近看一只管子"
+msgid "Look from the side"
+msgstr "从侧面看"
 
 #: hall-2/nixie-tube
 #. Line shown while the visitor is at that place.
@@ -4201,6 +4441,18 @@ msgid "A cold cathode tip under every hole in the gate. Electrons leave the tips
 msgstr "栅极的每个孔下面都有一个冷阴极尖锥。电子离开尖锥，越过间隙，打到上面的荧光粉上。"
 
 #: hall-2/field-emission
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.field-emission.view.phosphor.label"
+msgid "Look down at the dots"
+msgstr "从上方看点"
+
+#: hall-2/field-emission
+#. Line shown while the visitor is at that place.
+msgctxt "piece.field-emission.view.phosphor.hint"
+msgid "Each dot of phosphor glows where electrons pulled from the cold tips below it strike."
+msgstr "每个荧光点在下面冷尖端拉出的电子打到的地方发光。"
+
+#: hall-2/field-emission
 #. Caption of a picture or film from an archive.
 msgctxt "piece.field-emission.media.patent-1.caption"
 msgid "The Spindt cathode, from the Stanford Research Institute patent of 1973. A sandwich of metal, insulator and metal is pierced with holes, and a sharp cone stands in each one."
@@ -4223,6 +4475,138 @@ msgstr "一种用冷阴极的扁平电子管，出自美国陆军1967年申请�
 msgctxt "piece.field-emission.media.patent-2.alt"
 msgid "Line drawings: a cut-away corner of a plate covered in fine dots over crossed strips, a round flat tube from above with part broken away, and its thin cross-section."
 msgstr "线描图：一块板被切开的一角，交叉的导电条上布满细点。一只从上方看的扁圆形电子管，有一部分被剖开。还有它薄薄的剖面图。"
+
+#: hall-2/news-zipper
+#. Name of a piece.
+msgctxt "piece.news-zipper.name"
+msgid "Moving-letter news sign"
+msgstr "文字移动的新闻电子屏"
+
+#: hall-2/news-zipper
+#. Other names the piece goes by.
+msgctxt "piece.news-zipper.aka"
+msgid "Motograph News Bulletin, the Times Square zipper"
+msgstr "Motograph News Bulletin，时报广场的 Zipper"
+
+#: hall-2/news-zipper
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.news-zipper.origin"
+msgid "Motogram sign company, New York, for The New York Times. Lit on election night, 6 November 1928"
+msgstr "Motogram 招牌公司，纽约，为《纽约时报》制作。1928年11月6日选举之夜首次点亮"
+
+#: hall-2/news-zipper
+#. Where this kind of display stands today.
+msgctxt "piece.news-zipper.statusNote"
+msgid "Bulb signs set with metal type are no longer built. The band round One Times Square still carries news, now on LEDs."
+msgstr "用金属活字排版的灯泡招牌已经不再制造。环绕 One Times Square 的灯带今天仍用 LED 播报新闻。"
+
+#: hall-2/news-zipper
+#. First sentence of the label.
+msgctxt "piece.news-zipper.lead"
+msgid "Headlines seem to slide round a building on a band of light bulbs, though no bulb ever moves."
+msgstr "标题看起来沿着灯泡带绕着大楼滑动，可是没有一个灯泡在动。"
+
+#: hall-2/news-zipper
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.news-zipper.how.1"
+msgid "An operator set each headline in metal letters, much as a printer sets type, in a long holder. A conveyor carried the holder past a field of brushes, one for each bulb outside. Where the metal of a letter touched a brush it closed a circuit, and that bulb on the band lit for a moment."
+msgstr "操作员像印刷工排字一样，用金属字母把标题一个字一个字排进长框里。传送带把框从一排刷子下面送过，外面每个灯泡对应一把刷子。字母的金属碰到刷子时电路接通，灯带上那个灯泡就亮一下。"
+
+#: hall-2/news-zipper
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.news-zipper.how.2"
+msgid "Each letter on the band was a grid of bulbs 12 high and 7 wide. As the letters travelled past the brushes, the lit pattern travelled along the band with them, so that the eye saw words gliding round the corner of the building while only the light moved."
+msgstr "灯带上的每个字都是高12个、宽7个灯泡的点阵。字母从刷子下经过时，亮起的图案也沿着灯带一起移动。眼睛看到文字绕过楼角，其实动的只有光。"
+
+#: hall-2/news-zipper
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.news-zipper.how.3"
+msgid "The band round the Times Tower held 14,800 bulbs and ran about 380 feet, 5 feet high. Its first headline gave Herbert Hoover's election, on 6 November 1928. The newspaper credited Frank C. Reilly of the Motogram company. Dale Cressman, writing in Journalism History in 2018, credits Reilly's partner Francis E. J. Wilde with the letter system, and Everett Bickley with an earlier motograph of 1911 that read rolls of punched paper."
+msgstr "环绕时报大楼的灯带有14,800个灯泡，长约380英尺，高5英尺。第一条标题是1928年11月6日 Herbert Hoover 当选。报社把功劳归于 Motogram 公司的 Frank C. Reilly。Dale Cressman 在2018年《Journalism History》中认为字母装置出自 Reilly 的合伙人 Francis E. J. Wilde，而1911年读取打孔纸卷的早期 Motograph 出自 Everett Bickley。"
+
+#: hall-2/news-zipper
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.1"
+msgid "Puts news before a crowd within minutes of setting it"
+msgstr "排好字几分钟内就能把新闻送到人群面前"
+
+#: hall-2/news-zipper
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.2"
+msgid "Can be read from several blocks away"
+msgstr "几个街区外也看得清"
+
+#: hall-2/news-zipper
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.3"
+msgid "Changes its message as fast as type can be set"
+msgstr "内容改得和排字一样快"
+
+#: hall-2/news-zipper
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.1"
+msgid "Needs an operator to set every letter by hand"
+msgstr "每个字都要操作员手工排"
+
+#: hall-2/news-zipper
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.2"
+msgid "Has thousands of bulbs, which burn out and must be changed"
+msgstr "灯泡成千上万，烧坏了就得换"
+
+#: hall-2/news-zipper
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.3"
+msgid "Shows one colour and no pictures beyond what the letters make"
+msgstr "只有一种颜色，除了字没有图"
+
+#: hall-2/news-zipper
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.news-zipper.look"
+msgid "Watch the headline run along the band and round the corner. Then go behind it, where the letters ride past the brushes and light the bulbs as they touch."
+msgstr "看标题沿着灯带跑过楼角。然后走到后面：字母从刷子下经过，碰到哪里，哪里的灯泡就亮。"
+
+#: hall-2/news-zipper
+#. People section: what Francis E. J. Wilde did. The names stand above this line.
+msgctxt "piece.news-zipper.people.1"
+msgid "Engineer at the Motogram company who made the system of metal letters and brushes and filed patents for it in 1925, by the account of the historian Dale Cressman."
+msgstr "Motogram 公司的工程师，制作了金属字母和刷子装置，并在1925年申请专利，据历史学家 Dale Cressman 记载。"
+
+#: hall-2/news-zipper
+#. People section: what Frank C. Reilly did. The names stand above this line.
+msgctxt "piece.news-zipper.people.2"
+msgid "Wilde's partner, who sold the sign to The New York Times in 1928 and was named as its inventor in the newspaper's accounts."
+msgstr "Wilde 的合伙人，1928年把这块电子屏卖给《纽约时报》，报上的文章称他为发明者。"
+
+#: hall-2/news-zipper
+#. People section: what Everett Bickley did. The names stand above this line.
+msgctxt "piece.news-zipper.people.3"
+msgid "Made the first motograph in 1911, a moving sign driven by rolls of punched paper, Cressman writes."
+msgstr "1911年制造了第一台 Motograph，Cressman 写道，那是一块由打孔纸卷驱动的动态招牌。"
+
+#: hall-2/news-zipper
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.news-zipper.view.square.label"
+msgid "Stand in the square"
+msgstr "站在广场上"
+
+#: hall-2/news-zipper
+#. Line shown while the visitor is at that place.
+msgctxt "piece.news-zipper.view.square.hint"
+msgid "The headline runs round the corner of the building. No lamp moves: only which lamps are lit."
+msgstr "标题绕过楼角。没有灯泡在动，变的只是哪些灯泡亮着。"
+
+#: hall-2/news-zipper
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.news-zipper.view.brushes.label"
+msgid "Go behind the band"
+msgstr "走到灯带后面"
+
+#: hall-2/news-zipper
+#. Line shown while the visitor is at that place.
+msgctxt "piece.news-zipper.view.brushes.hint"
+msgid "Metal letters ride under a row of brushes. Where metal touches a brush, one lamp outside lights."
+msgstr "金属字母从一排刷子下经过。金属碰到刷子的地方，外面就亮起一个灯泡。"
 
 #: hall-2/eggcrate
 #. Name of a piece.
@@ -4563,14 +4947,26 @@ msgstr "在Eastman Kodak做出一种由两层有机薄层构成的二极管，�
 #: hall-3/oled
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.oled.view.seat.label"
-msgid "Sit in front"
-msgstr "坐到正前方"
+msgid "Sit in a dark room"
+msgstr "坐在暗室里"
 
 #: hall-3/oled
 #. Line shown while the visitor is at that place.
 msgctxt "piece.oled.view.seat.hint"
-msgid "Switch the daylight off. The black of the panel goes with it and only the colours are left."
-msgstr "把日光关掉。面板的黑色随之隐入黑暗，只剩下颜色。"
+msgid "In the dark the black of the panel goes with the room, and only the colours are left."
+msgstr "在黑暗中，面板的黑与房间融为一体，只剩下颜色。"
+
+#: hall-3/oled
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.oled.view.edge.label"
+msgid "Look along the edge"
+msgstr "沿着边缘看"
+
+#: hall-3/oled
+#. Line shown while the visitor is at that place.
+msgctxt "piece.oled.view.edge.hint"
+msgid "The panel is a few millimetres thick. Every pixel makes its own light, so there is no lamp behind it."
+msgstr "面板只有几毫米厚。每个像素自己发光，所以后面没有灯。"
 
 #: hall-3/oled
 #. Caption of a picture or film from an archive.
@@ -4679,6 +5075,18 @@ msgstr "发明人是一对夫妇，这个想法始于他们餐桌上的一个问
 msgctxt "piece.microled.people.1"
 msgid "Physicists at Kansas State University. With their team they saw blue light from a gallium nitride microLED in August 1999, by their own account, and published it in 2000."
 msgstr "堪萨斯州立大学的物理学家。据他们自己所述，1999年8月，两人和团队从一个氮化镓microLED上看到了蓝光，并于2000年发表。"
+
+#: hall-3/microled
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.microled.view.wall.label"
+msgid "Stand back from the wall"
+msgstr "离墙远一点"
+
+#: hall-3/microled
+#. Line shown while the visitor is at that place.
+msgctxt "piece.microled.view.wall.hint"
+msgid "Close up, the wall is tiles. From here the seams vanish, and the LEDs are too small to see."
+msgstr "走近看，墙是一块块拼起来的。从这里看，接缝消失了，LED 小得看不见。"
 
 #: hall-3/microled
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4824,6 +5232,30 @@ msgctxt "piece.quantum-dot.people.5"
 msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
 msgstr "2014年，他们在浙江大学用溶液一层一层地做出了量子点二极管。它发深红色的光，能把五分之一的电子变成光，额定寿命超过10万小时。"
 
+#: hall-3/quantum-dot
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.quantum-dot.view.screen.label"
+msgid "Look at the screen"
+msgstr "看屏幕"
+
+#: hall-3/quantum-dot
+#. Line shown while the visitor is at that place.
+msgctxt "piece.quantum-dot.view.screen.hint"
+msgid "Behind the enlarged pixel stands the screen it belongs to. Its red and green are blue light changed by dots."
+msgstr "放大的像素后面立着它所在的屏幕。那里的红和绿都是量子点转换过的蓝光。"
+
+#: hall-3/quantum-dot
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.quantum-dot.view.pixel.label"
+msgid "Go close to the pixel"
+msgstr "走近像素"
+
+#: hall-3/quantum-dot
+#. Line shown while the visitor is at that place.
+msgctxt "piece.quantum-dot.view.pixel.hint"
+msgid "Blue lamps below. Large dots turn the blue red, small dots turn it green, and the third well lets the blue through."
+msgstr "下面是蓝色灯。大的点把蓝变成红，小的点变成绿，第三格让蓝光直接通过。"
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4934,6 +5366,18 @@ msgstr "生于首尔。1968年，他在贝尔实验室报告了掺在硫化锌�
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.thin-film-el.view.side.label"
+msgid "Read it from the side"
+msgstr "从侧面读"
+
+#: hall-3/thin-film-el
+#. Line shown while the visitor is at that place.
+msgctxt "piece.thin-film-el.view.side.hint"
+msgid "The film gives off its light right at the surface, so the figures stay clear far to one side."
+msgstr "薄膜就在表面发光，所以从很斜的角度看，数字依然清楚。"
+
+#: hall-3/thin-film-el
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.thin-film-el.view.dots.label"
 msgid "Go close to the dots"
 msgstr "凑近看小点"
@@ -5039,6 +5483,18 @@ msgstr "站到橱窗前"
 msgctxt "piece.transparent-display.view.window.hint"
 msgid "The figures are light added on the glass, and the clock stands behind it. Move your head and they slide apart."
 msgstr "数字是加在玻璃上的光，闹钟在玻璃后面。动一动头，它们就错开了。"
+
+#: hall-3/transparent-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.transparent-display.view.pane.label"
+msgid "Go close to the pane"
+msgstr "走近玻璃"
+
+#: hall-3/transparent-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.transparent-display.view.pane.hint"
+msgid "The screen can only add light to what is behind it. Where its picture would be black, you see the clock."
+msgstr "屏幕只能给后面的东西加上光。画面该是黑的地方，你会看到钟。"
 
 #: hall-3/flexible-display
 #. Name of a piece.
@@ -5153,6 +5609,18 @@ msgstr "顺着边缘看"
 msgctxt "piece.flexible-display.view.edge.hint"
 msgid "The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below."
 msgstr "这张薄片就是整个显示屏：塑料上的几层薄膜，后面什么也没有。它卷进下面的卷轴里。"
+
+#: hall-3/flexible-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.flexible-display.view.back.label"
+msgid "Look at the back"
+msgstr "看背面"
+
+#: hall-3/flexible-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.flexible-display.view.back.hint"
+msgid "Behind the picture there is only the film: no lamp, no glass and no frame."
+msgstr "画面后面只有薄膜，没有灯，没有玻璃，也没有框。"
 
 #: hall-4/camera-obscura
 #. Name of a piece.
@@ -5487,14 +5955,152 @@ msgstr "到这一侧来的只有影子。贴着布时，影人的影子小而清
 #: hall-4/shadow-play
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.shadow-play.view.behind.label"
-msgid "Go behind the screen"
-msgstr "绕到幕后"
+msgid "Sit by the puppeteer"
+msgstr "坐在操偶师旁边"
 
 #: hall-4/shadow-play
 #. Line shown while the visitor is at that place.
 msgctxt "piece.shadow-play.view.behind.hint"
-msgid "The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still."
-msgstr "影人是扁平的，镂空并上色，各自装在一根杆上。一团火焰照亮全部影人，而它一刻也不安定。"
+msgid "Some of the audience sat on this side, watching the puppeteer, the lamp and the painted figures."
+msgstr "有些观众坐在这一边，看着操偶师、油灯和彩绘的皮影。"
+
+#: hall-4/magic-lantern
+#. Name of a piece.
+msgctxt "piece.magic-lantern.name"
+msgid "Magic lantern"
+msgstr "魔术幻灯"
+
+#: hall-4/magic-lantern
+#. Other names the piece goes by.
+msgctxt "piece.magic-lantern.aka"
+msgid "Laterna magica, lantern slide projector"
+msgstr "Laterna magica，幻灯片投影机"
+
+#: hall-4/magic-lantern
+#. The date of the piece, as its label gives it.
+msgctxt "piece.magic-lantern.yearText"
+msgid "by 1659"
+msgstr "不晚于1659年"
+
+#: hall-4/magic-lantern
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.magic-lantern.origin"
+msgid "Christiaan Huygens, The Hague, by 1659. Shown and sold at courts across Europe by Thomas Rasmussen Walgensten in the 1660s"
+msgstr "Christiaan Huygens，海牙，不晚于1659年。1660年代 Thomas Rasmussen Walgensten 在欧洲各地宫廷展示并出售"
+
+#: hall-4/magic-lantern
+#. Where this kind of display stands today.
+msgctxt "piece.magic-lantern.statusNote"
+msgid "Gave way to cinema after 1895, though lanterns stayed in schools and churches for decades. Collectors and performers still give shows."
+msgstr "1895年后让位给电影，但幻灯在学校和教堂里又用了几十年。收藏者和放映人至今仍在办放映会。"
+
+#: hall-4/magic-lantern
+#. First sentence of the label.
+msgctxt "piece.magic-lantern.lead"
+msgid "A lamp, a picture painted on glass and a lens throw a large picture on the wall of a dark room."
+msgstr "一盏灯、一张画在玻璃上的图和一个镜头，把大幅画面投到暗室的墙上。"
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.magic-lantern.how.1"
+msgid "A lamp burns in a box with a chimney, in front of a curved mirror. Its light passes through a small picture painted on glass, slid in upside down, and the lens in the tube in front throws it on a wall or a sheet, enlarged and the right way up."
+msgstr "带烟囱的箱子里，一盏灯在弧形镜前燃烧。光穿过玻璃上的小画，画是倒着插进去的，前面镜筒里的镜头把它放大、正过来投在墙上或幕布上。"
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.magic-lantern.how.2"
+msgid "Slides with moving parts, worked by a lever or a crank, made figures move. Two lanterns aimed at one screen could fade one picture into the next, a show called dissolving views. Brighter lamps, from oil to limelight and the electric arc, let the picture grow to fill a hall."
+msgstr "带拉杆或手柄、能活动的幻灯片可以让人物动起来。两台对准同一块幕布的幻灯机能让一幅画渐渐融成下一幅，叫作溶景。从油灯到石灰光再到电弧，灯越来越亮，画面也大到能填满礼堂。"
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.magic-lantern.how.3"
+msgid "The oldest known record is a page of ten sketches by Christiaan Huygens of a skeleton taking off its skull, found among his papers of 1659 and marked for showing by convex glasses with the lamp. In the 1660s the Dane Thomas Rasmussen Walgensten showed lanterns at courts across Europe under the name laterna magica. Samuel Pepys bought one in London in 1666, and Athanasius Kircher printed a picture of one in 1671."
+msgstr "已知最早的记录是 Christiaan Huygens 的一张纸，上面有十幅骷髅摘下自己头颅的草图，夹在1659年的文件中，注明是用凸透镜和灯来放映的。1660年代，丹麦人 Thomas Rasmussen Walgensten 以 laterna magica 之名在欧洲各地宫廷展示幻灯。Samuel Pepys 于1666年在伦敦买了一台，Athanasius Kircher 于1671年印出了它的图。"
+
+#: hall-4/magic-lantern
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.1"
+msgid "Shows one large picture to a whole room"
+msgstr "给满屋子的人看一幅大画"
+
+#: hall-4/magic-lantern
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.2"
+msgid "Needs only a lamp, a lens and painted glass"
+msgstr "只需要一盏灯、一个镜头和画过的玻璃"
+
+#: hall-4/magic-lantern
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.3"
+msgid "Shows anything an artist can paint small"
+msgstr "画家能画得小的东西都能投出来"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.1"
+msgid "Needs a dark room"
+msgstr "需要暗室"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.2"
+msgid "Shows a still picture, unless the slide itself has moving parts"
+msgstr "除非幻灯片本身有活动部件，画面是静止的"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.3"
+msgid "Was dim and small until brighter lamps came"
+msgstr "在亮灯出现之前，画面又暗又小"
+
+#: hall-4/magic-lantern
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.magic-lantern.look"
+msgid "Switch the daylight off. The picture on the wall is the slide in the holder, painted upside down and made large and upright by the lens. Each minute a new slide is pushed in."
+msgstr "关掉日光。墙上的画是框里的幻灯片，倒着画的，被镜头放大并正过来。每分钟推进一张新片。"
+
+#: hall-4/magic-lantern
+#. People section: what Christiaan Huygens did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.1"
+msgid "Drew ten sketches of a skeleton for a lantern show among papers of 1659, and built lanterns on request in the next few years. He thought the device frivolous."
+msgstr "在1659年的文件中画了十幅用于幻灯放映的骷髅草图，此后几年按订单制作幻灯机。他自己看不起这个装置。"
+
+#: hall-4/magic-lantern
+#. People section: what Thomas Rasmussen Walgensten did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.2"
+msgid "Danish mathematician who showed lanterns at courts across Europe in the 1660s, and the first known to call the device laterna magica, the Magic Lantern Society says."
+msgstr "丹麦数学家，1660年代在欧洲各地宫廷展示幻灯。据魔术幻灯协会，他是已知最早称之为 laterna magica 的人。"
+
+#: hall-4/magic-lantern
+#. People section: what Athanasius Kircher did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.3"
+msgid "Printed a picture of a projecting lantern in the second edition of his Ars Magna Lucis et Umbrae in 1671, and took credit for it."
+msgstr "在1671年第二版《光与影的伟大艺术》中印出投影幻灯的图，并把功劳归于自己。"
+
+#: hall-4/magic-lantern
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.magic-lantern.view.audience.label"
+msgid "Sit with the audience"
+msgstr "和观众坐在一起"
+
+#: hall-4/magic-lantern
+#. Line shown while the visitor is at that place.
+msgctxt "piece.magic-lantern.view.audience.hint"
+msgid "Behind the lantern, as a room full of people sat. Switch the daylight off: the picture needs a dark room."
+msgstr "幻灯机后面，挤满人的屋子里的座位。关掉日光，画面需要暗室。"
+
+#: hall-4/magic-lantern
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.magic-lantern.view.slide.label"
+msgid "Go close to the slide"
+msgstr "走近幻灯片"
+
+#: hall-4/magic-lantern
+#. Line shown while the visitor is at that place.
+msgctxt "piece.magic-lantern.view.slide.hint"
+msgid "The slide is painted small and upside down. The lens turns it the right way up and makes it large on the sheet."
+msgstr "幻灯片很小，而且是倒着画的。镜头把它正过来，大大地投在幕布上。"
 
 #: hall-4/liquid-crystal
 #. Name of a piece.
@@ -5621,6 +6227,18 @@ msgstr "1977年，他们在班加罗尔的拉曼研究所发现了分子呈圆�
 msgctxt "piece.liquid-crystal.people.5"
 msgid "Made the MOS transistor at Bell Laboratories in 1959, the Computer History Museum says, and announced it in 1960. Every cell's thin-film transistor works alike. Atalla was born in Port Said, Kahng in Seoul."
 msgstr "据计算机历史博物馆所述，两人于1959年在贝尔实验室做出MOS晶体管，1960年对外公布。每个单元的薄膜晶体管都以相同的原理工作。Atalla生于塞得港，Kahng生于首尔。"
+
+#: hall-4/liquid-crystal
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.liquid-crystal.view.front.label"
+msgid "Look straight on"
+msgstr "正面直视"
+
+#: hall-4/liquid-crystal
+#. Line shown while the visitor is at that place.
+msgctxt "piece.liquid-crystal.view.front.hint"
+msgid "From the front the layers line up into one screen. Seen from the side, as at the rail, they come apart."
+msgstr "从正面看，各层叠成一块屏幕。像在导轨上那样从侧面看，它们就分开了。"
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5876,18 +6494,6 @@ msgstr "据该校介绍，他从1984年起在Kent State University液晶研究�
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
-msgctxt "piece.switchable-glass.view.front.label"
-msgid "Stand in front"
-msgstr "站在前面"
-
-#: hall-4/switchable-glass
-#. Line shown while the visitor is at that place.
-msgctxt "piece.switchable-glass.view.front.hint"
-msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
-msgstr "玻璃后面的时钟只有在玻璃透明时才看得见。断电时，玻璃是磨砂的。"
-
-#: hall-4/switchable-glass
-#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.close.label"
 msgid "Go close to the pane"
 msgstr "走近玻璃"
@@ -6007,6 +6613,18 @@ msgid "A few mirrors, enlarged several thousand times. Each rocks on its diagona
 msgstr "几面放大了几千倍的镜子。每一面都绕对角线摆动：倒向一边时，把光送进镜头。"
 
 #: hall-4/micromirror
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.micromirror.view.chip.label"
+msgid "Look at the chip"
+msgstr "看芯片"
+
+#: hall-4/micromirror
+#. Line shown while the visitor is at that place.
+msgctxt "piece.micromirror.view.chip.hint"
+msgid "The field of mirrors above is a corner of this chip, enlarged. On the chip itself each mirror is far too small to see."
+msgstr "上面的镜子阵是这块芯片一角的放大。在芯片上，每面镜子都小得看不见。"
+
+#: hall-4/micromirror
 #. Caption of a picture or film from an archive.
 msgctxt "piece.micromirror.media.patent-1.caption"
 msgid "One early micromirror, from Larry Hornbeck's patent of 1987. The pixel is a square flap held over a shallow well by a hinge at one corner. A voltage below pulls the flap down."
@@ -6121,6 +6739,18 @@ msgid "The cube turns the light of the lamp down onto the chip. Only light the c
 msgstr "立方体把灯光折向下方，照到芯片上。只有被芯片扭转过的光，才从镜头射出去。"
 
 #: hall-4/lcos
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lcos.view.chip.label"
+msgid "Go close to the chip"
+msgstr "走近芯片"
+
+#: hall-4/lcos
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lcos.view.chip.hint"
+msgid "The liquid crystal lies on a mirror-backed silicon chip, so the light passes through it twice, down and back up."
+msgstr "液晶位于背面贴着镜子的硅芯片上，所以光一去一回穿过两次。"
+
+#: hall-4/lcos
 #. Caption of a picture or film from an archive.
 msgctxt "piece.lcos.media.patent-1.caption"
 msgid "The Hughes liquid crystal light valve in cross-section, from a patent of 1974. A picture arrives on one side, and projection light is reflected from the other. The layer of liquid crystal between them copies the picture onto that light."
@@ -6221,6 +6851,18 @@ msgstr "休斯敦阿波罗任务控制室的大屏幕后面，有三台Eidophor�
 msgctxt "piece.eidophor.people.1"
 msgid "Applied for a patent on the projector at ETH Zurich in November 1939. An account of 1953 has the first prototype running in 1944."
 msgstr "1939年11月在苏黎世联邦理工学院为这种投影机申请专利。据1953年的一份记述，第一台样机于1944年开始运行。"
+
+#: hall-4/eidophor
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.eidophor.view.screen.label"
+msgid "Watch the screen"
+msgstr "看银幕"
+
+#: hall-4/eidophor
+#. Line shown while the visitor is at that place.
+msgctxt "piece.eidophor.view.screen.hint"
+msgid "The audience saw only this: a television picture bright enough for a large hall."
+msgstr "观众看到的只有这个：一幅亮到足以照满大礼堂的电视画面。"
 
 #: hall-4/eidophor
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -6396,6 +7038,138 @@ msgctxt "piece.scanned-laser.view.galvos.hint"
 msgid "Two small mirrors on fast motors. One swings the beam left and right, the other up and down. The eye sees the path."
 msgstr "两面小镜子装在高速电机上。一面让光束左右摆动，另一面让它上下摆动。眼睛看到的是光走过的路径。"
 
+#: hall-4/scanning-fiber
+#. Name of a piece.
+msgctxt "piece.scanning-fiber.name"
+msgid "Scanning fibre display"
+msgstr "光纤扫描显示器"
+
+#: hall-4/scanning-fiber
+#. Other names the piece goes by.
+msgctxt "piece.scanning-fiber.aka"
+msgid "Fibre scanning display, scanning fibre projector"
+msgstr "Fiber scanning display，扫描光纤投影机"
+
+#: hall-4/scanning-fiber
+#. The date of the piece, as its label gives it.
+msgctxt "piece.scanning-fiber.yearText"
+msgid "patent applied for in 1999"
+msgstr "1999年申请专利"
+
+#: hall-4/scanning-fiber
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.scanning-fiber.origin"
+msgid "Eric Seibel and Thomas Furness, Human Interface Technology Laboratory, University of Washington, Seattle"
+msgstr "Eric Seibel 与 Thomas Furness，华盛顿大学人机界面技术实验室，西雅图"
+
+#: hall-4/scanning-fiber
+#. Where this kind of display stands today.
+msgctxt "piece.scanning-fiber.statusNote"
+msgid "Used in small endoscopes that take pictures. As a display it has stayed in laboratories: Magic Leap filed many patents on fibre scanning projectors, but its first headset used a liquid-crystal-on-silicon chip."
+msgstr "用在拍摄图像的微型内窥镜里。作为显示器仍停留在实验室。Magic Leap 申请了许多扫描光纤投影机的专利，但第一代头显用的是硅基液晶芯片。"
+
+#: hall-4/scanning-fiber
+#. First sentence of the label.
+msgctxt "piece.scanning-fiber.lead"
+msgid "One glass fibre, thinner than a hair, is shaken at its own natural frequency so that its tip draws the picture in a spiral."
+msgstr "一根比头发还细的玻璃光纤按自身的固有频率摆动，让末端以螺旋画出画面。"
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.scanning-fiber.how.1"
+msgid "Laser light in three colours runs down a single optical fibre. Its tip sticks out from a small tube of piezoelectric ceramic, which bends when a voltage is put across it. Driven at the resonant frequency of the fibre, the tip swings in growing circles, and the spot of light leaving it traces a spiral from the centre outward."
+msgstr "三种颜色的激光沿一根光纤传下去。光纤的末端从一根压电陶瓷小管中伸出，这种管子加电压就会弯曲。以光纤的共振频率驱动时，末端摆出越来越大的圆，射出的光点从中心向外画出螺旋。"
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.scanning-fiber.how.2"
+msgid "The lasers change brightness as the spot moves, dot by dot, so the spiral fills in with a picture. A lens in front makes the picture larger, on a wall or into an eye. At the end of each picture the swinging must be stopped and the tip brought back to the centre before the next one starts."
+msgstr "光点移动时，激光逐点改变亮度，螺旋就被画面填满。前面的镜头把画面放大投到墙上或眼睛里。画完一幅后，必须让摆动停下、把末端拉回中心，才能开始下一幅。"
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.scanning-fiber.how.3"
+msgid "Eric Seibel and Thomas Furness applied in 1999 for a patent on a fibre that resonates to scan pictures, meant first for taking pictures inside the body. The patent also describes sending the light to a display. A patent on a projection display that scans with a fibre, by Brian Schowengerdt and others at the same university, was granted in 2014."
+msgstr "Eric Seibel 和 Thomas Furness 在1999年为一根共振扫描成像的光纤申请专利，起初是为了拍摄体内。这项专利也描述了把光送往显示器。同校 Brian Schowengerdt 等人申请的光纤扫描投影显示器专利在2014年获准。"
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.1"
+msgid "Makes a picture with one fibre and one small moving part"
+msgstr "用一根光纤和一个微小的活动部件造出画面"
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.2"
+msgid "Can be made small enough to fit in a thin tube"
+msgstr "能做得小到装进细管"
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.3"
+msgid "Can show a picture and take one through the same fibre"
+msgstr "同一根光纤既能显示画面也能拍摄画面"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.1"
+msgid "Is hard to steer exactly, above all near the centre of the spiral"
+msgstr "很难精准控制，尤其是螺旋中心附近"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.2"
+msgid "Needs lasers and fast electronics"
+msgstr "需要激光和高速电子设备"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.3"
+msgid "Has not reached a product as a display"
+msgstr "作为显示器始终没成为产品"
+
+#: hall-4/scanning-fiber
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.scanning-fiber.look"
+msgid "The model is enlarged and slowed down many thousands of times, so that the spiral can be followed. The spot paints the time on the screen in front, one ring at a time."
+msgstr "为了让眼睛跟得上螺旋，模型放大并放慢了几千倍。光点在前面的屏幕上一圈一圈画出时间。"
+
+#: hall-4/scanning-fiber
+#. People section: what Eric J. Seibel, Thomas A. Furness III did. The names stand above this line.
+msgctxt "piece.scanning-fiber.people.1"
+msgid "Applied in 1999 for a patent on a fibre that resonates to scan pictures, at the Human Interface Technology Laboratory of the University of Washington. Seibel built it into an endoscope."
+msgstr "1999年在华盛顿大学人机界面技术实验室为一根共振扫描成像的光纤申请专利。Seibel 把它装进了内窥镜。"
+
+#: hall-4/scanning-fiber
+#. People section: what Brian T. Schowengerdt did. The names stand above this line.
+msgctxt "piece.scanning-fiber.people.2"
+msgid "Worked at the same laboratory on displays that scan light into the eye, and with Seibel and others patented a fibre-scanning projector. He later filed many such patents for Magic Leap."
+msgstr "在同一实验室研究把光扫进眼睛的显示器，并与 Seibel 等人共同申请扫描光纤投影机专利。后来在 Magic Leap 申请了许多这类专利。"
+
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.tip.label"
+msgid "Go close to the tip"
+msgstr "走近末端"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.tip.hint"
+msgid "The fibre sticks out of the ceramic tube and swings in growing circles. The real one swings far faster."
+msgstr "光纤从陶瓷管中伸出，摆出越来越大的圆。真的摆得快得多。"
+
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.picture.label"
+msgid "Watch the picture form"
+msgstr "看画面成形"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.picture.hint"
+msgid "The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest."
+msgstr "光点从中心开始一圈一圈画出时间，末端停下返回时熄灭。"
+
 #: hall-4/projection-mapping
 #. Name of a piece.
 msgctxt "piece.projection-mapping.name"
@@ -6515,6 +7289,18 @@ msgstr "站到投影机旁"
 msgctxt "piece.projection-mapping.view.lens.hint"
 msgid "From the lens it is one flat picture, cut to fit. Each solid gets its own part, and the gaps between them get black."
 msgstr "从镜头这里看，它只是一幅裁好的平面画面。每个形体各得一块，形体之间的空隙是黑的。"
+
+#: hall-4/projection-mapping
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.projection-mapping.view.shapes.label"
+msgid "Go close to the shapes"
+msgstr "走近形体"
+
+#: hall-4/projection-mapping
+#. Line shown while the visitor is at that place.
+msgctxt "piece.projection-mapping.view.shapes.hint"
+msgid "The shapes are plain white plaster. All the colour and pattern on them is light, cut to fit each face."
+msgstr "形体是白色石膏。上面的颜色和图案都是光，按每个面裁切。"
 
 #: hall-5/gyricon
 #. Name of a piece.
@@ -6740,6 +7526,18 @@ msgstr "2001年在贝尔实验室，两人在一张塑料薄片上压印出256�
 
 #: hall-5/electrophoretic-ink
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrophoretic-ink.view.night.label"
+msgid "Try to read at night"
+msgstr "晚上读读看"
+
+#: hall-5/electrophoretic-ink
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrophoretic-ink.view.night.hint"
+msgid "The page is still there, but with no light of its own it cannot be read."
+msgstr "页面还在，但它自己不发光，所以读不了。"
+
+#: hall-5/electrophoretic-ink
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.electrophoretic-ink.view.read.label"
 msgid "Pick it up to read"
 msgstr "拿起来读"
@@ -6749,6 +7547,18 @@ msgstr "拿起来读"
 msgctxt "piece.electrophoretic-ink.view.read.hint"
 msgid "It reads by room light, like print. Watch a page change: every capsule goes black, then white, then to the new page."
 msgstr "它靠房间里的光来读，像印刷品一样。看一次翻页：每个微囊先变黑，再变白，然后才显示新的一页。"
+
+#: hall-5/electrophoretic-ink
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrophoretic-ink.view.page.label"
+msgid "Go close to the page"
+msgstr "走近页面"
+
+#: hall-5/electrophoretic-ink
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrophoretic-ink.view.page.hint"
+msgid "When the page changes it flashes black and white. Then it holds the new page with no power at all."
+msgstr "换页时页面黑白闪一下，然后不用电就保持新页面。"
 
 #: hall-5/electrophoretic-ink
 #. Caption of a picture or film from an archive.
@@ -6871,6 +7681,18 @@ msgid "Pressure flips the crystal to its reflecting state, and the stroke stays 
 msgstr "压力让液晶翻到反光的状态，笔画不用电也能留住。一个脉冲就把整张薄膜清空。"
 
 #: hall-5/cholesteric-lcd
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cholesteric-lcd.view.stroke.label"
+msgid "Go close to the stroke"
+msgstr "走近笔画"
+
+#: hall-5/cholesteric-lcd
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cholesteric-lcd.view.stroke.hint"
+msgid "Where the stylus pressed, the crystal reflects light, and the stroke stays with no power."
+msgstr "笔压过的地方晶体反射光线，笔画不用电也能留住。"
+
+#: hall-5/cholesteric-lcd
 #. Caption of a picture or film from an archive.
 msgctxt "piece.cholesteric-lcd.media.patent-1.caption"
 msgid "The two stable states of a cholesteric cell, from a Kent State University patent of 2000. In the planar texture the droplets of liquid crystal reflect coloured light. In the focal conic texture the light passes through and scatters forward."
@@ -6983,6 +7805,18 @@ msgstr "凑近看小格"
 msgctxt "piece.electrowetting.view.cells.hint"
 msgid "A film of dyed oil covers each cell. A voltage makes the water push the oil into a corner, and the cell clears."
 msgstr "每个小格上盖着一层染色的油膜。加上电压，水把油推到角落里，小格就变透明了。"
+
+#: hall-5/electrowetting
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrowetting.view.oil.label"
+msgid "Look across the oil"
+msgstr "低头看油"
+
+#: hall-5/electrowetting
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrowetting.view.oil.hint"
+msgid "Low across the cells you can see the oil gathered in a corner, standing higher than the film it was."
+msgstr "从很低的角度看格子，可以看到聚在角落的油比原来的膜高出一截。"
 
 #: hall-5/electrowetting
 #. Caption of a picture or film from an archive.
@@ -7351,6 +8185,24 @@ msgid "Sit down"
 msgstr "入座"
 
 #: hall-6/peppers-ghost
+#. Line shown while the visitor is at that place.
+msgctxt "piece.peppers-ghost.view.seat.hint"
+msgid "Move your head: the figure keeps its place among the furniture, as a mirror image does."
+msgstr "移动头部。人影像镜中的倒影一样，稳稳地待在家具之间。"
+
+#: hall-6/peppers-ghost
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.peppers-ghost.view.pit.label"
+msgid "Look into the pit"
+msgstr "看进台坑"
+
+#: hall-6/peppers-ghost
+#. Line shown while the visitor is at that place.
+msgctxt "piece.peppers-ghost.view.pit.hint"
+msgid "Below the front of the stage lies the lit figure. The sloping glass mirrors it, so it seems to stand on the stage."
+msgstr "台口下面躺着一个被照亮的人。斜放的玻璃把他反射出来，看起来就像站在台上。"
+
+#: hall-6/peppers-ghost
 #. Caption of a picture or film from an archive.
 msgctxt "piece.peppers-ghost.media.stage-1865.caption"
 msgid "The stage arrangement for Pepper's ghost, from Le Monde Illustré of 21 January 1865. A figure in white below the stage, lit by a lamp, is reflected in a tilted sheet of glass and appears beside the actor."
@@ -7361,6 +8213,138 @@ msgstr "佩珀尔幻象的舞台布置，出自1865年1月21日的《Le Monde Il
 msgctxt "piece.peppers-ghost.media.stage-1865.alt"
 msgid "Engraving in cross-section: an audience, a sloping pane of glass, an actor facing a pale figure on stage, under the stage a man aiming a lantern at a draped figure."
 msgstr "剖面版画：观众席，一块倾斜的玻璃，舞台上一名演员面对一个苍白的人影，舞台下方一个男子拿着灯照向一个披着布的人。"
+
+#: hall-6/lancework
+#. Name of a piece.
+msgctxt "piece.lancework.name"
+msgid "Firework set piece"
+msgstr "图案烟花"
+
+#: hall-6/lancework
+#. Other names the piece goes by.
+msgctxt "piece.lancework.aka"
+msgid "Lancework, fire picture"
+msgstr "Lancework，火焰图画"
+
+#: hall-6/lancework
+#. The date of the piece, as its label gives it.
+msgctxt "piece.lancework.yearText"
+msgid "portraits in fire from 1879"
+msgstr "1879年起有火焰肖像"
+
+#: hall-6/lancework
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.lancework.origin"
+msgid "C. T. Brock & Co., at the Crystal Palace, London. Displays there from 1865, and portraits in fire from 1879 by the firm's own account"
+msgstr "C. T. Brock 公司，伦敦水晶宫。那里的烟花表演始于1865年，火焰肖像据公司自己的记载始于1879年"
+
+#: hall-6/lancework
+#. Where this kind of display stands today.
+msgctxt "piece.lancework.statusNote"
+msgid "Still made by hand for weddings, anniversaries and launches, mostly as names, messages and logos that burn for about a minute."
+msgstr "至今仍为婚礼、纪念日和开业手工制作，通常是燃烧约一分钟的名字、标语或标志。"
+
+#: hall-6/lancework
+#. First sentence of the label.
+msgctxt "piece.lancework.lead"
+msgid "Hundreds of small fireworks fixed to a frame burn at once, and each flame is one dot of a word or a picture."
+msgstr "插在框架上的几百个小火焰同时燃烧，每个火焰是一个字或一幅图上的一个点。"
+
+#: hall-6/lancework
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.lancework.how.1"
+msgid "Each lance is a small paper tube of coloured firework composition, about the size of a stick of chalk, that burns with a steady flame for about a minute. Lances are pinned along strips of cane bent to the lines of the drawing, which are fixed to a wooden frame."
+msgstr "Lance 是装满彩色火药的小纸管，粉笔头大小，能稳定燃烧约一分钟。它们插在沿着图形线条弯好的藤条上，藤条固定在木框上。"
+
+#: hall-6/lancework
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.lancework.how.2"
+msgid "A fast-burning fuse runs from lance to lance, so the whole picture catches almost at once and burns together. Then it fades, and the frame is spent. Lances of different compositions and lengths let a picture change while it burns, one part going out as another catches."
+msgstr "快速燃烧的引线从一根 lance 跑到另一根，整幅图几乎同时点燃，一起燃烧。然后熄灭，框架就用完了。用成分和长度不同的 lance，可以让一部分熄灭时另一部分点燃，图在燃烧中改变。"
+
+#: hall-6/lancework
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.lancework.how.3"
+msgid "C. T. Brock & Co. gave displays at the Crystal Palace in London from 1865 until the palace burned down in 1936. Alan St. H. Brock wrote in 1922 that portraits in fire were shown there for the first time in 1879. Set pieces at the palace grew to buildings, sea battles and pictures 200 feet long."
+msgstr "C. T. Brock 公司从1865年起在伦敦水晶宫表演烟花，直到1936年宫殿被烧毁。Alan St. H. Brock 在1922年写道，他们在1879年于那里首次展示火焰肖像。宫殿的图案烟花做到了建筑、海战，甚至长达200英尺的画面。"
+
+#: hall-6/lancework
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.1"
+msgid "Can be seen by a whole crowd at night"
+msgstr "晚上整个人群都看得到"
+
+#: hall-6/lancework
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.2"
+msgid "Draws any line that a frame can hold"
+msgstr "框架撑得住的线条都能画"
+
+#: hall-6/lancework
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.3"
+msgid "Needs no power and no screen"
+msgstr "不需要电，也不需要屏幕"
+
+#: hall-6/lancework
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.1"
+msgid "Burns once, for about a minute"
+msgstr "只烧一次，大约一分钟"
+
+#: hall-6/lancework
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.2"
+msgid "Every picture is built by hand"
+msgstr "每幅图都要手工制作"
+
+#: hall-6/lancework
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.3"
+msgid "Its smoke can hide the picture"
+msgstr "烟雾会遮住图"
+
+#: hall-6/lancework
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.lancework.look"
+msgid "The fuse runs across the frame and the time lights up in flame. Switch the daylight off, and watch the smoke rise as the lances burn down."
+msgstr "引线横穿框架，时间以火焰亮起。关掉日光，看 lance 烧短时烟雾升起。"
+
+#: hall-6/lancework
+#. People section: what C. T. Brock did. The names stand above this line.
+msgctxt "piece.lancework.people.1"
+msgid "Staged the firework displays at the Crystal Palace from 1865, the Victoria and Albert Museum records. His family firm kept them going until the palace burned in 1936."
+msgstr "据维多利亚与艾伯特博物馆的记录，从1865年起在水晶宫举办烟花表演。家族公司一直办到1936年宫殿被烧毁。"
+
+#: hall-6/lancework
+#. People section: what Alan St. H. Brock did. The names stand above this line.
+msgctxt "piece.lancework.people.2"
+msgid "Wrote his family firm's history of the art in 1922. It dates the first portraits in fire to 1879."
+msgstr "1922年为家族公司写了烟花史。书中把第一幅火焰肖像定在1879年。"
+
+#: hall-6/lancework
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lancework.view.crowd.label"
+msgid "Stand with the crowd"
+msgstr "和人群站在一起"
+
+#: hall-6/lancework
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lancework.view.crowd.hint"
+msgid "From the lawn the flames join into figures. Up close they are separate lances, each one dot of the picture."
+msgstr "从草坪上看，火焰聚成数字。走近看，是一根根独立的 lance，每根是图上的一个点。"
+
+#: hall-6/lancework
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lancework.view.lances.label"
+msgid "Go close to the lances"
+msgstr "走近 lance"
+
+#: hall-6/lancework
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lancework.view.lances.hint"
+msgid "Each lance is a paper tube of coloured fire pinned to the cane. It shortens as it burns, for about a minute."
+msgstr "Lance 是装满彩色火焰的纸管，插在藤条上。它越烧越短，能烧大约一分钟。"
 
 #: hall-6/illusion-transmitter
 #. Name of a piece.
@@ -7457,6 +8441,30 @@ msgstr "Thomas发明它的时候，正在主管Landsat的图像处理系统。La
 msgctxt "piece.illusion-transmitter.people.1"
 msgid "Majored in physics at Morgan State University, by Lemelson-MIT's account one of only two women in her class to do so. She joined NASA as a data analyst and patented the illusion transmitter."
 msgstr "在摩根州立大学主修物理，据Lemelson-MIT所述，她是班上仅有的两名主修物理的女生之一。她以数据分析员的身份进入NASA，并为幻象传送器取得了专利。"
+
+#: hall-6/illusion-transmitter
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.illusion-transmitter.view.front.label"
+msgid "Stand in front"
+msgstr "站在前面"
+
+#: hall-6/illusion-transmitter
+#. Line shown while the visitor is at that place.
+msgctxt "piece.illusion-transmitter.view.front.hint"
+msgid "On the left a bulb seems to glow in an empty socket. On the right the same picture hangs in the air."
+msgstr "左边像是灯泡在空灯座里发光。右边同一个像悬在半空。"
+
+#: hall-6/illusion-transmitter
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.illusion-transmitter.view.mirror.label"
+msgid "Look into the box"
+msgstr "看进箱子"
+
+#: hall-6/illusion-transmitter
+#. Line shown while the visitor is at that place.
+msgctxt "piece.illusion-transmitter.view.mirror.hint"
+msgid "The real bulb is hidden from you. The concave mirror at the back makes a picture of it that stands in the empty socket."
+msgstr "真正的灯泡藏起来不让你看到。后面的凹面镜成像，像就立在空灯座上。"
 
 #: hall-6/fog-screen
 #. Name of a piece.
@@ -7562,6 +8570,18 @@ msgstr "向喷泉和水幕上投影的做法出现得更早。一项关于装饰
 
 #: hall-6/fog-screen
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.fog-screen.view.projector.label"
+msgid "Stand by the projector"
+msgstr "站在投影机那边"
+
+#: hall-6/fog-screen
+#. Line shown while the visitor is at that place.
+msgctxt "piece.fog-screen.view.projector.hint"
+msgid "From the projector's side the fog sends little light back, so the picture is faint."
+msgstr "在投影机那边，雾几乎不把光送回来，所以像很淡。"
+
+#: hall-6/fog-screen
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.fog-screen.view.fog.label"
 msgid "Step up to the fog"
 msgstr "走到雾幕跟前"
@@ -7571,6 +8591,18 @@ msgstr "走到雾幕跟前"
 msgctxt "piece.fog-screen.view.fog.hint"
 msgid "The picture hangs in falling fog, ragged by the time it reaches the floor. It is brightest facing the projector."
 msgstr "画面挂在往下落的雾里，落到地面时已经散乱。迎着投影机看时最亮。"
+
+#: hall-6/fog-screen
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.fog-screen.view.slot.label"
+msgid "Look up at the fog bar"
+msgstr "抬头看雾条"
+
+#: hall-6/fog-screen
+#. Line shown while the visitor is at that place.
+msgctxt "piece.fog-screen.view.slot.hint"
+msgid "The fog falls from a thin slot between two curtains of air, which keep it flat enough to take a picture."
+msgstr "雾从两道气幕之间的窄缝落下。气幕把雾压成薄薄一片，才能承接画面。"
 
 #: hall-6/fog-screen
 #. Caption of a picture or film from an archive.
@@ -7688,6 +8720,18 @@ msgstr "“视觉暂留”是沿用下来的名称，并不是完整的解释。
 
 #: hall-6/persistence-of-vision
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.persistence-of-vision.view.spin.label"
+msgid "Watch it at speed"
+msgstr "全速观看"
+
+#: hall-6/persistence-of-vision
+#. Line shown while the visitor is at that place.
+msgctxt "piece.persistence-of-vision.view.spin.hint"
+msgid "Held at full speed: your eye joins the passes of one bar of LEDs into a whole disc."
+msgstr "固定为全速：眼睛把一根 LED 条扫过的轨迹连成一个完整的圆盘。"
+
+#: hall-6/persistence-of-vision
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.persistence-of-vision.view.bar.label"
 msgid "Go close to the bar"
 msgstr "凑近看长条"
@@ -7695,8 +8739,8 @@ msgstr "凑近看长条"
 #: hall-6/persistence-of-vision
 #. Line shown while the visitor is at that place.
 msgctxt "piece.persistence-of-vision.view.bar.hint"
-msgid "One bar of lamps, eighteen each side of the hub. Wait for it to slow down: the picture comes apart into a bar again."
-msgstr "一根装着灯的长条，转轴两侧各十八颗。等它慢下来：画面又散成了一根长条。"
+msgid "One bar of lamps, eighteen each side of the hub. Held slow, the picture comes apart into a bar again."
+msgstr "一根装着灯的杆，轴两边各十八个。固定为慢速时，画面又散回一根杆。"
 
 #: hall-6/persistence-of-vision
 #. Caption of a picture or film from an archive.
@@ -7817,6 +8861,18 @@ msgstr "1961年为一种扫掠屏幕的显示器取得专利。他称之为gener
 msgctxt "piece.swept-volume.people.2"
 msgid "Co-founded Actuality Systems with two Harvard students. Its Perspecta display was priced at 40,000 dollars in 2002, and NASA Ames bought one early in 2003."
 msgstr "与两名哈佛大学学生共同创办Actuality Systems。2002年，该公司的Perspecta显示器定价4万美元，NASA艾姆斯研究中心在2003年初买了一台。"
+
+#: hall-6/swept-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.swept-volume.view.round.label"
+msgid "Walk round the dome"
+msgstr "绕着圆顶走一圈"
+
+#: hall-6/swept-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.swept-volume.view.round.hint"
+msgid "The picture has real depth. From any side you see the side of it that faces you."
+msgstr "画面有真正的深度：从哪边看，就看到朝向那边的一面。"
 
 #: hall-6/swept-volume
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -8407,6 +9463,18 @@ msgid "Look in"
 msgstr "往里看"
 
 #: hall-7/stereoscope
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.stereoscope.view.card.label"
+msgid "Look at the card"
+msgstr "看卡片"
+
+#: hall-7/stereoscope
+#. Line shown while the visitor is at that place.
+msgctxt "piece.stereoscope.view.card.hint"
+msgid "Two photographs taken a few centimetres apart. Compare the edges: near things have shifted more than far ones."
+msgstr "相隔几厘米拍的两张照片。比较边缘：近的东西比远的东西移得多。"
+
+#: hall-7/stereoscope
 #. Caption of a picture or film from an archive.
 msgctxt "piece.stereoscope.media.patent-1.caption"
 msgid "A viewer for the Teleview system, from Laurens Hammond's patent of 1924. A small motor spins a shutter in front of the eyes, in step with the projector, so that each eye sees only the pictures meant for it."
@@ -8559,8 +9627,8 @@ msgstr "看看眼镜"
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.table.hint"
-msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
-msgstr "中间那副眼镜的镜片随着屏幕上的图像，轮流变亮、变暗。"
+msgid "In the middle pair, the lenses clear and darken in turn with the picture, slowed down here so that you can see it."
+msgstr "在中间的眼镜上，两片镜片随着画面轮流变亮变暗。这里放慢了以便看清。"
 
 #: hall-7/parallax-barrier
 #. Name of a piece.
@@ -8669,6 +9737,18 @@ msgstr "站到正前方"
 msgctxt "piece.parallax-barrier.view.spot.hint"
 msgid "Move your head. Through the slits, the columns for one eye give way to the columns for the other: L turns to R."
 msgstr "动一动头。透过狭缝，给一只眼睛看的那些列，会让位给另一只眼睛的列：L变成了R。"
+
+#: hall-7/parallax-barrier
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.parallax-barrier.view.slits.label"
+msgid "Go close to the slits"
+msgstr "走近缝隙"
+
+#: hall-7/parallax-barrier
+#. Line shown while the visitor is at that place.
+msgctxt "piece.parallax-barrier.view.slits.hint"
+msgid "The mask stands off the screen on pillars. Through each slit one eye sees one column and the other eye the next."
+msgstr "挡板用支柱架在屏幕前面。每道缝里，一只眼睛看到一列，另一只看到下一列。"
 
 #: hall-7/parallax-barrier
 #. Caption of a picture or film from an archive.
@@ -8797,6 +9877,18 @@ msgid "Drag to walk past. Each rib shows the stripe that faces you, so the eye i
 msgstr "拖动画面，从它面前走过。每条透镜显示的都是朝向你的那一条，所以印着的眼睛会跟着你。一共有九个视图。"
 
 #: hall-7/lenticular
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lenticular.view.ribs.label"
+msgid "Go close to the ribs"
+msgstr "走近棱纹"
+
+#: hall-7/lenticular
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lenticular.view.ribs.hint"
+msgid "Each rib of plastic is a long, thin lens over thin stripes of the print, one stripe for each picture."
+msgstr "每条塑料棱纹都是一个细长的透镜，压在印刷品的细条纹上，每幅图对应一条。"
+
+#: hall-7/lenticular
 #. Caption of a picture or film from an archive.
 msgctxt "piece.lenticular.media.patent-1.caption"
 msgid "Walter Hess's ribbed viewing sheet, from his patent filed in 1912. The ribs are small cylindrical lenses. The second figure shows one rib bringing light from one direction to a single line on the picture behind it."
@@ -8909,6 +10001,18 @@ msgstr "绕着它看"
 msgctxt "piece.integral-imaging.view.round.hint"
 msgid "Move your head sideways, then up and down. The scene shifts both ways, in small steps: one view for each lens position."
 msgstr "把头左右移动，再上下移动。画面在两个方向上都会错动，而且是一小步一小步的：透镜下的每个位置对应一个视图。"
+
+#: hall-7/integral-imaging
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.integral-imaging.view.lenses.label"
+msgid "Go close to the lenses"
+msgstr "走近透镜"
+
+#: hall-7/integral-imaging
+#. Line shown while the visitor is at that place.
+msgctxt "piece.integral-imaging.view.lenses.hint"
+msgid "Each tiny round lens shows its own part of the picture beneath it, so the view changes up and down as well as sideways."
+msgstr "每个小圆透镜显示下面图像中属于自己的那一份，所以看到的画面不仅左右变，上下也变。"
 
 #: hall-7/holography
 #. Name of a piece.
@@ -9049,6 +10153,18 @@ msgid "The toy engine is not behind the glass. Move your head: it turns as the r
 msgstr "玩具火车头并不在玻璃后面。动一动头：它会像真的那样转过去。关掉日光看得最清楚。"
 
 #: hall-7/holography
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.holography.view.bench.label"
+msgid "Look along the bench"
+msgstr "沿着光学台看"
+
+#: hall-7/holography
+#. Line shown while the visitor is at that place.
+msgctxt "piece.holography.view.bench.hint"
+msgid "Laser, lens and plate stand in one line on a rail. The lens spreads the beam so that it lights the whole plate."
+msgstr "激光、透镜和底片在导轨上排成一行。透镜把光束扩开，照满整块底片。"
+
+#: hall-7/holography
 #. Caption of a picture or film from an archive.
 msgctxt "piece.holography.media.patent-1.caption"
 msgid "From Dennis Gabor's United States patent of 1949. Light from a point source passes a small object and reaches a photographic plate. There the direct light and the scattered light meet and leave a pattern of rings."
@@ -9173,6 +10289,18 @@ msgstr "生于尼日利亚。他在圣路易斯华盛顿大学带领的团队造
 msgctxt "piece.head-mounted.view.worn.label"
 msgid "Put it on"
 msgstr "戴上"
+
+#: hall-7/head-mounted
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.head-mounted.view.kit.label"
+msgid "Look at one eye's parts"
+msgstr "看一只眼的部件"
+
+#: hall-7/head-mounted
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-mounted.view.kit.hint"
+msgid "A lens and the small screen it looks at. The picture on the panel is drawn bulging, so that the lens shows it straight."
+msgstr "一个透镜和它看着的小屏幕。面板上的画面是鼓着画的，经过透镜就变直了。"
 
 #: hall-7/head-mounted
 #. Caption of a picture or film from an archive.
@@ -9599,6 +10727,24 @@ msgstr "1956年起在范堡罗研究出一套系统，据他1979年的自述，�
 msgctxt "piece.head-up.view.seat.label"
 msgid "Sit down"
 msgstr "入座"
+
+#: hall-7/head-up
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-up.view.seat.hint"
+msgid "Move your head: the symbols stay out on the far wall, and lean too far and they are cut off."
+msgstr "移动头部。符号停在远处的墙上。歪得太多就会被切掉。"
+
+#: hall-7/head-up
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.head-up.view.lens.label"
+msgid "Look down at the lens"
+msgstr "低头看下面的透镜"
+
+#: hall-7/head-up
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-up.view.lens.hint"
+msgid "The lens below makes the light of each symbol parallel, so the glass shows the symbols as if they were far away."
+msgstr "下面的透镜把每个符号的光变成平行光，所以玻璃让符号看起来在很远的地方。"
 
 #: archive
 #. What was done to an archive picture or film before it was put on the site. Keep the words in curly brackets as they are.

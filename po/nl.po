@@ -2187,6 +2187,18 @@ msgstr "Bedacht de flip-disc bij Ferranti-Packard in Canada, zoals John Vardalas
 
 #: hall-1/flip-disc
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.flip-disc.view.night.label"
+msgid "Wait after dark"
+msgstr "Wacht na het donker"
+
+#: hall-1/flip-disc
+#. Line shown while the visitor is at that place.
+msgctxt "piece.flip-disc.view.night.hint"
+msgid "The discs still hold the time, but the board makes no light of its own, so after dark it cannot be read."
+msgstr "De schijven tonen de tijd nog, maar het bord maakt geen eigen licht, dus in het donker is het niet te lezen."
+
+#: hall-1/flip-disc
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.flip-disc.view.kerb.label"
 msgid "Wait at the stop"
 msgstr "Wacht bij de halte"
@@ -2502,6 +2514,18 @@ msgstr "Volg de spiraal"
 msgctxt "piece.mechanical-television.view.disc.hint"
 msgid "Thirty holes, each one hole's width nearer the centre than the last. One turn of the disc is one picture."
 msgstr "Dertig gaatjes, elk één gaatjesbreedte dichter bij het midden dan het vorige. Eén omwenteling van de schijf is één beeld."
+
+#: hall-1/mechanical-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.mechanical-television.view.sync.label"
+msgid "See what keeps step"
+msgstr "Zie wat het in de pas houdt"
+
+#: hall-1/mechanical-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.mechanical-television.view.sync.hint"
+msgid "A toothed wheel turns between two coils fed by the signal. Their pull holds this disc in step with the sender's."
+msgstr "Een tandwiel draait tussen twee spoelen die het signaal krijgen. Hun trekkracht houdt deze schijf in de pas met die van de zender."
 
 #: hall-1/mechanical-television
 #. Caption of a picture or film from an archive.
@@ -2889,6 +2913,18 @@ msgstr "Begon bij IBM aan een werkende brailleleesregel. Het is de vroegste in d
 
 #: hall-1/braille-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.braille-display.view.dark.label"
+msgid "Read in the dark"
+msgstr "Lees in het donker"
+
+#: hall-1/braille-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.braille-display.view.dark.hint"
+msgid "Every light is off. A finger finds the same pins as before."
+msgstr "Alle lampen zijn uit. Een vinger vindt dezelfde pennetjes als eerst."
+
+#: hall-1/braille-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.braille-display.view.touch.label"
 msgid "Run a finger along it"
 msgstr "Ga er met je vinger over"
@@ -3012,6 +3048,18 @@ msgstr "De recordvlucht die bij de opening van de Olympische Winterspelen van 20
 msgctxt "piece.drone-show.people.1"
 msgid "Director of the Ars Electronica Futurelab in Linz. His team and Intel flew 100 lit drones near Hamburg in November 2015."
 msgstr "Directeur van het Ars Electronica Futurelab in Linz. Zijn team en Intel lieten in november 2015 bij Hamburg 100 verlichte drones vliegen."
+
+#: hall-1/drone-show
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.drone-show.view.night.label"
+msgid "Watch after dark"
+msgstr "Kijk na het donker"
+
+#: hall-1/drone-show
+#. Line shown while the visitor is at that place.
+msgctxt "piece.drone-show.view.night.hint"
+msgid "After dark the aircraft vanish, and only their lamps are left to draw the figure."
+msgstr "In het donker verdwijnen de toestellen, en alleen hun lampjes blijven over om de figuur te tekenen."
 
 #: hall-1/drone-show
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3184,8 +3232,8 @@ msgstr "Ga dicht bij het scherm"
 #: hall-2/cathode-ray-tube
 #. Line shown while the visitor is at that place.
 msgctxt "piece.cathode-ray-tube.view.raster.hint"
-msgid "The picture is made of horizontal lines. The beam sweeps them from top to bottom, over and over."
-msgstr "Het beeld bestaat uit horizontale lijnen. De bundel veegt ze van boven naar beneden, steeds weer."
+msgid "Close to, the picture comes apart into horizontal lines with dark gaps between them."
+msgstr "Van dichtbij valt het beeld uiteen in horizontale lijnen met donkere stroken ertussen."
 
 #: hall-2/cathode-ray-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3246,6 +3294,150 @@ msgstr "Het idee achter de kleurenbeeldbuis, uit het octrooi van Alfred Schroede
 msgctxt "piece.cathode-ray-tube.media.patent-1.alt"
 msgid "Line drawings: a picture tube with three guns in its neck and coils round it, three beams crossing at a plate before a screen, and an enlargement labelled with colours."
 msgstr "Lijntekeningen: een beeldbuis met drie kanonnen in de hals en spoelen eromheen, drie bundels die elkaar kruisen bij een plaat voor een scherm, en een vergroting met kleuren als bijschrift."
+
+#: hall-2/neon-sign
+#. Name of a piece.
+msgctxt "piece.neon-sign.name"
+msgid "Neon sign"
+msgstr "Neonreclame"
+
+#: hall-2/neon-sign
+#. Other names the piece goes by.
+msgctxt "piece.neon-sign.aka"
+msgid "Luminous tube sign"
+msgstr "Lichtbuisreclame"
+
+#: hall-2/neon-sign
+#. The date of the piece, as its label gives it.
+msgctxt "piece.neon-sign.yearText"
+msgid "tubes shown in 1910, a first sign sold in 1912"
+msgstr "buizen getoond in 1910, een eerste reclame verkocht in 1912"
+
+#: hall-2/neon-sign
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.neon-sign.origin"
+msgid "Georges Claude, Paris. Tubes shown at the Paris Motor Show in December 1910. His associate Jacques Fonsèque sold a sign to a barbershop on the Boulevard Montmartre in 1912"
+msgstr "Georges Claude, Parijs. Buizen getoond op de Autosalon van Parijs in december 1910. Zijn compagnon Jacques Fonsèque verkocht in 1912 een reclame aan een kapper aan de Boulevard Montmartre"
+
+#: hall-2/neon-sign
+#. Where this kind of display stands today.
+msgctxt "piece.neon-sign.statusNote"
+msgid "Still bent by hand for signs and art. Plastics, fluorescent tubes and later LEDs replaced most neon signs, and a small revival began in the late 1970s."
+msgstr "Nog steeds met de hand gebogen voor reclames en kunst. Kunststoffen, tl-buizen en later leds vervingen de meeste neonreclames, en eind jaren zeventig begon een kleine opleving."
+
+#: hall-2/neon-sign
+#. First sentence of the label.
+msgctxt "piece.neon-sign.lead"
+msgid "A glass tube bent into letters holds a little neon, which glows red-orange along its whole length when a high voltage is put across it."
+msgstr "Een glazen buis, gebogen tot letters, bevat wat neon, dat over de hele lengte roodoranje gloeit als er een hoge spanning over komt te staan."
+
+#: hall-2/neon-sign
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.neon-sign.how.1"
+msgid "A sign maker heats glass tubing over a flame and bends it into letters, blowing into it so that it keeps its round shape. An electrode is sealed into each end, the air is pumped out, and a little gas is let in."
+msgstr "Een reclamemaker verhit glazen buis boven een vlam en buigt hem tot letters, terwijl hij erin blaast zodat hij rond blijft. In elk uiteinde wordt een elektrode gesmolten, de lucht wordt eruit gepompt en er wordt wat gas in gelaten."
+
+#: hall-2/neon-sign
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.neon-sign.how.2"
+msgid "A transformer puts a high voltage across the two electrodes. Current flows through the gas from one end to the other and makes it glow along the whole tube. Neon glows red-orange and argon purple. A drop of mercury, tinted glass or a coating inside the tube gives other colours. A sign can only switch its tubes on and off."
+msgstr "Een transformator zet een hoge spanning over de twee elektroden. Stroom loopt door het gas van het ene eind naar het andere en laat het over de hele buis gloeien. Neon gloeit roodoranje en argon paars. Een druppel kwik, gekleurd glas of een laagje binnen in de buis geeft andere kleuren. Een reclame kan zijn buizen alleen aan- en uitzetten."
+
+#: hall-2/neon-sign
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.neon-sign.how.3"
+msgid "Daniel McFarlan Moore lit rooms in the late 1890s with long tubes of glowing nitrogen or carbon dioxide. Georges Claude, whose company made neon as a by-product of liquefying air, cured the dimming of his tubes with larger, cooler electrodes. He showed red tubes at the Paris Motor Show in December 1910. Signs in the United States are usually dated from two that the Los Angeles car dealer Earle C. Anthony bought in 1923, though the trade paper Signs of the Times found no permit for them before December 1924."
+msgstr "Daniel McFarlan Moore verlichtte eind jaren 1890 zalen met lange buizen gloeiende stikstof of koolzuur. Georges Claude, wiens bedrijf neon won als bijproduct van het vloeibaar maken van lucht, verhielp het verdonkeren van zijn buizen met grotere, koelere elektroden. Hij toonde rode buizen op de Autosalon van Parijs in december 1910. Reclames in de Verenigde Staten worden meestal gedateerd vanaf twee die de autohandelaar Earle C. Anthony in Los Angeles in 1923 kocht, al vond het vakblad Signs of the Times er vóór december 1924 geen vergunning voor."
+
+#: hall-2/neon-sign
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.1"
+msgid "Draws an even line of light in any shape a hand can bend"
+msgstr "Tekent een gelijkmatige lijn van licht in elke vorm die een hand kan buigen"
+
+#: hall-2/neon-sign
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.2"
+msgid "Can be read from far away by night"
+msgstr "Is 's nachts van ver te lezen"
+
+#: hall-2/neon-sign
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.good.3"
+msgid "Needs no screen: the tube itself is the letter"
+msgstr "Heeft geen scherm nodig: de buis zelf is de letter"
+
+#: hall-2/neon-sign
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.1"
+msgid "Can only switch its tubes on and off, not change what it says"
+msgstr "Kan zijn buizen alleen aan- en uitzetten, niet veranderen wat er staat"
+
+#: hall-2/neon-sign
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.2"
+msgid "Needs a high voltage"
+msgstr "Heeft een hoge spanning nodig"
+
+#: hall-2/neon-sign
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.neon-sign.bad.3"
+msgid "Is made of thin glass and breaks"
+msgstr "Is van dun glas en breekt"
+
+#: hall-2/neon-sign
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.neon-sign.look"
+msgid "Real signs could only switch whole tubes on and off, so this one shows the time with seven tubes to each figure, as an animated sign would. Switch the daylight off: the glow lights the wall behind it."
+msgstr "Echte reclames konden alleen hele buizen aan- en uitzetten, daarom toont deze de tijd met zeven buizen per cijfer, zoals een bewegende reclame zou doen. Zet het daglicht uit: de gloed verlicht de muur erachter."
+
+#: hall-2/neon-sign
+#. People section: what Georges Claude did. The names stand above this line.
+msgctxt "piece.neon-sign.people.1"
+msgid "Showed long red neon tubes at the Paris Motor Show in December 1910, after curing their dimming with larger, cooler electrodes."
+msgstr "Toonde in december 1910 lange rode neonbuizen op de Autosalon van Parijs, nadat hij het verdonkeren had verholpen met grotere, koelere elektroden."
+
+#: hall-2/neon-sign
+#. People section: what Jacques Fonsèque did. The names stand above this line.
+msgctxt "piece.neon-sign.people.2"
+msgid "Claude's associate, who saw a business in signs and sold one to a barbershop on the Boulevard Montmartre in 1912, by American Heritage's account."
+msgstr "Compagnon van Claude, die in reclames een zaak zag en er in 1912 een verkocht aan een kapper aan de Boulevard Montmartre, volgens American Heritage."
+
+#: hall-2/neon-sign
+#. People section: what Daniel McFarlan Moore did. The names stand above this line.
+msgctxt "piece.neon-sign.people.3"
+msgid "Lit rooms in the late 1890s with long tubes of glowing nitrogen or carbon dioxide, which tungsten lamps displaced after 1910."
+msgstr "Verlichtte eind jaren 1890 zalen met lange buizen gloeiende stikstof of koolzuur, die na 1910 door wolfraamlampen werden verdrongen."
+
+#: hall-2/neon-sign
+#. People section: what Earle C. Anthony did. The names stand above this line.
+msgctxt "piece.neon-sign.people.4"
+msgid "Los Angeles Packard dealer who bought two signs from Claude Neon, usually dated 1923. Signs of the Times found no permit for them before December 1924."
+msgstr "Packard-dealer in Los Angeles die twee reclames van Claude Neon kocht, meestal gedateerd op 1923. Signs of the Times vond er vóór december 1924 geen vergunning voor."
+
+#: hall-2/neon-sign
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.neon-sign.view.street.label"
+msgid "Stand across the street"
+msgstr "Ga aan de overkant staan"
+
+#: hall-2/neon-sign
+#. Line shown while the visitor is at that place.
+msgctxt "piece.neon-sign.view.street.hint"
+msgid "From here each tube reads as one even line of light. When the minute changes, the tubes switch one by one."
+msgstr "Van hieruit leest elke buis als één gelijkmatige lijn licht. Als de minuut verspringt, gaan de buizen een voor een aan."
+
+#: hall-2/neon-sign
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.neon-sign.view.tube.label"
+msgid "Go close to a tube"
+msgstr "Ga dicht bij een buis"
+
+#: hall-2/neon-sign
+#. Line shown while the visitor is at that place.
+msgctxt "piece.neon-sign.view.tube.hint"
+msgid "Each tube bends back through the board to an electrode. The gas glows along the whole length between its two ends."
+msgstr "Elke buis buigt terug door het bord naar een elektrode. Het gas gloeit over de hele lengte tussen de twee uiteinden."
 
 #: hall-2/colour-wheel-television
 #. Name of a piece.
@@ -3354,6 +3546,30 @@ msgstr "Genoemd in Duits octrooi 172 376: seleencellen, spiegels en draaiende sc
 msgctxt "piece.colour-wheel-television.people.3"
 msgid "Engineer at the Columbia Broadcasting System, which built its own colour-wheel television in the same years."
 msgstr "Ingenieur bij het Columbia Broadcasting System, dat in dezelfde jaren een eigen kleurenwieltelevisie bouwde."
+
+#: hall-2/colour-wheel-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.colour-wheel-television.view.set.label"
+msgid "Watch it at speed"
+msgstr "Bekijk het op volle snelheid"
+
+#: hall-2/colour-wheel-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.colour-wheel-television.view.set.hint"
+msgid "Held at full speed: the three pictures follow so fast that they merge into one in colour."
+msgstr "Op volle snelheid: de drie beelden volgen elkaar zo snel op dat ze samensmelten tot één beeld in kleur."
+
+#: hall-2/colour-wheel-television
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.colour-wheel-television.view.wheel.label"
+msgid "Turn the wheel slowly"
+msgstr "Draai het wiel langzaam"
+
+#: hall-2/colour-wheel-television
+#. Line shown while the visitor is at that place.
+msgctxt "piece.colour-wheel-television.view.wheel.hint"
+msgid "Held slow: one filter at a time, while the tube shows the red, the green and the blue picture in turn."
+msgstr "Langzaam: één filter tegelijk, terwijl de buis om beurten het rode, het groene en het blauwe beeld toont."
 
 #: hall-2/vector-display
 #. Name of a piece.
@@ -3468,6 +3684,18 @@ msgstr "Ga dicht bij het spoor"
 msgctxt "piece.vector-display.view.trace.hint"
 msgid "No dots and no scan lines. Each stroke is one smooth pass of the beam, at any angle."
 msgstr "Geen stippen en geen scanlijnen. Elke streek is één gladde beweging van de bundel, onder elke hoek."
+
+#: hall-2/vector-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.vector-display.view.pen.label"
+msgid "Look at the light pen"
+msgstr "Bekijk de lichtpen"
+
+#: hall-2/vector-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.vector-display.view.pen.hint"
+msgid "The pen sees the flash as the beam passes under its tip, which tells the computer what it points at."
+msgstr "De pen ziet de flits als de straal onder zijn punt door gaat, en zo weet de computer waar hij naar wijst."
 
 #: hall-2/storage-tube
 #. Name of a piece.
@@ -3584,6 +3812,18 @@ msgid "The plot is drawn once and stays lit, stored in the tube itself. The flas
 msgstr "De grafiek wordt één keer getekend en blijft oplichten, bewaard in de buis zelf. De flits is de enige manier om hem te wissen."
 
 #: hall-2/storage-tube
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.storage-tube.view.wheels.label"
+msgid "Look at the thumbwheels"
+msgstr "Bekijk de duimwieltjes"
+
+#: hall-2/storage-tube
+#. Line shown while the visitor is at that place.
+msgctxt "piece.storage-tube.view.wheels.hint"
+msgid "Two wheels at right angles steer the crosshair: one up and down, the other from side to side."
+msgstr "Twee wieltjes haaks op elkaar sturen het dradenkruis: het ene op en neer, het andere van links naar rechts."
+
+#: hall-2/storage-tube
 #. Caption of a picture or film from an archive.
 msgctxt "piece.storage-tube.media.patent-1.caption"
 msgid "The storage tube, from Robert Anderson's patent of 1966 for Tektronix. The second view is cut away to show the inside. The patent itself concerns the thin layer on the face that holds the picture."
@@ -3694,8 +3934,8 @@ msgstr "Wie de uitvinding toekomt, staat niet vast. Het Computer Museum in Bosto
 #: hall-2/nixie-tube
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.nixie-tube.view.stack.label"
-msgid "Go close to one tube"
-msgstr "Ga dicht bij één buis"
+msgid "Look from the side"
+msgstr "Bekijk het van opzij"
 
 #: hall-2/nixie-tube
 #. Line shown while the visitor is at that place.
@@ -4202,6 +4442,18 @@ msgid "A cold cathode tip under every hole in the gate. Electrons leave the tips
 msgstr "Een punt als koude kathode onder elk gat in de gate. Elektronen verlaten de punten en steken de spleet over naar de fosfor erboven."
 
 #: hall-2/field-emission
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.field-emission.view.phosphor.label"
+msgid "Look down at the dots"
+msgstr "Kijk van boven op de stippen"
+
+#: hall-2/field-emission
+#. Line shown while the visitor is at that place.
+msgctxt "piece.field-emission.view.phosphor.hint"
+msgid "Each dot of phosphor glows where electrons pulled from the cold tips below it strike."
+msgstr "Elke fosforstip gloeit waar de elektronen hem raken die uit de koude punten eronder worden getrokken."
+
+#: hall-2/field-emission
 #. Caption of a picture or film from an archive.
 msgctxt "piece.field-emission.media.patent-1.caption"
 msgid "The Spindt cathode, from the Stanford Research Institute patent of 1973. A sandwich of metal, insulator and metal is pierced with holes, and a sharp cone stands in each one."
@@ -4224,6 +4476,138 @@ msgstr "Een platte buis met een koude kathode, uit een octrooi van het Amerikaan
 msgctxt "piece.field-emission.media.patent-2.alt"
 msgid "Line drawings: a cut-away corner of a plate covered in fine dots over crossed strips, a round flat tube from above with part broken away, and its thin cross-section."
 msgstr "Lijntekeningen: een opengewerkte hoek van een plaat vol fijne stipjes boven gekruiste stroken, een ronde platte buis van boven met een deel weggebroken, en zijn dunne doorsnede."
+
+#: hall-2/news-zipper
+#. Name of a piece.
+msgctxt "piece.news-zipper.name"
+msgid "Moving-letter news sign"
+msgstr "Nieuwsband met lopende letters"
+
+#: hall-2/news-zipper
+#. Other names the piece goes by.
+msgctxt "piece.news-zipper.aka"
+msgid "Motograph News Bulletin, the Times Square zipper"
+msgstr "Motograph News Bulletin, de zipper van Times Square"
+
+#: hall-2/news-zipper
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.news-zipper.origin"
+msgid "Motogram sign company, New York, for The New York Times. Lit on election night, 6 November 1928"
+msgstr "Reclamebedrijf Motogram, New York, voor The New York Times. Aangezet op verkiezingsavond, 6 november 1928"
+
+#: hall-2/news-zipper
+#. Where this kind of display stands today.
+msgctxt "piece.news-zipper.statusNote"
+msgid "Bulb signs set with metal type are no longer built. The band round One Times Square still carries news, now on LEDs."
+msgstr "Lampenreclames die met metalen letters worden gezet, worden niet meer gebouwd. De band om One Times Square brengt nog steeds nieuws, nu op leds."
+
+#: hall-2/news-zipper
+#. First sentence of the label.
+msgctxt "piece.news-zipper.lead"
+msgid "Headlines seem to slide round a building on a band of light bulbs, though no bulb ever moves."
+msgstr "Koppen lijken over een band van gloeilampen om een gebouw te glijden, hoewel geen enkele lamp beweegt."
+
+#: hall-2/news-zipper
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.news-zipper.how.1"
+msgid "An operator set each headline in metal letters, much as a printer sets type, in a long holder. A conveyor carried the holder past a field of brushes, one for each bulb outside. Where the metal of a letter touched a brush it closed a circuit, and that bulb on the band lit for a moment."
+msgstr "Een bediener zette elke kop in metalen letters, zoals een drukker letters zet, in een lange houder. Een lopende band voerde de houder langs een veld van borstels, één voor elke lamp buiten. Waar het metaal van een letter een borstel raakte, sloot het een stroomkring en lichtte die lamp op de band even op."
+
+#: hall-2/news-zipper
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.news-zipper.how.2"
+msgid "Each letter on the band was a grid of bulbs 12 high and 7 wide. As the letters travelled past the brushes, the lit pattern travelled along the band with them, so that the eye saw words gliding round the corner of the building while only the light moved."
+msgstr "Elke letter op de band was een raster van lampen, 12 hoog en 7 breed. Terwijl de letters langs de borstels gingen, schoof het verlichte patroon met ze mee over de band, en het oog zag woorden om de hoek van het gebouw glijden terwijl alleen het licht bewoog."
+
+#: hall-2/news-zipper
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.news-zipper.how.3"
+msgid "The band round the Times Tower held 14,800 bulbs and ran about 380 feet, 5 feet high. Its first headline gave Herbert Hoover's election, on 6 November 1928. The newspaper credited Frank C. Reilly of the Motogram company. Dale Cressman, writing in Journalism History in 2018, credits Reilly's partner Francis E. J. Wilde with the letter system, and Everett Bickley with an earlier motograph of 1911 that read rolls of punched paper."
+msgstr "De band om de Times Tower had 14.800 lampen en liep zo'n 380 voet lang en 5 voet hoog. Zijn eerste kop meldde de verkiezing van Herbert Hoover, op 6 november 1928. De krant schreef het toe aan Frank C. Reilly van het bedrijf Motogram. Dale Cressman schrijft in Journalism History in 2018 het lettersysteem toe aan Reilly's compagnon Francis E. J. Wilde, en een eerdere motograaf uit 1911, die rollen geponst papier las, aan Everett Bickley."
+
+#: hall-2/news-zipper
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.1"
+msgid "Puts news before a crowd within minutes of setting it"
+msgstr "Brengt nieuws voor een menigte binnen enkele minuten na het zetten"
+
+#: hall-2/news-zipper
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.2"
+msgid "Can be read from several blocks away"
+msgstr "Is te lezen van een paar huizenblokken ver"
+
+#: hall-2/news-zipper
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.good.3"
+msgid "Changes its message as fast as type can be set"
+msgstr "Verandert zijn bericht zo snel als letters gezet kunnen worden"
+
+#: hall-2/news-zipper
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.1"
+msgid "Needs an operator to set every letter by hand"
+msgstr "Heeft een bediener nodig die elke letter met de hand zet"
+
+#: hall-2/news-zipper
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.2"
+msgid "Has thousands of bulbs, which burn out and must be changed"
+msgstr "Heeft duizenden lampen, die doorbranden en vervangen moeten worden"
+
+#: hall-2/news-zipper
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.news-zipper.bad.3"
+msgid "Shows one colour and no pictures beyond what the letters make"
+msgstr "Toont één kleur en geen beelden behalve wat de letters vormen"
+
+#: hall-2/news-zipper
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.news-zipper.look"
+msgid "Watch the headline run along the band and round the corner. Then go behind it, where the letters ride past the brushes and light the bulbs as they touch."
+msgstr "Kijk hoe de kop over de band en om de hoek loopt. Ga dan erachter, waar de letters langs de borstels gaan en de lampen aanzetten als ze ze raken."
+
+#: hall-2/news-zipper
+#. People section: what Francis E. J. Wilde did. The names stand above this line.
+msgctxt "piece.news-zipper.people.1"
+msgid "Engineer at the Motogram company who made the system of metal letters and brushes and filed patents for it in 1925, by the account of the historian Dale Cressman."
+msgstr "Ingenieur bij het bedrijf Motogram die het systeem van metalen letters en borstels maakte en er in 1925 octrooi op aanvroeg, volgens de historicus Dale Cressman."
+
+#: hall-2/news-zipper
+#. People section: what Frank C. Reilly did. The names stand above this line.
+msgctxt "piece.news-zipper.people.2"
+msgid "Wilde's partner, who sold the sign to The New York Times in 1928 and was named as its inventor in the newspaper's accounts."
+msgstr "Compagnon van Wilde, die de reclame in 1928 aan The New York Times verkocht en in de stukken van de krant als uitvinder werd genoemd."
+
+#: hall-2/news-zipper
+#. People section: what Everett Bickley did. The names stand above this line.
+msgctxt "piece.news-zipper.people.3"
+msgid "Made the first motograph in 1911, a moving sign driven by rolls of punched paper, Cressman writes."
+msgstr "Maakte in 1911 de eerste motograaf, een lopende reclame aangedreven door rollen geponst papier, schrijft Cressman."
+
+#: hall-2/news-zipper
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.news-zipper.view.square.label"
+msgid "Stand in the square"
+msgstr "Ga op het plein staan"
+
+#: hall-2/news-zipper
+#. Line shown while the visitor is at that place.
+msgctxt "piece.news-zipper.view.square.hint"
+msgid "The headline runs round the corner of the building. No lamp moves: only which lamps are lit."
+msgstr "De kop loopt om de hoek van het gebouw. Geen lamp beweegt: alleen verandert welke lampen branden."
+
+#: hall-2/news-zipper
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.news-zipper.view.brushes.label"
+msgid "Go behind the band"
+msgstr "Ga achter de band"
+
+#: hall-2/news-zipper
+#. Line shown while the visitor is at that place.
+msgctxt "piece.news-zipper.view.brushes.hint"
+msgid "Metal letters ride under a row of brushes. Where metal touches a brush, one lamp outside lights."
+msgstr "Metalen letters schuiven onder een rij borstels door. Waar metaal een borstel raakt, gaat buiten een lamp aan."
 
 #: hall-2/eggcrate
 #. Name of a piece.
@@ -4564,14 +4948,26 @@ msgstr "Maakten bij Eastman Kodak een diode van twee dunne organische lagen die 
 #: hall-3/oled
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.oled.view.seat.label"
-msgid "Sit in front"
-msgstr "Ga ervoor zitten"
+msgid "Sit in a dark room"
+msgstr "Zit in een donkere zaal"
 
 #: hall-3/oled
 #. Line shown while the visitor is at that place.
 msgctxt "piece.oled.view.seat.hint"
-msgid "Switch the daylight off. The black of the panel goes with it and only the colours are left."
-msgstr "Zet het daglicht uit. Het zwart van het paneel verdwijnt mee en alleen de kleuren blijven over."
+msgid "In the dark the black of the panel goes with the room, and only the colours are left."
+msgstr "In het donker gaat het zwart van het paneel op in de zaal, en blijven alleen de kleuren over."
+
+#: hall-3/oled
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.oled.view.edge.label"
+msgid "Look along the edge"
+msgstr "Kijk langs de rand"
+
+#: hall-3/oled
+#. Line shown while the visitor is at that place.
+msgctxt "piece.oled.view.edge.hint"
+msgid "The panel is a few millimetres thick. Every pixel makes its own light, so there is no lamp behind it."
+msgstr "Het paneel is een paar millimeter dik. Elke pixel maakt zijn eigen licht, dus er zit geen lamp achter."
 
 #: hall-3/oled
 #. Caption of a picture or film from an archive.
@@ -4680,6 +5076,18 @@ msgstr "De uitvinders zijn een getrouwd stel, en het idee begon als een vraag aa
 msgctxt "piece.microled.people.1"
 msgid "Physicists at Kansas State University. With their team they saw blue light from a gallium nitride microLED in August 1999, by their own account, and published it in 2000."
 msgstr "Natuurkundigen aan de Kansas State University. Met hun team zagen ze in augustus 1999, volgens eigen zeggen, blauw licht uit een microled van galliumnitride, en ze publiceerden dat in 2000."
+
+#: hall-3/microled
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.microled.view.wall.label"
+msgid "Stand back from the wall"
+msgstr "Ga achteruit van de wand"
+
+#: hall-3/microled
+#. Line shown while the visitor is at that place.
+msgctxt "piece.microled.view.wall.hint"
+msgid "Close up, the wall is tiles. From here the seams vanish, and the LEDs are too small to see."
+msgstr "Van dichtbij is de wand tegels. Van hier verdwijnen de naden, en zijn de leds te klein om te zien."
 
 #: hall-3/microled
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -4825,6 +5233,30 @@ msgctxt "piece.quantum-dot.people.5"
 msgid "At Zhejiang University in 2014 they made a quantum-dot diode from liquids, layer on layer. It glowed deep red, turned a fifth of its electrons into light and was rated for over 100,000 hours."
 msgstr "Aan de Zhejiang-universiteit maakten ze in 2014 een quantumdotdiode uit vloeistoffen, laag op laag. Hij gloeide dieprood, zette een vijfde van zijn elektronen om in licht en was berekend op meer dan 100.000 uur."
 
+#: hall-3/quantum-dot
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.quantum-dot.view.screen.label"
+msgid "Look at the screen"
+msgstr "Bekijk het scherm"
+
+#: hall-3/quantum-dot
+#. Line shown while the visitor is at that place.
+msgctxt "piece.quantum-dot.view.screen.hint"
+msgid "Behind the enlarged pixel stands the screen it belongs to. Its red and green are blue light changed by dots."
+msgstr "Achter de vergrote pixel staat het scherm waar hij bij hoort. Het rood en groen zijn blauw licht, veranderd door stippen."
+
+#: hall-3/quantum-dot
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.quantum-dot.view.pixel.label"
+msgid "Go close to the pixel"
+msgstr "Ga dicht bij de pixel"
+
+#: hall-3/quantum-dot
+#. Line shown while the visitor is at that place.
+msgctxt "piece.quantum-dot.view.pixel.hint"
+msgid "Blue lamps below. Large dots turn the blue red, small dots turn it green, and the third well lets the blue through."
+msgstr "Onderaan blauwe lampen. Grote stippen maken het blauw rood, kleine maken het groen, en het derde kuiltje laat het blauw door."
+
 #: hall-3/thin-film-el
 #. Name of a piece.
 msgctxt "piece.thin-film-el.name"
@@ -4935,6 +5367,18 @@ msgstr "Geboren in Seoul. Bij Bell Laboratories meldde hij in 1968 licht uit mol
 
 #: hall-3/thin-film-el
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.thin-film-el.view.side.label"
+msgid "Read it from the side"
+msgstr "Lees het van opzij"
+
+#: hall-3/thin-film-el
+#. Line shown while the visitor is at that place.
+msgctxt "piece.thin-film-el.view.side.hint"
+msgid "The film gives off its light right at the surface, so the figures stay clear far to one side."
+msgstr "De film geeft zijn licht precies aan het oppervlak, dus de cijfers blijven ver van opzij nog helder."
+
+#: hall-3/thin-film-el
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.thin-film-el.view.dots.label"
 msgid "Go close to the dots"
 msgstr "Ga dicht bij de puntjes"
@@ -5040,6 +5484,18 @@ msgstr "Ga bij het raam staan"
 msgctxt "piece.transparent-display.view.window.hint"
 msgid "The figures are light added on the glass, and the clock stands behind it. Move your head and they slide apart."
 msgstr "De cijfers zijn licht dat op het glas wordt toegevoegd, en de klok staat erachter. Beweeg je hoofd en ze schuiven uit elkaar."
+
+#: hall-3/transparent-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.transparent-display.view.pane.label"
+msgid "Go close to the pane"
+msgstr "Ga dicht bij de ruit"
+
+#: hall-3/transparent-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.transparent-display.view.pane.hint"
+msgid "The screen can only add light to what is behind it. Where its picture would be black, you see the clock."
+msgstr "Het scherm kan alleen licht toevoegen aan wat erachter staat. Waar zijn beeld zwart zou zijn, zie je de klok."
 
 #: hall-3/flexible-display
 #. Name of a piece.
@@ -5154,6 +5610,18 @@ msgstr "Kijk langs de rand"
 msgctxt "piece.flexible-display.view.edge.hint"
 msgid "The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below."
 msgstr "Het vel is het hele display: dunne lagen op plastic, met niets erachter. Het rolt op de trommel eronder."
+
+#: hall-3/flexible-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.flexible-display.view.back.label"
+msgid "Look at the back"
+msgstr "Bekijk de achterkant"
+
+#: hall-3/flexible-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.flexible-display.view.back.hint"
+msgid "Behind the picture there is only the film: no lamp, no glass and no frame."
+msgstr "Achter het beeld is alleen de film: geen lamp, geen glas en geen lijst."
 
 #: hall-4/camera-obscura
 #. Name of a piece.
@@ -5488,14 +5956,152 @@ msgstr "Alleen schaduwen bereiken deze kant. Tegen het doek is een figuur klein 
 #: hall-4/shadow-play
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.shadow-play.view.behind.label"
-msgid "Go behind the screen"
-msgstr "Ga achter het scherm"
+msgid "Sit by the puppeteer"
+msgstr "Zit bij de poppenspeler"
 
 #: hall-4/shadow-play
 #. Line shown while the visitor is at that place.
 msgctxt "piece.shadow-play.view.behind.hint"
-msgid "The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still."
-msgstr "De figuren zijn plat, geperforeerd en beschilderd, elk aan een eigen stokje. Eén vlam verlicht ze allemaal, en die staat nooit stil."
+msgid "Some of the audience sat on this side, watching the puppeteer, the lamp and the painted figures."
+msgstr "Een deel van het publiek zat aan deze kant, en keek naar de poppenspeler, de lamp en de beschilderde figuren."
+
+#: hall-4/magic-lantern
+#. Name of a piece.
+msgctxt "piece.magic-lantern.name"
+msgid "Magic lantern"
+msgstr "Toverlantaarn"
+
+#: hall-4/magic-lantern
+#. Other names the piece goes by.
+msgctxt "piece.magic-lantern.aka"
+msgid "Laterna magica, lantern slide projector"
+msgstr "Laterna magica, projector voor lantaarnplaatjes"
+
+#: hall-4/magic-lantern
+#. The date of the piece, as its label gives it.
+msgctxt "piece.magic-lantern.yearText"
+msgid "by 1659"
+msgstr "uiterlijk 1659"
+
+#: hall-4/magic-lantern
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.magic-lantern.origin"
+msgid "Christiaan Huygens, The Hague, by 1659. Shown and sold at courts across Europe by Thomas Rasmussen Walgensten in the 1660s"
+msgstr "Christiaan Huygens, Den Haag, uiterlijk 1659. In de jaren 1660 getoond en verkocht aan hoven door heel Europa door Thomas Rasmussen Walgensten"
+
+#: hall-4/magic-lantern
+#. Where this kind of display stands today.
+msgctxt "piece.magic-lantern.statusNote"
+msgid "Gave way to cinema after 1895, though lanterns stayed in schools and churches for decades. Collectors and performers still give shows."
+msgstr "Moest na 1895 wijken voor de film, al bleven lantaarns nog tientallen jaren in scholen en kerken. Verzamelaars en vertoners geven nog voorstellingen."
+
+#: hall-4/magic-lantern
+#. First sentence of the label.
+msgctxt "piece.magic-lantern.lead"
+msgid "A lamp, a picture painted on glass and a lens throw a large picture on the wall of a dark room."
+msgstr "Een lamp, een op glas geschilderd plaatje en een lens werpen een groot beeld op de muur van een donkere kamer."
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.magic-lantern.how.1"
+msgid "A lamp burns in a box with a chimney, in front of a curved mirror. Its light passes through a small picture painted on glass, slid in upside down, and the lens in the tube in front throws it on a wall or a sheet, enlarged and the right way up."
+msgstr "Een lamp brandt in een kast met een schoorsteen, voor een holle spiegel. Het licht gaat door een klein, op glas geschilderd plaatje dat ondersteboven is ingeschoven, en de lens in de buis ervoor werpt het vergroot en rechtop op een muur of een laken."
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.magic-lantern.how.2"
+msgid "Slides with moving parts, worked by a lever or a crank, made figures move. Two lanterns aimed at one screen could fade one picture into the next, a show called dissolving views. Brighter lamps, from oil to limelight and the electric arc, let the picture grow to fill a hall."
+msgstr "Plaatjes met bewegende delen, bediend met een hendel of een slinger, lieten figuren bewegen. Twee lantaarns gericht op één scherm konden het ene beeld in het volgende laten overvloeien, een voorstelling die nevelbeelden heette. Fellere lampen, van olie tot kalklicht en de elektrische boog, lieten het beeld groeien tot het een zaal vulde."
+
+#: hall-4/magic-lantern
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.magic-lantern.how.3"
+msgid "The oldest known record is a page of ten sketches by Christiaan Huygens of a skeleton taking off its skull, found among his papers of 1659 and marked for showing by convex glasses with the lamp. In the 1660s the Dane Thomas Rasmussen Walgensten showed lanterns at courts across Europe under the name laterna magica. Samuel Pepys bought one in London in 1666, and Athanasius Kircher printed a picture of one in 1671."
+msgstr "Het oudste bekende stuk is een blad met tien schetsen van Christiaan Huygens van een skelet dat zijn schedel afneemt, gevonden tussen zijn papieren uit 1659 en gemerkt om te vertonen met bolle glazen en de lamp. In de jaren 1660 toonde de Deen Thomas Rasmussen Walgensten lantaarns aan hoven door heel Europa onder de naam laterna magica. Samuel Pepys kocht er in 1666 een in Londen, en Athanasius Kircher drukte er in 1671 een afbeelding van."
+
+#: hall-4/magic-lantern
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.1"
+msgid "Shows one large picture to a whole room"
+msgstr "Toont één groot beeld aan een hele zaal"
+
+#: hall-4/magic-lantern
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.2"
+msgid "Needs only a lamp, a lens and painted glass"
+msgstr "Heeft alleen een lamp, een lens en beschilderd glas nodig"
+
+#: hall-4/magic-lantern
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.good.3"
+msgid "Shows anything an artist can paint small"
+msgstr "Toont alles wat een kunstenaar klein kan schilderen"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.1"
+msgid "Needs a dark room"
+msgstr "Heeft een donkere kamer nodig"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.2"
+msgid "Shows a still picture, unless the slide itself has moving parts"
+msgstr "Toont een stilstaand beeld, tenzij het plaatje zelf bewegende delen heeft"
+
+#: hall-4/magic-lantern
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.magic-lantern.bad.3"
+msgid "Was dim and small until brighter lamps came"
+msgstr "Was zwak en klein tot er fellere lampen kwamen"
+
+#: hall-4/magic-lantern
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.magic-lantern.look"
+msgid "Switch the daylight off. The picture on the wall is the slide in the holder, painted upside down and made large and upright by the lens. Each minute a new slide is pushed in."
+msgstr "Zet het daglicht uit. Het beeld op de muur is het plaatje in de houder, ondersteboven geschilderd en door de lens groot en rechtop gemaakt. Elke minuut wordt er een nieuw plaatje ingeschoven."
+
+#: hall-4/magic-lantern
+#. People section: what Christiaan Huygens did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.1"
+msgid "Drew ten sketches of a skeleton for a lantern show among papers of 1659, and built lanterns on request in the next few years. He thought the device frivolous."
+msgstr "Tekende tussen papieren uit 1659 tien schetsen van een skelet voor een lantaarnvoorstelling, en bouwde de jaren daarna lantaarns op bestelling. Hij vond het apparaat lichtzinnig."
+
+#: hall-4/magic-lantern
+#. People section: what Thomas Rasmussen Walgensten did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.2"
+msgid "Danish mathematician who showed lanterns at courts across Europe in the 1660s, and the first known to call the device laterna magica, the Magic Lantern Society says."
+msgstr "Deense wiskundige die in de jaren 1660 lantaarns aan hoven door heel Europa toonde, en de eerste van wie bekend is dat hij het apparaat laterna magica noemde, zegt de Magic Lantern Society."
+
+#: hall-4/magic-lantern
+#. People section: what Athanasius Kircher did. The names stand above this line.
+msgctxt "piece.magic-lantern.people.3"
+msgid "Printed a picture of a projecting lantern in the second edition of his Ars Magna Lucis et Umbrae in 1671, and took credit for it."
+msgstr "Drukte in 1671 in de tweede druk van zijn Ars Magna Lucis et Umbrae een afbeelding van een projectielantaarn, en eiste de eer ervoor op."
+
+#: hall-4/magic-lantern
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.magic-lantern.view.audience.label"
+msgid "Sit with the audience"
+msgstr "Zit bij het publiek"
+
+#: hall-4/magic-lantern
+#. Line shown while the visitor is at that place.
+msgctxt "piece.magic-lantern.view.audience.hint"
+msgid "Behind the lantern, as a room full of people sat. Switch the daylight off: the picture needs a dark room."
+msgstr "Achter de lantaarn, zoals een volle zaal zat. Zet het daglicht uit: het beeld heeft een donkere kamer nodig."
+
+#: hall-4/magic-lantern
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.magic-lantern.view.slide.label"
+msgid "Go close to the slide"
+msgstr "Ga dicht bij het plaatje"
+
+#: hall-4/magic-lantern
+#. Line shown while the visitor is at that place.
+msgctxt "piece.magic-lantern.view.slide.hint"
+msgid "The slide is painted small and upside down. The lens turns it the right way up and makes it large on the sheet."
+msgstr "Het plaatje is klein en ondersteboven geschilderd. De lens zet het rechtop en maakt het groot op het laken."
 
 #: hall-4/liquid-crystal
 #. Name of a piece.
@@ -5622,6 +6228,18 @@ msgstr "In 1977 vonden ze aan het Raman Research Institute in Bangalore vloeibar
 msgctxt "piece.liquid-crystal.people.5"
 msgid "Made the MOS transistor at Bell Laboratories in 1959, the Computer History Museum says, and announced it in 1960. Every cell's thin-film transistor works alike. Atalla was born in Port Said, Kahng in Seoul."
 msgstr "Maakten in 1959 de MOS-transistor bij Bell Laboratories, zegt het Computer History Museum, en kondigden hem in 1960 aan. De dunnefilmtransistor van elke cel werkt op dezelfde manier. Atalla werd geboren in Port Said, Kahng in Seoul."
+
+#: hall-4/liquid-crystal
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.liquid-crystal.view.front.label"
+msgid "Look straight on"
+msgstr "Kijk er recht op"
+
+#: hall-4/liquid-crystal
+#. Line shown while the visitor is at that place.
+msgctxt "piece.liquid-crystal.view.front.hint"
+msgid "From the front the layers line up into one screen. Seen from the side, as at the rail, they come apart."
+msgstr "Van voren vallen de lagen samen tot één scherm. Van opzij gezien, zoals bij de rail, vallen ze uiteen."
 
 #: hall-4/liquid-crystal
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -5877,18 +6495,6 @@ msgstr "Werkte volgens de universiteit vanaf 1984 aan schakelbare ramen aan het 
 
 #: hall-4/switchable-glass
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
-msgctxt "piece.switchable-glass.view.front.label"
-msgid "Stand in front"
-msgstr "Ga ervoor staan"
-
-#: hall-4/switchable-glass
-#. Line shown while the visitor is at that place.
-msgctxt "piece.switchable-glass.view.front.hint"
-msgid "The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted."
-msgstr "De klok achter de ruit is alleen te zien zolang de ruit helder is. Zonder stroom is de ruit mat."
-
-#: hall-4/switchable-glass
-#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.switchable-glass.view.close.label"
 msgid "Go close to the pane"
 msgstr "Ga dicht bij de ruit"
@@ -6008,6 +6614,18 @@ msgid "A few mirrors, enlarged several thousand times. Each rocks on its diagona
 msgstr "Een paar spiegeltjes, enkele duizenden keren vergroot. Elk kantelt om zijn diagonaal: de ene kant op stuurt licht naar de lens."
 
 #: hall-4/micromirror
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.micromirror.view.chip.label"
+msgid "Look at the chip"
+msgstr "Bekijk de chip"
+
+#: hall-4/micromirror
+#. Line shown while the visitor is at that place.
+msgctxt "piece.micromirror.view.chip.hint"
+msgid "The field of mirrors above is a corner of this chip, enlarged. On the chip itself each mirror is far too small to see."
+msgstr "Het spiegelveld erboven is een hoekje van deze chip, vergroot. Op de chip zelf is elk spiegeltje veel te klein om te zien."
+
+#: hall-4/micromirror
 #. Caption of a picture or film from an archive.
 msgctxt "piece.micromirror.media.patent-1.caption"
 msgid "One early micromirror, from Larry Hornbeck's patent of 1987. The pixel is a square flap held over a shallow well by a hinge at one corner. A voltage below pulls the flap down."
@@ -6122,6 +6740,18 @@ msgid "The cube turns the light of the lamp down onto the chip. Only light the c
 msgstr "De kubus buigt het licht van de lamp omlaag naar de chip. Alleen licht dat de chip heeft gedraaid, gaat door de lens naar buiten."
 
 #: hall-4/lcos
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lcos.view.chip.label"
+msgid "Go close to the chip"
+msgstr "Ga dicht bij de chip"
+
+#: hall-4/lcos
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lcos.view.chip.hint"
+msgid "The liquid crystal lies on a mirror-backed silicon chip, so the light passes through it twice, down and back up."
+msgstr "Het vloeibare kristal ligt op een siliciumchip met een spiegel erachter, dus het licht gaat er twee keer doorheen, heen en terug."
+
+#: hall-4/lcos
 #. Caption of a picture or film from an archive.
 msgctxt "piece.lcos.media.patent-1.caption"
 msgid "The Hughes liquid crystal light valve in cross-section, from a patent of 1974. A picture arrives on one side, and projection light is reflected from the other. The layer of liquid crystal between them copies the picture onto that light."
@@ -6222,6 +6852,18 @@ msgstr "Drie Eidophors werkten achter de grote schermen van de Apollo Mission Co
 msgctxt "piece.eidophor.people.1"
 msgid "Applied for a patent on the projector at ETH Zurich in November 1939. An account of 1953 has the first prototype running in 1944."
 msgstr "Vroeg in november 1939 aan de ETH Zürich octrooi aan op de projector. Volgens een verslag uit 1953 werkte het eerste prototype in 1944."
+
+#: hall-4/eidophor
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.eidophor.view.screen.label"
+msgid "Watch the screen"
+msgstr "Kijk naar het scherm"
+
+#: hall-4/eidophor
+#. Line shown while the visitor is at that place.
+msgctxt "piece.eidophor.view.screen.hint"
+msgid "The audience saw only this: a television picture bright enough for a large hall."
+msgstr "Het publiek zag alleen dit: een televisiebeeld dat fel genoeg was voor een grote zaal."
 
 #: hall-4/eidophor
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -6397,6 +7039,138 @@ msgctxt "piece.scanned-laser.view.galvos.hint"
 msgid "Two small mirrors on fast motors. One swings the beam left and right, the other up and down. The eye sees the path."
 msgstr "Twee kleine spiegels op snelle motoren. De ene zwaait de straal naar links en rechts, de andere op en neer. Het oog ziet het spoor."
 
+#: hall-4/scanning-fiber
+#. Name of a piece.
+msgctxt "piece.scanning-fiber.name"
+msgid "Scanning fibre display"
+msgstr "Scannende-vezeldisplay"
+
+#: hall-4/scanning-fiber
+#. Other names the piece goes by.
+msgctxt "piece.scanning-fiber.aka"
+msgid "Fibre scanning display, scanning fibre projector"
+msgstr "Fiber scanning display, scannende-vezelprojector"
+
+#: hall-4/scanning-fiber
+#. The date of the piece, as its label gives it.
+msgctxt "piece.scanning-fiber.yearText"
+msgid "patent applied for in 1999"
+msgstr "octrooi aangevraagd in 1999"
+
+#: hall-4/scanning-fiber
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.scanning-fiber.origin"
+msgid "Eric Seibel and Thomas Furness, Human Interface Technology Laboratory, University of Washington, Seattle"
+msgstr "Eric Seibel en Thomas Furness, Human Interface Technology Laboratory, University of Washington, Seattle"
+
+#: hall-4/scanning-fiber
+#. Where this kind of display stands today.
+msgctxt "piece.scanning-fiber.statusNote"
+msgid "Used in small endoscopes that take pictures. As a display it has stayed in laboratories: Magic Leap filed many patents on fibre scanning projectors, but its first headset used a liquid-crystal-on-silicon chip."
+msgstr "Gebruikt in kleine endoscopen die beelden maken. Als display is het in het lab gebleven: Magic Leap vroeg veel octrooien aan op scannende-vezelprojectoren, maar zijn eerste headset gebruikte een chip van vloeibaar kristal op silicium."
+
+#: hall-4/scanning-fiber
+#. First sentence of the label.
+msgctxt "piece.scanning-fiber.lead"
+msgid "One glass fibre, thinner than a hair, is shaken at its own natural frequency so that its tip draws the picture in a spiral."
+msgstr "Eén glasvezel, dunner dan een haar, wordt op zijn eigen frequentie geschud zodat zijn punt het beeld in een spiraal tekent."
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.scanning-fiber.how.1"
+msgid "Laser light in three colours runs down a single optical fibre. Its tip sticks out from a small tube of piezoelectric ceramic, which bends when a voltage is put across it. Driven at the resonant frequency of the fibre, the tip swings in growing circles, and the spot of light leaving it traces a spiral from the centre outward."
+msgstr "Laserlicht in drie kleuren loopt door één optische vezel. Zijn punt steekt uit een buisje van piëzo-elektrisch keramiek dat buigt als er spanning over komt te staan. Aangedreven op de resonantiefrequentie van de vezel zwaait de punt in steeds grotere cirkels, en de lichtvlek die eruit komt trekt een spiraal van het midden naar buiten."
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.scanning-fiber.how.2"
+msgid "The lasers change brightness as the spot moves, dot by dot, so the spiral fills in with a picture. A lens in front makes the picture larger, on a wall or into an eye. At the end of each picture the swinging must be stopped and the tip brought back to the centre before the next one starts."
+msgstr "De lasers veranderen van helderheid terwijl de vlek beweegt, punt voor punt, zodat de spiraal zich vult met een beeld. Een lens ervoor maakt het beeld groter, op een muur of in een oog. Aan het eind van elk beeld moet het zwaaien worden gestopt en de punt terug naar het midden voordat het volgende begint."
+
+#: hall-4/scanning-fiber
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.scanning-fiber.how.3"
+msgid "Eric Seibel and Thomas Furness applied in 1999 for a patent on a fibre that resonates to scan pictures, meant first for taking pictures inside the body. The patent also describes sending the light to a display. A patent on a projection display that scans with a fibre, by Brian Schowengerdt and others at the same university, was granted in 2014."
+msgstr "Eric Seibel en Thomas Furness vroegen in 1999 octrooi aan op een vezel die resoneert om beelden af te tasten, eerst bedoeld om beelden binnen in het lichaam te maken. Het octrooi beschrijft ook het licht naar een display te sturen. Een octrooi op een projectiedisplay dat met een vezel scant, van Brian Schowengerdt en anderen aan dezelfde universiteit, werd in 2014 verleend."
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.1"
+msgid "Makes a picture with one fibre and one small moving part"
+msgstr "Maakt een beeld met één vezel en één klein bewegend deel"
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.2"
+msgid "Can be made small enough to fit in a thin tube"
+msgstr "Kan klein genoeg zijn om in een dunne buis te passen"
+
+#: hall-4/scanning-fiber
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.good.3"
+msgid "Can show a picture and take one through the same fibre"
+msgstr "Kan via dezelfde vezel een beeld tonen en er een opnemen"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.1"
+msgid "Is hard to steer exactly, above all near the centre of the spiral"
+msgstr "Is moeilijk precies te sturen, vooral dicht bij het midden van de spiraal"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.2"
+msgid "Needs lasers and fast electronics"
+msgstr "Heeft lasers en snelle elektronica nodig"
+
+#: hall-4/scanning-fiber
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.scanning-fiber.bad.3"
+msgid "Has not reached a product as a display"
+msgstr "Is als display geen product geworden"
+
+#: hall-4/scanning-fiber
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.scanning-fiber.look"
+msgid "The model is enlarged and slowed down many thousands of times, so that the spiral can be followed. The spot paints the time on the screen in front, one ring at a time."
+msgstr "Het model is vergroot en vele duizenden keren vertraagd, zodat de spiraal te volgen is. De vlek schildert de tijd op het scherm ervoor, ring voor ring."
+
+#: hall-4/scanning-fiber
+#. People section: what Eric J. Seibel, Thomas A. Furness III did. The names stand above this line.
+msgctxt "piece.scanning-fiber.people.1"
+msgid "Applied in 1999 for a patent on a fibre that resonates to scan pictures, at the Human Interface Technology Laboratory of the University of Washington. Seibel built it into an endoscope."
+msgstr "Vroeg in 1999 octrooi aan op een vezel die resoneert om beelden af te tasten, aan het Human Interface Technology Laboratory van de University of Washington. Seibel bouwde hem in een endoscoop."
+
+#: hall-4/scanning-fiber
+#. People section: what Brian T. Schowengerdt did. The names stand above this line.
+msgctxt "piece.scanning-fiber.people.2"
+msgid "Worked at the same laboratory on displays that scan light into the eye, and with Seibel and others patented a fibre-scanning projector. He later filed many such patents for Magic Leap."
+msgstr "Werkte in hetzelfde lab aan displays die licht in het oog scannen, en octrooieerde met Seibel en anderen een scannende-vezelprojector. Later vroeg hij er veel meer aan voor Magic Leap."
+
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.tip.label"
+msgid "Go close to the tip"
+msgstr "Ga dicht bij de punt"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.tip.hint"
+msgid "The fibre sticks out of the ceramic tube and swings in growing circles. The real one swings far faster."
+msgstr "De vezel steekt uit het keramische buisje en zwaait in steeds grotere cirkels. De echte zwaait veel sneller."
+
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.picture.label"
+msgid "Watch the picture form"
+msgstr "Zie het beeld ontstaan"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.picture.hint"
+msgid "The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest."
+msgstr "De vlek schildert de tijd ring voor ring vanuit het midden, en gaat dan uit terwijl de punt tot rust komt."
+
 #: hall-4/projection-mapping
 #. Name of a piece.
 msgctxt "piece.projection-mapping.name"
@@ -6516,6 +7290,18 @@ msgstr "Ga bij de projector staan"
 msgctxt "piece.projection-mapping.view.lens.hint"
 msgid "From the lens it is one flat picture, cut to fit. Each solid gets its own part, and the gaps between them get black."
 msgstr "Vanaf de lens is het één plat beeld, op maat gesneden. Elke vorm krijgt zijn eigen deel, en de ruimtes ertussen krijgen zwart."
+
+#: hall-4/projection-mapping
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.projection-mapping.view.shapes.label"
+msgid "Go close to the shapes"
+msgstr "Ga dicht bij de vormen"
+
+#: hall-4/projection-mapping
+#. Line shown while the visitor is at that place.
+msgctxt "piece.projection-mapping.view.shapes.hint"
+msgid "The shapes are plain white plaster. All the colour and pattern on them is light, cut to fit each face."
+msgstr "De vormen zijn kaal wit gips. Alle kleur en alle patronen erop zijn licht, op maat gesneden voor elk vlak."
 
 #: hall-5/gyricon
 #. Name of a piece.
@@ -6741,6 +7527,18 @@ msgstr "In 2001 stempelden ze bij Bell Laboratories 256 plastic transistors op e
 
 #: hall-5/electrophoretic-ink
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrophoretic-ink.view.night.label"
+msgid "Try to read at night"
+msgstr "Probeer 's nachts te lezen"
+
+#: hall-5/electrophoretic-ink
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrophoretic-ink.view.night.hint"
+msgid "The page is still there, but with no light of its own it cannot be read."
+msgstr "De pagina is er nog, maar zonder eigen licht is ze niet te lezen."
+
+#: hall-5/electrophoretic-ink
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.electrophoretic-ink.view.read.label"
 msgid "Pick it up to read"
 msgstr "Pak het op om te lezen"
@@ -6750,6 +7548,18 @@ msgstr "Pak het op om te lezen"
 msgctxt "piece.electrophoretic-ink.view.read.hint"
 msgid "It reads by room light, like print. Watch a page change: every capsule goes black, then white, then to the new page."
 msgstr "Je leest het bij het licht in de ruimte, zoals drukwerk. Kijk hoe een pagina verandert: elke capsule wordt zwart, dan wit, en dan verschijnt de nieuwe pagina."
+
+#: hall-5/electrophoretic-ink
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrophoretic-ink.view.page.label"
+msgid "Go close to the page"
+msgstr "Ga dicht bij de pagina"
+
+#: hall-5/electrophoretic-ink
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrophoretic-ink.view.page.hint"
+msgid "When the page changes it flashes black and white. Then it holds the new page with no power at all."
+msgstr "Als de pagina wisselt, flitst ze zwart en wit. Daarna houdt ze de nieuwe pagina vast zonder enige stroom."
 
 #: hall-5/electrophoretic-ink
 #. Caption of a picture or film from an archive.
@@ -6872,6 +7682,18 @@ msgid "Pressure flips the crystal to its reflecting state, and the stroke stays 
 msgstr "Druk zet het kristal in de weerkaatsende toestand, en de streek blijft zonder stroom staan. Eén puls wist het vel."
 
 #: hall-5/cholesteric-lcd
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cholesteric-lcd.view.stroke.label"
+msgid "Go close to the stroke"
+msgstr "Ga dicht bij de streep"
+
+#: hall-5/cholesteric-lcd
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cholesteric-lcd.view.stroke.hint"
+msgid "Where the stylus pressed, the crystal reflects light, and the stroke stays with no power."
+msgstr "Waar de stift drukte, weerkaatst het kristal licht, en de streep blijft staan zonder stroom."
+
+#: hall-5/cholesteric-lcd
 #. Caption of a picture or film from an archive.
 msgctxt "piece.cholesteric-lcd.media.patent-1.caption"
 msgid "The two stable states of a cholesteric cell, from a Kent State University patent of 2000. In the planar texture the droplets of liquid crystal reflect coloured light. In the focal conic texture the light passes through and scatters forward."
@@ -6984,6 +7806,18 @@ msgstr "Ga dicht bij de cellen"
 msgctxt "piece.electrowetting.view.cells.hint"
 msgid "A film of dyed oil covers each cell. A voltage makes the water push the oil into a corner, and the cell clears."
 msgstr "Een laagje gekleurde olie bedekt elke cel. Een spanning laat het water de olie in een hoek duwen, en de cel wordt helder."
+
+#: hall-5/electrowetting
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.electrowetting.view.oil.label"
+msgid "Look across the oil"
+msgstr "Kijk laag over de olie"
+
+#: hall-5/electrowetting
+#. Line shown while the visitor is at that place.
+msgctxt "piece.electrowetting.view.oil.hint"
+msgid "Low across the cells you can see the oil gathered in a corner, standing higher than the film it was."
+msgstr "Laag over de cellen zie je de olie verzameld in een hoek, hoger dan het laagje dat het eerst was."
 
 #: hall-5/electrowetting
 #. Caption of a picture or film from an archive.
@@ -7352,6 +8186,24 @@ msgid "Sit down"
 msgstr "Ga zitten"
 
 #: hall-6/peppers-ghost
+#. Line shown while the visitor is at that place.
+msgctxt "piece.peppers-ghost.view.seat.hint"
+msgid "Move your head: the figure keeps its place among the furniture, as a mirror image does."
+msgstr "Beweeg je hoofd: de figuur houdt zijn plaats tussen de meubels, zoals een spiegelbeeld doet."
+
+#: hall-6/peppers-ghost
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.peppers-ghost.view.pit.label"
+msgid "Look into the pit"
+msgstr "Kijk in de put"
+
+#: hall-6/peppers-ghost
+#. Line shown while the visitor is at that place.
+msgctxt "piece.peppers-ghost.view.pit.hint"
+msgid "Below the front of the stage lies the lit figure. The sloping glass mirrors it, so it seems to stand on the stage."
+msgstr "Onder de voorrand van het toneel ligt de verlichte figuur. Het schuine glas weerspiegelt hem, en hij lijkt op het toneel te staan."
+
+#: hall-6/peppers-ghost
 #. Caption of a picture or film from an archive.
 msgctxt "piece.peppers-ghost.media.stage-1865.caption"
 msgid "The stage arrangement for Pepper's ghost, from Le Monde Illustré of 21 January 1865. A figure in white below the stage, lit by a lamp, is reflected in a tilted sheet of glass and appears beside the actor."
@@ -7362,6 +8214,138 @@ msgstr "De opstelling op het toneel voor Pepper’s ghost, uit Le Monde Illustr�
 msgctxt "piece.peppers-ghost.media.stage-1865.alt"
 msgid "Engraving in cross-section: an audience, a sloping pane of glass, an actor facing a pale figure on stage, under the stage a man aiming a lantern at a draped figure."
 msgstr "Gravure in doorsnede: een publiek, een schuine glasruit, een acteur tegenover een bleke figuur op het toneel, onder het toneel een man die een lantaarn richt op een gedrapeerde figuur."
+
+#: hall-6/lancework
+#. Name of a piece.
+msgctxt "piece.lancework.name"
+msgid "Firework set piece"
+msgstr "Vuurwerkstuk"
+
+#: hall-6/lancework
+#. Other names the piece goes by.
+msgctxt "piece.lancework.aka"
+msgid "Lancework, fire picture"
+msgstr "Lansenwerk, vuurbeeld"
+
+#: hall-6/lancework
+#. The date of the piece, as its label gives it.
+msgctxt "piece.lancework.yearText"
+msgid "portraits in fire from 1879"
+msgstr "vuurportretten vanaf 1879"
+
+#: hall-6/lancework
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.lancework.origin"
+msgid "C. T. Brock & Co., at the Crystal Palace, London. Displays there from 1865, and portraits in fire from 1879 by the firm's own account"
+msgstr "C. T. Brock & Co., in het Crystal Palace, Londen. Vertoningen daar vanaf 1865, en vuurportretten vanaf 1879 volgens het bedrijf zelf"
+
+#: hall-6/lancework
+#. Where this kind of display stands today.
+msgctxt "piece.lancework.statusNote"
+msgid "Still made by hand for weddings, anniversaries and launches, mostly as names, messages and logos that burn for about a minute."
+msgstr "Nog steeds met de hand gemaakt voor bruiloften, jubilea en openingen, meestal als namen, berichten en logo's die ongeveer een minuut branden."
+
+#: hall-6/lancework
+#. First sentence of the label.
+msgctxt "piece.lancework.lead"
+msgid "Hundreds of small fireworks fixed to a frame burn at once, and each flame is one dot of a word or a picture."
+msgstr "Honderden kleine vuurwerkjes op een frame branden tegelijk, en elke vlam is één stip van een woord of een beeld."
+
+#: hall-6/lancework
+#. How it works, paragraph 1 of 3.
+msgctxt "piece.lancework.how.1"
+msgid "Each lance is a small paper tube of coloured firework composition, about the size of a stick of chalk, that burns with a steady flame for about a minute. Lances are pinned along strips of cane bent to the lines of the drawing, which are fixed to a wooden frame."
+msgstr "Elke lans is een klein papieren hulsje met gekleurd vuurwerkmengsel, zo groot als een krijtje, dat ongeveer een minuut met een rustige vlam brandt. Lansen worden gestoken langs stroken riet die naar de lijnen van de tekening zijn gebogen en op een houten frame vastzitten."
+
+#: hall-6/lancework
+#. How it works, paragraph 2 of 3.
+msgctxt "piece.lancework.how.2"
+msgid "A fast-burning fuse runs from lance to lance, so the whole picture catches almost at once and burns together. Then it fades, and the frame is spent. Lances of different compositions and lengths let a picture change while it burns, one part going out as another catches."
+msgstr "Een snelle lont loopt van lans naar lans, zodat het hele beeld bijna tegelijk vlam vat en samen brandt. Dan dooft het, en het frame is op. Lansen van verschillende mengsels en lengtes laten een beeld veranderen terwijl het brandt, het ene deel dooft terwijl een ander ontbrandt."
+
+#: hall-6/lancework
+#. How it works, paragraph 3 of 3.
+msgctxt "piece.lancework.how.3"
+msgid "C. T. Brock & Co. gave displays at the Crystal Palace in London from 1865 until the palace burned down in 1936. Alan St. H. Brock wrote in 1922 that portraits in fire were shown there for the first time in 1879. Set pieces at the palace grew to buildings, sea battles and pictures 200 feet long."
+msgstr "C. T. Brock & Co. gaf vanaf 1865 vertoningen in het Crystal Palace in Londen, tot het paleis in 1936 afbrandde. Alan St. H. Brock schreef in 1922 dat er in 1879 voor het eerst vuurportretten werden getoond. De vuurwerkstukken van het paleis groeiden uit tot gebouwen, zeeslagen en beelden van 200 voet lang."
+
+#: hall-6/lancework
+#. What it is good at, point 1 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.1"
+msgid "Can be seen by a whole crowd at night"
+msgstr "Is 's nachts door een hele menigte te zien"
+
+#: hall-6/lancework
+#. What it is good at, point 2 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.2"
+msgid "Draws any line that a frame can hold"
+msgstr "Tekent elke lijn die een frame kan dragen"
+
+#: hall-6/lancework
+#. What it is good at, point 3 of 3. No full stop at the end.
+msgctxt "piece.lancework.good.3"
+msgid "Needs no power and no screen"
+msgstr "Heeft geen stroom en geen scherm nodig"
+
+#: hall-6/lancework
+#. Where it fails, point 1 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.1"
+msgid "Burns once, for about a minute"
+msgstr "Brandt één keer, ongeveer een minuut"
+
+#: hall-6/lancework
+#. Where it fails, point 2 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.2"
+msgid "Every picture is built by hand"
+msgstr "Elk beeld wordt met de hand gebouwd"
+
+#: hall-6/lancework
+#. Where it fails, point 3 of 3. No full stop at the end.
+msgctxt "piece.lancework.bad.3"
+msgid "Its smoke can hide the picture"
+msgstr "De rook kan het beeld verbergen"
+
+#: hall-6/lancework
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.lancework.look"
+msgid "The fuse runs across the frame and the time lights up in flame. Switch the daylight off, and watch the smoke rise as the lances burn down."
+msgstr "De lont loopt over het frame en de tijd vlamt op. Zet het daglicht uit en kijk hoe de rook opstijgt terwijl de lansen opbranden."
+
+#: hall-6/lancework
+#. People section: what C. T. Brock did. The names stand above this line.
+msgctxt "piece.lancework.people.1"
+msgid "Staged the firework displays at the Crystal Palace from 1865, the Victoria and Albert Museum records. His family firm kept them going until the palace burned in 1936."
+msgstr "Verzorgde vanaf 1865 het vuurwerk in het Crystal Palace, aldus het Victoria and Albert Museum. Zijn familiebedrijf zette het voort tot het paleis in 1936 afbrandde."
+
+#: hall-6/lancework
+#. People section: what Alan St. H. Brock did. The names stand above this line.
+msgctxt "piece.lancework.people.2"
+msgid "Wrote his family firm's history of the art in 1922. It dates the first portraits in fire to 1879."
+msgstr "Schreef in 1922 de geschiedenis van het vak voor het familiebedrijf. Die dateert de eerste vuurportretten op 1879."
+
+#: hall-6/lancework
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lancework.view.crowd.label"
+msgid "Stand with the crowd"
+msgstr "Sta bij de menigte"
+
+#: hall-6/lancework
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lancework.view.crowd.hint"
+msgid "From the lawn the flames join into figures. Up close they are separate lances, each one dot of the picture."
+msgstr "Vanaf het gras smelten de vlammen samen tot cijfers. Van dichtbij zijn het losse lansen, elk één stip van het beeld."
+
+#: hall-6/lancework
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lancework.view.lances.label"
+msgid "Go close to the lances"
+msgstr "Ga dicht bij de lansen"
+
+#: hall-6/lancework
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lancework.view.lances.hint"
+msgid "Each lance is a paper tube of coloured fire pinned to the cane. It shortens as it burns, for about a minute."
+msgstr "Elke lans is een papieren hulsje gekleurd vuur, op het riet gestoken. Hij wordt korter terwijl hij brandt, ongeveer een minuut."
 
 #: hall-6/illusion-transmitter
 #. Name of a piece.
@@ -7458,6 +8442,30 @@ msgstr "Toen ze het uitvond, leidde Thomas de beeldverwerkingssystemen voor Land
 msgctxt "piece.illusion-transmitter.people.1"
 msgid "Majored in physics at Morgan State University, by Lemelson-MIT's account one of only two women in her class to do so. She joined NASA as a data analyst and patented the illusion transmitter."
 msgstr "Studeerde natuurkunde als hoofdvak aan Morgan State University, volgens Lemelson-MIT als een van maar twee vrouwen in haar jaar die dat deden. Ze begon bij NASA als data-analist en kreeg octrooi op de illusiezender."
+
+#: hall-6/illusion-transmitter
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.illusion-transmitter.view.front.label"
+msgid "Stand in front"
+msgstr "Ga ervoor staan"
+
+#: hall-6/illusion-transmitter
+#. Line shown while the visitor is at that place.
+msgctxt "piece.illusion-transmitter.view.front.hint"
+msgid "On the left a bulb seems to glow in an empty socket. On the right the same picture hangs in the air."
+msgstr "Links lijkt een gloeilamp te branden in een lege fitting. Rechts zweeft hetzelfde beeld in de lucht."
+
+#: hall-6/illusion-transmitter
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.illusion-transmitter.view.mirror.label"
+msgid "Look into the box"
+msgstr "Kijk in de kast"
+
+#: hall-6/illusion-transmitter
+#. Line shown while the visitor is at that place.
+msgctxt "piece.illusion-transmitter.view.mirror.hint"
+msgid "The real bulb is hidden from you. The concave mirror at the back makes a picture of it that stands in the empty socket."
+msgstr "De echte lamp is voor je verborgen. De holle spiegel achterin maakt er een beeld van dat in de lege fitting staat."
 
 #: hall-6/fog-screen
 #. Name of a piece.
@@ -7563,6 +8571,18 @@ msgstr "Projectie op fonteinen en watergordijnen is ouder. Een octrooi voor een 
 
 #: hall-6/fog-screen
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.fog-screen.view.projector.label"
+msgid "Stand by the projector"
+msgstr "Ga bij de projector staan"
+
+#: hall-6/fog-screen
+#. Line shown while the visitor is at that place.
+msgctxt "piece.fog-screen.view.projector.hint"
+msgid "From the projector's side the fog sends little light back, so the picture is faint."
+msgstr "Aan de kant van de projector kaatst de mist weinig licht terug, dus het beeld is zwak."
+
+#: hall-6/fog-screen
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.fog-screen.view.fog.label"
 msgid "Step up to the fog"
 msgstr "Stap naar de mist toe"
@@ -7572,6 +8592,18 @@ msgstr "Stap naar de mist toe"
 msgctxt "piece.fog-screen.view.fog.hint"
 msgid "The picture hangs in falling fog, ragged by the time it reaches the floor. It is brightest facing the projector."
 msgstr "Het beeld hangt in vallende mist, en is gerafeld tegen de tijd dat het de vloer bereikt. Het is het helderst als je naar de projector kijkt."
+
+#: hall-6/fog-screen
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.fog-screen.view.slot.label"
+msgid "Look up at the fog bar"
+msgstr "Kijk omhoog naar de mistbalk"
+
+#: hall-6/fog-screen
+#. Line shown while the visitor is at that place.
+msgctxt "piece.fog-screen.view.slot.hint"
+msgid "The fog falls from a thin slot between two curtains of air, which keep it flat enough to take a picture."
+msgstr "De mist valt uit een dunne spleet tussen twee luchtgordijnen, die hem vlak genoeg houden om een beeld op te vangen."
 
 #: hall-6/fog-screen
 #. Caption of a picture or film from an archive.
@@ -7689,6 +8721,18 @@ msgstr "Traagheid van het oog is de traditionele naam, geen volledige verklaring
 
 #: hall-6/persistence-of-vision
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.persistence-of-vision.view.spin.label"
+msgid "Watch it at speed"
+msgstr "Bekijk het op volle snelheid"
+
+#: hall-6/persistence-of-vision
+#. Line shown while the visitor is at that place.
+msgctxt "piece.persistence-of-vision.view.spin.hint"
+msgid "Held at full speed: your eye joins the passes of one bar of LEDs into a whole disc."
+msgstr "Op volle snelheid: je oog voegt de doorgangen van één ledbalk samen tot een hele schijf."
+
+#: hall-6/persistence-of-vision
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.persistence-of-vision.view.bar.label"
 msgid "Go close to the bar"
 msgstr "Ga dicht bij de staaf"
@@ -7696,8 +8740,8 @@ msgstr "Ga dicht bij de staaf"
 #: hall-6/persistence-of-vision
 #. Line shown while the visitor is at that place.
 msgctxt "piece.persistence-of-vision.view.bar.hint"
-msgid "One bar of lamps, eighteen each side of the hub. Wait for it to slow down: the picture comes apart into a bar again."
-msgstr "Eén staaf met lampjes, achttien aan elke kant van de as. Wacht tot hij langzamer gaat: het beeld valt weer uiteen tot een staaf."
+msgid "One bar of lamps, eighteen each side of the hub. Held slow, the picture comes apart into a bar again."
+msgstr "Eén balk met lampjes, achttien aan elke kant van de as. Langzaam valt het beeld weer uiteen in een balk."
 
 #: hall-6/persistence-of-vision
 #. Caption of a picture or film from an archive.
@@ -7818,6 +8862,18 @@ msgstr "Kreeg in 1961 octrooi op een display met bewegend scherm. Hij noemde het
 msgctxt "piece.swept-volume.people.2"
 msgid "Co-founded Actuality Systems with two Harvard students. Its Perspecta display was priced at 40,000 dollars in 2002, and NASA Ames bought one early in 2003."
 msgstr "Richtte Actuality Systems op samen met twee studenten van Harvard. Het Perspecta-display kreeg in 2002 een prijs van 40.000 dollar, en NASA Ames kocht er begin 2003 een."
+
+#: hall-6/swept-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.swept-volume.view.round.label"
+msgid "Walk round the dome"
+msgstr "Loop om de koepel"
+
+#: hall-6/swept-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.swept-volume.view.round.hint"
+msgid "The picture has real depth. From any side you see the side of it that faces you."
+msgstr "Het beeld heeft echte diepte. Van elke kant zie je de kant ervan die naar jou toe staat."
 
 #: hall-6/swept-volume
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -8408,6 +9464,18 @@ msgid "Look in"
 msgstr "Kijk erin"
 
 #: hall-7/stereoscope
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.stereoscope.view.card.label"
+msgid "Look at the card"
+msgstr "Bekijk de kaart"
+
+#: hall-7/stereoscope
+#. Line shown while the visitor is at that place.
+msgctxt "piece.stereoscope.view.card.hint"
+msgid "Two photographs taken a few centimetres apart. Compare the edges: near things have shifted more than far ones."
+msgstr "Twee foto's, een paar centimeter uit elkaar genomen. Vergelijk de randen: wat dichtbij is, is meer verschoven dan wat ver weg is."
+
+#: hall-7/stereoscope
 #. Caption of a picture or film from an archive.
 msgctxt "piece.stereoscope.media.patent-1.caption"
 msgid "A viewer for the Teleview system, from Laurens Hammond's patent of 1924. A small motor spins a shutter in front of the eyes, in step with the projector, so that each eye sees only the pictures meant for it."
@@ -8560,8 +9628,8 @@ msgstr "Bekijk de brillen"
 #: hall-7/stereo-glasses
 #. Line shown while the visitor is at that place.
 msgctxt "piece.stereo-glasses.view.table.hint"
-msgid "In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen."
-msgstr "Bij de middelste bril worden de glazen om beurten helder en donker, in de maat van het beeld op het scherm."
+msgid "In the middle pair, the lenses clear and darken in turn with the picture, slowed down here so that you can see it."
+msgstr "Bij de middelste bril worden de glazen om beurten helder en donker met het beeld, hier vertraagd zodat je het ziet."
 
 #: hall-7/parallax-barrier
 #. Name of a piece.
@@ -8670,6 +9738,18 @@ msgstr "Ga ervoor staan"
 msgctxt "piece.parallax-barrier.view.spot.hint"
 msgid "Move your head. Through the slits, the columns for one eye give way to the columns for the other: L turns to R."
 msgstr "Beweeg je hoofd. Door de spleten maken de kolommen voor het ene oog plaats voor die van het andere: L wordt R."
+
+#: hall-7/parallax-barrier
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.parallax-barrier.view.slits.label"
+msgid "Go close to the slits"
+msgstr "Ga dicht bij de spleten"
+
+#: hall-7/parallax-barrier
+#. Line shown while the visitor is at that place.
+msgctxt "piece.parallax-barrier.view.slits.hint"
+msgid "The mask stands off the screen on pillars. Through each slit one eye sees one column and the other eye the next."
+msgstr "Het masker staat op pilaartjes los van het scherm. Door elke spleet ziet het ene oog een kolom en het andere de volgende."
 
 #: hall-7/parallax-barrier
 #. Caption of a picture or film from an archive.
@@ -8798,6 +9878,18 @@ msgid "Drag to walk past. Each rib shows the stripe that faces you, so the eye i
 msgstr "Sleep om erlangs te lopen. Elke ribbel toont de strook die naar je toe gericht is, dus het oog op de afdruk volgt je. Er zijn negen beelden."
 
 #: hall-7/lenticular
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.lenticular.view.ribs.label"
+msgid "Go close to the ribs"
+msgstr "Ga dicht bij de ribbels"
+
+#: hall-7/lenticular
+#. Line shown while the visitor is at that place.
+msgctxt "piece.lenticular.view.ribs.hint"
+msgid "Each rib of plastic is a long, thin lens over thin stripes of the print, one stripe for each picture."
+msgstr "Elke ribbel van plastic is een lange, dunne lens boven dunne stroken van de print, één strook per beeld."
+
+#: hall-7/lenticular
 #. Caption of a picture or film from an archive.
 msgctxt "piece.lenticular.media.patent-1.caption"
 msgid "Walter Hess's ribbed viewing sheet, from his patent filed in 1912. The ribs are small cylindrical lenses. The second figure shows one rib bringing light from one direction to a single line on the picture behind it."
@@ -8910,6 +10002,18 @@ msgstr "Kijk eromheen"
 msgctxt "piece.integral-imaging.view.round.hint"
 msgid "Move your head sideways, then up and down. The scene shifts both ways, in small steps: one view for each lens position."
 msgstr "Beweeg je hoofd opzij, en dan op en neer. De scène verschuift in beide richtingen, in kleine stapjes: één beeld voor elke lenspositie."
+
+#: hall-7/integral-imaging
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.integral-imaging.view.lenses.label"
+msgid "Go close to the lenses"
+msgstr "Ga dicht bij de lensjes"
+
+#: hall-7/integral-imaging
+#. Line shown while the visitor is at that place.
+msgctxt "piece.integral-imaging.view.lenses.hint"
+msgid "Each tiny round lens shows its own part of the picture beneath it, so the view changes up and down as well as sideways."
+msgstr "Elk piepklein rond lensje toont zijn eigen deel van het beeld eronder, dus het beeld verandert op en neer en ook opzij."
 
 #: hall-7/holography
 #. Name of a piece.
@@ -9050,6 +10154,18 @@ msgid "The toy engine is not behind the glass. Move your head: it turns as the r
 msgstr "De speelgoedlocomotief staat niet achter het glas. Beweeg je hoofd: hij draait zoals de echte zou doen. Het best met het daglicht uit."
 
 #: hall-7/holography
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.holography.view.bench.label"
+msgid "Look along the bench"
+msgstr "Kijk langs de bank"
+
+#: hall-7/holography
+#. Line shown while the visitor is at that place.
+msgctxt "piece.holography.view.bench.hint"
+msgid "Laser, lens and plate stand in one line on a rail. The lens spreads the beam so that it lights the whole plate."
+msgstr "Laser, lens en plaat staan op een rij op een rail. De lens spreidt de straal zodat hij de hele plaat verlicht."
+
+#: hall-7/holography
 #. Caption of a picture or film from an archive.
 msgctxt "piece.holography.media.patent-1.caption"
 msgid "From Dennis Gabor's United States patent of 1949. Light from a point source passes a small object and reaches a photographic plate. There the direct light and the scattered light meet and leave a pattern of rings."
@@ -9174,6 +10290,18 @@ msgstr "Geboren in Nigeria. Een team dat hij leidde aan de Washington University
 msgctxt "piece.head-mounted.view.worn.label"
 msgid "Put it on"
 msgstr "Zet hem op"
+
+#: hall-7/head-mounted
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.head-mounted.view.kit.label"
+msgid "Look at one eye's parts"
+msgstr "Bekijk de delen van één oog"
+
+#: hall-7/head-mounted
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-mounted.view.kit.hint"
+msgid "A lens and the small screen it looks at. The picture on the panel is drawn bulging, so that the lens shows it straight."
+msgstr "Een lens en het schermpje waar hij naar kijkt. Het beeld op het paneel is bol getekend, zodat de lens het recht laat zien."
 
 #: hall-7/head-mounted
 #. Caption of a picture or film from an archive.
@@ -9600,6 +10728,24 @@ msgstr "Werkte vanaf 1956 in Farnborough het systeem uit dat volgens zijn eigen 
 msgctxt "piece.head-up.view.seat.label"
 msgid "Sit down"
 msgstr "Ga zitten"
+
+#: hall-7/head-up
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-up.view.seat.hint"
+msgid "Move your head: the symbols stay out on the far wall, and lean too far and they are cut off."
+msgstr "Beweeg je hoofd: de symbolen blijven op de verre muur, en als je te ver leunt worden ze afgesneden."
+
+#: hall-7/head-up
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.head-up.view.lens.label"
+msgid "Look down at the lens"
+msgstr "Kijk omlaag naar de lens"
+
+#: hall-7/head-up
+#. Line shown while the visitor is at that place.
+msgctxt "piece.head-up.view.lens.hint"
+msgid "The lens below makes the light of each symbol parallel, so the glass shows the symbols as if they were far away."
+msgstr "De lens eronder maakt het licht van elk symbool evenwijdig, zodat het glas de symbolen toont alsof ze ver weg zijn."
 
 #: archive
 #. What was done to an archive picture or film before it was put on the site. Keep the words in curly brackets as they are.
