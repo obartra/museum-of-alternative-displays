@@ -289,6 +289,8 @@ const figures = (text: string, lang: string) => {
   for (const m of x.matchAll(/(?:siglo|segle|século|secolo)[\s ]+([IVXL]+)\b|\b([IVXL]+)e[\s  ]*siècle|\b([IVXL]+)[\s\u00a0]+(?:secolo|wiek|век)/g)) century(roman(m[1] ?? m[2] ?? m[3]!));
   for (const m of x.matchAll(/(\d{1,2})\.[\s ]*Jahrhundert|(\d{1,2})\s*世[纪紀]|(\d{1,2})\s*세기|(\d{1,2})-a[\s\u00a0]+jarcento|(\d{1,2})e[\s\u00a0]+eeuw/g)) century(Number(m[1] ?? m[2] ?? m[3] ?? m[4] ?? m[5]));
   for (const m of x.matchAll(/(\d{2})\s*世[纪紀]\s*(\d{2})\s*年代/g)) found.add(`${Number(m[1]) - 1}${m[2]}`);
+  // a decade as Polish and Russian write it: "lata 70. XX wieku", "70-е годы XX века"
+  for (const m of x.matchAll(/(\d{2})(?:\.|-[а-яё]{1,2})[\s\u00a0]+(?:(?:год[а-яё]*)[\s\u00a0]+)?([IVXL]+)[\s\u00a0]+(?:wieku|века)/g)) found.add(`${roman(m[2]!) - 1}${m[1]}`);
   return new Set([...found].filter((n) => n.length > 1));
 };
 /** What a language still shows in English: a fact, a view or an archive caption added after its translation. It is listed, and it does not stop the build. */

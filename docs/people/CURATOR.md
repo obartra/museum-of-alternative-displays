@@ -173,8 +173,9 @@ said the same things, and about 80 sources were added to 31 pieces.
   it in 1948. The microLED gave light in August 1999 by its makers' account and was published in 2000. Nine pieces
   carry a line under the year that says which kind of date it is.
 - **Deeds that were someone else's.** Elma Farnsworth's line now says what she did in the laboratory. Jepsen's
-  thesis and Benton's supervision of it are one sentence. Hammond supervised and DeLongchamp built. Jiang and Lin
-  are two physicists, not a married couple. Sheridon's line on the flexible display piece is now an aside, because
+  thesis and Benton's supervision of it are one sentence. Hammond supervised and DeLongchamp built. Jiang and Lin's
+  line tells their work as physicists and no longer introduces them through their marriage, which their own
+  account states and the fact on the piece still tells. Sheridon's line on the flexible display piece is now an aside, because
   the board that drove Gyricon was rigid.
 - **Birthplaces.** A birthplace stays where a reliable source gives it: Hong Kong, Seoul, Port Said, Tehran,
   Nigeria, Paris. Three that no source read carries are gone: Florence, England and Jerusalem. `VOICE.md` now
