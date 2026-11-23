@@ -899,6 +899,9 @@ function about(): void {
  * `toured` is a guided tour to take up in the halls, at one of its parts. In a language that does not tell the
  * tour, its address opens the walk on the tour's trail.
  */
+/** Whether the visitor has started the walk before, in this tab. */
+const walkedHere = (): boolean => { try { return sessionStorage.getItem('walked') === '1'; } catch { return false; } };
+
 function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
   if (toured) {
     if (toured.tour.draft) preview();
@@ -909,7 +912,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
   title(toured ? said.tour(toured.tour)?.title : undefined);
   const from = start ? pieceById(start) : undefined;
   // the walk starts by itself where a mouse says the device can carry it, and for a visitor who has just asked for a tour
-  const asked = !!toured && justAsked(), auto = wants3d() && (asked || !matchMedia('(pointer: coarse)').matches);
+  const asked = !!toured && justAsked(), auto = wants3d() && (asked || walkedHere() || !matchMedia('(pointer: coarse)').matches);
   shell(`
 <div class="walkpage">
   <div class="hallhead walk__lead"><h1 class="title">${tx('walk.title')}</h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>

@@ -288,6 +288,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (begun || closed) return;
     begun = true;
     startBtn.hidden = true;
+    // a visitor who has started the walk once in this tab gets it back by itself, after Back from a page opened in it
+    try { sessionStorage.setItem('walked', '1'); } catch { /* it waits for a tap again */ }
     window.clearTimeout(quieting); hint.style.opacity = '';
     hint.textContent = t('walk.loading');
     try {
