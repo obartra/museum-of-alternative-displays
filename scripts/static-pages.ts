@@ -32,6 +32,8 @@ import { AUTHOR, LICENCE, REPO } from '../src/site';
 import { personByName, persons } from '../src/data/persons';
 import { bios, personSources } from '../src/data/person-bios';
 import { portraits } from '../src/data/portraits';
+import { facts } from '../src/data/facts';
+import { STATUS_LABEL } from '../src/data/schema';
 
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -386,7 +388,87 @@ ${listed.map(({ url, pictures }) => `  <url><loc>${esc(url)}</loc>${changed ? `<
 ${news.map((n) => `<entry><title>${x(n.title)}</title><link href="${site}${n.link}"/><id>${site}${n.link}#${n.date}</id><updated>${n.date}T12:00:00Z</updated><summary>${x(n.says)}</summary></entry>`).join('\n')}
 </feed>
 `;
-  return { root, files: [...files, { fileName: 'feed.xml', source: feed }, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
+  return { root, files: [...files, { fileName: 'feed.xml', source: feed }, ...forAgents(site), { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
+}
+
+/**
+ * Two plain-text files for AI agents, after the llms.txt proposal (llmstxt.org): `llms.txt` is a map of the museum
+ * with a line on each place, and `llms-full.txt` holds every label in English in full. Both are written from the
+ * same data as the pages, so they never fall behind. Neither states how many pieces the museum holds.
+ */
+function forAgents(site: string): { fileName: string; source: string }[] {
+  const flat = (t: string): string => t.replace(/\s+/g, ' ').trim();
+  const shown = tours.filter((tour) => !tour.draft);
+  const map = [
+    '# Museum of Alternative Displays',
+    '',
+    `> ${en['site.description']} Every piece is a working 3D model that shows the time of day, with a sourced label: how it makes a picture, its history, what it is good at and where it fails, and the people behind it.`,
+    '',
+    'The museum is free and runs in a browser. Every address below also serves the label as plain HTML. The full text of every label, in English, is in [llms-full.txt](' + site + 'llms-full.txt). The museum is also in Catalan, Spanish, Portuguese, German, French, Italian, Dutch, Polish, Russian, Esperanto, Japanese, Korean and Chinese.',
+    '',
+    ...halls.flatMap((h) => [
+      `## Hall ${h.id}: ${h.name}`,
+      '',
+      flat(h.intro),
+      '',
+      ...inHall(h.id).map((p) => `- [${p.name}](${site}piece/${p.id}/): ${flat(p.lead)}`),
+      '',
+    ]),
+    '## Tours and people',
+    '',
+    ...shown.map((tour) => `- [${tour.title}](${site}tour/${tour.id}/): ${flat(tour.lead)}`),
+    `- [People](${site}people/): everyone the labels name, each with what they did and where it is on record.`,
+    `- [Index](${site}index/): every piece in one list.`,
+    '',
+    '## Optional',
+    '',
+    `- [About](${site}about/): how the museum was made, how the labels are sourced, and the licence.`,
+    `- [Source code](${REPO}): the models and the data behind every label.`,
+    '',
+  ].join('\n');
+  const full = [
+    '# Museum of Alternative Displays: every label',
+    '',
+    `> ${en['site.description']} This file holds every label in English, hall by hall. Each piece has its own page at the address given under its name.`,
+    '',
+    ...halls.flatMap((h) => [
+      `## Hall ${h.id}: ${h.name}`,
+      '',
+      flat(h.intro),
+      '',
+      ...inHall(h.id).flatMap((p) => {
+        const credit = people[p.id];
+        const fact = facts[p.id];
+        return [
+          `### ${p.name}`,
+          '',
+          `${site}piece/${p.id}/`,
+          '',
+          ...(p.aka ? [`Also called: ${p.aka}`] : []),
+          `Year: ${p.yearText ?? p.year}`,
+          `Origin: ${flat(p.origin)}`,
+          `Status: ${STATUS_LABEL[p.status]}. ${flat(p.statusNote)}`,
+          `Light: ${PRINCIPLE_LABEL[p.principle]}`,
+          '',
+          flat(p.lead),
+          '',
+          ...p.how.flatMap((t) => [flat(t), '']),
+          'Good at:',
+          ...p.good.map((t) => `- ${flat(t)}`),
+          '',
+          'Fails at:',
+          ...p.bad.map((t) => `- ${flat(t)}`),
+          '',
+          ...(credit?.people.length ? ['People:', ...credit.people.map((e) => `- ${e.who.join(', ')}: ${flat(e.did)}`), ...(credit.note ? ['', flat(credit.note)] : []), ''] : []),
+          ...(fact ? [`Worth knowing: ${flat(fact.text)} (${fact.source.label}, ${fact.source.url})`, ''] : []),
+          'Sources:',
+          ...[...new Map([...p.sources, ...(credit?.sources ?? [])].map((x) => [x.url, x])).values()].map((x) => `- ${x.label}: ${x.url}`),
+          '',
+        ];
+      }),
+    ]),
+  ].join('\n');
+  return [{ fileName: 'llms.txt', source: map }, { fileName: 'llms-full.txt', source: full }];
 }
 
 /** In the data for a search engine, an address written from the folder of the museum is written out in full. */
