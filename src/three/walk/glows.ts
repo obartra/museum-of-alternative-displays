@@ -38,6 +38,7 @@ export const glows: Record<string, number> = {
   'integral-imaging': 0xffd9a0,
   'holography': 0x7a140c,
   'head-mounted': 0x9fc0ff,
+  'cave': 0xb0a8ff,
   'retinal-display': 0xff5040,
   'head-up': 0x40ff70,
 };

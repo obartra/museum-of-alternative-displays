@@ -223,6 +223,26 @@ over no claim the English had dropped. The curator read their reports and ruled 
   not shown: a translator's reading of Tadashi Nakamura's given name was taken out. Korean writes Japanese names
   in Hangul by sound. Everyone else stays in Latin script.
 
+## 22 November 2026, late: the CAVE and four more people
+
+A new piece in hall 7, straight after the head-mounted display, and four people with accounts: Carolina
+Cruz-Neira, Daniel Sandin, Thomas DeFanti and Greg Dawe.
+
+- **Who made it.** The sources share the credit differently, and the label gives each with its witness. The
+  laboratory says Sandin and DeFanti conceived the CAVE in 1991. SIGGRAPH and university biographies say
+  Cruz-Neira invented or created it, and it was her doctoral research. The laboratory's retrospective of 2024 says
+  its staff member Greg Dawe designed and built the room. The first papers do not name Dawe. The label does.
+- **Two names for one acronym.** The paper of 1992 spells it Audio Visual Experience Automatic Virtual Environment.
+  The paper of 1993 says CAVE Automatic Virtual Environment. The label gives both with their years.
+- **Carolina Cruz-Neira's birthplace** is given from IEEE Spectrum, which says she was born in Spain and grew up
+  between Spain and Venezuela. Her injury and her family's business are left for her to tell.
+- **Greg Dawe.** The museum marks no sex for Dawe in any language.
+- **The green line** gains its fourteenth stop, and the CAVE is now its last. The opening words, two hand-overs
+  and the closing words changed with it, and those parts are recorded again.
+- **Still open:** what the wand of 1992 looked like (the three buttons and the stick are from course notes of
+  1997), who built the StarCAVE at San Diego (one source says DeFanti, another Dawe), and an independent source
+  for where such rooms are used today. The maker is the only witness so far.
+
 ## Ideas kept for later
 
 Two guided lines were proposed and set aside for now: **The move east**, on how the making of screens moved from

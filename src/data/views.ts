@@ -186,6 +186,10 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'retina', kind: 'detail', label: 'Look in at the retina', hint: 'There is no screen. The beam goes in through the pupil and paints the picture on the back wall of the eye, upside down.' },
   ],
   'head-mounted': [{ id: 'worn', kind: 'person', label: 'Put it on' }],
+  'cave': [
+    { id: 'inside', kind: 'person', label: 'Take the figure\'s place', hint: 'Now the picture is drawn for your eye. The walls and floor join into one scene, and the corners vanish.' },
+    { id: 'behind', kind: 'detail', label: 'Go behind the wall', hint: 'The projector throws its picture at a mirror, which folds it onto the back of the screen. Nobody inside casts a shadow.' },
+  ],
   'head-up': [{ id: 'seat', kind: 'person', label: 'Sit down' }],
 };
 

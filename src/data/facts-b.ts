@@ -125,6 +125,10 @@ export const factsB: Record<string, Fact> = {
     text: 'One scene shown in the 1968 headset was a room drawn in lines around the wearer: walls marked N, S, E and W, a ceiling marked C and a floor marked F. Sutherland reported that people quickly accepted being inside it.',
     source: { label: 'Sutherland, A head-mounted three dimensional display, AFIPS Fall Joint Computer Conference (1968)', url: 'https://www.cise.ufl.edu/research/lok/teaching/ve-s07/papers/sutherland-headmount.pdf', kind: 'paper' },
   },
+  'cave': {
+    text: 'Green phosphor in the projection tubes of the time glowed too long for shutter glasses, so each eye saw both pictures. Until special tubes came, the 1991 experiments were done in blue, red and shades of magenta.',
+    source: { label: 'Cruz-Neira, Sandin and DeFanti, Surround-Screen Projection-Based Virtual Reality: The Design and Implementation of the CAVE, Proceedings of SIGGRAPH 93', url: 'https://www.evl.uic.edu/documents/siggraph93-cave-cruz-neira.pdf', kind: 'paper' },
+  },
   'retinal-display': {
     text: 'All the light that enters an eye from an ordinary desktop screen amounts to less than a millionth of a watt. That is small beside what one light-emitting diode can supply.',
     source: { label: 'In the Eye of the Beholder, IEEE Spectrum (2004)', url: 'https://spectrum.ieee.org/in-the-eye-of-the-beholder', kind: 'press' },

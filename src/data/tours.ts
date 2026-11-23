@@ -35,10 +35,10 @@ export const tours: Tour[] = [
   {
     id: 'women',
     title: 'Women in the museum',
-    lead: 'A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors.',
+    lead: 'A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors.',
+        'Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors.',
         'The tour waits at each stop. Press the key for the next stop when you are ready. The first is the braille display in hall 1, where the picture is made of pins.',
       ] },
       { id: 'braille-display', title: 'Read by touch', stand: { wide: 2.1, aim: 0.2 }, who: ['Andrée Tretiakoff'], text: [
@@ -99,15 +99,21 @@ export const tours: Tour[] = [
       { id: 'static-volume', title: 'Drawing inside glass', who: ['Elizabeth Downing'], text: [
         'Start with the stack of clear sheets. The figure in it is a knot. One sheet at a time turns milky and catches its slice of the picture. Nothing moves.',
         'Now look beside the stack, at the block of glass. It glows only where two invisible beams cross, and the model draws them in red. A beam of electrons drew in hall 2, and a laser in hall 4. Here the point where two beams cross does the drawing, in three dimensions.',
-        'Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7.',
+        'Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7.',
       ] },
       { id: 'holography', title: 'The light itself', who: ['Margaret Benyon', 'Mary Lou Jepsen'], text: [
         'Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did.',
         'Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design.',
+        'This hologram needs no glasses. The last stop, in the same hall, puts screens all round the visitor. Go to the CAVE.',
+      ] },
+      { id: 'cave', title: 'A room drawn for one head', who: ['Carolina Cruz-Neira'], text: [
+        'Stand at the open side of the room. Three walls and the floor are screens. The figure inside wears shutter glasses, and the picture is drawn for its eyes. So from where you stand, the scene breaks at the corners. Press the Take the figure\'s place button, and it joins up.',
+        'The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992.',
+        'A headset, nearby in this hall, turns its screens with the head. Here the screens stay still, and the visitor walks among them. That was the last stop of the green line.',
       ] },
       { id: 'end', title: 'The end of the green line', text: [
-        'That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there.',
-        'Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
+        'That is the end of the green line. It began with pins that are read by touch. It ends with a room whose walls are screens.',
+        'Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
         'The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour.',
       ] },
     ],

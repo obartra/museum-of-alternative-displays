@@ -1647,6 +1647,59 @@ export const bios: Record<string, Bio> = {
       s("archive", "Ivan Sutherland, A.M. Turing Award, Association for Computing Machinery", "https://amturing.acm.org/award_recipient/sutherland_3467412"),
     ],
   },
+  "Carolina Cruz-Neira": {
+    about: [
+      "IEEE Spectrum says she was born in Spain and grew up between Spain and Venezuela. Carolina Cruz-Neira took a bachelor's degree in systems engineering at the Universidad Metropolitana in Caracas.",
+      "At the University of Illinois at Chicago she took a master's degree in 1991 and a doctorate in 1995, both in electrical engineering and computer science. At Iowa State University she was Litton Assistant Professor of electrical and computer engineering.",
+      "The University of Central Florida says she founded and led three research centres: the Virtual Reality Applications Center at Iowa State, the Louisiana Immersive Technologies Enterprise, and the Emerging Analytics Center at the University of Arkansas at Little Rock.",
+      "She was elected to the National Academy of Engineering in 2018, for her contributions to immersive visualization. She joined the University of Central Florida in 2020 and holds its Agere Chair in computer science. In 2026 she received the Virtual Reality Lifetime Achievement Award.",
+    ],
+    sources: [
+      s("press", "A Knee Injury Launched This VR Pioneer's Career, IEEE Spectrum", "https://spectrum.ieee.org/ballerina-turned-vr-pioneer"),
+      s("archive", "Carolina Cruz-Neira, ACM SIGGRAPH History Archives", "https://history.siggraph.org/?p=47669"),
+      s("lab", "Acclaimed computer scientist and virtual reality pioneer joins UCF faculty, University of Central Florida (2020)", "https://www.ucf.edu/news/acclaimed-computer-scientist-and-virtual-reality-pioneer-joins-ucf-faculty/"),
+      s("lab", "Cruz-Neira named new member of the National Academy of Engineering, UA Little Rock (2018)", "https://ualr.edu/news-archive/2018/02/08/cruz-neira-national-academy-engineering/"),
+      s("lab", "IEEE 2026 awardee Carolina Cruz-Neira, University of Central Florida (2026)", "https://www.ucf.edu/news/ieee-2026-awardee-carolina-cruz-neira-turning-a-plan-b-into-a-global-legacy"),
+      s("lab", "Carolina Cruz-Neira earns IEEE VR Lifetime Achievement Award, UCF Computer Science (2026)", "https://www.cs.ucf.edu/carolina-cruz-neira-earns-ieee-vr-lifetime-achievement-award"),
+    ],
+  },
+  "Daniel Sandin": {
+    born: 1942, about: [
+      "Daniel Sandin took a bachelor's degree in physics at Shimer College and a master's degree in physics at the University of Wisconsin. In 1969 he joined the School of Art and Design at the University of Illinois at Chicago.",
+      "In 1973 he built the Sandin Image Processor, an analog computer that altered video pictures in real time. The Museum of Modern Art in New York put his video animation Spiral PTL in its inaugural collection of video art.",
+      "With Thomas DeFanti he set up the Electronic Visualization Laboratory at the university in 1973. By 1992 the two were its co-directors.",
+      "In later years he worked on displays that show depth without glasses. He is professor emeritus at the university and director emeritus of the laboratory.",
+    ],
+    sources: [
+      s("archive", "Dan Sandin, biography, Electronic Arts Intermix", "https://eai.org/artists/dan-sandin/biography"),
+      s("lab", "Daniel J. Sandin, biography, Electronic Visualization Laboratory", "https://www.evl.uic.edu/dan/bio.html"),
+      s("lab", "Tom DeFanti, Electronic Visualization Laboratory", "https://legacy.evl.uic.edu/tom/"),
+      s("paper", "Cruz-Neira and others, Communications of the ACM (1992), About the Authors", "https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf"),
+    ],
+  },
+  "Thomas DeFanti": {
+    born: 1948, about: [
+      "Thomas DeFanti took a bachelor's degree in mathematics at Queens College in 1969. At The Ohio State University he took a master's degree in 1970 and a doctorate in 1973, both in computer and information science.",
+      "He moved to the University of Illinois at Chicago in 1973 and set up the Electronic Visualization Laboratory with Daniel Sandin. In 1992 he was codirector of the laboratory and a professor of electrical engineering and computer science.",
+      "The laboratory's retrospective says he was responsible for Showcase, the event at SIGGRAPH 1992 in Chicago where the CAVE was shown. The conference record names James E. George, of Mesa Graphics, as the chair of its exhibits and Showcase.",
+      "The Association for Computing Machinery gave him its Outstanding Contribution Award in 1988 and elected him a fellow in 1994. He is a research scientist at the California Institute for Telecommunications and Information Technology, at the University of California, San Diego.",
+    ],
+    sources: [
+      s("lab", "Tom DeFanti, Electronic Visualization Laboratory", "https://legacy.evl.uic.edu/tom/"),
+      s("lab", "EVL Co-Founder Tom DeFanti Named an HPCwire 35 HPC Legend, Electronic Visualization Laboratory (2026)", "https://www-new.evl.uic.edu/news/2026/2026-09-08-3025/"),
+      s("paper", "Johnson and others, Electronic Visualization Laboratory's 50th Anniversary Retrospective, PRESENCE (2024)", "https://www.evl.uic.edu/documents/evl_50th.pdf"),
+      s("archive", "SIGGRAPH 1992, ACM SIGGRAPH History Archives", "https://history.siggraph.org/conference/siggraph-1992-19th-annual-conference-on-computer-graphics-and-interactive-techniques"),
+      s("paper", "Cruz-Neira and others, Communications of the ACM (1992), About the Authors", "https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf"),
+    ],
+  },
+  "Greg Dawe": {
+    about: [
+      "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind.",
+    ],
+    sources: [
+      s("paper", "Johnson and others, Electronic Visualization Laboratory's 50th Anniversary Retrospective, PRESENCE (2024)", "https://www.evl.uic.edu/documents/evl_50th.pdf"),
+    ],
+  },
   "Samuel Achilefu": {
     about: [
       "After college in Nigeria, a French government scholarship took him to the University of Nancy, where he took a doctorate in molecular and materials chemistry. He trained at Oxford, then joined the discovery research department of Mallinckrodt Medical in St. Louis in 1993.",

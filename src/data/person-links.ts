@@ -407,6 +407,26 @@ export const personLinks: Record<string, PersonLink> = {
     "label": "Bob Sproull, Wikipedia",
     "kind": "biography"
   },
+  "Carolina Cruz-Neira": {
+    "url": "https://history.siggraph.org/?p=47669",
+    "label": "Carolina Cruz-Neira, ACM SIGGRAPH History Archives",
+    "kind": "profile"
+  },
+  "Daniel Sandin": {
+    "url": "https://www.evl.uic.edu/dan/bio.html",
+    "label": "Daniel J. Sandin, Electronic Visualization Laboratory",
+    "kind": "biography"
+  },
+  "Thomas DeFanti": {
+    "url": "https://legacy.evl.uic.edu/tom/",
+    "label": "Tom DeFanti, Electronic Visualization Laboratory",
+    "kind": "biography"
+  },
+  "Greg Dawe": {
+    "url": "https://www.evl.uic.edu/documents/evl_50th.pdf",
+    "label": "Electronic Visualization Laboratory's 50th Anniversary Retrospective, PRESENCE (2024)",
+    "kind": "record"
+  },
   "Samuel Achilefu": {
     "url": "https://en.wikipedia.org/wiki/Samuel_Achilefu",
     "label": "Samuel Achilefu, Wikipedia",

@@ -8522,6 +8522,180 @@ msgctxt "piece.head-mounted.media.patent-1.alt"
 msgid "Line drawings: a side view of a head with a lens against the eye and a cone-shaped tube behind it, and a box-shaped mask with two round eyepieces."
 msgstr "Штриховые рисунки: голова сбоку с линзой у глаза и конической трубкой за ней, и маска в форме коробки с двумя круглыми окулярами."
 
+#: hall-7/cave
+#. Name of a piece.
+msgctxt "piece.cave.name"
+msgid "CAVE"
+msgstr "CAVE"
+
+#: hall-7/cave
+#. Other names the piece goes by.
+msgctxt "piece.cave.aka"
+msgid "CAVE Automatic Virtual Environment, projection room"
+msgstr "CAVE Automatic Virtual Environment, проекционная комната"
+
+#: hall-7/cave
+#. The date of the piece, as its label gives it.
+msgctxt "piece.cave.yearText"
+msgid "conceived 1991, shown 1992"
+msgstr "задуман в 1991 году, показан в 1992 году"
+
+#: hall-7/cave
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.cave.origin"
+msgid "Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, Electronic Visualization Laboratory, University of Illinois at Chicago, USA"
+msgstr "Каролина Крус-Нейра, Дэниел Сандин и Томас Дефанти, Electronic Visualization Laboratory, Иллинойсский университет в Чикаго, США"
+
+#: hall-7/cave
+#. Where this kind of display stands today.
+msgctxt "piece.cave.statusNote"
+msgid "Mechdyne, which licensed the design in 1994, lists uses today from training and design to museums and entertainment. Newer rooms use flat panels or LED tiles in place of projectors."
+msgstr "Компания Mechdyne, получившая лицензию на эту конструкцию в 1994 году, сегодня перечисляет области применения от обучения и проектирования до музеев и развлечений. В новых комнатах вместо проекторов стоят плоские панели или светодиодные модули."
+
+#: hall-7/cave
+#. First sentence of the label.
+msgctxt "piece.cave.lead"
+msgid "A small room whose walls and floor are screens: the picture is drawn for the place where one visitor's head is, and glasses give each eye its own view."
+msgstr "Небольшая комната, стены и пол которой служат экранами: изображение строится для того места, где находится голова одного человека, а очки дают каждому глазу свой вид."
+
+#: hall-7/cave
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.cave.how.1"
+msgid "Three walls and the floor are screens. In the room shown at SIGGRAPH in Chicago in July 1992, each was about 3 metres square. Projectors behind the walls light the back of each screen, so people inside cast no shadow on them. Mirrors fold the beams to save space."
+msgstr "Экранами служат три стены и пол. В комнате, показанной на SIGGRAPH в Чикаго в июле 1992 года, каждый из них был квадратом со стороной около 3 метров. Проекторы за стенами освещают каждый экран сзади, поэтому люди внутри не отбрасывают на него тени. Зеркала поворачивают лучи, чтобы сэкономить место."
+
+#: hall-7/cave
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.cave.how.2"
+msgid "The floor is lit from above, from the front, so a visitor's shadow falls mostly behind them. Each screen shows the picture for the left eye and then for the right, 120 pictures a second. Glasses with liquid crystal shutters close one eye and then the other in step, kept in time by an infrared signal."
+msgstr "Пол освещается сверху, спереди, поэтому тень человека внутри падает в основном позади него. Каждый экран показывает изображение для левого глаза, затем для правого, 120 изображений в секунду. Очки с жидкокристаллическими затворами в такт закрывают то один глаз, то другой, а синхронизирует их инфракрасный сигнал."
+
+#: hall-7/cave
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.cave.how.3"
+msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand in the hand, a control with buttons and a small joystick, is tracked in the same way. Up to ten people fit inside, but the picture is right only for the one who is tracked."
+msgstr "Датчик на очках сообщает, где находится голова, и компьютеры заново строят все четыре изображения для этой точки. Когда человек движется, сцена как будто остается на месте. Жезл в руке, пульт с кнопками и маленьким джойстиком, отслеживается так же. Внутри помещается до десяти человек, но изображение правильно только для того, кого отслеживают."
+
+#: hall-7/cave
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.cave.how.4"
+msgid "The paper of 1992 spells the name out as Audio Visual Experience Automatic Virtual Environment, reminiscent of Plato's allegory of the cave. The paper of 1993 makes it CAVE Automatic Virtual Environment and points to the cave in Plato's Republic, where reality is inferred from shadows on a wall. The laboratory's retrospective of 2024 calls it the first widely replicated walk-in virtual reality system based on projection."
+msgstr "Статья 1992 года расшифровывает название как Audio Visual Experience Automatic Virtual Environment, что напоминает платоновскую аллегорию пещеры (англ. cave). Статья 1993 года превращает его в CAVE Automatic Virtual Environment и ссылается на пещеру из «Государства» Платона, где о реальности судят по теням на стене. Ретроспектива лаборатории 2024 года называет CAVE первой широко воспроизведенной проекционной системой виртуальной реальности, в которую можно войти."
+
+#: hall-7/cave
+#. What it is good at, point 1 of 4. No full stop at the end.
+msgctxt "piece.cave.good.1"
+msgid "Lets several people stand inside together, each in light glasses"
+msgstr "Позволяет нескольким людям стоять внутри вместе, каждому в легких очках"
+
+#: hall-7/cave
+#. What it is good at, point 2 of 4. No full stop at the end.
+msgctxt "piece.cave.good.2"
+msgid "Keeps the visitor's own body and hands in view"
+msgstr "Оставляет в поле зрения собственное тело и руки человека внутри"
+
+#: hall-7/cave
+#. What it is good at, point 3 of 4. No full stop at the end.
+msgctxt "piece.cave.good.3"
+msgid "Keeps the screens still when the head turns, so a slow tracker matters less than in a headset"
+msgstr "Не сдвигает экраны при повороте головы, поэтому медленный трекер сказывается меньше, чем в гарнитуре"
+
+#: hall-7/cave
+#. What it is good at, point 4 of 4. No full stop at the end.
+msgctxt "piece.cave.good.4"
+msgid "Puts the edges of the screens mostly out of sight"
+msgstr "Убирает края экранов в основном из поля зрения"
+
+#: hall-7/cave
+#. Where it fails, point 1 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.1"
+msgid "Draws the correct view for one tracked person only, so the others see a shifted scene"
+msgstr "Строит правильный вид только для одного отслеживаемого человека, поэтому остальные видят смещенную сцену"
+
+#: hall-7/cave
+#. Where it fails, point 2 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.2"
+msgid "Needs a dark room much larger than the screens, and in 1993 four high-end workstations"
+msgstr "Требует темного помещения намного больше самих экранов, а в 1993 году еще и четырех высококлассных рабочих станций"
+
+#: hall-7/cave
+#. Where it fails, point 3 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.3"
+msgid "Lets a hand hide a virtual object that should appear in front of it"
+msgstr "Позволяет руке заслонить виртуальный объект, который должен быть перед ней"
+
+#: hall-7/cave
+#. Where it fails, point 4 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.4"
+msgid "Has an open side and no ceiling in its first form, so the scene stops there"
+msgstr "В первом варианте имеет открытую сторону и не имеет потолка, поэтому там сцена обрывается"
+
+#: hall-7/cave
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.cave.look"
+msgid "The room is open on your side, as the first one was. A lay figure in shutter glasses walks about inside, and the picture is drawn for its eyes. From here the lines of the scene break at the corners. Press Take the figure's place: the picture is then drawn for your eye, the corners vanish and the scene stands in the room. Go behind the wall to see the projector and the mirror that folds its beam onto the back of the screen. The model shows the projector of one wall only."
+msgstr "Комната открыта с вашей стороны, как и первая. Внутри ходит манекен в затворных очках, и изображение строится для его глаз. Отсюда линии сцены ломаются в углах. Нажмите кнопку «Займите место манекена»: тогда изображение строится для вашего глаза, углы исчезают, и сцена стоит в комнате. Зайдите за стену, чтобы увидеть проектор и зеркало, которое направляет его луч на заднюю сторону экрана. Модель показывает проектор только одной стены."
+
+#: hall-7/cave
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.cave.fact"
+msgid "Green phosphor in the projection tubes of the time glowed too long for shutter glasses, so each eye saw both pictures. Until special tubes came, the 1991 experiments were done in blue, red and shades of magenta."
+msgstr "Зеленый люминофор в проекционных трубках того времени светился слишком долго для затворных очков, и каждый глаз видел оба изображения. Пока не появились особые трубки, опыты 1991 года проводили в синем, красном и оттенках пурпурного."
+
+#: hall-7/cave
+#. People section: what Carolina Cruz-Neira, Daniel Sandin, Thomas DeFanti did. The names stand above this line.
+msgctxt "piece.cave.people.1"
+msgid "Wrote both papers that set out the CAVE, in 1992 and 1993, with Cruz-Neira as first author. Their laboratory showed it at SIGGRAPH in Chicago in July 1992."
+msgstr "Написали обе статьи с описанием CAVE, 1992 и 1993 годов, первым автором в них указана Крус-Нейра. Их лаборатория показала CAVE на SIGGRAPH в Чикаго в июле 1992 года."
+
+#: hall-7/cave
+#. People section: what Carolina Cruz-Neira did. The names stand above this line.
+msgctxt "piece.cave.people.2"
+msgid "Made its design and implementation her doctoral research, by a SIGGRAPH biography of 1997. A SIGGRAPH biography of 2022 says she invented it, and UCF says she created it."
+msgstr "По данным биографии SIGGRAPH 1997 года, сделала проектирование и реализацию CAVE темой своего докторского исследования. Биография SIGGRAPH 2022 года говорит, что она его изобрела, а UCF, что она его создала."
+
+#: hall-7/cave
+#. People section: what Daniel Sandin, Thomas DeFanti did. The names stand above this line.
+msgctxt "piece.cave.people.3"
+msgid "Conceived the CAVE in 1991, by the account of the Electronic Visualization Laboratory, which the two set up in 1973."
+msgstr "Задумали CAVE в 1991 году, по версии Electronic Visualization Laboratory, которую они вдвоем основали в 1973 году."
+
+#: hall-7/cave
+#. People section: what Greg Dawe did. The names stand above this line.
+msgctxt "piece.cave.people.4"
+msgid "Staff member of the laboratory. The laboratory's retrospective of 2024 says Dawe designed and built its CAVE, and a portable one for SIGGRAPH 92."
+msgstr "В штате лаборатории. Ретроспектива лаборатории 2024 года сообщает, что ее CAVE, а также переносной CAVE для SIGGRAPH 92 спроектированы и построены Доу."
+
+#: hall-7/cave
+#. Note under the People section.
+msgctxt "piece.cave.note"
+msgid "The sources share the credit differently. The laboratory credits Sandin and DeFanti with conceiving the CAVE, with graduate students. SIGGRAPH and university biographies credit Cruz-Neira with inventing or creating it. The laboratory's retrospective says its staff member Greg Dawe designed and built the room. The paper of 1992 has two more authors, Robert Kenyon and John Hart."
+msgstr "Источники распределяют заслугу по-разному. Лаборатория приписывает замысел CAVE Сандину и Дефанти вместе с аспирантами. Биографии SIGGRAPH и университетов приписывают Каролине Крус-Нейре изобретение или создание CAVE. Ретроспектива лаборатории сообщает, что комната спроектирована и построена Грегом Доу из штата лаборатории. У статьи 1992 года есть еще два автора, Роберт Кеньон и Джон Харт."
+
+#: hall-7/cave
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cave.view.inside.label"
+msgid "Take the figure's place"
+msgstr "Займите место манекена"
+
+#: hall-7/cave
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cave.view.inside.hint"
+msgid "Now the picture is drawn for your eye. The walls and floor join into one scene, and the corners vanish."
+msgstr "Теперь изображение строится для вашего глаза. Стены и пол соединяются в одну сцену, и углы исчезают."
+
+#: hall-7/cave
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cave.view.behind.label"
+msgid "Go behind the wall"
+msgstr "Зайдите за стену"
+
+#: hall-7/cave
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cave.view.behind.hint"
+msgid "The projector throws its picture at a mirror, which folds it onto the back of the screen. Nobody inside casts a shadow."
+msgstr "Проектор бросает изображение на зеркало, которое направляет его на заднюю сторону экрана. Никто внутри не отбрасывает тени."
+
 #: hall-7/retinal-display
 #. Name of a piece.
 msgctxt "piece.retinal-display.name"
@@ -8825,8 +8999,8 @@ msgstr "Женщины в музее"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr "Экскурсия по всем семи залам. Тринадцать дисплеев, от брайлевских штифтов до голограммы, и у каждого среди изобретателей или участников есть хотя бы одна женщина."
+msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors."
+msgstr "Экскурсия по всем семи залам. Четырнадцать дисплеев, от брайлевских штифтов до комнаты из экранов, и у каждого среди изобретателей или участников есть хотя бы одна женщина."
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -8837,8 +9011,8 @@ msgstr "Перед первой остановкой"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
-msgstr "Добро пожаловать в музей. Эта экскурсия идет по зеленой линии на полу. Линия проходит через все семь залов и останавливается у тринадцати дисплеев. У каждого среди изобретателей или участников есть хотя бы одна женщина."
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors."
+msgstr "Добро пожаловать в музей. Эта экскурсия идет по зеленой линии на полу. Линия проходит через все семь залов и останавливается у четырнадцати дисплеев. У каждого среди изобретателей или участников есть хотя бы одна женщина."
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9131,8 +9305,8 @@ msgstr "Теперь посмотрите рядом со стопкой, на �
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
-msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr "Элизабет Даунинг и трое коллег так рисовали цветные светящиеся точки внутри стекла. Их работа вышла в Стэнфордском университете в 1996 году, первым автором указана Даунинг. Прототип был кубом со стороной около 15 миллиметров, а модель показывает его во много раз больше. Последняя остановка у голографии, в зале 7."
+msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
+msgstr "Элизабет Даунинг и трое коллег так рисовали цветные светящиеся точки внутри стекла. Их работа вышла в Стэнфордском университете в 1996 году, первым автором указана Даунинг. Прототип был кубом со стороной около 15 миллиметров, а модель показывает его во много раз больше. Следующая остановка у голографии, в зале 7."
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
@@ -9141,16 +9315,46 @@ msgid "The light itself"
 msgstr "Сам свет"
 
 #: tour-women
-#. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
 msgstr "Посмотрите сквозь стеклянную пластину. За ней будто стоит игрушечный паровоз. Отойдите в сторону, и вы увидите паровоз сбоку. Его нет за стеклом. Голограмма записывает сам свет. В зале 4 лазер рисовал изображение. Здесь лазер только освещает пластину, а пластина испускает те же световые волны, что испускал паровоз."
 
 #: tour-women
-#. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
 msgstr "Деннис Габор изобрел голографию в 1948 году. Двадцать лет спустя Маргарет Беньон, художница, начала создавать голограммы как искусство. Такая голограмма, как эта, неподвижна. Первый голографический видеодисплей построили в MIT Media Lab в 1989 году, и его устройство изложено в диссертации, которую Мэри Лу Джепсен написала там в том же году."
+
+#: tour-women
+#. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.holography.text.3"
+msgid "This hologram needs no glasses. The last stop, in the same hall, puts screens all round the visitor. Go to the CAVE."
+msgstr "Этой голограмме не нужны очки. Последняя остановка, в этом же зале, окружает вас экранами со всех сторон. Пройдите к CAVE."
+
+#: tour-women
+#. Guided tour, at the piece CAVE: the title of this part.
+msgctxt "tour.women.cave.title"
+msgid "A room drawn for one head"
+msgstr "Комната, которую рисуют для одной головы"
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.1"
+msgid "Stand at the open side of the room. Three walls and the floor are screens. The figure inside wears shutter glasses, and the picture is drawn for its eyes. So from where you stand, the scene breaks at the corners. Press the Take the figure's place button, and it joins up."
+msgstr "Встаньте у открытой стороны комнаты. Три стены и пол служат экранами. На манекене внутри затворные очки, и изображение строится для его глаз. Поэтому с того места, где вы стоите, сцена ломается в углах. Нажмите кнопку «Займите место манекена», и сцена соединится."
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.2"
+msgid "The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
+msgstr "Этикетка называет четырех человек из Electronic Visualization Laboratory Иллинойсского университета в Чикаго. Каролина Крус-Нейра указана первым автором обеих статей, где описана эта комната, а проектирование и реализация комнаты были темой ее докторского исследования. Ее лаборатория показала комнату на SIGGRAPH в Чикаго в 1992 году."
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.3"
+msgid "A headset, nearby in this hall, turns its screens with the head. Here the screens stay still, and the visitor walks among them. That was the last stop of the green line."
+msgstr "Гарнитура рядом, в этом же зале, поворачивает свои экраны вместе с головой. Здесь экраны неподвижны, а человек ходит среди них. Это была последняя остановка зеленой линии."
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
@@ -9161,14 +9365,14 @@ msgstr "Конец зеленой линии"
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
-msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr "Здесь зеленая линия заканчивается. Она началась со штифтов, которые читают на ощупь. Она заканчивается игрушечным паровозом, которого нет."
+msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a room whose walls are screens."
+msgstr "Здесь зеленая линия заканчивается. Она началась со штифтов, которые читают на ощупь. Она заканчивается комнатой, стены которой служат экранами."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "На этих тринадцати остановках названы пятнадцать женщин, и теперь вы постояли у работы каждой из них. Всего этикетки в этих залах называют больше ста человек."
+msgid "Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "На этих четырнадцати остановках названы шестнадцать женщин, и теперь вы постояли у работы каждой из них. Всего этикетки в этих залах называют больше ста человек."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -12223,6 +12427,84 @@ msgstr "К 1992 году он был вице-президентом и засл
 msgctxt "person.bob-sproull.about.4"
 msgid "With William Newman he wrote the textbook Principles of Interactive Computer Graphics. He built clipping hardware, a graphics package independent of any one device and laser printing software, and worked on asynchronous circuits. He was elected to the National Academy of Engineering."
 msgstr "Он и Уильям Ньюман написали учебник Principles of Interactive Computer Graphics. Он создал аппаратуру отсечения, графический пакет, не зависящий от конкретного устройства, и программы для лазерной печати, а также работал над асинхронными схемами. Он был избран в Национальную инженерную академию."
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.1"
+msgid "IEEE Spectrum says she was born in Spain and grew up between Spain and Venezuela. Carolina Cruz-Neira took a bachelor's degree in systems engineering at the Universidad Metropolitana in Caracas."
+msgstr "IEEE Spectrum сообщает, что она родилась в Испании и росла между Испанией и Венесуэлой. Каролина Крус-Нейра получила степень бакалавра по системотехнике в Universidad Metropolitana в Каракасе."
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.2"
+msgid "At the University of Illinois at Chicago she took a master's degree in 1991 and a doctorate in 1995, both in electrical engineering and computer science. At Iowa State University she was Litton Assistant Professor of electrical and computer engineering."
+msgstr "В Иллинойсском университете в Чикаго она получила степень магистра в 1991 году и докторскую степень в 1995 году, обе по электротехнике и информатике. В Университете штата Айова она была доцентом на именной должности Litton по электротехнике и вычислительной технике."
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.3"
+msgid "The University of Central Florida says she founded and led three research centres: the Virtual Reality Applications Center at Iowa State, the Louisiana Immersive Technologies Enterprise, and the Emerging Analytics Center at the University of Arkansas at Little Rock."
+msgstr "Университет Центральной Флориды сообщает, что она основала три исследовательских центра и руководила ими: Virtual Reality Applications Center в Университете штата Айова, Louisiana Immersive Technologies Enterprise и Emerging Analytics Center в Университете Арканзаса в Литл-Роке."
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.4"
+msgid "She was elected to the National Academy of Engineering in 2018, for her contributions to immersive visualization. She joined the University of Central Florida in 2020 and holds its Agere Chair in computer science. In 2026 she received the Virtual Reality Lifetime Achievement Award."
+msgstr "В 2018 году ее избрали в Национальную инженерную академию за вклад в иммерсивную визуализацию. В 2020 году она перешла в Университет Центральной Флориды и занимает там именную кафедру Agere по информатике. В 2026 году она получила Virtual Reality Lifetime Achievement Award."
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.1"
+msgid "Daniel Sandin took a bachelor's degree in physics at Shimer College and a master's degree in physics at the University of Wisconsin. In 1969 he joined the School of Art and Design at the University of Illinois at Chicago."
+msgstr "Дэниел Сандин получил степень бакалавра по физике в Shimer College и степень магистра по физике в Висконсинском университете. В 1969 году он пришел в Школу искусства и дизайна Иллинойсского университета в Чикаго."
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.2"
+msgid "In 1973 he built the Sandin Image Processor, an analog computer that altered video pictures in real time. The Museum of Modern Art in New York put his video animation Spiral PTL in its inaugural collection of video art."
+msgstr "В 1973 году он построил Sandin Image Processor, аналоговый компьютер, который изменял видеоизображение в реальном времени. Музей современного искусства в Нью-Йорке включил его видеоанимацию Spiral PTL в свою первую коллекцию видеоарта."
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.3"
+msgid "With Thomas DeFanti he set up the Electronic Visualization Laboratory at the university in 1973. By 1992 the two were its co-directors."
+msgstr "Вместе с Томасом Дефанти он основал в этом университете Electronic Visualization Laboratory в 1973 году. К 1992 году оба были ее содиректорами."
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.4"
+msgid "In later years he worked on displays that show depth without glasses. He is professor emeritus at the university and director emeritus of the laboratory."
+msgstr "В последующие годы он работал над дисплеями, которые показывают объем без очков. Он почетный профессор университета и почетный директор лаборатории."
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.1"
+msgid "Thomas DeFanti took a bachelor's degree in mathematics at Queens College in 1969. At The Ohio State University he took a master's degree in 1970 and a doctorate in 1973, both in computer and information science."
+msgstr "Томас Дефанти получил степень бакалавра по математике в Queens College в 1969 году. В Университете штата Огайо он получил степень магистра в 1970 году и докторскую степень в 1973 году, обе по компьютерным и информационным наукам."
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.2"
+msgid "He moved to the University of Illinois at Chicago in 1973 and set up the Electronic Visualization Laboratory with Daniel Sandin. In 1992 he was codirector of the laboratory and a professor of electrical engineering and computer science."
+msgstr "В 1973 году он перешел в Иллинойсский университет в Чикаго и вместе с Дэниелом Сандином основал Electronic Visualization Laboratory. В 1992 году он был содиректором лаборатории и профессором электротехники и информатики."
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.3"
+msgid "The laboratory's retrospective says he was responsible for Showcase, the event at SIGGRAPH 1992 in Chicago where the CAVE was shown. The conference record names James E. George, of Mesa Graphics, as the chair of its exhibits and Showcase."
+msgstr "Ретроспектива лаборатории сообщает, что он отвечал за Showcase, мероприятие на SIGGRAPH 1992 в Чикаго, где показали CAVE. В материалах конференции председателем выставок и Showcase значится Джеймс Э. Джордж из Mesa Graphics."
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.4"
+msgid "The Association for Computing Machinery gave him its Outstanding Contribution Award in 1988 and elected him a fellow in 1994. He is a research scientist at the California Institute for Telecommunications and Information Technology, at the University of California, San Diego."
+msgstr "Ассоциация вычислительной техники присудила ему свою премию Outstanding Contribution Award в 1988 году и избрала его своим действительным членом в 1994 году. Он научный сотрудник California Institute for Telecommunications and Information Technology при Калифорнийском университете в Сан-Диего."
+
+#: people
+#. About Greg Dawe, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-dawe.about.1"
+msgid "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind."
+msgstr "Ретроспектива лаборатории 2024 года приписывает Грегу Доу более поздние дисплеи лаборатории, созданные на основе CAVE, в том числе ImmersaDesk и Varrier. В 2000-е годы путь Доу привел к Томасу Дефанти в Калифорнийский университет в Сан-Диего, и там из рук Доу вышли дисплеи того же рода размером с комнату."
 
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

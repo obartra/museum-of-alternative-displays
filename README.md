@@ -1,6 +1,6 @@
 # Museum of Alternative Displays
 
-A museum of fifty-five display technologies, from split-flap boards to holograms, in seven
+A museum of fifty-six display technologies, from split-flap boards to holograms, in seven
 halls. Each one is a 3D model you can turn and zoom, with its lit surface running live, a
 plain account of how it works, what it is good at, where it fails, and the sources. Nothing
 is for sale.

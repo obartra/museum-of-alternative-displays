@@ -370,6 +370,23 @@ export const people: Record<string, Credit> = {
       src('press', 'Washington People: Samuel Achilefu, Washington University in St. Louis (2016)', 'https://source.washu.edu/2016/02/washington-people-samuel-achilefu/'),
     ],
   },
+  'cave': {
+    people: [
+      { who: ['Carolina Cruz-Neira', 'Daniel Sandin', 'Thomas DeFanti'], she: ['Carolina Cruz-Neira'], did: 'Wrote both papers that set out the CAVE, in 1992 and 1993, with Cruz-Neira as first author. Their laboratory showed it at SIGGRAPH in Chicago in July 1992.' },
+      { who: ['Carolina Cruz-Neira'], she: ['Carolina Cruz-Neira'], did: 'Made its design and implementation her doctoral research, by a SIGGRAPH biography of 1997. A SIGGRAPH biography of 2022 says she invented it, and UCF says she created it.' },
+      { who: ['Daniel Sandin', 'Thomas DeFanti'], did: 'Conceived the CAVE in 1991, by the account of the Electronic Visualization Laboratory, which the two set up in 1973.' },
+      { who: ['Greg Dawe'], did: 'Staff member of the laboratory. The laboratory\'s retrospective of 2024 says Dawe designed and built its CAVE, and a portable one for SIGGRAPH 92.' },
+    ],
+    note: 'The sources share the credit differently. The laboratory credits Sandin and DeFanti with conceiving the CAVE, with graduate students. SIGGRAPH and university biographies credit Cruz-Neira with inventing or creating it. The laboratory\'s retrospective says its staff member Greg Dawe designed and built the room. The paper of 1992 has two more authors, Robert Kenyon and John Hart.',
+    sources: [
+      src('archive', 'Carolina Cruz-Neira, ACM SIGGRAPH History Archives', 'https://history.siggraph.org/?p=47669'),
+      src('lab', 'Acclaimed computer scientist and virtual reality pioneer joins UCF faculty, University of Central Florida (2020)', 'https://www.ucf.edu/news/acclaimed-computer-scientist-and-virtual-reality-pioneer-joins-ucf-faculty/'),
+      src('lab', 'Daniel J. Sandin, biography, Electronic Visualization Laboratory', 'https://www.evl.uic.edu/dan/bio.html'),
+      src('lab', 'Tom DeFanti, Electronic Visualization Laboratory', 'https://legacy.evl.uic.edu/tom/'),
+      src('archive', 'Dan Sandin, biography, Electronic Arts Intermix', 'https://eai.org/artists/dan-sandin/biography'),
+      src('paper', 'Johnson and others, Electronic Visualization Laboratory\'s 50th Anniversary Retrospective, PRESENCE (2024)', 'https://www.evl.uic.edu/documents/evl_50th.pdf'),
+    ],
+  },
   'retinal-display': { people: [{ who: ['Kazuo Yoshinaka'], did: 'Named as inventor on a Japanese patent application for a display that scans light onto the retina, filed by NEC in 1985 and published in 1986.' }] },
   'head-up': { people: [{ who: ['J. M. Naish'], did: 'Worked out at Farnborough from 1956 the system that, by his own account of 1979, was first called a head-up display.' }] },
 };

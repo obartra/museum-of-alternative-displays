@@ -8520,6 +8520,180 @@ msgctxt "piece.head-mounted.media.patent-1.alt"
 msgid "Line drawings: a side view of a head with a lens against the eye and a cone-shaped tube behind it, and a box-shaped mask with two round eyepieces."
 msgstr "線描圖：一個人頭的側面，一片透鏡貼著眼睛，後面是一支錐形的管子。還有一個盒形面罩的透視圖，上面有兩個圓形目鏡。"
 
+#: hall-7/cave
+#. Name of a piece.
+msgctxt "piece.cave.name"
+msgid "CAVE"
+msgstr "CAVE"
+
+#: hall-7/cave
+#. Other names the piece goes by.
+msgctxt "piece.cave.aka"
+msgid "CAVE Automatic Virtual Environment, projection room"
+msgstr "CAVE Automatic Virtual Environment、投影室"
+
+#: hall-7/cave
+#. The date of the piece, as its label gives it.
+msgctxt "piece.cave.yearText"
+msgid "conceived 1991, shown 1992"
+msgstr "1991年構想，1992年展出"
+
+#: hall-7/cave
+#. Who made it first, and where. No full stop at the end.
+msgctxt "piece.cave.origin"
+msgid "Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, Electronic Visualization Laboratory, University of Illinois at Chicago, USA"
+msgstr "Carolina Cruz-Neira、Daniel Sandin和Thomas DeFanti，美國伊利諾大學芝加哥分校Electronic Visualization Laboratory"
+
+#: hall-7/cave
+#. Where this kind of display stands today.
+msgctxt "piece.cave.statusNote"
+msgid "Mechdyne, which licensed the design in 1994, lists uses today from training and design to museums and entertainment. Newer rooms use flat panels or LED tiles in place of projectors."
+msgstr "Mechdyne在1994年取得了這項設計的授權，它列出的現今用途從訓練和設計一直到博物館和娛樂。較新的房間用平板顯示器或LED模組代替投影機。"
+
+#: hall-7/cave
+#. First sentence of the label.
+msgctxt "piece.cave.lead"
+msgid "A small room whose walls and floor are screens: the picture is drawn for the place where one visitor's head is, and glasses give each eye its own view."
+msgstr "一個小房間，牆壁和地板都是螢幕：畫面按一位參觀者頭部所在的位置繪製，眼鏡讓每隻眼睛看到各自的畫面。"
+
+#: hall-7/cave
+#. How it works, paragraph 1 of 4.
+msgctxt "piece.cave.how.1"
+msgid "Three walls and the floor are screens. In the room shown at SIGGRAPH in Chicago in July 1992, each was about 3 metres square. Projectors behind the walls light the back of each screen, so people inside cast no shadow on them. Mirrors fold the beams to save space."
+msgstr "三面牆和地板都是螢幕。1992年7月在芝加哥SIGGRAPH上展出的那個房間裡，每塊螢幕大約3公尺見方。牆後的投影機照亮每塊螢幕的背面，所以裡面的人不會在螢幕上投下影子。反射鏡把光束折起來，以節省空間。"
+
+#: hall-7/cave
+#. How it works, paragraph 2 of 4.
+msgctxt "piece.cave.how.2"
+msgid "The floor is lit from above, from the front, so a visitor's shadow falls mostly behind them. Each screen shows the picture for the left eye and then for the right, 120 pictures a second. Glasses with liquid crystal shutters close one eye and then the other in step, kept in time by an infrared signal."
+msgstr "地板從上方、從前面照亮，所以參觀者的影子大多落在身後。每塊螢幕先顯示給左眼的畫面，再顯示給右眼的畫面，每秒120幅。眼鏡上裝著液晶快門，跟著畫面先遮住一隻眼睛，再遮住另一隻，一個紅外線訊號讓它們保持同步。"
+
+#: hall-7/cave
+#. How it works, paragraph 3 of 4.
+msgctxt "piece.cave.how.3"
+msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand in the hand, a control with buttons and a small joystick, is tracked in the same way. Up to ten people fit inside, but the picture is right only for the one who is tracked."
+msgstr "眼鏡上的感測器回報頭部的位置，電腦按這個點重新繪製全部四幅畫面。參觀者走動時，場景看起來停在原處。手裡的操縱棒是一個帶按鈕和小搖桿的控制器，也用同樣的方式追蹤。裡面最多能容納十個人，但畫面只對被追蹤的那一個人是正確的。"
+
+#: hall-7/cave
+#. How it works, paragraph 4 of 4.
+msgctxt "piece.cave.how.4"
+msgid "The paper of 1992 spells the name out as Audio Visual Experience Automatic Virtual Environment, reminiscent of Plato's allegory of the cave. The paper of 1993 makes it CAVE Automatic Virtual Environment and points to the cave in Plato's Republic, where reality is inferred from shadows on a wall. The laboratory's retrospective of 2024 calls it the first widely replicated walk-in virtual reality system based on projection."
+msgstr "1992年的論文把這個名字拼寫為Audio Visual Experience Automatic Virtual Environment，讓人聯想到柏拉圖的洞穴寓言。1993年的論文把它改為CAVE Automatic Virtual Environment，並提到柏拉圖《理想國》中的洞穴，在那裡，人們從牆上的影子推斷現實。實驗室2024年的回顧稱它是第一個被廣泛複製的、以投影為基礎的步入式虛擬實境系統。"
+
+#: hall-7/cave
+#. What it is good at, point 1 of 4. No full stop at the end.
+msgctxt "piece.cave.good.1"
+msgid "Lets several people stand inside together, each in light glasses"
+msgstr "能讓幾個人一起站在裡面，每人只戴一副輕便的眼鏡"
+
+#: hall-7/cave
+#. What it is good at, point 2 of 4. No full stop at the end.
+msgctxt "piece.cave.good.2"
+msgid "Keeps the visitor's own body and hands in view"
+msgstr "參觀者自己的身體和雙手一直看得見"
+
+#: hall-7/cave
+#. What it is good at, point 3 of 4. No full stop at the end.
+msgctxt "piece.cave.good.3"
+msgid "Keeps the screens still when the head turns, so a slow tracker matters less than in a headset"
+msgstr "頭部轉動時螢幕不動，所以追蹤器反應慢的影響比頭戴裝置小"
+
+#: hall-7/cave
+#. What it is good at, point 4 of 4. No full stop at the end.
+msgctxt "piece.cave.good.4"
+msgid "Puts the edges of the screens mostly out of sight"
+msgstr "螢幕的邊緣大多在視線之外"
+
+#: hall-7/cave
+#. Where it fails, point 1 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.1"
+msgid "Draws the correct view for one tracked person only, so the others see a shifted scene"
+msgstr "只為一個被追蹤的人畫出正確的視圖，其他人看到的場景是錯位的"
+
+#: hall-7/cave
+#. Where it fails, point 2 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.2"
+msgid "Needs a dark room much larger than the screens, and in 1993 four high-end workstations"
+msgstr "需要一間比螢幕大得多的暗室，1993年還需要四台高階工作站"
+
+#: hall-7/cave
+#. Where it fails, point 3 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.3"
+msgid "Lets a hand hide a virtual object that should appear in front of it"
+msgstr "手會擋住本應出現在它前面的虛擬物體"
+
+#: hall-7/cave
+#. Where it fails, point 4 of 4. No full stop at the end.
+msgctxt "piece.cave.bad.4"
+msgid "Has an open side and no ceiling in its first form, so the scene stops there"
+msgstr "最初的形式有一面敞開，也沒有天花板，場景到那裡就斷了"
+
+#: hall-7/cave
+#. What to look for in the 3D model. Where it names a button, use the words you gave that button.
+msgctxt "piece.cave.look"
+msgid "The room is open on your side, as the first one was. A lay figure in shutter glasses walks about inside, and the picture is drawn for its eyes. From here the lines of the scene break at the corners. Press Take the figure's place: the picture is then drawn for your eye, the corners vanish and the scene stands in the room. Go behind the wall to see the projector and the mirror that folds its beam onto the back of the screen. The model shows the projector of one wall only."
+msgstr "房間朝你這一面是敞開的，和最早的那個一樣。一個戴著快門眼鏡的人偶在裡面走動，畫面是按它的眼睛繪製的。從這裡看，場景的線條在牆角處折斷。按「站到人偶的位置」按鈕：這時畫面按你的眼睛繪製，牆角消失，場景立在房間裡。按「繞到牆後」按鈕，看看投影機和把光束折到螢幕背面的反射鏡。模型只展示了一面牆的投影機。"
+
+#: hall-7/cave
+#. A short story about the piece, under the heading Worth knowing.
+msgctxt "piece.cave.fact"
+msgid "Green phosphor in the projection tubes of the time glowed too long for shutter glasses, so each eye saw both pictures. Until special tubes came, the 1991 experiments were done in blue, red and shades of magenta."
+msgstr "當時投影管裡的綠色螢光粉餘輝太長，不適合快門眼鏡，所以每隻眼睛都會看到兩幅畫面。在特製的投影管出現之前，1991年的實驗都是用藍色、紅色和深淺不一的洋紅色做的。"
+
+#: hall-7/cave
+#. People section: what Carolina Cruz-Neira, Daniel Sandin, Thomas DeFanti did. The names stand above this line.
+msgctxt "piece.cave.people.1"
+msgid "Wrote both papers that set out the CAVE, in 1992 and 1993, with Cruz-Neira as first author. Their laboratory showed it at SIGGRAPH in Chicago in July 1992."
+msgstr "共同撰寫了1992年和1993年闡述CAVE的兩篇論文，Cruz-Neira是第一作者。他們的實驗室1992年7月在芝加哥SIGGRAPH上展出了它。"
+
+#: hall-7/cave
+#. People section: what Carolina Cruz-Neira did. The names stand above this line.
+msgctxt "piece.cave.people.2"
+msgid "Made its design and implementation her doctoral research, by a SIGGRAPH biography of 1997. A SIGGRAPH biography of 2022 says she invented it, and UCF says she created it."
+msgstr "據SIGGRAPH 1997年的一篇人物簡介，她把CAVE的設計與實作作為自己的博士研究課題。SIGGRAPH 2022年的一篇人物簡介說是她發明了CAVE，中佛羅里達大學則說是她創造了CAVE。"
+
+#: hall-7/cave
+#. People section: what Daniel Sandin, Thomas DeFanti did. The names stand above this line.
+msgctxt "piece.cave.people.3"
+msgid "Conceived the CAVE in 1991, by the account of the Electronic Visualization Laboratory, which the two set up in 1973."
+msgstr "據Electronic Visualization Laboratory的記述，兩人於1991年構想了CAVE。這個實驗室是兩人在1973年創辦的。"
+
+#: hall-7/cave
+#. People section: what Greg Dawe did. The names stand above this line.
+msgctxt "piece.cave.people.4"
+msgid "Staff member of the laboratory. The laboratory's retrospective of 2024 says Dawe designed and built its CAVE, and a portable one for SIGGRAPH 92."
+msgstr "實驗室的工作人員。實驗室2024年的回顧稱，Dawe設計並建造了該實驗室的CAVE，以及一個用於SIGGRAPH 92的可攜式CAVE。"
+
+#: hall-7/cave
+#. Note under the People section.
+msgctxt "piece.cave.note"
+msgid "The sources share the credit differently. The laboratory credits Sandin and DeFanti with conceiving the CAVE, with graduate students. SIGGRAPH and university biographies credit Cruz-Neira with inventing or creating it. The laboratory's retrospective says its staff member Greg Dawe designed and built the room. The paper of 1992 has two more authors, Robert Kenyon and John Hart."
+msgstr "各個來源對功勞的劃分各不相同。實驗室把構想CAVE的功勞歸於Sandin和DeFanti，以及與他們一起工作的研究生。SIGGRAPH和大學的人物簡介把發明或創造CAVE的功勞歸於Cruz-Neira。實驗室的回顧說，是實驗室的工作人員Greg Dawe設計並建造了這個房間。1992年的論文另有兩位作者，Robert Kenyon和John Hart。"
+
+#: hall-7/cave
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cave.view.inside.label"
+msgid "Take the figure's place"
+msgstr "站到人偶的位置"
+
+#: hall-7/cave
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cave.view.inside.hint"
+msgid "Now the picture is drawn for your eye. The walls and floor join into one scene, and the corners vanish."
+msgstr "現在畫面是按你的眼睛繪製的。牆壁和地板連成一個場景，牆角消失了。"
+
+#: hall-7/cave
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cave.view.behind.label"
+msgid "Go behind the wall"
+msgstr "繞到牆後"
+
+#: hall-7/cave
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cave.view.behind.hint"
+msgid "The projector throws its picture at a mirror, which folds it onto the back of the screen. Nobody inside casts a shadow."
+msgstr "投影機把畫面投到一面反射鏡上，反射鏡再把它折到螢幕背面。裡面的人都不會投下影子。"
+
 #: hall-7/retinal-display
 #. Name of a piece.
 msgctxt "piece.retinal-display.name"
@@ -8662,7 +8836,7 @@ msgstr "透視圖：一束光打在一個方塊的弧形臺階上，方塊標著
 #. Name of a piece.
 msgctxt "piece.head-up.name"
 msgid "Head-up display"
-msgstr "抬頭戴裝置示器"
+msgstr "抬頭顯示器"
 
 #: hall-7/head-up
 #. Other names the piece goes by.
@@ -8823,8 +8997,8 @@ msgstr "博物館裡的女性"
 #: tour-women
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.women.lead"
-msgid "A guided walk through all seven halls. Thirteen displays, from braille pins to a hologram, each with at least one woman among its inventors or contributors."
-msgstr "一條走遍七個展廳的導覽路線。十三件展品，從點字的小針到全像圖，每一件的發明者或貢獻者當中至少有一位女性。"
+msgid "A guided walk through all seven halls. Fourteen displays, from braille pins to a room of screens, each with at least one woman among its inventors or contributors."
+msgstr "一條走遍七個展廳的導覽路線。十四件展品，從點字的小針到一個由螢幕圍成的房間，每一件的發明者或貢獻者當中至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: the title of this part.
@@ -8835,8 +9009,8 @@ msgstr "第一站之前"
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.start.text.1"
-msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at thirteen displays. Each has at least one woman among its inventors or contributors."
-msgstr "歡迎來到博物館。這條導覽沿著地上的綠線走。它穿過全部七個展廳，在十三件展品前停下。每一件的發明者或貢獻者當中，至少有一位女性。"
+msgid "Welcome to the museum. This tour follows the green line on the floor. It runs through all seven halls and stops at fourteen displays. Each has at least one woman among its inventors or contributors."
+msgstr "歡迎來到博物館。這條導覽沿著地上的綠線走。它穿過全部七個展廳，在十四件展品前停下。每一件的發明者或貢獻者當中，至少有一位女性。"
 
 #: tour-women
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9129,8 +9303,8 @@ msgstr "現在看薄片旁邊的那塊玻璃。它只在兩束看不見的光交
 #: tour-women
 #. Guided tour, at the piece Static-volume display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.static-volume.text.3"
-msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The last stop is holography, in hall 7."
-msgstr "Elizabeth Downing和三位同事就是這樣在玻璃內部畫出彩色光點的。這項研究1996年由史丹佛大學發表，Downing是第一作者。原型是一個邊長約15公釐的立方體，模型把它放大了許多倍。最後一站是全像術，在7號展廳。"
+msgid "Elizabeth Downing and three colleagues drew coloured points of light inside glass in this way. Their work was published from Stanford University in 1996, with Downing as first author. The prototype was a cube about 15 millimetres on each side, and the model shows it many times that size. The next stop is holography, in hall 7."
+msgstr "Elizabeth Downing和三位同事就是這樣在玻璃內部畫出彩色光點的。這項研究1996年由史丹佛大學發表，Downing是第一作者。原型是一個邊長約15公釐的立方體，模型把它放大了許多倍。下一站是全像術，在7號展廳。"
 
 #: tour-women
 #. Guided tour, at the piece Holography: the title of this part.
@@ -9139,16 +9313,46 @@ msgid "The light itself"
 msgstr "光本身"
 
 #: tour-women
-#. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, at the piece Holography: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.1"
 msgid "Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did."
 msgstr "透過這塊玻璃板看。後面好像立著一輛玩具火車頭。往旁邊挪一步，你就能看到火車頭的側面。它並不在玻璃後面。全像圖記錄的是光本身。在4號展廳，雷射畫出畫面。在這裡，雷射只是照亮這塊板，而板發出的光波，和當初火車頭發出的一模一樣。"
 
 #: tour-women
-#. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 2. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+#. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
 msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
 msgstr "Dennis Gabor在1948年發明了全像術。二十年後，畫家Margaret Benyon開始把全像圖當作藝術來創作。這樣的全像圖是靜止的。第一台全像視訊顯示器於1989年在MIT媒體實驗室造出，Mary Lou Jepsen同年在那裡寫的學位論文闡述了它的設計。"
+
+#: tour-women
+#. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.holography.text.3"
+msgid "This hologram needs no glasses. The last stop, in the same hall, puts screens all round the visitor. Go to the CAVE."
+msgstr "這幅全像圖不需要眼鏡。最後一站就在同一個展廳，它讓參觀者四周都是螢幕。去看CAVE。"
+
+#: tour-women
+#. Guided tour, at the piece CAVE: the title of this part.
+msgctxt "tour.women.cave.title"
+msgid "A room drawn for one head"
+msgstr "為一個人的頭而畫的房間"
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.1"
+msgid "Stand at the open side of the room. Three walls and the floor are screens. The figure inside wears shutter glasses, and the picture is drawn for its eyes. So from where you stand, the scene breaks at the corners. Press the Take the figure's place button, and it joins up."
+msgstr "站到房間敞開的那一面。三面牆和地板都是螢幕。裡面的人偶戴著快門眼鏡，畫面是按它的眼睛繪製的。所以從你站的地方看，場景在牆角處折斷。按「站到人偶的位置」按鈕，場景就連起來了。"
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.2"
+msgid "The plate names four people of the Electronic Visualization Laboratory, at the University of Illinois at Chicago. Carolina Cruz-Neira is the first author of both papers that set out the room, and its design and implementation were her doctoral research. Her laboratory showed it at SIGGRAPH in Chicago in 1992."
+msgstr "銘牌上寫著伊利諾大學芝加哥分校Electronic Visualization Laboratory的四個人。闡述這個房間的兩篇論文，第一作者都是Carolina Cruz-Neira，房間的設計與實作是她的博士研究課題。她的實驗室1992年在芝加哥SIGGRAPH上展出了它。"
+
+#: tour-women
+#. Guided tour, at the piece CAVE: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
+msgctxt "tour.women.cave.text.3"
+msgid "A headset, nearby in this hall, turns its screens with the head. Here the screens stay still, and the visitor walks among them. That was the last stop of the green line."
+msgstr "頭戴式顯示器就在這個展廳裡不遠處，它的螢幕跟著頭一起轉。在這裡，螢幕保持不動，參觀者在螢幕之間走動。這就是綠線的最後一站。"
 
 #: tour-women
 #. Guided tour, after the last stop: the title of this part.
@@ -9159,14 +9363,14 @@ msgstr "綠線的終點"
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.1"
-msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a toy engine that is not there."
-msgstr "綠線到這裡結束。它從用觸摸來讀的小針開始。它以一輛並不存在的玩具火車頭結束。"
+msgid "That is the end of the green line. It began with pins that are read by touch. It ends with a room whose walls are screens."
+msgstr "綠線到這裡結束。它從用觸摸來讀的小針開始。它以一個牆壁都是螢幕的房間結束。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Fifteen women are named at these thirteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "這十三站一共提到了十五位女性，你已經在每一位的成果前停留過。這些展廳的展品說明裡，總共提到了一百多個人。"
+msgid "Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "這十四站一共提到了十六位女性，你已經在每一位的成果前停留過。這些展廳的展品說明裡，總共提到了一百多個人。"
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -12172,7 +12376,7 @@ msgstr "在這套系統中，一台電腦把十六台攝影機的畫面轉換成
 #. About Pierre-Alexandre Blanche, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.pierre-alexandre-blanche.about.3"
 msgid "In 2021 he won an Optimax grant toward a curved head-up display built on a waveguide. Optica made him a fellow, citing holographic 3D displays and augmented reality combiners."
-msgstr "2021年，他獲得一筆Optimax資助，用於研製一種以波導為基礎的曲面抬頭戴裝置示器。Optica授予他會士稱號，表彰他在全像三維顯示器和擴增實境合光器方面的工作。"
+msgstr "2021年，他獲得一筆Optimax資助，用於研製一種以波導為基礎的曲面抬頭顯示器。Optica授予他會士稱號，表彰他在全像三維顯示器和擴增實境合光器方面的工作。"
 
 #: people
 #. About Ivan Sutherland, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12223,6 +12427,84 @@ msgid "With William Newman he wrote the textbook Principles of Interactive Compu
 msgstr "他與William Newman合著了教科書Principles of Interactive Computer Graphics。他造出了裁剪硬體、一個不依賴任何特定裝置的圖形軟體套件和雷射列印軟體，還研究非同步電路。他當選為美國國家工程學院院士。"
 
 #: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.1"
+msgid "IEEE Spectrum says she was born in Spain and grew up between Spain and Venezuela. Carolina Cruz-Neira took a bachelor's degree in systems engineering at the Universidad Metropolitana in Caracas."
+msgstr "IEEE Spectrum稱，她生於西班牙，在西班牙和委內瑞拉兩地長大。Carolina Cruz-Neira在卡拉卡斯的Universidad Metropolitana取得系統工程學士學位。"
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.2"
+msgid "At the University of Illinois at Chicago she took a master's degree in 1991 and a doctorate in 1995, both in electrical engineering and computer science. At Iowa State University she was Litton Assistant Professor of electrical and computer engineering."
+msgstr "在伊利諾大學芝加哥分校，她於1991年取得碩士學位，1995年取得博士學位，專業都是電機工程與電腦科學。在愛荷華州立大學，她擔任Litton電機與電腦工程助理教授。"
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.3"
+msgid "The University of Central Florida says she founded and led three research centres: the Virtual Reality Applications Center at Iowa State, the Louisiana Immersive Technologies Enterprise, and the Emerging Analytics Center at the University of Arkansas at Little Rock."
+msgstr "中佛羅里達大學稱，她創立並領導過三個研究中心：愛荷華州立大學的Virtual Reality Applications Center、Louisiana Immersive Technologies Enterprise，以及阿肯色大學小石城分校的Emerging Analytics Center。"
+
+#: people
+#. About Carolina Cruz-Neira, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.carolina-cruz-neira.about.4"
+msgid "She was elected to the National Academy of Engineering in 2018, for her contributions to immersive visualization. She joined the University of Central Florida in 2020 and holds its Agere Chair in computer science. In 2026 she received the Virtual Reality Lifetime Achievement Award."
+msgstr "2018年，她因在沉浸式視覺化方面的貢獻當選美國國家工程學院院士。2020年，她加入中佛羅里達大學，擔任該校Agere電腦科學講座教授。2026年，她獲得Virtual Reality Lifetime Achievement Award。"
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.1"
+msgid "Daniel Sandin took a bachelor's degree in physics at Shimer College and a master's degree in physics at the University of Wisconsin. In 1969 he joined the School of Art and Design at the University of Illinois at Chicago."
+msgstr "Daniel Sandin在Shimer College取得物理學學士學位，在威斯康辛大學取得物理學碩士學位。1969年，他進入伊利諾大學芝加哥分校的藝術與設計學院。"
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.2"
+msgid "In 1973 he built the Sandin Image Processor, an analog computer that altered video pictures in real time. The Museum of Modern Art in New York put his video animation Spiral PTL in its inaugural collection of video art."
+msgstr "1973年，他造出Sandin Image Processor，這是一台能即時改變視訊畫面的類比電腦。紐約現代藝術博物館把他的錄像動畫Spiral PTL收入其首批錄像藝術收藏。"
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.3"
+msgid "With Thomas DeFanti he set up the Electronic Visualization Laboratory at the university in 1973. By 1992 the two were its co-directors."
+msgstr "1973年，他與Thomas DeFanti在該校創辦了Electronic Visualization Laboratory。到1992年，兩人是實驗室的共同主任。"
+
+#: people
+#. About Daniel Sandin, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.daniel-sandin.about.4"
+msgid "In later years he worked on displays that show depth without glasses. He is professor emeritus at the university and director emeritus of the laboratory."
+msgstr "後來，他研究不戴眼鏡就能顯示縱深的顯示器。他是該校的榮譽退休教授和該實驗室的榮譽退休主任。"
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.1"
+msgid "Thomas DeFanti took a bachelor's degree in mathematics at Queens College in 1969. At The Ohio State University he took a master's degree in 1970 and a doctorate in 1973, both in computer and information science."
+msgstr "Thomas DeFanti於1969年在皇后學院取得數學學士學位。在俄亥俄州立大學，他於1970年取得碩士學位，1973年取得博士學位，專業都是電腦與資訊科學。"
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.2"
+msgid "He moved to the University of Illinois at Chicago in 1973 and set up the Electronic Visualization Laboratory with Daniel Sandin. In 1992 he was codirector of the laboratory and a professor of electrical engineering and computer science."
+msgstr "1973年，他轉到伊利諾大學芝加哥分校，與Daniel Sandin一起創辦了Electronic Visualization Laboratory。1992年，他是實驗室的共同主任，也是電機工程與電腦科學教授。"
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.3"
+msgid "The laboratory's retrospective says he was responsible for Showcase, the event at SIGGRAPH 1992 in Chicago where the CAVE was shown. The conference record names James E. George, of Mesa Graphics, as the chair of its exhibits and Showcase."
+msgstr "實驗室的回顧稱，他負責Showcase，也就是1992年芝加哥SIGGRAPH上展出CAVE的那個活動。會議紀錄則寫明，Mesa Graphics的James E. George是這屆會議展覽和Showcase的主席。"
+
+#: people
+#. About Thomas DeFanti, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.thomas-defanti.about.4"
+msgid "The Association for Computing Machinery gave him its Outstanding Contribution Award in 1988 and elected him a fellow in 1994. He is a research scientist at the California Institute for Telecommunications and Information Technology, at the University of California, San Diego."
+msgstr "美國計算機協會於1988年授予他傑出貢獻獎，1994年選他為會士。他是加州大學聖地牙哥分校California Institute for Telecommunications and Information Technology的研究科學家。"
+
+#: people
+#. About Greg Dawe, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-dawe.about.1"
+msgid "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind."
+msgstr "實驗室2024年的回顧把該實驗室後來由CAVE衍生出的顯示器歸功於Greg Dawe，其中包括ImmersaDesk和Varrier。2000年代，Dawe到加州大學聖地牙哥分校與Thomas DeFanti共事，建造了同類的房間大小的顯示器。"
+
+#: people
 #. About Samuel Achilefu, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.samuel-achilefu.about.1"
 msgid "After college in Nigeria, a French government scholarship took him to the University of Nancy, where he took a doctorate in molecular and materials chemistry. He trained at Oxford, then joined the discovery research department of Mallinckrodt Medical in St. Louis in 1993."
@@ -12244,7 +12526,7 @@ msgstr "2016年，他就任Michel M. Ter-Pogossian放射學教授。2022年2月�
 #. About J. M. Naish, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.j-m-naish.about.1"
 msgid "He worked at the Royal Aircraft Establishment, Farnborough. A technical note of 1962 set out the form of the steering information his head-up display gave the pilot, and weighed how bright it must be against a desert sky."
-msgstr "他在范堡羅的皇家飛機研究院工作。1962年的一份技術報告闡述了他的抬頭戴裝置示器向飛行員提供的操縱資訊的形式，並權衡了在沙漠天空背景下它需要多高的亮度。"
+msgstr "他在范堡羅的皇家飛機研究院工作。1962年的一份技術報告闡述了他的抬頭顯示器向飛行員提供的操縱資訊的形式，並權衡了在沙漠天空背景下它需要多高的亮度。"
 
 #: people
 #. About J. M. Naish, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12256,7 +12538,7 @@ msgstr "在1965年的一篇論文中，他報告說這種顯示器容易學會�
 #. About J. M. Naish, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.j-m-naish.about.3"
 msgid "By 1979 he was at NASA Ames Research Center as a research associate of the National Research Council. His review of head-up display formats there found neither of the two main kinds fully adequate."
-msgstr "到1979年，他已在NASA艾姆斯研究中心擔任美國國家研究委員會的研究員。他在那裡對抬頭戴裝置示器格式所做的綜述發現，兩種主要類型都不完全令人滿意。"
+msgstr "到1979年，他已在NASA艾姆斯研究中心擔任美國國家研究委員會的研究員。他在那裡對抬頭顯示器格式所做的綜述發現，兩種主要類型都不完全令人滿意。"
 
 #: people
 #. About Mozi, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

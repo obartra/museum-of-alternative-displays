@@ -7,6 +7,7 @@ import * as h4b from './h4b';
 import * as h5 from './h5';
 import * as h6 from './h6';
 import * as h7 from './h7';
+import * as h7b from './h7b';
 
 /** One builder per piece id. CI fails if a piece in the data has no entry here. */
 export const builders: Record<string, () => Built> = {
@@ -63,6 +64,7 @@ export const builders: Record<string, () => Built> = {
   'integral-imaging': h7.integral,
   'holography': h7.hologram,
   'head-mounted': h7.hmd,
+  'cave': h7b.cave,
   'retinal-display': h7.retinal,
   'head-up': h7.hud,
 };
