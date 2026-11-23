@@ -1,0 +1,5 @@
+# Other downloaded files
+
+Two SunCAVE room photographs were downloaded during Dawe research and excluded before portrait work. One caption identifies Joel Polizzi; the other shows people mostly from behind without identifying Greg Dawe. They are not additional portrait references. Their pages, naming text, publisher, credits, dates, rights, actual bytes/dimensions and verdicts are in [context-exclusions.json](context-exclusions.json). No Greg Dawe face width can be assigned to either. Private sheets comparisons/x01.jpg and x02.jpg show the excluded image beside the rejection.
+
+The working file furness-domain.jpg is byte-for-byte identical to r09 furness-thumb.jpg (SHA256 a693f8bde8f7c7297e40745d245d224ec9b90ec3b6290960ffc120b730786835). It is a duplicate download, not another exposure; only one copy is in the ZIP. The native crops of Land, Claude, Dawe and Seibel derive from the documented originals and crop coordinates. anthony-crop.png was inspected but the selected generation used the full r10 photograph.

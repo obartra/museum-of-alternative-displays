@@ -1,0 +1,842 @@
+{
+  "date": "2026-11-23",
+  "export": "Pillow RGB/Lanczos resize only; WebP quality90, method6. Ordinary600×750 or label84×105. No face retouching outside imagegen.",
+  "masters": "Working PNG masters and intermediate edit targets remain in the local project, not in Git or the lean ZIP. Hashes identify them. Source inputs and native crop coordinates are retained.",
+  "selected": [
+    {
+      "name": "Christiaan Huygens",
+      "slug": "christiaan-huygens",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Asset: one museum catalogue portrait, vertical 4:5 head and upper shoulders. Image 1 is the sole sitter/pose/clothing reference: Caspar Netscher's 1671 painted portrait of Christiaan Huygens. Image 2 is STYLE ONLY, the approved Jepsen 2.3 pen drawing; never borrow her face, glasses or modern clothing. Draw Huygens recognizably after image 1, preserving his three-quarter head angle, slim youthful long face, long nose, closed lips, clean-shaven chin, abundant long curled hair and historical lace neckcloth and coat. Retain the full documented crown with a modest blank margin. Crop above hands; no chair, props or scenery. Match the museum style: economical near-black pen on flat warm ivory #f7f6f0. Fine, subtly varied outlines, lighter over the crown, firmer on the shadow side; fine internal contours. Give curls and coat tone with restrained directional hatching and a few dark masses. Bare skin must remain open ivory on forehead, cheeks, nose, chin and neck: NO skin hatching, dots, shading, texture, paint gradients or invented wrinkles. Only essential eye, brow, nostril, mouth and face contours. No text, border, signature or frame. This is an illustration after the named painting, not a newly imagined historical face.",
+          "referenced_images": [
+            {
+              "file": "references/huygens-free.jpg",
+              "sha256": "96f17392d25c05473cbbe4b0f59d959dcec6faaab192aadcfe72e8bd9f5b1035",
+              "dimensions": [
+                1682,
+                2204
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "huygens-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Edit only the bare-skin shading of this museum pen drawing. Remove every bundle of hatch strokes on the bare neck underneath the chin, the underside and side of the nose, under the lower lip, on the chin and under the eyes. Replace those shaded areas with the same flat warm ivory as the forehead. Preserve the single essential chin boundary, nostril boundary, eyelids and mouth contours: do not merge the face into the neck. Keep all face proportions, three-quarter angle, expression, closed lips, hair, fine hair hatching, lace and coat precisely unchanged. Keep fine varied outlines. No skin texture or added wrinkles. No other changes.",
+          "referenced_images": [
+            {
+              "file": "masters/christiaan-huygens-1.png",
+              "sha256": "321481178f5a5efbb77b2cc3ae1cd53e3cfbcab83ac35f549086bd931cbf0afe",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "huygens-clean-prompt.json"
+        }
+      ],
+      "final_master_sha256": "78b0975773067f2c7f3384fefd710f864fab5c2341966b27ab0f454f08c921e3",
+      "final_export_sha256": "7e0d57ee46dcb36baa5442e5dee1496750aa76ec55d1522ff4ccb0d0daabea66"
+    },
+    {
+      "name": "Athanasius Kircher",
+      "slug": "athanasius-kircher",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum portrait, vertical 4:5 head and upper shoulders. Image 1 is the sole identity/pose/clothing source: Cornelis Bloemaert's named historical engraving of Athanasius Kircher, inscribed Rome 2 May 1655. Image 2 is STYLE ONLY: approved Jepsen 2.3, not her face or clothes. Redraw Kircher recognizably after the engraving, same head angle and gaze, long prominent nose, high forehead, receding hair at temples, small closed mouth and distinctive rounded chin, dark clerical cap, white small collar, dark clerical cloak. Include complete cap/crown and modest blank margin. Near-black fine pen with subtly varied contour weight on flat warm ivory #f7f6f0. Restrained directional hatching in cap, actual hair and clothing only. Open bare skin: forehead, cheeks, nose, chin and neck must remain flat ivory with essential single contours only. REMOVE the engraved skin shading: absolutely no crosshatch, stipple, hatch shadows or textured skin. A few individually documented age contours can remain, no invented wrinkles. No grid background, frame, Latin text, writing, signature, props or hands. Preserve likeness and apparent age from the source; don't beautify or make younger. Output a calm museum catalogue pen drawing consistent with image 2.",
+          "referenced_images": [
+            {
+              "file": "references/kircher-free.jpg",
+              "sha256": "8b7ed66a825180b1756648419bb70b4306d4ad84f9f3fc8a4200f9bf0a48c0b6",
+              "dimensions": [
+                2500,
+                3900
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "kircher-prompt.json"
+        }
+      ],
+      "final_master_sha256": "8257f4424666e5a7b2be06506eb95eaef999e3a54b44d3c275dcd48b0db0705f",
+      "final_export_sha256": "c4a2c71f0fdc162bda4116fd9b0f44abdc0e243420d773a7debebeb4a8700ca6"
+    },
+    {
+      "name": "Louis Ducos du Hauron",
+      "slug": "louis-ducos-du-hauron",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum catalogue portrait after image 1, Paul Nadar's circa-1900 named photograph of Louis Ducos du Hauron. Image 2 is STYLE ONLY, approved Jepsen 2.3 pen work, never borrow her identity. Preserve the source's left-facing near-profile head angle, large long curved nose, high bald dome with dark hair at the sides/back, hooded visible eye, prominent ear, white moustache and pointed white beard, closed mouth, historical dark suit, high white collar and small dark bow tie. Full documented crown and modest empty margin, head and upper shoulders, vertical4:5. Near-black fine pen lines on completely flat warm ivory #f7f6f0. Vary outlines delicately, lighter above the bald crown and firmer at the shadow-side jaw. Hair, moustache, beard and dark clothing carry restrained directional hatching; retain white spaces in the beard so it remains white. Bare scalp, forehead, cheeks, nose and neck remain the exact same flat ivory as the background. No skin hatch shadows, stipple, photographic gradients, invented wrinkles or texture. Essential facial contours and sparse documented age creases only. Do not add eyeglasses or darken the white beard. No background objects, text, frame, hands or signature. Preserve this source-supported likeness.",
+          "referenced_images": [
+            {
+              "file": "references/duhauron-thumb.jpg",
+              "sha256": "4b07bd818ec113054c1eb7d742d1fd6b3a5b88ecddf2c3ddf003d92a0482a0c3",
+              "dimensions": [
+                960,
+                951
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "duhauron-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Edit only skin shading in this Louis Ducos du Hauron portrait. Keep the exact left-facing head angle, long nose, eyes, ear, bald dome, hairline, white moustache and beard, bow tie, suit and all proportions unchanged. Remove all clusters of parallel skin-shading strokes from around and between the eyes, side and underside of the nose, bare ear, bare cheek, jaw and bare neck. Replace them with the exact same flat warm ivory as the background, without a warmer skin tint. Preserve essential single facial contours and individually documented age folds, and preserve the chin/neck boundary. Keep every actual hair of brows, moustache, beard and sideburns, and all clothing and hair hatching. No new skin marks, stipple or shading. No other edits.",
+          "referenced_images": [
+            {
+              "file": "masters/louis-ducos-du-hauron-1.png",
+              "sha256": "a62f3a092fbc85a1b88c9d101c02197d518a4ecd9b2f7c598df2cfdcfc50f023",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "duhauron-clean-prompt.json"
+        }
+      ],
+      "final_master_sha256": "361762d7d5c7cd939d92352dec7394b78c3a0ffa9b101a1f902a1a5abffda5be",
+      "final_export_sha256": "201541d459da8e0f72e9ccb1e6a6cb0ec11871692543037e8abb30b178af1d6c"
+    },
+    {
+      "name": "Georges Claude",
+      "slug": "georges-claude",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum LABEL-SIZE portrait after image1, a native crop of Agence Meurisse's named1926 photograph of the engineer Georges Claude demonstrating at the Institut de France. This is the engineer of Air Liquide/neon, not the painter namesake. Preserve exact source head angle and gaze to viewer's left, short wavy graying hair with a slightly uneven central hairline, broad mature face, clean-shaven cheeks/chin, slightly drooping moustache as faintly visible above upper lip, small nearly closed mouth, dark suit, high white stiff collar and tie. Do not add spectacles. Same source pose and clothing. Final export ONLY84x105 because the native face is soft despite a larger scan. Draw only supported broad features, no invented fine eyes, eyelashes, pores, wrinkles or texture. Vertical4:5 head and upper shoulders, full documented crown and modest blank margin. Fine varied near-black pen lines on completely flat warm ivory #f7f6f0. Hair and suit alone carry restrained directional hatching and dark masses. All bare skin including forehead, cheeks, nose, ears, chin and neck must stay EXACTLY the same flat ivory as the background; absolutely no stipple, hatching, gray shadows, textured skin, gradients or warmer skin tint. Preserve single essential feature boundaries, not hatch shading under the chin. No text, frame, signature, hands, props, background objects or other people. Image2 is STYLE ONLY, approved Jepsen2.3: never borrow its face or glasses.",
+          "referenced_images": [
+            {
+              "file": "references/claude-crop.png",
+              "sha256": "01985bcc4235424623ed67d63166b17fdd8aa3b3a8bee313096e24010e131576",
+              "dimensions": [
+                1000,
+                1600
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "last-historical-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "b42ae7b709b527470793a637f27621e3fb3f8fe23397e2cad4065685419b01d9",
+      "final_export_sha256": "9bd6fe94ef3f9e2b0b736dffd2905549eef8a283d8beebb29f8fe5ab9e0bc13e"
+    },
+    {
+      "name": "Daniel McFarlan Moore",
+      "slug": "daniel-mcfarlan-moore",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum LABEL-SIZE pen portrait after image 1, the small 1906 photograph of Daniel McFarlan Moore taken by a Moore lamp and published by Moore Electrical Company. Image 2 is Jepsen 2.3 STYLE ONLY, never its face or glasses. The final artwork will be reduced to 84 by 105 pixels because the source is small/soft. Preserve only supported broad likeness: Moore's three-quarter head angle looking back toward camera, dark short wavy side-parted hair, strong eyebrows, small dark moustache, long nose, closed mouth, clean-shaven chin, historical dark suit with high white collar and tie. Do not invent eyelash detail, iris patterns, wrinkles, pores or hair strands missing from the photograph. Head and upper shoulders, 4:5 vertical, complete crown with blank margin, crop out hands, desk, chair and all scenery. Near-black economical fine pen, subtly varied contours, hair and suit carry simple dark masses and restrained hatching. Bare forehead, cheeks, nose, chin and neck stay completely open, exact same flat warm ivory #f7f6f0 as the background. No skin hatching, stipple, dots, shadows, gradients or texture. Keep single essential contours, no text, frame, signature or extra props. Preserve source pose and clothing; do not invent a different age.",
+          "referenced_images": [
+            {
+              "file": "references/moore-free.jpg",
+              "sha256": "87f8ee7626a7270e85c293994b1acc7179ff8b705d6292038238d46fabaf8492",
+              "dimensions": [
+                350,
+                442
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "moore-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Remove all bundles of shading strokes under the eyes, at the side/underside of the nose, below the lower lip, on the chin, the bare ear and especially the bare neck wedge beneath the chin. Preserve the real dark moustache and all brow/hair strokes. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/daniel-mcfarlan-moore-1.png",
+              "sha256": "c8e02c2df0eea824bd4f98016c881821a01f2f4896bf503e24d250807eb759e1",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "0cc88806f557e0361014fe10a2071d0e4e57f3dd9b871ee164ac48913330fdb2",
+      "final_export_sha256": "dc26ace17cbf680719c943bf51308d0d649604f6867eb04899836b4a1c5a55a4"
+    },
+    {
+      "name": "Laurens Hammond",
+      "slug": "laurens-hammond",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum LABEL-SIZE pen portrait after image 1, the named Laurens Hammond and Teleview photograph published in Evansville Press 3 January 1923. The newspaper face is halftoned; final export ONLY 84x105. Image 2 is Jepsen2.3 STYLE ONLY; do not borrow its face or eyeglasses. Preserve Hammond's supported broad likeness and source head angle/gaze: young slim long face, high forehead, short dark combed-back hair with a neat side part, straight narrow nose, thin small moustache above closed lips, clean-shaven chin, high white collar and dark tie and suit. Do not invent iris patterns, eyelashes, extra creases, skin detail or speculative anatomy from halftone dots. Vertical4:5 head and upper shoulders, full crown and blank margin. Omit Teleview device, hands, text, background, border and frame. Economical fine varied near-black pen contours; hair and suit use a few solid dark masses and restrained directional hatching. Bare forehead, cheeks, nose, chin, ears and neck stay completely open: EXACTLY the same flat ivory #f7f6f0 as the background, single essential boundaries only. Absolutely NO skin hatching, stipple, gray shadows, texture or gradients. No unnecessary skin marks, no signature. Same pose and clothing as source.",
+          "referenced_images": [
+            {
+              "file": "references/hammond-free.jpg",
+              "sha256": "34de2b09cca1ab627362a5b0ba6c7516d020f2eda0d4074828da7069194b1594",
+              "dimensions": [
+                726,
+                863
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "hammond-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Remove the hatch-shadow wedge immediately underneath the chin above the white collar, and any short shadow clusters beside the nose, below the lip or inside the bare ear. Preserve the small real moustache and supported facial feature boundaries. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/laurens-hammond-1.png",
+              "sha256": "91aef6d102720500cd5b6d568936d6ae8108cb0f8177efc9bc2b8e4c4367127b",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "6b6b1a30bfdb35d6d65135a9ed9af792c304167b19d162a260472666d5cec092",
+      "final_export_sha256": "e786d5324380a7dc1ecd25f5f8b453470cbbe30cd77504d97d536feab5288ea7"
+    },
+    {
+      "name": "Edwin H. Land",
+      "slug": "edwin-h-land",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum pen portrait after image 1, the native crop of Bernard Gotfryd's 1971 named photograph of Edwin H. Land, founder of Polaroid. Image 2 is only the approved Jepsen 2.3 pen STYLE, never its sitter. Preserve Land's exact upward three-quarter gaze toward viewer's left, broad angular face, heavy eyebrows, broad nose, closed lips, strong chin, short dark swept-back hair graying at temples, clean-shaven face, suit, striped shirt and striped tie. 4:5 head and upper shoulders with full crown and modest blank margin; crop above hands, omit microphones, other people, curtains and all props. Fine varied near-black ink contours on flat warm ivory #f7f6f0; economical internal lines. Hair and suit have restrained directional hatching and dark masses. All bare skin must be the EXACT SAME flat ivory as the background, not skin-coloured: NO hatching, dots, stipple, shadows, texture or gradients on forehead, cheeks, nose, chin or neck. Only essential facial boundaries, eyelids, brows, nostrils, lips and sparse documented age folds. Draw the chin and neck with single fine contours, with no hatch shadow beneath the chin. No text, signature or frame. Retain documented age and proportions, no beautification or invented detail.",
+          "referenced_images": [
+            {
+              "file": "references/land-crop.png",
+              "sha256": "9126d2479c0d7774c9a02952b283571173dfb301b89fba6853fcdb565d1b303c",
+              "dimensions": [
+                1350,
+                1650
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "land-prompt.json"
+        }
+      ],
+      "final_master_sha256": "1bf39a50735161515d9e749de157f441a92c0db9d8f02a04a6ffef95630d0d66",
+      "final_export_sha256": "e4ac95c070fceae135fbe41945bc283e21ba76a3d69bd31d2b8a034f33b39fef"
+    },
+    {
+      "name": "Lotte Reiniger",
+      "slug": "lotte-reiniger",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One 4:5 museum head-and-upper-shoulders portrait after the named 1970 London photograph of Lotte Reiniger (image 1). Image 2 is STYLE ONLY, Jepsen 2.3, never its sitter. Preserve Reiniger's elderly apparent age, broad rounded face, receded short gray hair beneath the dark head covering, thin rounded angular wire spectacles, slightly downturned gaze to viewer's left, softly parted lips, short neck, white collar and dark wrapped outer garment. Same head angle and clothing. Crop to head and upper shoulders, exclude the hand by her ear and all arms, foliage, wall and props; the edge of her covering already establishes the head silhouette. Complete crown with a modest ivory margin. Fine varied near-black pen on perfectly flat warm ivory #f7f6f0. Lighter top outline, firmer shadow-side outline, no heavy uniform border. Dark garment and head covering anchor the portrait with solid ink and restrained hatching; gray hair has sparse directional tone. Skin stays open flat ivory over forehead, cheeks, nose, chin and neck; only essential feature contours and a few documented age folds, no skin hatching, stipple, shadow strokes, photographic texture or invented wrinkles. No text, signature, frame or added jewelry. Preserve the actual glasses shape, face width and age; do not rejuvenate or beautify.",
+          "referenced_images": [
+            {
+              "file": "references/reiniger-london.jpg",
+              "sha256": "59ae4d45625e00e3a1d52a73e8a441018a3339ef85b03d1e03efd78c78c6a82d",
+              "dimensions": [
+                2019,
+                1419
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "reiniger-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Edit only the bare skin in this Lotte Reiniger museum drawing. Keep the exact sitter, apparent age, head angle, rounded face, gaze, spectacles, mouth, short gray hair, dark covering, clothing and composition unchanged. Remove every cluster of short parallel shading strokes under the eyes and inside spectacles, across or below the nose, on the chin and bare neck. Replace skin shading with flat warm ivory. Keep essential single eyelid contours and individually documented age folds, plus the single chin and neck boundaries, so the elderly face still has its structure. No stipple, hatch shadows or newly invented skin lines. Keep hair and garment hatching precisely as drawn. Fine varied outlines, no heavy new contour.",
+          "referenced_images": [
+            {
+              "file": "masters/lotte-reiniger-1.png",
+              "sha256": "a973fb9a6f8768f414e10ae5f794483c5b3c3781fd3f1554d9a1cc8828dff943",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "reiniger-clean-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Change only the faint peach tint of all bare skin. Make forehead, cheeks, nose, ear, chin and neck precisely the same flat warm ivory #f7f6f0 as the background, not a warmer skin colour. Keep all linework, face proportions, glasses, mouth, hair, head covering, neck boundaries and clothes exactly unchanged. Keep the skin open; do not add wrinkles or hatch shading. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/lotte-reiniger-2.png",
+              "sha256": "724ff4c3ffff08ce95c560ff05c78ce81f09c75ca9617a63516c223e34edccc3",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "72746a521d57e9853f18608d784123f9842677aa60b9a7477add17a11430e916",
+      "final_export_sha256": "4b770401282674b652a33cfaea71c5d43d7ca17c472a3a5c17ad0c72f32a78f7"
+    },
+    {
+      "name": "Thomas A. Furness III",
+      "slug": "thomas-a-furness-iii",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum portrait AFTER the named 3 December 2014 photograph of Thomas A. Furness III, image 1. Image 2 is the approved pen STYLE ONLY. Keep the photo's slightly turned head angle and warm open smile, broad elderly face, high receding forehead, short white hair, thin metallic rounded rectangular spectacles, white full short beard and moustache, blue checked shirt and dark zip-front fleece vest. Preserve the complete white hair boundary with a fine legible line and sparse hatching; it must read against ivory. Remove the embroidered brand lettering but retain the clothing shapes. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/furness-thumb.jpg",
+              "sha256": "a693f8bde8f7c7297e40745d245d224ec9b90ec3b6290960ffc120b730786835",
+              "dimensions": [
+                960,
+                1450
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "modern-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "bf787a28121b7a03c0920f9a3ac23b2a3bb1792abbdc0787a79c4be5f81847cc",
+      "final_export_sha256": "3355a6642f5a74f98e1af2d8372c59a0ebdb3fba8f92d3512cbf990407930c6e"
+    },
+    {
+      "name": "Earle C. Anthony",
+      "slug": "earle-c-anthony",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum LABEL-SIZE portrait after image1, Gilliams Service's named photograph of Earle C. Anthony of KFI published22February1925. Preserve the source's downward-facing near-profile toward viewer's left, receding short dark sleek side-parted hair, long prominent nose, clean-shaven face, closed mouth, historical dark suit, white shirt and tie. Match the broad profile and head shape. Do not straighten his face toward camera or reconstruct the hidden far eye; the visible eye is downward-looking. Preserve source pose and clothing. No microphone, paper, desk, ornamental border or caption. Final export ONLY84x105 because the native face is soft despite a larger scan. Draw only supported broad features, no invented fine eyes, eyelashes, pores, wrinkles or texture. Vertical4:5 head and upper shoulders, full documented crown and modest blank margin. Fine varied near-black pen lines on completely flat warm ivory #f7f6f0. Hair and suit alone carry restrained directional hatching and dark masses. All bare skin including forehead, cheeks, nose, ears, chin and neck must stay EXACTLY the same flat ivory as the background; absolutely no stipple, hatching, gray shadows, textured skin, gradients or warmer skin tint. Preserve single essential feature boundaries, not hatch shading under the chin. No text, frame, signature, hands, props, background objects or other people. Image2 is STYLE ONLY, approved Jepsen2.3: never borrow its face or glasses.",
+          "referenced_images": [
+            {
+              "file": "references/anthony-free.jpg",
+              "sha256": "5dd3774430bb324a4059d8feb9d72df9b00b8df51824b51095078c845aa09473",
+              "dimensions": [
+                1939,
+                1868
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "last-historical-generation-jobs.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Remove every group of parallel shading strokes on forehead above the eyebrow, below/beside the eye, across the cheek, under or beside the nose, around the mouth, on the clean-shaven chin and on the bare ear/neck. Preserve exactly his down-looking profile, the essential visible eyelid, nostril, lip and chin boundaries. Do not introduce a far eye. Keep the profile face outline fine, about half its present weight, subtly varied, without changing its shape. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/earle-c-anthony-1.png",
+              "sha256": "429ab74c0deb074dca1ed34998467d45f9c0b4651166318712737f462c6fab73",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "eb453c1e5397b74aabdbe7ec26efaf4ab04102c56671764977b59be962c46549",
+      "final_export_sha256": "e14c2a74698cf1daccffc2a2f277dcf4145f346049d73f6246688cc930ad9c56"
+    },
+    {
+      "name": "Julius Popp",
+      "slug": "julius-popp",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One new museum portrait STUDY of Julius Popp from two distinct named photographs: image1 is Swire Properties' 2017 portrait; image2 is Art-Partners' 2017 named view at bit.fall. Image3 is approved Jepsen2.3 STYLE ONLY. Preserve Popp's bald oval crown, strong dark brows, narrow deep-set eyes, long slightly curved nose, long clean-shaven angular face, thin lips, and age in these 2017 references. New pose: a clear THREE-QUARTER turn toward VIEWER'S RIGHT, nose pointing distinctly to the right edge, chin level, gaze calmly just right of the viewer. This must visibly differ from image1, whose nose points left, and image2, which is frontal. New clothing: a plain dark crewneck sweater, different from the pale collared shirt in image1 and white T-shirt in image2. No invented stubble: the face is clean-shaven. Show a fine legible bald-crown outline. The entire bald scalp is unmarked ivory, including temples and side of scalp: no invented hair or hatch shadows on the bald head. Keep skin open also under the chin and beside the nose. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/popp-swire.jpg",
+              "sha256": "4af92db96d578e2d78c68726aa54a096b39d025b701eef58714ce478b661ca71",
+              "dimensions": [
+                1920,
+                1280
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/popp-artpartners.jpg",
+              "sha256": "72961ce511a4e6c2d41407d91f7abb8d5247a2dfc3533e6b4790e9e0321ed3fc",
+              "dimensions": [
+                1896,
+                1422
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "popp-revised-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Edit only bare-skin shading in this Julius Popp drawing. Preserve this exact right-facing three-quarter pose, likeness, bald head, expression, facial proportions, brows, nose, lips and dark sweater. Remove the fine hatch-shadow clusters underneath the chin and along the jaw, on the bare neck, at the side/under the nose and below the lower lip, plus shading on bare ear and around the eyes. Replace removed shading with exactly the same flat ivory as the background, no warmer skin tint. Keep essential single chin/jaw/neck, eyelid, nostril, ear and lip boundaries so structure remains clear. The bald scalp stays empty ivory, no invented hair. Keep all real brow hairs and sweater hatching unchanged. No added skin lines, dots, stipple, hatch shadows or gradients; no other edits.",
+          "referenced_images": [
+            {
+              "file": "masters/julius-popp-2.png",
+              "sha256": "05396d3a56b9288b7004c17427e0311851a60f142e104ba7d32ba79e451b1e8b",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "popp-clean-prompt.json"
+        }
+      ],
+      "final_master_sha256": "00bd50791f0106eb174af9e383823352a75ee80893fab6541b2a7f4312feb6f1",
+      "final_export_sha256": "23d02bb6487cc8894c93748595ce336866766b0154185a37fcec287345dd811a"
+    },
+    {
+      "name": "John West",
+      "slug": "john-west",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One new museum portrait STUDY of Kent State liquid-crystal researcher John West, using two distinct named pictures: image1 Kent State's current faculty portrait, capture year unstated, controls current apparent age and establishes complete crown; image2 Barney Taxel's photograph dated14 October2014, published Kent State Magazine Spring2015, supports facial structure. Image3 approved Jepsen2.3 STYLE ONLY. Keep West's broad smiling face, swept back short white-gray hair, thick white moustache merging with short full white beard, lively narrow eyes, visible upper teeth. New pose: upright, head slightly turned toward viewer's left, relaxed closed shoulders, gaze just to left of camera, unlike frontal faculty headshot and leaning window photograph. New clothes: plain dark fine-knit V-neck sweater with no shirt collar, distinct from both source outfits. Retain white beard with restrained hair strokes and ivory spaces, not a dark beard. Do not copy the clipping at the top of image2; image1 documents full crown. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/west-kent.jpg",
+              "sha256": "7a43ae2b91351229d978e586d948e40941dc2a7b1255838b0482aafa3aa20333",
+              "dimensions": [
+                268,
+                343
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/west-magazine.jpg",
+              "sha256": "1005958a118ff1a04c899e40224a26afaae4a6346edeafffad3c6c729b745fe9",
+              "dimensions": [
+                2880,
+                1920
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "modern-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "8e1c8b5e829548369bd3adc26dccded755de6ba4d7255625f9ac2bc8d9b5d28c",
+      "final_export_sha256": "45a10731379061e5d32a6d6ac16027faffd167aa67d75c72b81ec215a7fa7164"
+    },
+    {
+      "name": "Eric J. Seibel",
+      "slug": "eric-j-seibel",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. Museum LABEL-SIZE pen portrait STUDY of Eric J. Seibel from TWO distinct named photographs. Image1 is a native crop of UW's group photograph explicitly dated2019: Seibel is the smiling man in a light blue shirt at BACK ROW LEFT, NOT the front-row man. This2019 photo controls apparent age, high forehead and strongly receded/sparse front hairline with short dark hair at sides. Image2 is the independent UW Engineering named headshot, capture year unstated: supports facial proportions only, must not restore its earlier fuller hairline or younger age. Image3 is approved Jepsen2.3 STYLE ONLY, never its identity. Preserve Seibel's clean-shaven narrow face, long nose, broad open smile with visible upper teeth, and no glasses. New pose: upright, modest three-quarter turn toward VIEWER'S RIGHT, looking just right of camera; distinct from both source head angles. New clothing: plain dark crewneck sweater, unlike both collared shirts. Small source faces: final export ONLY84x105; do not invent fine eyes, eyelashes, iris patterns, pores, detailed wrinkles or speculative hair. 4:5 head and upper shoulders, full documented crown and modest blank margin. Fine varied near-black pen on flat warm ivory#f7f6f0, simple dark hair/clothing masses with restrained directional hatching. Bare scalp, forehead, cheeks, ears, nose, chin and neck must stay EXACTLY the same flat ivory as background, without hatch shadows, stipple, dots, gradients or warmer skin tint. Use only single essential feature/jaw/neck boundaries; no skin hatching even under chin. No text, frame, hands, logos, other people or props.",
+          "referenced_images": [
+            {
+              "file": "references/seibel-2019-crop.png",
+              "sha256": "6e22067b9a87b1e6e3f5d6cefe37c4a365893852980fd915f0ed4068253edc26",
+              "dimensions": [
+                160,
+                240
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/seibel-engineering.jpg",
+              "sha256": "9a06cfbdb6a2dd0276cc9cfc36cc6a0de8f905e8e714d032d0b31f699ef0c5c1",
+              "dimensions": [
+                200,
+                250
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "seibel-2019-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Image1 is the target Eric Seibel museum drawing; image2 is the2019 named reference crop, ONLY to check the small forelock. Preserve the new right-facing pose, apparent age, face shape, broad smile, dark sweater and greatly receded hairline. Reduce the exaggerated tall curly tuft on top to the very small sparse untidy forelock supported by image2, roughly half the tuft's present height, a few economical pen strokes rather than elaborate individual curls. Keep complete crown and blank margin. Remove skin hatch shadows under the nose, under/below the lower lip, along the jaw, underneath the chin and on the bare neck and ear; use only single essential facial and chin/neck boundaries. Keep all bare scalp and skin exactly the same flat ivory as the background. Preserve real eyebrows and side/back hair; no invented wrinkles, dots, stipple or warmer skin tint. Fine varied pen contours; no other changes.",
+          "referenced_images": [
+            {
+              "file": "masters/eric-j-seibel-2019-1.png",
+              "sha256": "c674ac94bceea0cb80367cf0e87d616e9c002a770034babb84db0a953f73659c",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            },
+            {
+              "file": "references/seibel-2019-crop.png",
+              "sha256": "6e22067b9a87b1e6e3f5d6cefe37c4a365893852980fd915f0ed4068253edc26",
+              "dimensions": [
+                160,
+                240
+              ],
+              "role": "named sitter reference"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "seibel-2019-clean-prompt.json"
+        }
+      ],
+      "final_master_sha256": "0ffdaf7b234ab0b9b58b689bbe1df15bc3f9bbac1b94836f618d6e2038ce212f",
+      "final_export_sha256": "7f871507b95f64d696db8c9ce6b2c054962ef7218f03ee6843d79eb476baeafd"
+    },
+    {
+      "name": "Greg Dawe",
+      "slug": "greg-dawe",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum LABEL-SIZE portrait STUDY of Greg Dawe. Image1 is a native-resolution crop of CHEI/UCSD's June2017 SunCAVE construction photo; Greg is the older gray-haired man in the foreground at RIGHT, NOT the partly visible dark-haired younger man behind/left. The crop adds no detail. Image1 controls age, receding long gray side hair, moustache and low-set wire spectacles. Image2 is his named author headshot in the2009 OptIPortal research paper, providing side-profile structure, not younger age. Image3 is approved Jepsen2.3 STYLE ONLY. New pose: upright, gentle three-quarter turn toward viewer's left, calm small closed smile, different from both full-profile author view and leaning construction pose. New clothing: plain dark crewneck knit top, different from both collared source shirts. Preserve broad face, receding forehead, long gray side hair, nose, gray moustache and glasses supported by2017 view. Sources small/soft, export ONLY84x105; no invented eyes, eyelashes, wrinkles, pores or speculative fine detail. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/dawe-construction-crop.png",
+              "sha256": "453baba50e9341d6a51b805e10db2e3eec3cf06b304b4260bfe2fcdeca94ec2a",
+              "dimensions": [
+                300,
+                335
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/dawe-author.jpg",
+              "sha256": "7231b7b1c1f6941a4172c4698ba8e011769d2f577efb3dfff26788c957f95c68",
+              "dimensions": [
+                200,
+                233
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "dawe-crop-prompt.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Remove all shading-stroke clusters under the lip, chin and jaw and on the bare neck and ear. Preserve the actual gray moustache, brows, long gray side hair and low-set spectacles; do not confuse moustache hairs with skin shading. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/greg-dawe-1.png",
+              "sha256": "8818c9801e6ec919a20e45c99e635b6270d21772941ffd992bd7ef18c6bc42d0",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "bc74d6d33f1f1f21b3ffae764cd4884172848341ae42259ee2f7fa28b1921f80",
+      "final_export_sha256": "400596ee14170c2d1b9dc69e78911cccfb404be9bea75473368e6cdf76853029"
+    },
+    {
+      "name": "Brian T. Schowengerdt",
+      "slug": "brian-t-schowengerdt",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum LABEL-SIZE portrait STUDY of Brian T. Schowengerdt from two named published photographs. Image1 is UW2020 speaker page image, capture date unstated, controls later appearance: receding short light brown hair, high forehead, short beard and moustache, thin dark rectangular glasses. Image2 is his distinct2008 SID Information Display guest-editor headshot, supporting facial proportions only, not younger age; he had no glasses in that earlier shot. Image3 approved Jepsen2.3 STYLE ONLY. New pose: head upright and gently turned toward viewer's left, relaxed slight closed smile, not either source's direct near-frontal pose. New clothing: plain light open-collar shirt under dark sweater, unlike both source dark shirts. Keep beard, moustache and rectangular glasses as documented by later image. Small sources: final export ONLY84x105, no invented iris patterns, eyelashes, skin pores or additional age lines. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/schowengerdt-uw.jpg",
+              "sha256": "a004c1ed96d818439fb9ae8e2114e27acd048f9b2db38154ed9f681d28fb1ecc",
+              "dimensions": [
+                413,
+                440
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/brian-sid-88.jpeg",
+              "sha256": "64e0d1ace6d1172d301a016aa08e315cca27014f247208e1cda2c151ffd38ab3",
+              "dimensions": [
+                201,
+                236
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "modern-generation-jobs.json"
+        }
+      ],
+      "final_master_sha256": "fef2da0189e59ae95b0b4bc0a0533178b4750a42139026d6675d4ab5468e9723",
+      "final_export_sha256": "03810d13411c5e556e17813dc87a65b04693d68308b8e3cb9799d7641cfd72da"
+    }
+  ],
+  "discarded_attempts": [
+    {
+      "slug": "julius-popp",
+      "reason": "Initial pose remained too close to a reference and scalp had hatch shadows. Replaced by the selected opposite three-quarter pose.",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One new museum portrait STUDY of Julius Popp from two distinct named photographs: image1 is Swire Properties' 2017 portrait; image2 is Art-Partners' 2017 named view at bit.fall. Image3 is approved Jepsen2.3 STYLE ONLY. Preserve Popp's bald oval crown, strong dark brows, narrow deep-set eyes, long slightly curved nose, long clean-shaven angular face, thin lips, and age in these 2017 references. New pose: near frontal with chin level and a very slight turn toward viewer's right, looking calmly at the viewer, different from both references. New clothing: a plain dark crewneck sweater, different from the pale collared shirt in image1 and white T-shirt in image2. No invented stubble: the face is clean-shaven. Show a fine legible bald-crown outline. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/popp-swire.jpg",
+              "sha256": "4af92db96d578e2d78c68726aa54a096b39d025b701eef58714ce478b661ca71",
+              "dimensions": [
+                1920,
+                1280
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/popp-artpartners.jpg",
+              "sha256": "72961ce511a4e6c2d41407d91f7abb8d5247a2dfc3533e6b4790e9e0321ed3fc",
+              "dimensions": [
+                1896,
+                1422
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "modern-generation-jobs.json"
+        }
+      ]
+    },
+    {
+      "slug": "eric-j-seibel",
+      "reason": "Undated headshots alone gave an earlier, fuller hairline. Replaced by the dated2019 view and separate structural headshot.",
+      "stages": [
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: stylized-concept. One museum LABEL-SIZE portrait STUDY of Eric J. Seibel. Image1 is the UW College of Engineering named headshot, image2 the distinct UW Human Photonics Lab named headshot, both capture dates unstated. Image3 is approved Jepsen2.3 STYLE ONLY. Both photographs are small and somewhat soft: final export only84x105. Preserve only supported broad likeness: high receding forehead, short dark brown hair, clean-shaven narrow face, long nose and open friendly smile with visible upper teeth, no glasses. Do not invent eyelashes, iris patterns, pores, extra wrinkles or fine hair. New pose: nearly frontal with a slight turn toward viewer's right and head upright; new clothes plain dark crewneck pullover, unlike both source collared shirts. Keep his apparent age as in the named photographs, do not artificially age him to2026. Match approved Jepsen 2.3 economical near-black pen work on flat warm ivory #f7f6f0. Vertical4:5 head and upper shoulders; complete source-supported crown with modest blank margin, no hands, props, scenery, text, frame, logo or signature. Fine subtly varied contour weight, lighter above, firmer on shadow side, never uniformly heavy. Hair and clothing alone carry restrained directional hatching and dark masses. Bare forehead, cheeks, nose, ears, chin and neck stay EXACTLY the same flat ivory as background. NO skin hatching, stipple, dots, gray shadows, gradients, skin texture or invented wrinkles. Essential single facial/feature boundaries and sparse documented age folds only. Preserve apparent age, proportions, hairline, real facial hair and glasses. Style reference is STYLE ONLY; never borrow its identity.",
+          "referenced_images": [
+            {
+              "file": "references/seibel-engineering.jpg",
+              "sha256": "9a06cfbdb6a2dd0276cc9cfc36cc6a0de8f905e8e714d032d0b31f699ef0c5c1",
+              "dimensions": [
+                200,
+                250
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "references/seibel-hpl.jpg",
+              "sha256": "aa79cacbea6ca0a68503d64cadafd18120c0a634ae4c4b2a979829838b71db82",
+              "dimensions": [
+                170,
+                255
+              ],
+              "role": "named sitter reference"
+            },
+            {
+              "file": "style/approved-style-jepsen-v2.3.png",
+              "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "style only"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "modern-generation-jobs.json"
+        },
+        {
+          "tool": "image_gen.imagegen (built-in)",
+          "prompt": "Use case: identity-preserve. Target is the attached museum pen portrait. Remove the short parallel shading strokes on and below the lower lip, underneath the nose, along the jaw and especially the hatch shadow beneath the chin. Keep his clean-shaven face and the broad supported smile. Replace removed skin shading with EXACTLY the same flat ivory as the background, no warmer skin tint. Preserve essential single feature contours and chin/neck boundaries, so the face does not merge with the neck. Keep identity, apparent age, expression, head angle, proportions, hair, clothing and composition otherwise unchanged. Keep all hair/clothing hatching. No new skin marks, stipple, shadow strokes or gradients.",
+          "referenced_images": [
+            {
+              "file": "masters/eric-j-seibel-1.png",
+              "sha256": "e68a7ef94f0702824a6b772098f826f9ded9ae6b03d9cf610c8ae6bbcfbd8964",
+              "dimensions": [
+                1122,
+                1402
+              ],
+              "role": "generated target for edit"
+            }
+          ],
+          "transparent_background": false,
+          "recorded_in": "cleanup-generation-jobs.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-23",
+  "branch": "portraits/round9",
+  "research_started_from_commit": "deab0b2239983311123d3c03e1a24c77386a118e",
+  "tested_parent_commit": "e8d3ebdc11bf5b6d60d8d454ea82b27259d9fc0c",
+  "outcomes": {
+    "requested": 31,
+    "covered": 31,
+    "added": 15,
+    "pending": 16,
+    "not_found_after_search": 12,
+    "likeness_or_archive_lead_found_but_pending": 4,
+    "intentional_blanks_unchanged": [
+      "Mozi",
+      "Ibn al-Haytham",
+      "Ibn Daniyal",
+      "John Myer",
+      "A. Frankenstein",
+      "W. von Jaworski",
+      "Auguste Berthier",
+      "John Ralston"
+    ],
+    "site_named_people": 169,
+    "site_portraits": 145,
+    "site_empty_places": 24
+  },
+  "assets": {
+    "ordinary600x750": 8,
+    "label84x105": 7,
+    "after_reusable_source": 10,
+    "two_photograph_studies_uncertain_rights": 5,
+    "webp_total_bytes": 807510,
+    "responsive_copies": 15,
+    "social_preview_images": 8,
+    "format_dimensions_bytes_sha256": "pass",
+    "preexisting_people_files_unchanged": 131
+  },
+  "sources": {
+    "inspected_files": 31,
+    "selected_references": 20,
+    "all_required_metadata_present": true,
+    "native_file_bytes_dimensions_hash_and_face_bounds": "pass",
+    "comparison_sheets": 31,
+    "two_independent_exposures_per_study": "manual comparison passed; hashes and distinct records also checked. Different bytes alone do not prove independent photographs.",
+    "land_reusable_only": "pass, r07 Gotfryd/Library of Congress on recorded basis",
+    "identity_gate": "manual caption/context review passed for20 selected images; no biometric identification or automated identity guarantee",
+    "face_measurement": "approximate manual visible facial region; native raster pixels; no face-recognition score",
+    "other_context_photographs_excluded_before_portrait_work": 2
+  },
+  "commands": [
+    {
+      "command": "npm run check",
+      "exit_code": 0,
+      "result": "i18n, TypeScript, collection validation and view-spots passed;31 preexisting translation-figure advisories retained."
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "result": "production build passed; existing Vite native-config migration/timing advisories retained."
+    },
+    {
+      "command": "npm run crawl",
+      "exit_code": 0,
+      "result": "3705 pages in15 languages,0 things wrong; includes AI-agent-file checks on current main."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "browser": {
+    "site": [
+      {
+        "slug": "christiaan-huygens",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/christiaan-huygens.webp",
+        "credits": [
+          {
+            "text": "Drawing after Caspar Netscher. Public domain",
+            "url": "https://en.wikipedia.org/wiki/Christiaan_Huygens"
+          }
+        ]
+      },
+      {
+        "slug": "athanasius-kircher",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/athanasius-kircher.webp",
+        "credits": [
+          {
+            "text": "Drawing after Cornelis Bloemaert. Public domain",
+            "url": "https://commons.wikimedia.org/wiki/File:Athanasius_Kircher.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "louis-ducos-du-hauron",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/louis-ducos-du-hauron.webp",
+        "credits": [
+          {
+            "text": "Drawing after Paul Nadar. Public domain",
+            "url": "https://news.cnrs.fr/articles/the-birth-of-color-photography"
+          }
+        ]
+      },
+      {
+        "slug": "georges-claude",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/georges-claude.webp",
+        "credits": [
+          {
+            "text": "Drawing after Agence de presse Meurisse. Public domain",
+            "url": "https://en.wikipedia.org/wiki/Georges_Claude"
+          }
+        ]
+      },
+      {
+        "slug": "daniel-mcfarlan-moore",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/daniel-mcfarlan-moore.webp",
+        "credits": [
+          {
+            "text": "Drawing after Moore Electric Company. Public domain",
+            "url": "https://commons.wikimedia.org/wiki/File:DMcFarlanMoore06.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "laurens-hammond",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/laurens-hammond.webp",
+        "credits": [
+          {
+            "text": "Drawing after Unknown photographer, Evansville Press. Public domain",
+            "url": "https://commons.wikimedia.org/wiki/File:Laurens_Hammond_and_Teleview_-_Evansville_Press_Wed_Jan_3_1923.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "edwin-h-land",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/edwin-h-land.webp",
+        "credits": [
+          {
+            "text": "Drawing after Bernard Gotfryd. Public domain (LoC: no known restrictions)",
+            "url": "https://commons.wikimedia.org/wiki/File:Edwin_H._Land,_founder,_Polaroid.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "lotte-reiniger",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/lotte-reiniger.webp",
+        "credits": [
+          {
+            "text": "Drawing after N.N./Agentur Primrose Film Productions. CC BY-SA 4.0",
+            "url": "https://commons.wikimedia.org/wiki/File:Lotte_Reiniger_London_1970.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "thomas-a-furness-iii",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/thomas-a-furness-iii.webp",
+        "credits": [
+          {
+            "text": "Drawing after Lhcarey. CC BY-SA 4.0",
+            "url": "https://en.wikipedia.org/wiki/Thomas_A._Furness_III"
+          }
+        ]
+      },
+      {
+        "slug": "earle-c-anthony",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/earle-c-anthony.webp",
+        "credits": [
+          {
+            "text": "Drawing after Gilliams Service, New York. Public domain",
+            "url": "https://commons.wikimedia.org/wiki/File:Earle_C._Anthony_of_KFI,_1925_photo_by_the_Gilliams_Service.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "julius-popp",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/julius-popp.webp",
+        "credits": [
+          {
+            "text": "Swire Properties",
+            "url": "https://www.swireproperties.com/en/media/press-releases/2017/20170302/"
+          },
+          {
+            "text": "Art-Partners",
+            "url": "https://art-partners.co/projects/bit-fall-by-julius-popp/"
+          }
+        ]
+      },
+      {
+        "slug": "john-west",
+        "natural": [
+          600,
+          750
+        ],
+        "display": [
+          336,
+          420
+        ],
+        "src": "./people/john-west.webp",
+        "credits": [
+          {
+            "text": "Kent State University",
+            "url": "https://www.kent.edu/materials-science/john-west"
+          },
+          {
+            "text": "Kent State Magazine",
+            "url": "https://www.kent.edu/magazine/news/window-future"
+          }
+        ]
+      },
+      {
+        "slug": "eric-j-seibel",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/eric-j-seibel.webp",
+        "credits": [
+          {
+            "text": "University of Washington Mechanical Engineering",
+            "url": "https://www.me.washington.edu/news/article/2021-07-08/affiliate-residence"
+          },
+          {
+            "text": "University of Washington College of Engineering",
+            "url": "https://www.engr.washington.edu/facultyfinder/eric-seibel"
+          }
+        ]
+      },
+      {
+        "slug": "greg-dawe",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/greg-dawe.webp",
+        "credits": [
+          {
+            "text": "UC San Diego Cultural Heritage Engineering Initiative (CHEI)",
+            "url": "https://chei.ucsd.edu/suncave/"
+          },
+          {
+            "text": "Elsevier, Future Generation Computer Systems; author copy hosted at SDSC",
+            "url": "https://users.sdsc.edu/~phil/papers/Optiportal2008.pdf"
+          }
+        ]
+      },
+      {
+        "slug": "brian-t-schowengerdt",
+        "natural": [
+          84,
+          105
+        ],
+        "display": [
+          168,
+          210
+        ],
+        "src": "./people/brian-t-schowengerdt.webp",
+        "credits": [
+          {
+            "text": "University of Washington CSE",
+            "url": "https://courses.cs.washington.edu/courses/cse481v/20sp/speakers.php"
+          },
+          {
+            "text": "Society for Information Display, Information Display",
+            "url": "https://archive.informationdisplay.org/Portals/InformationDisplay/IssuePDF/07_2008.pdf"
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "outcomes": 31,
+        "drawings_loaded": 15,
+        "comparison_sheets_loaded": 31,
+        "filter_counts": [
+          31,
+          15,
+          16
+        ],
+        "horizontal_overflow": false
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "outcomes": 31,
+        "drawings_loaded": 15,
+        "comparison_sheets_loaded": 31,
+        "filter_counts": [
+          31,
+          15,
+          16
+        ],
+        "horizontal_overflow": false
+      }
+    ],
+    "intentional_blanks": [
+      "mozi",
+      "ibn-al-haytham",
+      "ibn-daniyal",
+      "john-myer",
+      "a-frankenstein",
+      "w-von-jaworski",
+      "auguste-berthier",
+      "john-ralston"
+    ],
+    "people_page_portrait_instances": 151,
+    "people_page_portraits": 145,
+    "small_display_policy": "Existing museum CSS displays84×105 native portraits at168×210 on person pages; files are not enlarged/replaced and small:true excludes3D wall portraits.",
+    "page_errors": []
+  },
+  "rights": "No blanket publication clearance. Five studies retain uncertain source-photo publication rights. Source images and source/drawing comparisons are private. Lotte Reiniger and Furness adaptations retain CC BY-SA4.0 attribution/licence.",
+  "limits": [
+    "Visual likeness judgment is subjective; source identity depends on the named publisher context.",
+    "Small/soft source limitations are not repaired by a larger generated master.",
+    "Publication/upload dates are distinguished from actual capture dates; unknown dates stay unknown.",
+    "16 pending outcomes do not assert that no likeness exists anywhere."
+  ],
+  "portable_gallery": {
+    "local_asset_and_document_links_checked": 113,
+    "all_resolve": true,
+    "no_remote_image_sources": true
+  }
+}

@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Christiaan Huygens",
+    "slug": "christiaan-huygens",
+    "file": "christiaan-huygens.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 143768,
+    "sha256": "7e0d57ee46dcb36baa5442e5dee1496750aa76ec55d1522ff4ccb0d0daabea66",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r01"
+    ],
+    "master_sha256": "78b0975773067f2c7f3384fefd710f864fab5c2341966b27ab0f454f08c921e3",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Athanasius Kircher",
+    "slug": "athanasius-kircher",
+    "file": "athanasius-kircher.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 117164,
+    "sha256": "c4a2c71f0fdc162bda4116fd9b0f44abdc0e243420d773a7debebeb4a8700ca6",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r02"
+    ],
+    "master_sha256": "8257f4424666e5a7b2be06506eb95eaef999e3a54b44d3c275dcd48b0db0705f",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Louis Ducos du Hauron",
+    "slug": "louis-ducos-du-hauron",
+    "file": "louis-ducos-du-hauron.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 107834,
+    "sha256": "201541d459da8e0f72e9ccb1e6a6cb0ec11871692543037e8abb30b178af1d6c",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r03"
+    ],
+    "master_sha256": "361762d7d5c7cd939d92352dec7394b78c3a0ffa9b101a1f902a1a5abffda5be",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Georges Claude",
+    "slug": "georges-claude",
+    "file": "georges-claude.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 2320,
+    "sha256": "9bd6fe94ef3f9e2b0b736dffd2905549eef8a283d8beebb29f8fe5ab9e0bc13e",
+    "kind": "after",
+    "small": true,
+    "source_ids": [
+      "r04"
+    ],
+    "master_sha256": "b42ae7b709b527470793a637f27621e3fb3f8fe23397e2cad4065685419b01d9",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Daniel McFarlan Moore",
+    "slug": "daniel-mcfarlan-moore",
+    "file": "daniel-mcfarlan-moore.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 1944,
+    "sha256": "dc26ace17cbf680719c943bf51308d0d649604f6867eb04899836b4a1c5a55a4",
+    "kind": "after",
+    "small": true,
+    "source_ids": [
+      "r05"
+    ],
+    "master_sha256": "0cc88806f557e0361014fe10a2071d0e4e57f3dd9b871ee164ac48913330fdb2",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Laurens Hammond",
+    "slug": "laurens-hammond",
+    "file": "laurens-hammond.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 2180,
+    "sha256": "e786d5324380a7dc1ecd25f5f8b453470cbbe30cd77504d97d536feab5288ea7",
+    "kind": "after",
+    "small": true,
+    "source_ids": [
+      "r06"
+    ],
+    "master_sha256": "6b6b1a30bfdb35d6d65135a9ed9af792c304167b19d162a260472666d5cec092",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Edwin H. Land",
+    "slug": "edwin-h-land",
+    "file": "edwin-h-land.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 90828,
+    "sha256": "e4ac95c070fceae135fbe41945bc283e21ba76a3d69bd31d2b8a034f33b39fef",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r07"
+    ],
+    "master_sha256": "1bf39a50735161515d9e749de157f441a92c0db9d8f02a04a6ffef95630d0d66",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Lotte Reiniger",
+    "slug": "lotte-reiniger",
+    "file": "lotte-reiniger.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 54366,
+    "sha256": "4b770401282674b652a33cfaea71c5d43d7ca17c472a3a5c17ad0c72f32a78f7",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r08"
+    ],
+    "master_sha256": "72746a521d57e9853f18608d784123f9842677aa60b9a7477add17a11430e916",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Thomas A. Furness III",
+    "slug": "thomas-a-furness-iii",
+    "file": "thomas-a-furness-iii.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 119474,
+    "sha256": "3355a6642f5a74f98e1af2d8372c59a0ebdb3fba8f92d3512cbf990407930c6e",
+    "kind": "after",
+    "small": false,
+    "source_ids": [
+      "r09"
+    ],
+    "master_sha256": "bf787a28121b7a03c0920f9a3ac23b2a3bb1792abbdc0787a79c4be5f81847cc",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Earle C. Anthony",
+    "slug": "earle-c-anthony",
+    "file": "earle-c-anthony.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 2332,
+    "sha256": "e14c2a74698cf1daccffc2a2f277dcf4145f346049d73f6246688cc930ad9c56",
+    "kind": "after",
+    "small": true,
+    "source_ids": [
+      "r10"
+    ],
+    "master_sha256": "eb453c1e5397b74aabdbe7ec26efaf4ab04102c56671764977b59be962c46549",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "source reusable on recorded basis"
+  },
+  {
+    "name": "Julius Popp",
+    "slug": "julius-popp",
+    "file": "julius-popp.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 60542,
+    "sha256": "23d02bb6487cc8894c93748595ce336866766b0154185a37fcec287345dd811a",
+    "kind": "study",
+    "small": false,
+    "source_ids": [
+      "r11",
+      "r12"
+    ],
+    "master_sha256": "00bd50791f0106eb174af9e383823352a75ee80893fab6541b2a7f4312feb6f1",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "uncertain; reference-only photographs; no permission obtained"
+  },
+  {
+    "name": "John West",
+    "slug": "john-west",
+    "file": "john-west.webp",
+    "dimensions": [
+      600,
+      750
+    ],
+    "bytes": 98436,
+    "sha256": "45a10731379061e5d32a6d6ac16027faffd167aa67d75c72b81ec215a7fa7164",
+    "kind": "study",
+    "small": false,
+    "source_ids": [
+      "r13",
+      "r14"
+    ],
+    "master_sha256": "8e1c8b5e829548369bd3adc26dccded755de6ba4d7255625f9ac2bc8d9b5d28c",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "uncertain; reference-only photographs; no permission obtained"
+  },
+  {
+    "name": "Eric J. Seibel",
+    "slug": "eric-j-seibel",
+    "file": "eric-j-seibel.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 1928,
+    "sha256": "7f871507b95f64d696db8c9ce6b2c054962ef7218f03ee6843d79eb476baeafd",
+    "kind": "study",
+    "small": true,
+    "source_ids": [
+      "r30",
+      "r15"
+    ],
+    "master_sha256": "0ffdaf7b234ab0b9b58b689bbe1df15bc3f9bbac1b94836f618d6e2038ce212f",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "uncertain; reference-only photographs; no permission obtained"
+  },
+  {
+    "name": "Greg Dawe",
+    "slug": "greg-dawe",
+    "file": "greg-dawe.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 2256,
+    "sha256": "400596ee14170c2d1b9dc69e78911cccfb404be9bea75473368e6cdf76853029",
+    "kind": "study",
+    "small": true,
+    "source_ids": [
+      "r17",
+      "r18"
+    ],
+    "master_sha256": "bc74d6d33f1f1f21b3ffae764cd4884172848341ae42259ee2f7fa28b1921f80",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "uncertain; reference-only photographs; no permission obtained"
+  },
+  {
+    "name": "Brian T. Schowengerdt",
+    "slug": "brian-t-schowengerdt",
+    "file": "brian-t-schowengerdt.webp",
+    "dimensions": [
+      84,
+      105
+    ],
+    "bytes": 2138,
+    "sha256": "03810d13411c5e556e17813dc87a65b04693d68308b8e3cb9799d7641cfd72da",
+    "kind": "study",
+    "small": true,
+    "source_ids": [
+      "r19",
+      "r20"
+    ],
+    "master_sha256": "fef2da0189e59ae95b0b4bc0a0533178b4750a42139026d6675d4ab5468e9723",
+    "master_dimensions": [
+      1122,
+      1402
+    ],
+    "publication_rights": "uncertain; reference-only photographs; no permission obtained"
+  }
+]

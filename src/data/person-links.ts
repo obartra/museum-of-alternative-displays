@@ -33,9 +33,9 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "record"
   },
   "Everett Bickley": {
-    "url": "https://scholarsarchive.byu.edu/facpub/2074",
-    "label": "Dale L. Cressman on the zipper, Journalism History, 2018",
-    "kind": "record"
+    "url": "https://sirismm.si.edu/EADpdfs/NMAH.AC.0683.pdf",
+    "label": "Everett Bickley papers, biographical note, Smithsonian National Museum of American History",
+    "kind": "biography"
   },
   "Christiaan Huygens": {
     "url": "https://en.wikipedia.org/wiki/Christiaan_Huygens",
@@ -43,8 +43,8 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "biography"
   },
   "Thomas Rasmussen Walgensten": {
-    "url": "https://lucerna.exeter.ac.uk/location/index.php?id=1504870",
-    "label": "Walgensten, Thomas Rasmussen, Lucerna Magic Lantern Web Resource, University of Exeter",
+    "url": "https://lucerna.exeter.ac.uk/person/index.php?id=6003671&language=EN",
+    "label": "Thomas Rasmussen Walgensten, Lucerna, University of Exeter",
     "kind": "record"
   },
   "Athanasius Kircher": {
@@ -53,8 +53,8 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "biography"
   },
   "Eric J. Seibel": {
-    "url": "https://www.me.washington.edu/people/faculty/eric_seibel",
-    "label": "Eric Seibel, Mechanical Engineering, University of Washington",
+    "url": "https://www.engr.washington.edu/facultyfinder/eric-seibel",
+    "label": "Eric Seibel, College of Engineering, University of Washington",
     "kind": "profile"
   },
   "Thomas A. Furness III": {
@@ -533,8 +533,8 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "biography"
   },
   "Greg Dawe": {
-    "url": "https://www.evl.uic.edu/documents/evl_50th.pdf",
-    "label": "Electronic Visualization Laboratory's 50th Anniversary Retrospective, PRESENCE (2024)",
+    "url": "https://chei.ucsd.edu/suncave/",
+    "label": "Greg Dawe and SunCAVE, Cultural Heritage Engineering Initiative, UC San Diego",
     "kind": "record"
   },
   "Samuel Achilefu": {
@@ -798,9 +798,9 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "biography"
   },
   "M. C. Schlamp": {
-    "url": "https://www.nature.com/articles/370354a0",
-    "label": "Colvin, Schlamp and Alivisatos, quantum-dot LED paper, Nature 1994",
-    "kind": "record"
+    "url": "https://www.aquestconsulting.com/team/",
+    "label": "Michael Schlamp, chemistry PhD, UC Berkeley; Aquest Consulting",
+    "kind": "profile"
   },
   "Ibn Daniyal": {
     "url": "https://wepa.unima.org/en/?p=773",

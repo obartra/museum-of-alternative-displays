@@ -1,0 +1,209 @@
+[
+  {
+    "file": "public/people/small/christiaan-huygens.webp",
+    "bytes": 8842,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "bf018045072b9e99a0e154f2cd7bcb1bb1700a9fc649ce17dc14d5149311d3f6"
+  },
+  {
+    "file": "public/og/people/christiaan-huygens.jpg",
+    "bytes": 66485,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "32fcc6ec068214c14fe2f912cd91d1feaec6063a58245ff400820906eb5a4d62"
+  },
+  {
+    "file": "public/people/small/athanasius-kircher.webp",
+    "bytes": 5200,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "aecd8af76dfc1e39ff0d1c37788bbc1cb01d5bf8335c264ecb92b05cb8bfb707"
+  },
+  {
+    "file": "public/og/people/athanasius-kircher.jpg",
+    "bytes": 56284,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "a9ef10f75de7204abd2d188da2705d17dba4ab8c9974b4c322137a320f9d3b0b"
+  },
+  {
+    "file": "public/people/small/louis-ducos-du-hauron.webp",
+    "bytes": 5938,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "6ba23b8e66a624824da603eaa54e0b4ab185c85b9c34805ef494840820c35efc"
+  },
+  {
+    "file": "public/og/people/louis-ducos-du-hauron.jpg",
+    "bytes": 52765,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "1422aef8b8badaac16d4ddc571199202522df8b85cb517f6a3336a6a8f522683"
+  },
+  {
+    "file": "public/people/small/georges-claude.webp",
+    "bytes": 1714,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "068fb03e123d7eff50423c8fc0f3bdcfb0c78cb26be9f56612d8f44458f6540e"
+  },
+  {
+    "file": "public/people/small/daniel-mcfarlan-moore.webp",
+    "bytes": 1430,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "47a9b0cbc712cdb845ee6b5a80abcc85938541678339e4e5b3eca9729e7f4849"
+  },
+  {
+    "file": "public/people/small/laurens-hammond.webp",
+    "bytes": 1688,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "8bf5284160d80dedf337abf9715b5383b1ccd99de5e7cba142ce0d9cee2719b1"
+  },
+  {
+    "file": "public/people/small/edwin-h-land.webp",
+    "bytes": 5978,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "d6f2f0c2b57a6d986de586b39234f9bc2f1649540b30f4c6c0d1376dd0509edb"
+  },
+  {
+    "file": "public/og/people/edwin-h-land.jpg",
+    "bytes": 48839,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "db33e8d171d27834e83286f613705882072e5e123100ba2f62239b254d492660"
+  },
+  {
+    "file": "public/people/small/lotte-reiniger.webp",
+    "bytes": 4200,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "ac35cb81fcc0e007b5b22aefada128fe4f97b9d764dec64ddc998efc7b7353b5"
+  },
+  {
+    "file": "public/og/people/lotte-reiniger.jpg",
+    "bytes": 31412,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "5f8709f415c062594c642d3c1c74a91d2a05a12d3f90c6f374d12885a6b68ecf"
+  },
+  {
+    "file": "public/people/small/thomas-a-furness-iii.webp",
+    "bytes": 6402,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "605335ddcd49e9dce2f5559d7f4041612695287beb81c7fce67f177a821aa2be"
+  },
+  {
+    "file": "public/og/people/thomas-a-furness-iii.jpg",
+    "bytes": 58501,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "b36c1554703b0483346f67bf7ce276beaf3a2738e7d1cbd997f1a1333fc5cba6"
+  },
+  {
+    "file": "public/people/small/earle-c-anthony.webp",
+    "bytes": 1780,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "cdc0c167893f48b84cd8512a881bdaccc312690cc22e18f980cd01900b7bd5a4"
+  },
+  {
+    "file": "public/people/small/julius-popp.webp",
+    "bytes": 3554,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "9755b10038cf5007bcc683489fa99017fdbd29075fbc74db1b85edf531910ad6"
+  },
+  {
+    "file": "public/og/people/julius-popp.jpg",
+    "bytes": 33250,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "25b4b73530d28117ee4fb38d33c50bc3df933ea991b37b4db7d300810bc20b2c"
+  },
+  {
+    "file": "public/people/small/john-west.webp",
+    "bytes": 5012,
+    "dimensions": [
+      168,
+      210
+    ],
+    "sha256": "673a336fad59e16e2738c5b9b817371ef6ff6c7e4dba9464a451b4f1c4ffe23c"
+  },
+  {
+    "file": "public/og/people/john-west.jpg",
+    "bytes": 49455,
+    "dimensions": [
+      480,
+      600
+    ],
+    "sha256": "2d026dd9ac64eac6319d8cc49637aba412c3bac84f31d38d65f0fd429ea8c63b"
+  },
+  {
+    "file": "public/people/small/eric-j-seibel.webp",
+    "bytes": 1398,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "15b5bde371b1066721025d272ea063cdf9ef6b15fd057f2c1cb39f51e9b9ff80"
+  },
+  {
+    "file": "public/people/small/greg-dawe.webp",
+    "bytes": 1620,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "122995d8870115d4adea15678b6dced5cd4c2346507074e8493cf45a5de2a0b5"
+  },
+  {
+    "file": "public/people/small/brian-t-schowengerdt.webp",
+    "bytes": 1554,
+    "dimensions": [
+      84,
+      105
+    ],
+    "sha256": "d72267ec96f8e488b2848b4a73ac83484e6423d67fe689b24c1af4bb125bd7d5"
+  }
+]

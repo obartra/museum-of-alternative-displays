@@ -1,0 +1,48 @@
+[
+  {
+    "id": "x01",
+    "search_person": "Greg Dawe",
+    "page": "https://today.ucsd.edu/story/from-star-to-sun-the-qualcomm-institutes-cave-expands",
+    "image_url": "https://today.ucsd.edu/news_uploads/SunCAVEJoelChurchQIweb.jpg",
+    "words_naming_sitter": "Joel Polizzi ’14",
+    "publisher": "UC San Diego Today",
+    "photographer": "Photo courtesy of Falko Kuester; photographer not explicitly stated.",
+    "year": "Article published 15 August 2019; capture year unstated.",
+    "licence_as_found": "No open photo licence stated.",
+    "file": "dawe-suncave1.jpg",
+    "file_bytes": 381596,
+    "dimensions": [
+      1500,
+      996
+    ],
+    "sha256": "026933c924b1e4ca58a50580c5dab0113786ee83681bca1eca1d784e6258a1b5",
+    "face_width_px": null,
+    "measurement_note": "No captioned Greg Dawe face to measure.",
+    "identity_gate": "fail for Greg Dawe",
+    "verdict": "Excluded context photo; never used for generation. The caption names Joel Polizzi, not Greg Dawe.",
+    "comparison_sheet": "comparisons/x01.jpg"
+  },
+  {
+    "id": "x02",
+    "search_person": "Greg Dawe",
+    "page": "https://today.ucsd.edu/story/from-star-to-sun-the-qualcomm-institutes-cave-expands",
+    "image_url": "https://today.ucsd.edu/news_uploads/19-08-13_starcaveabove_.jpg",
+    "words_naming_sitter": "A view of the StarCAVE, from above.",
+    "publisher": "UC San Diego Today",
+    "photographer": null,
+    "year": "Article published 15 August 2019; capture year unstated.",
+    "licence_as_found": "No open photo licence stated.",
+    "file": "dawe-suncave4.jpg",
+    "file_bytes": 386019,
+    "dimensions": [
+      1500,
+      996
+    ],
+    "sha256": "8f0d4096c89339f45d6614c1867567cb3a6c94fa49fe0112877529d6e563175a",
+    "face_width_px": null,
+    "measurement_note": "No captioned Greg Dawe face to measure.",
+    "identity_gate": "fail for Greg Dawe",
+    "verdict": "Excluded context photo; never used for generation. People are seen largely from behind, without a caption identifying any of them as Greg Dawe.",
+    "comparison_sheet": "comparisons/x02.jpg"
+  }
+]
