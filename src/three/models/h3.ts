@@ -262,7 +262,7 @@ export function oled(): Built {
   root.add(fused(made));
   return {
     root, inDark: 'glows', glow: 0xb8a0ff, view: [28, 8], surface: s.canvas,
-    views: { seat: { at: [0, 1, 3.6], to: [0, 0.95, 0] } },
+    views: { edge: { at: [2, 1.25, 1.1], to: [0.7, 0.95, 0], fov: 40, play: 0.1 }, seat: { at: [0, 1, 3.6], to: [0, 0.95, 0] } },
     update: ({ t }) => {
       const c = s.ctx, n = now();
       c.fillStyle = '#000'; c.fillRect(0, 0, 640, 360);
@@ -444,7 +444,7 @@ export function microled(): Built {
   root.add(fused(made));
   return {
     root, inDark: 'glows', glow: 0xffb0d0, view: [26, 8], surface: s.canvas,
-    views: { socket: { at: [1.35, top + 0.25, 1.05], to: [0.74, top, -0.06], play: 0.4 } },
+    views: { wall: { at: [0, 1.2, 5], to: [0, 1, 0], fov: 34, play: 0.2 }, socket: { at: [1.35, top + 0.25, 1.05], to: [0.74, top, -0.06], play: 0.4 } },
     update: ({ t }) => {
       const c = s.ctx;
       const g = c.createLinearGradient(0, 0, 768, 512);
@@ -498,7 +498,7 @@ export function tfel(): Built {
   root.add(fused(made));
   return {
     root, inDark: 'glows', glow: 0xffb21a, view: [22, 10], surface: s.canvas,
-    views: { dots: { at: [-1.15, 1.5, 0.8], to: [-0.6, 1.05, 0.06], play: 0.35 } },
+    views: { front: { at: [0, 1.1, 3.7], to: [0, 0.95, 0], fov: 34, play: 0.2 }, dots: { at: [-1.15, 1.5, 0.8], to: [-0.6, 1.05, 0.06], play: 0.35 } },
     update: () => {
       const c = s.ctx, n = now();
       c.fillStyle = '#060400'; c.fillRect(0, 0, 640, 400);
@@ -581,7 +581,7 @@ export function transparent(): Built {
   return {
     root, inDark: 'glows', glow: 0x9fe8ff, view: [16, 8], surface: s.canvas,
     // a standing visitor square to the pane: from this height the ring on the glass sits round the clock behind it
-    views: { window: { room: true, at: [0, 0.62, 3], to: [0, 0.94, -0.05], fov: 42, play: 0.14 } },
+    views: { pane: { at: [0.8, 1.2, 1.8], to: [0.1, 1, 0.3], fov: 34, play: 0.1 }, window: { room: true, at: [0, 0.62, 3], to: [0, 0.94, -0.05], fov: 42, play: 0.14 } },
     update: ({ t }) => {
       const n = now();
       if (n.s !== stamp) {
@@ -671,7 +671,7 @@ export function flexible(): Built {
   root.add(front, back, fused(made));
   return {
     root, inDark: 'glows', glow: 0x7fe0c0, view: [34, 10], surface: s.canvas,
-    views: { edge: { at: [1.95, 0.75, 0.95], to: [0.9, 0.6, 0] } },
+    views: { front: { at: [0, 1.1, 4.3], to: [0, 0.9, 0], fov: 34, play: 0.2 }, edge: { at: [1.95, 0.75, 0.95], to: [0.9, 0.6, 0] } },
     update: ({ t }) => {
       const c = s.ctx;
       for (let y = 0; y < 448; y += 8) { c.fillStyle = hsl(160 + 70 * Math.sin(y / 70 + t * 0.9), 85, 30 + 14 * Math.sin(y / 31 - t)); c.fillRect(0, y, 512, 8); }
@@ -793,6 +793,7 @@ export function quantumDots(): Built {
   const hue = new THREE.Color();
   let drawn = '', due = 0;
   return {
+    views: { screen: { at: [0, 1.45, 3.4], to: [0, 1.35, -0.4], fov: 36, play: 0.2 }, pixel: { at: [0.45, 1, 1.45], to: [0, 0.45, 0.15], fov: 34, play: 0.1 } },
     root, inDark: 'glows', glow: 0x9db4ff, view: [22, 14], surface: s.canvas,
     update: ({ t }) => {
       hue.setHSL((t * 0.045) % 1, 1, 0.5);

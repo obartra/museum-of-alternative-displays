@@ -272,7 +272,7 @@ export function stereoscope(): Built {
   fuse(root);
   v.updateMatrixWorld(true);
   const at = v.localToWorld(new THREE.Vector3(0.212, 0, LZ + 0.17)), to = v.localToWorld(new THREE.Vector3(0.3, 0, CZ));
-  return { root, inDark: 'vanishes', view: [-8, 14], views: { eyepiece: { at: [at.x, at.y, at.z], to: [to.x, to.y, to.z], fov: 33, play: 0.045 } } };
+  return { root, inDark: 'vanishes', view: [-8, 14], views: { card: { at: [-0.3, 1.6, 1.4], to: [-0.6, 1.25, 0], fov: 34, play: 0.1 }, eyepiece: { at: [at.x, at.y, at.z], to: [to.x, to.y, to.z], fov: 33, play: 0.045 } } };
 }
 
 /** Parallax barrier: a mask of slits in front of the pixels. Each eye sees through the slits to a different set of columns. */
@@ -316,7 +316,7 @@ export function parallaxBarrier(): Built {
   // a lamp in the frame shows that it is on
   root.add(pilot(0x40d070, 0.008, [W / 2 + 0.035, y - H / 2 - 0.02, -0.004]).rotateX(T));
   fuse(root);
-  return { root, views: { spot: { at: [0, 0.95, 3.0], to: [0, 0.9, 0], fov: 34, play: 0.2 } }, inDark: 'glows', glow: 0xff8fb0, view: [9, 4] };
+  return { root, views: { slits: { at: [0.4, 1.05, 1.4], to: [0, 0.9, 0], fov: 30, play: 0.1 }, spot: { at: [0, 0.95, 3.0], to: [0, 0.9, 0], fov: 34, play: 0.2 } }, inDark: 'glows', glow: 0xff8fb0, view: [9, 4] };
 }
 
 /** Lenticular sheet: ribs of plastic lens over a striped print. Which stripe each rib shows depends on where you stand. */
@@ -339,7 +339,7 @@ export function lenticular(): Built {
   fuse(root);
   let shown = -99;
   return {
-    root, views: { pass: { at: [0, 1.05, 3.0], to: [0, 0.92, 0], fov: 34, play: 0.45 } }, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
+    root, views: { ribs: { at: [0.4, 1, 1.4], to: [0, 0.92, -0.12], fov: 30, play: 0.1 }, pass: { at: [0, 1.05, 3.0], to: [0, 0.92, 0], fov: 34, play: 0.45 } }, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
     update: (env) => {
       const [az] = gaze(root, env);
       const frame = Math.round(Math.max(-1, Math.min(1, az / 0.7)) * 4); // nine views behind every rib
@@ -380,7 +380,7 @@ export function integral(): Built {
   fuse(root);
   let key = '';
   return {
-    root, views: { round: { at: [0, 0.98, 2.8], to: [0, 0.9, 0], fov: 34, play: 0.35 } }, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
+    root, views: { lenses: { at: [0.3, 1, 0.55], to: [0, 0.9, 0], fov: 30, play: 0.1 }, round: { at: [0, 0.98, 2.8], to: [0, 0.9, 0], fov: 34, play: 0.35 } }, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
     update: (env) => {
       const [az, el] = gaze(root, env, y);
       // a lens array gives a limited number of views, so the picture moves in small steps
@@ -511,7 +511,7 @@ export function hologram(): Built {
   for (const [tx, ty] of [[-0.6, 0.5], [0.6, 0.5], [-0.6, -0.5], [0.6, -0.5]]) { const b = beam(RED, 0.2); b.aim(src, [tx, y + ty, -0.012]); root.add(b.line); }
   fuse(root);
   return {
-    root, views: { plate: { at: [0.2, 1.12, 2.3], to: [0, 1.0, -0.3], fov: 34, play: 0.3 } }, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
+    root, views: { bench: { at: [-2, 1.7, 1.2], to: [-0.4, 0.7, -0.5], fov: 40, play: 0.1 }, plate: { at: [0.2, 1.12, 2.3], to: [0, 1.0, -0.3], fov: 34, play: 0.3 } }, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
     update: ({ lights }) => { mat.uniforms.uGain.value = 1 - 0.5 * lights; },
   };
 }
@@ -596,7 +596,7 @@ export function hmd(): Built {
   let stamp = -1;
   return {
     root, inDark: 'glows', glow: 0x9fc0ff, view: [28, 8],
-    views: { worn: { at: [0.09, EY, FZ - 0.09], to: [0.09, EY, FZ + 0.5], fov: 62, play: 0.1 } },
+    views: { kit: { at: [1.35, 0.75, 1.3], to: [0.86, 0.36, 0.5], fov: 32, play: 0.1 }, worn: { at: [0.09, EY, FZ - 0.09], to: [0.09, EY, FZ + 0.5], fov: 62, play: 0.1 } },
     update: ({ t }) => {
       things.forEach((mesh, i) => { mesh.rotation.set(t * 0.4 + i, t * 0.3, 0); });
       const n = now();
@@ -691,7 +691,7 @@ export function retinal(): Built {
   root.add(b1.line, b2.line);
   let lastRow = -1;
   return {
-    root, views: { retina: { at: [1.25, 1.35, 0.95], to: [0, 1.05, -0.5], fov: 30 } }, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
+    root, views: { front: { at: [0, 1.3, 3.2], to: [-0.2, 1.05, 0.3], fov: 34, play: 0.2 }, retina: { at: [1.25, 1.35, 0.95], to: [0, 1.05, -0.5], fov: 30 } }, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
     update: ({ t }) => {
       const n = now(), c = s.ctx;
       const row = Math.floor((t * 22) % 32), u = (t * 9) % 1;
@@ -767,7 +767,7 @@ export function hud(): Built {
   fuse(root);
   return {
     root, inDark: 'glows', glow: 0x40ff70, view: [7, 4], surface: s.canvas,
-    views: { seat: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], fov: 30, play: 0.05 } },
+    views: { lens: { at: [0.45, 1.45, 0.6], to: [0, 0.88, -0.05], fov: 34, play: 0.1 }, seat: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], fov: 30, play: 0.05 } },
     update: ({ t, lights }) => {
       const c = s.ctx, n = now();
       c.fillStyle = '#000'; c.fillRect(0, 0, 512, 400);

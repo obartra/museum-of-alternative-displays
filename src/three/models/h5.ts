@@ -45,7 +45,7 @@ export function gyricon(): Built {
   root.add(fused(made));
   let first = true, sec = -1, d = dots('00');
   return {
-    root, views: { beads: { at: [0.6, 1.05, 1.0], to: [0.1, 0.8, 0], fov: 28 } }, inDark: 'vanishes', view: [20, 6],
+    root, views: { front: { at: [0, 1, 3.7], to: [0, 0.78, 0], fov: 34, play: 0.2 }, beads: { at: [0.6, 1.05, 1.0], to: [0.1, 0.8, 0], fov: 28 } }, inDark: 'vanishes', view: [20, 6],
     update: () => {
       const n = now();
       if (n.s !== sec) { sec = n.s; d = dots(n.hhmmss.slice(6)); }
@@ -122,7 +122,7 @@ export function eink(): Built {
   };
   let slot = -1, stamp = '', flashAt = -9, shown = -1;
   return {
-    root, views: { read: { at: [0, 1.45, 3.0], to: [0, 1.1, 0], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [22, 8], surface: s.canvas,
+    root, views: { page: { at: [0.15, 1.3, 1.7], to: [0, 1.15, 0], fov: 32, play: 0.1 }, read: { at: [0, 1.45, 3.0], to: [0, 1.1, 0], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [22, 8], surface: s.canvas,
     update: ({ t }) => {
       const n = now(), q = Math.floor((n.h * 3600 + n.m * 60 + n.s) / 15);
       if (q !== slot) { if (slot >= 0) flashAt = t; slot = q; stamp = `${n.hhmm}:${String(Math.floor(n.s / 15) * 15).padStart(2, '0')}`; shown = -1; }
@@ -190,7 +190,7 @@ export function chlcd(): Built {
     for (const p of path) { for (let i = 1; i < p.length; i++) total += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); total += 30; }
   };
   return {
-    root, views: { slate: { at: [0, 2.2, 1.12], to: [0, 0.7, 0.02], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [18, 18], surface: s.canvas,
+    root, views: { stroke: { at: [0.3, 1.05, 0.65], to: [0, 0.75, 0.05], fov: 34, play: 0.1 }, slate: { at: [0, 2.2, 1.12], to: [0, 0.7, 0.02], fov: 38, play: 0.1 } }, inDark: 'vanishes', view: [18, 18], surface: s.canvas,
     update: ({ t }) => {
       const T = 13, u = t % T, k = Math.floor(t / T);
       if (k !== cycle || !path.length) { cycle = k; plan(now().hhmm); shown = 0; }
@@ -334,7 +334,7 @@ export function electrowetting(): Built {
   root.add(fused(made));
   let first = true;
   return {
-    root, views: { cells: { at: [0.5, 1.6, 1.2], to: [0, 0.85, 0.15], fov: 30 } }, inDark: 'vanishes', view: [22, 16],
+    root, views: { front: { at: [0, 1.3, 2.8], to: [0, 0.7, 0], fov: 34, play: 0.2 }, cells: { at: [0.5, 1.6, 1.2], to: [0, 0.85, 0.15], fov: 30 } }, inDark: 'vanishes', view: [22, 16],
     update: ({ t }) => {
       for (let i = 0; i < N; i++) {
         const want = Math.sin(t * 1.3 + (i % COLS) * 1.1 + Math.floor(i / COLS) * 2.3) > 0.1 ? 1 : 0;
@@ -415,7 +415,7 @@ export function imod(): Built {
   let first = true;
   return {
     // from above the top row: the eye goes in behind the glass and finds a mirror at a different depth behind each colour
-    root, views: { gaps: { at: [1.08, 2.07, 0.59], to: [0.56, 1.12, -0.08], fov: 30 } }, inDark: 'vanishes', view: [40, 10],
+    root, views: { front: { at: [0, 0.85, 2.8], to: [0, 0.7, 0], fov: 34, play: 0.2 }, gaps: { at: [1.08, 2.07, 0.59], to: [0.56, 1.12, -0.08], fov: 30 } }, inDark: 'vanishes', view: [40, 10],
     update: ({ t }) => {
       for (let i = 0; i < N; i++) {
         const k = i % 3, pixel = Math.floor((i % COLS) / 3) + Math.floor(i / COLS) * 2;
@@ -490,7 +490,7 @@ export function electrochromic(): Built {
   // the words are printed again once their typeface has arrived
   void document.fonts?.ready.then(() => { printBlank(); settled = false; });
   return {
-    root, views: { label: { at: [-0.1, 1.15, 1.75], to: [-0.38, 0.62, 0.32], fov: 30 } }, inDark: 'vanishes', view: [20, 12], surface: s.canvas,
+    root, views: { front: { at: [0, 1.1, 4.2], to: [0, 0.8, 0], fov: 34, play: 0.2 }, label: { at: [-0.1, 1.15, 1.75], to: [-0.38, 0.62, 0.32], fov: 30 } }, inDark: 'vanishes', view: [20, 12], surface: s.canvas,
     update: ({ t }) => {
       tint.opacity = 0.42 + 0.36 * Math.sin(t * 0.5);
       const n = now();

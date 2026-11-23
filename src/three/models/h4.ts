@@ -244,7 +244,7 @@ export function lcd(): Built {
   root.add(weld(...fixed), cellGlass, filterGlass, G.plane(W, H, lampMat, [0, y, Z[0] + 0.004]), G.plane(W, H, film(lines(true, '#4d545d'), 0.5), [0, y, Z[1]]), G.plane(W, H, cellMat, [0, y, Z[2] + 0.0225]), G.plane(W, H, film(stripes, 0.55, 2), [0, y, Z[3]]), G.plane(W, H, finalMat, [0, y, Z[4]]));
   let stamp = -1;
   return {
-    root, views: { layers: { at: [1.5, 1.2, 0.3], to: [0.25, 0.86, -0.1], fov: 32 } }, inDark: 'glows', glow: 0xdde8ff, view: [38, 12], surface: final.canvas,
+    root, views: { front: { at: [0, 1.1, 4.8], to: [0, 0.86, 0], fov: 34, play: 0.2 }, layers: { at: [1.5, 1.2, 0.3], to: [0.25, 0.86, -0.1], fov: 32 } }, inDark: 'glows', glow: 0xdde8ff, view: [38, 12], surface: final.canvas,
     update: ({ t }) => {
       const n = now();
       if (n.s === stamp) return; stamp = n.s;
@@ -322,7 +322,7 @@ export function dmd(): Built {
   const eye = new THREE.Vector3();
   let first = true;
   return {
-    root, views: { mirrors: { at: [0.6, 1.6, 1.1], to: [0, 1.1, 0.05], fov: 30 } }, inDark: 'vanishes', view: [24, 16],
+    root, views: { chip: { at: [0.65, 0.75, 1.3], to: [0, 0.25, 0], fov: 32, play: 0.1 }, mirrors: { at: [0.6, 1.6, 1.1], to: [0, 1.1, 0.05], fov: 30 } }, inDark: 'vanishes', view: [24, 16],
     update: ({ camera }) => {
       const d = dots(now().hhmmss.slice(6));
       // from which side the patch is looked at, across its hinges. A mirror is bright when it tips towards the eye: from the far
@@ -404,7 +404,7 @@ export function lcos(): Built {
   root.add(base, weld(...fixed), face, cover, cube, coat, glass, shown);
   root.add(rays([[[-0.82, AX, 0], [CX, AX, 0], 0xffffff], [[CX, AX, 0], [CX, B + 0.1, 0], 0xffffff], [[CX + 0.02, B + 0.1, 0], [CX + 0.02, MY, 0], 0xffd27a], [[CX + 0.02, MY, 0], [0.82, MY, 0], 0xffd27a], [[0.82, MY, 0], [1.02, MY + 0.2, -0.2], 0xffd27a], [[0.82, MY, 0], [1.2, MY - 0.16, -0.4], 0xffd27a]], 0.006, 0.7));
   return {
-    root, views: { cube: { at: [0.62, 1.12, 1.15], to: [-0.08, 0.56, 0], fov: 36 } }, inDark: 'glows', glow: 0xffe2b0, view: [28, 16], zoom: 1.08, surface: s.canvas,
+    root, views: { chip: { at: [0.35, 0.42, 0.6], to: [-0.08, 0.22, 0], fov: 36, play: 0.1 }, cube: { at: [0.62, 1.12, 1.15], to: [-0.08, 0.56, 0], fov: 36 } }, inDark: 'glows', glow: 0xffe2b0, view: [28, 16], zoom: 1.08, surface: s.canvas,
     update: ({ lights }) => {
       const hhmm = now().hhmm;
       s.ctx.fillStyle = '#10131a'; s.ctx.fillRect(0, 0, 320, 240); bigTime(s.ctx, 320, 240, hhmm, '#ffd27a', 800, 0.6); s.tex.needsUpdate = true;
@@ -522,7 +522,7 @@ export function eidophor(): Built {
   root.add(weld(...fixed), table, face, ripples, eb.obj, halo(0xeaf2ff, 0.4, [-0.88, 1.2, 0], 0.5));
   root.add(rays([[[-0.78, 1.2, 0], [0, 1.2, 0], 0xffffff], [[0, 1.2, 0], [0, level(0, 0) + 0.003, 0], 0xffffff], [[0.04, level(0.04, 0) + 0.003, 0], [0.04, 2.16, 0], 0xcfe0ff], [[0.04, 2.16, 0], [1.08, 2.16, 0.12], 0xcfe0ff]], 0.006, 0.6));
   return {
-    root, views: { oil: { at: [0.5, 0.85, 1.2], to: [0, 0.3, 0], fov: 30 } }, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
+    root, views: { machine: { at: [0, 1.6, 5.6], to: [0.1, 1.25, 0], fov: 34, play: 0.2 }, oil: { at: [0.5, 0.85, 1.2], to: [0, 0.3, 0], fov: 30 } }, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
     update: ({ t, lights }) => {
       table.rotation.y = t * 0.25;
       s.ctx.fillStyle = '#000'; s.ctx.fillRect(0, 0, 320, 240);
@@ -669,7 +669,7 @@ export function laserScan(): Built {
   const spot = halo(0xffffff, 0.12, [0, 1, WALL + 0.015]);
   root.add(base, weld(...fixed), rotor1, rotor2, figure, rays(still), up.obj, out.obj, hits.points, spot);
   return {
-    root, views: { galvos: { at: [0.01, 1.03, 1.11], to: [0.66, 0.54, 0.05], fov: 32 } }, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
+    root, views: { front: { at: [0, 1.2, 4.3], to: [0, 1, 0], fov: 34, play: 0.2 }, galvos: { at: [0.01, 1.03, 1.11], to: [0.66, 0.54, 0.05], fov: 32 } }, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
     update: ({ t }) => {
       const strokes = clockStrokes(now());
       const c = s.ctx;
@@ -835,7 +835,7 @@ export function projectionMapping(): Built {
   const [gx, gy, gz] = from(0, 0, -0.015);
   root.add(weld(...fixed, ...solids), weld(...lit), new THREE.Mesh(throwGeo, throwMat), halo(0xfff6e6, 0.4, [gx, gy, gz], 0.5));
   return {
-    root, views: { lens: { at: [0.1, 1.42, 2.2], to: [0.1, 0.75, -0.45], fov: 40, play: 0.12 } }, inDark: 'better', glow: 0x6a5f55, view: [-24, 14], surface: frame.canvas,
+    root, views: { shapes: { at: [-0.45, 1, 1.45], to: [-0.3, 0.6, -0.4], fov: 34, play: 0.1 }, lens: { at: [0.1, 1.42, 2.2], to: [0.1, 0.75, -0.45], fov: 40, play: 0.12 } }, inDark: 'better', glow: 0x6a5f55, view: [-24, 14], surface: frame.canvas,
     update: ({ t, lights }) => {
       const c = frame.ctx;
       // black wherever there is nothing to hit: the picture is cut to the outline of each solid

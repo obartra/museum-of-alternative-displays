@@ -492,7 +492,7 @@ export function storageTube(): Built {
   let cycle = -1, done = 0;
   return {
     root, inDark: 'glows', glow: 0x4dff86, view: [26, 9], surface: s.canvas,
-    views: { seat: { at: [0, 2.25, 3.9], to: [0, 1.85, 0.66], fov: 42 } },
+    views: { screen: { at: [0.5, 2.05, 2.3], to: [0, 1.85, 0.62], fov: 34, play: 0.1 }, seat: { at: [0, 2.25, 3.9], to: [0, 1.85, 0.66], fov: 42 } },
     update: ({ t }) => {
       const c = s.ctx, T = 14, k = Math.floor(t / T), u = (t % T);
       if (k !== cycle) { cycle = k; done = 0; }
@@ -649,7 +649,7 @@ export function nixie(): Built {
     root, inDark: 'glows', glow: 0xff6a1a, view: [20, 9], zoom: 1.12,
     // the tube that counts seconds, from far enough round that the stack shows as a stack, and far enough back that a
     // square frame holds the whole numeral between its two micas
-    views: { stack: { at: [2.7, 1.3, 1.65], to: [1.78, 0.99, 0], play: 0.6 } },
+    views: { desk: { at: [0, 1.3, 5], to: [0, 0.95, 0], fov: 34, play: 0.2 }, stack: { at: [2.7, 1.3, 1.65], to: [1.78, 0.99, 0], play: 0.6 } },
     update: () => {
       const d = now().digits;
       tubes.forEach((tb, i) => {
@@ -775,7 +775,7 @@ export function vfd(): Built {
   root.add(weld(M.steel(), ...metal), weld(M.plastic(0xffffff, 0.55), ...body));
   return {
     root, inDark: 'glows', glow: 0x58ffd8, view: [18, 8], zoom: 1.08, surface: s.canvas,
-    views: { grid: { at: [-1.75, 1, 0.75], to: [-0.95, 0.78, 0], play: 0.3 } },
+    views: { front: { at: [0, 1, 4.3], to: [0, 0.78, 0], fov: 36, play: 0.2 }, grid: { at: [-1.75, 1, 0.75], to: [-0.95, 0.78, 0], play: 0.3 } },
     update: ({ lights }) => {
       s.ctx.fillStyle = '#040807'; s.ctx.fillRect(0, 0, 768, 256);
       segClock(s.ctx, 768, 256, now(), '#7dffe6', '#0d2a26', true, 14);
@@ -862,7 +862,7 @@ export function numitron(): Built {
   return {
     root, inDark: 'glows', glow: 0xffc98a, view: [20, 9], zoom: 1.1,
     // far enough back that a square frame holds the whole figure
-    views: { filaments: { at: [1.82, 1.17, 1.08], to: [1.14, 0.97, 0.02] } },
+    views: { front: { at: [0, 1.2, 4.2], to: [0, 0.9, 0], fov: 34, play: 0.2 }, filaments: { at: [1.82, 1.17, 1.08], to: [1.14, 0.97, 0.02] } },
     update: () => {
       const d = now().digits;
       tubes.forEach((tb, i) => {
@@ -987,7 +987,7 @@ export function fed(): Built {
   return {
     root, inDark: 'glows', glow: 0x9db8ff, view: [28, 20],
     // from the open side, low enough to see the tips in their wells at the cut edge, and up to the phosphor
-    views: { tips: { at: [1.8, 0.56, 0.55], to: [0.42, 0.3, 0], play: 0.35 } },
+    views: { phosphor: { at: [0.35, 1.95, 0.95], to: [0, 0.94, 0], fov: 36, play: 0.1 }, tips: { at: [1.8, 0.56, 0.55], to: [0.42, 0.3, 0], play: 0.35 } },
     update: () => {
       const n = now();
       if (n.s === stamp) return; stamp = n.s;
@@ -1187,6 +1187,7 @@ export function colourWheel(): Built {
   };
   let angle = 0, before = 0, shown = -1, label = '';
   return {
+    views: { set: { at: [0, 0.85, 2.6], to: [0, 0.72, 0], fov: 34, play: 0.2 }, wheel: { at: [0.75, 1, 1.05], to: [0.1, 0.78, 0.25], fov: 32, play: 0.1 } },
     root, inDark: 'glows', glow: 0xcfd6ff, view: [20, 8], surface: s.canvas,
     update: ({ t }) => {
       const fast = t % 16 >= 8; // eight seconds slowly, then eight at speed

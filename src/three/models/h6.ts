@@ -237,7 +237,7 @@ export function peppersGhost(): Built {
   fuse(root);
   const turn = new THREE.Quaternion(), UP = new THREE.Vector3(0, 1, 0);
   return {
-    root, inDark: 'better', view: [16, 11], views: { seat: { at: [0, 1.22, 5.4], to: [0, 1.16, -0.3], fov: 26, play: 0.11 } },
+    root, inDark: 'better', view: [16, 11], views: { pit: { at: [0.6, 1.75, 2.1], to: [0, 0.1, 0.7], fov: 40, play: 0.1 }, seat: { at: [0, 1.22, 5.4], to: [0, 1.16, -0.3], fov: 26, play: 0.11 } },
     update: ({ t, lights }) => {
       actor.position.set(-0.22 + Math.sin(t * 0.45) * 0.36, 0.2, FRONT + 0.025 + 0.012 * Math.sin(t * 1.3));
       actor.quaternion.copy(LIE).multiply(turn.setFromAxisAngle(UP, Math.sin(t * 0.6) * 0.45));
@@ -314,7 +314,7 @@ export function fogScreen(): Built {
   root.add(proj, new THREE.Mesh(cone, throwMat), post([-0.12, py - 0.12, pz], 0, 0.03), G.cyl(0.24, 0.03, dark, [-0.12, 0.015, pz], 32));
   fuse(root);
   return {
-    root, views: { fog: { at: [0.1, 1.3, 1.9], to: [0, 1.05, 0], fov: 46, play: 0.12 } }, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
+    root, views: { slot: { at: [0.5, 1.45, 1.6], to: [0, 2, 0], fov: 50, play: 0.1 }, fog: { at: [0.1, 1.3, 1.9], to: [0, 1.05, 0], fov: 46, play: 0.12 } }, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
     update: ({ t, lights, camera }) => {
       uT.value = t;
       const c2 = img.ctx;
@@ -378,7 +378,7 @@ export function pov(): Built {
   const c = s.ctx;
   let angle = 0, last = 0;
   return {
-    root, views: { bar: { at: [0.85, 1.6, 1.6], to: [0.25, 1.35, 0.05], fov: 32 } }, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
+    root, views: { front: { at: [0, 1.35, 3.4], to: [0, 1.25, 0], fov: 34, play: 0.2 }, bar: { at: [0.85, 1.6, 1.6], to: [0.25, 1.35, 0.05], fov: 32 } }, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
     update: ({ t }) => {
       const dt = Math.min(0.1, t - last); last = t;
       // spin up, hold, spin down: at low speed you can see it is only a bar
@@ -440,7 +440,7 @@ export function sweptVolume(): Built {
   fuse(root, [spin]);
   const col = new THREE.Color();
   return {
-    root, views: { dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
+    root, views: { round: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34, play: 0.3 }, dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
     update: ({ t }) => {
       const th = t * 3.2;
       spin.rotation.y = -th;
@@ -631,7 +631,7 @@ export function opticalTrap(): Built {
   root.add(trail.points, speck, b0.line, b1.line);
   fuse(root);
   return {
-    root, views: { speck: { at: [1.1, 1.6, 1.5], to: [0.25, 1.5, 0], fov: 32 } }, inDark: 'better', glow: 0xb090ff, view: [26, 12],
+    root, views: { front: { at: [0, 1.4, 4.3], to: [0, 1.15, 0], fov: 34, play: 0.2 }, speck: { at: [1.1, 1.6, 1.5], to: [0.25, 1.5, 0], fov: 32 } }, inDark: 'better', glow: 0xb090ff, view: [26, 12],
     update: ({ t }) => {
       const ph = (t * 0.35) % 1;
       trail.trace(ph);
@@ -685,7 +685,7 @@ export function acousticLev(): Built {
   root.add(trail.points, bead, spark);
   fuse(root, [bead]);
   return {
-    root, views: { bead: { at: [0.9, 1.2, 1.6], to: [0, 0.99, 0], fov: 30 } }, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
+    root, views: { front: { at: [0, 1.15, 3], to: [0, 0.95, 0], fov: 34, play: 0.2 }, bead: { at: [0.9, 1.2, 1.6], to: [0, 0.99, 0], fov: 30 } }, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
     update: ({ t }) => {
       const ph = (t * 0.45) % 1;
       trail.trace(ph);
@@ -739,7 +739,7 @@ export function laserPlasma(): Built {
   fuse(root);
   const spin = new THREE.Matrix4(), p = new THREE.Vector3();
   return {
-    root, views: { points: { at: [1.6, 1.75, 1.5], to: [0.48, 1.32, 0], fov: 28 } }, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
+    root, views: { front: { at: [0, 1.3, 3.2], to: [0, 1.1, 0], fov: 34, play: 0.2 }, points: { at: [1.6, 1.75, 1.5], to: [0.48, 1.32, 0], fov: 28 } }, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
     update: ({ t }) => {
       vox.points.rotation.y = t * 0.4; vox.points.position.set(0.48 - 0.48 * Math.cos(t * 0.4), 0, 0.48 * Math.sin(t * 0.4));
       // one point of plasma exists at a time; the rest is afterimage
@@ -906,6 +906,7 @@ export function illusionTransmitter(): Built {
   // the bulb burns, fades and comes back. What the far side shows is the same, a moment late
   const burn = (t: number) => { const u = ((t % 9) + 9) % 9; return u < 6 ? 1 : u < 6.6 ? 1 - (u - 6) / 0.6 : u < 8.4 ? 0 : (u - 8.4) / 0.6; };
   return {
+    views: { front: { at: [0, 1, 3.4], to: [0, 0.8, 0.5], fov: 34, play: 0.2 }, mirror: { at: [-0.25, 0.95, 2], to: [-0.55, 0.7, 0.6], fov: 34, play: 0.1 } },
     root, inDark: 'better', glow: 0xffd9a0, view: [22, 13],
     update: ({ t, lights }) => {
       const here = burn(t), there = burn(t - 0.4), flick = 1 - 0.04 * Math.sin(t * 37);
