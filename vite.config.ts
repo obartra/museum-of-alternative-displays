@@ -105,7 +105,7 @@ function keeper(): Plugin {
       const pub = fileURLToPath(new URL('./public/', import.meta.url));
       const under = (dir: string): string[] => readdirSync(pub + dir, { withFileTypes: true }).flatMap((f) => (f.isDirectory() ? under(`${dir}${f.name}/`) : [`${dir}${f.name}`]));
       const weight = (paths: string[]) => paths.reduce((sum, path) => sum + statSync(pub + path).size, 0);
-      const pictures = under('').filter((path) => /\.(?:webp|png|jpe?g|svg|avif)$/i.test(path) && !path.startsWith('icons/') && !path.startsWith('og/') && path !== 'og.jpg').sort();
+      const pictures = under('').filter((path) => /\.(?:webp|png|jpe?g|svg|avif)$/i.test(path) && !path.startsWith('icons/') && !path.startsWith('og/') && path !== 'og.jpg').concat(under('sounds/').filter((path) => path.endsWith('.mp3'))).sort();
       const sound: Record<string, Record<string, { files: string[]; bytes: number }>> = {};
       for (const [tour, langs] of Object.entries(recorded as Record<string, Record<string, Record<string, { file: string }>>>)) {
         for (const [lang, parts] of Object.entries(langs)) {

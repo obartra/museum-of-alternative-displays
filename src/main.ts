@@ -375,6 +375,8 @@ function personView(slug: string): void {
 /** The trail whose people the People page is narrowed to, or nothing for everyone. */
 let peopleOnly: '' | Trail['id'] = '';
 function peopleView(): void {
+  const asked = new URLSearchParams(location.search).get('who');
+  if (asked !== null) peopleOnly = trailById(asked)?.id ?? '';
   document.title = titled(t('nav.people'));
   says(t('people.lead'));
   const pill = (value: string, label: string) => `<label class="pill"><input type="radio" name="who" value="${value}"${peopleOnly === value ? ' checked' : ''}><span>${label}</span></label>`;
@@ -422,7 +424,14 @@ function peopleView(): void {
     const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (to) rows.querySelector(`[data-hall="${to}"]`)?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
   });
-  document.getElementById('who')!.addEventListener('change', (ev) => { peopleOnly = trailById((ev.target as HTMLInputElement).value)?.id ?? ''; draw(); });
+  document.getElementById('who')!.addEventListener('change', (ev) => {
+    peopleOnly = trailById((ev.target as HTMLInputElement).value)?.id ?? '';
+    // the choice is written in the address, so that a reload or a link sent on opens the same list
+    const url = new URL(location.href);
+    if (peopleOnly) url.searchParams.set('who', peopleOnly); else url.searchParams.delete('who');
+    try { history.replaceState(history.state, '', url.pathname + url.search + url.hash); } catch { /* the address is a courtesy */ }
+    draw();
+  });
   draw();
 }
 
@@ -532,12 +541,13 @@ function pieceView(id: string, step?: number): void {
 ${step === undefined ? '' : visitBand(step)}
 <article class="piece">
   <div class="stage" id="stage">
+    <!-- the keys over the picture come first, so the keyboard meets them in the order the eye does -->
+    <div class="stage__tools">${daylightKey(lightsOn, tx('switch.daylight'))}<button type="button" class="btn btn--icon" data-act="stereo" aria-pressed="false" aria-label="${tx('stage.stereo')}" title="${tx('stage.stereo')}" disabled${p.hall === DEPTH ? '' : ' hidden'}>${GLASSES}</button>${bareKey('data-act="bare"', tx('stage.clear'))}${fullKey('data-act="full"', tx('stage.expand'))}</div>
     <div class="stage__box" id="stage-box"><img class="stage__poster" id="stage-poster" data-poster="${p.id}" src="${poster(p.id, 760)}" srcset="${posterSet(p.id)}" sizes="(min-width: 900px) 50vw, 100vw" width="760" height="760" alt="${tx('stage.poster', { name: x.name })}" fetchpriority="high" decoding="async"><button type="button" class="btn stage__start" data-act="start" hidden>${tx('stage.start')}</button></div>
     <p class="stage__hint" id="stage-hint"></p>
     <p class="stage__note" id="stage-note" role="status"></p>
     <div class="stage__views" id="stage-views" role="group" aria-label="${tx('stage.views')}"><button type="button" class="btn" data-act="home">${tx('stage.home')}</button>${places.some((v) => v.kind === 'person') ? '' : `<button type="button" class="btn" data-act="front">${tx('stage.front')}</button>`}${places.map((v) => `<button type="button" class="btn" data-view="${v.id}" aria-pressed="false">${esc(v.label)}</button>`).join('')}<button type="button" class="btn" data-act="ar" disabled hidden>${tx('stage.ar')}</button></div>
     <p class="stage__say" id="stage-say" aria-live="polite"></p>
-    <div class="stage__tools">${daylightKey(lightsOn, tx('switch.daylight'))}<button type="button" class="btn btn--icon" data-act="stereo" aria-pressed="false" aria-label="${tx('stage.stereo')}" title="${tx('stage.stereo')}" disabled${p.hall === DEPTH ? '' : ' hidden'}>${GLASSES}</button>${bareKey('data-act="bare"', tx('stage.clear'))}${fullKey('data-act="full"', tx('stage.expand'))}</div>
     <p class="bare__hint" id="stage-bare" aria-live="polite"></p>
   </div>
   <div class="stack">
@@ -990,6 +1000,8 @@ async function sheet(q: URLSearchParams): Promise<void> {
 let seat = 0, newest = Date.now();
 const places = new Map<number, number>();
 window.addEventListener('scroll', () => { places.set(seat, window.scrollY); }, { passive: true });
+window.addEventListener('pagehide', () => { try { sessionStorage.setItem(`y ${seat}`, String(Math.round(window.scrollY))); } catch { /* the place is not kept */ } });
+const keptY = (n: number): number | undefined => { try { const v = sessionStorage.getItem(`y ${n}`); return v === null ? undefined : Number(v); } catch { return undefined; } };
 
 /** Set by the page that says there is nothing at an address. */
 let lost = false;
@@ -1031,7 +1043,8 @@ function route(): void {
   // A new place opens at its top. A place the visitor comes back to, with Back or Forward, or that is drawn again
   // in another language, opens where they left it.
   const st = history.state as { seat?: number } | null;
-  if (typeof st?.seat === 'number') { seat = st.seat; window.scrollTo(0, places.get(seat) ?? 0); }
+  // a page reloaded into a newer build, or by the visitor, comes back where it was read: the place is kept for the tab
+  if (typeof st?.seat === 'number') { seat = st.seat; window.scrollTo(0, places.get(seat) ?? keptY(seat) ?? 0); }
   else {
     seat = ++newest;
     try { history.replaceState({ ...(history.state as object | null ?? {}), seat }, ''); } catch { /* the place is not kept */ }
@@ -1114,10 +1127,22 @@ document.addEventListener('click', (e) => {
 void findKept();
 // a link to a place of the museum, a step back or forward, a new name after the #: the place is drawn
 wirePlaces(go);
+/** A short word to the visitor at the top of the page, read out by a screen reader, gone after a few seconds. */
+function note(text: string): void {
+  const el = document.createElement('p');
+  el.className = 'pagenote'; el.setAttribute('role', 'status');
+  document.querySelector('.top')?.after(el);
+  // a status said into a box that is already there is read; one that arrives with its words may not be
+  requestAnimationFrame(() => { el.textContent = text; });
+  window.setTimeout(() => el.remove(), 7000);
+}
 // choosing a language draws the same page again in it, and leaves the keyboard where it was: on the menu
 wireLangMenu((code) => {
   const y = window.scrollY;
-  void useLang(code, true).then(() => { route(); window.scrollTo({ top: y, behavior: 'instant' }); document.getElementById('lang')?.focus(); });
+  void useLang(code, true).then((got) => {
+    route(); window.scrollTo({ top: y, behavior: 'instant' }); document.getElementById('lang')?.focus();
+    if (!got) note(t('lang.offline'));
+  });
 });
 // the two faces every page is set in. The page that opens this one has already asked for them
 const faces = () => Promise.all([document.fonts.load('800 40px "Sofia Sans Extra Condensed Variable"'), document.fonts.load('500 16px "Sofia Sans Variable"')]).catch(() => undefined);

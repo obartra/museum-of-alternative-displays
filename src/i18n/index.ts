@@ -34,11 +34,15 @@ export function wanted(): Lang {
   return 'en';
 }
 
-export async function useLang(code: Lang, keep = false): Promise<void> {
+export async function useLang(code: Lang, keep = false): Promise<boolean> {
   const load = code === 'en' ? undefined : fileOf(code);
-  try { loc = load ? (await load()).default : null; lang = load ? code : 'en'; } catch { loc = null; lang = 'en'; }
+  // A language that cannot be fetched, offline and never read before, leaves the page in the language it was in,
+  // and the visitor's choice is not written over with it.
+  let got = true;
+  try { loc = load ? (await load()).default : null; lang = load ? code : 'en'; } catch { got = false; }
   document.documentElement.lang = langNow().tag;
-  if (keep) try { localStorage.setItem('lang', lang); } catch { /* fine */ }
+  if (keep && got) try { localStorage.setItem('lang', lang); } catch { /* fine */ }
+  return got;
 }
 
 /** A word or sentence of the interface, with its values put in. */

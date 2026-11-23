@@ -1257,3 +1257,5 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 .walk.is-full.is-bare > :not(.walk__view) { display: none; }
 .stage.is-bare > :is(.stage__tools, .stage__views, .stage__say, .stage__hint, .stage__note), .stage.is-bare .stage__start { display: none; }
 @media (prefers-reduced-motion: reduce) { .bare__hint { transition: none; } }
+/* a short word to the visitor under the header, such as a language that needs a connection */
+.pagenote { margin: 8px auto 0; max-width: 70ch; padding: 8px 12px; border: 1px solid currentColor; border-radius: 6px; font-size: .95rem; text-align: center; }

@@ -108,11 +108,15 @@ export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   const drop = () => { waiting = ''; window.clearTimeout(held); window.clearTimeout(breath); };
   const $ = <T extends HTMLElement>(sel: string) => root.querySelector<T>(sel)!;
 
+  /** The tour taken last, to offer again once it is left. */
+  let left = '';
   /** Draw the band for the tour being taken, or the row that offers one, or nothing. */
   const draw = () => {
     root.classList.toggle('is-on', !!tour);
+    if (tour) left = tour.id;
     if (!tour) {
-      const offer = toursNow().find((x) => trailById(x.id));
+      // a visitor who has just left a tour is offered that one again, not the first in the list
+      const offer = toursNow().find((x) => x.id === left && trailById(x.id)) ?? toursNow().find((x) => trailById(x.id));
       root.hidden = !offer;
       for (const name of ['data-playing', 'data-told', 'data-last', 'data-voice', 'data-voices']) root.removeAttribute(name);
       root.style.removeProperty('--trail');

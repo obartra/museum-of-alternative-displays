@@ -29,13 +29,28 @@ export function wireSounds(root: HTMLElement): () => void {
     const again = key === on;
     stop();
     if (again) return;
-    const a = new Audio(`./sounds/${key.dataset.sound}`);
+    const a = new Audio();
     a.addEventListener('ended', () => { if (audio === a) stop(); });
     a.addEventListener('error', () => { if (audio === a) stop(); });
     audio = a; on = key;
     key.setAttribute('aria-pressed', 'true');
-    void a.play().catch(() => { if (audio === a) stop(); });
+    void kept(`./sounds/${key.dataset.sound}`).then((src) => { if (audio !== a) return; a.src = src; return a.play(); }).catch(() => { if (audio === a) stop(); });
   };
   root.addEventListener('click', onClick);
   return () => { stop(); root.removeEventListener('click', onClick); };
+}
+
+/**
+ * A machine's sound, from the copy kept on this device if there is one. A sound heard once is kept, so that it plays
+ * again without a connection; the button that keeps the museum's pictures for offline keeps these as well.
+ */
+async function kept(path: string): Promise<string> {
+  const url = new URL(path, document.baseURI).href;
+  if (!('caches' in window)) return url;
+  try {
+    const store = await caches.open(`museum ${new URL('./', document.baseURI).pathname} sound`);
+    let got = await caches.match(url);
+    if (!got) { const fresh = await fetch(url); if (!fresh.ok) return url; await store.put(url, fresh.clone()); got = fresh; }
+    return URL.createObjectURL(await got.blob());
+  } catch { return url; }
 }

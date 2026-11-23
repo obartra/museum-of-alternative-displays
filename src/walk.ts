@@ -91,7 +91,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <p class="bare__hint" id="walk-bare" aria-live="polite"></p>
 </div>
 <section class="guide" id="walk-guide" aria-label="${tx('tour.label')}" hidden></section>
-<p class="walk__where" id="walk-where" aria-live="polite"></p>
+<p class="walk__where" id="walk-where"></p><p class="vh" id="walk-said" aria-live="polite"></p>
 <div class="walk__plan" id="walk-plan" role="group" aria-label="${tx('walk.plan')}" style="--long: ${plan.LENGTH}; --wide: ${2 * plan.HALF}">
   ${halls.map((h) => { const b = plan.bayOf(h.id), long = b.to - b.from, clear = (h.id === 1 ? 2 : 1) * plan.PITCH - plan.BLOCK / 2; return `<button type="button" class="walk__bay" data-hall="${h.id}" data-bay="${h.id}" style="flex-grow: ${long}; --at: ${(((h.id === 1 ? 0.62 : 0.5) * clear / long) * 100).toFixed(2)}%" disabled><span aria-hidden="true">${h.id}</span><span class="vh">${tx('nav.hall', { n: h.id, name: hallName(h.id) })}</span></button>`; }).join('')}
   <svg class="walk__blocks" viewBox="0 ${-plan.HALF} ${plan.LENGTH} ${2 * plan.HALF}" preserveAspectRatio="none" aria-hidden="true" focusable="false">
@@ -156,12 +156,17 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   };
 
   /** Say where the visitor is: the hall, and the piece in front of them if there is one, with the way to its page. */
+  const said_ = document.getElementById('walk-said')!;
+  let saying = 0;
   const tell = (w: { hall: number; piece?: string }) => {
     const p = w.piece ? pieceById(w.piece) : undefined;
     host.dataset.hall = String(w.hall || 1);
     where.innerHTML = w.hall
       ? `<b class="walk__no" aria-hidden="true">${w.hall}</b><span>${tx('nav.hall', { n: w.hall, name: hallName(w.hall) })}</span>${p ? `<a class="btn walk__open" href="${link(`piece-${p.id}`)}">${tx('walk.open', { name: names[p.id] })}</a>` : ''}`
       : '';
+    // a screen reader hears where the visitor came to rest, once, and not each piece passed on the way
+    window.clearTimeout(saying);
+    saying = window.setTimeout(() => { said_.textContent = w.hall ? [t('nav.hall', { n: w.hall, name: hallName(w.hall) }), p ? names[p.id] : ''].filter(Boolean).join('. ') : ''; }, 900);
     for (const b of planEl.querySelectorAll<HTMLElement>('[data-bay]')) b.setAttribute('aria-current', String(Number(b.dataset.bay) === w.hall));
     // what the hall the visitor has walked into is about, as its own page says it
     if (w.hall && w.hall !== introFor) { introFor = w.hall; intro.textContent = said.hall(halls[w.hall - 1]).intro; }

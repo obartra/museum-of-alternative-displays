@@ -1395,6 +1395,12 @@ msgid "Nothing at this address"
 msgstr "Pod tym adresem nic nie ma"
 
 #: interface
+#. Language menu.
+msgctxt "ui.lang.offline"
+msgid "That language needs a connection the first time it is chosen."
+msgstr "Ten język za pierwszym razem wymaga połączenia z internetem."
+
+#: interface
 #. Page shown for an address that does not exist. Keep the words in curly brackets as they are.
 msgctxt "ui.missing.near"
 msgid "Did you mean {a}{name}{/a}?"
