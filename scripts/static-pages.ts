@@ -129,10 +129,10 @@ function pagesOf(w: Speech, site: string): Own[] {
 
   // the entrance
   out.push({
-    name: '', path: '', title: w.ui('site.title', { n: pieces.length }), short: w.ui('site.name'), says: w.ui('site.description', { n: pieces.length }), kind: 'CollectionPage', crumbs: [],
+    name: '', path: '', title: w.ui('site.title'), short: w.ui('site.name'), says: w.ui('site.description'), kind: 'CollectionPage', crumbs: [],
     body: `<h1>${esc(w.ui('site.name'))}</h1>
-<p>${esc(w.ui('site.description', { n: pieces.length }))}</p>
-<p>${esc(w.ui('entrance.intro', { n: pieces.length }))}</p>
+<p>${esc(w.ui('site.description'))}</p>
+<p>${esc(w.ui('entrance.intro'))}</p>
 ${halls.map((hall) => `<h2><a href="${w.pre}hall/${hall.id}/">${esc(hallName(hall))}</a></h2>
 <p>${esc(w.hall(hall).intro)}</p>
 <ul>${inHall(hall.id).map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}</li>`).join('')}</ul>`).join('\n')}
@@ -193,10 +193,10 @@ ${ways}`,
 
   // the index: the whole collection in one list
   out.push({
-    name: 'index', path: 'index/', title: titled(w.ui('depot.head', { n: pieces.length })), short: w.ui('depot.title'), says: w.ui('depot.says', { n: pieces.length }), kind: 'CollectionPage', crumbs: [home, [w.ui('depot.title'), 'index/']],
+    name: 'index', path: 'index/', title: titled(w.ui('depot.head')), short: w.ui('depot.title'), says: w.ui('depot.says'), kind: 'CollectionPage', crumbs: [home, [w.ui('depot.title'), 'index/']],
     more: { mainEntity: { '@type': 'ItemList', numberOfItems: pieces.length, itemListElement: pieces.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: w.piece(p).name, url: `${w.pre}piece/${p.id}/` })) } },
     body: `<h1>${esc(w.ui('depot.title'))}</h1>
-<p>${esc(w.ui('depot.says', { n: pieces.length }))}</p>
+<p>${esc(w.ui('depot.says'))}</p>
 <ul>${pieces.map((p) => `<li><a href="${w.pre}piece/${p.id}/">${esc(w.piece(p).name)}</a>, ${esc(year(p))}. ${esc(w.piece(p).lead)}</li>`).join('')}</ul>
 ${ways}`,
   });
@@ -251,7 +251,7 @@ ${ways}`,
 <p>${esc(w.ui('about.lead'))}</p>
 <h2>${esc(w.ui('about.piece'))}</h2><p>${esc(w.ui('about.piece.1'))}</p>
 <h2>${esc(w.ui('about.sourced'))}</h2><p>${esc(w.ui('about.sourced.1'))}</p><p>${esc(w.ui('about.sourced.3'))}</p>
-<h2>${esc(w.ui('about.pictures'))}</h2><p>${esc(w.ui('about.pictures.1', { n: pieces.length }))}</p><p>${esc(w.ui('about.pictures.2'))}</p><p>${esc(w.ui('about.pictures.archive'))}</p>
+<h2>${esc(w.ui('about.pictures'))}</h2><p>${esc(w.ui('about.pictures.1'))}</p><p>${esc(w.ui('about.pictures.2'))}</p><p>${esc(w.ui('about.pictures.archive'))}</p>
 <h2>${esc(w.ui('about.room'))}</h2><p>${esc(w.ui('about.room.1'))}</p><p>${esc(w.ui('about.room.2'))}</p><p>${esc(w.ui('about.room.3'))}</p>
 <h2>${esc(w.ui('about.corrections'))}</h2><p>${rich(w.ui('about.corrections.1'), { a: `${REPO}/issues`, b: REPO })}</p>
 <h2>${esc(w.ui('about.licence'))}</h2><p>${rich(w.ui('about.licence.1', { name: AUTHOR }), { a: LICENCE })}</p><p>${esc(w.ui('about.licence.2'))}</p>

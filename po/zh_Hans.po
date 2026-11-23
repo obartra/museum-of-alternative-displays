@@ -24,16 +24,16 @@ msgid "Skip to content"
 msgstr "跳到正文"
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.description"
-msgid "A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
-msgstr "一座收藏{n}种显示技术的博物馆，从翻页显示屏到全息图。每件展品都可以转着看，看它怎样形成画面。"
+msgid "A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
+msgstr "一座收藏显示技术的博物馆，从翻页显示屏到全息图。每件展品都可以转着看，看它怎样形成画面。"
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.title"
-msgid "Museum of Alternative Displays | {n} display technologies in 3D"
-msgstr "另类显示博物馆 | {n}种显示技术的3D展品"
+msgid "Museum of Alternative Displays | Display technologies in 3D"
+msgstr "另类显示博物馆 | 显示技术的3D展品"
 
 #: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
@@ -181,10 +181,10 @@ msgid "Welcome to the Museum of Alternative Displays"
 msgstr "欢迎来到另类显示博物馆"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.intro"
-msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "馆藏共有{n}件展品，分布在七个展厅，从翻页显示屏到全息图。馆里的每件展品都在运行。把它转着看一看，往里面瞧一瞧，再关掉日光，看哪些展品到了夜里还能显示画面。"
+msgid "The collection fills seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "馆藏分布在七个展厅，从翻页显示屏到全息图。馆里的每件展品都在运行。把它转着看一看，往里面瞧一瞧，再关掉日光，看哪些展品到了夜里还能显示画面。"
 
 #: interface
 #. Entrance page.
@@ -829,16 +829,16 @@ msgid "The whole collection in one list."
 msgstr "全部馆藏，列在一张表里。"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.head"
-msgid "Index of {n} display technologies"
-msgstr "{n}种显示技术索引"
+msgid "Index of display technologies"
+msgstr "显示技术索引"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.says"
-msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
-msgstr "博物馆的全部{n}件展品列在一张表里，可按展厅、年份或名称排序，也可按成像方式筛选。"
+msgid "Every piece of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "博物馆的全部展品列在一张表里，可按展厅、年份或名称排序，也可按成像方式筛选。"
 
 #: interface
 #. Index page and its filters.
@@ -919,10 +919,10 @@ msgid "A to Z"
 msgstr "按名称"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.count.all"
-msgid "All {n} pieces"
-msgstr "全部{n}件展品"
+msgid "All pieces"
+msgstr "全部展品"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.
@@ -975,8 +975,8 @@ msgstr "展品说明里的每一个年份和名字，都出自该展品所列的
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.sourced.2"
-msgid "The collection has {pieces} pieces and {links} source links: {kinds}."
-msgstr "馆藏共有{pieces}件展品，{links}条资料链接：{kinds}。"
+msgid "The labels cite {links} source links: {kinds}."
+msgstr "展品说明引用了{links}条资料链接：{kinds}。"
 
 #: interface
 #. About page.
@@ -991,10 +991,10 @@ msgid "Models and archive pictures"
 msgstr "模型与档案图片"
 
 #: interface
-#. About page. Keep the words in curly brackets as they are.
+#. About page.
 msgctxt "ui.about.pictures.1"
-msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across {n} kinds of physics."
-msgstr "每件展品都是用代码搭建、实时绘制的模型。所以你可以转动它，它的显示画面也是真的在运行。每件能运行的展品都显示当前的时间，这样你就可以比较{n}种物理原理怎样显示同一条信息。"
+msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across many kinds of physics."
+msgstr "每件展品都是用代码搭建、实时绘制的模型。所以你可以转动它，它的显示画面也是真的在运行。每件能运行的展品都显示当前的时间，这样你就可以比较多种物理原理怎样显示同一条信息。"
 
 #: interface
 #. About page.
@@ -1069,10 +1069,10 @@ msgid "Walk the museum"
 msgstr "漫步博物馆"
 
 #: interface
-#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.lead"
-msgid "Seven halls, {n} pieces. Walk through them in order, or go straight to a piece."
-msgstr "七个展厅，{n}件展品。可以按顺序走一遍，也可以直接去看某一件。"
+msgid "Seven halls. Walk through them in order, or go straight to a piece."
+msgstr "七个展厅。可以按顺序走一遍，也可以直接去看某一件。"
 
 #: interface
 #. The walk through the halls in 3D.
@@ -1651,10 +1651,10 @@ msgid "This page makes no light. It borrows the light of the room, like print, a
 msgstr "这一页不发光。它像印刷品一样借用环境光，只在换页时耗电。关掉日光：页面还在那里，但你读不了。"
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.visit.end.title"
-msgid "That was three of {n}"
-msgstr "这是 {n} 件中的三件"
+msgid "That was three pieces"
+msgstr "看过了三件"
 
 #: interface
 #. Interface.

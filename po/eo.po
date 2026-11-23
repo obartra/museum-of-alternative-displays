@@ -30,16 +30,16 @@ msgid "Skip to content"
 msgstr "Salti al la enhavo"
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.description"
-msgid "A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
-msgstr "Muzeo de {n} vidigaj teknologioj, de klapfoliaj tabuloj ĝis hologramoj. Turnu ĉiun kaj vidu, kiel ĝi faras bildon."
+msgid "A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
+msgstr "Muzeo de vidigaj teknologioj, de klapfoliaj tabuloj ĝis hologramoj. Turnu ĉiun kaj vidu, kiel ĝi faras bildon."
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.title"
-msgid "Museum of Alternative Displays | {n} display technologies in 3D"
-msgstr "Muzeo de Alternativaj Vidigiloj | {n} vidigaj teknologioj en 3D"
+msgid "Museum of Alternative Displays | Display technologies in 3D"
+msgstr "Muzeo de Alternativaj Vidigiloj | Vidigaj teknologioj en 3D"
 
 #: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
@@ -188,10 +188,10 @@ msgid "Welcome to the Museum of Alternative Displays"
 msgstr "Bonvenon al la Muzeo de Alternativaj Vidigiloj"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.intro"
-msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "La kolekto havas {n} vidigilojn en sep haloj, de la klapfolia tabulo ĝis la hologramo. Ĉiu eksponaĵo en la muzeo funkcias. Turnu ĉiun, rigardu en ĝin, kaj malŝaltu la taglumon por vidi, kiuj el ili ankoraŭ montras bildon nokte."
+msgid "The collection fills seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "La kolekto plenigas sep halojn, de la klapfolia tabulo ĝis la hologramo. Ĉiu eksponaĵo en la muzeo funkcias. Turnu ĉiun, rigardu en ĝin, kaj malŝaltu la taglumon por vidi, kiuj el ili ankoraŭ montras bildon nokte."
 
 #: interface
 #. Entrance page.
@@ -836,16 +836,16 @@ msgid "The whole collection in one list."
 msgstr "La tuta kolekto en unu listo."
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.head"
-msgid "Index of {n} display technologies"
-msgstr "Indekso de {n} vidigaj teknologioj"
+msgid "Index of display technologies"
+msgstr "Indekso de vidigaj teknologioj"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.says"
-msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
-msgstr "Ĉiuj {n} eksponaĵoj de la muzeo en unu listo, ordigeblaj laŭ halo, jaro aŭ nomo kaj filtreblaj laŭ tio, kiel ĉiu faras sian bildon."
+msgid "Every piece of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "Ĉiuj eksponaĵoj de la muzeo en unu listo, ordigeblaj laŭ halo, jaro aŭ nomo kaj filtreblaj laŭ tio, kiel ĉiu faras sian bildon."
 
 #: interface
 #. Index page and its filters.
@@ -926,10 +926,10 @@ msgid "A to Z"
 msgstr "De A ĝis Z"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.count.all"
-msgid "All {n} pieces"
-msgstr "Ĉiuj {n} eksponaĵoj"
+msgid "All pieces"
+msgstr "Ĉiuj eksponaĵoj"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.
@@ -982,8 +982,8 @@ msgstr "Ĉiu dato kaj ĉiu nomo sur etikedo venas el fonto, listigita ĉe sia ek
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.sourced.2"
-msgid "The collection has {pieces} pieces and {links} source links: {kinds}."
-msgstr "La kolekto havas {pieces} eksponaĵojn kaj {links} ligilojn al fontoj: {kinds}."
+msgid "The labels cite {links} source links: {kinds}."
+msgstr "La etikedoj citas {links} ligilojn al fontoj: {kinds}."
 
 #: interface
 #. About page.
@@ -998,10 +998,10 @@ msgid "Models and archive pictures"
 msgstr "Modeloj kaj arkivaj bildoj"
 
 #: interface
-#. About page. Keep the words in curly brackets as they are.
+#. About page.
 msgctxt "ui.about.pictures.1"
-msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across {n} kinds of physics."
-msgstr "Ĉiu eksponaĵo estas modelo, konstruita en kodo kaj desegnata dum vi rigardas. Tial vi povas turni ĝin, kaj tial ĝia luma surfaco funkcias. Ĉiu funkcianta eksponaĵo montras la horon, por ke vi povu kompari la saman informon tra {n} specoj de fiziko."
+msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across many kinds of physics."
+msgstr "Ĉiu eksponaĵo estas modelo, konstruita en kodo kaj desegnata dum vi rigardas. Tial vi povas turni ĝin, kaj tial ĝia luma surfaco funkcias. Ĉiu funkcianta eksponaĵo montras la horon, por ke vi povu kompari la saman informon tra multaj specoj de fiziko."
 
 #: interface
 #. About page.
@@ -1076,10 +1076,10 @@ msgid "Walk the museum"
 msgstr "Promeni tra la muzeo"
 
 #: interface
-#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.lead"
-msgid "Seven halls, {n} pieces. Walk through them in order, or go straight to a piece."
-msgstr "Sep haloj, {n} eksponaĵoj. Trairu ilin laŭorde, aŭ iru rekte al eksponaĵo."
+msgid "Seven halls. Walk through them in order, or go straight to a piece."
+msgstr "Sep haloj. Trairu ilin laŭorde, aŭ iru rekte al eksponaĵo."
 
 #: interface
 #. The walk through the halls in 3D.
@@ -1658,10 +1658,10 @@ msgid "This page makes no light. It borrows the light of the room, like print, a
 msgstr "Ĉi tiu paĝo ne faras lumon. Ĝi pruntas la lumon de la ĉambro, kiel presaĵo, kaj uzas energion nur por ŝanĝi la paĝon. Malŝaltu la taglumon: la paĝo ankoraŭ estas tie, sed vi ne povas legi ĝin."
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.visit.end.title"
-msgid "That was three of {n}"
-msgstr "Tio estis tri el {n}"
+msgid "That was three pieces"
+msgstr "Tio estis tri eksponaĵoj"
 
 #: interface
 #. Interface.

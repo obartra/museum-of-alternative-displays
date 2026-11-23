@@ -164,7 +164,7 @@ function shell(inner: string, hall?: number, current?: string): void {
 </main>`;
   const skip = document.querySelector('body > a.vh');
   if (skip) skip.textContent = t('site.skip');
-  document.querySelector('meta[name="description"]')?.setAttribute('content', saying || t('site.description', { n: pieces.length }));
+  document.querySelector('meta[name="description"]')?.setAttribute('content', saying || t('site.description'));
   saying = '';
 }
 
@@ -174,7 +174,7 @@ const yearOf = (p: Piece) => esc(p.year < 1500 ? said.piece(p).yearText ?? Strin
 
 // ---------- entrance ----------
 function entrance(): void {
-  document.title = t('site.title', { n: pieces.length });
+  document.title = t('site.title');
   const cell = (ch: string, cls = '') => `<span class="flap ${cls}" data-ch="${esc(ch)}">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`;
   const word = (text: string, n: number) => [...text.toLocaleUpperCase(langNow().tag).padEnd(n, ' ')].slice(0, n).map((c) => cell(c)).join('');
   // a row is as long as the longest hall name in the language in use, and never shorter than the English board
@@ -189,7 +189,7 @@ function entrance(): void {
     <figure class="roompic hero__pic"><img data-room src="${room(1200)}" srcset="${roomSet()}" sizes="${ROOM_SIZES}" width="1200" height="800" alt="${tx('entrance.room.alt')}" fetchpriority="high" decoding="async"><div class="hero__switch">${switchHtml()}</div></figure>
     <div class="hero__words">
       <h1 class="hero__line">${tx('entrance.lead')}</h1>
-      <p class="prose">${tx('entrance.intro', { n: pieces.length })}</p>
+      <p class="prose">${tx('entrance.intro')}</p>
     </div>
     <section class="board" aria-label="${tx('board.label')}" style="--cells: ${wide + 3}">
       <div class="board__head"><span>${tx('board.hall')}</span><span class="board__clock" id="clock" aria-label="${tx('board.clock')}"></span><span>${tx('board.pieces')}</span></div>
@@ -203,7 +203,7 @@ function entrance(): void {
     <a class="hallpic__img" href="${link('walk')}" tabindex="-1" aria-hidden="true"><img data-hallpic src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="(min-width: 1240px) 720px, (min-width: 760px) 58vw, 100vw" width="1600" height="900" alt="" loading="lazy" decoding="async"></a>
     <div class="stack" style="--gap: 12px">
       <h2 class="h-sec">${tx('walk.title')}</h2>
-      <p class="prose">${tx('walk.lead', { n: pieces.length })}</p>
+      <p class="prose">${tx('walk.lead')}</p>
       <p class="ways"><a class="btn btn--go" href="${link('walk')}">${tx('walk.start')}</a></p>
     </div>
   </section>
@@ -509,7 +509,7 @@ function visitEnd(): void {
   shell(`
 <div class="stack">
   <div class="stack prose" style="--gap: 12px">
-    <h1 class="title">${tx('visit.end.title', { n: pieces.length })}</h1>
+    <h1 class="title">${tx('visit.end.title')}</h1>
     <p>${tx('visit.end.1')}</p>
     <p>${tx('visit.end.2')}</p>
   </div>
@@ -808,8 +808,8 @@ type Sort = 'hall' | 'year' | 'name';
 const depotState: { principle: Principle | ''; status: Status | ''; needs: Set<Need>; sort: Sort } = { principle: '', status: '', needs: new Set(), sort: 'hall' };
 
 function depot(): void {
-  document.title = titled(t('depot.head', { n: pieces.length }));
-  says(t('depot.says', { n: pieces.length }));
+  document.title = titled(t('depot.head'));
+  says(t('depot.says'));
   const pill = (group: string, value: string, label: string, type: 'radio' | 'checkbox', checked: boolean) =>
     `<label class="pill"><input type="${type}" name="${group}" value="${value}" id="f-${group}-${value || 'any'}"${checked ? ' checked' : ''}><span>${label}</span></label>`;
   const s = depotState;
@@ -835,7 +835,7 @@ function depot(): void {
     let list = pieces.filter((p) => (!s.principle || p.principle === s.principle) && (!s.status || p.status === s.status) && [...s.needs].every((n) => p.needs.includes(n)));
     if (s.sort === 'year') list = [...list].sort((a, b) => a.year - b.year);
     if (s.sort === 'name') list = [...list].sort((a, b) => byName(said.piece(a).name, said.piece(b).name));
-    document.getElementById('count')!.textContent = list.length === pieces.length ? t('depot.count.all', { n: list.length }) : list.length ? t('depot.count.some', { n: list.length, total: pieces.length }) : t('depot.count.none');
+    document.getElementById('count')!.textContent = list.length === pieces.length ? t('depot.count.all') : list.length ? t('depot.count.some', { n: list.length, total: pieces.length }) : t('depot.count.none');
     document.getElementById('rows')!.innerHTML = list.map((p) => `<a class="row" href="${link(`piece-${p.id}`)}" data-hall="${p.hall}"><span class="row__hall" aria-hidden="true">${p.hall}</span><span><span class="row__name">${esc(said.piece(p).name)}</span><br><span class="small muted">${esc(said.piece(p).lead)}</span></span><span style="text-align:right"><span class="row__year">${yearOf(p)}</span><br>${chip(p.status)}</span></a>`).join('');
   };
   form.addEventListener('change', draw);
@@ -864,10 +864,10 @@ function about(): void {
       <p>${tx('about.piece.1')}</p>
       <h2 class="h-sec">${tx('about.sourced')}</h2>
       <p>${tx('about.sourced.1')}</p>
-      <p>${tx('about.sourced.2', { pieces: pieces.length, links: total, kinds: byKind })}</p>
+      <p>${tx('about.sourced.2', { links: total, kinds: byKind })}</p>
       <p>${tx('about.sourced.3')}</p>
       <h2 class="h-sec">${tx('about.pictures')}</h2>
-      <p>${tx('about.pictures.1', { n: pieces.length })}</p>
+      <p>${tx('about.pictures.1')}</p>
       <p>${tx('about.pictures.2')}</p>
       ${held ? `<p>${tx('about.pictures.archive')}</p>` : ''}
       ${Object.keys(portraits).length ? `<p>${tx('about.portraits')}</p>` : ''}
@@ -954,7 +954,7 @@ function walkView(start?: string, toured?: { tour: Tour; part: string }): void {
   const asked = !!toured && justAsked(), auto = wants3d() && (asked || walkedHere() || !matchMedia('(pointer: coarse)').matches);
   shell(`
 <div class="walkpage">
-  <div class="hallhead walk__lead"><h1 class="title">${tx('walk.title')}</h1><p class="lead">${tx('walk.lead', { n: pieces.length })}</p></div>
+  <div class="hallhead walk__lead"><h1 class="title">${tx('walk.title')}</h1><p class="lead">${tx('walk.lead')}</p></div>
   <div class="walk" id="walk" data-hall="${from?.hall ?? 1}"><div class="walk__view"><img class="walk__still" src="${hallPic(800)}" srcset="${hallPicSet()}" sizes="100vw" width="1600" height="900" alt="" fetchpriority="high" decoding="async"></div><div class="walk__wait"></div></div>
 </div>`, undefined, 'walk');
   const host = document.getElementById('walk')!;

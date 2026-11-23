@@ -413,10 +413,10 @@ iPhone in particular, how the bar at the top of an installed copy looks by night
 
 ## Known gaps
 
-- One of the 56 pieces still rests only on encyclopedia articles. `npm run validate` prints the
+- One piece still rests only on encyclopedia articles. `npm run validate` prints the
   current count.
-- Not yet in the collection: falling-water curtains, aerial imaging plates, grating light
-  valves, switchable privacy glass, ferrofluid, light-activated paints.
+- Not yet in the collection: aerial imaging plates, grating light valves, ferrofluid,
+  light-activated paints.
 - The models were reviewed against text sources, not against photographs. See
   `docs/model-review.md` for the scores and what is still open.
 - The walk has been run in a test browser that draws in software and once on a desk

@@ -29,16 +29,16 @@ msgid "Skip to content"
 msgstr "본문으로 건너뛰기"
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.description"
-msgid "A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
-msgstr "스플릿 플랩 표시판부터 홀로그램까지, {n}가지 디스플레이 기술을 모은 박물관입니다. 하나하나 돌려 보며 영상이 만들어지는 원리를 확인해 보세요."
+msgid "A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
+msgstr "스플릿 플랩 표시판부터 홀로그램까지, 여러 디스플레이 기술을 모은 박물관입니다. 하나하나 돌려 보며 영상이 만들어지는 원리를 확인해 보세요."
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.title"
-msgid "Museum of Alternative Displays | {n} display technologies in 3D"
-msgstr "대안 디스플레이 박물관 | 3D로 보는 {n}가지 디스플레이 기술"
+msgid "Museum of Alternative Displays | Display technologies in 3D"
+msgstr "대안 디스플레이 박물관 | 3D로 보는 디스플레이 기술"
 
 #: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
@@ -186,10 +186,10 @@ msgid "Welcome to the Museum of Alternative Displays"
 msgstr "대안 디스플레이 박물관에 오신 것을 환영합니다"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.intro"
-msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "소장품은 일곱 전시실에 놓인 디스플레이 {n}점으로, 스플릿 플랩 표시판부터 홀로그램까지 있습니다. 박물관의 전시품은 모두 작동하고 있습니다. 하나하나 돌려 보고, 안을 들여다보고, 햇빛을 꺼서 밤에도 영상이 보이는 것이 어느 것인지 확인해 보세요."
+msgid "The collection fills seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "소장품은 일곱 전시실에 걸쳐 스플릿 플랩 표시판부터 홀로그램까지 있습니다. 박물관의 전시품은 모두 작동하고 있습니다. 하나하나 돌려 보고, 안을 들여다보고, 햇빛을 꺼서 밤에도 영상이 보이는 것이 어느 것인지 확인해 보세요."
 
 #: interface
 #. Entrance page.
@@ -834,16 +834,16 @@ msgid "The whole collection in one list."
 msgstr "컬렉션 전체를 하나의 목록으로."
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.head"
-msgid "Index of {n} display technologies"
-msgstr "디스플레이 기술 {n}가지 색인"
+msgid "Index of display technologies"
+msgstr "디스플레이 기술 색인"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.says"
-msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
-msgstr "박물관의 전시품 {n}점을 하나의 목록으로 모았습니다. 전시실, 연도, 이름순으로 정렬하고 영상을 만드는 방식으로 걸러 볼 수 있습니다."
+msgid "Every piece of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "박물관의 모든 전시품을 하나의 목록으로 모았습니다. 전시실, 연도, 이름순으로 정렬하고 영상을 만드는 방식으로 걸러 볼 수 있습니다."
 
 #: interface
 #. Index page and its filters.
@@ -924,10 +924,10 @@ msgid "A to Z"
 msgstr "이름순"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.count.all"
-msgid "All {n} pieces"
-msgstr "전체 {n}점"
+msgid "All pieces"
+msgstr "전체 전시품"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.
@@ -980,8 +980,8 @@ msgstr "라벨에 적힌 모든 연도와 이름은 해당 전시품에 달린 �
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.sourced.2"
-msgid "The collection has {pieces} pieces and {links} source links: {kinds}."
-msgstr "컬렉션에는 전시품 {pieces}점과 출처 링크 {links}개가 있습니다: {kinds}."
+msgid "The labels cite {links} source links: {kinds}."
+msgstr "설명판이 인용하는 출처 링크는 {links}개입니다: {kinds}."
 
 #: interface
 #. About page.
@@ -996,10 +996,10 @@ msgid "Models and archive pictures"
 msgstr "모델과 아카이브 사진"
 
 #: interface
-#. About page. Keep the words in curly brackets as they are.
+#. About page.
 msgctxt "ui.about.pictures.1"
-msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across {n} kinds of physics."
-msgstr "전시품은 모두 코드로 만들어 실시간으로 그리는 모델입니다. 그래서 돌려 볼 수 있고, 빛나는 면이 실제로 움직입니다. 작동하는 전시품은 모두 현재 시각을 표시하므로, 같은 정보를 {n}가지 물리 현상으로 비교해 볼 수 있습니다."
+msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across many kinds of physics."
+msgstr "전시품은 모두 코드로 만들어 실시간으로 그리는 모델입니다. 그래서 돌려 볼 수 있고, 빛나는 면이 실제로 움직입니다. 작동하는 전시품은 모두 현재 시각을 표시하므로, 같은 정보를 여러 물리 현상으로 비교해 볼 수 있습니다."
 
 #: interface
 #. About page.
@@ -1074,10 +1074,10 @@ msgid "Walk the museum"
 msgstr "박물관 걷기"
 
 #: interface
-#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.lead"
-msgid "Seven halls, {n} pieces. Walk through them in order, or go straight to a piece."
-msgstr "전시실 일곱 개, 전시품 {n}점. 순서대로 걸어서 둘러보거나 전시품으로 바로 갈 수 있습니다."
+msgid "Seven halls. Walk through them in order, or go straight to a piece."
+msgstr "전시실 일곱 개. 순서대로 걸어서 둘러보거나 전시품으로 바로 갈 수 있습니다."
 
 #: interface
 #. The walk through the halls in 3D.
@@ -1656,10 +1656,10 @@ msgid "This page makes no light. It borrows the light of the room, like print, a
 msgstr "이 지면은 빛을 내지 않습니다. 인쇄물처럼 주변의 빛을 빌리고, 쪽을 바꿀 때에만 전력을 씁니다. 햇빛을 끄세요. 지면은 그대로 있지만 읽을 수 없습니다."
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.visit.end.title"
-msgid "That was three of {n}"
-msgstr "{n}점 가운데 세 점이었습니다"
+msgid "That was three pieces"
+msgstr "세 점을 보았습니다"
 
 #: interface
 #. Interface.

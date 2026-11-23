@@ -24,16 +24,16 @@ msgid "Skip to content"
 msgstr "Przejdź do treści"
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.description"
-msgid "A museum of {n} display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
-msgstr "Muzeum {n} technik wyświetlania obrazu, od tablic klapkowych po hologramy. Obróć każdy eksponat i zobacz, jak powstaje w nim obraz."
+msgid "A museum of display technologies, from split-flap boards to holograms. Turn each one around and see how it makes a picture."
+msgstr "Muzeum technik wyświetlania obrazu, od tablic klapkowych po hologramy. Obróć każdy eksponat i zobacz, jak powstaje w nim obraz."
 
 #: interface
-#. Name and description of the site. Keep the words in curly brackets as they are.
+#. Name and description of the site.
 msgctxt "ui.site.title"
-msgid "Museum of Alternative Displays | {n} display technologies in 3D"
-msgstr "Muzeum Alternatywnych Wyświetlaczy | {n} technik wyświetlania w 3D"
+msgid "Museum of Alternative Displays | Display technologies in 3D"
+msgstr "Muzeum Alternatywnych Wyświetlaczy | Techniki wyświetlania w 3D"
 
 #: interface
 #. Title of the browser tab. Keep the words in curly brackets as they are.
@@ -183,10 +183,10 @@ msgid "Welcome to the Museum of Alternative Displays"
 msgstr "Witaj w Muzeum Alternatywnych Wyświetlaczy"
 
 #: interface
-#. Entrance page. Keep the words in curly brackets as they are.
+#. Entrance page.
 msgctxt "ui.entrance.intro"
-msgid "The collection holds {n} displays in seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
-msgstr "Kolekcja liczy {n} wyświetlaczy w siedmiu salach, od tablicy klapkowej po hologram. Każdy eksponat w muzeum działa. Obróć każdy z nich, zajrzyj do środka i wyłącz światło dzienne, aby zobaczyć, które z nich nadal pokazują obraz w nocy."
+msgid "The collection fills seven halls, from the split-flap board to the hologram. Every piece in the museum is running. Turn each one around, look inside it, and switch the daylight off to see which of them still show a picture at night."
+msgstr "Kolekcja zajmuje siedem sal, od tablicy klapkowej po hologram. Każdy eksponat w muzeum działa. Obróć każdy z nich, zajrzyj do środka i wyłącz światło dzienne, aby zobaczyć, które z nich nadal pokazują obraz w nocy."
 
 #: interface
 #. Entrance page.
@@ -831,16 +831,16 @@ msgid "The whole collection in one list."
 msgstr "Cała kolekcja na jednej liście."
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.head"
-msgid "Index of {n} display technologies"
-msgstr "Spis {n} technik wyświetlania obrazu"
+msgid "Index of display technologies"
+msgstr "Spis technik wyświetlania obrazu"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.says"
-msgid "All {n} pieces of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
-msgstr "Wszystkie eksponaty muzeum, w liczbie {n}, na jednej liście, którą można sortować według sali, roku lub nazwy i filtrować według tego, jak każdy z nich wytwarza obraz."
+msgid "Every piece of the museum in one list, to sort by hall, year or name and to filter by how each one makes its picture."
+msgstr "Wszystkie eksponaty muzeum na jednej liście, którą można sortować według sali, roku lub nazwy i filtrować według tego, jak każdy z nich wytwarza obraz."
 
 #: interface
 #. Index page and its filters.
@@ -921,10 +921,10 @@ msgid "A to Z"
 msgstr "Od A do Z"
 
 #: interface
-#. Index page and its filters. Keep the words in curly brackets as they are.
+#. Index page and its filters.
 msgctxt "ui.depot.count.all"
-msgid "All {n} pieces"
-msgstr "Wszystkie eksponaty: {n}"
+msgid "All pieces"
+msgstr "Wszystkie eksponaty"
 
 #: interface
 #. Index page and its filters. Keep the words in curly brackets as they are.
@@ -977,8 +977,8 @@ msgstr "Każda data i każde nazwisko w opisie pochodzą ze źródła podanego p
 #: interface
 #. About page. Keep the words in curly brackets as they are.
 msgctxt "ui.about.sourced.2"
-msgid "The collection has {pieces} pieces and {links} source links: {kinds}."
-msgstr "Kolekcja liczy {pieces} eksponatów i {links} odnośników do źródeł: {kinds}."
+msgid "The labels cite {links} source links: {kinds}."
+msgstr "Opisy cytują odnośniki do źródeł, w liczbie {links}: {kinds}."
 
 #: interface
 #. About page.
@@ -993,10 +993,10 @@ msgid "Models and archive pictures"
 msgstr "Modele i obrazy archiwalne"
 
 #: interface
-#. About page. Keep the words in curly brackets as they are.
+#. About page.
 msgctxt "ui.about.pictures.1"
-msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across {n} kinds of physics."
-msgstr "Każdy eksponat to model zbudowany w kodzie i rysowany na żywo. Dlatego możesz go obracać i dlatego jego świecąca powierzchnia działa. Każdy działający eksponat pokazuje aktualną godzinę, aby można było porównać te same informacje w {n} rodzajach fizyki."
+msgid "Each piece is a model built in code and drawn live. That is why you can turn it, and why its lit surface is running. Every working piece shows the time of day, so that you can compare the same information across many kinds of physics."
+msgstr "Każdy eksponat to model zbudowany w kodzie i rysowany na żywo. Dlatego możesz go obracać i dlatego jego świecąca powierzchnia działa. Każdy działający eksponat pokazuje aktualną godzinę, aby można było porównać te same informacje w wielu rodzajach fizyki."
 
 #: interface
 #. About page.
@@ -1071,10 +1071,10 @@ msgid "Walk the museum"
 msgstr "Przejdź się po muzeum"
 
 #: interface
-#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.lead"
-msgid "Seven halls, {n} pieces. Walk through them in order, or go straight to a piece."
-msgstr "Siedem sal, {n} eksponatów. Przejdź przez nie po kolei albo idź prosto do wybranego eksponatu."
+msgid "Seven halls. Walk through them in order, or go straight to a piece."
+msgstr "Siedem sal. Przejdź przez nie po kolei albo idź prosto do wybranego eksponatu."
 
 #: interface
 #. The walk through the halls in 3D.
@@ -1653,10 +1653,10 @@ msgid "This page makes no light. It borrows the light of the room, like print, a
 msgstr "Ta strona nie wytwarza światła. Pożycza światło pomieszczenia, jak druk, i zużywa energię tylko przy zmianie strony. Wyłącz światło dzienne: strona nadal tam jest, ale nie możesz jej przeczytać."
 
 #: interface
-#. Interface. Keep the words in curly brackets as they are.
+#. Interface.
 msgctxt "ui.visit.end.title"
-msgid "That was three of {n}"
-msgstr "To były trzy z {n}"
+msgid "That was three pieces"
+msgstr "To były trzy eksponaty"
 
 #: interface
 #. Interface.
