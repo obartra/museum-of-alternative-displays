@@ -607,6 +607,138 @@ msgid "People"
 msgstr "Pessoas"
 
 #: interface
+#. Interface.
+msgctxt "ui.teach.head"
+msgid "Worksheets for a class"
+msgstr "Fichas para uma turma"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.says"
+msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
+msgstr "Uma ficha para cada sala, para imprimir ou usar na tela. As perguntas são sobre cada display, e as respostas, numa página à parte no fim, vêm das etiquetas do museu."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.title"
+msgid "Worksheet for hall {n}: {name}"
+msgstr "Ficha da sala {n}: {name}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.lead"
+msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
+msgstr "{n} displays, três perguntas para cada um e algo para experimentar no modelo 3D. As respostas estão na última página."
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.count"
+msgid "{n} displays"
+msgstr "{n} displays"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.hall"
+msgid "Go to the hall"
+msgstr "Ir para a sala"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.all"
+msgid "All worksheets"
+msgstr "Todas as fichas"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.name"
+msgid "Name:"
+msgstr "Nome:"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.how"
+msgid "{name}: how does it make its picture?"
+msgstr "{name}: como forma a sua imagem?"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "The label names {name}. What did they do?"
+msgstr "A etiqueta cita {name}. O que essa pessoa fez?"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.trade"
+msgid "{name}: name one thing it does well, and one thing that holds it back."
+msgstr "{name}: diga uma coisa que faz bem e uma coisa que o limita."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.q.try"
+msgid "In the 3D model:"
+msgstr "No modelo 3D:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.but"
+msgid "But:"
+msgstr "Mas:"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.answers"
+msgid "Answers"
+msgstr "Respostas"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.source"
+msgid "Every answer is taken from the museum's own words about the display."
+msgstr "Cada resposta vem do que o museu diz sobre o display."
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.print"
+msgid "Print"
+msgstr "Imprimir"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.link"
+msgid "Worksheet for this hall"
+msgstr "Ficha desta sala"
+
+#: interface
+#. Menu at the top.
+msgctxt "ui.nav.teach"
+msgid "For teachers"
+msgstr "Para professores"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.button"
+msgid "Embed"
+msgstr "Incorporar"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.says"
+msgid "Paste this into a web page to show the 3D model there, with a link back to this page."
+msgstr "Cole isto numa página da web para mostrar o modelo 3D, com um link para esta página."
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copy"
+msgid "Copy the code"
+msgstr "Copiar o código"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copied"
+msgid "Copied"
+msgstr "Copiado"
+
+#: interface
 #. People page.
 msgctxt "ui.people.lead"
 msgid "Everyone named on a label, with the piece they worked on."

@@ -600,6 +600,138 @@ msgid "People"
 msgstr ""
 
 #: interface
+#. Interface.
+msgctxt "ui.teach.head"
+msgid "Worksheets for a class"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.says"
+msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.title"
+msgid "Worksheet for hall {n}: {name}"
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.lead"
+msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.count"
+msgid "{n} displays"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.hall"
+msgid "Go to the hall"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.all"
+msgid "All worksheets"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.name"
+msgid "Name:"
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.how"
+msgid "{name}: how does it make its picture?"
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "The label names {name}. What did they do?"
+msgstr ""
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.trade"
+msgid "{name}: name one thing it does well, and one thing that holds it back."
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.q.try"
+msgid "In the 3D model:"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.but"
+msgid "But:"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.answers"
+msgid "Answers"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.source"
+msgid "Every answer is taken from the museum's own words about the display."
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.print"
+msgid "Print"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.link"
+msgid "Worksheet for this hall"
+msgstr ""
+
+#: interface
+#. Menu at the top.
+msgctxt "ui.nav.teach"
+msgid "For teachers"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.button"
+msgid "Embed"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.says"
+msgid "Paste this into a web page to show the 3D model there, with a link back to this page."
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copy"
+msgid "Copy the code"
+msgstr ""
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copied"
+msgid "Copied"
+msgstr ""
+
+#: interface
 #. People page.
 msgctxt "ui.people.lead"
 msgid "Everyone named on a label, with the piece they worked on."

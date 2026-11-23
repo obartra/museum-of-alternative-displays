@@ -606,6 +606,138 @@ msgid "People"
 msgstr "人物"
 
 #: interface
+#. Interface.
+msgctxt "ui.teach.head"
+msgid "Worksheets for a class"
+msgstr "授業用ワークシート"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.says"
+msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
+msgstr "展示室ごとに1枚のワークシートです。印刷しても、画面で使ってもかまいません。問いはそれぞれのディスプレイについてで、答えは最後の別ページにあり、博物館のラベルからとっています。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.title"
+msgid "Worksheet for hall {n}: {name}"
+msgstr "展示室{n}のワークシート：{name}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.lead"
+msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
+msgstr "ディスプレイ{n}点、それぞれに問いが三つと、3Dモデルで試すことが一つ。答えは最後のページにあります。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.count"
+msgid "{n} displays"
+msgstr "ディスプレイ{n}点"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.hall"
+msgid "Go to the hall"
+msgstr "展示室へ"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.all"
+msgid "All worksheets"
+msgstr "すべてのワークシート"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.name"
+msgid "Name:"
+msgstr "名前："
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.how"
+msgid "{name}: how does it make its picture?"
+msgstr "{name}：どのようにして像を作りますか？"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "The label names {name}. What did they do?"
+msgstr "ラベルには{name}の名前があります。その人は何をしましたか？"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.trade"
+msgid "{name}: name one thing it does well, and one thing that holds it back."
+msgstr "{name}：得意なことを一つ、弱点を一つ挙げてください。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.q.try"
+msgid "In the 3D model:"
+msgstr "3Dモデルで："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.but"
+msgid "But:"
+msgstr "ただし："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.answers"
+msgid "Answers"
+msgstr "答え"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.source"
+msgid "Every answer is taken from the museum's own words about the display."
+msgstr "答えはすべて、博物館がそのディスプレイについて述べていることからとっています。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.print"
+msgid "Print"
+msgstr "印刷"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.link"
+msgid "Worksheet for this hall"
+msgstr "この展示室のワークシート"
+
+#: interface
+#. Menu at the top.
+msgctxt "ui.nav.teach"
+msgid "For teachers"
+msgstr "先生向け"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.button"
+msgid "Embed"
+msgstr "埋め込む"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.says"
+msgid "Paste this into a web page to show the 3D model there, with a link back to this page."
+msgstr "これをウェブページに貼り付けると、そこに3Dモデルが表示され、このページへのリンクも付きます。"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copy"
+msgid "Copy the code"
+msgstr "コードをコピー"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copied"
+msgid "Copied"
+msgstr "コピーしました"
+
+#: interface
 #. People page.
 msgctxt "ui.people.lead"
 msgid "Everyone named on a label, with the piece they worked on."

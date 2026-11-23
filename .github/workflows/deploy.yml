@@ -30,6 +30,17 @@ jobs:
       - run: npm run build
       # what a search engine will find: every page read without scripts, its links, its languages, the sitemap
       - run: python3 scripts/crawl.py dist
+      # what each page says, hashed, and what the live site said before this deploy, for IndexNow after it
+      - run: node scripts/indexnow.mjs hashes dist
+      - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: curl -fsS "https://obartra.github.io/museum-of-alternative-displays/pages.json?before=${{ github.sha }}" -o before.json || echo '{}' > before.json
+      - uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          name: indexnow
+          path: |
+            before.json
+            dist/pages.json
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
@@ -45,3 +56,14 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Bing, Yandex, Naver and the others that share IndexNow hear of the pages that changed, once they are live
+  announce:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: indexnow
+      - run: node scripts/indexnow.mjs send before.json dist/pages.json

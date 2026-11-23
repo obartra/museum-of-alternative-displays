@@ -601,6 +601,138 @@ msgid "People"
 msgstr "人物"
 
 #: interface
+#. Interface.
+msgctxt "ui.teach.head"
+msgid "Worksheets for a class"
+msgstr "課堂學習單"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.says"
+msgid "One worksheet for each hall, to print or to use on a screen. The questions ask about each display, and the answers, on a page of their own at the end, are taken from the museum's labels."
+msgstr "每個展廳一份學習單，可以列印，也可以在螢幕上用。問題針對每件展品，答案在最後單獨一頁，取自博物館的說明牌。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.title"
+msgid "Worksheet for hall {n}: {name}"
+msgstr "第{n}展廳學習單：{name}"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.lead"
+msgid "{n} displays, three questions each and one thing to try in the 3D model. The answers are on the last page."
+msgstr "{n}件展品，每件三個問題，外加一項在3D模型裡試一試。答案在最後一頁。"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.count"
+msgid "{n} displays"
+msgstr "{n}件展品"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.hall"
+msgid "Go to the hall"
+msgstr "去這個展廳"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.all"
+msgid "All worksheets"
+msgstr "全部學習單"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.name"
+msgid "Name:"
+msgstr "姓名："
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.how"
+msgid "{name}: how does it make its picture?"
+msgstr "{name}：它是怎樣形成畫面的？"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.who"
+msgid "The label names {name}. What did they do?"
+msgstr "說明牌上有{name}的名字。這個人做了什麼？"
+
+#: interface
+#. Interface. Keep the words in curly brackets as they are.
+msgctxt "ui.teach.q.trade"
+msgid "{name}: name one thing it does well, and one thing that holds it back."
+msgstr "{name}：說出它的一個長處和一個短處。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.q.try"
+msgid "In the 3D model:"
+msgstr "在3D模型裡："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.but"
+msgid "But:"
+msgstr "但是："
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.answers"
+msgid "Answers"
+msgstr "答案"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.source"
+msgid "Every answer is taken from the museum's own words about the display."
+msgstr "每個答案都取自博物館對這件展品的介紹。"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.print"
+msgid "Print"
+msgstr "列印"
+
+#: interface
+#. Interface.
+msgctxt "ui.teach.link"
+msgid "Worksheet for this hall"
+msgstr "本展廳學習單"
+
+#: interface
+#. Menu at the top.
+msgctxt "ui.nav.teach"
+msgid "For teachers"
+msgstr "給老師"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.button"
+msgid "Embed"
+msgstr "嵌入"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.says"
+msgid "Paste this into a web page to show the 3D model there, with a link back to this page."
+msgstr "把這段程式碼貼到網頁裡，就能在那裡顯示3D模型，並附上返回本頁的連結。"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copy"
+msgid "Copy the code"
+msgstr "複製程式碼"
+
+#: interface
+#. Interface.
+msgctxt "ui.embed.copied"
+msgid "Copied"
+msgstr "已複製"
+
+#: interface
 #. People page.
 msgctxt "ui.people.lead"
 msgid "Everyone named on a label, with the piece they worked on."

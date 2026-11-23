@@ -16,6 +16,8 @@
  */
 import { readFileSync } from 'node:fs';
 import { brief } from '../src/brief';
+import { news } from '../src/data/news';
+import { sheets, worksheet, type Words } from '../src/teach';
 import { halls } from '../src/data/halls';
 import { media, type Media } from '../src/data/media';
 import { inHall, pieces } from '../src/data/pieces';
@@ -115,7 +117,7 @@ function pagesOf(w: Speech): Own[] {
   const list = (items: string[]) => `<ul>${items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const told = tours.filter((tour) => !tour.draft && w.tour(tour));
   // the way on from every page, for a reader and for a search engine that follows links
-  const ways = `<p><a href="${w.pre || './'}">${esc(w.ui('site.name'))}</a> / <a href="${w.pre}index/">${esc(w.ui('nav.depot'))}</a> / <a href="${w.pre}people/">${esc(w.ui('nav.people'))}</a> / <a href="${w.pre}about/">${esc(w.ui('nav.about'))}</a>${told.map((tour) => ` / <a href="${w.pre}tour/${tour.id}/">${esc(w.tour(tour)!.title)}</a>`).join('')}</p>`;
+  const ways = `<p><a href="${w.pre || './'}">${esc(w.ui('site.name'))}</a> / <a href="${w.pre}index/">${esc(w.ui('nav.depot'))}</a> / <a href="${w.pre}people/">${esc(w.ui('nav.people'))}</a> / <a href="${w.pre}about/">${esc(w.ui('nav.about'))}</a> / <a href="${w.pre}teach/">${esc(w.ui('nav.teach'))}</a>${told.map((tour) => ` / <a href="${w.pre}tour/${tour.id}/">${esc(w.tour(tour)!.title)}</a>`).join('')}</p>`;
   const home: [string, string] = [w.ui('site.name'), ''];
 
   // the entrance
@@ -193,6 +195,20 @@ ${ways}`,
   });
 
   // the people: everyone named on a label, under the piece they worked on
+  // worksheets for a class: the list, and one for each hall (src/teach.ts writes both, here and in the museum)
+  const taught: Words = { ui: (key, vars) => w.ui(key as UiKey, vars), piece: w.piece, hall: w.hall, credit: w.credit, href: (path) => w.pre + path };
+  out.push({
+    name: 'teach', path: 'teach/', title: titled(w.ui('teach.head')), short: w.ui('nav.teach'), says: w.ui('teach.says'), kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/']],
+    body: `${sheets(taught)}\n${ways}`,
+  });
+  for (const hall of halls) {
+    const head = w.ui('teach.title', { n: hall.id, name: w.hall(hall).name });
+    out.push({
+      name: `teach-${hall.id}`, path: `teach/${hall.id}/`, title: titled(head), short: head, says: w.ui('teach.lead', { n: inHall(hall.id).length }), picture: { file: `og/hall-${hall.id}.jpg`, wide: 1200, high: 630, alt: hallName(hall) }, kind: 'WebPage', crumbs: [home, [w.ui('nav.teach'), 'teach/'], [head, `teach/${hall.id}/`]],
+      body: `${worksheet(hall.id, taught)}\n${ways}`,
+    });
+  }
+
   out.push({
     name: 'people', path: 'people/', title: titled(w.ui('nav.people')), short: w.ui('nav.people'), says: w.ui('people.lead'), kind: 'WebPage', crumbs: [home, [w.ui('nav.people'), 'people/']],
     more: { mentions: [...new Set(pieces.flatMap((p) => people[p.id]?.people.flatMap((e) => e.who) ?? []))].map(person) },
@@ -363,7 +379,21 @@ export function staticPages(page: string, locales: Record<string, Locale>, chang
 ${listed.map(({ url, pictures }) => `  <url><loc>${esc(url)}</loc>${changed ? `<lastmod>${changed}</lastmod>` : ''}${pictures.map((file) => `<image:image><image:loc>${esc(file)}</image:loc></image:image>`).join('')}</url>`).join('\n')}
 </urlset>
 `;
-  return { root, files: [...files, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
+  // what is new, as an Atom feed, in English: feed readers and the sites that gather them find the museum here
+  const x = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const feed = `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Museum of Alternative Displays</title>
+<subtitle>What is new in the museum</subtitle>
+<link href="${site}"/>
+<link rel="self" href="${site}feed.xml"/>
+<id>${site}</id>
+<updated>${news[0].date}T12:00:00Z</updated>
+<author><name>Museum of Alternative Displays</name></author>
+${news.map((n) => `<entry><title>${x(n.title)}</title><link href="${site}${n.link}"/><id>${site}${n.link}#${n.date}</id><updated>${n.date}T12:00:00Z</updated><summary>${x(n.says)}</summary></entry>`).join('\n')}
+</feed>
+`;
+  return { root, files: [...files, { fileName: 'feed.xml', source: feed }, { fileName: 'sitemap.xml', source: sitemap }, { fileName: '404.html', source: missing(page, site) }] };
 }
 
 /** In the data for a search engine, an address written from the folder of the museum is written out in full. */
