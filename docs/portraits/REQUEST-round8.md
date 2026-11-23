@@ -33,9 +33,13 @@ it is on names the person together with a fact from the museum's label, below. A
    traffic control. Politician namesakes excluded.
 9. **J. M. Naish** (head-up display). Gate: the Royal Aircraft Establishment at Farnborough, the head-up display,
    or the 1964 Nature paper. The physician of the same initials is excluded.
+10. **Lotte Reiniger** (shadow play, added 22 November 2026). Gate: silhouette animation, Prince Achmed, or her
+   work in Berlin or Britain. Leads: Stadtmuseum Tübingen (her estate, CC BY photographs on museum-digital), BFI,
+   Women Film Pioneers Project. Her photographs may still be in copyright: take only a source whose licence allows
+   reuse, as in the rules above.
 
 ## What comes back
 
 As in earlier rounds: `public/people/<slug>.webp`, one line per person for `src/data/portraits.ts`, the records
 (`PHOTOGRAPHS.md`, `photographs.json`, `prompts.json`, `REVIEW.md`, `CHECKS.json`) in `docs/portraits/round8/`, and
-an outcome for every one of the nine, including "not found" with what was searched.
+an outcome for every one of the ten, including "not found" with what was searched.
