@@ -3248,6 +3248,18 @@ msgid "The gun. A heated cathode gives off electrons, and the copper coils round
 msgstr "Het elektronenkanon. Een verwarmde kathode geeft elektronen af, en de koperen spoelen rond de hals sturen de bundel."
 
 #: hall-2/cathode-ray-tube
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cathode-ray-tube.view.speed.label"
+msgid "See it at real speed"
+msgstr "Bekijk het op echte snelheid"
+
+#: hall-2/cathode-ray-tube
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cathode-ray-tube.view.speed.hint"
+msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
+msgstr "Bij zestig rasters per seconde is de band te snel om te zien. De nagloed van het scherm en het oog voegen de doorgangen samen tot één rustig beeld."
+
+#: hall-2/cathode-ray-tube
 #. Caption of a picture or film from an archive.
 msgctxt "piece.cathode-ray-tube.media.braun-tube.caption"
 msgid "Ferdinand Braun's cathode ray tube of 1897 on its stand, as printed in a 1921 handbook of wireless telegraphy. The beam ran from the cathode in the narrow end to the screen in the wide one."
@@ -7171,6 +7183,18 @@ msgctxt "piece.scanning-fiber.view.picture.hint"
 msgid "The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest."
 msgstr "De vlek schildert de tijd ring voor ring vanuit het midden, en gaat dan uit terwijl de punt tot rust komt."
 
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.speed.label"
+msgid "See it at real speed"
+msgstr "Bekijk het op echte snelheid"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.speed.hint"
+msgid "The real fibre swings thousands of times a second. The eye sees a still picture, and the fibre as a blur."
+msgstr "De echte vezel zwaait duizenden keren per seconde. Het oog ziet een stilstaand beeld, en de vezel als een waas."
+
 #: hall-4/projection-mapping
 #. Name of a piece.
 msgctxt "piece.projection-mapping.name"
@@ -8888,6 +8912,18 @@ msgid "The points are inside the dome, not on it. Move round them: each is lit o
 msgstr "De punten zitten in de koepel, niet erop. Loop eromheen: elk punt licht alleen op als het draaiende scherm erdoorheen gaat."
 
 #: hall-6/swept-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.swept-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "Bekijk het op echte snelheid"
+
+#: hall-6/swept-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.swept-volume.view.speed.hint"
+msgid "The screen spins too fast to see, a faint blur at most. Every point it passes through seems lit all the time."
+msgstr "Het scherm draait te snel om te zien, hooguit een vage waas. Elk punt waar het doorheen gaat, lijkt de hele tijd te branden."
+
+#: hall-6/swept-volume
 #. Caption of a picture or film from an archive.
 msgctxt "piece.swept-volume.media.patent-1.caption"
 msgid "Max Hirsch's generescope, from his patent of 1961. A picture tube in the column projects through mirrors onto a screen that turns inside the dome, so that each spot of light gets a place in depth."
@@ -9006,6 +9042,18 @@ msgstr "Kijk langs de platen"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "Twaalf vloeibaarkristalplaten. Er wordt er steeds één melkachtig, die zijn eigen doorsnede van het beeld opvangt. De rest blijft helder."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "Bekijk het op echte snelheid"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.speed.hint"
+msgid "Each sheet turns milky about fifty times a second. Too fast for the eye: the whole knot hangs in the stack at once."
+msgstr "Elke plaat wordt zo'n vijftig keer per seconde melkachtig. Te snel voor het oog: de hele knoop hangt in één keer in de stapel."
 
 #: hall-6/static-volume
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

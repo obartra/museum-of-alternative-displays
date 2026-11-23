@@ -3252,6 +3252,18 @@ msgid "The gun. A heated cathode gives off electrons, and the copper coils round
 msgstr "전자총입니다. 달군 음극이 전자를 내놓고, 목 둘레의 구리 코일이 빔의 방향을 바꿉니다."
 
 #: hall-2/cathode-ray-tube
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cathode-ray-tube.view.speed.label"
+msgid "See it at real speed"
+msgstr "실제 속도로 보기"
+
+#: hall-2/cathode-ray-tube
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cathode-ray-tube.view.speed.hint"
+msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
+msgstr "초당 60필드에서는 띠가 너무 빨라 보이지 않습니다. 화면의 잔광과 눈이 주사를 이어 하나의 안정된 영상으로 만듭니다."
+
+#: hall-2/cathode-ray-tube
 #. Caption of a picture or film from an archive.
 msgctxt "piece.cathode-ray-tube.media.braun-tube.caption"
 msgid "Ferdinand Braun's cathode ray tube of 1897 on its stand, as printed in a 1921 handbook of wireless telegraphy. The beam ran from the cathode in the narrow end to the screen in the wide one."
@@ -7175,6 +7187,18 @@ msgctxt "piece.scanning-fiber.view.picture.hint"
 msgid "The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest."
 msgstr "빛점이 중심에서부터 고리를 하나씩 그리며 시각을 칠하고, 끝이 멈춰 돌아가는 동안에는 꺼집니다."
 
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.speed.label"
+msgid "See it at real speed"
+msgstr "실제 속도로 보기"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.speed.hint"
+msgid "The real fibre swings thousands of times a second. The eye sees a still picture, and the fibre as a blur."
+msgstr "진짜 광섬유는 초당 수천 번 흔들립니다. 눈에는 멈춘 영상이 보이고, 광섬유는 흐릿하게 보입니다."
+
 #: hall-4/projection-mapping
 #. Name of a piece.
 msgctxt "piece.projection-mapping.name"
@@ -8892,6 +8916,18 @@ msgid "The points are inside the dome, not on it. Move round them: each is lit o
 msgstr "점들은 돔 위가 아니라 돔 안에 있습니다. 둘레를 돌아 보세요. 점은 저마다 도는 스크린이 지나갈 때에만 빛납니다."
 
 #: hall-6/swept-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.swept-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "실제 속도로 보기"
+
+#: hall-6/swept-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.swept-volume.view.speed.hint"
+msgid "The screen spins too fast to see, a faint blur at most. Every point it passes through seems lit all the time."
+msgstr "스크린은 너무 빨리 돌아 보이지 않고, 기껏해야 희미하게 흐려 보입니다. 스크린이 지나는 점은 모두 계속 켜져 있는 것처럼 보입니다."
+
+#: hall-6/swept-volume
 #. Caption of a picture or film from an archive.
 msgctxt "piece.swept-volume.media.patent-1.caption"
 msgid "Max Hirsch's generescope, from his patent of 1961. A picture tube in the column projects through mirrors onto a screen that turns inside the dome, so that each spot of light gets a place in depth."
@@ -9010,6 +9046,18 @@ msgstr "판을 옆에서 보기"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "액정 판 열두 장. 한 번에 한 장씩 뿌옇게 되어 그림의 자기 단면을 받습니다. 나머지는 투명한 채로 있습니다."
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "실제 속도로 보기"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.speed.hint"
+msgid "Each sheet turns milky about fifty times a second. Too fast for the eye: the whole knot hangs in the stack at once."
+msgstr "판마다 초당 약 50번 뿌옇게 됩니다. 눈에는 너무 빨라서, 매듭 전체가 한꺼번에 층 안에 떠 있습니다."
 
 #: hall-6/static-volume
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

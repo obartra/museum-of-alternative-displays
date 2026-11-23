@@ -25,6 +25,7 @@ export const views: Record<string, ViewInfo[]> = {
   'scanning-fiber': [
     { id: 'tip', kind: 'detail', label: 'Go close to the tip', hint: 'The fibre sticks out of the ceramic tube and swings in growing circles. The real one swings far faster.' },
     { id: 'picture', kind: 'detail', label: 'Watch the picture form', hint: 'The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest.' },
+    { id: 'speed', kind: 'detail', label: 'See it at real speed', hint: 'The real fibre swings thousands of times a second. The eye sees a still picture, and the fibre as a blur.' },
   ],
   'magic-lantern': [
     { id: 'audience', kind: 'person', label: 'Sit with the audience', hint: 'Behind the lantern, as a room full of people sat. Switch the daylight off: the picture needs a dark room.' },
@@ -80,6 +81,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'The band moving down the face is the raster, slowed about sixty times. One beam paints it line by line.' },
     { id: 'raster', kind: 'detail', label: 'Go close to the face', hint: 'Close to, the picture comes apart into horizontal lines with dark gaps between them.' },
     { id: 'gun', kind: 'detail', label: 'Look into the neck', hint: 'The gun. A heated cathode gives off electrons, and the copper coils round the neck steer the beam.' },
+    { id: 'speed', kind: 'person', label: 'See it at real speed', hint: 'At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture.' },
   ],
   'vector-display': [
     { id: 'seat', kind: 'person', label: 'Sit at the console', hint: 'The beam draws each stroke directly, like a pen. The trail behind the ball is phosphor still glowing.' },
@@ -215,9 +217,11 @@ export const views: Record<string, ViewInfo[]> = {
   'swept-volume': [
     { id: 'round', kind: 'person', label: 'Walk round the dome', hint: 'The picture has real depth. From any side you see the side of it that faces you.' },
     { id: 'dome', kind: 'detail', label: 'Go close to the dome', hint: 'The points are inside the dome, not on it. Move round them: each is lit only as the spinning screen passes through it.' },
+    { id: 'speed', kind: 'person', label: 'See it at real speed', hint: 'The screen spins too fast to see, a faint blur at most. Every point it passes through seems lit all the time.' },
   ],
   'static-volume': [
     { id: 'sheets', kind: 'detail', label: 'Look along the sheets', hint: 'Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear.' },
+    { id: 'speed', kind: 'person', label: 'See it at real speed', hint: 'Each sheet turns milky about fifty times a second. Too fast for the eye: the whole knot hangs in the stack at once.' },
     { id: 'glass', kind: 'detail', label: 'Go close to the glass', hint: 'Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure.' },
   ],
   'optical-trap': [

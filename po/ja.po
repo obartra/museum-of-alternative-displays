@@ -3252,6 +3252,18 @@ msgid "The gun. A heated cathode gives off electrons, and the copper coils round
 msgstr "電子銃です。熱した陰極が電子を放ち、ネックのまわりの銅のコイルがビームの向きを変えます。"
 
 #: hall-2/cathode-ray-tube
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cathode-ray-tube.view.speed.label"
+msgid "See it at real speed"
+msgstr "実際の速さで見る"
+
+#: hall-2/cathode-ray-tube
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cathode-ray-tube.view.speed.hint"
+msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
+msgstr "毎秒60フィールドでは、帯は速すぎて見えません。画面の残光と目が走査をつなぎ、ひとつの安定した画像にします。"
+
+#: hall-2/cathode-ray-tube
 #. Caption of a picture or film from an archive.
 msgctxt "piece.cathode-ray-tube.media.braun-tube.caption"
 msgid "Ferdinand Braun's cathode ray tube of 1897 on its stand, as printed in a 1921 handbook of wireless telegraphy. The beam ran from the cathode in the narrow end to the screen in the wide one."
@@ -7175,6 +7187,18 @@ msgctxt "piece.scanning-fiber.view.picture.hint"
 msgid "The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest."
 msgstr "光の点は中心から輪をひとつずつ重ねて時刻を描き、先端が静止に戻るあいだは消えています。"
 
+#: hall-4/scanning-fiber
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.scanning-fiber.view.speed.label"
+msgid "See it at real speed"
+msgstr "実際の速さで見る"
+
+#: hall-4/scanning-fiber
+#. Line shown while the visitor is at that place.
+msgctxt "piece.scanning-fiber.view.speed.hint"
+msgid "The real fibre swings thousands of times a second. The eye sees a still picture, and the fibre as a blur."
+msgstr "本物のファイバーは毎秒数千回振れます。目には静止した画像が見え、ファイバーはぼやけて見えます。"
+
 #: hall-4/projection-mapping
 #. Name of a piece.
 msgctxt "piece.projection-mapping.name"
@@ -8892,6 +8916,18 @@ msgid "The points are inside the dome, not on it. Move round them: each is lit o
 msgstr "点はドームの表面ではなく、中にあります。まわりを回ってみてください。点は、回るスクリーンが通るときだけ光ります。"
 
 #: hall-6/swept-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.swept-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "実際の速さで見る"
+
+#: hall-6/swept-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.swept-volume.view.speed.hint"
+msgid "The screen spins too fast to see, a faint blur at most. Every point it passes through seems lit all the time."
+msgstr "スクリーンは速く回りすぎて見えず、せいぜいかすかなぼやけです。通り抜ける点はどれも、ずっと光っているように見えます。"
+
+#: hall-6/swept-volume
 #. Caption of a picture or film from an archive.
 msgctxt "piece.swept-volume.media.patent-1.caption"
 msgid "Max Hirsch's generescope, from his patent of 1961. A picture tube in the column projects through mirrors onto a screen that turns inside the dome, so that each spot of light gets a place in depth."
@@ -9010,6 +9046,18 @@ msgstr "シートを横から見る"
 msgctxt "piece.static-volume.view.sheets.hint"
 msgid "Twelve liquid crystal sheets. One at a time turns milky and catches its slice of the picture. The rest stay clear."
 msgstr "液晶のシートが十二枚。一枚ずつ順に乳白色になり、映像の自分の断面を受け止めます。ほかのシートは透明なままです。"
+
+#: hall-6/static-volume
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.static-volume.view.speed.label"
+msgid "See it at real speed"
+msgstr "実際の速さで見る"
+
+#: hall-6/static-volume
+#. Line shown while the visitor is at that place.
+msgctxt "piece.static-volume.view.speed.hint"
+msgid "Each sheet turns milky about fifty times a second. Too fast for the eye: the whole knot hangs in the stack at once."
+msgstr "各シートは毎秒約50回乳白色になります。目には速すぎるため、結び目全体が一度に積層の中に浮かびます。"
 
 #: hall-6/static-volume
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.

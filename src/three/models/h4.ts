@@ -1071,12 +1071,14 @@ export function scanningFiber(): Built {
       pu = u; pv = v;
     }
   };
+  let steady = false;
   let last = -1;
   return {
     root, inDark: 'glows', glow: 0xd8f0ff, view: [20, 10], surface: paint.canvas,
     views: {
       tip: { at: [AX + TL + 0.45, Y + 0.3, 0.85], to: [AX + TL + FL * 0.5, Y, 0.1], fov: 32, play: 0.12 },
       picture: { at: [-0.2, Y + 0.25, 1.4], to: [SX, Y, 0.1], fov: 34, play: 0.12 },
+      speed: { at: [-0.2, Y + 0.25, 1.4], to: [SX, Y, 0.1], fov: 34 },
     },
     update: (env) => {
       const n = now();
@@ -1086,6 +1088,19 @@ export function scanningFiber(): Built {
         bigTime(gc, 96, 96, n.hhmm, '#fff', 800, 0.34);
         mask = gc.getImageData(0, 0, 96, 96).data;
       }
+      // At its real rate the fibre swings thousands of times a second and draws dozens of pictures in that time:
+      // the eye sees a still picture, and the fibre as a blur. Each frame catches it somewhere in its swing.
+      if (env.view === 'speed') {
+        if (!steady) { pc.fillStyle = '#000'; pc.fillRect(0, 0, 256, 256); paintSpan(0, OUT, 0.95); paint.tex.needsUpdate = true; steady = true; }
+        const [u, v] = swing(Math.random() * OUT);
+        for (let i = 0; i < SEGS; i++) { const s = (i + 0.5) / SEGS, k = s * s; fib.put(i, AX + TL + s * FL, Y + v * RMAX * k, 0.1 + u * RMAX * k); }
+        fib.done();
+        tipGlow.position.set(AX + TL + FL, Y + v * RMAX, 0.1 + u * RMAX); tipGlow.material.opacity = 0.6;
+        (ray.line.material as THREE.LineBasicMaterial).opacity = 0;
+        last = env.t;
+        return;
+      }
+      steady = false;
       const ph = env.t % FRAME;
       // the first time round, the trace of the last whole picture is already on the screen, fading
       if (last < 0) { paintSpan(0, OUT, 0.45); last = env.t - Math.min(ph, 0.05); }

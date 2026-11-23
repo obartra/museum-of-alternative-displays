@@ -262,8 +262,10 @@ export function crt(): Built {
       raster: { at: [0.45, 1.25, ZT + 0.9], to: [0.1, AX, ZT - 0.02], play: 0.4 },
       // from behind and to one side, on the side the yoke's leads come down
       gun: { at: [-1.45, 1.62, ZT - 3.2], to: [0, AX, ZT - 2.42] },
+      // the seat again, with the beam at its real rate
+      speed: { at: [0, 1.2, ZT + 5.2], to: [0, AX, ZT] },
     },
-    update: ({ t }) => {
+    update: ({ t, view }) => {
       const c = face.ctx, n = now();
       c.setTransform(2, 0, 0, 2, 0, 0);
       c.fillStyle = '#020303'; c.fillRect(0, 0, 512, 512);
@@ -274,9 +276,14 @@ export function crt(): Built {
       // the raster: dark gaps between lines, and a band the beam has just refreshed
       c.fillStyle = 'rgba(0,0,0,.34)';
       for (let y = Y; y < Y + H; y += 4) c.fillRect(X, y + 2, W, 2);
-      const by = Y + ((t * 0.8) % 1) * (H + 80) - 40;
-      c.drawImage(wake, X, by - 70, W, 70);
-      c.fillStyle = 'rgba(255,255,255,.9)'; c.fillRect(X + ((t * 37) % 1) * W, by, 26, 2);
+      // At the real rate of sixty fields a second the band passes too fast to follow: what the eye keeps is the
+      // whole face at the brightness the band leaves behind, with the faintest shimmer of the fields.
+      if (view === 'speed') { c.fillStyle = `rgba(190,220,255,${0.05 + 0.015 * Math.sin(t * 40)})`; c.fillRect(X, Y, W, H); }
+      else {
+        const by = Y + ((t * 0.8) % 1) * (H + 80) - 40;
+        c.drawImage(wake, X, by - 70, W, 70);
+        c.fillStyle = 'rgba(255,255,255,.9)'; c.fillRect(X + ((t * 37) % 1) * W, by, 26, 2);
+      }
       c.restore();
       face.tex.needsUpdate = true;
     },

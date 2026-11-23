@@ -444,13 +444,16 @@ export function sweptVolume(): Built {
   fuse(root, [spin]);
   const col = new THREE.Color();
   return {
-    root, views: { round: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34, play: 0.3 }, dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
-    update: ({ t }) => {
-      const th = t * 3.2;
+    root, views: { round: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34, play: 0.3 }, dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 }, speed: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
+    update: ({ t, view }) => {
+      // at its real rate the screen turns many times a second: it blurs into a faint disc, and every point it
+      // passes through looks lit all the time
+      const fast = view === 'speed';
+      const th = fast ? Math.random() * Math.PI * 2 : t * 3.2;
       spin.rotation.y = -th;
       helix.forEach((p, i) => {
         const d = Math.abs(Math.sin(Math.atan2(p[2], p[0]) - th)); // 0 when the screen is passing this point
-        const k = 0.2 + 0.8 * Math.exp(-d * 5);
+        const k = fast ? 0.85 : 0.2 + 0.8 * Math.exp(-d * 5);
         col.setHSL(0.52 + ((p[1] - 0.4) / 0.85) * 0.3, 0.9, 0.6);
         vox.col.set([col.r * k, col.g * k, col.b * k], i * 3);
       });
@@ -543,11 +546,13 @@ export function staticVolume(): Built {
 
   const col = new THREE.Color();
   return {
-    root, views: { sheets: { at: [1.8, 1.25, 0.55], to: [0, 1.0, 0], fov: 32 }, glass: { at: [GX + 0.5, 1.14, GZ + 1.5], to: [GX - 0.03, yc - 0.02, GZ], fov: 30 } }, inDark: 'glows', glow: 0xffb070, view: [32, 12],
-    update: ({ t }) => {
-      const live = Math.floor(t * 7) % LAYERS; // slowed far down: the real stack cycles every sheet about fifty times a second
-      sheets.forEach((m, k) => { m.opacity = k === live ? 0.3 : 0.025; });
-      pts.forEach((_, i) => { const k = layerOf[i] === live ? 1 : 0.3; col.setHSL(0.06 + (layerOf[i] / LAYERS) * 0.12, 1, 0.6); vox.col.set([col.r * k, col.g * k, col.b * k], i * 3); });
+    root, views: { sheets: { at: [1.8, 1.25, 0.55], to: [0, 1.0, 0], fov: 32 }, glass: { at: [GX + 0.5, 1.14, GZ + 1.5], to: [GX - 0.03, yc - 0.02, GZ], fov: 30 }, speed: { at: [0.7, 1.35, 2.5], to: [0, 1.0, 0], fov: 32 } }, inDark: 'glows', glow: 0xffb070, view: [32, 12],
+    update: ({ t, view }) => {
+      // slowed far down: the real stack cycles every sheet about fifty times a second, and at that rate the eye
+      // sees every slice at once and each sheet a little milky
+      const fast = view === 'speed', live = Math.floor(t * 7) % LAYERS;
+      sheets.forEach((m, k) => { m.opacity = fast ? 0.05 : k === live ? 0.3 : 0.025; });
+      pts.forEach((_, i) => { const k = fast || layerOf[i] === live ? 1 : 0.3; col.setHSL(0.06 + (layerOf[i] / LAYERS) * 0.12, 1, 0.6); vox.col.set([col.r * k, col.g * k, col.b * k], i * 3); });
       vox.flush();
       // the crossing point is steered round the figure. Each beam goes on through the block: only the crossing glows
       const ph = (t * 0.22) % 1, at = path(ph), c = hue(at[1]);
