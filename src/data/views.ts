@@ -64,7 +64,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'screen', kind: 'detail', label: 'Go close to the screen', hint: 'Nothing redraws these lines. They stay lit on the face of the tube until the whole face is flashed clean.' },
   ],
   'nixie-tube': [
-    { id: 'desk', kind: 'person', label: 'Stand in front', hint: 'Each figure glows in its own place, a little in front of or behind the next, because the ten cathodes stand one behind another.' },
+    { id: 'desk', kind: 'person', label: 'Stand in front', hint: 'Each figure glows a little in front of or behind the next, because the ten cathodes stand one behind another.' },
     { id: 'stack', kind: 'detail', label: 'Go close to one tube', hint: 'Ten shaped cathodes stacked front to back inside a mesh anode. Neon glows round the one that is energised.' },
   ],
   'vacuum-fluorescent': [
@@ -81,7 +81,7 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   'field-emission': [
     { id: 'tips', kind: 'detail', label: 'Go down to the tips', hint: 'A cold cathode tip under every hole in the gate. Electrons leave the tips and cross the gap to the phosphor above.' },
-    { id: 'phosphor', kind: 'detail', label: 'Look down on the phosphor', hint: 'Each dot of phosphor glows where electrons pulled from the cold tips below it strike.' },
+    { id: 'phosphor', kind: 'detail', label: 'Look down at the dots', hint: 'Each dot of phosphor glows where electrons pulled from the cold tips below it strike.' },
   ],
   'eggcrate': [
     { id: 'below', kind: 'person', label: 'Look up at the board', hint: 'A scoreboard as the crowd met it. The lamps do not snap on and off: they swell and die away.' },
@@ -142,7 +142,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'chip', kind: 'detail', label: 'Go close to the chip', hint: 'The liquid crystal lies on a mirror-backed silicon chip, so the light passes through it twice, down and back up.' },
   ],
   'eidophor': [
-    { id: 'machine', kind: 'person', label: 'Stand back from the machine', hint: 'The panels are off, so the parts stand in view: the beam, the oil on its mirror, the bars and the lens.' },
+    { id: 'machine', kind: 'person', label: 'Stand back from it', hint: 'The panels are off, so the parts stand in view: the beam, the oil on its mirror, the bars and the lens.' },
     { id: 'oil', kind: 'detail', label: 'Go close to the oil', hint: 'A film of oil on a turning mirror. The electron beam dimples it, and only light bent by a dimple passes the bars.' },
   ],
   'scanned-laser': [
