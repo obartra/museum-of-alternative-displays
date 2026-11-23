@@ -74,7 +74,7 @@ export const bios: Record<string, Bio> = {
   "Robert Willson": {
     about: [
       "A graduate student of Donald Bitzer and Gene Slottow at the University of Illinois, he took his doctorate there in 1966.",
-      "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of his results about a year later, and the three made the plasma display panel.",
+      "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of Willson's results about a year later, and the three made the plasma display panel.",
       "He shared the Emmy Award of 2002 with them, and later worked as an engineer with Analex Corporation in Alexandria, Virginia.",
     ],
     sources: [
@@ -325,7 +325,7 @@ export const bios: Record<string, Bio> = {
   "Philo Farnsworth": {
     born: 1906, died: 1971, about: [
       "Born in Beaver City, Utah, he sketched an electronic camera tube for his school science teacher, Justin Tolman, in 1922. He enrolled briefly at Brigham Young University and left for lack of money.",
-      "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory on the second floor of 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide.",
+      "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory one floor above the street at 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide.",
       "The Radio Corporation of America challenged his patent in 1932. His lawyers produced Tolman's copy of the 1922 sketch, the court ruled in his favour in 1935, and in 1939 the company agreed to pay him royalties.",
       "He bought a radio plant at Fort Wayne, Indiana, hoping to make television receivers. It was sold to International Telephone and Telegraph in 1949. He was that company's consultant until 1967 and later worked on nuclear fusion as a source of power.",
     ],
@@ -479,7 +479,7 @@ export const bios: Record<string, Bio> = {
     born: 1848, died: 1928, about: [
       "Born in Chelsea, Massachusetts, to parents who had escaped enslavement in Virginia, he left school at about nine, by the account of the United States Patent and Trademark Office. He served in the United States Navy during the American Civil War.",
       "At a Boston patent law firm he taught himself drafting, and the partners made him their draftsman at $5 less than his predecessor. The National Inventors Hall of Fame says he drew the plans for Alexander Graham Bell's first telephone patent application, of 1876.",
-      "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for his filament work, and many workers resented a Black supervisor.",
+      "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for Latimer's filament work, and many workers resented a Black supervisor.",
       "He then worked for Thomas Edison as a patent investigator and expert witness. He patented a railroad car toilet with Charles W. Brown in 1874 and a cooling and disinfecting apparatus in 1886, and taught drawing and English to immigrants in New York.",
     ],
     sources: [
@@ -502,7 +502,7 @@ export const bios: Record<string, Bio> = {
   "Charles Spindt": {
     born: 1931, about: [
       "Born in San Jose, California, he left architecture studies at Berkeley for the United States Air Force and flew as an all-weather fighter interceptor pilot. He then took a degree in electrical engineering at San Jose State.",
-      "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The conference says that in 1966 he worked out how to make the cathode named after him, an array of microscopic tips that emit electrons at under 100 volts.",
+      "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The International Vacuum Nanoelectronics Conference says he worked out in 1966 how to make the cathode named after him, an array of microscopic tips emitting electrons at under 100 volts.",
       "He published it in the Journal of Applied Physics in 1968. SRI's own history dates the cathode to 1973. He, Shoulders and Louis Heynick were named on patents for its structures, granted in 1973, and for methods of making them, granted in 1974.",
       "He co-founded the vacuum microelectronics conference of the Institute of Electrical and Electronics Engineers in 1988 and won the Jan Rajchman Prize of the Society for Information Display in 1996. He retired from SRI in 2002. The conference reported his death at 92.",
     ],
@@ -958,7 +958,7 @@ export const bios: Record<string, Bio> = {
       "Born in St. Louis, he joined Texas Instruments in 1973 and took a doctorate in physics at Case Western Reserve University in 1974.",
       "At the company's Central Research Laboratories he began in 1977 on analogue deformable mirrors, and spent about a decade on them before turning to hinged digital ones.",
       "By the count of the University of Texas at Dallas he came to hold 38 United States patents, 34 of them on the mirror device.",
-      "He received an Engineering Emmy in 1998 and an Academy Award of Merit in 2015 for the cinema projectors built on the chip. He joined the faculty of the University of Texas at Dallas in 2017.",
+      "He received an Engineering Emmy in 1998, and in 2015 an Academy Award of Merit for the chip as used in cinema projectors. He joined the faculty of the University of Texas at Dallas in 2017.",
     ],
     sources: [
       s("archive", "Larry Hornbeck, National Inventors Hall of Fame", "https://www.invent.org/inductees/larry-hornbeck"),
@@ -983,7 +983,7 @@ export const bios: Record<string, Bio> = {
   "Ivan Dryer": {
     born: 1939, died: 2017, about: [
       "From 1956 to 1968 he worked at intervals as a guide at Griffith Observatory in Los Angeles. He also worked as a filmmaker, including as documentary editor on the feature film Executive Action.",
-      "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had them incorporated in February 1971.",
+      "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had their company incorporated in February 1971.",
       "The optics society SPIE says Garmire and Dryer started the company, Laser Images, with her as president. She gave it to him in 1973, and he always credited her for her part in the technology and the business, SPIE adds.",
       "Laserium ran at Griffith until January 2002. His company took shows to 46 planetariums and other venues. According to Live Design, the International Laser Display Association gave him its first Career Achievement Award in 1989.",
     ],
@@ -1255,7 +1255,7 @@ export const bios: Record<string, Bio> = {
     born: 1806, died: 1873, about: [
       "Born in Liverpool, he was apprenticed to a merchant house, worked as an engineer on railways, canals and mines, and then set up as a consulting engineer. He took out several patents between 1840 and 1857.",
       "Grace's Guide dates his design of the ghost illusion to 1858. Theatre owners declined his models because their stages would have needed rebuilding. John Henry Pepper acquired one around 1862 and adapted it.",
-      "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account he then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863.",
+      "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account, Pepper then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863.",
       "The library says they agreed that Pepper would take the profits and Dircks the credit, and that Pepper named only himself in public. Pepper wrote that he named Dircks daily as co-inventor. Dircks defended his claim in a book of 1863.",
     ],
     sources: [
@@ -1431,7 +1431,7 @@ export const bios: Record<string, Bio> = {
     about: [
       "When the display was published he was Professor of Informatics at Sussex and held a Royal Academy of Engineering Chair in Emerging Technologies. The university named him as leader of the project.",
       "He moved to University College London, where he leads the Multi-Sensory Devices Group, co-founded with Diego Martinez Plasencia and Marianna Obrist. It works on touch in mid air, levitation and contactless control by ultrasound.",
-      "UCL says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. UCL reported his election as a Fellow of the Royal Academy of Engineering in 2025.",
+      "University College London says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. The university reported his election as a Fellow of the Royal Academy of Engineering in 2025.",
     ],
     sources: [
       s("lab", "Research news, University of Sussex (2019)", "https://www.sussex.ac.uk/news/research?id=50264"),
@@ -1638,7 +1638,7 @@ export const bios: Record<string, Bio> = {
     about: [
       "According to the Association for Computing Machinery, he was the student who helped Ivan Sutherland build the head-mounted display of 1968 nicknamed the Sword of Damocles.",
       "He worked at the Xerox Palo Alto Research Center and was an associate professor of computer science at Carnegie Mellon University, then a principal of Sutherland, Sproull and Associates. He joined Sun Microsystems in 1990.",
-      "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs, a research group that began at Sun, which Oracle bought in 2010.",
+      "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs. That research group began at Sun, which Oracle bought in 2010.",
       "With William Newman he wrote the textbook Principles of Interactive Computer Graphics. He built clipping hardware, a graphics package independent of any one device and laser printing software, and worked on asynchronous circuits. He was elected to the National Academy of Engineering.",
     ],
     sources: [
@@ -1695,9 +1695,11 @@ export const bios: Record<string, Bio> = {
   "Greg Dawe": {
     about: [
       "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind.",
+      "Dawe is the second of nine authors, after DeFanti, of the paper of 2009 on one of them, the StarCAVE.",
     ],
     sources: [
       s("paper", "Johnson and others, Electronic Visualization Laboratory's 50th Anniversary Retrospective, PRESENCE (2024)", "https://www.evl.uic.edu/documents/evl_50th.pdf"),
+      s("paper", "DeFanti and others, The StarCAVE, a third-generation CAVE and virtual reality OptIPortal, Future Generation Computer Systems (2009)", "https://dblp.uni-trier.de/db/journals/fgcs/fgcs25.html#DeFantiDSSOGKSR09"),
     ],
   },
   "Samuel Achilefu": {
@@ -1751,7 +1753,7 @@ export const bios: Record<string, Bio> = {
   },
   "Auguste Berthier": {
     about: [
-      "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. He wrote that Frederic Ives applied it to stereoscopic still pictures in 1904.",
+      "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. Kaplan wrote that Frederic Ives applied it to stereoscopic still pictures in 1904.",
     ],
     sources: [
       s("paper", "Sam H. Kaplan, Theory of Parallax Barriers, Journal of the Society of Motion Picture Engineers, vol. 59 (1952)", "https://lantern.mediahist.org/catalog/journalofsociety59socirich_0020"),

@@ -385,6 +385,18 @@ msgstr "Cerrar"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.clear"
+msgid "Picture only"
+msgstr "Solo la imagen"
+
+#: interface
+#. The 3D viewer of a piece.
+msgctxt "ui.stage.clear.back"
+msgid "Tap or click to bring the controls back."
+msgstr "Toca o haz clic para recuperar los controles."
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.hint.turn"
 msgid "Drag to turn. Pinch or scroll to zoom."
 msgstr "Arrastra para girar. Pellizca o desplázate para hacer zoom."
@@ -2648,8 +2660,8 @@ msgstr "Una historia escrita por un coleccionista dice que en 1975 inventó un e
 #: hall-1/braille-display
 #. People section: what James Bryce did. The names stand above this line.
 msgctxt "piece.braille-display.people.3"
-msgid "Began at IBM the first working braille display in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949."
-msgstr "Comenzó en IBM la primera línea braille en funcionamiento que recogen los archivos de la American Printing House for the Blind, que la data hacia 1950. Bryce murió en 1949."
+msgid "Began at IBM a working braille display. It is the earliest in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949."
+msgstr "Comenzó en IBM una línea braille que funcionaba. Es la más antigua que recogen los archivos de la American Printing House for the Blind, que la data hacia 1950. Bryce murió en 1949."
 
 #: hall-1/braille-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3446,8 +3458,8 @@ msgstr "El primer prototipo de Burroughs duró una noche: por la mañana se hab�
 #: hall-2/nixie-tube
 #. People section: what David Hagelbarger did. The names stand above this line.
 msgctxt "piece.nixie-tube.people.1"
-msgid "Researcher at Bell Laboratories. The Computer Museum Report of winter 1987 to 1988 names him the inventor of a prototype Nixie tube he gave it with its patent papers. Other records credit Burroughs."
-msgstr "Investigador de los Laboratorios Bell. El Computer Museum Report del invierno de 1987 a 1988 lo nombra inventor de un prototipo de tubo Nixie que él donó al museo junto con sus documentos de patente. Otros registros atribuyen el invento a Burroughs."
+msgid "Researcher at Bell Laboratories. He gave the Computer Museum a prototype Nixie tube with its patent papers, and the museum's Report of winter 1987 to 1988 names him its inventor. Other records credit Burroughs."
+msgstr "Investigador de los Laboratorios Bell. Donó al Computer Museum un prototipo de tubo Nixie junto con sus documentos de patente, y el Report del museo del invierno de 1987 a 1988 lo nombra inventor de ese tubo. Otros registros atribuyen el invento a Burroughs."
 
 #: hall-2/nixie-tube
 #. Note under the People section.
@@ -3818,8 +3830,8 @@ msgstr "La Universidad de Illinois les atribuye la invención del panel allí mi
 #: hall-2/plasma-panel
 #. People section: what Tsutae Shinoda did. The names stand above this line.
 msgctxt "piece.plasma-panel.people.2"
-msgid "Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993."
-msgstr "Dirigió en Fujitsu, en Japón, el equipo que hizo viable el panel de plasma en color. Su televisor en color de 21 pulgadas salió a la venta en 1993."
+msgid "Led the team at Fujitsu in Japan that made the colour plasma panel practical. Fujitsu's 21-inch colour television went on sale in 1993."
+msgstr "Dirigió en Fujitsu, en Japón, el equipo que hizo viable el panel de plasma en color. El televisor en color de 21 pulgadas de Fujitsu salió a la venta en 1993."
 
 #: hall-2/plasma-panel
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -6236,8 +6248,8 @@ msgstr "En 2008 la revista Esquire puso un panel de tinta electrónica, alimenta
 #: hall-5/electrophoretic-ink
 #. People section: what Barrett Comiskey, J. D. Albert, Joseph Jacobson did. The names stand above this line.
 msgctxt "piece.electrophoretic-ink.people.1"
-msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey's account, he and Albert moved particles inside a capsule."
-msgstr "Desarrollaron la tinta en cápsulas en el MIT Media Lab desde mediados de la década de 1990. El 23 de enero de 1997, según el relato de Comiskey, él y Albert movieron partículas dentro de una cápsula."
+msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey's account, Comiskey and Albert moved particles inside a capsule."
+msgstr "Desarrollaron la tinta en cápsulas en el MIT Media Lab desde mediados de la década de 1990. El 23 de enero de 1997, según el relato de Comiskey, Comiskey y Albert movieron partículas dentro de una cápsula."
 
 #: hall-5/electrophoretic-ink
 #. People section: what John Rogers, Zhenan Bao did. The names stand above this line.
@@ -8600,8 +8612,8 @@ msgstr "El piso se ilumina desde arriba, por delante, de modo que la sombra de c
 #: hall-7/cave
 #. How it works, paragraph 3 of 4.
 msgctxt "piece.cave.how.3"
-msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand in the hand, a control with buttons and a small joystick, is tracked in the same way. Up to ten people fit inside, but the picture is right only for the one who is tracked."
-msgstr "Un sensor en las gafas indica dónde está la cabeza, y las computadoras vuelven a dibujar las cuatro imágenes para ese punto. Mientras quien está dentro se mueve, la escena parece quedarse en su sitio. Una varita en la mano, un control con botones y una pequeña palanca de mando, se sigue de la misma manera. Caben hasta diez personas, pero la imagen solo es correcta para la persona a la que se sigue."
+msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand held in the hand is tracked in the same way. Notes of the laboratory from 1997 give it three buttons and a small joystick. Up to ten people fit inside, but the picture is right only for the one who is tracked."
+msgstr "Un sensor en las gafas indica dónde está la cabeza, y las computadoras vuelven a dibujar las cuatro imágenes para ese punto. Mientras quien está dentro se mueve, la escena parece quedarse en su sitio. Una varita que se lleva en la mano se sigue de la misma manera. Unas notas del laboratorio de 1997 le dan tres botones y una pequeña palanca de mando. Caben hasta diez personas, pero la imagen solo es correcta para la persona a la que se sigue."
 
 #: hall-7/cave
 #. How it works, paragraph 4 of 4.
@@ -8882,8 +8894,8 @@ msgstr "primer vuelo en 1958, en servicio en 1961"
 #: hall-7/head-up
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.head-up.origin"
-msgid "Blackburn Buccaneer strike aircraft, UK, descended from wartime reflector gunsights"
-msgstr "Avión de ataque Blackburn Buccaneer, Reino Unido, a partir de los visores reflectores de tiro de la guerra"
+msgid "Blackburn Buccaneer strike aircraft, UK. Its display descends from wartime reflector gunsights"
+msgstr "Avión de ataque Blackburn Buccaneer, Reino Unido. Su pantalla desciende de los visores reflectores de tiro de la guerra"
 
 #: hall-7/head-up
 #. Where this kind of display stands today.
@@ -9086,8 +9098,8 @@ msgstr "Mirá la pantalla. La franja brillante que baja por ella es la zona dond
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr "La placa del bloque lleva el nombre de Ferdinand Braun, que construyó el primer tubo de este tipo en 1897. Treinta años después, en San Francisco, Philo Farnsworth transmitió la primera imagen de televisión totalmente electrónica. Elma Farnsworth, a quien le decían Pem, trabajó en sus laboratorios y hacía los dibujos técnicos de los experimentos. Su rostro estuvo entre los primeros que transmitió el sistema."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent."
+msgstr "La placa del bloque lleva el nombre de Ferdinand Braun, que construyó su tubo de rayos catódicos en Estrasburgo en 1897. Treinta años después, en San Francisco, el equipo de Philo Farnsworth transmitió una imagen de televisión totalmente electrónica. Un monumento histórico de California dice que fue la primera de su tipo. Elma Farnsworth, a quien le decían Pem, formaba parte de ese equipo. Llevaba los cuadernos de laboratorio, hacía dibujos técnicos y soldaba piezas de los tubos. Su rostro estuvo entre los primeros que transmitió el sistema."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9110,8 +9122,8 @@ msgstr "El muro que tenés enfrente está hecho de LED, cada uno demasiado chico
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
-msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr "Jingyu Lin y Hongxing Jiang son físicos. En el año 2000, en la Universidad Estatal de Kansas, hicieron los primeros microLED. Además están casados, y la idea empezó como una pregunta durante la cena: ¿qué le pasaría a un LED reducido a milésimas de milímetro?"
+msgid "Jingyu Lin and Hongxing Jiang are physicists. By their own account, their team at Kansas State University saw blue light from a microLED in August 1999. They published it in 2000. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
+msgstr "Jingyu Lin y Hongxing Jiang son físicos. Según su propio relato, su equipo de la Universidad Estatal de Kansas vio luz azul de un microLED en agosto de 1999. Lo publicaron en el año 2000. Además están casados, y la idea empezó como una pregunta durante la cena: ¿qué le pasaría a un LED reducido a milésimas de milímetro?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9182,8 +9194,8 @@ msgstr "Seguí los haces de izquierda a derecha. Tres láseres se unen en un sol
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
-msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr "La placa lleva el nombre de Joseph Ostoja-Kotkowski, que presentó un espectáculo de láser temprano en Adelaida. Elsa Garmire, física del Instituto de Tecnología de California, hacía imágenes con láser. Se filmaron en 1972 y fueron el modelo de Laserium, el espectáculo de láser que se estrenó en el Observatorio Griffith de Los Ángeles."
+msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, with Garmire as its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
+msgstr "La placa lleva el nombre de Joseph Ostoja-Kotkowski, que presentó un espectáculo de láser temprano en Adelaida en 1968. Elsa Garmire, física del Instituto de Tecnología de California, hacía imágenes con láser. El cineasta Ivan Dryer las filmó desde fines de 1970. Los dos fundaron la empresa que hizo Laserium, con Garmire como presidenta. Laserium se estrenó en el Observatorio Griffith de Los Ángeles en 1973."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9230,8 +9242,8 @@ msgstr "Esta es la página de un lector de libros electrónicos. No emite luz. M
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
-msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr "La placa nombra a Barrett Comiskey, J. D. Albert y Joseph Jacobson, que desarrollaron esta tinta en el MIT Media Lab en 1996. Cinco años después, en los Laboratorios Bell, John Rogers y Zhenan Bao la extendieron sobre una lámina de plástico. Bao es una química que diseña plásticos que conducen la corriente. Con un sello de goma imprimieron en la lámina 256 transistores de plástico, uno por cada punto de la imagen. La página se podía doblar."
+msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
+msgstr "La placa nombra a Barrett Comiskey, J. D. Albert y Joseph Jacobson, que desarrollaron esta tinta en el MIT Media Lab desde mediados de la década de 1990. En 2001, en los Laboratorios Bell, John Rogers y Zhenan Bao la extendieron sobre una lámina de plástico. Bao es una química que diseña plásticos que conducen la corriente. Con un sello de goma imprimieron en la lámina 256 transistores de plástico, uno por cada punto de la imagen. La página se podía doblar."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9254,8 +9266,8 @@ msgstr "Estas son 12 celdas, muy ampliadas. Cada una contiene una gota de aceite
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
-msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr "En la primera parada, un voltaje curvaba un cristal y levantaba una varilla. Acá un voltaje hace que el agua aparte el aceite. Susan Hackwood y Gerardo Beni propusieron esta pantalla en los Laboratorios Bell en 1981, y le pusieron nombre al efecto: electrohumectación. El año de la placa, 2003, es cuando un laboratorio de los Países Bajos la hizo lo suficientemente rápida para el video."
+msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981. Hackwood is credited with the name of the effect: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
+msgstr "En la primera parada, un voltaje curvaba un cristal y levantaba una varilla. Acá un voltaje hace que el agua aparte el aceite. Susan Hackwood y Gerardo Beni propusieron esta pantalla en los Laboratorios Bell en 1981. A Hackwood se le atribuye el nombre del efecto: electrohumectación. El año de la placa, 2003, es cuando un laboratorio de los Países Bajos la hizo lo suficientemente rápida para el video."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9278,8 +9290,8 @@ msgstr "Esta etiqueta impresa muestra los minutos que pasan de la hora. En esta 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
-msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr "La placa nombra a S. K. Deb. Su trabajo de 1969 sobre películas de óxido de tungsteno es donde empezaron estas pantallas. En el Instituto Tecnológico de Massachusetts, Paula Hammond y Dean DeLongchamp construyeron esas películas de otra manera: de a una capa molecular por vez. Sus películas cambiaban de color más rápido, y con más contraste, que las hechas de otras maneras. La tesis que expone el trabajo es de 2003, y apunta a una pantalla a todo color."
+msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
+msgstr "La placa nombra a S. K. Deb. Su trabajo sobre películas de óxido de tungsteno, iniciado en la década de 1960, es donde empezaron estas pantallas. En el Instituto Tecnológico de Massachusetts, Paula Hammond dirigió la tesis de Dean DeLongchamp, que construyó esas películas de otra manera: de a una capa molecular por vez. La tesis, de 2003, las encontró en general mejores en contraste y en conmutación que las hechas de otras maneras. Combinando materiales también hizo películas de más de un color."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9350,8 +9362,8 @@ msgstr "Mirá a través de la placa de vidrio. Parece que atrás hay una locomot
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
-msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr "Dennis Gabor inventó la holografía en 1948. Veinte años después, Margaret Benyon, pintora, empezó a hacer hologramas como obra de arte. Un holograma como este es estático. La primera pantalla de video holográfico se construyó en el MIT Media Lab en 1989, y la tesis que Mary Lou Jepsen escribió ahí ese mismo año describe su diseño."
+msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a thesis that sets out the design and the building of a holographic video display."
+msgstr "Dennis Gabor concibió la holografía en 1947 y la publicó en 1948. Veinte años después de eso, Margaret Benyon, pintora, empezó a hacer hologramas como obra de arte. Un holograma como este es estático. En 1989, en el MIT Media Lab, Mary Lou Jepsen escribió una tesis que expone el diseño y la construcción de una pantalla de video holográfico."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9458,8 +9470,8 @@ msgstr "Mirá la pantalla. La franja brillante que baja por ella es la zona dond
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr "La placa del bloque lleva el nombre de Ferdinand Braun, que construyó el primer tubo de este tipo en 1897. Dos personas de esta ficha pusieron el tubo a trabajar. Marie Van Brittan Brown era enfermera en Nueva York, y su marido Albert era técnico en electrónica. En 1966 armaron un sistema de seguridad para su casa. Una cámara se desplazaba entre cuatro mirillas de la puerta, y un monitor de televisión mostraba quién llamaba. Lo patentaron en 1969. Mark Dean era ingeniero de IBM. Dos de sus tres patentes de la computadora personal de IBM son de los adaptadores que manejaban sus monitores, uno monocromo y otro en color."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
+msgstr "La placa del bloque lleva el nombre de Ferdinand Braun, que construyó su tubo de rayos catódicos en Estrasburgo en 1897. Dos personas de esta ficha pusieron el tubo a trabajar. Marie Van Brittan Brown era enfermera en Nueva York, y su marido Albert era técnico en electrónica. En 1966 armaron un sistema de seguridad para su casa. Una cámara se desplazaba entre cuatro mirillas de la puerta, y un monitor de televisión mostraba quién llamaba. Lo patentaron en 1969. Mark Dean era ingeniero de IBM. Dos de sus tres patentes de la computadora personal de IBM son de los adaptadores que manejaban sus monitores, uno monocromo y otro en color."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9578,8 +9590,8 @@ msgstr "Mirá la etiqueta impresa que muestra los minutos en barras. Esperá a q
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.2"
-msgid "The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
-msgstr "La placa nombra a S. K. Deb. En 1969 publicó el trabajo sobre películas de óxido de tungsteno del que salieron estas pantallas. Paula Hammond trabajó en el MIT con Dean DeLongchamp. Construyeron películas electrocrómicas de a una capa molecular por vez. Sus películas cambiaban de color más rápido, y con más contraste, que las hechas de otras maneras. La tesis de DeLongchamp, de 2003, apunta a una pantalla a todo color."
+msgid "The plate names S. K. Deb. These displays grew from his work on tungsten oxide films, begun in the 1960s. At MIT, Paula Hammond supervised Dean DeLongchamp, who built electrochromic films one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
+msgstr "La placa nombra a S. K. Deb. Estas pantallas salieron de su trabajo sobre películas de óxido de tungsteno, iniciado en la década de 1960. En el MIT, Paula Hammond dirigió la tesis de Dean DeLongchamp, que construyó películas electrocrómicas de a una capa molecular por vez. La tesis, de 2003, las encontró en general mejores en contraste y en conmutación que las hechas de otras maneras. Combinando materiales también hizo películas de más de un color."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9602,8 +9614,8 @@ msgstr "A la izquierda, una lamparita de verdad cuelga escondida debajo del port
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
-msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr "Acá la placa lleva el nombre de la persona por la que vino esta visita. Valerie Thomas nació en Maryland en 1943. Fue una de las dos únicas mujeres que se especializaron en física en la Universidad Estatal Morgan. Entró en la NASA como analista de datos y ahí inventó el transmisor de ilusiones. La placa da el año 1980."
+msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
+msgstr "Acá la placa lleva el nombre de la persona por la que vino esta visita. Valerie Thomas nació en Maryland en 1943. Según un relato, fue una de las dos únicas mujeres de su promoción que se especializaron en física en la Universidad Estatal Morgan. Entró en la NASA como analista de datos y ahí inventó el transmisor de ilusiones. La placa da el año 1980."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9626,8 +9638,8 @@ msgstr "Un visor de mano está montado en un poste, con una tarjeta estereoscóp
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
-msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr "La placa nombra a Charles Wheatstone, que publicó el estereoscopio en Londres en 1838. Dos personas de esta ficha llegaron mucho después. Charles Harrison era diseñador industrial en Chicago. En 1958 rediseñó el View-Master, un estereoscopio de mano, en plástico liviano moldeado. Pasó de ser un accesorio de fotógrafo a un juguete para chicos. Kenneth Dunkley es físico en Pensilvania. Su patente de 1989 es de unos anteojos sin lentes: dos orificios diminutos y dos marcos vacíos. La patente dice que le dan apariencia de profundidad a una imagen plana común."
+msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
+msgstr "La placa nombra a Charles Wheatstone, que publicó el estereoscopio en Londres en 1838. Dos personas de esta ficha llegaron mucho después. Charles Harrison era diseñador industrial en Chicago. En 1957 o 1958 rediseñó el View-Master, un estereoscopio de mano, en plástico liviano moldeado. Pasó de ser un accesorio de fotógrafo a un juguete para chicos. Kenneth Dunkley es físico en Pensilvania. Su patente de 1989 es de unos anteojos sin lentes: dos orificios diminutos y dos marcos vacíos. La patente dice que le dan apariencia de profundidad a una imagen plana común."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9674,8 +9686,8 @@ msgstr "El modelo muestra un visor colocado en una cabeza de maniquí. Al lado e
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
-msgid "The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr "La placa nombra a Ivan Sutherland y a Bob Sproull, que construyeron el primer visor guiado por gráficos de computadora, en la Universidad de Harvard en 1968. Samuel Achilefu nació en Nigeria. Su equipo de la Universidad Washington en San Luis construyó unos anteojos con pantalla para cirujanos. Un colorante hace que las células cancerosas brillen en esa pantalla. Se usaron por primera vez en una operación en 2014."
+msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
+msgstr "La placa nombra a Ivan Sutherland y a Bob Sproull, que construyeron un visor que mostraba gráficos dibujados por una computadora, en la Universidad de Harvard en 1968. Algunas fuentes lo llaman el primer visor de realidad virtual, y otras, uno de los primeros. Samuel Achilefu nació en Nigeria. Su equipo de la Universidad Washington en San Luis construyó unos anteojos con pantalla para cirujanos. Un colorante hace que las células cancerosas brillen en esa pantalla. Se usaron por primera vez en una operación en 2014."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9818,8 +9830,8 @@ msgstr "Estudiante de posgrado de Donald Bitzer y Gene Slottow en la Universidad
 #: people
 #. About Robert Willson, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.robert-willson.about.2"
-msgid "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of his results about a year later, and the three made the plasma display panel."
-msgstr "En 1963 Bitzer le encargó estudiar una pantalla para PLATO, la red de enseñanza de la universidad, que pudiera mostrar imágenes superpuestas. Slottow se sumó a la discusión de sus resultados aproximadamente un año después, y los tres crearon la pantalla de plasma."
+msgid "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of Willson's results about a year later, and the three made the plasma display panel."
+msgstr "En 1963 Bitzer le encargó estudiar una pantalla para PLATO, la red de enseñanza de la universidad, que pudiera mostrar imágenes superpuestas. Slottow se sumó a la discusión de los resultados de Willson aproximadamente un año después, y los tres crearon la pantalla de plasma."
 
 #: people
 #. About Robert Willson, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10232,8 +10244,8 @@ msgstr "Nacido en Beaver City, Utah, en 1922 esbozó un tubo de cámara electró
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.philo-farnsworth.about.2"
-msgid "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory on the second floor of 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide."
-msgstr "Con el respaldo de los recaudadores de fondos George Everson y Leslie Gorrell, montó un laboratorio en el segundo piso del 202 de Green Street, en San Francisco. El 7 de septiembre de 1927 transmitió desde allí la imagen de una línea trazada en una diapositiva."
+msgid "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory one floor above the street at 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide."
+msgstr "Con el respaldo de los recaudadores de fondos George Everson y Leslie Gorrell, montó un laboratorio un piso por encima de la calle, en el 202 de Green Street, en San Francisco. El 7 de septiembre de 1927 transmitió desde allí la imagen de una línea trazada en una diapositiva."
 
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10508,8 +10520,8 @@ msgstr "En un bufete de derecho de patentes de Boston aprendió dibujo técnico 
 #: people
 #. About Lewis Latimer, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.lewis-latimer.about.3"
-msgid "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for his filament work, and many workers resented a Black supervisor."
-msgstr "En 1880 pasó a ser subdirector y delineante mecánico de Hiram Maxim, y supervisó la instalación de centrales de alumbrado en Estados Unidos, Canadá e Inglaterra. La oficina de patentes dice que Maxim se atribuyó el mérito de su trabajo sobre los filamentos, y que a muchos trabajadores les molestaba tener un supervisor negro."
+msgid "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for Latimer's filament work, and many workers resented a Black supervisor."
+msgstr "En 1880 pasó a ser subdirector y delineante mecánico de Hiram Maxim, y supervisó la instalación de centrales de alumbrado en Estados Unidos, Canadá e Inglaterra. La oficina de patentes dice que Maxim se atribuyó el mérito del trabajo de Latimer sobre los filamentos, y que a muchos trabajadores les molestaba tener un supervisor negro."
 
 #: people
 #. About Lewis Latimer, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10550,8 +10562,8 @@ msgstr "Nacido en San José, California, dejó los estudios de arquitectura en B
 #: people
 #. About Charles Spindt, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.charles-spindt.about.2"
-msgid "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The conference says that in 1966 he worked out how to make the cathode named after him, an array of microscopic tips that emit electrons at under 100 volts."
-msgstr "Entró en el Stanford Research Institute, hoy SRI International, en 1959, contratado por Kenneth Shoulders. La conferencia dice que en 1966 dio con la manera de fabricar el cátodo que lleva su nombre, una matriz de puntas microscópicas que emiten electrones con menos de 100 voltios."
+msgid "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The International Vacuum Nanoelectronics Conference says he worked out in 1966 how to make the cathode named after him, an array of microscopic tips emitting electrons at under 100 volts."
+msgstr "Entró en el Stanford Research Institute, hoy SRI International, en 1959, contratado por Kenneth Shoulders. La International Vacuum Nanoelectronics Conference dice que en 1966 dio con la manera de fabricar el cátodo que lleva su nombre, una matriz de puntas microscópicas que emiten electrones con menos de 100 voltios."
 
 #: people
 #. About Charles Spindt, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11354,8 +11366,8 @@ msgstr "Según el recuento de la Universidad de Texas en Dallas, llegó a tener 
 #: people
 #. About Larry Hornbeck, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.larry-hornbeck.about.4"
-msgid "He received an Engineering Emmy in 1998 and an Academy Award of Merit in 2015 for the cinema projectors built on the chip. He joined the faculty of the University of Texas at Dallas in 2017."
-msgstr "Recibió un Emmy de ingeniería en 1998 y un Academy Award of Merit en 2015 por los proyectores de cine basados en el chip. Entró en el profesorado de la Universidad de Texas en Dallas en 2017."
+msgid "He received an Engineering Emmy in 1998, and in 2015 an Academy Award of Merit for the chip as used in cinema projectors. He joined the faculty of the University of Texas at Dallas in 2017."
+msgstr "Recibió un Emmy de ingeniería en 1998 y, en 2015, un Academy Award of Merit por el chip tal como se usa en los proyectores de cine. Entró en el profesorado de la Universidad de Texas en Dallas en 2017."
 
 #: people
 #. About Elsa Garmire, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11390,8 +11402,8 @@ msgstr "De 1956 a 1968 trabajó de forma intermitente como guía en el Observato
 #: people
 #. About Ivan Dryer, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.ivan-dryer.about.2"
-msgid "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had them incorporated in February 1971."
-msgstr "En noviembre de 1970 él y el cineasta Dale Pelton vieron a Elsa Garmire mostrar su arte con láser en un congreso de la Universidad del Sur de California, y ella los invitó a filmarlo. Él recordaba que ella los constituyó en sociedad en febrero de 1971."
+msgid "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had their company incorporated in February 1971."
+msgstr "En noviembre de 1970 él y el cineasta Dale Pelton vieron a Elsa Garmire mostrar su arte con láser en un congreso de la Universidad del Sur de California, y ella los invitó a filmarlo. Él recordaba que ella hizo constituir la empresa de ambos en febrero de 1971."
 
 #: people
 #. About Ivan Dryer, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11846,8 +11858,8 @@ msgstr "Grace's Guide fecha su diseño de la ilusión del fantasma en 1858. Los 
 #: people
 #. About Henry Dircks, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.henry-dircks.about.3"
-msgid "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account he then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863."
-msgstr "El libro de Pepper fecha su primera presentación justo antes de la Navidad de 1862, y la Linda Hall Library, a finales de 1862 o principios de 1863. Según el relato de Pepper, este hizo sacar entonces una patente provisional a nombre de los dos. La patente definitiva llevaba fecha del 5 de febrero de 1863."
+msgid "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account, Pepper then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863."
+msgstr "El libro de Pepper fecha su primera presentación justo antes de la Navidad de 1862, y la Linda Hall Library, a finales de 1862 o principios de 1863. Según el relato de Pepper, Pepper hizo sacar entonces una patente provisional a nombre de los dos. La patente definitiva llevaba fecha del 5 de febrero de 1863."
 
 #: people
 #. About Henry Dircks, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12098,8 +12110,8 @@ msgstr "Pasó al University College de Londres, donde dirige el Multi-Sensory De
 #: people
 #. About Sriram Subramanian, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.sriram-subramanian.about.3"
-msgid "UCL says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. UCL reported his election as a Fellow of the Royal Academy of Engineering in 2025."
-msgstr "El UCL dice que sus primeros diseños de hardware dieron lugar a la empresa Ultrahaptics, hoy Ultraleap. Fundó Metasonixx y cofundó AcoustoFab. El UCL informó de su elección como Fellow de la Royal Academy of Engineering en 2025."
+msgid "University College London says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. The university reported his election as a Fellow of the Royal Academy of Engineering in 2025."
+msgstr "El University College London dice que sus primeros diseños de hardware dieron lugar a la empresa Ultrahaptics, hoy Ultraleap. Fundó Metasonixx y cofundó AcoustoFab. La universidad informó de su elección como Fellow de la Royal Academy of Engineering en 2025."
 
 #: people
 #. About Yoichi Ochiai, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12446,8 +12458,8 @@ msgstr "Trabajó en el Centro de Investigación de Xerox en Palo Alto y fue prof
 #: people
 #. About Bob Sproull, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.bob-sproull.about.3"
-msgid "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs, a research group that began at Sun, which Oracle bought in 2010."
-msgstr "En 1992 era vicepresidente y fellow de los Sun Microsystems Laboratories y estaba creando una sección en Billerica, Massachusetts. Se jubiló como vicepresidente y director de Oracle Labs, un grupo de investigación que nació en Sun, empresa que Oracle compró en 2010."
+msgid "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs. That research group began at Sun, which Oracle bought in 2010."
+msgstr "En 1992 era vicepresidente y fellow de los Sun Microsystems Laboratories y estaba creando una sección en Billerica, Massachusetts. Se jubiló como vicepresidente y director de Oracle Labs. Ese grupo de investigación nació en Sun, empresa que Oracle compró en 2010."
 
 #: people
 #. About Bob Sproull, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12528,10 +12540,16 @@ msgid "The Association for Computing Machinery gave him its Outstanding Contribu
 msgstr "La Association for Computing Machinery le concedió su Outstanding Contribution Award en 1988 y lo nombró fellow en 1994. Es investigador del California Institute for Telecommunications and Information Technology, en la Universidad de California en San Diego."
 
 #: people
-#. About Greg Dawe, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+#. About Greg Dawe, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.greg-dawe.about.1"
 msgid "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind."
 msgstr "La retrospectiva del laboratorio de 2024 atribuye a Greg Dawe las pantallas posteriores del laboratorio derivadas del CAVE, entre ellas ImmersaDesk y Varrier. En la década de 2000, Dawe se unió a Thomas DeFanti en la Universidad de California en San Diego y construyó allí pantallas del mismo tipo del tamaño de una habitación."
+
+#: people
+#. About Greg Dawe, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-dawe.about.2"
+msgid "Dawe is the second of nine authors, after DeFanti, of the paper of 2009 on one of them, the StarCAVE."
+msgstr "Dawe firma en segundo lugar, después de DeFanti, entre nueve autores, el artículo de 2009 sobre una de esas pantallas, el StarCAVE."
 
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12614,5 +12632,5 @@ msgstr "Una revisión de 2017 de Lin y sus colegas en Frontiers of Optoelectroni
 #: people
 #. About Auguste Berthier, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.auguste-berthier.about.1"
-msgid "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. He wrote that Frederic Ives applied it to stereoscopic still pictures in 1904."
-msgstr "Sam H. Kaplan, en el Journal of the Society of Motion Picture Engineers en 1952, dijo que la barrera de paralaje se atribuía en general a Berthier, de Francia, que la propuso en 1896. Escribió que Frederic Ives la aplicó a las imágenes estereoscópicas fijas en 1904."
+msgid "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. Kaplan wrote that Frederic Ives applied it to stereoscopic still pictures in 1904."
+msgstr "Sam H. Kaplan, en el Journal of the Society of Motion Picture Engineers en 1952, dijo que la barrera de paralaje se atribuía en general a Berthier, de Francia, que la propuso en 1896. Kaplan escribió que Frederic Ives la aplicó a las imágenes estereoscópicas fijas en 1904."

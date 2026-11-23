@@ -385,6 +385,18 @@ msgstr "닫기"
 
 #: interface
 #. The 3D viewer of a piece.
+msgctxt "ui.stage.clear"
+msgid "Picture only"
+msgstr "그림만 보기"
+
+#: interface
+#. The 3D viewer of a piece.
+msgctxt "ui.stage.clear.back"
+msgid "Tap or click to bring the controls back."
+msgstr "화면을 누르거나 클릭하면 조작 단추가 돌아옵니다."
+
+#: interface
+#. The 3D viewer of a piece.
 msgctxt "ui.stage.hint.turn"
 msgid "Drag to turn. Pinch or scroll to zoom."
 msgstr "드래그해서 돌립니다. 두 손가락을 벌리거나 스크롤해서 확대합니다."
@@ -2648,8 +2660,8 @@ msgstr "한 수집가가 쓴 역사에 따르면, 1975년에 글자를 표시하
 #: hall-1/braille-display
 #. People section: what James Bryce did. The names stand above this line.
 msgctxt "piece.braille-display.people.3"
-msgid "Began at IBM the first working braille display in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949."
-msgstr "American Printing House for the Blind의 기록에 남은, 실제로 작동한 최초의 점자 디스플레이를 IBM에서 시작했습니다. 이 기관은 그 연대를 1950년 무렵으로 봅니다. Bryce는 1949년에 세상을 떠났습니다."
+msgid "Began at IBM a working braille display. It is the earliest in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949."
+msgstr "IBM에서 실제로 작동하는 점자 디스플레이를 시작했습니다. American Printing House for the Blind의 기록에 남은 가장 이른 것으로, 이 기관은 그 연대를 1950년 무렵으로 봅니다. Bryce는 1949년에 세상을 떠났습니다."
 
 #: hall-1/braille-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -3446,8 +3458,8 @@ msgstr "버로스의 첫 시제품은 하룻밤밖에 가지 못했습니다. �
 #: hall-2/nixie-tube
 #. People section: what David Hagelbarger did. The names stand above this line.
 msgctxt "piece.nixie-tube.people.1"
-msgid "Researcher at Bell Laboratories. The Computer Museum Report of winter 1987 to 1988 names him the inventor of a prototype Nixie tube he gave it with its patent papers. Other records credit Burroughs."
-msgstr "벨 연구소의 연구원. 1987년에서 1988년에 걸친 겨울의 Computer Museum Report는 그가 특허 서류와 함께 기증한 닉시관 시제품의 발명자로 그를 적고 있습니다. 다른 기록은 버로스의 공으로 돌립니다."
+msgid "Researcher at Bell Laboratories. He gave the Computer Museum a prototype Nixie tube with its patent papers, and the museum's Report of winter 1987 to 1988 names him its inventor. Other records credit Burroughs."
+msgstr "벨 연구소의 연구원. 닉시관 시제품을 특허 서류와 함께 Computer Museum에 기증했고, 이 박물관의 1987년에서 1988년에 걸친 겨울 Report는 그를 그 발명자로 적고 있습니다. 다른 기록은 버로스의 공으로 돌립니다."
 
 #: hall-2/nixie-tube
 #. Note under the People section.
@@ -3818,8 +3830,8 @@ msgstr "일리노이 대학교는 1964년 그곳에서 교육 시스템 PLATO를
 #: hall-2/plasma-panel
 #. People section: what Tsutae Shinoda did. The names stand above this line.
 msgctxt "piece.plasma-panel.people.2"
-msgid "Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993."
-msgstr "일본 후지쯔에서 컬러 플라스마 패널을 실용화한 팀을 이끌었습니다. 그 21인치 컬러 텔레비전은 1993년에 발매되었습니다."
+msgid "Led the team at Fujitsu in Japan that made the colour plasma panel practical. Fujitsu's 21-inch colour television went on sale in 1993."
+msgstr "일본 후지쯔에서 컬러 플라스마 패널을 실용화한 팀을 이끌었습니다. 후지쯔의 21인치 컬러 텔레비전은 1993년에 발매되었습니다."
 
 #: hall-2/plasma-panel
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
@@ -6236,8 +6248,8 @@ msgstr "2008년에 잡지 에스콰이어는 한 호의 10만 부 표지에, 전
 #: hall-5/electrophoretic-ink
 #. People section: what Barrett Comiskey, J. D. Albert, Joseph Jacobson did. The names stand above this line.
 msgctxt "piece.electrophoretic-ink.people.1"
-msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey's account, he and Albert moved particles inside a capsule."
-msgstr "1990년대 중반부터 MIT 미디어랩에서 캡슐에 넣은 잉크를 개발했습니다. Comiskey의 말에 따르면, 1997년 1월 23일 그와 Albert는 캡슐 안의 입자를 움직였습니다."
+msgid "Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey's account, Comiskey and Albert moved particles inside a capsule."
+msgstr "1990년대 중반부터 MIT 미디어랩에서 캡슐에 넣은 잉크를 개발했습니다. Comiskey의 말에 따르면, 1997년 1월 23일 Comiskey와 Albert는 캡슐 안의 입자를 움직였습니다."
 
 #: hall-5/electrophoretic-ink
 #. People section: what John Rogers, Zhenan Bao did. The names stand above this line.
@@ -8600,8 +8612,8 @@ msgstr "바닥은 위에서, 앞쪽에서 비추므로 관람객의 그림자는
 #: hall-7/cave
 #. How it works, paragraph 3 of 4.
 msgctxt "piece.cave.how.3"
-msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand in the hand, a control with buttons and a small joystick, is tracked in the same way. Up to ten people fit inside, but the picture is right only for the one who is tracked."
-msgstr "안경에 달린 센서가 머리의 위치를 알리면, 컴퓨터가 그 지점에 맞춰 네 그림을 모두 다시 그립니다. 관람객이 움직여도 장면은 제자리에 머무는 것처럼 보입니다. 손에 드는 완드, 곧 버튼과 작은 조이스틱이 달린 조종기도 같은 방식으로 추적됩니다. 안에는 열 명까지 들어갈 수 있지만, 그림은 추적되는 한 사람에게만 맞습니다."
+msgid "A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand held in the hand is tracked in the same way. Notes of the laboratory from 1997 give it three buttons and a small joystick. Up to ten people fit inside, but the picture is right only for the one who is tracked."
+msgstr "안경에 달린 센서가 머리의 위치를 알리면, 컴퓨터가 그 지점에 맞춰 네 그림을 모두 다시 그립니다. 관람객이 움직여도 장면은 제자리에 머무는 것처럼 보입니다. 손에 드는 완드도 같은 방식으로 추적됩니다. 연구실의 1997년 기록에는 완드에 버튼 세 개와 작은 조이스틱이 달려 있습니다. 안에는 열 명까지 들어갈 수 있지만, 그림은 추적되는 한 사람에게만 맞습니다."
 
 #: hall-7/cave
 #. How it works, paragraph 4 of 4.
@@ -8882,8 +8894,8 @@ msgstr "1958년 첫 비행, 1961년 실전 배치"
 #: hall-7/head-up
 #. Who made it first, and where. No full stop at the end.
 msgctxt "piece.head-up.origin"
-msgid "Blackburn Buccaneer strike aircraft, UK, descended from wartime reflector gunsights"
-msgstr "공격기 블랙번 버커니어, 영국. 전쟁 시기의 반사식 조준기에서 이어져 왔습니다"
+msgid "Blackburn Buccaneer strike aircraft, UK. Its display descends from wartime reflector gunsights"
+msgstr "공격기 블랙번 버커니어, 영국. 이 기체의 디스플레이는 전쟁 시기의 반사식 조준기에서 이어져 왔습니다"
 
 #: hall-7/head-up
 #. Where this kind of display stands today.
@@ -9086,8 +9098,8 @@ msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent."
-msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년에 이런 관을 처음 만든 사람입니다. 30년 뒤 샌프란시스코에서 필로 판즈워스가 완전한 전자식 텔레비전 영상을 처음으로 보냈습니다. 펨이라는 이름으로 알려진 엘마 판즈워스는 그의 연구실에서 일하며 실험에 쓸 기술 도면을 그렸습니다. 그 방식이 처음 보낸 얼굴 가운데 하나가 그녀의 얼굴이었습니다."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent."
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 30년 뒤 샌프란시스코에서 필로 판즈워스의 팀이 완전한 전자식 텔레비전 영상을 보냈습니다. 캘리포니아 역사 기념물은 이것을 그런 영상 가운데 최초라고 부릅니다. 펨이라는 이름으로 알려진 엘마 판즈워스는 그 팀의 일원이었습니다. 실험 일지를 쓰고, 기술 도면을 그리고, 관의 부품을 용접했습니다. 그 방식이 처음 보낸 얼굴 가운데 하나가 그녀의 얼굴이었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9110,8 +9122,8 @@ msgstr "앞에 있는 벽은 LED로 이루어져 있고, 하나하나는 너무 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.microled.text.2"
-msgid "Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
-msgstr "징위 린과 훙싱 장은 물리학자입니다. 2000년 캔자스 주립 대학교에서 두 사람은 최초의 마이크로 LED를 만들었습니다. 두 사람은 부부이기도 하고, 이 생각은 저녁 식탁에서 나온 질문에서 시작되었습니다. LED를 천분의 몇 밀리미터로 줄이면 어떻게 될까요?"
+msgid "Jingyu Lin and Hongxing Jiang are physicists. By their own account, their team at Kansas State University saw blue light from a microLED in August 1999. They published it in 2000. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?"
+msgstr "징위 린과 훙싱 장은 물리학자입니다. 두 사람의 말에 따르면, 캔자스 주립 대학교의 두 사람 팀은 1999년 8월에 마이크로 LED에서 나오는 푸른 빛을 보았습니다. 2000년에 이를 발표했습니다. 두 사람은 부부이기도 하고, 이 생각은 저녁 식탁에서 나온 질문에서 시작되었습니다. LED를 천분의 몇 밀리미터로 줄이면 어떻게 될까요?"
 
 #: tour-women
 #. Guided tour, at the piece MicroLED: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9182,8 +9194,8 @@ msgstr "빔을 왼쪽에서 오른쪽으로 따라가 보세요. 레이저 세 �
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.scanned-laser.text.2"
-msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles."
-msgstr "명판에는 요제프 오스토야코트코프스키의 이름이 있습니다. 애들레이드에서 초기의 레이저 쇼를 올린 사람입니다. 캘리포니아 공과대학교의 물리학자 엘사 가마이어는 레이저 영상을 만들었습니다. 그 영상은 1972년에 촬영되었고, 로스앤젤레스의 그리피스 천문대에서 문을 연 레이저 쇼인 레이저리움의 본보기가 되었습니다."
+msgid "The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, with Garmire as its president. Laserium opened at Griffith Observatory in Los Angeles in 1973."
+msgstr "명판에는 요제프 오스토야코트코프스키의 이름이 있습니다. 1968년 애들레이드에서 초기의 레이저 쇼를 올린 사람입니다. 캘리포니아 공과대학교의 물리학자 엘사 가마이어는 레이저 영상을 만들었습니다. 영화 제작자 아이번 드라이어가 1970년 말부터 그 영상을 촬영했습니다. 두 사람은 레이저리움을 만든 회사를 세웠고, 가마이어가 사장을 맡았습니다. 레이저리움은 1973년 로스앤젤레스의 그리피스 천문대에서 문을 열었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Scanned laser: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9230,8 +9242,8 @@ msgstr "이것은 전자책 단말기의 지면입니다. 스스로 빛을 내�
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrophoretic-ink.text.2"
-msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
-msgstr "명판에는 배럿 코미스키, J. D. 앨버트, 조지프 제이컵슨의 이름이 있습니다. 1996년 MIT 미디어랩에서 이 잉크를 개발한 사람들입니다. 5년 뒤 벨 연구소에서 존 로저스와 제난 바오가 이 잉크를 플라스틱 시트 위에 입혔습니다. 바오는 전기가 통하는 플라스틱을 설계하는 화학자입니다. 두 사람은 고무도장으로 시트 위에 플라스틱 트랜지스터 256개를 찍었습니다. 화면의 점 하나에 하나씩입니다. 지면은 휘어질 수 있었습니다."
+msgid "The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend."
+msgstr "명판에는 배럿 코미스키, J. D. 앨버트, 조지프 제이컵슨의 이름이 있습니다. 1990년대 중반부터 MIT 미디어랩에서 이 잉크를 개발한 사람들입니다. 2001년 벨 연구소에서 존 로저스와 제난 바오가 이 잉크를 플라스틱 시트 위에 입혔습니다. 바오는 전기가 통하는 플라스틱을 설계하는 화학자입니다. 두 사람은 고무도장으로 시트 위에 플라스틱 트랜지스터 256개를 찍었습니다. 화면의 점 하나에 하나씩입니다. 지면은 휘어질 수 있었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrophoretic ink: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9254,8 +9266,8 @@ msgstr "크게 확대한 셀 12개입니다. 셀마다 물 아래에 색을 입�
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrowetting.text.2"
-msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
-msgstr "첫 지점에서는 전압이 결정을 휘게 해서 핀을 들어 올렸습니다. 여기서는 전압이 걸리면 물이 기름을 옆으로 밀어냅니다. 수전 해크우드와 제라르도 베니는 1981년 벨 연구소에서 이 디스플레이를 제안하고, 이 효과에 전기 습윤이라는 이름을 붙였습니다. 명판의 연도인 2003년은 네덜란드의 한 연구소가 이것을 동영상을 보여 줄 만큼 빠르게 만든 해입니다."
+msgid "At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981. Hackwood is credited with the name of the effect: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video."
+msgstr "첫 지점에서는 전압이 결정을 휘게 해서 핀을 들어 올렸습니다. 여기서는 전압이 걸리면 물이 기름을 옆으로 밀어냅니다. 수전 해크우드와 제라르도 베니는 1981년 벨 연구소에서 이 디스플레이를 제안했습니다. 전기 습윤이라는 이 효과의 이름은 해크우드가 붙인 것으로 전해집니다. 명판의 연도인 2003년은 네덜란드의 한 연구소가 이것을 동영상을 보여 줄 만큼 빠르게 만든 해입니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrowetting display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9278,8 +9290,8 @@ msgstr "이 인쇄 라벨은 정시에서 몇 분이 지났는지를 보여 줍�
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.electrochromic.text.2"
-msgid "The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour."
-msgstr "명판에는 S. K. 데브의 이름이 있습니다. 산화 텅스텐 막에 관한 그의 1969년 연구에서 이런 디스플레이가 시작되었습니다. 매사추세츠 공과대학교에서 폴라 해먼드와 딘 들롱샴은 그런 막을 다른 방법으로 만들었습니다. 분자층을 한 층씩 쌓은 것입니다. 두 사람의 막은 다른 방법으로 만든 막보다 더 빠르게, 더 높은 대비로 색이 바뀌었습니다. 이 연구를 담은 학위 논문은 2003년에 나왔고, 풀컬러 디스플레이로 가는 길을 가리킵니다."
+msgid "The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
+msgstr "명판에는 S. K. 데브의 이름이 있습니다. 1960년대에 시작한 산화 텅스텐 막에 관한 그의 연구에서 이런 디스플레이가 시작되었습니다. 매사추세츠 공과대학교에서 폴라 해먼드는 딘 들롱샴을 지도했고, 들롱샴은 그런 막을 다른 방법으로 만들었습니다. 분자층을 한 층씩 쌓은 것입니다. 그의 2003년 학위 논문은 이 막이 다른 방법으로 만든 막보다 대비와 전환에서 대체로 낫다고 보았습니다. 재료를 조합해 두 가지 이상의 색을 내는 막도 만들었습니다."
 
 #: tour-women
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9350,8 +9362,8 @@ msgstr "유리 건판 너머를 보세요. 장난감 기관차가 그 뒤에 서
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.holography.text.2"
-msgid "Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design."
-msgstr "데니스 가보르는 1948년에 홀로그래피를 발명했습니다. 20년 뒤 화가 마거릿 베니언이 홀로그램을 미술로 만들기 시작했습니다. 이런 홀로그램은 움직이지 않습니다. 최초의 홀로그래피 동영상 디스플레이는 1989년 MIT 미디어랩에서 만들어졌고, 그해에 메리 루 젭슨이 그곳에서 쓴 학위 논문이 그 설계를 담고 있습니다."
+msgid "Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a thesis that sets out the design and the building of a holographic video display."
+msgstr "데니스 가보르는 1947년에 홀로그래피를 구상했고 1948년에 발표했습니다. 그로부터 20년 뒤 화가 마거릿 베니언이 홀로그램을 미술로 만들기 시작했습니다. 이런 홀로그램은 움직이지 않습니다. 1989년 메리 루 젭슨은 MIT 미디어랩에서 학위 논문을 썼습니다. 홀로그래피 동영상 디스플레이의 설계와 제작을 담은 논문입니다."
 
 #: tour-women
 #. Guided tour, at the piece Holography: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9458,8 +9470,8 @@ msgstr "화면을 보세요. 화면을 따라 내려가는 밝은 띠는 전자 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.cathode-ray-tube.text.2"
-msgid "The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
-msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년에 이런 관을 처음 만든 사람입니다. 이 라벨에 있는 두 사람은 이 관을 일에 썼습니다. 마리 밴 브리턴 브라운은 뉴욕의 간호사였고, 남편 앨버트는 전자 기술자였습니다. 1966년에 두 사람은 자기 집을 위한 보안 장치를 만들었습니다. 카메라가 현관문에 뚫린 네 개의 구멍 사이를 오르내리고, 텔레비전 모니터가 찾아온 사람을 비추었습니다. 두 사람은 1969년에 특허를 받았습니다. 마크 딘은 IBM의 기술자였습니다. IBM 개인용 컴퓨터에 관한 그의 특허 세 건 가운데 두 건은 모니터를 구동하는 어댑터에 관한 것입니다. 하나는 흑백용이고 하나는 컬러용입니다."
+msgid "The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour."
+msgstr "받침대의 명판에는 페르디난트 브라운의 이름이 있습니다. 1897년 스트라스부르에서 음극선관을 만든 사람입니다. 이 라벨에 있는 두 사람은 이 관을 일에 썼습니다. 마리 밴 브리턴 브라운은 뉴욕의 간호사였고, 남편 앨버트는 전자 기술자였습니다. 1966년에 두 사람은 자기 집을 위한 보안 장치를 만들었습니다. 카메라가 현관문에 뚫린 네 개의 구멍 사이를 오르내리고, 텔레비전 모니터가 찾아온 사람을 비추었습니다. 두 사람은 1969년에 특허를 받았습니다. 마크 딘은 IBM의 기술자였습니다. IBM 개인용 컴퓨터에 관한 그의 특허 세 건 가운데 두 건은 모니터를 구동하는 어댑터에 관한 것입니다. 하나는 흑백용이고 하나는 컬러용입니다."
 
 #: tour-black
 #. Guided tour, at the piece Cathode ray tube: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9578,8 +9590,8 @@ msgstr "분을 막대로 보여 주는 인쇄 라벨을 보세요. 분이 바뀌
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.electrochromic.text.2"
-msgid "The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp's thesis of 2003 points to a full-colour display."
-msgstr "명판에는 S. K. 데브의 이름이 있습니다. 1969년에 그는 산화 텅스텐 막에 관한 연구를 발표했고, 이런 디스플레이는 거기에서 자라났습니다. 폴라 해먼드는 MIT에서 딘 들롱샴과 함께 연구했습니다. 두 사람은 전기 변색 막을 분자층을 한 층씩 쌓아 만들었습니다. 이 막은 다른 방법으로 만든 막보다 더 빠르게, 더 높은 대비로 바뀌었습니다. 들롱샴의 2003년 학위 논문은 풀컬러 디스플레이로 가는 길을 가리킵니다."
+msgid "The plate names S. K. Deb. These displays grew from his work on tungsten oxide films, begun in the 1960s. At MIT, Paula Hammond supervised Dean DeLongchamp, who built electrochromic films one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour."
+msgstr "명판에는 S. K. 데브의 이름이 있습니다. 이런 디스플레이는 1960년대에 시작한 산화 텅스텐 막에 관한 그의 연구에서 자라났습니다. MIT에서 폴라 해먼드는 딘 들롱샴을 지도했고, 들롱샴은 전기 변색 막을 분자층을 한 층씩 쌓아 만들었습니다. 그의 2003년 학위 논문은 이 막이 다른 방법으로 만든 막보다 대비와 전환에서 대체로 낫다고 보았습니다. 재료를 조합해 두 가지 이상의 색을 내는 막도 만들었습니다."
 
 #: tour-black
 #. Guided tour, at the piece Electrochromic display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9602,8 +9614,8 @@ msgstr "왼쪽에는 진짜 전구가 소켓 아래에 숨어 매달려 있고, 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.illusion-transmitter.text.2"
-msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
-msgstr "여기 명판에는 이 투어가 찾아온 사람의 이름이 있습니다. 밸러리 토머스는 1943년 메릴랜드에서 태어났습니다. 모건 주립 대학교에서 물리학을 전공한 여성은 그녀를 포함해 단 두 명이었습니다. 데이터 분석가로 NASA에 들어가, 그곳에서 환영 전송기를 발명했습니다. 명판에 적힌 연도는 1980년입니다."
+msgid "Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980."
+msgstr "여기 명판에는 이 투어가 찾아온 사람의 이름이 있습니다. 밸러리 토머스는 1943년 메릴랜드에서 태어났습니다. 한 기록에 따르면, 모건 주립 대학교의 같은 학년에서 물리학을 전공한 여성은 그녀를 포함해 단 두 명이었습니다. 데이터 분석가로 NASA에 들어가, 그곳에서 환영 전송기를 발명했습니다. 명판에 적힌 연도는 1980년입니다."
 
 #: tour-black
 #. Guided tour, at the piece Illusion transmitter: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9626,8 +9638,8 @@ msgstr "손에 드는 뷰어가 기둥 위에 서 있고, 입체 카드가 꽂�
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.stereoscope.text.2"
-msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
-msgstr "명판에는 찰스 휘트스톤의 이름이 있습니다. 1838년 런던에서 입체경을 발표한 사람입니다. 이 라벨에 있는 두 사람은 훨씬 뒤의 사람입니다. 찰스 해리슨은 시카고의 산업 디자이너였습니다. 1958년에 손에 드는 입체경인 View-Master를 가벼운 성형 플라스틱으로 다시 디자인했습니다. 사진가의 부속품이던 것이 어린이의 장난감이 되었습니다. 케네스 던클리는 펜실베이니아의 물리학자입니다. 1989년의 특허는 렌즈가 없는 안경에 관한 것입니다. 작은 구멍 두 개와 빈 틀 두 개가 전부입니다. 특허는 이 안경이 평범한 평면 그림을 깊이가 있는 것처럼 보이게 한다고 밝힙니다."
+msgid "The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer's accessory to a children's toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth."
+msgstr "명판에는 찰스 휘트스톤의 이름이 있습니다. 1838년 런던에서 입체경을 발표한 사람입니다. 이 라벨에 있는 두 사람은 훨씬 뒤의 사람입니다. 찰스 해리슨은 시카고의 산업 디자이너였습니다. 1957년이나 1958년에 손에 드는 입체경인 View-Master를 가벼운 성형 플라스틱으로 다시 디자인했습니다. 사진가의 부속품이던 것이 어린이의 장난감이 되었습니다. 케네스 던클리는 펜실베이니아의 물리학자입니다. 1989년의 특허는 렌즈가 없는 안경에 관한 것입니다. 작은 구멍 두 개와 빈 틀 두 개가 전부입니다. 특허는 이 안경이 평범한 평면 그림을 깊이가 있는 것처럼 보이게 한다고 밝힙니다."
 
 #: tour-black
 #. Guided tour, at the piece Stereoscope and 3D glasses: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9674,8 +9686,8 @@ msgstr "모델은 마네킹 머리에 씌운 헤드셋을 보여 줍니다. 그 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.head-mounted.text.2"
-msgid "The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
-msgstr "명판에는 아이번 서덜랜드와 밥 스프롤의 이름이 있습니다. 1968년 하버드 대학교에서 컴퓨터 그래픽으로 구동하는 최초의 헤드셋을 만든 사람들입니다. 새뮤얼 아칠레푸는 나이지리아에서 태어났습니다. 세인트루이스 워싱턴 대학교의 그의 연구진은 외과 의사를 위해 화면이 달린 고글을 만들었습니다. 염료가 암세포를 그 화면에서 빛나게 합니다. 이 고글은 2014년에 처음으로 수술에서 쓰였습니다."
+msgid "The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014."
+msgstr "명판에는 아이번 서덜랜드와 밥 스프롤의 이름이 있습니다. 1968년 하버드 대학교에서 컴퓨터가 그린 그래픽을 보여 주는 헤드셋을 만든 사람들입니다. 이것을 최초의 가상 현실 헤드셋이라고 부르는 자료도 있고, 초기의 것 가운데 하나라고 부르는 자료도 있습니다. 새뮤얼 아칠레푸는 나이지리아에서 태어났습니다. 세인트루이스 워싱턴 대학교의 그의 연구진은 외과 의사를 위해 화면이 달린 고글을 만들었습니다. 염료가 암세포를 그 화면에서 빛나게 합니다. 이 고글은 2014년에 처음으로 수술에서 쓰였습니다."
 
 #: tour-black
 #. Guided tour, at the piece Head-mounted display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9818,8 +9830,8 @@ msgstr "일리노이 대학교에서 Donald Bitzer와 Gene Slottow의 지도를 
 #: people
 #. About Robert Willson, on that person's own page: paragraph 2 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.robert-willson.about.2"
-msgid "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of his results about a year later, and the three made the plasma display panel."
-msgstr "1963년 Bitzer는 그에게 대학의 교육 네트워크인 PLATO를 위해, 여러 영상을 겹쳐 보여 줄 수 있는 디스플레이를 탐구하게 했습니다. 1년쯤 뒤 Slottow가 그 결과에 관한 논의에 합류했고, 세 사람은 플라스마 디스플레이 패널을 만들었습니다."
+msgid "In 1963 Bitzer set him to explore a display for PLATO, the university's teaching network, that could show images laid over each other. Slottow joined the discussion of Willson's results about a year later, and the three made the plasma display panel."
+msgstr "1963년 Bitzer는 그에게 대학의 교육 네트워크인 PLATO를 위해, 여러 영상을 겹쳐 보여 줄 수 있는 디스플레이를 탐구하게 했습니다. 1년쯤 뒤 Slottow가 Willson의 결과에 관한 논의에 합류했고, 세 사람은 플라스마 디스플레이 패널을 만들었습니다."
 
 #: people
 #. About Robert Willson, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10232,7 +10244,7 @@ msgstr "유타주 비버시티에서 태어나, 1922년 학교 과학 교사 Jus
 #: people
 #. About Philo Farnsworth, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.philo-farnsworth.about.2"
-msgid "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory on the second floor of 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide."
+msgid "Backed by the fundraisers George Everson and Leslie Gorrell, he set up a laboratory one floor above the street at 202 Green Street, San Francisco. On 7 September 1927 it sent the image of a line drawn on a slide."
 msgstr "모금가 George Everson과 Leslie Gorrell의 후원을 받아 샌프란시스코 그린 스트리트 202번지 2층에 연구실을 차렸습니다. 1927년 9월 7일 이 연구실은 슬라이드에 그은 선 하나의 영상을 보냈습니다."
 
 #: people
@@ -10508,8 +10520,8 @@ msgstr "보스턴의 한 특허 법률 사무소에서 독학으로 제도를 �
 #: people
 #. About Lewis Latimer, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.lewis-latimer.about.3"
-msgid "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for his filament work, and many workers resented a Black supervisor."
-msgstr "1880년 하이럼 맥심의 부지배인 겸 기계 제도사가 되어, 미국, 캐나다, 잉글랜드에서 조명 설비 설치를 감독했습니다. 특허청에 따르면 맥심은 그의 필라멘트 연구를 자기 공으로 가져갔고, 많은 노동자가 흑인 감독자에게 반감을 품었습니다."
+msgid "In 1880 he became assistant manager and mechanical draftsman to Hiram Maxim, and oversaw the installation of lighting plants in the United States, Canada and England. The patent office says Maxim took credit for Latimer's filament work, and many workers resented a Black supervisor."
+msgstr "1880년 하이럼 맥심의 부지배인 겸 기계 제도사가 되어, 미국, 캐나다, 잉글랜드에서 조명 설비 설치를 감독했습니다. 특허청에 따르면 맥심은 래티머의 필라멘트 연구를 자기 공으로 가져갔고, 많은 노동자가 흑인 감독자에게 반감을 품었습니다."
 
 #: people
 #. About Lewis Latimer, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -10550,8 +10562,8 @@ msgstr "캘리포니아주 새너제이에서 태어나, 버클리에서 건축�
 #: people
 #. About Charles Spindt, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.charles-spindt.about.2"
-msgid "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The conference says that in 1966 he worked out how to make the cathode named after him, an array of microscopic tips that emit electrons at under 100 volts."
-msgstr "1959년 Kenneth Shoulders에게 채용되어 스탠퍼드 연구소, 지금의 SRI 인터내셔널에 들어갔습니다. 학회에 따르면 그는 1966년 자신의 이름이 붙은 음극, 곧 100볼트 미만에서 전자를 내보내는 미세한 돌기의 배열을 만드는 방법을 알아냈습니다."
+msgid "He joined Stanford Research Institute, now SRI International, in 1959, hired by Kenneth Shoulders. The International Vacuum Nanoelectronics Conference says he worked out in 1966 how to make the cathode named after him, an array of microscopic tips emitting electrons at under 100 volts."
+msgstr "1959년 Kenneth Shoulders에게 채용되어 스탠퍼드 연구소, 지금의 SRI 인터내셔널에 들어갔습니다. International Vacuum Nanoelectronics Conference에 따르면 그는 1966년 자신의 이름이 붙은 음극, 곧 100볼트 미만에서 전자를 내보내는 미세한 돌기의 배열을 만드는 방법을 알아냈습니다."
 
 #: people
 #. About Charles Spindt, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11354,8 +11366,8 @@ msgstr "텍사스 대학교 댈러스의 집계에 따르면 그는 미국 특�
 #: people
 #. About Larry Hornbeck, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.larry-hornbeck.about.4"
-msgid "He received an Engineering Emmy in 1998 and an Academy Award of Merit in 2015 for the cinema projectors built on the chip. He joined the faculty of the University of Texas at Dallas in 2017."
-msgstr "이 칩으로 만든 영화 영사기로 1998년 엔지니어링 에미상을, 2015년 아카데미 공로상(Academy Award of Merit)을 받았습니다. 2017년 텍사스 대학교 댈러스 교수진에 합류했습니다."
+msgid "He received an Engineering Emmy in 1998, and in 2015 an Academy Award of Merit for the chip as used in cinema projectors. He joined the faculty of the University of Texas at Dallas in 2017."
+msgstr "1998년 엔지니어링 에미상을 받았고, 2015년에는 영화 영사기에 쓰이는 이 칩으로 아카데미 공로상(Academy Award of Merit)을 받았습니다. 2017년 텍사스 대학교 댈러스 교수진에 합류했습니다."
 
 #: people
 #. About Elsa Garmire, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11390,8 +11402,8 @@ msgstr "1956년부터 1968년까지 간간이 로스앤젤레스 그리피스 �
 #: people
 #. About Ivan Dryer, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.ivan-dryer.about.2"
-msgid "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had them incorporated in February 1971."
-msgstr "1970년 11월 그와 영화 제작자 Dale Pelton은 서던캘리포니아 대학교의 한 학회에서 엘사 가마이어가 레이저 아트를 선보이는 것을 보았고, 가마이어는 두 사람에게 이를 촬영해 달라고 청했습니다. 그는 가마이어가 1971년 2월 이들을 법인으로 등록했다고 회고했습니다."
+msgid "In November 1970 he and the filmmaker Dale Pelton saw Elsa Garmire show her laser art at a conference at the University of Southern California, and she invited them to film it. He recalled that she had their company incorporated in February 1971."
+msgstr "1970년 11월 그와 영화 제작자 Dale Pelton은 서던캘리포니아 대학교의 한 학회에서 엘사 가마이어가 레이저 아트를 선보이는 것을 보았고, 가마이어는 두 사람에게 이를 촬영해 달라고 청했습니다. 그는 가마이어가 1971년 2월 두 사람의 회사를 법인으로 등록하게 했다고 회고했습니다."
 
 #: people
 #. About Ivan Dryer, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -11846,7 +11858,7 @@ msgstr "Grace's Guide는 그가 유령 착시를 설계한 시기를 1858년으�
 #: people
 #. About Henry Dircks, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.henry-dircks.about.3"
-msgid "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account he then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863."
+msgid "Pepper's book dates his first showing to just before Christmas 1862, the Linda Hall Library to late 1862 or early 1863. By Pepper's account, Pepper then had a provisional patent taken out in both their names. The letters patent were dated 5 February 1863."
 msgstr "페퍼의 책은 페퍼의 첫 공연을 1862년 크리스마스 직전으로, 린다 홀 도서관은 1862년 말이나 1863년 초로 봅니다. 페퍼의 말에 따르면 페퍼는 그 뒤 두 사람 이름으로 임시 특허를 내게 했습니다. 특허증의 날짜는 1863년 2월 5일이었습니다."
 
 #: people
@@ -12098,8 +12110,8 @@ msgstr "유니버시티 칼리지 런던으로 옮겨, Diego Martinez Plasencia,
 #: people
 #. About Sriram Subramanian, on that person's own page: paragraph 3 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.sriram-subramanian.about.3"
-msgid "UCL says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. UCL reported his election as a Fellow of the Royal Academy of Engineering in 2025."
-msgstr "UCL에 따르면 그의 초기 하드웨어 설계는 Ultrahaptics, 지금의 Ultraleap이라는 회사로 이어졌습니다. 그는 Metasonixx를 세웠고 AcoustoFab을 공동 창업했습니다. UCL은 그가 2025년 왕립 공학 아카데미 펠로로 선출되었다고 전했습니다."
+msgid "University College London says his early hardware designs led to the company Ultrahaptics, now Ultraleap. He founded Metasonixx and co-founded AcoustoFab. The university reported his election as a Fellow of the Royal Academy of Engineering in 2025."
+msgstr "유니버시티 칼리지 런던에 따르면 그의 초기 하드웨어 설계는 Ultrahaptics, 지금의 Ultraleap이라는 회사로 이어졌습니다. 그는 Metasonixx를 세웠고 AcoustoFab을 공동 창업했습니다. 이 대학은 그가 2025년 왕립 공학 아카데미 펠로로 선출되었다고 전했습니다."
 
 #: people
 #. About Yoichi Ochiai, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12446,7 +12458,7 @@ msgstr "제록스 팰로앨토 연구소에서 일했고, 카네기 멜런 대�
 #: people
 #. About Bob Sproull, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.bob-sproull.about.3"
-msgid "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs, a research group that began at Sun, which Oracle bought in 2010."
+msgid "By 1992 he was a vice president and fellow of Sun Microsystems Laboratories, setting up a section of it in Billerica, Massachusetts. He retired as vice president and director of Oracle Labs. That research group began at Sun, which Oracle bought in 2010."
 msgstr "1992년에는 선 마이크로시스템즈 연구소의 부사장이자 펠로로서 매사추세츠주 빌러리카에 연구소 지부를 세우고 있었습니다. 그는 선에서 시작된 연구 조직인 Oracle Labs의 부사장 겸 소장으로 은퇴했습니다. 오라클은 2010년 선을 사들였습니다."
 
 #: people
@@ -12528,10 +12540,16 @@ msgid "The Association for Computing Machinery gave him its Outstanding Contribu
 msgstr "미국 컴퓨터 학회는 1988년 그에게 Outstanding Contribution Award를 주었고, 1994년에 펠로로 선출했습니다. 그는 캘리포니아 대학교 샌디에이고의 California Institute for Telecommunications and Information Technology에서 연구 과학자로 일합니다."
 
 #: people
-#. About Greg Dawe, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+#. About Greg Dawe, on that person's own page: paragraph 1 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.greg-dawe.about.1"
 msgid "The laboratory's retrospective of 2024 credits Greg Dawe with its later displays derived from the CAVE, among them the ImmersaDesk and Varrier. In the 2000s Dawe joined Thomas DeFanti at the University of California, San Diego, and built room-sized displays of the same kind."
 msgstr "연구실의 2024년 회고는 CAVE에서 나온 연구실의 이후 디스플레이들, 그 가운데 ImmersaDesk와 Varrier를 Greg Dawe의 공으로 돌립니다. 2000년대에 Dawe는 캘리포니아 대학교 샌디에이고에서 Thomas DeFanti에게 합류해, 같은 종류의 방 크기 디스플레이를 만들었습니다."
+
+#: people
+#. About Greg Dawe, on that person's own page: paragraph 2 of 2. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.greg-dawe.about.2"
+msgid "Dawe is the second of nine authors, after DeFanti, of the paper of 2009 on one of them, the StarCAVE."
+msgstr "Dawe는 그 가운데 하나인 StarCAVE에 관한 2009년 논문에서, DeFanti 다음으로 아홉 저자 가운데 두 번째입니다."
 
 #: people
 #. About Samuel Achilefu, on that person's own page: paragraph 1 of 3. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
@@ -12614,5 +12632,5 @@ msgstr "Lin과 동료들이 2017년 Frontiers of Optoelectronics에 낸 리뷰�
 #: people
 #. About Auguste Berthier, on that person's own page: paragraph 1 of 1. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
 msgctxt "person.auguste-berthier.about.1"
-msgid "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. He wrote that Frederic Ives applied it to stereoscopic still pictures in 1904."
+msgid "Sam H. Kaplan, in the Journal of the Society of Motion Picture Engineers in 1952, said the parallax barrier was generally attributed to Berthier of France, who suggested it in 1896. Kaplan wrote that Frederic Ives applied it to stereoscopic still pictures in 1904."
 msgstr "Sam H. Kaplan은 1952년 Journal of the Society of Motion Picture Engineers에서, 시차 장벽은 일반적으로 1896년 이를 제안한 프랑스의 Berthier의 것으로 여겨진다고 말했습니다. Kaplan은 Frederic Ives가 1904년 이를 입체 정지 사진에 적용했다고 썼습니다."

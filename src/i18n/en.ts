@@ -69,6 +69,8 @@ export const en = {
   'stage.ar.placed': 'Walk round it. Tap another place to move it.',
   'stage.expand': 'Expand',
   'stage.close': 'Close',
+  'stage.clear': 'Picture only',
+  'stage.clear.back': 'Tap or click to bring the controls back.',
   'stage.hint.turn': 'Drag to turn. Pinch or scroll to zoom.',
   'stage.hint.person': 'Drag to move your head.',
   'stage.hint.detail': 'Drag to look round it. Pinch or scroll to zoom.',

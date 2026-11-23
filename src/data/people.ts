@@ -49,7 +49,7 @@ export const people: Record<string, Credit> = {
     people: [
       { who: ['Oleg Tretiakoff', 'Andrée Tretiakoff'], she: ['Andrée Tretiakoff'], did: 'Patented braille dots raised by bending piezoelectric reeds, in a United States patent filed in 1975 and granted in 1977. A later patent of theirs claims a French application of August 1974.' },
       { who: ['Klaus Peter Schönherr'], did: 'A collector\'s history says he invented in 1975 a braille element that could show and erase characters. Computerwoche reported his firm\'s braille terminal in use at the University of Tübingen from December 1976.' },
-      { who: ['James Bryce'], did: 'Began at IBM the first working braille display in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949.' },
+      { who: ['James Bryce'], did: 'Began at IBM a working braille display. It is the earliest in the files of the American Printing House for the Blind, which dates it around 1950. Bryce died in 1949.' },
     ],
     sources: [
       src('patent', 'Tretiakoff and Tretiakoff, US patent 4,044,350', 'https://patents.google.com/patent/US4044350'),
@@ -93,7 +93,7 @@ export const people: Record<string, Credit> = {
     ],
   },
   'nixie-tube': {
-    people: [{ who: ['David Hagelbarger'], aside: true, did: 'Researcher at Bell Laboratories. The Computer Museum Report of winter 1987 to 1988 names him the inventor of a prototype Nixie tube he gave it with its patent papers. Other records credit Burroughs.' }],
+    people: [{ who: ['David Hagelbarger'], aside: true, did: 'Researcher at Bell Laboratories. He gave the Computer Museum a prototype Nixie tube with its patent papers, and the museum\'s Report of winter 1987 to 1988 names him its inventor. Other records credit Burroughs.' }],
     note: 'Credit for the invention is not settled. The Computer Museum in Boston recorded a prototype made at Bell Laboratories as the gift of its inventor, David Hagelbarger. The Computer History Museum, which holds that prototype now, says the Nixie was invented at Burroughs. A donor\'s note there gives the design to the Haydu brothers, about 1948, who sold the patent to Burroughs in 1952. National Union sold a similar tube, the Inditron, in 1954, and patents for numerals in glow lamps go back to the 1930s.',
     sources: [
       src('archive', 'The Collection, The Computer Museum Report, volume 21, winter 1987 to 1988, page 3', 'https://tcm.computerhistory.org/reports/TCMReportWinter1987-88.pdf'),
@@ -117,7 +117,7 @@ export const people: Record<string, Credit> = {
   'plasma-panel': {
     people: [
       { who: ['Donald Bitzer', 'Gene Slottow', 'Robert Willson'], did: 'The University of Illinois credits them with inventing the panel there in 1964, for the PLATO teaching system. By Bitzer\'s account, Willson, their graduate student, worked out how to build the original panels.' },
-      { who: ['Tsutae Shinoda'], did: 'Led the team at Fujitsu in Japan that made the colour plasma panel practical. Its 21-inch colour television went on sale in 1993.' },
+      { who: ['Tsutae Shinoda'], did: 'Led the team at Fujitsu in Japan that made the colour plasma panel practical. Fujitsu\'s 21-inch colour television went on sale in 1993.' },
     ],
     sources: [src('archive', 'Milestones: Color Plasma Television, 1993, Engineering and Technology History Wiki', 'https://ethw.org/Milestones:Color_Plasma_Television,_1993')],
   },
@@ -243,7 +243,7 @@ export const people: Record<string, Credit> = {
   'gyricon': { people: [{ who: ['Nicholas Sheridon'], did: 'By his own account he invented the sheet of turning beads at the Xerox Palo Alto Research Center in the 1970s.' }] },
   'electrophoretic-ink': {
     people: [
-      { who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey\'s account, he and Albert moved particles inside a capsule.' },
+      { who: ['Barrett Comiskey', 'J. D. Albert', 'Joseph Jacobson'], did: 'Developed the ink in capsules at the MIT Media Lab from the middle of the 1990s. On 23 January 1997, by Comiskey\'s account, Comiskey and Albert moved particles inside a capsule.' },
       { who: ['John Rogers', 'Zhenan Bao'], she: ['Zhenan Bao'], did: 'At Bell Laboratories in 2001 they stamped 256 plastic transistors onto a plastic sheet, one for each dot, and laid this ink over them: electronic paper that bends. Bao, a chemist, designs conducting plastics.' },
     ],
     sources: [

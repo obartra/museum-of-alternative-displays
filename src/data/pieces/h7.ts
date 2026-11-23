@@ -102,7 +102,7 @@ export const h7: Piece[] = [
     how: [
       'Three walls and the floor are screens. In the room shown at SIGGRAPH in Chicago in July 1992, each was about 3 metres square. Projectors behind the walls light the back of each screen, so people inside cast no shadow on them. Mirrors fold the beams to save space.',
       'The floor is lit from above, from the front, so a visitor\'s shadow falls mostly behind them. Each screen shows the picture for the left eye and then for the right, 120 pictures a second. Glasses with liquid crystal shutters close one eye and then the other in step, kept in time by an infrared signal.',
-      'A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand in the hand, a control with buttons and a small joystick, is tracked in the same way. Up to ten people fit inside, but the picture is right only for the one who is tracked.',
+      'A sensor on the glasses reports where the head is, and the computers redraw all four pictures for that point. As the visitor moves, the scene seems to stay in place. A wand held in the hand is tracked in the same way. Notes of the laboratory from 1997 give it three buttons and a small joystick. Up to ten people fit inside, but the picture is right only for the one who is tracked.',
       'The paper of 1992 spells the name out as Audio Visual Experience Automatic Virtual Environment, reminiscent of Plato\'s allegory of the cave. The paper of 1993 makes it CAVE Automatic Virtual Environment and points to the cave in Plato\'s Republic, where reality is inferred from shadows on a wall. The laboratory\'s retrospective of 2024 calls it the first widely replicated walk-in virtual reality system based on projection.',
     ],
     good: [
@@ -149,7 +149,7 @@ export const h7: Piece[] = [
   },
   {
     id: 'head-up', hall: 7, name: 'Head-up display', aka: 'HUD',
-    year: 1958, yearText: 'first flown 1958, in service 1961', origin: 'Blackburn Buccaneer strike aircraft, UK, descended from wartime reflector gunsights',
+    year: 1958, yearText: 'first flown 1958, in service 1961', origin: 'Blackburn Buccaneer strike aircraft, UK. Its display descends from wartime reflector gunsights',
     status: 'production', statusNote: 'Standard in military and airline cockpits, and more and more common in cars. The first one in a production car appeared in 1988.',
     principle: 'directs', needs: ['seethrough', 'daylight'],
     lead: 'A sloping sheet of glass reflects symbols that are focused far away, so that they appear to sit on the world outside.',

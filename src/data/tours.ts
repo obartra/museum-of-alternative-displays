@@ -48,12 +48,12 @@ export const tours: Tour[] = [
       ] },
       { id: 'cathode-ray-tube', title: 'A beam that draws', who: ['Elma Farnsworth'], text: [
         'Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times. From the side you can see the copper coils that steer the beam.',
-        'The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Thirty years later, in San Francisco, Philo Farnsworth sent the first television picture made entirely by electronics. Elma Farnsworth, known as Pem, worked in his laboratories and made the technical drawings for the experiments. Her face was among the first that the system sent.',
+        'The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Thirty years later, in San Francisco, the team of Philo Farnsworth sent a television picture made entirely by electronics. A California historical landmark calls it the first such picture. Elma Farnsworth, known as Pem, was on that team. She kept the logbooks, made technical drawings and welded parts of the tubes. Her face was among the first that the system sent.',
         'In hall 1 the picture was made of pins. Here one beam draws all of it. The next stop is the MicroLED wall in hall 3, where the picture is made of lamps.',
       ] },
       { id: 'microled', title: 'A question at dinner', who: ['Jingyu Lin'], text: [
         'The wall in front of you is made of LEDs, each too small to see. One tile is out and leans against the stand, with the suction lifter still on it. A wall like this is repaired one square at a time.',
-        'Jingyu Lin and Hongxing Jiang are physicists. In 2000, at Kansas State University, they made the first microLEDs. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?',
+        'Jingyu Lin and Hongxing Jiang are physicists. By their own account, their team at Kansas State University saw blue light from a microLED in August 1999. They published it in 2000. They are also a married couple, and the idea began as a question at their dinner table: what would happen to an LED shrunk to thousandths of a millimetre?',
         'Stay in hall 3. The next stop, the quantum-dot display, works with crystals far smaller than these lamps.',
       ] },
       { id: 'quantum-dot', title: 'Colour from size', stand: { wide: 1.6, aim: 0.45 }, who: ['Vicki Colvin'], text: [
@@ -68,7 +68,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'scanned-laser', title: 'Drawing with a laser', who: ['Elsa Garmire'], text: [
         'Follow the beams from left to right. Three lasers merge into one white beam. Two small mirrors on fast motors steer it, and your eye joins the moving dot into a drawing on the wall.',
-        'The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. They were filmed in 1972, and they became the model for Laserium, the laser show that opened at Griffith Observatory in Los Angeles.',
+        'The plate names Joseph Ostoja-Kotkowski, who staged an early laser show in Adelaide in 1968. Elsa Garmire, a physicist at the California Institute of Technology, made laser images. The filmmaker Ivan Dryer filmed them from late 1970. The two started the company that made Laserium, with Garmire as its president. Laserium opened at Griffith Observatory in Los Angeles in 1973.',
         'In hall 2 a beam of electrons drew the picture inside a tube. This beam is light, and it can draw on anything: clouds, buildings, smoke. A few steps on, in the same hall, a picture is cut to fit a set of white plaster shapes.',
       ] },
       { id: 'projection-mapping', title: 'A picture cut to fit', who: ['Leota Toombs'], text: [
@@ -78,17 +78,17 @@ export const tours: Tour[] = [
       ] },
       { id: 'electrophoretic-ink', title: 'A page that bends', who: ['Zhenan Bao'], text: [
         'This is the page of an e-reader. It makes no light. Millions of capsules hold black and white pigment, and a voltage pulls one colour to the top. Watch the page for a moment. Every 15 seconds it resets, with a flash of black and then of white. In between, it holds the page with no power.',
-        'The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab in 1996. Five years later, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend.',
+        'The plate names Barrett Comiskey, J. D. Albert and Joseph Jacobson, who developed this ink at the MIT Media Lab from the middle of the 1990s. In 2001, at Bell Laboratories, John Rogers and Zhenan Bao laid it on a sheet of plastic. Bao is a chemist who designs plastics that carry a current. With a rubber stamp they printed 256 plastic transistors on the sheet, one for each dot of the picture. The page could bend.',
         'The ink is slow, which suits a page. The next stop, in this hall, is a display of the same kind that became fast enough for video. Go to the electrowetting display.',
       ] },
       { id: 'electrowetting', title: 'Oil and water', who: ['Susan Hackwood'], text: [
         'These are 12 cells, greatly enlarged. Each holds a drop of dyed oil under water. With no voltage, the oil spreads out and the cell shows its colour. With a voltage, the water pushes the oil into a corner. Watch one cell switch. The oil does not disappear. It gathers in the corner and stands higher.',
-        'At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981, and they gave the effect its name: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video.',
+        'At the first stop a voltage bent a crystal and lifted a pin. Here a voltage makes water push oil aside. Susan Hackwood and Gerardo Beni proposed this display at Bell Laboratories in 1981. Hackwood is credited with the name of the effect: electrowetting. The year on the plate, 2003, is when a laboratory in the Netherlands made it fast enough for video.',
         'There is one more stop in this hall. Go to the electrochromic display, a printed label that shows the minutes.',
       ] },
       { id: 'electrochromic', title: 'Layer by layer', who: ['Paula Hammond'], text: [
         'This printed label shows the minutes past the hour. In this hall a voltage has moved pigment, and then oil. Here it moves atoms. It pushes charged atoms into the printed film, and the film darkens. Wait for the minute to change. The old numeral fades, and the new one darkens over several seconds. The pane of glass behind the label carries the same film.',
-        'The plate names S. K. Deb, whose work on films of tungsten oxide, in 1969, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond and Dean DeLongchamp built such films in another way: one molecular layer at a time. Their films changed colour faster, and with more contrast, than films made in other ways. The thesis that sets the work out is from 2003, and it points to a display in full colour.',
+        'The plate names S. K. Deb. His work on films of tungsten oxide, begun in the 1960s, is where these displays began. At the Massachusetts Institute of Technology, Paula Hammond supervised Dean DeLongchamp, who built such films in another way: one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour.',
         'That was the last display that works like print. Next is hall 6, Mid-air. Go to the illusion transmitter, where a picture hangs in the air.',
       ] },
       { id: 'illusion-transmitter', title: 'A bulb that is not there', who: ['Valerie Thomas'], text: [
@@ -103,7 +103,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'holography', title: 'The light itself', who: ['Margaret Benyon', 'Mary Lou Jepsen'], text: [
         'Look through the glass plate. A toy engine seems to stand behind it. Move to one side, and you see around the engine. It is not behind the glass. A hologram records the light itself. In hall 4 a laser drew the picture. Here a laser only lights the plate, and the plate sends out the same light waves that the engine did.',
-        'Dennis Gabor invented holography in 1948. Twenty years later Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. The first holographic video display was built at the MIT Media Lab in 1989, and the thesis that Mary Lou Jepsen wrote there that year sets out its design.',
+        'Dennis Gabor conceived holography in 1947 and published it in 1948. Twenty years after that, Margaret Benyon, a painter, began to make holograms as art. A hologram like this one is static. In 1989, at the MIT Media Lab, Mary Lou Jepsen wrote a thesis that sets out the design and the building of a holographic video display.',
         'This hologram needs no glasses. The last stop, in the same hall, puts screens all round the visitor. Go to the CAVE.',
       ] },
       { id: 'cave', title: 'A room drawn for one head', who: ['Carolina Cruz-Neira'], text: [
@@ -130,7 +130,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'cathode-ray-tube', title: 'A camera at the door', who: ['Marie Van Brittan Brown', 'Mark Dean'], text: [
         'Look at the screen. The bright band moving down it is where one beam of electrons has just drawn its lines. The model slows it about 60 times.',
-        'The plate on the block names Ferdinand Braun, who built the first tube of this kind in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour.',
+        'The plate on the block names Ferdinand Braun, who built his cathode ray tube in Strasbourg in 1897. Two people on this label put the tube to work. Marie Van Brittan Brown was a nurse in New York, and her husband Albert was an electronics technician. In 1966 they built a security system for their home. A camera slid between four peepholes in the door, and a television monitor showed who was calling. They patented it in 1969. Mark Dean was an engineer at IBM. Two of his three patents on the IBM personal computer are for the adapters that drove its monitors, one monochrome and one colour.',
         'The next stop is in this hall as well. Go to the Numitron, the glass bulb with seven small filaments.',
       ] },
       { id: 'numitron', title: 'The filament came first', who: ['Lewis Latimer'], text: [
@@ -155,17 +155,17 @@ export const tours: Tour[] = [
       ] },
       { id: 'electrochromic', title: 'One layer at a time', who: ['Paula Hammond'], text: [
         'Look at the printed label that shows the minutes in bars. Wait for the minute to change. The old digit fades and the new digit darkens slowly, over several seconds. The window pane behind the label is the same film on glass.',
-        'The plate names S. K. Deb. In 1969 he published the work on tungsten oxide films from which these displays grew. Paula Hammond worked at MIT with Dean DeLongchamp. They built electrochromic films one molecular layer at a time. Their films switched faster and with more contrast than films made in other ways. DeLongchamp\'s thesis of 2003 points to a full-colour display.',
+        'The plate names S. K. Deb. These displays grew from his work on tungsten oxide films, begun in the 1960s. At MIT, Paula Hammond supervised Dean DeLongchamp, who built electrochromic films one molecular layer at a time. His thesis of 2003 found them generally better in contrast and in switching than films made in other ways. By combining materials he also made films of more than one colour.',
         'This film keeps its colour with the power off. The next picture is not on a surface at all. Go to hall 6 and find the illusion transmitter.',
       ] },
       { id: 'illusion-transmitter', title: 'A picture standing in the air', who: ['Valerie Thomas'], text: [
         'On the left a real bulb hangs hidden under the socket, and its picture stands in the empty socket above. On the right there is no bulb at all. Watch the left bulb go dark: the picture on the right follows a moment later.',
-        'Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. She was one of only two women to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980.',
+        'Here the plate names the person this tour came for. Valerie Thomas was born in Maryland in 1943. By one account she was one of only two women in her class to major in physics at Morgan State University. She joined NASA as a data analyst and invented the illusion transmitter there. The plate gives the year 1980.',
         'A curved mirror gave that picture its depth. In hall 7 depth comes from giving each eye its own picture. Go to the stereoscope.',
       ] },
       { id: 'stereoscope', title: 'Two pictures, two eyes', who: ['Charles Harrison', 'Kenneth Dunkley'], text: [
         'A hand-held viewer stands on a post, with a stereo card in its holder. Press the Look in button to put an eye to the lens: the flat card becomes a scene with depth. The red and cyan glasses in front do the same job with colour.',
-        'The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer\'s accessory to a children\'s toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth.',
+        'The plate names Charles Wheatstone, who published the stereoscope in London in 1838. Two people on this label came much later. Charles Harrison was an industrial designer in Chicago. In 1957 or 1958 he redesigned the View-Master, a stereoscope for the hand, in light moulded plastic. It went from a photographer\'s accessory to a children\'s toy. Kenneth Dunkley is a physicist in Pennsylvania. His patent of 1989 is for viewing glasses with no lenses: two pinholes and two empty frames. The patent says that they give an ordinary flat picture the look of depth.',
         'The stereoscope needs a viewer in front of the eyes. The next stop does without one. Stay in this hall and go to the lenticular display.',
       ] },
       { id: 'lenticular', title: 'Words that change as you walk', who: ['Hank Willis Thomas'], text: [
@@ -175,7 +175,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'head-mounted', title: 'Goggles for a surgeon', who: ['Samuel Achilefu'], text: [
         'The model shows a headset on a dummy head. Beside it are the parts for one eye: a lens and the small screen behind it. Press the Put it on button to see what the wearer sees.',
-        'The plate names Ivan Sutherland and Bob Sproull, who built the first headset driven by computer graphics, at Harvard University in 1968. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014.',
+        'The plate names Ivan Sutherland and Bob Sproull, who built a headset that showed graphics drawn by a computer, at Harvard University in 1968. Some sources call it the first virtual reality headset, and others an early one. Samuel Achilefu was born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons. A dye makes cancer cells glow on that screen. The goggles were first worn in an operation in 2014.',
         'That was the last stop of the blue line.',
       ] },
       { id: 'end', title: 'The end of the blue line', text: [
