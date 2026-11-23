@@ -640,14 +640,14 @@
   },
   "pt": {
    "start": {
-    "file": "00-start.fbf8a7.mp3",
-    "mark": "2776ec85",
+    "file": "00-start.072cd7.mp3",
+    "mark": "e39a3741",
     "voice": "lxZ1N0qzmAGjqcuEctoH",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
     "seconds": 30.1,
-    "cues": [0.1, 2.03, 5.14, 9.54, 12.52, 17.31, 20.27, 24.43],
-    "rests": [16.31, 29.67]
+    "cues": [0.1, 2.02, 5.13, 9.65, 12.62, 17.4, 20.34, 24.46],
+    "rests": [16.4, 29.66]
    },
    "braille-display": {
     "file": "01-braille-display.ba92dc.mp3",
@@ -750,14 +750,14 @@
     "rests": [22.62, 55.05, 62.47]
    },
    "static-volume": {
-    "file": "11-static-volume.9f7ab2.mp3",
-    "mark": "4d9179e1",
+    "file": "12-static-volume.b331f3.mp3",
+    "mark": "862c1368",
     "voice": "lxZ1N0qzmAGjqcuEctoH",
     "model": "eleven_v4",
     "recipe": "d78e16c3",
-    "seconds": 60.9,
-    "cues": [0.1, 3.34, 5.58, 10.33, 13.45, 17.45, 21.15, 23.89, 29.3, 35.78, 39.01, 42.64, 46.96, 49.67, 53.86, 56.99],
-    "rests": [11.55, 34.78, 60.47]
+    "seconds": 61.3,
+    "cues": [0.1, 3.45, 5.77, 10.68, 13.84, 17.71, 21.29, 23.94, 29.65, 36.43, 39.63, 43.21, 47.48, 50.17, 54.3, 57.41],
+    "rests": [11.94, 35.43, 60.85]
    },
    "holography": {
     "file": "12-holography.434d98.mp3",
