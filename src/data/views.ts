@@ -257,7 +257,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'wheel', kind: 'detail', label: "Go close to the wheel", hint: "Each filter passes in front of the black-and-white tube while the tube draws that colour's part of the picture." },
   ],
   'quantum-dot': [
-    { id: 'screen', kind: 'person', label: 'Stand in front of the screen', hint: 'Behind the enlarged pixel stands the screen it belongs to. Its red and green are blue light changed by dots.' },
+    { id: 'screen', kind: 'person', label: 'Look at the screen', hint: 'Behind the enlarged pixel stands the screen it belongs to. Its red and green are blue light changed by dots.' },
     { id: 'pixel', kind: 'detail', label: 'Go close to the pixel', hint: 'Blue lamps below. Large dots turn the blue red, small dots turn it green, and the third well lets the blue through.' },
   ],
   'illusion-transmitter': [
