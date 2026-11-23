@@ -1,0 +1,15 @@
+# CAVE portraits
+
+Three new studies prepared on 22 November 2026: Carolina Cruz-Neira first, then Daniel J. Sandin and Thomas A. DeFanti. Each uses two named photographs. All six selected photographs pass the requested identity gate. None is being represented as a cleared photograph or an independently verified facial reconstruction.
+
+The selected exports are in `public/people/`, each 600×750 WebP. The primary face widths are approximately 112 pixels for Cruz-Neira’s 2026 scene, 538 for Sandin’s interview still, and 232 for DeFanti’s 2026 portrait. Cruz-Neira’s independent 242-pixel face and DeFanti’s earlier 752-pixel face supply broad structural detail. A small file is not made more informative by enlargement. The assessment of visible detail and its limits is in REVIEW.md.
+
+The CAVE piece landed on main as `3f65b45` during this work. All three portraits are connected on `portraits/cave`, under the label’s exact names: Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti. The source records retain Daniel J. Sandin and Thomas A. DeFanti as the fuller identifying names. The existing CAVE label, display and translations come from main. This branch is not yet deployed.
+
+Open [index.html](index.html) for the offline drawing gallery. Read [PHOTOGRAPHS.md](PHOTOGRAPHS.md) for every inspected/downloaded photograph: page, naming words, publisher, photographer when given, year evidence, licence as found, exact downloaded bytes, dimensions, approximate native face width, reference role and verdict. `photographs.json` contains the same measurements with crop coordinates, original image URLs and hashes. `FREE-SEARCH.md` records the open-licence candidates and exclusions. `prompts.json` contains the exact selected built-in image_gen prompt chains and input hashes. `REVIEW.md` records visual review and `CHECKS.json` records technical checks.
+
+The private package adds the requested source/drawing sheets in `comparisons/`. Those sheets contain reference-only photographs with uncertain redistribution rights. They are not committed to the public repository or published on the site. The source downloads and PNG masters remain in the local Museum-Portraits-CAVE folder; the compact ZIP excludes the large masters and discarded versions.
+
+Source dates are not silently turned into capture dates. Cruz-Neira follows the photograph published by UCF in March 2026 and reused in July 2026. Sandin follows the interview dated 2024, whose still was processed in 2026. DeFanti follows the portrait in HPCwire’s 2026 feature, with a November 2026 image path and unknown capture date. Earlier photographs support proportions only.
+
+Redrawing does not clear copyright. Commons’ older Cruz-Neira pictures have stated open licences; neither establishes the requested recent appearance. UCSC’s DeFanti page has a site-wide CC BY 4.0 footer, with no separate photograph credit found. Its scope for that headshot is recorded as uncertain. The other selected source pages state no open photo licence. No permission request has been sent.

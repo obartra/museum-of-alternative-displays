@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Carolina Cruz-Neira",
+    "piece": "CAVE",
+    "hall": 7,
+    "status": "connected on portraits/cave branch; not deployed",
+    "kind": "study",
+    "entry": {
+      "file": "carolina-cruz-neira.webp",
+      "study": [
+        {
+          "by": "Antoine Hart / University of Central Florida",
+          "source": "https://www.ucf.edu/news/ieee-2026-awardee-carolina-cruz-neira-turning-a-plan-b-into-a-global-legacy/"
+        },
+        {
+          "by": "UCF VARLab",
+          "source": "https://varlab.cs.ucf.edu/team/"
+        }
+      ]
+    },
+    "drawing": "people/carolina-cruz-neira.webp",
+    "drawing_bytes": 131212,
+    "drawing_sha256": "ea80d790ee6caac6fd9aac79e148538efd2fad7bacef460fe756bea4c4327377",
+    "drawing_dimensions": [
+      600,
+      750
+    ],
+    "small": false,
+    "selected_photographs": [
+      "c01",
+      "c02"
+    ],
+    "verdict": "Identity gate passed. Final drawing visually compared to named photographs and existing museum drawings at full and label size; see REVIEW.md for limits. Publication rights remain uncertain.",
+    "master_sha256": "0b2f41612e3b19d4dd9b76e79d63e62fcc769aa7f811ecd4727ce938cb28b766",
+    "label_name": "Carolina Cruz-Neira"
+  },
+  {
+    "name": "Daniel J. Sandin",
+    "piece": "CAVE",
+    "hall": 7,
+    "status": "connected on portraits/cave branch; not deployed",
+    "kind": "study",
+    "entry": {
+      "file": "daniel-sandin.webp",
+      "study": [
+        {
+          "by": "Video Data Bank",
+          "source": "https://www.vdb.org/titles/dan-sandin-interview-2024"
+        },
+        {
+          "by": "Video Data Bank",
+          "source": "https://www.vdb.org/artists/dan-sandin"
+        }
+      ]
+    },
+    "drawing": "people/daniel-sandin.webp",
+    "drawing_bytes": 115858,
+    "drawing_sha256": "46a08dff96283eb7b1dde59718c7ac454188af7decedf27f6932fd29dc3967f1",
+    "drawing_dimensions": [
+      600,
+      750
+    ],
+    "small": false,
+    "selected_photographs": [
+      "s01",
+      "s02"
+    ],
+    "verdict": "Identity gate passed. Final drawing visually compared to named photographs and existing museum drawings at full and label size; see REVIEW.md for limits. Publication rights remain uncertain.",
+    "master_sha256": "b7f30ea84d58ee3fdfc9d0adc48f8d55bcad5f857332e0ad49dee829cd792d35",
+    "label_name": "Daniel Sandin"
+  },
+  {
+    "name": "Thomas A. DeFanti",
+    "piece": "CAVE",
+    "hall": 7,
+    "status": "connected on portraits/cave branch; not deployed",
+    "kind": "study",
+    "entry": {
+      "file": "thomas-defanti.webp",
+      "study": [
+        {
+          "by": "HPCwire",
+          "source": "https://www.hpcwire.com/35-hpc-legends-tom-defanti/"
+        },
+        {
+          "by": "UC Santa Cruz Open Source Program Office",
+          "source": "https://ucsc-ospo.github.io/author/thomas-a.-defanti/"
+        }
+      ]
+    },
+    "drawing": "people/thomas-defanti.webp",
+    "drawing_bytes": 78456,
+    "drawing_sha256": "09a77779bb022ca33957c52c24a5443d71bb4022351fb304889cee2ab7b56ff8",
+    "drawing_dimensions": [
+      600,
+      750
+    ],
+    "small": false,
+    "selected_photographs": [
+      "t01",
+      "t02"
+    ],
+    "verdict": "Identity gate passed. Final drawing visually compared to named photographs and existing museum drawings at full and label size; see REVIEW.md for limits. Publication rights remain uncertain.",
+    "master_sha256": "18e88bdabfd79ad459bd1ede9fcae58a5cd75a32b0092cd5e39280ec7f75b388",
+    "label_name": "Thomas DeFanti"
+  }
+]

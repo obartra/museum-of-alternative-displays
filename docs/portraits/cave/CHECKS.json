@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-22",
+  "base_commit": "3f65b45",
+  "scope": "Three CAVE portraits, connected on this branch under exact current label names. No deployment.",
+  "new_portraits": 3,
+  "photograph_files_inspected": 12,
+  "selected_photographs": 6,
+  "source_gate": "All six selected source pages name the correct person with CAVE/EVL or an allowed university. Excluded candidates are distinguished.",
+  "image_integrity": "Three distinct WebPs decode at 600×750; bytes and SHA256 match manifest. All reference file hashes, dimensions, manual crop bounds and selected prompt input hashes checked.",
+  "original_portrait_files_unchanged": 127,
+  "existing_collection": {
+    "named_people": 147,
+    "connected_portraits": 130,
+    "pending": 17
+  },
+  "local_checks": {
+    "check": "passed",
+    "build": "passed",
+    "crawl": "3240 pages in 15 languages; zero findings"
+  },
+  "site_browser": {
+    "people_unique_portraits": 130,
+    "cave_people_image_elements": 6,
+    "persons": {
+      "Carolina Cruz-Neira": {
+        "native": [
+          600,
+          750
+        ],
+        "size": [
+          336,
+          420
+        ]
+      },
+      "Daniel Sandin": {
+        "native": [
+          600,
+          750
+        ],
+        "size": [
+          336,
+          420
+        ]
+      },
+      "Thomas DeFanti": {
+        "native": [
+          600,
+          750
+        ],
+        "size": [
+          336,
+          420
+        ]
+      }
+    },
+    "javascript_errors": [],
+    "failed_http": [],
+    "mobile_overflow": false
+  },
+  "artifact_browser": {
+    "repository": {
+      "portraits": [
+        {
+          "name": "Carolina Cruz-Neira",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        },
+        {
+          "name": "Daniel J. Sandin",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        },
+        {
+          "name": "Thomas A. DeFanti",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        }
+      ],
+      "source_sheets": 0,
+      "desktop_mobile_overflow": false,
+      "broken_images": [],
+      "javascript_errors": [],
+      "external_requests": []
+    },
+    "private": {
+      "portraits": [
+        {
+          "name": "Carolina Cruz-Neira",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        },
+        {
+          "name": "Daniel J. Sandin",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        },
+        {
+          "name": "Thomas A. DeFanti",
+          "native": [
+            600,
+            750
+          ],
+          "display": [
+            298,
+            373
+          ]
+        }
+      ],
+      "source_sheets": 12,
+      "desktop_mobile_overflow": false,
+      "broken_images": [],
+      "javascript_errors": [],
+      "external_requests": []
+    }
+  },
+  "visual_review": "Actual source photos and generated art viewed together at full and label size. REVIEW.md records the verdicts and limits. This is not automated face recognition or a guarantee of likeness.",
+  "rights": "Publication rights remain uncertain for reference-only studies. Site-wide/open-licence statements are recorded exactly with their limits; no permissions obtained or outreach sent. Comparison sheets and original references stay outside the public repository.",
+  "package": "Three selected WebPs, twelve original reference downloads, fourteen source/style comparison sheets and two CAVE-page screenshots, plus compact context. PNG masters, old drafts, software environments and full page/PDF caches are excluded."
+}

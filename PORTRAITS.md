@@ -1,6 +1,6 @@
 # Portraits
 
-The labels name 143 people, and 128 of them have a portrait on the site. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
+The labels name 147 people, and 130 of them have a connected portrait in this branch. Each person has a place for one, and the place stays empty until a picture is added by hand. Nothing in the build fetches a picture. `PORTRAITS-TODO.md` lists everyone still waiting, sorted by what each one needs.
 
 The portraits on the site are pen drawings made with an AI image model. There are two kinds, and the line beside each one says which.
 
@@ -213,5 +213,11 @@ Take the picture from the person's own article or file page, where the caption s
 | Ivan Sutherland | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/ivan-sutherland.webp` |
 | Bob Sproull | Head-mounted display | Built the first headset driven by computer graphics, at Harvard University in 1968. | yes | `public/people/bob-sproull.webp` |
 | Samuel Achilefu | Head-mounted display | Born in Nigeria. His team at Washington University in St. Louis built goggles with a screen for surgeons: a dye makes cancer cells glow on it. First worn in an operation in 2014. | yes | `public/people/samuel-achilefu.webp` |
+| Carolina Cruz-Neira | CAVE | Computer scientist and first author of the CAVE papers, with a UIC doctorate in 1995; now UCF Agere Chair. | yes | `public/people/carolina-cruz-neira.webp` |
+| Daniel Sandin | CAVE | Daniel J. Sandin, artist and co-founder of UIC’s Electronic Visualization Laboratory, named on the CAVE papers. | yes | `public/people/daniel-sandin.webp` |
+| Thomas DeFanti | CAVE | Thomas A. DeFanti, computer scientist and co-founder of UIC’s Electronic Visualization Laboratory, named on the CAVE papers. | yes | `public/people/thomas-defanti.webp` |
+| Greg Dawe | CAVE | EVL staff member credited in its retrospective with designing and building the CAVE room and its portable SIGGRAPH 92 version. |  | `public/people/greg-dawe.jpg` |
 | Kazuo Yoshinaka | Virtual retinal display | Proposed the display at Nippon Electric in Japan in 1986. |  | `public/people/kazuo-yoshinaka.jpg` |
 | J. M. Naish | Head-up display | Worked out the system first called a head-up display, at Farnborough from 1956. |  | `public/people/j-m-naish.jpg` |
+
+The CAVE supplement and its photo evidence are in [docs/portraits/cave/](docs/portraits/cave/README.md). Its three drawings are connected on the review branch; that is not a claim that the branch is already deployed.

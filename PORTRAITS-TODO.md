@@ -2,7 +2,7 @@
 
 Feedback on the 42 drawings of round 6, one by one and as a set, is in [docs/portraits/v6/REVIEW.md](docs/portraits/v6/REVIEW.md): what to export larger, which five are too pale, which poses and eyes to redo, and three things to put right in the records.
 
-The labels name **143 people**. **128 have connected portraits in this branch; 15 remain empty**. Round 6 connects 30 accepted v5 drawings and 24 new or corrected drawings. All 69 names in the incoming brief have an outcome in [the manifest](docs/portraits/v6/manifest.json). Counts describe repository data, not a claim that the branch is already deployed.
+The labels name **147 people**. **130 have connected portraits in this branch; 17 remain empty**. The CAVE supplement adds Carolina Cruz-Neira, Daniel Sandin and Thomas DeFanti, with [source records and review](docs/portraits/cave/README.md). Greg Dawe is also on the new CAVE label and awaits a portrait; the earlier Ralston drawing was withdrawn on main because its identity chain was not established. The historical round 6 manifest still accounts for its 69 incoming cases. Counts describe repository data, not a claim that the branch is already deployed.
 
 The user accepts clearly named historical engravings where detail supports a likeness; a posthumous date alone is not a hold. No special historical note is added beside a portrait. Dates, identity evidence and uncertain source-photo rights stay in the records. Redrawing does not clear rights.
 
@@ -114,3 +114,16 @@ No portrait confidently tied to the head-up-display researcher; physician namesa
 Source and search details for each unresolved case are in [the round 6 manifest](docs/portraits/v6/manifest.json). Search leads are not accepted portrait sources.
 
 Round6 targeted pass: Rechecked the author of the1964 superimposed-fields paper (PubMed14190022; Nature10.1038/202641a0), RAE technical-note citations and head-up-display history. Same-initial physician and modern financial-record namesakes excluded; expanded name still unverified.
+
+
+## John Ralston
+
+Static-volume display
+
+The earlier study was withdrawn on main in commit 9690ca6. Its photograph names the founder of Neursantys, but the review did not establish a source tying that man to the SDL author of the 1996 display paper. The existing image remains unconnected until that identity chain is established. This supplement did not search for or replace it.
+
+## Greg Dawe
+
+CAVE, hall 7
+
+Named in the laboratory’s 2024 retrospective as the staff member who designed and built its CAVE room and the portable SIGGRAPH 92 version. He was outside this supplement’s requested three people and has not been searched here. Start with EVL or UC San Diego pages that name him with CAVE/EVL context.
