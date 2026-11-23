@@ -57,6 +57,12 @@ export interface Spot {
    * drifts slowly from side to side and a detail view stands still.
    */
   sway?: { rate: number; reach: number; up?: number };
+  /**
+   * A walk instead of a drift, until the visitor takes over. `round` walks all the way round the point looked at, at
+   * the distance of `at`, one turn in `period` seconds. `near` walks up to that share of the distance and back again,
+   * there and back in `period` seconds.
+   */
+  walk?: { period: number; round?: boolean; near?: number };
 }
 
 export interface Built {

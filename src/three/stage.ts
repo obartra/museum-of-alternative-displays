@@ -48,6 +48,7 @@ export class Stage {
   private eyeT0 = 0;
   private viewId: string | null = null;
   private sway: { rate: number; reach: number; up?: number } | undefined;
+  private walk: { period: number; round?: boolean; near?: number } | undefined;
   /** Set while the picture is drawn for red and cyan glasses. */
   private stereo?: Anaglyph;
   private drift = false;
@@ -261,7 +262,7 @@ export class Stage {
     const at = spot.room ? new THREE.Vector3(...spot.at) : root.localToWorld(new THREE.Vector3(...spot.at));
     const to = root.localToWorld(new THREE.Vector3(...spot.to));
     this.eyeAt = at; this.eyeTo = to; this.eyePlay = spot.play ?? (detail ? 0.5 : 0.1); this.eyeT0 = this.clock;
-    this.viewId = id; this.drift = !detail || !!spot.sway; this.sway = spot.sway; this.owed = 3;
+    this.viewId = id; this.drift = !detail || !!spot.sway || !!spot.walk; this.sway = spot.sway; this.walk = spot.walk; this.owed = 3;
     this.dragged = false;
     this.camera.fov = spot.fov ?? (detail ? 32 : 38); this.camera.near = 0.004;
     this.camera.updateProjectionMatrix();
@@ -274,6 +275,9 @@ export class Stage {
       c.minDistance = sph.radius * (detail ? 0.6 : 0.94); c.maxDistance = sph.radius * (detail ? 1.5 : 1.04);
       c.minAzimuthAngle = sph.theta - this.eyePlay; c.maxAzimuthAngle = sph.theta + this.eyePlay;
       c.minPolarAngle = Math.max(0.02, sph.phi - this.eyePlay * 0.7); c.maxPolarAngle = Math.min(Math.PI - 0.02, sph.phi + this.eyePlay * 0.7);
+      // a walk goes beyond where a visitor could turn the view: leave the way open for it
+      if (spot.walk?.round) { c.minAzimuthAngle = -Infinity; c.maxAzimuthAngle = Infinity; }
+      if (spot.walk?.near) c.minDistance = sph.radius * spot.walk.near * 0.9;
       c.update();
     }
   }
@@ -354,11 +358,22 @@ export class Stage {
     const drifting = !!this.eyeAt && !!this.eyeTo && this.drift && !this.dragged && !this.paused && live;
     if (drifting) {
       // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
+      const w = this.walk, e = this.clock - this.eyeT0;
+      if (w) {
+        // a walk starts where the view starts: round the point at the same height, or up to it and back
+        const off = this.eyeAt!.clone().sub(this.eyeTo!);
+        if (w.round) off.applyAxisAngle(UP, (e / w.period) * Math.PI * 2);
+        if (w.near) off.multiplyScalar(1 - (1 - w.near) * (0.5 - 0.5 * Math.cos((e / w.period) * Math.PI * 2)));
+        this.camera.position.copy(this.eyeTo!).add(off);
+        this.camera.lookAt(this.eyeTo!);
+      }
       const dir = this.eyeTo!.clone().sub(this.eyeAt!), s = this.sway, reach = dir.length() * (s ? s.reach : Math.sin(this.eyePlay) * 0.6);
-      const side = dir.clone().cross(UP).normalize(), lift = side.clone().cross(dir).normalize(), ph = (this.clock - this.eyeT0) * (s ? s.rate : 1.2);
-      this.camera.position.copy(this.eyeAt!).addScaledVector(side, Math.sin(ph) * reach);
-      if (s?.up) this.camera.position.addScaledVector(lift, Math.sin(ph * 2) * reach * s.up);
-      this.camera.lookAt(this.eyeTo!);
+      const side = dir.clone().cross(UP).normalize(), lift = side.clone().cross(dir).normalize(), ph = e * (s ? s.rate : 1.2);
+      if (!w) {
+        this.camera.position.copy(this.eyeAt!).addScaledVector(side, Math.sin(ph) * reach);
+        if (s?.up) this.camera.position.addScaledVector(lift, Math.sin(ph * 2) * reach * s.up);
+        this.camera.lookAt(this.eyeTo!);
+      }
     }
     this.release();
     const moved = this.controls?.update() ?? false;

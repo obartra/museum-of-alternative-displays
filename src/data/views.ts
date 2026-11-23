@@ -116,6 +116,7 @@ export const views: Record<string, ViewInfo[]> = {
   // hall 3, solid light
   'led-display': [
     { id: 'below', kind: 'person', label: 'Stand under it', hint: 'Outdoor signs hang high. The shade over each row keeps the sun off the lamps and never hides them from below.' },
+    { id: 'walk', kind: 'person', label: 'Walk up to the sign', hint: 'From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps.' },
     { id: 'lamps', kind: 'detail', label: 'Go close to the lamps', hint: 'Three lamps to a pixel: red, green and blue. Amber is red and green lit together, with the blue left dark.' },
   ],
   'oled': [

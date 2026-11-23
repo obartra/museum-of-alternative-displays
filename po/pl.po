@@ -4852,6 +4852,18 @@ msgstr "Tablice zewnętrzne wiszą wysoko. Daszek nad każdym rzędem osłania d
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "Podejdź do tablicy"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "Z drugiej strony ulicy każdy piksel ma jeden kolor. Z bliska rozpada się na czerwoną, zieloną i niebieską lampkę."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "Podejdź blisko do diod"

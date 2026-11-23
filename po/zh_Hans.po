@@ -4850,6 +4850,18 @@ msgstr "户外显示屏挂得很高。每一行上方的遮阳檐替灯珠挡住
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "走近招牌"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "从街对面看，每个像素都是一种颜色。走近了，它就分成红、绿、蓝三盏灯。"
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "凑近看灯珠"

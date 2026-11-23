@@ -4856,6 +4856,18 @@ msgstr "Les panneaux d’extérieur sont accrochés haut. La visière placée au
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "S’approcher de l’enseigne"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "De l’autre côté de la rue, chaque pixel n’a qu’une couleur. De près, il se sépare en ses lampes rouge, verte et bleue."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "S’approcher des lampes"

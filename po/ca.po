@@ -4855,6 +4855,18 @@ msgstr "Els rètols d'exterior es pengen alts. La visera de cada fila protegeix 
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "Acosta't al rètol"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "Des de l'altra banda del carrer cada píxel és d'un sol color. De prop, es descompon en els seus llums vermell, verd i blau."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "Acosta't als llums"

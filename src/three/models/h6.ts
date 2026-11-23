@@ -444,7 +444,7 @@ export function sweptVolume(): Built {
   fuse(root, [spin]);
   const col = new THREE.Color();
   return {
-    root, views: { round: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34, play: 0.3 }, dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 }, speed: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
+    root, views: { round: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34, play: 0.3, walk: { period: 30, round: true } }, dome: { at: [0.95, 1.25, 1.55], to: [0, 0.9, 0], fov: 30 }, speed: { at: [0, 1.2, 3], to: [0, 0.8, 0], fov: 34 } }, inDark: 'glows', glow: 0x8fd0ff, view: [24, 14],
     update: ({ t, view }) => {
       // at its real rate the screen turns many times a second: it blurs into a faint disc, and every point it
       // passes through looks lit all the time

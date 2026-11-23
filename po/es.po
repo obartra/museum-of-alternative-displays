@@ -4857,6 +4857,18 @@ msgstr "Los letreros de exterior se cuelgan altos. La visera de cada fila proteg
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "Acércate al cartel"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "Desde el otro lado de la calle cada píxel es de un solo color. De cerca, se separa en sus luces roja, verde y azul."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "Acércate a las lámparas"

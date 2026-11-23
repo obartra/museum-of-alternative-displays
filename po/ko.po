@@ -4855,6 +4855,18 @@ msgstr "옥외 간판은 높이 걸립니다. 줄마다 달린 차양이 램프�
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "간판으로 다가가기"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "길 건너편에서는 화소마다 한 가지 색으로 보입니다. 가까이 가면 빨강, 초록, 파랑 램프로 나뉩니다."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "램프 가까이 가기"

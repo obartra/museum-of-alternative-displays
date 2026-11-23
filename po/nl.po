@@ -4851,6 +4851,18 @@ msgstr "Buitenborden hangen hoog. Het afdakje boven elke rij houdt de zon van de
 
 #: hall-3/led-display
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.led-display.view.walk.label"
+msgid "Walk up to the sign"
+msgstr "Loop naar het bord"
+
+#: hall-3/led-display
+#. Line shown while the visitor is at that place.
+msgctxt "piece.led-display.view.walk.hint"
+msgid "From across the street each pixel is one colour. Close to, it comes apart into its red, green and blue lamps."
+msgstr "Van de overkant van de straat heeft elke pixel één kleur. Van dichtbij valt hij uiteen in zijn rode, groene en blauwe lampje."
+
+#: hall-3/led-display
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.led-display.view.lamps.label"
 msgid "Go close to the lamps"
 msgstr "Ga dicht bij de lampjes"

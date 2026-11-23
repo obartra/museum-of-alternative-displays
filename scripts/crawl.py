@@ -8,6 +8,7 @@ and whether those pages point back, the data for a search engine, one heading, a
 picture in the plain words leads somewhere. Then whether every page can be reached from the entrance of its
 language by following links, and whether the sitemap lists the pages and nothing else.
 
+It also checks that llms.txt and llms-full.txt, the files for AI agents, match the pages.
 It ends with an error if anything is wrong, so that the build stops.
 """
 import json
@@ -106,6 +107,38 @@ for lang in [''] + langs:
 listed = {u[len(site):] for u in re.findall(r'<loc>([^<]+)</loc>', open(os.path.join(dist, 'sitemap.xml'), encoding='utf-8').read())}
 if listed != set(pages):
     wrong.append(f'sitemap: {len(listed - set(pages))} addresses listed and not there, {len(set(pages) - listed)} pages not listed')
+# The files for AI agents are written from the same data as the pages. Hold them to it: every link in the map
+# leads to a page, every piece page is on the map and has its label in the full file, under its own name and
+# with the sentence its page opens with.
+import html as htmllib
+flat = lambda t: re.sub(r'\s+', ' ', htmllib.unescape(t)).strip()
+for name in ('llms.txt', 'llms-full.txt'):
+    if not os.path.exists(os.path.join(dist, name)):
+        wrong.append(f'{name}: missing')
+if not any(w.startswith('llms') for w in wrong):
+    llms = open(os.path.join(dist, 'llms.txt'), encoding='utf-8').read()
+    full = open(os.path.join(dist, 'llms-full.txt'), encoding='utf-8').read()
+    for url in re.findall(r'\]\((' + re.escape(site) + r'[^)]*)\)', llms):
+        rel = url[len(site):]
+        if rel not in pages and not os.path.exists(os.path.join(dist, rel)):
+            wrong.append(f'llms.txt: a link leads nowhere: {url}')
+    sections = {m.group(2): m.group(1) for m in re.finditer(r'^### (.+)\n\n' + re.escape(site) + r'(piece/[^/\s]+/)$', full, re.M)}
+    for path in (p for p in pages if re.fullmatch(r'piece/[^/]+/', p)):
+        if f'({site}{path})' not in llms:
+            wrong.append(f'llms.txt: {path} is not on the map')
+        if path not in sections:
+            wrong.append(f'llms-full.txt: no label for {path}')
+            continue
+        name = flat(one(r'<h1>(.*?)</h1>', plain(pages[path])) or '')
+        if sections[path] != name:
+            wrong.append(f'llms-full.txt: {path} is called {sections[path]!r} there and {name!r} on its page')
+        lead = flat(one(r'<meta name="description" content="([^"]*)"', pages[path]) or '')
+        part = full.split(f'{site}{path}\n', 1)[1].split('\n### ', 1)[0]
+        if lead and lead not in flat(part):
+            wrong.append(f'llms-full.txt: the label of {path} does not open as its page does')
+    for path in sections:
+        if path not in pages:
+            wrong.append(f'llms-full.txt: a label for a page that is not there: {path}')
 for title, where in titles.items():
     if len(where) > 1:
         wrong.append(f'the same title on {len(where)} pages: {title} ({where[0]}, {where[1]})')

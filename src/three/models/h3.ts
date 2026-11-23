@@ -183,6 +183,8 @@ export function led(): Built {
     views: {
       below: { room: true, at: [-2.3, 0.1, 2.2], to: [-0.3, 0.05, 0], fov: 50 },
       lamps: { at: [-0.75, 0.35, 0.5], to: [-0.6, 0.22, 0.02], play: 0.4 },
+      // from across the street to arm's length and back
+      walk: { at: [0.2, 0.3, 6], to: [0, 0.2, 0], fov: 40, walk: { period: 18, near: 0.1 } },
     },
     update: ({ camera }) => {
       const n = now();
