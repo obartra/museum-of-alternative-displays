@@ -3259,8 +3259,10 @@ msgstr "실제 속도로 보기"
 
 #: hall-2/cathode-ray-tube
 #. Line shown while the visitor is at that place.
+#, fuzzy
+#| msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
 msgctxt "piece.cathode-ray-tube.view.speed.hint"
-msgid "At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture."
+msgid "At sixty fields a second the band is too fast to see. The screen's glow and the eye make the passes one steady picture."
 msgstr "초당 60필드에서는 띠가 너무 빨라 보이지 않습니다. 화면의 잔광과 눈이 주사를 이어 하나의 안정된 영상으로 만듭니다."
 
 #: hall-2/cathode-ray-tube

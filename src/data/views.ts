@@ -81,7 +81,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'The band moving down the face is the raster, slowed about sixty times. One beam paints it line by line.' },
     { id: 'raster', kind: 'detail', label: 'Go close to the face', hint: 'Close to, the picture comes apart into horizontal lines with dark gaps between them.' },
     { id: 'gun', kind: 'detail', label: 'Look into the neck', hint: 'The gun. A heated cathode gives off electrons, and the copper coils round the neck steer the beam.' },
-    { id: 'speed', kind: 'person', label: 'See it at real speed', hint: 'At sixty fields a second the band is too fast to see. The glow of the screen and the eye join the passes into one steady picture.' },
+    { id: 'speed', kind: 'person', label: 'See it at real speed', hint: 'At sixty fields a second the band is too fast to see. The screen\'s glow and the eye make the passes one steady picture.' },
   ],
   'vector-display': [
     { id: 'seat', kind: 'person', label: 'Sit at the console', hint: 'The beam draws each stroke directly, like a pen. The trail behind the ball is phosphor still glowing.' },
