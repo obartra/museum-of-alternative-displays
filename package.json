@@ -10,7 +10,7 @@
     "i18n:drafts": "tsx scripts/i18n.ts build --drafts",
     "i18n:sync": "tsx scripts/i18n.ts sync",
     "typecheck": "tsc --noEmit",
-    "validate": "tsx scripts/validate.ts",
+    "validate": "tsx scripts/validate.ts && tsx scripts/view-spots.ts",
     "check": "npm run i18n && npm run typecheck && npm run validate",
     "build": "npm run i18n && vite build",
     "crawl": "python3 scripts/crawl.py dist",
