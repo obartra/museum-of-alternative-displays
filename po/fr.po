@@ -10532,6 +10532,18 @@ msgstr "L’image est maintenant dessinée pour votre œil. Les murs et le sol s
 
 #: hall-7/cave
 #. Button that moves the visitor to a place in the 3D model. At most 28 characters.
+msgctxt "piece.cave.view.beside.label"
+msgid "Stand beside the figure"
+msgstr "Se mettre près de la figure"
+
+#: hall-7/cave
+#. Line shown while the visitor is at that place.
+msgctxt "piece.cave.view.beside.hint"
+msgid "Only the figure's glasses are tracked, so the picture is drawn for its eye. From here the scene bends at the corners."
+msgstr "Seules les lunettes de la figure sont suivies : l’image est dessinée pour son œil. D’ici, la scène se plie dans les coins."
+
+#: hall-7/cave
+#. Button that moves the visitor to a place in the 3D model. At most 28 characters.
 msgctxt "piece.cave.view.behind.label"
 msgid "Go behind the wall"
 msgstr "Passer derrière le mur"

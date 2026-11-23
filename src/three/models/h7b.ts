@@ -485,11 +485,14 @@ export function cave(): Built {
     views: {
       inside: { at: [0.05, Y0 + 1.62, 1.2], to: [0, Y0 + 1.3, -H], fov: 72, play: 0.1 },
       behind: { at: [MX + 1.9, Y0 + 4.6, 5.6], to: [MX - 0.75, MY - 0.2, -0.4], fov: 46, play: 0.25 },
+      // inside, in a back corner, while the figure keeps the glasses: the picture stays drawn for the figure's eye
+      beside: { at: [H * 0.72, Y0 + 1.6, H * 0.78], to: [-H * 0.35, Y0 + 1.15, -H], fov: 72, play: 0.15 },
     },
-    update: ({ t, lights, camera }) => {
+    update: ({ t, lights, camera, view }) => {
       root.updateWorldMatrix(true, false);
       root.worldToLocal(cam.copy(camera.position));
-      const inside = Math.abs(cam.x) < H && Math.abs(cam.z) < H + 0.4 && cam.y > Y0 && cam.y < TOP;
+      // only one person's eye is tracked. Inside the room that is the visitor's, unless they stand beside the figure
+      const inside = Math.abs(cam.x) < H && Math.abs(cam.z) < H + 0.4 && cam.y > Y0 && cam.y < TOP && view !== 'beside';
       place(t, lights, inside);
       // the cube in the picture turns slowly in the air
       eu.set(0.5, t * 0.35, 0.25 + 0.2 * Math.sin(t * 0.2)); rot.makeRotationFromEuler(eu); rot3.setFromMatrix4(rot).transpose();

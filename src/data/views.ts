@@ -267,6 +267,7 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   'cave': [
     { id: 'inside', kind: 'person', label: 'Take the figure\'s place', hint: 'Now the picture is drawn for your eye. The walls and floor join into one scene, and the corners vanish.' },
+    { id: 'beside', kind: 'person', label: 'Stand beside the figure', hint: 'Only the figure\'s glasses are tracked, so the picture is drawn for its eye. From here the scene bends at the corners.' },
     { id: 'behind', kind: 'detail', label: 'Go behind the wall', hint: 'The projector throws its picture at a mirror, which folds it onto the back of the screen. Nobody inside casts a shadow.' },
   ],
   'head-up': [
