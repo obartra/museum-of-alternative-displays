@@ -148,6 +148,9 @@ export const portraits: Record<string, Portrait> = {
   "Roger Macfarlane": {"file": "roger-macfarlane.webp", "small": true, "study": [{"by": "Mike Reid / University of Canterbury", "source": "https://spcs.canterbury.ac.nz/~mfr24/electronicstructure/Reid_making_sense_Chongqing_2024.pdf"}]},
   "Robert Hayes": {"file": "robert-hayes.webp", "small": true, "study": [{"by": "South China Normal University", "source": "https://aoe.scnu.edu.cn/a/20160416/1325.html"}]},
   "Robert H. Anderson": {"file": "robert-h-anderson.webp", "small": false, "study": [{"by": "vintageTEK Museum", "source": "https://vintagetek.org/bob-anderson/"}]},
+  "Carolina Cruz-Neira": { file: "carolina-cruz-neira.webp", study: [{ by: "Antoine Hart / University of Central Florida", source: "https://www.ucf.edu/news/ieee-2026-awardee-carolina-cruz-neira-turning-a-plan-b-into-a-global-legacy/" }, { by: "UCF VARLab", source: "https://varlab.cs.ucf.edu/team/" }] },
+  "Daniel Sandin": { file: "daniel-sandin.webp", study: [{ by: "Video Data Bank", source: "https://www.vdb.org/titles/dan-sandin-interview-2024" }, { by: "Video Data Bank", source: "https://www.vdb.org/artists/dan-sandin" }] },
+  "Thomas DeFanti": { file: "thomas-defanti.webp", study: [{ by: "HPCwire", source: "https://www.hpcwire.com/35-hpc-legends-tom-defanti/" }, { by: "UC Santa Cruz Open Source Program Office", source: "https://ucsc-ospo.github.io/author/thomas-a.-defanti/" }] },
 };
 
 /** The file name a portrait is expected under: the name in plain lower-case letters, joined by hyphens. */

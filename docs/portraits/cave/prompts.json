@@ -1,0 +1,221 @@
+[
+  {
+    "name": "Carolina Cruz-Neira",
+    "tool": "built-in image_gen",
+    "stages": [
+      {
+        "name": "Carolina Cruz-Neira",
+        "kind": "study",
+        "age_basis": "Appearance in UCF photograph published 2026-03-24 and republished 2026-07-23; 2025 VARLab file supports proportions, capture date unknown. Commons 2020 upload is an earlier appearance and not the age target.",
+        "tool": "built-in image_gen",
+        "inputs": [
+          {
+            "file": "carolina-ucf-2026.jpg",
+            "role": "identity and age",
+            "sha256": "13705f8e84a68bb0192cd92dde9de6d49f9a8fe8fe702b4bc2931751c3048047",
+            "dimensions": [
+              1200,
+              800
+            ]
+          },
+          {
+            "file": "carolina-varlab.png",
+            "role": "identity structure",
+            "sha256": "a205dc3aae8899c69915064246d64bd9b2ecfb41c0694e58c83d670731604553",
+            "dimensions": [
+              900,
+              593
+            ]
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "role": "style only",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ]
+          }
+        ],
+        "args": {
+          "prompt": "Use case: identity-preserve / stylized-concept. Create ONE museum catalogue pen portrait of Carolina Cruz-Neira, computer scientist and CAVE co-creator. This is a new-pose STUDY from named professional photographs, not a copy of their composition.\nInput image 1: IDENTITY AND AGE reference, UCF photograph published March 24, 2026, photographed by Antoine Hart. She is the long-dark-haired woman, NOT the robot. Use her apparent age and face fullness in this recent photograph, approximately early sixties; do not rejuvenate or add speculative ageing. Input image 2: IDENTITY STRUCTURE reference, named UCF VARLab team-page photograph (file published online by May 2025; capture date unknown). Same woman, wearing VR glasses atop her head. Use the clear proportions, brows, eyes, broad nose and rounded cheeks to clarify reference 1; remove the VR equipment, hand and jewellery. Image 3: STYLE ONLY, approved museum Jepsen 2.3. Never borrow Jepsen's face, hair, glasses or jewellery.\nPreserve Carolina's broad, softly rounded face and full lower cheeks, dark fairly straight brows with slight natural arch, almond-shaped eyes, broad soft nose, medium lips, full rounded chin, long straight dark hair with center/near-center part and subtle grey strands at temples. She wears NO spectacles in this portrait. Do not narrow or lengthen her face. Her eyes look together at the viewer. New pose: upright head turned only 8 degrees toward viewer's left, calm gentle closed-lip smile, shoulders angled slightly opposite. New clothing: plain light blouse with a small open neckline and an unpatterned dark open jacket, no scarf, no striped sweater, no logos or ornaments.\nComposition: 4:5 vertical, head and upper shoulders. Keep the entire documented crown, 6 percent blank margin above the hair, lateral space around hair. Long hair continues naturally to the lower crop; no hands, equipment, scenery or frame.\nExact museum style: flat warm ivory #f7f6f0 ground, near-black #14171a pen. Fine economical contours, approximately 2–3 pixels at 1024 pixels width, varying naturally: lighter around crown and lit side, firmer at the shadow side. Finer internal feature lines. Hair carries tonal depth with restrained directional hatching and near-black masses with visible individual pen strokes and some ivory channels; jacket carries restrained hatching/dark tone. Bare forehead, cheeks, nose, chin and neck stay OPEN IVORY. No skin stipple, crosshatching, grey shading, pores, photographic gradients or invented wrinkles. Only essential eye/lid/brow/nose/lip contours and few source-supported age folds, no heavy outline around the entire face. Preserve recognizable broad proportions over generic prettification. Readable at 84x105 as well as the People-page size. No words, caption, signature, watermark, border or collage.",
+          "transparent_background": false
+        }
+      },
+      {
+        "name": "Carolina Cruz-Neira",
+        "kind": "skin-cleanup",
+        "tool": "built-in image_gen",
+        "inputs": [
+          {
+            "file": "carolina-cruz-neira-v1.png",
+            "role": "edit target",
+            "sha256": "b82a1c40a0b2144f0b63d334a784b5814136a5332faeff19693c9e1194e5ad30",
+            "dimensions": [
+              1122,
+              1402
+            ]
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "role": "style only",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2"
+          }
+        ],
+        "args": {
+          "prompt": "Use case: precise-object-edit / identity-preserve. Image 1 is the EDIT TARGET: the new museum pen portrait of Carolina Cruz-Neira. Image 2 is approved Jepsen 2.3, STYLE ONLY. Make one targeted cleanup while preserving Carolina's exact face proportions, expression, apparent age, head angle, eyes, hairline, hair, clothing, framing and colors. Do not change her identity or make her younger. Remove all short hatch strokes, stipple and scratch shading from BARE SKIN: under both eyes, sides and bridge of nose, upper lip, cheeks, chin, jawline and neck. These regions must be flat open ivory just like the bare skin in the Jepsen style reference. Keep only the essential single fine contours for eyelids, brows, nostrils, mouth and a few clearly defined smile/age-fold curves. Remove the tiny repetitive texture strokes and grey hatch shadows around them, including the eyelid bags and all moustache-like strokes over the lip. Keep the lips themselves as fine contours with minimal natural line tone. Keep every hair and garment hatch exactly as before. Keep the varied fine outer outline, without adding a uniform thick contour. No new face structure, folds, wrinkles, skin texture, text or frame.",
+          "transparent_background": false
+        }
+      }
+    ],
+    "selected_master": "carolina-cruz-neira.png",
+    "selected_master_sha256": "0b2f41612e3b19d4dd9b76e79d63e62fcc769aa7f811ecd4727ce938cb28b766"
+  },
+  {
+    "name": "Daniel J. Sandin",
+    "tool": "built-in image_gen",
+    "stages": [
+      {
+        "name": "Daniel J. Sandin",
+        "kind": "study",
+        "tool": "built-in image_gen",
+        "inputs": [
+          {
+            "file": "sandin-vdb-2024.jpg",
+            "sha256": "596f17260d41011f1da25f2224492f6c35f338a1132a0847a6cd9bc61110f696",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "role": "identity and age"
+          },
+          {
+            "file": "sandin-vdb-artist.jpg",
+            "sha256": "a57d636f3f7579a5887218c04060d490255c2c12110cb61bf077f66eb365577a",
+            "dimensions": [
+              1038,
+              696
+            ],
+            "role": "identity structure"
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "role": "style only"
+          }
+        ],
+        "args": {
+          "prompt": "Use case: identity-preserve / stylized-concept. Make ONE museum catalogue pen portrait of Daniel J. Sandin, CAVE co-creator at the Electronic Visualization Laboratory, UIC. This is a new-pose STUDY from named professional photographs, not a reproduction. Input 1: PRIMARY IDENTITY AND AGE, the interview still of Daniel J. Sandin from Video Data Bank's explicitly dated 2024 interview, exported by the publisher in September 2026. Preserve his older apparent age in this actual interview: white thick upswept slightly unruly hair, full white moustache and beard, broad rectangular black spectacles, broad nose with rounded tip, full cheeks, softly rounded head and few horizontal forehead folds. He is a man in his early eighties, not a young smooth-faced inventor. Input 2: SECONDARY STRUCTURE ONLY, named VDB artist-page portrait of Sandin operating a VR device, processed in 2014/2015; it shows the same man from the side. Do not take age, sunglasses darkness, gesture or composition from this earlier photograph. Never borrow appearance from another person. Input 3: approved Jepsen 2.3, STYLE ONLY, never her identity. New pose: nearly frontal, head turned 8 degrees toward viewer's left, upright and level, gentle calm closed-mouth expression. New clothing: plain dark open cardigan over a simple light collared shirt, no check pattern and no microphone. Preserve full white beard and white crown with delicate ink outlines and sparse tonal hatching so they remain visible on ivory. The beard should keep its actual broad round shape, not a long pointed beard. Do not make the glasses opaque; show his real eyes. Composition: 4:5 vertical, head and upper shoulders, complete crown, generous 6 percent blank ivory margin above hair. No frame, words, props, hands, logo, signature or collage. Flat warm ivory #f7f6f0 and near-black #14171a pen. Match Jepsen 2.3: fine economical varying contours, about 2–3 pixels at 1024px width, lighter around crown and lit side, firmer on shadow side; fine inner features. Hair and garments carry tone through restrained directional pen hatching and dark masses. ALL BARE SKIN must remain perfectly open ivory: no hatch strokes, stipple, gradient, texture, grey shadow patches or pores on forehead, cheeks, nose, chin or neck. Model age only with a few visible source-supported single-line folds and contours, never invented wrinkles. Hair, actual beard and moustache may be hatched; do not mistake facial hair for bare skin. Both eyes must look consistently toward viewer. Do not prettify, narrow, elongate or caricature the face. Readable at 84x105 with the same hand as Gabor, Leith, Upatnieks and Jepsen 2.3.",
+          "transparent_background": false
+        }
+      },
+      {
+        "kind": "quality-edit",
+        "name": "daniel-j-sandin",
+        "tool": "built-in image_gen",
+        "inputs": [
+          {
+            "file": "daniel-j-sandin-v1.png",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "sha256": "d9bb20dcd96c1ad868b5d04de8ca2abceeb7ce96170dc6c94407a22b65e415d5"
+          },
+          {
+            "file": "sandin-vdb-2024.jpg",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "sha256": "596f17260d41011f1da25f2224492f6c35f338a1132a0847a6cd9bc61110f696"
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "dimensions": [
+              1122,
+              1402
+            ],
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2"
+          }
+        ],
+        "args": {
+          "prompt": "Use case: precise-object-edit / identity-preserve. Image 1 is the EDIT TARGET, museum pen portrait of Daniel J. Sandin. Image 2 is his named 2024 interview still, IDENTITY ONLY. Image 3 is approved Jepsen 2.3, STYLE ONLY. Preserve Sandin's face proportions, glasses, broad beard shape, age, head direction, shoulders, clothing, framing and ivory/black palette. Remove the scratchy hatch shadows on BARE SKIN inside the glasses, above the eyelids, under both eyes and at the sides of the nose. Keep bare skin clean open ivory, including visible neck. Keep his real beard, moustache and eyebrows as hair with fine hair strokes. Essential single fine eyelid contours, nose contours and four source-supported forehead folds remain; do not rejuvenate him. Slightly reduce the artificially sculpted curling wave at the very top of the hair: make the white crown a more natural short irregular upright sweep matching photo 2, without perfect curled locks, preserving complete crown and blank margin. Keep white hair clearly outlined with restrained grey-black pen strokes; keep the outer boundary legible at label size with fine varied weight, never uniformly heavy. No other change. No stipple, skin hatching, new wrinkles, grey skin shading, text, border or props.",
+          "transparent_background": false
+        }
+      }
+    ],
+    "selected_master": "daniel-j-sandin.png",
+    "selected_master_sha256": "b7f30ea84d58ee3fdfc9d0adc48f8d55bcad5f857332e0ad49dee829cd792d35"
+  },
+  {
+    "name": "Thomas A. DeFanti",
+    "tool": "built-in image_gen",
+    "stages": [
+      {
+        "name": "Thomas A. DeFanti",
+        "kind": "study-retake-current-appearance",
+        "tool": "built-in image_gen",
+        "age_basis": "Named 2026 HPCwire feature; image in November 2026 directory, capture date unknown. Supersedes earlier draft from undated university photograph.",
+        "inputs": [
+          {
+            "file": "defanti-hpcwire-2026.jpg",
+            "role": "identity and latest published appearance",
+            "sha256": "43ff14b6b4e50548f3bccdc037ed0aa4e636bcfaa5efc32034e56c4f9a2413bc",
+            "dimensions": [
+              400,
+              500
+            ]
+          },
+          {
+            "file": "defanti-ucsc.jpg",
+            "role": "older structure only",
+            "sha256": "c4d33c3b92b9ab33b4620d928166deb9766009d2f55766d84ac469ede716fa75",
+            "dimensions": [
+              1438,
+              1493
+            ]
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "role": "style only",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2",
+            "dimensions": [
+              1122,
+              1402
+            ]
+          }
+        ],
+        "args": {
+          "prompt": "Use case: identity-preserve / stylized-concept. Create ONE new-pose museum catalogue pen study of Thomas A. DeFanti, CAVE co-creator and Electronic Visualization Laboratory co-founder. Input 1 is the PRIMARY IDENTITY AND AGE reference: his named portrait in HPCwire's 2026 35 HPC Legends feature, image posted November 2026, exact capture date unknown. This is the OLDER MAN with THIN WHITE HAIR and a much more receded hairline. Preserve his apparent age in this photograph, around late seventies. Input 2 is his named UC Santa Cruz OSPO university portrait, a YOUNGER structural comparison only. It must NOT override the thin white hair, open high forehead, older eyelids or present appearance in input 1. Input 3 is approved Jepsen 2.3, STYLE ONLY. Never borrow Jepsen's identity, hair, glasses or jewellery.\nPreserve DeFanti's source-supported head shape, broad rounded nose, thin lips with warm smile, full rounded cheek and chin, white fairly straight eyebrows, hooded eyes with natural age folds, large ears, receding temples and thin short WHITE hair. Most of the top/front scalp is exposed, with only a thin white fringe across the top and slightly denser hair at the sides; no thick comb-over, dense grey crown or luxuriant hair. He is clean-shaven and wears NO glasses. Do not invent texture in the bright sunlit areas of source 1; use source 2 only to corroborate broad nose, mouth, ear and head proportions.\nNEW composition and pose, not a copy: upright head, level instead of tilted, turned about 8 degrees toward viewer's left, both eyes consistently toward the viewer, gentle smile with lips barely parted, no detailed invented teeth. Shoulders angled slightly right. New clothing: a plain dark open cardigan with a light collared shirt beneath, no quilting, T-shirt, lanyard, tie, badges or pattern.\n4:5 vertical, head and upper shoulders, complete white hair and a modest 6 percent blank margin above head, no environment. Flat warm ivory #f7f6f0 background and near-black #14171a pen. Fine economical contours about 2–3 pixels at 1024px master width with natural variation, lighter across crown and firmer on shadow side, never uniformly thick. Subtle directional pen hatching in the sparse white hair and on clothing only; retain ivory to show WHITE hair. The thin hair boundary must remain legible at label size.\nEvery region of BARE SKIN must stay OPEN IVORY. No skin hatch shadows, no stipple, no gradients, no grey texture or photographic shading. Model age through a few source-supported SINGLE FINE CONTOURS at forehead, eyelids, smile folds, rounded underside of chin and one neck fold; essential chin contour must not disappear into the neck. Preserve the older face and age without adding wrinkles or making him young. No dramatic contour around the whole face, no caricature, no elongated neck, no text, frame, signature, watermark, props, hands or collage. Match the same hand as Jepsen 2.3, Gabor, Leith and Upatnieks.",
+          "transparent_background": false
+        }
+      },
+      {
+        "name": "Thomas A. DeFanti",
+        "kind": "skin-cleanup-current",
+        "tool": "built-in image_gen",
+        "inputs": [
+          {
+            "file": "thomas-a-defanti-current-v1.png",
+            "sha256": "d120773cce23ed4d40af273156315013b4803d2424cd8617a4ac9f14956b2ce9"
+          },
+          {
+            "file": "approved-style-jepsen-v2.3.png",
+            "sha256": "26062a5bdb4e1388dd9d4777f7f97264739bafc16450eada39f6b5701cc132f2"
+          }
+        ],
+        "args": {
+          "prompt": "Use case: precise-object-edit / identity-preserve. Image 1 is the EDIT TARGET: Thomas A. DeFanti, older white-haired man in the latest museum study. Image 2 is approved Jepsen 2.3, STYLE ONLY. Preserve identity, age, face proportions, high receded forehead, thin white hair, eyebrows, expression, visible smile/teeth, head angle, garments and composition. Make bare skin open ivory by removing ONLY clusters of short parallel scratch/hatch marks on cheeks, under eyes, beside nose and upper lip, below the mouth, along the jaw/chin and neck. KEEP the existing essential long smooth fine anatomical contours: rounded underside of chin, cheek edge, one neck crease and documented fine eyelid/smile-fold curves. The chin boundary must remain present as a fine continuous/broken smooth curve; face must not merge into neck. Replace hatched edges at chin and nose with the single fine contour already implied by their same positions. No skin hatching, stipple, grey shadows, texture, pores, extra wrinkles or invented details. Hair, eyebrows, garment hatching and nostril dark accents stay. Do not rejuvenate, thicken the outer outline or change proportions. Keep everything else exactly.",
+          "transparent_background": false
+        }
+      }
+    ],
+    "selected_master": "thomas-a-defanti.png",
+    "selected_master_sha256": "18e88bdabfd79ad459bd1ede9fcae58a5cd75a32b0092cd5e39280ec7f75b388"
+  }
+]
