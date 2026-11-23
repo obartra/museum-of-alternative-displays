@@ -5275,8 +5275,8 @@ msgstr "Hängt von einem lebenden Spieler ab und muss mit Fernsehen und Video um
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted."
-msgstr "Das Modell zeigt eine Leinwand aus Tuch in einem Holzrahmen, hinter der eine Öllampe hängt. Drei flache Figuren stehen an Stäben zwischen Lampe und Tuch: ein Baum, ein Hirsch und ein Vogel. Von vorn sehen Sie nur ihre Schatten. Der Baum und der Hirsch liegen am Tuch an, deshalb sind ihre Schatten scharf. Der Vogel zieht dicht am Tuch vorbei und kommt dann auf der Seite der Lampe zurück: Sein Schatten wird groß und weich, und der Hirsch hebt den Kopf. Achten Sie darauf, wie die Ränder mit der Flamme zittern. Bei Tag sind die Schatten blass, schalten Sie deshalb das Tageslicht aus. Drücken Sie dann auf „Hinter die Leinwand“, um die Figuren selbst zu sehen, durchbrochen und bemalt."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "Das Modell zeigt eine Leinwand aus Tuch in einem Holzrahmen, hinter der eine Öllampe hängt. Drei flache Figuren stehen an Stäben zwischen Lampe und Tuch: ein Baum, ein Hirsch und ein Vogel. Von vorn sehen Sie nur ihre Schatten. Der Baum und der Hirsch liegen am Tuch an, deshalb sind ihre Schatten scharf. Der Vogel zieht dicht am Tuch vorbei und kommt dann auf der Seite der Lampe zurück: Sein Schatten wird groß und weich, und der Hirsch hebt den Kopf. Achten Sie darauf, wie die Ränder mit der Flamme zittern. Bei Tag sind die Schatten blass, schalten Sie deshalb das Tageslicht aus. Drücken Sie dann auf „Hinter die Leinwand“, um die Figuren selbst zu sehen, durchbrochen und bemalt. Jede Minute schließt sich die Irisblende, eine Titelkarte nennt Lotte Reiniger und 1926, und ein zweiter Akt spielt in schwarzem Karton unter blauem Licht, so wie die viragierten Kopien ihrer Zeit die Nacht zeigten."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.
@@ -5303,8 +5303,14 @@ msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le
 msgstr "Arbeitete mit bis zu zwanzig Helfern an den Schattenspielen des Kabaretts Le Chat Noir in Paris, das zwischen 1885 und 1896 45 davon aufführte. Ab 1887 waren die Figuren aus Zink."
 
 #: hall-4/shadow-play
-#. People section: what Kara Walker did. The names stand above this line.
+#. People section: what Lotte Reiniger did. The names stand above this line.
 msgctxt "piece.shadow-play.people.4"
+msgid "Made The Adventures of Prince Achmed in 1926, the oldest surviving animated feature, from figures of black card and lead with wire-hinged limbs. The second act on this cloth is cut in her manner."
+msgstr "Drehte 1926 Die Abenteuer des Prinzen Achmed, den ältesten erhaltenen abendfüllenden Animationsfilm, mit Figuren aus schwarzem Karton und Blei, deren Glieder Drahtscharniere verbanden. Der zweite Akt auf diesem Tuch ist in ihrer Art geschnitten."
+
+#: hall-4/shadow-play
+#. People section: what Kara Walker did. The names stand above this line.
+msgctxt "piece.shadow-play.people.5"
 msgid "American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
 msgstr "Amerikanische Künstlerin, bekannt für Scherenschnitte aus schwarzem Papier. Seit 2004 macht sie Filme, in denen bewegliche Papierfiguren, von Hand an Stäben geführt, Geschichten der Sklaverei in den USA spielen."
 
@@ -9241,8 +9247,8 @@ msgstr "Sehen Sie auf das Tuch. Dahinter brennt eine Flamme, und zwischen Flamme
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr "Niemand weiß, wer das zuerst getan hat. Belegt ist es vor etwa tausend Jahren auf Java und in China, und es wird bis heute gespielt. Löcher in einer Figur lassen das Licht durch und zeichnen ein Auge oder eine Feder in den Schatten. Kara Walker, eine amerikanische Künstlerin, bekannt für Scherenschnitte aus schwarzem Papier, macht seit 2004 Filme auf diese Weise. Ihre beweglichen Papierfiguren, von Hand an Stäben geführt, spielen Geschichten der Sklaverei in den USA."
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature. Stay a minute: the cloth plays a second act in her manner."
+msgstr "Niemand weiß, wer es zuerst tat. Belegt ist es auf Java und in China vor etwa tausend Jahren, und es wird bis heute gespielt. Löcher in einer Figur lassen das Licht durch und zeichnen ein Auge oder eine Feder in den Schatten. In Berlin schnitt Lotte Reiniger Figuren aus schwarzem Karton und filmte sie Bild für Bild. Ihre Abenteuer des Prinzen Achmed von 1926 sind der älteste erhaltene abendfüllende Animationsfilm. Bleiben Sie eine Minute: Das Tuch spielt einen zweiten Akt in ihrer Art."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9481,8 +9487,8 @@ msgstr "Das ist das Ende der grünen Linie. Sie begann mit Stiften, die mit den 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "An diesen vierzehn Stationen sind sechzehn Frauen genannt, und Sie haben nun vor der Arbeit einer jeden gestanden. Insgesamt nennen die Angaben in diesen Sälen mehr als hundert Personen."
+msgid "Seventeen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "An diesen vierzehn Stationen sind siebzehn Frauen genannt, und Sie haben nun vor der Arbeit einer jeden gestanden. Insgesamt nennen die Angaben in diesen Sälen mehr als hundert Personen."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9499,8 +9505,8 @@ msgstr "Schwarze Erfinder und Künstler"
 #: tour-black
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.black.lead"
-msgid "A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label."
-msgstr "Eine Führung durch fünf Säle. Zehn Displays, von einer Fernsehröhre bis zu einer Datenbrille, und bei jedem steht ein Schwarzer Erfinder oder Künstler in den Angaben."
+msgid "A guided walk through five halls. Nine displays, from a television tube to a headset, each with a Black inventor or artist on its label."
+msgstr "Eine Führung durch fünf Säle. Neun Displays, von einer Fernsehröhre bis zu einer Datenbrille, und bei jedem steht ein Schwarzer Erfinder oder Künstler in den Angaben."
 
 #: tour-black
 #. Guided tour, before the first stop: the title of this part.
@@ -9511,8 +9517,8 @@ msgstr "Vor der ersten Station"
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.1"
-msgid "This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist."
-msgstr "Diese Führung folgt der blauen Linie auf dem Boden. Sie hält an zehn Displays in fünf Sälen. Bei jedem nennen die Angaben einen Schwarzen Erfinder oder einen Schwarzen Künstler."
+msgid "This tour follows the blue line on the floor. It stops at nine displays in five halls. At each one the label names a Black inventor or a Black artist."
+msgstr "Diese Führung folgt der blauen Linie auf dem Boden. Sie hält an neun Displays in fünf Sälen. Bei jedem nennen die Angaben einen Schwarzen Erfinder oder einen Schwarzen Künstler."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9595,32 +9601,8 @@ msgstr "Dieses Display ist eine Kathodenstrahlröhre, auf wenige Millimeter flac
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.3"
-msgid "These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play."
-msgstr "Diese drei Displays machten ihr eigenes Licht. Das nächste braucht nur eine Flamme. Gehen Sie weiter in Saal 4, zum Schattenspiel."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: the title of this part.
-msgctxt "tour.black.shadow-play.title"
-msgid "Cut from black paper"
-msgstr "Aus schwarzem Papier geschnitten"
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.1"
-msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well."
-msgstr "Sehen Sie auf das Tuch. Dahinter brennt eine Flamme, und zwischen Flamme und Tuch stehen drei flache Figuren: ein Baum, ein Hirsch und ein Vogel. Was Sie sehen, sind ihre Schatten. Schalten Sie das Tageslicht aus, dann sehen Sie sie gut."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr "Niemand weiß, wer das zuerst gemacht hat. Es ist für Java und für China vor etwa tausend Jahren belegt. Kara Walker ist eine amerikanische Künstlerin, bekannt für Scherenschnitte aus schwarzem Papier. Seit 2004 macht sie auf diese Weise Filme. Ihre beweglichen Papierpuppen, von Hand an Stäben geführt, spielen Geschichten aus der Sklaverei in Amerika."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.3"
-msgid "A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping."
-msgstr "Ein Schatten ist ein Bild, das entsteht, wo Licht zurückgehalten wird. Die nächste Station, in diesem Saal, schickt ein Bild mit dem Licht hinaus. Gehen Sie zum Projektionsmapping."
+msgid "These three displays made their own light. In the next one a projector makes it, and the picture is cut to fit. Walk on to hall 4 and go to the projection mapping."
+msgstr "Diese drei Displays erzeugten ihr eigenes Licht. Beim nächsten erzeugt es ein Projektor, und das Bild ist passend zugeschnitten. Gehen Sie weiter in Saal 4 zum Projection Mapping."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: the title of this part.
@@ -11247,6 +11229,30 @@ msgstr "Ab etwa achtzehn verkehrte er im Chat Noir und half, dessen Zeitschrift 
 msgctxt "person.henri-riviere.about.3"
 msgid "In the 1890s he made woodcuts after Japanese models, and in 1902 published lithographs, Trente six vues de la Tour Eiffel, as a tribute to Hokusai. He collected about 800 Japanese objects and gave up printmaking for watercolour in 1916."
 msgstr "In den 1890er-Jahren schuf er Holzschnitte nach japanischen Vorbildern und veröffentlichte 1902 Lithografien, Trente six vues de la Tour Eiffel, als Hommage an Hokusai. Er sammelte etwa 800 japanische Objekte und gab 1916 die Druckgrafik zugunsten des Aquarells auf."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.1"
+msgid "Born in Berlin, she loved scherenschnitte, the cutting of paper silhouettes. At seventeen she tried acting at the Max Reinhardt School, and her silhouettes led Paul Wegener to hire her for an animated film, The Pied Piper of Hamelin."
+msgstr "Geboren in Berlin, liebte sie den Scherenschnitt. Mit siebzehn versuchte sie sich an der Schauspielschule von Max Reinhardt, und ihre Silhouetten brachten Paul Wegener dazu, sie für einen Trickfilm zu engagieren, Der Rattenfänger von Hameln."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.2"
+msgid "With Carl Koch, later her husband, she made The Adventures of Prince Achmed from 1923 to 1926. The Library of Congress calls it the oldest surviving animated feature film. Two earlier features made in Argentina are lost."
+msgstr "Mit Carl Koch, später ihr Mann, drehte sie von 1923 bis 1926 Die Abenteuer des Prinzen Achmed. Die Library of Congress nennt ihn den ältesten erhaltenen abendfüllenden Animationsfilm. Zwei frühere Filme aus Argentinien sind verloren."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.3"
+msgid "Her figures were cut from black cardboard and thin lead, every limb separately, and joined with wire hinges, she wrote in 1936. They lay on an animation table, usually lit from below, and were moved by hand between frames."
+msgstr "Ihre Figuren wurden aus schwarzem Karton und dünnem Blei geschnitten, jedes Glied für sich, und mit Drahtscharnieren verbunden, schrieb sie 1936. Sie lagen auf einem Tricktisch, meist von unten beleuchtet, und wurden zwischen den Bildern von Hand bewegt."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.4"
+msgid "To give her scenes depth she laid them on horizontal planes stacked under the camera. The Library of Congress says she was the first to develop multiplane technology. The Stadtmuseum Tübingen keeps her estate, with figures made for Achmed between 1923 and 1926."
+msgstr "Um ihren Szenen Tiefe zu geben, legte sie sie auf waagrechte Ebenen, die unter der Kamera übereinander lagen. Die Library of Congress sagt, sie habe als Erste die Mehrebenentechnik entwickelt. Das Stadtmuseum Tübingen bewahrt ihren Nachlass, mit Figuren, die 1923 bis 1926 für Achmed entstanden."
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

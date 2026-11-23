@@ -202,6 +202,11 @@ export const personLinks: Record<string, PersonLink> = {
     "label": "Henri Rivière (painter), Wikipedia",
     "kind": "biography"
   },
+  "Lotte Reiniger": {
+    "url": "https://en.wikipedia.org/wiki/Lotte_Reiniger",
+    "label": "Lotte Reiniger, Wikipedia",
+    "kind": "biography"
+  },
   "Kara Walker": {
     "url": "https://en.wikipedia.org/wiki/Kara_Walker",
     "label": "Kara Walker, Wikipedia",

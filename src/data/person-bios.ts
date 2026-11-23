@@ -870,6 +870,20 @@ export const bios: Record<string, Bio> = {
       s("archive", "Henri Rivière, Van Gogh Museum", "https://www.vangoghmuseum.com/en/prints/person/4789"),
     ],
   },
+  "Lotte Reiniger": {
+    born: 1899, died: 1981, about: [
+      "Born in Berlin, she loved scherenschnitte, the cutting of paper silhouettes. At seventeen she tried acting at the Max Reinhardt School, and her silhouettes led Paul Wegener to hire her for an animated film, The Pied Piper of Hamelin.",
+      "With Carl Koch, later her husband, she made The Adventures of Prince Achmed from 1923 to 1926. The Library of Congress calls it the oldest surviving animated feature film. Two earlier features made in Argentina are lost.",
+      "Her figures were cut from black cardboard and thin lead, every limb separately, and joined with wire hinges, she wrote in 1936. They lay on an animation table, usually lit from below, and were moved by hand between frames.",
+      "To give her scenes depth she laid them on horizontal planes stacked under the camera. The Library of Congress says she was the first to develop multiplane technology. The Stadtmuseum Tübingen keeps her estate, with figures made for Achmed between 1923 and 1926.",
+    ],
+    sources: [
+      s("archive", "Lotte Reiniger: Animation Innovator, Library of Congress, Inside Adams", "https://blogs.loc.gov/inside_adams/2025/04/lotte-reiniger/"),
+      s("press", "Scissors make films: Lotte Reiniger on creating her magical animations (1936), BFI, Sight and Sound", "https://www.bfi.org.uk/news-opinion/sight-sound-magazine/archives/lotte-reiniger-scissors-make-films-cut-out-animation-process-description-1936"),
+      s("archive", "Lotte Reiniger, Women Film Pioneers Project, Columbia University", "https://wfpp.columbia.edu/pioneer/lotte-reiniger"),
+      s("archive", "Figure from Die Abenteuer des Prinzen Achmed, Stadtmuseum Tübingen, museum-digital", "https://bawue.museum-digital.de/object/80236"),
+    ],
+  },
   "Kara Walker": {
     born: 1969, about: [
       "From Stockton, California, she took a bachelor's degree at the Atlanta College of Art and a master's degree at the Rhode Island School of Design. In 1994 the Drawing Center in New York showed Gone, her wall installation of black paper silhouettes.",

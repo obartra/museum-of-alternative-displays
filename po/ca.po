@@ -5276,8 +5276,8 @@ msgstr "Depèn d'un intèrpret viu, i ha de competir amb la televisió i el víd
 #: hall-4/shadow-play
 #. What to look for in the 3D model. Where it names a button, use the words you gave that button.
 msgctxt "piece.shadow-play.look"
-msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted."
-msgstr "El model mostra una pantalla de tela en un bastidor de fusta, amb una làmpada d'oli penjada al darrere. Tres figures planes s'aguanten amb varetes entre la làmpada i la tela: un arbre, un cérvol i un ocell. Des de davant només en veus les ombres. L'arbre i el cérvol estan arrambats a la tela, i per això fan ombres nítides. L'ocell passa arran de la tela i després torna pel costat de la làmpada: la seva ombra es fa gran i tova, i el cérvol aixeca el cap. Fixa't com les vores tremolen amb la flama. De dia les ombres són pàl·lides, de manera que apaga la llum del dia. Després prem el botó «Ves darrere la pantalla» per veure les figures mateixes, calades i pintades."
+msgid "The model shows a cloth screen in a wooden frame, with an oil lamp hanging behind it. Three flat figures stand on rods between the lamp and the cloth: a tree, a deer and a bird. From the front you see only their shadows. The tree and the deer are held against the cloth, so their shadows are sharp. The bird passes close to the cloth, then comes back out by the lamp: its shadow grows large and soft, and the deer lifts its head. Watch the edges tremble with the flame. By day the shadows are pale, so switch the daylight off. Then press the Go behind the screen button to see the figures themselves, pierced and painted. Each minute the iris closes, a title card names Lotte Reiniger and 1926, and a second act plays in black card under blue light, as the tinted prints of her time showed night."
+msgstr "El model mostra una pantalla de tela en un bastidor de fusta, amb una làmpada d'oli penjada al darrere. Tres figures planes s'aguanten amb varetes entre la làmpada i la tela: un arbre, un cérvol i un ocell. Des de davant només en veus les ombres. L'arbre i el cérvol estan arrambats a la tela, i per això fan ombres nítides. L'ocell passa arran de la tela i després torna pel costat de la làmpada: la seva ombra es fa gran i tova, i el cérvol aixeca el cap. Fixa't com les vores tremolen amb la flama. De dia les ombres són pàl·lides, de manera que apaga la llum del dia. Després prem el botó «Ves darrere la pantalla» per veure les figures mateixes, calades i pintades. Cada minut l'iris es tanca, un cartell anuncia Lotte Reiniger i 1926, i s'hi representa un segon acte en cartró negre sota una llum blava, com les còpies virades de la seva època mostraven la nit."
 
 #: hall-4/shadow-play
 #. A short story about the piece, under the heading Worth knowing.
@@ -5304,8 +5304,14 @@ msgid "Worked with up to twenty assistants on the shadow plays of the cabaret Le
 msgstr "Va treballar amb fins a vint ajudants en els espectacles d'ombres del cabaret Le Chat Noir de París, que en va presentar 45 entre el 1885 i el 1896. Des del 1887 les figures eren de zinc."
 
 #: hall-4/shadow-play
-#. People section: what Kara Walker did. The names stand above this line.
+#. People section: what Lotte Reiniger did. The names stand above this line.
 msgctxt "piece.shadow-play.people.4"
+msgid "Made The Adventures of Prince Achmed in 1926, the oldest surviving animated feature, from figures of black card and lead with wire-hinged limbs. The second act on this cloth is cut in her manner."
+msgstr "Va fer Les aventures del príncep Ahmed el 1926, el llargmetratge d'animació més antic que es conserva, amb figures de cartró negre i plom i membres units amb frontisses de filferro. El segon acte d'aquesta tela està retallat a la seva manera."
+
+#: hall-4/shadow-play
+#. People section: what Kara Walker did. The names stand above this line.
+msgctxt "piece.shadow-play.people.5"
 msgid "American artist, known for silhouettes cut from black paper. Since 2004 she has made films in which jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
 msgstr "Artista nord-americana, coneguda per les siluetes retallades en paper negre. Des del 2004 fa pel·lícules en què uns titelles articulats de paper, moguts a mà amb varetes, representen històries de l'esclavitud als Estats Units."
 
@@ -9242,8 +9248,8 @@ msgstr "Mira la tela. Al darrere hi crema una flama, i entre la flama i la tela 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr "Ningú no sap qui ho va fer primer. Està documentat a Java i a la Xina fa uns mil anys, i encara es representa avui. Els forats retallats en una figura deixen passar la llum i dibuixen un ull o una ploma dins l'ombra. Kara Walker, artista nord-americana coneguda per les siluetes retallades en paper negre, fa pel·lícules així des del 2004. Els seus titelles articulats de paper, moguts a mà amb varetes, representen històries de l'esclavitud als Estats Units."
+msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature. Stay a minute: the cloth plays a second act in her manner."
+msgstr "Ningú no sap qui ho va fer primer. Està documentat a Java i a la Xina fa uns mil anys, i encara es representa avui. Els forats retallats en una figura deixen passar la llum i dibuixen un ull o una ploma dins l'ombra. A Berlín, Lotte Reiniger retallava figures de cartró negre i les filmava fotograma a fotograma. Les seves Aventures del príncep Ahmed, del 1926, són el llargmetratge d'animació més antic que es conserva. Queda't un minut: la tela representa un segon acte a la seva manera."
 
 #: tour-women
 #. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9482,8 +9488,8 @@ msgstr "Aquí s'acaba la línia verda. Ha començat amb uns pius que es llegeixe
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.women.end.text.2"
-msgid "Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
-msgstr "En aquestes catorze parades hi surten setze dones, i ara ja has estat davant la feina de cadascuna. En total, les fitxes d'aquests àmbits anomenen més de cent persones."
+msgid "Seventeen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people."
+msgstr "En aquestes catorze parades hi surten disset dones, i ara ja has estat davant la feina de cadascuna. En total, les fitxes d'aquests àmbits anomenen més de cent persones."
 
 #: tour-women
 #. Guided tour, after the last stop: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9500,8 +9506,8 @@ msgstr "Inventors i artistes negres"
 #: tour-black
 #. One sentence under the title of the tour, saying what it is.
 msgctxt "tour.black.lead"
-msgid "A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label."
-msgstr "Una visita guiada per cinc àmbits. Deu pantalles, d'un tub de televisió a un casc, cadascuna amb un inventor o un artista negre a la fitxa."
+msgid "A guided walk through five halls. Nine displays, from a television tube to a headset, each with a Black inventor or artist on its label."
+msgstr "Una visita guiada per cinc àmbits. Nou pantalles, d'un tub de televisió a un casc, cadascuna amb un inventor o un artista negre a la fitxa."
 
 #: tour-black
 #. Guided tour, before the first stop: the title of this part.
@@ -9512,8 +9518,8 @@ msgstr "Abans de la primera parada"
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.start.text.1"
-msgid "This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist."
-msgstr "Aquesta visita segueix la línia blava del terra. S'atura davant de deu pantalles en cinc àmbits. A cadascuna, la fitxa porta el nom d'un inventor negre o d'un artista negre."
+msgid "This tour follows the blue line on the floor. It stops at nine displays in five halls. At each one the label names a Black inventor or a Black artist."
+msgstr "Aquesta visita segueix la línia blava del terra. S'atura davant de nou pantalles en cinc àmbits. A cadascuna, la fitxa porta el nom d'un inventor negre o d'un artista negre."
 
 #: tour-black
 #. Guided tour, before the first stop: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
@@ -9596,32 +9602,8 @@ msgstr "Aquesta pantalla és un tub de raigs catòdics aplanat fins a uns quants
 #: tour-black
 #. Guided tour, at the piece Field emission display: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
 msgctxt "tour.black.field-emission.text.3"
-msgid "These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play."
-msgstr "Aquestes tres pantalles feien la seva pròpia llum. La següent només necessita una flama. Passa a l'àmbit 4 i ves al teatre d'ombres."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: the title of this part.
-msgctxt "tour.black.shadow-play.title"
-msgid "Cut from black paper"
-msgstr "Retallat en paper negre"
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 1 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.1"
-msgid "Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well."
-msgstr "Mira la tela. Al darrere hi crema una flama, i entre la flama i la tela hi ha tres figures planes: un arbre, un cérvol i un ocell. El que veus són les seves ombres. Apaga la llum del dia per veure-les bé."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 2 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.2"
-msgid "Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America."
-msgstr "Ningú no sap qui ho va fer primer. Està documentat a Java i a la Xina fa uns mil anys. Kara Walker és una artista nord-americana, coneguda per les siluetes retallades en paper negre. Des del 2004 fa pel·lícules així. Els seus titelles articulats de paper, moguts a mà amb varetes, representen històries de l'esclavitud als Estats Units."
-
-#: tour-black
-#. Guided tour, at the piece Shadow play: what the guide says, paragraph 3 of 3. It is read aloud, so keep the sentences short and write years as figures. The parts call back to each other, so use the same words for the same thing throughout.
-msgctxt "tour.black.shadow-play.text.3"
-msgid "A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping."
-msgstr "Una ombra és una imatge feta retenint la llum. La parada següent, en aquest àmbit, envia una imatge amb la llum. Ves al videomapatge."
+msgid "These three displays made their own light. In the next one a projector makes it, and the picture is cut to fit. Walk on to hall 4 and go to the projection mapping."
+msgstr "Aquestes tres pantalles feien la seva pròpia llum. En la següent, la fa un projector, i la imatge està retallada a mida. Continua fins a l'àmbit 4 i ves a la projecció mapejada."
 
 #: tour-black
 #. Guided tour, at the piece Projection mapping: the title of this part.
@@ -11248,6 +11230,30 @@ msgstr "Freqüentava el Chat Noir des dels divuit anys aproximadament i va ajuda
 msgctxt "person.henri-riviere.about.3"
 msgid "In the 1890s he made woodcuts after Japanese models, and in 1902 published lithographs, Trente six vues de la Tour Eiffel, as a tribute to Hokusai. He collected about 800 Japanese objects and gave up printmaking for watercolour in 1916."
 msgstr "A la dècada del 1890 va fer xilografies a partir de models japonesos, i el 1902 va publicar unes litografies, Trente six vues de la Tour Eiffel, com a homenatge a Hokusai. Va col·leccionar uns 800 objectes japonesos i el 1916 va deixar el gravat per l'aquarel·la."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.1"
+msgid "Born in Berlin, she loved scherenschnitte, the cutting of paper silhouettes. At seventeen she tried acting at the Max Reinhardt School, and her silhouettes led Paul Wegener to hire her for an animated film, The Pied Piper of Hamelin."
+msgstr "Nascuda a Berlín, li encantava el scherenschnitte, l'art de retallar siluetes de paper. Als disset anys va provar d'estudiar interpretació a l'escola de Max Reinhardt, i les seves siluetes van fer que Paul Wegener la contractés per a una pel·lícula d'animació, El flautista d'Hamelín."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 2 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.2"
+msgid "With Carl Koch, later her husband, she made The Adventures of Prince Achmed from 1923 to 1926. The Library of Congress calls it the oldest surviving animated feature film. Two earlier features made in Argentina are lost."
+msgstr "Amb Carl Koch, que després va ser el seu marit, va fer Les aventures del príncep Ahmed entre el 1923 i el 1926. La Biblioteca del Congrés la considera el llargmetratge d'animació més antic que es conserva. Dos llargmetratges anteriors fets a l'Argentina s'han perdut."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 3 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.3"
+msgid "Her figures were cut from black cardboard and thin lead, every limb separately, and joined with wire hinges, she wrote in 1936. They lay on an animation table, usually lit from below, and were moved by hand between frames."
+msgstr "Les seves figures es retallaven en cartró negre i plom prim, cada membre per separat, i s'unien amb frontisses de filferro, segons va escriure el 1936. Reposaven sobre una taula d'animació, normalment il·luminada per sota, i es movien a mà entre fotograma i fotograma."
+
+#: people
+#. About Lotte Reiniger, on that person's own page: paragraph 4 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.
+msgctxt "person.lotte-reiniger.about.4"
+msgid "To give her scenes depth she laid them on horizontal planes stacked under the camera. The Library of Congress says she was the first to develop multiplane technology. The Stadtmuseum Tübingen keeps her estate, with figures made for Achmed between 1923 and 1926."
+msgstr "Per donar profunditat a les escenes, les disposava en plans horitzontals apilats sota la càmera. La Biblioteca del Congrés diu que va ser la primera a desenvolupar la tècnica multiplà. L'Stadtmuseum de Tübingen conserva el seu llegat, amb figures fetes per a l'Ahmed entre el 1923 i el 1926."
 
 #: people
 #. About Kara Walker, on that person's own page: paragraph 1 of 4. Plain statements in the past tense, without praise. Keep the names of people, firms and institutions as they are, and the years as numerals.

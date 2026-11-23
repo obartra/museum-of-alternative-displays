@@ -126,7 +126,7 @@ for (const tour of tours) {
   const stops = tour ? tour.parts.map((p) => p.id).filter((id) => people[id]) : [];
   const named = new Set(Object.values(people).flatMap((c) => c.people.flatMap((e) => e.who)));
   const women = new Set(stops.flatMap((id) => people[id].people.flatMap((e) => e.she ?? [])));
-  const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'];
+  const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
   const at = /\b([A-Za-z]+) women are named at these ([a-z]+) stops\b/.exec(said);
   if (tour && !at) errors.push('tour women: its closing words no longer count the women at its stops, so nothing here holds them to the labels');
   if (at && WORDS[women.size] !== at[1].toLowerCase()) errors.push(`tour women: it says ${at[1].toLowerCase()} women are named at its stops, and the labels there name ${women.size}`);

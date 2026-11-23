@@ -61,9 +61,9 @@ export const tours: Tour[] = [
         'The crystals are called quantum dots. Most screens use them as this model does, to turn blue light into red and green. In 1994, at Berkeley, Vicki Colvin and two colleagues took another route. They made a layer of dots glow by passing a current through it. Colvin is the first author of the paper.',
         'The cathode ray tube, the LED wall and this pixel all make their own light. In hall 4 the sun, a lamp or a laser makes the light, and the display shapes it. Go to the shadow play, where the lamp is a flame behind a cloth.',
       ] },
-      { id: 'shadow-play', title: 'A flame and a cloth', who: ['Kara Walker'], text: [
+      { id: 'shadow-play', title: 'A flame and a cloth', who: ['Lotte Reiniger'], text: [
         'Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Watch the bird. When it flies towards the lamp, its shadow grows and its edge goes soft.',
-        'Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. Kara Walker, an American artist known for silhouettes cut from black paper, has made films this way since 2004. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.',
+        'Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago, and it is performed today. Holes cut through a figure let the light pass and draw an eye or a feather inside the shadow. In Berlin, Lotte Reiniger cut figures from black card and filmed them a frame at a time. Her Adventures of Prince Achmed, of 1926, is the oldest surviving animated feature. Stay a minute: the cloth plays a second act in her manner.',
         'The first stop needed no light at all. This one needs only a flame. The next stop, in this hall, draws with a beam of light. Go to the scanned laser.',
       ] },
       { id: 'scanned-laser', title: 'Drawing with a laser', who: ['Elsa Garmire'], text: [
@@ -113,7 +113,7 @@ export const tours: Tour[] = [
       ] },
       { id: 'end', title: 'The end of the green line', text: [
         'That is the end of the green line. It began with pins that are read by touch. It ends with a room whose walls are screens.',
-        'Sixteen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
+        'Seventeen women are named at these fourteen stops, and you have now stood at the work of each. In all, the labels in these halls name more than a hundred people.',
         'The line passed more than forty other displays on the way. Leave the tour, and the halls are yours to walk. Every piece has its label, and its people are named on it. Thank you for taking the tour.',
       ] },
     ],
@@ -121,10 +121,10 @@ export const tours: Tour[] = [
   {
     id: 'black',
     title: 'Black inventors and artists',
-    lead: 'A guided walk through five halls. Ten displays, from a television tube to a headset, each with a Black inventor or artist on its label.',
+    lead: 'A guided walk through five halls. Nine displays, from a television tube to a headset, each with a Black inventor or artist on its label.',
     parts: [
       { id: 'start', title: 'Before the first stop', text: [
-        'This tour follows the blue line on the floor. It stops at ten displays in five halls. At each one the label names a Black inventor or a Black artist.',
+        'This tour follows the blue line on the floor. It stops at nine displays in five halls. At each one the label names a Black inventor or a Black artist.',
         'Some of them made the display. Some made a part that it could not do without. Some put it to a new use, or made art with it. At each stop I will say which.',
         'The first stop is in hall 2. Go to the cathode ray tube.',
       ] },
@@ -141,12 +141,7 @@ export const tours: Tour[] = [
       { id: 'field-emission', title: 'A tube made flat', who: ['Akintunde Akinwande'], text: [
         'The model shows one corner of a panel, opened and greatly enlarged. Follow the layers upward. First come the tips, then the gate with a hole over each tip. Above them is the front plate with its glowing coating. The lit dots count seconds.',
         'This display is a cathode ray tube flattened to a few millimetres, with a tiny source of electrons behind every dot. The way of making the tips was patented at Stanford Research Institute. Akintunde Akinwande was educated in Nigeria and at Stanford. He joined Honeywell in 1986 and worked there on thin-film field emitters and displays. At MIT he worked on arrays of emitters that are switched one by one.',
-        'These three displays made their own light. The next one needs only a flame. Walk on to hall 4 and go to the shadow play.',
-      ] },
-      { id: 'shadow-play', title: 'Cut from black paper', who: ['Kara Walker'], text: [
-        'Look at the cloth. A flame burns behind it, and three flat figures stand between the flame and the cloth: a tree, a deer and a bird. What you see are their shadows. Switch the daylight off to see them well.',
-        'Nobody knows who first did this. It is recorded in Java and in China about a thousand years ago. Kara Walker is an American artist, known for silhouettes cut from black paper. Since 2004 she has made films this way. Her jointed paper puppets, worked by hand on sticks, play out stories of slavery in America.',
-        'A shadow is a picture made by holding light back. The next stop, in this hall, sends a picture out with the light. Go to the projection mapping.',
+        'These three displays made their own light. In the next one a projector makes it, and the picture is cut to fit. Walk on to hall 4 and go to the projection mapping.',
       ] },
       { id: 'projection-mapping', title: 'A head in a crystal ball', who: ['Lanny Smoot'], text: [
         'Look at the white plaster shapes and the projector on its tripod. Each shape receives its own pattern, and no light falls on the floor. By day the picture is barely visible, so switch the daylight off.',

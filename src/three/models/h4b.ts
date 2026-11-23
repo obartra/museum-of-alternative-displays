@@ -266,6 +266,90 @@ function drawWing(c: Ctx): void {
   pierce(c, () => { for (const [x, a] of [[51, 1.36], [79, 1.57], [107, 1.78]]) slit(c, x, 70, 52, 5, a); dot(c, 80, 122, 4); });
 }
 
+// ---------- the second act: black card, cut the way Lotte Reiniger cut her figures ----------
+// Her figures were black cardboard and thin lead, every limb cut separately and joined with wire hinges, laid on
+// glass and lit from below (BFI, Sight and Sound 1936). These are new figures in that manner, made to fit the same
+// joints as the first act's: none of them is taken from a film of hers.
+const CARD = '#121010';
+/** A curl that winds in to its centre: the ends of her branches, horns, tails and borders. */
+const curl = (c: Ctx, x: number, y: number, r: number, turns: number, start: number, dir = 1) => {
+  c.beginPath();
+  for (let k = 0; k <= 48; k++) { const u = k / 48, a = start + dir * u * turns * Math.PI * 2, rr = r * (1 - 0.85 * u); const px = x + Math.cos(a) * rr, py = y + Math.sin(a) * rr; if (k) c.lineTo(px, py); else c.moveTo(px, py); }
+  c.stroke();
+};
+/** A leaf as her scissors leave it: a teardrop on a stalk. */
+const leaf = (c: Ctx, x: number, y: number, l: number, a: number) => { c.save(); c.translate(x, y); c.rotate(a); c.beginPath(); c.moveTo(0, 0); c.bezierCurveTo(l * 0.3, -l * 0.32, l * 0.85, -l * 0.18, l, 0); c.bezierCurveTo(l * 0.85, l * 0.18, l * 0.3, l * 0.32, 0, 0); c.fill(); c.restore(); };
+
+/** The tree, as a lace of curling boughs, 400 by 736. */
+function laceTree(c: Ctx): void {
+  c.fillStyle = c.strokeStyle = CARD; c.lineCap = 'round'; c.lineJoin = 'round';
+  c.beginPath(); c.moveTo(178, 736); c.bezierCurveTo(196, 640, 160, 560, 186, 440); c.lineTo(214, 440); c.bezierCurveTo(196, 560, 232, 640, 224, 736); c.closePath(); c.fill();
+  const boughs: [number, number, number, number, number][] = [[200, 452, 70, 250, -1], [200, 452, 330, 240, 1], [200, 440, 120, 120, -1], [200, 440, 290, 110, 1], [200, 430, 205, 70, 1], [196, 520, 40, 400, -1], [204, 520, 360, 392, 1]];
+  for (const [x0, y0, x1, y1, d] of boughs) {
+    c.lineWidth = 11; c.beginPath(); c.moveTo(x0, y0); c.bezierCurveTo(x0 + (x1 - x0) * 0.2, y0 - 90, x1 - d * 60, y1 + 60, x1, y1); c.stroke();
+    c.lineWidth = 7; curl(c, x1 + d * 18, y1 - 4, 22, 1.25, d > 0 ? Math.PI : 0, d);
+    for (let k = 0; k < 9; k++) { const u = 0.3 + k * 0.08, bx = x0 + (x1 - x0) * u, by = y0 + (y1 - y0) * u - 70 * Math.sin(Math.PI * u); leaf(c, bx, by, 30, -Math.PI / 2 + d * (0.5 + 0.25 * Math.sin(k * 1.7)) + (k % 2 ? 0.9 : -0.9)); }
+  }
+  c.lineWidth = 6; for (const [x, y, r, d] of [[120, 60, 26, 1], [280, 54, 26, -1], [200, 26, 20, 1], [56, 170, 22, -1], [344, 160, 22, 1]]) curl(c, x, y, r, 1.1, 0, d);
+  c.lineWidth = 9; c.beginPath(); c.moveTo(150, 736); c.quadraticCurveTo(110, 700, 60, 720); c.moveTo(250, 736); c.quadraticCurveTo(300, 704, 350, 724); c.stroke();
+  pierce(c, () => { for (let k = 0; k < 7; k++) slit(c, 200 + Math.sin(k) * 4, 690 - k * 34, 18, 5, Math.PI / 2); });
+}
+
+/** The deer's body on fine legs, 400 by 352, its rod at (212, 214). */
+function laceDeer(c: Ctx): void {
+  c.fillStyle = c.strokeStyle = CARD; c.lineCap = 'round'; c.lineJoin = 'round';
+  c.beginPath(); c.moveTo(100, 120); c.bezierCurveTo(150, 92, 270, 96, 318, 118); c.bezierCurveTo(352, 134, 346, 186, 308, 190); c.bezierCurveTo(250, 196, 170, 196, 120, 186); c.bezierCurveTo(84, 176, 78, 134, 100, 120); c.fill();
+  c.lineWidth = 9; for (const [x0, k, x2] of [[128, -1, 112], [158, 1, 170], [292, -1, 280], [318, 1, 334]]) { c.beginPath(); c.moveTo(x0, 178); c.quadraticCurveTo(x0 + k * 10, 250, x2, 290); c.lineTo(x2 + k * 2, 330); c.stroke(); c.beginPath(); c.moveTo(x2 - 7, 336); c.lineTo(x2 + 9, 336); c.lineTo(x2 + 2, 322); c.closePath(); c.fill(); }
+  c.lineWidth = 6; curl(c, 352, 108, 18, 1.2, Math.PI, -1);
+  pierce(c, () => { for (let k = 0; k < 11; k++) dot(c, 132 + k * 17, 130 + Math.sin(k * 0.6) * 6, 4); for (let k = 0; k < 6; k++) slit(c, 160 + k * 26, 164, 20, 5, 0.4); c.lineWidth = 3; curl(c, 300, 150, 18, 1.4, 0, 1); });
+}
+
+/** The neck, head and branching curled antlers, 240 by 288, pinned at (188, 248). */
+function laceHead(c: Ctx): void {
+  c.fillStyle = c.strokeStyle = CARD; c.lineCap = 'round'; c.lineJoin = 'round';
+  c.beginPath(); c.moveTo(212, 252); c.quadraticCurveTo(168, 160, 116, 104); c.lineTo(92, 128); c.quadraticCurveTo(136, 196, 152, 270); c.closePath(); c.fill(); dot(c, 186, 250, 28);
+  c.beginPath(); c.moveTo(120, 92); c.bezierCurveTo(100, 84, 60, 104, 30, 126); c.quadraticCurveTo(52, 138, 92, 130); c.quadraticCurveTo(118, 122, 124, 106); c.fill();
+  c.beginPath(); c.moveTo(118, 88); c.quadraticCurveTo(150, 66, 160, 94); c.quadraticCurveTo(138, 98, 118, 88); c.fill();
+  for (const [dx, lean] of [[0, 1], [-24, -0.6]]) {
+    c.lineWidth = 7; c.beginPath(); c.moveTo(108 + dx, 84); c.bezierCurveTo(108 + dx, 50, 120 + dx + lean * 30, 34, 132 + dx + lean * 44, 14); c.stroke();
+    c.lineWidth = 5; for (const u of [0.3, 0.6]) { const x = 110 + dx + lean * 30 * u, y = 82 - 60 * u; curl(c, x - 14, y - 12, 12, 1.1, 0, -1); }
+    curl(c, 132 + dx + lean * 44 + 8, 16, 10, 1, Math.PI, 1);
+  }
+  pierce(c, () => { dot(c, 80, 106, 5); c.lineWidth = 2.5; c.beginPath(); c.arc(80, 106, 9, -2.4, 0.6); c.stroke(); for (let k = 0; k < 5; k++) dot(c, 142 + k * 11, 150 + k * 22, 3.4); });
+}
+
+/** A bird with three curling tail plumes, 288 by 160, its rod at (150, 88). */
+function laceBird(c: Ctx): void {
+  c.fillStyle = c.strokeStyle = CARD; c.lineCap = 'round'; c.lineJoin = 'round';
+  c.lineWidth = 6; for (const [y, d] of [[48, -1], [90, 1], [130, 1]]) { c.beginPath(); c.moveTo(106, 86); c.bezierCurveTo(70, y - 20, 50, y + 10, 26, y); c.stroke(); curl(c, 26 + 4, y - d * 12, 12, 1.2, d > 0 ? -Math.PI / 2 : Math.PI / 2, d); }
+  c.beginPath(); c.moveTo(96, 92); c.bezierCurveTo(118, 58, 186, 54, 210, 74); c.bezierCurveTo(222, 86, 210, 112, 176, 114); c.bezierCurveTo(140, 116, 108, 108, 96, 92); c.fill(); dot(c, 214, 66, 20);
+  c.beginPath(); c.moveTo(230, 58); c.quadraticCurveTo(254, 62, 272, 76); c.quadraticCurveTo(250, 74, 230, 74); c.closePath(); c.fill();
+  c.lineWidth = 3; c.beginPath(); c.moveTo(208, 48); c.quadraticCurveTo(214, 26, 230, 22); c.stroke(); curl(c, 236, 26, 7, 1, Math.PI, 1);
+  pierce(c, () => { dot(c, 218, 62, 4); for (let k = 0; k < 6; k++) { c.beginPath(); c.arc(124 + k * 14, 92, 6, 0, Math.PI); c.fill(); } });
+}
+
+/** The wing, scalloped and slit like feathers, 160 by 160, hinged at (80, 140). */
+function laceWing(c: Ctx): void {
+  c.fillStyle = CARD;
+  c.beginPath(); c.moveTo(64, 142); c.quadraticCurveTo(22, 100, 20, 30);
+  for (let k = 0; k < 5; k++) { const x0 = 20 + k * 24; c.quadraticCurveTo(x0 + 12, 12 + (k % 2) * 6, x0 + 24, 30 - k * 0.5); }
+  c.quadraticCurveTo(142, 100, 96, 142); c.closePath(); c.fill();
+  pierce(c, () => { for (const [x, a] of [[44, 1.3], [62, 1.45], [80, 1.57], [98, 1.69], [116, 1.84]]) slit(c, x, 70, 50, 4, a); dot(c, 80, 124, 4); });
+}
+
+/** The title card the second act opens on, as the films of the 1920s did: a border of curls, her name and the year. */
+function titleCard(c: Ctx, w: number, h: number): void {
+  c.clearRect(0, 0, w, h); c.fillStyle = c.strokeStyle = '#000'; c.lineCap = 'round';
+  // the frame: everything outside a rounded window is card, and curls grow in from its corners
+  c.beginPath(); c.rect(0, 0, w, h); c.roundRect(70, 50, w - 140, h - 100, 60); c.fill('evenodd');
+  c.lineWidth = 7; for (const [x, y, d] of [[110, 92, 1], [w - 110, 92, -1], [110, h - 92, -1], [w - 110, h - 92, 1]]) { curl(c, x, y, 34, 1.3, 0, d); curl(c, x + d * 70, y, 18, 1.1, Math.PI, -d); }
+  c.textAlign = 'center'; c.textBaseline = 'middle';
+  c.font = '700 96px "Sofia Sans Variable", "Sofia Sans", Georgia, serif'; c.fillText('Lotte Reiniger', w / 2, h / 2 - 22);
+  c.font = '400 58px "Sofia Sans Variable", "Sofia Sans", Georgia, serif'; c.fillText('1926', w / 2, h / 2 + 70);
+  c.lineWidth = 4; c.beginPath(); c.moveTo(w / 2 - 230, h / 2 + 22); c.lineTo(w / 2 - 70, h / 2 + 22); c.moveTo(w / 2 + 70, h / 2 + 22); c.lineTo(w / 2 + 230, h / 2 + 22); c.stroke();
+  curl(c, w / 2 - 248, h / 2 + 10, 12, 1, 0, -1); curl(c, w / 2 + 248, h / 2 + 10, 12, 1, Math.PI, 1);
+}
+
 /**
  * Shadow play: a cloth in a frame, an oil lamp behind it, and flat figures on rods between the two. The cloth works
  * its shadows out from where the flame and the figures are, so they grow, soften and tremble as real ones do.
@@ -305,6 +389,13 @@ export function shadowPlay(): Built {
   const BIRD = figure(640, 352, 288, 160, 150, 88, drawBird), WING = figure(640, 512, 160, 160, 80, 140, drawWing);
   const DEER_ROD = stick(0.42), HEAD_ROD = stick(0.62), BIRD_ROD = stick(0.96), WING_ROD = stick(0.96);
   art.tex.needsUpdate = true;
+  // the second act's card figures, each in the same corner of a second sheet, so that they take the first act's joints
+  const card = screen(SIDE, SIDE), cut = card.ctx;
+  cut.clearRect(0, 0, SIDE, SIDE); cut.fillStyle = '#2a2018'; cut.fillRect(917, 896, 22, 64);
+  for (const [x, y, draw] of [[0, 0, laceTree], [400, 0, laceDeer], [400, 352, laceHead], [640, 352, laceBird], [640, 512, laceWing]] as [number, number, (c: Ctx) => void][]) { cut.save(); cut.translate(x, y); draw(cut); cut.restore(); }
+  card.tex.needsUpdate = true;
+  const title = screen(1024, 560); titleCard(title.ctx, 1024, 560); title.tex.needsUpdate = true;
+  let drawn = false;
   /** Put a part where it belongs, on the stand and in the reckoning of the shadows: where it is held, how it is turned, how far it is from the cloth, and whether it is seen from its other side. */
   const put = (i: number, x: number, y: number, angle: number, gap: number, turn = 1) => {
     const m = made[i], b = boxes[i], f = Math.sign(turn || 1) * Math.max(0.05, Math.abs(turn));
@@ -318,13 +409,13 @@ export function shadowPlay(): Built {
   root.add(slot);
 
   // the cloth: unbleached cotton between two red hems. What the lamp throws on it is added to what the room does
-  const GLOW = new THREE.Color(1, 0.6, 0.27), u = { tHide: { value: art.tex }, uAt: { value: uAt }, uBox: { value: uBox }, uCell: { value: uCell }, uLamp: { value: new THREE.Vector3(0, FY - SY, L) }, uGlow: { value: GLOW.clone() }, uFlame: { value: FLAME } };
+  const GLOW = new THREE.Color(1, 0.6, 0.27), u = { tHide: { value: art.tex }, uAt: { value: uAt }, uBox: { value: uBox }, uCell: { value: uCell }, uLamp: { value: new THREE.Vector3(0, FY - SY, L) }, uGlow: { value: GLOW.clone() }, uFlame: { value: FLAME }, tCard: { value: title.tex }, uCard: { value: 0 }, uIris: { value: 2 }, uSize: { value: new THREE.Vector2(SW, CH) } };
   const cotton = new THREE.MeshStandardMaterial({ color: 0xc9bea8, roughness: 1, side: THREE.DoubleSide });
   cotton.onBeforeCompile = (sh) => {
     Object.assign(sh.uniforms, u);
     sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec2 vAt;').replace('#include <begin_vertex>', '#include <begin_vertex>\nvAt = position.xy;');
     sh.fragmentShader = sh.fragmentShader.replace('#include <common>', /* glsl */ `#include <common>
-      uniform sampler2D tHide; uniform vec4 uAt[${N}], uBox[${N}], uCell[${N}]; uniform vec3 uLamp, uGlow; uniform float uFlame; varying vec2 vAt;`)
+      uniform sampler2D tHide, tCard; uniform vec4 uAt[${N}], uBox[${N}], uCell[${N}]; uniform vec3 uLamp, uGlow; uniform float uFlame, uCard, uIris; uniform vec2 uSize; varying vec2 vAt;`)
       .replace('#include <emissivemap_fragment>', /* glsl */ `#include <emissivemap_fragment>
       {
         // how much of the cloth one dot of the screen covers: no shadow is drawn finer than that
@@ -341,6 +432,9 @@ export function shadowPlay(): Built {
             lit *= 1.0 - textureLod(tHide, uCell[i].xy + q * uCell[i].zw, lod).a;
           }
         }
+        // the title card between the acts, and the iris that opens and closes on each, as in a film of the 1920s
+        lit = mix(lit, 1.0 - texture2D(tCard, vAt / uSize + 0.5).a, uCard);
+        lit *= smoothstep(uIris, uIris - 0.04, length(vAt) / (0.5 * uSize.x));
         // the light falls off with the distance from the flame and with the slant it arrives at. Where the flame itself is behind the weave, it shows
         vec2 from = vAt - uLamp.xy; float far = dot(from, from) + uLamp.z * uLamp.z;
         totalEmissiveRadiance += uGlow * lit * (pow(uLamp.z * uLamp.z / far, 1.5) + 1.6 * exp(-dot(from, from) / 0.0035));
@@ -363,12 +457,30 @@ export function shadowPlay(): Built {
   lamp.position.set(0, FY, -L);
   root.add(lamp);
 
+  // Sixty-four seconds: the first act, the iris closes, her title card, and a second act in black card, its light
+  // tinted blue as the night scenes of tinted prints were. Then the iris closes and the first act comes back.
+  const ACT2 = new THREE.Color(0.42, 0.72, 1), iris = (t: number) => Math.min(1, Math.abs(t)) * 1.2;
+  const act = (t: number) => {
+    const at = t % 64, second = at >= 32 && at < 63;
+    if (second !== drawn) {
+      drawn = second;
+      const sheet = second ? card.tex : art.tex;
+      u.tHide.value = sheet; hide.map = sheet; hide.emissiveMap = sheet; hide.emissive.setHex(second ? 0x000000 : 0xffa658); hide.needsUpdate = true;
+    }
+    // the iris: shut at 31, 33, 38 and 63, wide open in between
+    const shut = [30.5, 32, 37.5, 63].reduce((m, c) => Math.min(m, Math.abs(at - c - 0.5) / 0.5), 9);
+    u.uIris.value = iris(shut);
+    u.uCard.value = at >= 32 && at < 38 ? 1 : 0;
+    return second;
+  };
+
   /** One moment of the play, and of the flame that lights it. */
   const play = (t: number, lights: number) => {
+    const second = act(t);
     // the flame leans, stretches and gutters. The light on the cloth goes with it, and so does every shadow, the far ones most
     const a = Math.sin(t * 13.1) * 0.5 + Math.sin(t * 7.3 + 1.3) * 0.3 + Math.sin(t * 23.7 + 0.7) * 0.2, b = Math.sin(t * 9.7 + 2.1) * 0.6 + Math.sin(t * 17.3) * 0.4;
     fire.scale.set(1 + 0.08 * b, 1 + 0.16 * a, 1 + 0.08 * b); fire.rotation.z = 0.14 * b;
-    u.uLamp.value.set(0.005 * b, FY - SY + 0.004 * a, L); u.uGlow.value.copy(GLOW).multiplyScalar(1 + 0.07 * a);
+    u.uLamp.value.set(0.005 * b, FY - SY + 0.004 * a, L); u.uGlow.value.copy(second ? ACT2 : GLOW).multiplyScalar(1 + 0.07 * a);
     aura.material.opacity = 0.42 + 0.05 * a; hide.emissiveIntensity = (0.62 - 0.4 * lights) * (1 + 0.07 * a);
     // twenty seconds: the bird passes close to the cloth from left to right, turns, and comes back out by the lamp
     const w = ((t / 20 + 0.55) % 1) * Math.PI * 2, x = 0.02 - 0.52 * Math.cos(w), y = 1.05 + 0.03 * Math.sin(2 * w), gap = 0.22 - 0.145 * Math.sin(w);
