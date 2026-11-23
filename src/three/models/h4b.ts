@@ -2,6 +2,7 @@ import { G, M, Swarm, beam, halo, screen, THREE, type Built } from '../kit';
 import { words } from '../../words';
 import { lens, screws } from '../parts';
 import { landscape, type Land } from '../vista';
+import { now } from '../../sims/draw';
 
 /** The two oldest pieces of hall 4: a picture made with a hole and a sheet of paper, and one made with a flame, a cloth and flat figures. */
 
@@ -502,7 +503,116 @@ export function shadowPlay(): Built {
 
   return {
     root, inDark: 'better', glow: 0xffb469, view: [-26, 9],
-    views: { audience: { at: [0, 0.3, 3.3], to: [0, SY, 0], room: true, fov: 34, play: 0.2 }, behind: { at: [0.72, 1.12, -1.3], to: [0.02, 0.84, -0.1], fov: 46, play: 0.4 } },
+    views: { audience: { at: [0, 0.3, 3.3], to: [0, SY, 0], room: true, fov: 34, play: 0.2 }, behind: { at: [0.5, 0.75, -1.6], to: [0, 0.84, -0.1], fov: 46, play: 0.3 } },
     update: ({ t, lights }) => play(t, lights),
+  };
+}
+
+/** A night scene painted on glass, as lantern slides were: a round picture in a black mask, with a church clock that shows the time. */
+function paintSlide(c: CanvasRenderingContext2D, W: number, h: number, m: number, which: number): void {
+  c.fillStyle = '#000'; c.fillRect(0, 0, W, W);
+  c.save(); c.beginPath(); c.arc(W / 2, W / 2, W * 0.46, 0, Math.PI * 2); c.clip();
+  const sky = c.createLinearGradient(0, 0, 0, W);
+  sky.addColorStop(0, which ? '#1d2a5e' : '#3a2350'); sky.addColorStop(0.65, which ? '#3f5c8f' : '#a0525a'); sky.addColorStop(1, '#1c1a16');
+  c.fillStyle = sky; c.fillRect(0, 0, W, W);
+  // the moon, or a low sun
+  c.fillStyle = which ? '#f3ecc8' : '#ffcf7a'; c.beginPath(); c.arc(W * (which ? 0.74 : 0.26), W * 0.26, W * 0.07, 0, 7); c.fill();
+  // roofs and a tower, in the flat dark colours of a painted slide
+  c.fillStyle = '#20160f';
+  c.beginPath(); c.moveTo(0, W * 0.78); for (let i = 0; i <= 8; i++) { const x = (i / 8) * W; c.lineTo(x, W * (0.7 + 0.06 * Math.sin(i * 2.3))); } c.lineTo(W, W); c.lineTo(0, W); c.fill();
+  c.fillStyle = '#2b1e14'; c.fillRect(W * 0.42, W * 0.3, W * 0.16, W * 0.55);
+  c.beginPath(); c.moveTo(W * 0.4, W * 0.31); c.lineTo(W * 0.5, W * 0.16); c.lineTo(W * 0.6, W * 0.31); c.fill();
+  // lit windows
+  c.fillStyle = '#ffd27a';
+  for (const [x, y] of [[0.12, 0.76], [0.2, 0.74], [0.72, 0.75], [0.84, 0.77], [0.47, 0.62], [0.53, 0.62]]) c.fillRect(W * x, W * y, W * 0.025, W * 0.035);
+  // the clock face, and its hands at the time of day
+  const cx = W / 2, cy = W * 0.42, r = W * 0.055;
+  c.fillStyle = '#efe4c4'; c.beginPath(); c.arc(cx, cy, r, 0, 7); c.fill();
+  c.strokeStyle = '#2b1e14'; c.lineWidth = W * 0.008; c.lineCap = 'round';
+  const hand = (a: number, l: number) => { c.beginPath(); c.moveTo(cx, cy); c.lineTo(cx + Math.sin(a) * l, cy - Math.cos(a) * l); c.stroke(); };
+  hand((((h % 12) + m / 60) / 12) * Math.PI * 2, r * 0.55); hand((m / 60) * Math.PI * 2, r * 0.85);
+  c.restore();
+}
+
+/**
+ * Magic lantern: a tin lantern with a chimney, a lamp inside before a curved mirror, a painted glass slide in the
+ * holder and a brass lens, throwing the picture on a sheet at the back of the plinth. Each minute the slide holder
+ * is pushed across and the next slide shows the new time. The picture is faint by day and strong in the dark.
+ */
+export function magicLantern(): Built {
+  const root = G.group();
+  const LZ = 0.62, LY = 0.5, tin = M.dark(1), brass = M.brass(), black = M.black(), wood = M.wood(0x6b4a2e);
+  // a small table for the lantern, at the front, so that the visitor stands behind it as an audience did
+  root.add(G.rbox(0.7, 0.04, 0.5, 0.01, wood, [0, 0.3, LZ]));
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) root.add(G.box(0.035, 0.28, 0.035, M.wood(0x6b4a2e, 1), [sx * 0.3, 0.14, LZ + sz * 0.2]));
+  // the lantern: a tin box on short legs, a chimney with a cap, a door at the side with a red window
+  root.add(G.rbox(0.3, 0.3, 0.3, 0.02, tin, [0, LY, LZ]));
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) root.add(G.cyl(0.012, 0.05, tin, [sx * 0.12, 0.345, LZ + sz * 0.12], 10));
+  root.add(G.cyl(0.05, 0.22, tin, [0, LY + 0.26, LZ + 0.03], 20), G.cyl(0.085, 0.03, tin, [0, LY + 0.39, LZ + 0.03], 24, 0.03));
+  for (const y of [LY + 0.2, LY + 0.3]) root.add(G.torus(0.052, 0.006, brass, [0, y, LZ + 0.03]).rotateX(Math.PI / 2));
+  root.add(G.box(0.006, 0.2, 0.2, tin, [0.152, LY, LZ], 0), G.cyl(0.04, 0.01, brass, [0.158, LY, LZ], 20).rotateZ(Math.PI / 2));
+  const ember = M.glow(0xff7a2a, 1.4);
+  root.add(G.cyl(0.03, 0.004, ember, [0.163, LY, LZ], 20).rotateZ(Math.PI / 2), G.box(0.01, 0.03, 0.012, brass, [0.16, LY + 0.06, LZ + 0.08], 0));
+  // in front: the slide stage, the brass lens tube with a focusing knob, and the lens
+  const SZ = LZ - 0.17;
+  root.add(G.box(0.26, 0.26, 0.03, tin, [0, LY, SZ], 0.004));
+  const tubeZ = SZ - 0.15;
+  root.add(G.cyl(0.07, 0.24, brass, [0, LY, tubeZ], 32).rotateX(Math.PI / 2), G.cyl(0.078, 0.03, brass, [0, LY, tubeZ - 0.12], 32).rotateX(Math.PI / 2), G.cyl(0.02, 0.04, black, [0.09, LY, tubeZ + 0.04], 12).rotateZ(Math.PI / 2));
+  root.add(lens(0.065, [0, LY, tubeZ - 0.13], 0.3, brass));
+  // the slide holder: a long wooden frame with two round pictures, pushed across through the stage
+  const slideW = 256, slides = [screen(slideW, slideW), screen(slideW, slideW)];
+  const holder = G.group(G.box(0.62, 0.17, 0.016, wood, [0, 0, 0], 0.004));
+  slides.forEach((s, i) => {
+    const pane = G.plane(0.13, 0.13, new THREE.MeshBasicMaterial({ map: s.tex, transparent: true, opacity: 0.95 }), [i ? 0.16 : -0.16, 0, 0.009]);
+    pane.rotation.z = Math.PI; // painted upside down, as a slide must be
+    holder.add(pane, G.torus(0.068, 0.006, brass, [i ? 0.16 : -0.16, 0, 0.009]));
+  });
+  holder.position.set(0, LY, SZ + 0.024);
+  holder.userData.moves = true;
+  root.add(holder);
+  // the sheet at the back of the plinth, on a frame of two poles and a bar
+  const SY = 1.2, SH = 1.15, SW = 1.5, SBZ = -0.9;
+  root.add(G.plane(SW, SH, M.cloth(0xf1ede2), [0, SY, SBZ]));
+  for (const sx of [-1, 1]) root.add(G.cyl(0.018, SY + SH / 2 + 0.05, wood, [sx * (SW / 2 + 0.03), (SY + SH / 2 + 0.05) / 2, SBZ], 12), G.cyl(0.12, 0.03, wood, [sx * (SW / 2 + 0.03), 0.015, SBZ], 20));
+  root.add(G.cyl(0.015, SW + 0.12, wood, [0, SY + SH / 2 + 0.02, SBZ], 12).rotateZ(Math.PI / 2));
+  // the picture on the sheet: light added to the cloth, enlarged and the right way up
+  const shown = new THREE.MeshBasicMaterial({ map: slides[0].tex, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, color: 0xfff0d8 });
+  const pic = G.plane(1.05, 1.05, shown, [0, SY, SBZ + 0.004]);
+  root.add(pic);
+  // the cone of light from the lens to the sheet, seen only in a dusty, dark room
+  const from = new THREE.Vector3(0, LY, tubeZ - 0.14), to = new THREE.Vector3(0, SY, SBZ);
+  const len = from.distanceTo(to);
+  const coneGeo = new THREE.CylinderGeometry(0.06, 0.6, len, 32, 1, true).translate(0, len / 2, 0);
+  const coneMat = new THREE.MeshBasicMaterial({ color: 0xffe2b0, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+  const cone = new THREE.Mesh(coneGeo, coneMat);
+  cone.position.copy(from); cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), to.clone().sub(from).normalize());
+  root.add(cone, halo(0xffb060, 0.16, [0, LY, tubeZ - 0.14], 0.5));
+  let minute = -1, at = 0, swapAt = -10;
+  return {
+    root, inDark: 'glows', glow: 0xffd9a0, view: [16, 8],
+    views: {
+      audience: { at: [0.25, 1.15, 2.6], to: [0, 1.0, -0.6], fov: 38, play: 0.12 },
+      slide: { at: [0.5, 0.66, SZ + 0.05], to: [0.05, 0.5, SZ + 0.02], fov: 36, play: 0.12 },
+    },
+    update: (env) => {
+      const n = now();
+      // a new slide each minute: the next picture is painted, and the holder is pushed across to bring it in
+      if (n.m !== minute) {
+        const first = minute < 0;
+        minute = n.m; at = first ? at : 1 - at;
+        paintSlide(slides[at].ctx, slideW, n.h, n.m, at); slides[at].tex.needsUpdate = true;
+        if (first) { paintSlide(slides[1 - at].ctx, slideW, n.h, n.m, 1 - at); slides[1 - at].tex.needsUpdate = true; }
+        swapAt = first ? -10 : env.t;
+      }
+      const k = Math.min(1, Math.max(0, (env.t - swapAt) / 1.2)), e = k * k * (3 - 2 * k);
+      holder.position.x = at ? -0.16 * e + 0.16 * (1 - e) : 0.16 * e - 0.16 * (1 - e);
+      shown.map = slides[at].tex;
+      // between slides the sheet goes dark for a moment, as it does when a slide is changed by hand
+      const gap = Math.min(1, Math.abs(e - 0.5) * 2);
+      const dark = 1 - env.lights;
+      shown.opacity = gap * (0.25 + 0.75 * dark);
+      coneMat.opacity = gap * 0.07 * dark;
+      (ember as THREE.MeshStandardMaterial).emissiveIntensity = 1.2 + 0.3 * Math.sin(env.t * 9) * Math.sin(env.t * 3.1);
+    },
   };
 }

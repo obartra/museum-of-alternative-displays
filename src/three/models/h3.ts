@@ -498,7 +498,7 @@ export function tfel(): Built {
   root.add(fused(made));
   return {
     root, inDark: 'glows', glow: 0xffb21a, view: [22, 10], surface: s.canvas,
-    views: { front: { at: [0, 1.1, 3.7], to: [0, 0.95, 0], fov: 34, play: 0.2 }, dots: { at: [-1.15, 1.5, 0.8], to: [-0.6, 1.05, 0.06], play: 0.35 } },
+    views: { side: { at: [2.6, 0.7, 1.6], to: [0, 0.95, 0], fov: 34, play: 0.12 }, dots: { at: [-1.15, 1.5, 0.8], to: [-0.6, 1.05, 0.06], play: 0.35 } },
     update: () => {
       const c = s.ctx, n = now();
       c.fillStyle = '#060400'; c.fillRect(0, 0, 640, 400);
@@ -671,7 +671,7 @@ export function flexible(): Built {
   root.add(front, back, fused(made));
   return {
     root, inDark: 'glows', glow: 0x7fe0c0, view: [34, 10], surface: s.canvas,
-    views: { front: { at: [0, 1.1, 4.3], to: [0, 0.9, 0], fov: 34, play: 0.2 }, edge: { at: [1.95, 0.75, 0.95], to: [0.9, 0.6, 0] } },
+    views: { back: { at: [1.2, 1.3, -3.2], to: [0, 0.9, 0], fov: 38, play: 0.12 }, edge: { at: [1.95, 0.75, 0.95], to: [0.9, 0.6, 0] } },
     update: ({ t }) => {
       const c = s.ctx;
       for (let y = 0; y < 448; y += 8) { c.fillStyle = hsl(160 + 70 * Math.sin(y / 70 + t * 0.9), 85, 30 + 14 * Math.sin(y / 31 - t)); c.fillRect(0, y, 512, 8); }

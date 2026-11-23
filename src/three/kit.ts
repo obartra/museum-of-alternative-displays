@@ -13,6 +13,8 @@ export interface Env {
   /** Hall lights, 0 (off) to 1 (on). */
   lights: number;
   camera: THREE.Camera;
+  /** The id of the place the visitor is looking from, if any, so that a piece can hold a state for it. */
+  view?: string;
 }
 
 /** How the piece behaves when the hall lights go off. */
@@ -36,6 +38,12 @@ export interface Spot {
   fov?: number;
   /** How far the camera may swing about `to`, in radians. A person view defaults to 0.1, a detail view to 0.5. */
   play?: number;
+  /**
+   * How the head moves by itself while the view is on: `rate` in radians a second, `reach` as a share of the distance
+   * to `to`, and `up` for a share of that reach up and down as well, in a figure of eight. Without it a person view
+   * drifts slowly from side to side and a detail view stands still.
+   */
+  sway?: { rate: number; reach: number; up?: number };
 }
 
 export interface Built {

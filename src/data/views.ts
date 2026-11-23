@@ -13,9 +13,31 @@ export interface ViewInfo {
   label: string;
   /** One line shown over the picture while the view is on: what to notice from here. */
   hint?: string;
+  /** The view is meant to be seen with the daylight off: going to it switches the daylight off, and leaving it puts it back. */
+  dark?: boolean;
 }
 
 export const views: Record<string, ViewInfo[]> = {
+  'lancework': [
+    { id: 'crowd', kind: 'person', label: 'Stand with the crowd', hint: 'From the lawn the flames join into figures. Up close they are separate lances, each one dot of the picture.' },
+    { id: 'lances', kind: 'detail', label: 'Go close to the lances', hint: 'Each lance is a paper tube of coloured fire pinned to the cane. It shortens as it burns, for about a minute.' },
+  ],
+  'scanning-fiber': [
+    { id: 'tip', kind: 'detail', label: 'Go close to the tip', hint: 'The fibre sticks out of the ceramic tube and swings in growing circles. The real one swings far faster.' },
+    { id: 'picture', kind: 'detail', label: 'Watch the picture form', hint: 'The spot paints the time ring by ring from the centre out, then goes dark while the tip comes back to rest.' },
+  ],
+  'magic-lantern': [
+    { id: 'audience', kind: 'person', label: 'Sit with the audience', hint: 'Behind the lantern, as a room full of people sat. Switch the daylight off: the picture needs a dark room.' },
+    { id: 'slide', kind: 'detail', label: 'Go close to the slide', hint: 'The slide is painted small and upside down. The lens turns it the right way up and makes it large on the sheet.' },
+  ],
+  'neon-sign': [
+    { id: 'street', kind: 'person', label: 'Stand across the street', hint: 'From here each tube reads as one even line of light. When the minute changes, the tubes switch one by one.' },
+    { id: 'tube', kind: 'detail', label: 'Go close to a tube', hint: 'Each tube bends back through the board to an electrode. The gas glows along the whole length between its two ends.' },
+  ],
+  'news-zipper': [
+    { id: 'square', kind: 'person', label: 'Stand in the square', hint: 'The headline runs round the corner of the building. No lamp moves: only which lamps are lit.' },
+    { id: 'brushes', kind: 'detail', label: 'Go behind the band', hint: 'Metal letters ride under a row of brushes. Where metal touches a brush, one lamp outside lights.' },
+  ],
   // hall 1, mechanics
   'split-flap': [
     { id: 'hall', kind: 'person', label: 'Wait on the concourse', hint: 'People waiting learned to look up at the clatter. Here one leaf falls every second.' },
@@ -26,12 +48,14 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'under', kind: 'detail', label: 'Look up at the valves', hint: 'The bottom row of the picture leaves first. Each row above it leaves a moment later, so the shape holds as it falls.' },
   ],
   'flip-disc': [
+    { id: 'night', kind: 'person', label: 'Wait after dark', hint: 'The discs still hold the time, but the board makes no light of its own, so after dark it cannot be read.', dark: true },
     { id: 'kerb', kind: 'person', label: 'Wait at the stop', hint: 'As on the front of a bus. The board reflects daylight and makes none, and the bottom row fills a disc a second.' },
     { id: 'discs', kind: 'detail', label: 'Go close to the discs', hint: 'Each disc sits on an axle. A pulse through the copper coils under it kicks it over, and it stays with no current.' },
   ],
   'mechanical-television': [
     { id: 'eyepiece', kind: 'person', label: 'Look in', hint: 'Thirty lines of flickering neon, seen through the moving holes. Hours above, minutes below.' },
     { id: 'disc', kind: 'detail', label: 'Follow the spiral', hint: 'Thirty holes, each one hole\'s width nearer the centre than the last. One turn of the disc is one picture.' },
+    { id: 'sync', kind: 'detail', label: 'See what keeps step', hint: "A toothed wheel turns between two coils fed by the signal. Their pull holds this disc in step with the sender's." },
   ],
   'kinetic-mirror': [
     { id: 'stand', kind: 'person', label: 'Stand in front of it', hint: 'The dark shape is you. A camera in the middle watches, and the tiles tip to match as you move your head.' },
@@ -42,37 +66,37 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'pins', kind: 'detail', label: 'Get down among the pins', hint: 'Every pin is driven to its own height by a motor underneath. Height is all there is: no overhangs.' },
   ],
   'braille-display': [
+    { id: 'dark', kind: 'person', label: 'Read in the dark', hint: 'Every light is off. A finger finds the same pins as before.', dark: true },
     { id: 'touch', kind: 'person', label: 'Run a finger along it', hint: 'What a fingertip meets: round pins, up or down, eight to a cell. The right-hand cells change every second.' },
     { id: 'cell', kind: 'detail', label: 'See inside one cell', hint: 'The last cell, taken out and enlarged. A strip of piezo crystal bends under each dot and lifts its pin.' },
   ],
   'drone-show': [
+    { id: 'night', kind: 'person', label: 'Watch after dark', hint: 'After dark the aircraft vanish, and only their lamps are left to draw the figure.', dark: true },
     { id: 'field', kind: 'person', label: 'Stand on the field', hint: 'Each point of light is an aircraft on its own planned route. They write the time, then regroup into a globe.' },
     { id: 'close', kind: 'detail', label: 'Fly up to one', hint: 'Every light hangs under a small quadcopter, kept within centimetres of its place by satellite positioning.' },
   ],
   // hall 2, glass and glow
   'cathode-ray-tube': [
     { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'The band moving down the face is the raster, slowed about sixty times. One beam paints it line by line.' },
-    { id: 'raster', kind: 'detail', label: 'Go close to the face', hint: 'The picture is made of horizontal lines. The beam sweeps them from top to bottom, over and over.' },
+    { id: 'raster', kind: 'detail', label: 'Go close to the face', hint: 'Close to, the picture comes apart into horizontal lines with dark gaps between them.' },
     { id: 'gun', kind: 'detail', label: 'Look into the neck', hint: 'The gun. A heated cathode gives off electrons, and the copper coils round the neck steer the beam.' },
   ],
   'vector-display': [
     { id: 'seat', kind: 'person', label: 'Sit at the console', hint: 'The beam draws each stroke directly, like a pen. The trail behind the ball is phosphor still glowing.' },
     { id: 'trace', kind: 'detail', label: 'Go close to the trace', hint: 'No dots and no scan lines. Each stroke is one smooth pass of the beam, at any angle.' },
+    { id: 'pen', kind: 'detail', label: 'Look at the light pen', hint: 'The pen sees the flash as the beam passes under its tip, which tells the computer what it points at.' },
   ],
   'storage-tube': [
     { id: 'seat', kind: 'person', label: 'Sit at the terminal', hint: 'The plot is drawn once and stays lit, stored in the tube itself. The flash is the only way to erase it.' },
-    { id: 'screen', kind: 'detail', label: 'Go close to the screen', hint: 'Nothing redraws these lines. They stay lit on the face of the tube until the whole face is flashed clean.' },
+    { id: 'wheels', kind: 'detail', label: 'Look at the thumbwheels', hint: 'Two wheels at right angles steer the crosshair: one up and down, the other from side to side.' },
   ],
   'nixie-tube': [
-    { id: 'desk', kind: 'person', label: 'Stand in front', hint: 'Each figure glows a little in front of or behind the next, because the ten cathodes stand one behind another.' },
-    { id: 'stack', kind: 'detail', label: 'Go close to one tube', hint: 'Ten shaped cathodes stacked front to back inside a mesh anode. Neon glows round the one that is energised.' },
+    { id: 'stack', kind: 'detail', label: 'Look from the side', hint: 'Ten shaped cathodes stacked front to back inside a mesh anode. Neon glows round the one that is energised.' },
   ],
   'vacuum-fluorescent': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The light comes from phosphor behind the wires. The hot filaments in front are so fine that they hardly show.' },
     { id: 'grid', kind: 'detail', label: 'Look across the glass', hint: 'Thin hot wires in front, a mesh grid behind them, then the phosphor segments. Every lead leaves at the bottom.' },
   ],
   'numitron': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'Each figure is made of seven lamp filaments, glowing the warm yellow of a light bulb.' },
     { id: 'filaments', kind: 'detail', label: 'Go close to one bulb', hint: 'Seven lamp filaments strung between posts. The lit ones are glowing wire, and that is all the light there is.' },
   ],
   'plasma-panel': [
@@ -93,7 +117,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'lamps', kind: 'detail', label: 'Go close to the lamps', hint: 'Three lamps to a pixel: red, green and blue. Amber is red and green lit together, with the blue left dark.' },
   ],
   'oled': [
-    { id: 'seat', kind: 'person', label: 'Sit in front', hint: 'Switch the daylight off. The black of the panel goes with it and only the colours are left.' },
+    { id: 'seat', kind: 'person', label: 'Sit in a dark room', hint: 'In the dark the black of the panel goes with the room, and only the colours are left.', dark: true },
     { id: 'edge', kind: 'detail', label: 'Look along the edge', hint: 'The panel is a few millimetres thick. Every pixel makes its own light, so there is no lamp behind it.' },
   ],
   'microled': [
@@ -101,7 +125,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'socket', kind: 'detail', label: 'Look into the socket', hint: 'A tile has been lifted out. Behind it: the backplane, power and data sockets, and the four magnets that hold a tile.' },
   ],
   'thin-film-el': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The yellow light comes from a film of zinc sulphide itself, with no lamp behind it.' },
+    { id: 'side', kind: 'person', label: 'Read it from the side', hint: 'The film gives off its light right at the surface, so the figures stay clear far to one side.' },
     { id: 'dots', kind: 'detail', label: 'Go close to the dots', hint: 'Each dot is one crossing of two electrode strips. The yellow is what the film itself emits, not a filter.' },
   ],
   'transparent-display': [
@@ -109,8 +133,8 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'pane', kind: 'detail', label: 'Go close to the pane', hint: 'The screen can only add light to what is behind it. Where its picture would be black, you see the clock.' },
   ],
   'flexible-display': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The sheet bends and rolls onto the drum below, and the picture carries on across the bend.' },
     { id: 'edge', kind: 'detail', label: 'Look along the edge', hint: 'The sheet is the whole display: thin films on plastic, with nothing behind. It winds on to the drum below.' },
+    { id: 'back', kind: 'detail', label: 'Look at the back', hint: 'Behind the picture there is only the film: no lamp, no glass and no frame.' },
   ],
   // hall 4, light valves
   'camera-obscura': [
@@ -119,10 +143,9 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   'shadow-play': [
     { id: 'audience', kind: 'person', label: 'Sit with the audience', hint: 'Only shadows reach this side. Held against the cloth, a figure is small and sharp. Out by the lamp it grows and blurs.' },
-    { id: 'behind', kind: 'detail', label: 'Go behind the screen', hint: 'The figures are flat, pierced and painted, each on its rod. One flame lights them all, and it never holds still.' },
+    { id: 'behind', kind: 'person', label: 'Sit by the puppeteer', hint: 'Some of the audience sat on this side, watching the puppeteer, the lamp and the painted figures.' },
   ],
   'switchable-glass': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The clock behind the pane shows only while the pane is clear. With the power off, the pane is frosted.' },
     { id: 'close', kind: 'detail', label: 'Go close to the pane', hint: 'Frosted, the film scatters light every way. The lamp on the switch box shows when the voltage is on.' },
   ],
   'hidden-lcd': [
@@ -130,7 +153,7 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'close', kind: 'detail', label: 'Look through the filter', hint: 'Every dot is as bright as the next. What changes from dot to dot is the angle of its light, which only a filter sees.' },
   ],
   'liquid-crystal': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'From the front the layers line up into one screen. Seen from the side, as at the rail, they come apart.' },
+    { id: 'front', kind: 'person', label: 'Look straight on', hint: 'From the front the layers line up into one screen. Seen from the side, as at the rail, they come apart.' },
     { id: 'layers', kind: 'detail', label: 'Go between the layers', hint: 'The crystal layer alone shows only grey. It sets how far each cell twists the light. The colour comes from the filter.' },
   ],
   'micromirror': [
@@ -142,11 +165,10 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'chip', kind: 'detail', label: 'Go close to the chip', hint: 'The liquid crystal lies on a mirror-backed silicon chip, so the light passes through it twice, down and back up.' },
   ],
   'eidophor': [
-    { id: 'machine', kind: 'person', label: 'Stand back from it', hint: 'The panels are off, so the parts stand in view: the beam, the oil on its mirror, the bars and the lens.' },
+    { id: 'screen', kind: 'person', label: 'Watch the screen', hint: 'The audience saw only this: a television picture bright enough for a large hall.' },
     { id: 'oil', kind: 'detail', label: 'Go close to the oil', hint: 'A film of oil on a turning mirror. The electron beam dimples it, and only light bent by a dimple passes the bars.' },
   ],
   'scanned-laser': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The hands of the clock are drawn by one beam moving too fast to follow. You see its path, not the dot.' },
     { id: 'galvos', kind: 'detail', label: 'Go close to the mirrors', hint: 'Two small mirrors on fast motors. One swings the beam left and right, the other up and down. The eye sees the path.' },
   ],
   'projection-mapping': [
@@ -155,10 +177,10 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   // hall 5, paper
   'gyricon': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'Each bead turns its white half or its black half to you, so the sheet shows its picture by daylight alone.' },
     { id: 'beads', kind: 'detail', label: 'Go close to the beads', hint: 'Each bead is black on one half and white on the other, in its own pocket of oil. The field turns it, and it stays.' },
   ],
   'electrophoretic-ink': [
+    { id: 'night', kind: 'person', label: 'Try to read at night', hint: 'The page is still there, but with no light of its own it cannot be read.', dark: true },
     { id: 'read', kind: 'person', label: 'Pick it up to read', hint: 'It reads by room light, like print. Watch a page change: every capsule goes black, then white, then to the new page.' },
     { id: 'page', kind: 'detail', label: 'Go close to the page', hint: 'When the page changes it flashes black and white. Then it holds the new page with no power at all.' },
   ],
@@ -167,29 +189,28 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'stroke', kind: 'detail', label: 'Go close to the stroke', hint: 'Where the stylus pressed, the crystal reflects light, and the stroke stays with no power.' },
   ],
   'electrowetting': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'Coloured oil spread over a cell shows its colour. Pushed into a corner, it lets the white beneath show.' },
     { id: 'cells', kind: 'detail', label: 'Go close to the cells', hint: 'A film of dyed oil covers each cell. A voltage makes the water push the oil into a corner, and the cell clears.' },
+    { id: 'oil', kind: 'detail', label: 'Look across the oil', hint: 'Low across the cells you can see the oil gathered in a corner, standing higher than the film it was.' },
   ],
   'interferometric-modulator': [
-    { id: 'front', kind: 'person', label: "Stand in front", hint: "Colour without dye: each cell's colour is set by the height of the gap behind its glass." },
     { id: 'gaps', kind: 'detail', label: 'Look across the gaps', hint: 'A mirror on springs behind glass. The width of the gap picks the colour. Pulled against the glass, the cell is black.' },
   ],
   'electrochromic': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The figures and the window darken slowly as ions soak into their films, and they keep their state with no power.' },
     { id: 'label', kind: 'detail', label: 'Go close to the label', hint: 'Ions soak into the printed film and darken it. That takes seconds, not milliseconds, and then it holds with no power.' },
   ],
   // hall 6, mid-air
   'peppers-ghost': [
-    { id: 'seat', kind: 'person', label: 'Sit down' },
+    { id: 'seat', kind: 'person', label: 'Sit down', hint: 'Move your head: the figure keeps its place among the furniture, as a mirror image does.' },
     { id: 'pit', kind: 'detail', label: 'Look into the pit', hint: 'Below the front of the stage lies the lit figure. The sloping glass mirrors it, so it seems to stand on the stage.' },
   ],
   'fog-screen': [
+    { id: 'projector', kind: 'person', label: 'Stand by the projector', hint: "From the projector's side the fog sends little light back, so the picture is faint." },
     { id: 'fog', kind: 'person', label: 'Step up to the fog', hint: 'The picture hangs in falling fog, ragged by the time it reaches the floor. It is brightest facing the projector.' },
     { id: 'slot', kind: 'detail', label: 'Look up at the fog bar', hint: 'The fog falls from a thin slot between two curtains of air, which keep it flat enough to take a picture.' },
   ],
   'persistence-of-vision': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'Only one bar of LEDs is turning. Your eye joins its passes into a whole disc.' },
-    { id: 'bar', kind: 'detail', label: 'Go close to the bar', hint: 'One bar of lamps, eighteen each side of the hub. Wait for it to slow down: the picture comes apart into a bar again.' },
+    { id: 'spin', kind: 'person', label: 'Watch it at speed', hint: 'Held at full speed: your eye joins the passes of one bar of LEDs into a whole disc.' },
+    { id: 'bar', kind: 'detail', label: 'Go close to the bar', hint: 'One bar of lamps, eighteen each side of the hub. Held slow, the picture comes apart into a bar again.' },
   ],
   'swept-volume': [
     { id: 'round', kind: 'person', label: 'Walk round the dome', hint: 'The picture has real depth. From any side you see the side of it that faces you.' },
@@ -200,15 +221,12 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'glass', kind: 'detail', label: 'Go close to the glass', hint: 'Three layers of glass, one for each colour. It glows only where the two beams cross, and that point draws the figure.' },
   ],
   'optical-trap': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'The figure is drawn by one speck, too small to see, dragged through the air in a laser beam.' },
     { id: 'speck', kind: 'detail', label: 'Go close to the speck', hint: 'One speck of cellulose, held in a laser beam and dragged round. Three small lasers colour it as it passes.' },
   ],
   'acoustic-levitation': [
-    { id: 'front', kind: 'person', label: 'Stand in front', hint: 'Sound from the arrays above and below holds a bead in the air and throws it round the figure.' },
     { id: 'bead', kind: 'detail', label: 'Go close to the bead', hint: 'One bead, held by ultrasound from the arrays above and below, flown round the outline fast enough to be seen whole.' },
   ],
   'laser-plasma': [
-    { id: 'front', kind: 'person', label: "Stand in front", hint: "Each dot of the picture is a flash of air turned to plasma at the laser's focus." },
     { id: 'points', kind: 'detail', label: 'Go close to the points', hint: 'Each point is air, flashing where the pulsed beam comes to a focus. Only one exists at a time. The rest is afterimage.' },
   ],
   // hall 7, depth
@@ -218,7 +236,7 @@ export const views: Record<string, ViewInfo[]> = {
   ],
   'stereo-glasses': [
     { id: 'front', kind: 'person', label: 'Sit in front', hint: 'Every eight seconds the screen and the glasses change together: colour, then time, then polarised light.' },
-    { id: 'table', kind: 'detail', label: 'Look at the glasses', hint: 'In the middle pair, the lenses clear and darken in turn, in step with the picture on the screen.' },
+    { id: 'table', kind: 'detail', label: 'Look at the glasses', hint: 'In the middle pair, the lenses clear and darken in turn with the picture, slowed down here so that you can see it.' },
   ],
   'parallax-barrier': [
     { id: 'spot', kind: 'person', label: 'Stand in front', hint: 'Move your head. Through the slits, the columns for one eye give way to the columns for the other: L turns to R.' },
@@ -237,7 +255,6 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'bench', kind: 'detail', label: 'Look along the bench', hint: 'Laser, lens and plate stand in one line on a rail. The lens spreads the beam so that it lights the whole plate.' },
   ],
   'retinal-display': [
-    { id: 'front', kind: 'person', label: 'Stand back from the eye', hint: 'There is no screen anywhere. One beam goes in through the pupil and the picture forms at the back of the eye.' },
     { id: 'retina', kind: 'detail', label: 'Look in at the retina', hint: 'There is no screen. The beam goes in through the pupil and paints the picture on the back wall of the eye, upside down.' },
   ],
   'head-mounted': [
@@ -249,12 +266,12 @@ export const views: Record<string, ViewInfo[]> = {
     { id: 'behind', kind: 'detail', label: 'Go behind the wall', hint: 'The projector throws its picture at a mirror, which folds it onto the back of the screen. Nobody inside casts a shadow.' },
   ],
   'head-up': [
-    { id: 'seat', kind: 'person', label: 'Sit down' },
+    { id: 'seat', kind: 'person', label: 'Sit down', hint: 'Move your head: the symbols stay out on the far wall, and lean too far and they are cut off.' },
     { id: 'lens', kind: 'detail', label: 'Look down at the lens', hint: 'The lens below makes the light of each symbol parallel, so the glass shows the symbols as if they were far away.' },
   ],
   'colour-wheel-television': [
-    { id: 'set', kind: 'person', label: "Sit in front of the set", hint: "At first the model runs slowly, so the red, green and blue pictures show one at a time. At speed they merge into one." },
-    { id: 'wheel', kind: 'detail', label: "Go close to the wheel", hint: "Each filter passes in front of the black-and-white tube while the tube draws that colour's part of the picture." },
+    { id: 'set', kind: 'person', label: 'Watch it at speed', hint: 'Held at full speed: the three pictures follow so fast that they merge into one in colour.' },
+    { id: 'wheel', kind: 'detail', label: 'Turn the wheel slowly', hint: 'Held slow: one filter at a time, while the tube shows the red, the green and the blue picture in turn.' },
   ],
   'quantum-dot': [
     { id: 'screen', kind: 'person', label: 'Look at the screen', hint: 'Behind the enlarged pixel stands the screen it belongs to. Its red and green are blue light changed by dots.' },

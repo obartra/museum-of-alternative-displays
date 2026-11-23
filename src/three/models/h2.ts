@@ -1,4 +1,4 @@
-import { G, M, glows, halo, lamps, screen, spline, THREE, type Built, type P2, type V3 } from '../kit';
+import { G, M, Swarm, glows, halo, lamps, screen, spline, THREE, type Built, type P2, type V3 } from '../kit';
 import { feet, jewel, meshMat, meshTexture, screws, vents } from '../parts';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { SEG, SEG_LINES, bigTime, clockStrokes, dotMatrix, dots, now, segClock } from '../../sims/draw';
@@ -382,7 +382,7 @@ export function vector(): Built {
   root.add(weld(M.enamel(0xffffff), ...paint), weld(M.plastic(0xffffff, 0.5), ...soft), weld(M.steel(1), ...metal));
   return {
     root, inDark: 'glows', glow: 0x58ff8a, view: [24, 10], zoom: 0.9, surface: scope.canvas,
-    views: {
+    views: { pen: { at: [0.75, 0.75, 1.55], to: [0.3, 0.33, 0.95], fov: 34, play: 0.1 },
       seat: { at: [-0.25, 1.3, 3], to: [cx, cy, 0.52], fov: 46 },
       trace: { at: [-0.05, 1.22, 1.5], to: [-0.3, 1.02, 0.55], play: 0.4 },
     },
@@ -492,7 +492,7 @@ export function storageTube(): Built {
   let cycle = -1, done = 0;
   return {
     root, inDark: 'glows', glow: 0x4dff86, view: [26, 9], surface: s.canvas,
-    views: { screen: { at: [0.5, 2.05, 2.3], to: [0, 1.85, 0.62], fov: 34, play: 0.1 }, seat: { at: [0, 2.25, 3.9], to: [0, 1.85, 0.66], fov: 42 } },
+    views: { wheels: { at: [1.1, 1.8, 1.7], to: [0.68, 1.43, 1.15], fov: 32, play: 0.1 }, seat: { at: [0, 2.25, 3.9], to: [0, 1.85, 0.66], fov: 42 } },
     update: ({ t }) => {
       const c = s.ctx, T = 14, k = Math.floor(t / T), u = (t % T);
       if (k !== cycle) { cycle = k; done = 0; }
@@ -649,7 +649,7 @@ export function nixie(): Built {
     root, inDark: 'glows', glow: 0xff6a1a, view: [20, 9], zoom: 1.12,
     // the tube that counts seconds, from far enough round that the stack shows as a stack, and far enough back that a
     // square frame holds the whole numeral between its two micas
-    views: { desk: { at: [0, 1.3, 5], to: [0, 0.95, 0], fov: 34, play: 0.2 }, stack: { at: [2.7, 1.3, 1.65], to: [1.78, 0.99, 0], play: 0.6 } },
+    views: { stack: { at: [3.2, 1.15, 0.9], to: [1.78, 0.99, 0], fov: 28, play: 0.6 } },
     update: () => {
       const d = now().digits;
       tubes.forEach((tb, i) => {
@@ -775,7 +775,7 @@ export function vfd(): Built {
   root.add(weld(M.steel(), ...metal), weld(M.plastic(0xffffff, 0.55), ...body));
   return {
     root, inDark: 'glows', glow: 0x58ffd8, view: [18, 8], zoom: 1.08, surface: s.canvas,
-    views: { front: { at: [0, 1, 4.3], to: [0, 0.78, 0], fov: 36, play: 0.2 }, grid: { at: [-1.75, 1, 0.75], to: [-0.95, 0.78, 0], play: 0.3 } },
+    views: { grid: { at: [-1.75, 1, 0.75], to: [-0.95, 0.78, 0], play: 0.3 } },
     update: ({ lights }) => {
       s.ctx.fillStyle = '#040807'; s.ctx.fillRect(0, 0, 768, 256);
       segClock(s.ctx, 768, 256, now(), '#7dffe6', '#0d2a26', true, 14);
@@ -862,7 +862,7 @@ export function numitron(): Built {
   return {
     root, inDark: 'glows', glow: 0xffc98a, view: [20, 9], zoom: 1.1,
     // far enough back that a square frame holds the whole figure
-    views: { front: { at: [0, 1.2, 4.2], to: [0, 0.9, 0], fov: 34, play: 0.2 }, filaments: { at: [1.82, 1.17, 1.08], to: [1.14, 0.97, 0.02] } },
+    views: { filaments: { at: [1.82, 1.17, 1.08], to: [1.14, 0.97, 0.02] } },
     update: () => {
       const d = now().digits;
       tubes.forEach((tb, i) => {
@@ -1189,8 +1189,9 @@ export function colourWheel(): Built {
   return {
     views: { set: { at: [0, 0.85, 2.6], to: [0, 0.72, 0], fov: 34, play: 0.2 }, wheel: { at: [0.75, 1, 1.05], to: [0.1, 0.78, 0.25], fov: 32, play: 0.1 } },
     root, inDark: 'glows', glow: 0xcfd6ff, view: [20, 8], surface: s.canvas,
-    update: ({ t }) => {
-      const fast = t % 16 >= 8; // eight seconds slowly, then eight at speed
+    update: ({ t, view }) => {
+      // eight seconds slowly, then eight at speed; a view can hold either
+      const fast = view === 'set' ? true : view === 'wheel' ? false : t % 16 >= 8;
       angle += (fast ? 11 : 0.85) * Math.min(0.1, Math.max(0, t - before)); before = t;
       wheel.rotation.z = -angle;
       // the filter that stands in front of the screen, which is straight above the axle
@@ -1200,6 +1201,211 @@ export function colourWheel(): Built {
       tube.emissive.setHex(fast ? 0xffffff : COLOURS[k]);
       for (const m of filters) m.opacity = fast ? 0.13 : 0.4;
       blur.opacity = fast ? 0.2 : 0;
+    },
+  };
+}
+
+/**
+ * Neon sign. Glass tubes bent to shape, an electrode sealed into each end, a little neon inside, lit by a
+ * transformer. A sign can only switch whole tubes on and off, so this one shows the time with seven tubes to each
+ * figure, as an animated sign would, inside a border of blue tube of the kind the first signs in Los Angeles had.
+ */
+export function neonSign(): Built {
+  const root = G.group();
+  const Y = 1.02, ZT = 0.075, R = 0.017, NEON = 0xff4f1e, BLUE = 0x4f6bff;
+  const paint = M.enamel(0x15171a), steel = M.steel(1), black = M.black();
+  // the sign board, a shallow box painted black so that an unlit tube disappears against it, on two posts
+  root.add(G.rbox(2.36, 1.2, 0.07, 0.02, paint, [0, Y, 0]), G.box(2.42, 1.26, 0.03, M.dark(), [0, Y, -0.05], 0.008));
+  for (const sx of [-1, 1]) root.add(G.box(0.07, Y - 0.6, 0.07, steel, [sx * 0.85, (Y - 0.6) / 2 + 0.03, -0.08]), G.rbox(0.3, 0.03, 0.42, 0.01, M.dark(), [sx * 0.85, 0.015, -0.05]));
+  root.add(screws([[-1.12, Y + 0.54, 0.037], [1.12, Y + 0.54, 0.037], [-1.12, Y - 0.54, 0.037], [1.12, Y - 0.54, 0.037]], 0.01));
+  // behind: the transformer that makes the high voltage, its lead to the wall, and the cable up to the board
+  root.add(G.rbox(0.36, 0.24, 0.22, 0.02, M.enamel(0x3a4148), [0.4, 0.15, -0.32]), vents(0.24, 0.12, 5, [0.4, 0.17, -0.205]));
+  root.add(jewel(0xff3020, 0.01, [0.26, 0.24, -0.205]), G.wire([[0.58, 0.1, -0.32], [0.8, 0.06, -0.4], [1.05, 0.03, -0.5]], 0.009, M.rubber(), false, 5));
+  root.add(G.wire([[0.4, 0.28, -0.32], [0.4, 0.5, -0.2], [0.3, Y - 0.45, -0.07]], 0.011, M.rubber(), false, 5));
+  // a tube is glass when it is off; lit, the gas inside it glows along its whole length
+  const glassOff = (tint: number) => new THREE.MeshStandardMaterial({ color: 0x9a9590, emissive: tint, emissiveIntensity: 0, roughness: 0.18, metalness: 0, transparent: true, opacity: 0.55 });
+  const offC = new THREE.Color(0x9a9590), dim = new THREE.Color(0x000000);
+  /** Light a tube: its glass gives way to the colour of the gas glowing inside it. */
+  const lightUp = (m: THREE.Mesh, v: number, gain = 3) => { const mat = m.material as THREE.MeshStandardMaterial; mat.color.lerpColors(offC, dim, v); mat.emissiveIntensity = v * gain; mat.opacity = 0.55 + 0.45 * v; };
+  /** One tube along a path in the plane of the board, with its two ends bent back through the board to their electrodes. */
+  const tube = (pts: [number, number][], tint: number, closed = false): THREE.Mesh => {
+    const path: V3[] = [];
+    const [a, b] = [pts[0], pts[pts.length - 1]];
+    if (!closed) path.push([a[0], a[1], 0.03], [a[0], a[1], ZT * 0.7]);
+    for (const [x, y] of pts) path.push([x, y, ZT]);
+    if (!closed) path.push([b[0], b[1], ZT * 0.7], [b[0], b[1], 0.03]);
+    const m = G.wire(path, R, glassOff(tint), closed, 8);
+    if (!closed) for (const [x, y] of [a, b]) root.add(G.cyl(0.024, 0.03, black, [x, y, 0.045], 12).rotateX(Math.PI / 2));
+    m.userData.noShadow = true;
+    root.add(m);
+    return m;
+  };
+  /** Points along a straight run, so that the curve through them stays straight. */
+  const run = (x0: number, y0: number, x1: number, y1: number): [number, number][] => Array.from({ length: 5 }, (_, i) => [x0 + ((x1 - x0) * i) / 4, y0 + ((y1 - y0) * i) / 4]);
+  // the figures: seven tubes each, and two short tubes for the colon
+  const DW = 0.3, DH = 0.62, xs = [-0.78, -0.37, 0.37, 0.78];
+  const segs: { mesh: THREE.Mesh; digit: number; k: string; mid: V3 }[] = [];
+  xs.forEach((x0, digit) => {
+    for (const k of 'abcdefg') {
+      const [ax, ay, bx, by] = SEG_LINES[k];
+      const X = (u: number) => x0 - DW / 2 + u * DW, Yy = (v: number) => Y - DH / 2 + (v / 2) * DH;
+      const mesh = tube(run(X(ax), Yy(ay), X(bx), Yy(by)), NEON);
+      segs.push({ mesh, digit, k, mid: [(X(ax) + X(bx)) / 2, (Yy(ay) + Yy(by)) / 2, ZT] });
+    }
+  });
+  const colon = [Y + 0.12, Y - 0.12].map((y) => tube([[-0.025, y], [0, y + 0.02], [0.025, y]], NEON));
+  // the border, in blue: mercury in the tube gives it its colour
+  const bw = 1.06, bh = 0.5, br: [number, number][] = [];
+  for (const [cx, cy, a0] of [[bw, bh, 0], [-bw, bh, 1], [-bw, -bh, 2], [bw, -bh, 3]] as const) for (let i = 0; i <= 4; i++) { const a = ((a0 + i / 4) * Math.PI) / 2; br.push([cx - Math.sign(cx) * 0.06 + Math.cos(a) * 0.06, Y + cy - Math.sign(cy) * 0.06 + Math.sin(a) * 0.06]); }
+  const border = tube(br, BLUE, true);
+  root.add(G.cyl(0.024, 0.03, black, [0, Y - bh, 0.045], 12).rotateX(Math.PI / 2));
+  // little glass posts hold each tube off the board
+  const posts: V3[] = segs.map((s) => [s.mid[0], s.mid[1], 0.055] as V3);
+  for (const p of posts) root.add(G.cyl(0.008, 0.04, M.glass(0xdfe6e4, 0.5), p, 8).rotateX(Math.PI / 2));
+  // light: a soft glow round every lit tube, and light thrown on the board around it
+  const N = segs.length + 2 + 16;
+  const halo = glows(N, 0.26);
+  segs.forEach((s, i) => halo.pos.set(s.mid, i * 3));
+  colon.forEach((_, i) => halo.pos.set([0, i ? Y - 0.12 : Y + 0.12, ZT], (segs.length + i) * 3));
+  for (let i = 0; i < 16; i++) { const u = i / 16, side = Math.floor(u * 4), f = (u * 4) % 1; const p: V3 = side === 0 ? [-bw + f * 2 * bw, Y + bh, ZT] : side === 1 ? [bw, Y + bh - f * 2 * bh, ZT] : side === 2 ? [bw - f * 2 * bw, Y - bh, ZT] : [-bw, Y - bh + f * 2 * bh, ZT]; halo.pos.set(p, (segs.length + 2 + i) * 3); }
+  halo.flush(true);
+  root.add(halo.points);
+  const level = new Float32Array(segs.length + 2);
+  const neonC = new THREE.Color(NEON), blueC = new THREE.Color(BLUE);
+  let shown = '', since = 0, order: number[] = [];
+  return {
+    root, inDark: 'glows', glow: NEON, view: [10, 4],
+    views: {
+      street: { at: [0.5, 1.15, 5.2], to: [0, 1.0, 0], fov: 32, play: 0.15 },
+      tube: { at: [0.62, 1.32, 0.55], to: [0.45, 1.13, 0.06], fov: 34, play: 0.12 },
+    },
+    update: (env) => {
+      const n = now();
+      // when the minute changes the tubes go out and come back one at a time, as a sign's switching drum turned them
+      if (n.hhmm !== shown) { since = shown ? env.t : -10; shown = n.hhmm; order = segs.map((_, i) => i).sort((a, b) => segs[a].mid[0] - segs[b].mid[0]); }
+      const digits = [...n.hhmm.replace(':', '')].map(Number);
+      segs.forEach((s, i) => {
+        const want = SEG[digits[s.digit]].includes(s.k) && env.t - since > 0.6 + order.indexOf(i) * 0.03;
+        level[i] = want ? 1 : Math.max(0, level[i] - 0.25);
+        const v = level[i] * (0.96 + 0.04 * Math.sin(env.t * 90 + i));
+        lightUp(s.mesh, v);
+        halo.col.set([neonC.r * v * 0.7, neonC.g * v * 0.7, neonC.b * v * 0.7], i * 3);
+      });
+      colon.forEach((m, i) => { lightUp(m, 1); halo.col.set([neonC.r * 0.6, neonC.g * 0.6, neonC.b * 0.6], (segs.length + i) * 3); });
+      lightUp(border, 1, 2.6);
+      for (let i = 0; i < 16; i++) halo.col.set([blueC.r * 0.3, blueC.g * 0.3, blueC.b * 0.3], (segs.length + 2 + i) * 3);
+      halo.flush();
+    },
+  };
+}
+
+/**
+ * Moving-letter news sign, the Times Square zipper: a band of lamps round the corner of a building. Inside, a holder
+ * of metal letters rides along a track under a row of brushes, one brush to each lamp of a column. Where metal
+ * touches a brush the lamp outside lights, so the lit pattern travels with the letters. The building is opened at
+ * the back to show the track.
+ */
+export function newsZipper(): Built {
+  const root = G.group();
+  const ROWS = 12, P = 0.044, BY = 1.18, CX = 0.62, FA = 2.0, FB = 1.15;
+  const colsA = Math.round(FA / P), colsB = Math.round(FB / P), COLS = colsA + colsB;
+  const stone = M.plastic(0xc9c2b2, 0.85), trim = M.plastic(0xb3ab98, 0.8), dark = M.dark(), black = M.black();
+  // the building: two faces of pale stone meeting at the corner, opened at the back
+  const H = 2.25, D = 0.12;
+  root.add(G.box(FA + D, H, D, stone, [CX - FA / 2, H / 2, -D / 2], 0.004), G.box(D, H, FB, stone, [CX + D / 2, H / 2, -FB / 2 - D], 0.004));
+  // the band is set into a recess, with a ledge below and a cornice above, and windows in the floors around it
+  for (const y of [BY - (ROWS / 2) * P - 0.05, BY + (ROWS / 2) * P + 0.05]) root.add(G.box(FA + 0.18, 0.05, 0.08, trim, [CX - FA / 2 + 0.03, y, 0.02], 0.006), G.box(0.08, 0.05, FB + 0.16, trim, [CX + 0.14, y, -FB / 2 - 0.04], 0.006));
+  const glassDark = M.plastic(0x23282c, 0.2);
+  for (const y of [1.85]) {
+    for (let i = 0; i < 4; i++) root.add(G.box(0.28, 0.42, 0.02, glassDark, [CX - 0.3 - i * 0.48, y, 0.004], 0.004), G.box(0.34, 0.03, 0.05, trim, [CX - 0.3 - i * 0.48, y - 0.23, 0.02], 0.004));
+    for (let i = 0; i < 2; i++) root.add(G.box(0.02, 0.42, 0.28, glassDark, [CX + 0.124, y, -0.32 - i * 0.48], 0.004), G.box(0.05, 0.03, 0.34, trim, [CX + 0.14, y - 0.23, -0.32 - i * 0.48], 0.004));
+  }
+  // at street level a shop front and an awning, so that the band reads as a building's, not a screen's
+  root.add(G.box(FA - 0.3, 0.55, 0.02, glassDark, [CX - FA / 2 - 0.1, 0.42, 0.006], 0.004), G.box(FA - 0.2, 0.04, 0.22, M.enamel(0x6b1f1a), [CX - FA / 2 - 0.1, 0.74, 0.1], 0.006));
+  root.add(G.box(FA + 0.22, 0.1, 0.16, trim, [CX - FA / 2, H + 0.05, 0.02], 0.01), G.box(0.16, 0.1, FB + 0.2, trim, [CX + 0.14, H + 0.05, -FB / 2 - 0.06], 0.01));
+  // where each lamp goes, column by column round the corner, and the lamps themselves in their sockets
+  const at: V3[] = [];
+  for (let c = 0; c < COLS; c++) for (let r = 0; r < ROWS; r++) {
+    const y = BY + (ROWS / 2 - 0.5 - r) * P;
+    at.push(c < colsA ? [CX - FA + (c + 0.5) * P, y, 0.035] : [CX + 0.035 + D, y, -(c - colsA + 0.5) * P - D]);
+  }
+  const N = at.length;
+  const sockets = new Swarm(new THREE.CylinderGeometry(0.012, 0.012, 0.025, 8), black, N);
+  const light = lamps(new THREE.SphereGeometry(0.0145, 10, 8), N);
+  at.forEach(([x, y, z], i) => {
+    const side = i < colsA * ROWS;
+    if (side) sockets.mesh.setMatrixAt(i, new THREE.Matrix4().makeRotationX(Math.PI / 2).setPosition(x, y, z - 0.02));
+    else sockets.mesh.setMatrixAt(i, new THREE.Matrix4().makeRotationZ(Math.PI / 2).setPosition(x - 0.02, y, z));
+    light.put(i, x, y, z);
+  });
+  sockets.done(); light.done();
+  sockets.mesh.userData.noShadow = true;
+  root.add(sockets.mesh, light.mesh);
+  const bloom = glows(N, 0.06);
+  at.forEach((p, i) => bloom.pos.set(p, i * 3));
+  bloom.flush(true);
+  root.add(bloom.points);
+  // inside, behind the long face: the track, a row of brushes over it, and the holder of metal letters riding along
+  const TY = 0.62, TZ = -0.55, BX0 = CX - 0.9, BCOLS = 16;
+  root.add(G.box(FA - 0.1, 0.05, 0.3, dark, [CX - FA / 2, TY - 0.06, TZ], 0.006));
+  for (const sz of [-1, 1]) root.add(G.box(FA - 0.1, 0.025, 0.02, M.steel(0), [CX - FA / 2, TY - 0.025, TZ + sz * 0.13], 0));
+  for (const x of [CX - FA + 0.15, CX - 0.15]) root.add(G.box(0.05, TY - 0.08, 0.05, M.steel(1), [x, (TY - 0.08) / 2, TZ], 0.004));
+  // the brush block: one brush to each lamp of a column, across sixteen columns, and the cable bundle up to the band
+  root.add(G.box(BCOLS * 0.03 + 0.06, 0.06, 0.3, M.enamel(0x2f3a42), [BX0, TY + 0.17, TZ], 0.008));
+  const brushes = new Swarm(new THREE.BoxGeometry(0.006, 0.08, 0.006), M.copper(), BCOLS * ROWS);
+  for (let c = 0; c < BCOLS; c++) for (let r = 0; r < ROWS; r++) brushes.put(c * ROWS + r, BX0 + (c - BCOLS / 2 + 0.5) * 0.03, TY + 0.1, TZ + (r - ROWS / 2 + 0.5) * 0.02);
+  brushes.done(); brushes.mesh.userData.noShadow = true;
+  root.add(brushes.mesh, G.wire([[BX0, TY + 0.2, TZ], [BX0, TY + 0.5, TZ + 0.1], [BX0 + 0.2, BY - 0.25, -0.15], [BX0 + 0.3, BY - 0.25, -0.13]], 0.03, M.rubber(), false, 8));
+  // the letters: little raised blocks of metal on a Bakelite strip, one block where a lamp is to light
+  const MAXL = 900;
+  const strip = G.box(FA - 0.2, 0.012, 0.26, M.plastic(0x3b2418, 0.4), [CX - FA / 2, TY + 0.002, TZ], 0);
+  root.add(strip);
+  const metal = new Swarm(new THREE.BoxGeometry(0.026, 0.02, 0.016), M.steel(0), MAXL);
+  metal.mesh.userData.noShadow = true;
+  root.add(metal.mesh);
+
+  // the message: the time and a mark between, drawn in a 12-row lettering read off a canvas
+  const pad = screen(400, ROWS);
+  let message: boolean[][] = [], shown = '';
+  const compose = (text: string) => {
+    const c = pad.ctx;
+    c.fillStyle = '#000'; c.fillRect(0, 0, 400, ROWS);
+    c.fillStyle = '#fff'; c.font = `700 ${ROWS + 2}px "Sofia Sans Extra Condensed Variable", "Arial Narrow", sans-serif`; c.textBaseline = 'middle';
+    const w = Math.ceil(c.measureText(text).width) + 1;
+    c.fillText(text, 0, ROWS / 2 + 1);
+    const d = c.getImageData(0, 0, w, ROWS).data;
+    message = Array.from({ length: w }, (_, x) => Array.from({ length: ROWS }, (_, y) => d[(y * w + x) * 4] > 110));
+  };
+  const away = new THREE.Matrix4().makeTranslation(0, -10, 0);
+  const SPEED = 9;
+  return {
+    root, inDark: 'glows', glow: 0xffc26a, view: [-24, 6],
+    views: {
+      square: { at: [2.6, 1.0, 3.2], to: [0.2, 1.15, -0.2], fov: 34, play: 0.15 },
+      brushes: { at: [CX - 0.4, 1.15, -1.7], to: [BX0, TY + 0.1, TZ], fov: 34, play: 0.15 },
+    },
+    update: (env) => {
+      const n = now();
+      if (n.hhmm !== shown) { shown = n.hhmm; compose(`${n.hhmm}    •    `); }
+      const L = message.length, off = env.t * SPEED;
+      // the words come round the corner and run along the long face, so that they read from left to right
+      for (let c = 0; c < COLS; c++) {
+        const col = message[(((Math.floor(off) + c) % L) + L) % L];
+        for (let r = 0; r < ROWS; r++) { const v = col[r] ? 1 : 0.035, i = c * ROWS + r; light.tint(i, v, v * 0.78, v * 0.45); bloom.col.set([v * 0.9, v * 0.62, v * 0.28], i * 3); }
+      }
+      if (light.mesh.instanceColor) light.mesh.instanceColor.needsUpdate = true;
+      bloom.flush();
+      // on the track the letters ride towards the brushes at the same pace
+      let k = 0;
+      const pitch = 0.03, frac = off - Math.floor(off);
+      for (let j = -28; j < 34 && k < MAXL; j++) {
+        const col = message[(((Math.floor(off) + j) % L) + L) % L];
+        const x = BX0 + (j - frac) * pitch;
+        if (x < CX - FA + 0.15 || x > CX - 0.15) continue;
+        for (let r = 0; r < ROWS && k < MAXL; r++) if (col[r]) metal.put(k++, x, TY + 0.018, TZ + (r - ROWS / 2 + 0.5) * 0.02);
+      }
+      for (let i = k; i < MAXL; i++) metal.mesh.setMatrixAt(i, away);
+      metal.done();
     },
   };
 }

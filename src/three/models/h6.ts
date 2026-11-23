@@ -314,7 +314,7 @@ export function fogScreen(): Built {
   root.add(proj, new THREE.Mesh(cone, throwMat), post([-0.12, py - 0.12, pz], 0, 0.03), G.cyl(0.24, 0.03, dark, [-0.12, 0.015, pz], 32));
   fuse(root);
   return {
-    root, views: { slot: { at: [0.5, 1.45, 1.6], to: [0, 2, 0], fov: 50, play: 0.1 }, fog: { at: [0.1, 1.3, 1.9], to: [0, 1.05, 0], fov: 46, play: 0.12 } }, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
+    root, views: { projector: { at: [0.3, 1.3, -2.2], to: [0, 1.05, 0], fov: 40, play: 0.12 }, slot: { at: [0.5, 1.45, 1.6], to: [0, 2, 0], fov: 50, play: 0.1 }, fog: { at: [0.1, 1.3, 1.9], to: [0, 1.05, 0], fov: 46, play: 0.12 } }, inDark: 'better', glow: 0xcfe8ff, view: [22, 10], surface: img.canvas,
     update: ({ t, lights, camera }) => {
       uT.value = t;
       const c2 = img.ctx;
@@ -377,13 +377,17 @@ export function pov(): Built {
   root.add(rotor, disc);
   const c = s.ctx;
   let angle = 0, last = 0;
+  let held = -1;
   return {
-    root, views: { front: { at: [0, 1.35, 3.4], to: [0, 1.25, 0], fov: 34, play: 0.2 }, bar: { at: [0.85, 1.6, 1.6], to: [0.25, 1.35, 0.05], fov: 32 } }, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
-    update: ({ t }) => {
+    root, views: { spin: { at: [0, 1.35, 3.4], to: [0, 1.25, 0], fov: 34, play: 0.15 }, bar: { at: [0.85, 1.6, 1.6], to: [0.25, 1.35, 0.05], fov: 32 } }, inDark: 'glows', glow: 0x7fd0ff, view: [16, 6], surface: s.canvas,
+    update: ({ t, view }) => {
       const dt = Math.min(0.1, t - last); last = t;
-      // spin up, hold, spin down: at low speed you can see it is only a bar
+      // spin up, hold, spin down: at low speed you can see it is only a bar. A view can hold it fast or slow
       const u = (t + 3.2) % 14;
-      const speed = u < 2 ? 0.12 : u < 4 ? 0.12 + ((u - 2) / 2) * 0.88 : u < 12 ? 1 : 1 - ((u - 12) / 2) * 0.88;
+      const cycle = u < 2 ? 0.12 : u < 4 ? 0.12 + ((u - 2) / 2) * 0.88 : u < 12 ? 1 : 1 - ((u - 12) / 2) * 0.88;
+      const want = view === 'spin' ? 1 : view === 'bar' ? 0.12 : cycle;
+      held = !view ? cycle : held < 0 ? want : held + (want - held) * Math.min(1, dt * 1.5);
+      const speed = held;
       angle += dt * speed * 42; rotor.rotation.z = angle;
       const k = Math.max(0, (speed - 0.35) / 0.65);
       imgMat.opacity = k; armMat.opacity = 1 - 0.8 * k;
@@ -631,7 +635,7 @@ export function opticalTrap(): Built {
   root.add(trail.points, speck, b0.line, b1.line);
   fuse(root);
   return {
-    root, views: { front: { at: [0, 1.4, 4.3], to: [0, 1.15, 0], fov: 34, play: 0.2 }, speck: { at: [1.1, 1.6, 1.5], to: [0.25, 1.5, 0], fov: 32 } }, inDark: 'better', glow: 0xb090ff, view: [26, 12],
+    root, views: { speck: { at: [1.1, 1.6, 1.5], to: [0.25, 1.5, 0], fov: 32 } }, inDark: 'better', glow: 0xb090ff, view: [26, 12],
     update: ({ t }) => {
       const ph = (t * 0.35) % 1;
       trail.trace(ph);
@@ -685,7 +689,7 @@ export function acousticLev(): Built {
   root.add(trail.points, bead, spark);
   fuse(root, [bead]);
   return {
-    root, views: { front: { at: [0, 1.15, 3], to: [0, 0.95, 0], fov: 34, play: 0.2 }, bead: { at: [0.9, 1.2, 1.6], to: [0, 0.99, 0], fov: 30 } }, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
+    root, views: { bead: { at: [0.9, 1.2, 1.6], to: [0, 0.99, 0], fov: 30 } }, inDark: 'better', glow: 0xff9ad0, view: [28, 10],
     update: ({ t }) => {
       const ph = (t * 0.45) % 1;
       trail.trace(ph);
@@ -739,7 +743,7 @@ export function laserPlasma(): Built {
   fuse(root);
   const spin = new THREE.Matrix4(), p = new THREE.Vector3();
   return {
-    root, views: { front: { at: [0, 1.3, 3.2], to: [0, 1.1, 0], fov: 34, play: 0.2 }, points: { at: [1.6, 1.75, 1.5], to: [0.48, 1.32, 0], fov: 28 } }, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
+    root, views: { points: { at: [1.6, 1.75, 1.5], to: [0.48, 1.32, 0], fov: 28 } }, inDark: 'better', glow: 0xa8c8ff, view: [24, 10],
     update: ({ t }) => {
       vox.points.rotation.y = t * 0.4; vox.points.position.set(0.48 - 0.48 * Math.cos(t * 0.4), 0, 0.48 * Math.sin(t * 0.4));
       // one point of plasma exists at a time; the rest is afterimage
@@ -915,4 +919,111 @@ export function illusionTransmitter(): Built {
       for (const r of rays) (r.line.material as THREE.LineBasicMaterial).opacity = 0.3 * (r.side === LEFT ? here : there);
     },
   };
+}
+
+/**
+ * Firework set piece. A wooden frame holds strips of cane bent to the strokes of the time, and small lances are
+ * pinned along the strokes that are to burn. A fuse lights them in a sweep, they burn with a steady flame and smoke,
+ * shorten as they burn, and go out together. Then the frame stands spent until a new set of lances is pinned on.
+ */
+export function lancework(): Built {
+  const root = G.group();
+  const Y = 1.08, DW = 0.34, DH = 0.66, xs = [-0.8, -0.38, 0.38, 0.8], P = 0.055;
+  const wood = M.wood(0x8a6a44), woodUp = M.wood(0x8a6a44, 1), cane = M.wood(0xc9a46a, 0), paper = M.paper(0xd9cdb0), fuseMat = M.plastic(0x3a2f26, 0.9);
+  // the frame: two posts driven into a base, rails top and bottom, and thin battens for the cane strips
+  for (const sx of [-1, 1]) root.add(G.box(0.07, Y + 0.5, 0.07, woodUp, [sx * 1.12, (Y + 0.5) / 2, -0.04]), G.box(0.32, 0.06, 0.4, wood, [sx * 1.12, 0.03, -0.04], 0.006));
+  for (const y of [Y - 0.42, Y + 0.42]) root.add(G.box(2.3, 0.05, 0.04, wood, [0, y, -0.04], 0.004));
+  for (const x of xs) root.add(G.box(0.025, 0.84, 0.025, wood, [x, Y, -0.05], 0.003));
+  root.add(G.box(0.025, 0.84, 0.025, wood, [0, Y, -0.05], 0.003));
+  // each stroke of each figure is a strip of cane, fixed to the battens whether or not lances are pinned on it
+  type Stroke = { x0: number; y0: number; x1: number; y1: number; digit: number; k: string };
+  const strokes: Stroke[] = [];
+  xs.forEach((x0, digit) => {
+    for (const k of 'abcdefg') {
+      const [ax, ay, bx, by] = SEG_LINES_L[k];
+      const X = (u: number) => x0 - DW / 2 + u * DW, Yy = (v: number) => Y - DH / 2 + (v / 2) * DH;
+      strokes.push({ x0: X(ax), y0: Yy(ay), x1: X(bx), y1: Yy(by), digit, k });
+      root.add(G.rod([X(ax), Yy(ay), -0.02], [X(bx), Yy(by), -0.02], 0.007, cane, 6));
+    }
+  });
+  fuseLine(root, fuseMat, xs, Y - DH / 2 - 0.06);
+  // the lances, pinned where they will burn, and their flames: as many as the strokes of an eight could need
+  const MAX = 4 * 7 * 8 + 2;
+  const lances = new Swarm(new THREE.CylinderGeometry(0.011, 0.011, 1, 8).rotateX(Math.PI / 2).translate(0, 0, 0.5), paper, MAX);
+  lances.mesh.userData.noShadow = true;
+  root.add(lances.mesh);
+  const flames = glows(MAX, 0.11);
+  root.add(flames.points);
+  // smoke, rising and spreading from the flames
+  const puff = document.createElement('canvas'); puff.width = puff.height = 64;
+  { const g = puff.getContext('2d')!, gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, 'rgba(255,255,255,0.8)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = gr; g.fillRect(0, 0, 64, 64); }
+  const puffTex = new THREE.CanvasTexture(puff);
+  const SMOKE = 36, smoke = Array.from({ length: SMOKE }, () => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: puffTex, color: 0xb8b4ae, transparent: true, opacity: 0, depthWrite: false })); root.add(sp); return sp; });
+  const glow = halo(0xffb050, 2.6, [0, Y, 0.3], 0);
+  root.add(glow);
+  type Lance = { x: number; y: number; at: number };
+  let pinned: Lance[] = [], cycle = -1;
+  const CYCLE = 40, SWEEP = 2.2, BURN = 24, AWAY = new THREE.Matrix4().makeTranslation(0, -10, 0);
+  const pin = (n: ReturnType<typeof now>) => {
+    const digits = [...n.hhmm.replace(':', '')].map(Number);
+    pinned = [];
+    for (const s of strokes) {
+      if (!SEG_L[digits[s.digit]].includes(s.k)) continue;
+      const len = Math.hypot(s.x1 - s.x0, s.y1 - s.y0), m = Math.max(2, Math.round(len / P));
+      for (let i = 0; i <= m; i++) pinned.push({ x: s.x0 + ((s.x1 - s.x0) * i) / m, y: s.y0 + ((s.y1 - s.y0) * i) / m, at: 0 });
+    }
+    for (const y of [Y + 0.12, Y - 0.12]) pinned.push({ x: 0, y, at: 0 });
+    // the fuse runs from left to right, so each lance catches when the fire along it gets there
+    for (const l of pinned) l.at = ((l.x + 1.1) / 2.2) * SWEEP;
+  };
+  return {
+    root, inDark: 'glows', glow: 0xffb050, view: [12, 4],
+    views: {
+      crowd: { at: [0.3, 1.3, 5.5], to: [0, 1.05, 0], fov: 30, play: 0.15 },
+      lances: { at: [1.0, 1.28, 0.7], to: [0.78, 1.05, 0], fov: 34, play: 0.12 },
+    },
+    update: (env) => {
+      // a still at 2.8 seconds should find the piece burning: the cycle starts a little before the clock does
+      const t = env.t + 6, c = Math.floor(t / CYCLE), ph = t - c * CYCLE;
+      if (c !== cycle) { cycle = c; pin(now()); }
+      let k = 0, burning = 0;
+      for (const l of pinned) {
+        const age = ph - l.at;
+        // before the fuse reaches it a lance is full length; burning it shortens; spent, it is a stub
+        const left = age < 0 ? 1 : Math.max(0.12, 1 - age / BURN);
+        if (ph > BURN + SWEEP + 8) { lances.mesh.setMatrixAt(k, AWAY); flames.col.set([0, 0, 0], k * 3); k++; continue; }
+        lances.put(k, l.x, l.y, -0.01, 0, 0, 0, 1, 1, 0.09 * left);
+        const lit = age >= 0 && age < BURN ? Math.min(1, age * 4) * Math.min(1, (BURN - age) / 1.5) : 0;
+        const f = lit * (0.85 + 0.15 * Math.sin(env.t * 23 + l.x * 40) * Math.sin(env.t * 17 + l.y * 31));
+        flames.pos.set([l.x, l.y, -0.01 + 0.09 * left + 0.01], k * 3);
+        flames.col.set([f * 1.0, f * 0.62, f * 0.25], k * 3);
+        burning += lit;
+        k++;
+      }
+      for (let i = k; i < MAX; i++) { lances.mesh.setMatrixAt(i, AWAY); flames.col.set([0, 0, 0], i * 3); }
+      lances.done(); flames.flush(true);
+      const share = burning / Math.max(1, pinned.length);
+      glow.material.opacity = share * 0.35 * (1 - env.lights * 0.6);
+      // smoke drifts up from the burning strokes and thins as it rises
+      smoke.forEach((sp, i) => {
+        const life = 6, a = ((env.t + i * (life / SMOKE)) % life) / life, src = pinned[(i * 7) % Math.max(1, pinned.length)];
+        if (!src) { sp.material.opacity = 0; return; }
+        sp.position.set(src.x + Math.sin(i * 3.1 + a * 2) * 0.1 * a, src.y + 0.05 + a * 0.9, 0.05 + a * 0.2);
+        sp.scale.setScalar(0.08 + a * 0.45);
+        sp.material.opacity = share * 0.32 * Math.sin(Math.PI * a);
+      });
+    },
+  };
+}
+
+/** The strokes of a figure, as for a seven-segment display: which are used for each digit, and where they run in a box 1 wide and 2 high. */
+const SEG_L: Record<number, string> = { 0: 'abcdef', 1: 'bc', 2: 'abdeg', 3: 'abcdg', 4: 'bcfg', 5: 'acdfg', 6: 'acdefg', 7: 'abc', 8: 'abcdefg', 9: 'abcdfg' };
+const SEG_LINES_L: Record<string, [number, number, number, number]> = {
+  a: [0.1, 2, 0.9, 2], b: [1, 1.9, 1, 1.1], c: [1, 0.9, 1, 0.1], d: [0.1, 0, 0.9, 0], e: [0, 0.9, 0, 0.1], f: [0, 1.9, 0, 1.1], g: [0.1, 1, 0.9, 1],
+};
+
+/** The fuse, a dark cord that runs along under the figures and up to each of them. */
+function fuseLine(root: THREE.Object3D, mat: THREE.Material, xs: number[], y: number): void {
+  root.add(G.wire([[-1.1, y, 0.0], [1.1, y, 0.0]], 0.006, mat, false, 5));
+  for (const x of [...xs, 0]) root.add(G.wire([[x, y, 0.0], [x - 0.12, y + 0.06, 0.0], [x - 0.17, y + 0.1, -0.01]], 0.005, mat, false, 5));
 }

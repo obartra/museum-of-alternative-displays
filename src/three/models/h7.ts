@@ -339,7 +339,7 @@ export function lenticular(): Built {
   fuse(root);
   let shown = -99;
   return {
-    root, views: { ribs: { at: [0.4, 1, 1.4], to: [0, 0.92, -0.12], fov: 30, play: 0.1 }, pass: { at: [0, 1.05, 3.0], to: [0, 0.92, 0], fov: 34, play: 0.45 } }, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
+    root, views: { ribs: { at: [0.4, 1, 1.4], to: [0, 0.92, -0.12], fov: 30, play: 0.1 }, pass: { at: [0, 1.05, 3.0], to: [0, 0.92, 0], fov: 34, play: 0.45, sway: { rate: 4.2, reach: 0.28 } } }, inDark: 'vanishes', view: [-20, 8], surface: s.canvas,
     update: (env) => {
       const [az] = gaze(root, env);
       const frame = Math.round(Math.max(-1, Math.min(1, az / 0.7)) * 4); // nine views behind every rib
@@ -380,7 +380,7 @@ export function integral(): Built {
   fuse(root);
   let key = '';
   return {
-    root, views: { lenses: { at: [0.3, 1, 0.55], to: [0, 0.9, 0], fov: 30, play: 0.1 }, round: { at: [0, 0.98, 2.8], to: [0, 0.9, 0], fov: 34, play: 0.35 } }, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
+    root, views: { lenses: { at: [0.3, 1, 0.55], to: [0, 0.9, 0], fov: 30, play: 0.1 }, round: { at: [0, 0.98, 2.8], to: [0, 0.9, 0], fov: 34, play: 0.35, sway: { rate: 1.6, reach: 0.12, up: 0.8 } } }, inDark: 'glows', glow: 0xffd9a0, view: [-16, 10], surface: s.canvas,
     update: (env) => {
       const [az, el] = gaze(root, env, y);
       // a lens array gives a limited number of views, so the picture moves in small steps
@@ -511,7 +511,7 @@ export function hologram(): Built {
   for (const [tx, ty] of [[-0.6, 0.5], [0.6, 0.5], [-0.6, -0.5], [0.6, -0.5]]) { const b = beam(RED, 0.2); b.aim(src, [tx, y + ty, -0.012]); root.add(b.line); }
   fuse(root);
   return {
-    root, views: { bench: { at: [-2, 1.7, 1.2], to: [-0.4, 0.7, -0.5], fov: 40, play: 0.1 }, plate: { at: [0.2, 1.12, 2.3], to: [0, 1.0, -0.3], fov: 34, play: 0.3 } }, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
+    root, views: { bench: { at: [-2, 1.7, 1.2], to: [-0.4, 0.7, -0.5], fov: 40, play: 0.1 }, plate: { at: [0.2, 1.12, 2.3], to: [0, 1.0, -0.3], fov: 34, play: 0.3, sway: { rate: 1.4, reach: 0.12, up: 0.7 } } }, inDark: 'better', glow: 0x7a140c, view: [-18, 8],
     update: ({ lights }) => { mat.uniforms.uGain.value = 1 - 0.5 * lights; },
   };
 }
@@ -691,7 +691,7 @@ export function retinal(): Built {
   root.add(b1.line, b2.line);
   let lastRow = -1;
   return {
-    root, views: { front: { at: [0, 1.3, 3.2], to: [-0.2, 1.05, 0.3], fov: 34, play: 0.2 }, retina: { at: [1.25, 1.35, 0.95], to: [0, 1.05, -0.5], fov: 30 } }, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
+    root, views: { retina: { at: [1.25, 1.35, 0.95], to: [0, 1.05, -0.5], fov: 30 } }, inDark: 'glows', glow: 0xff5040, view: [38, 10], zoom: 1.05, surface: s.canvas,
     update: ({ t }) => {
       const n = now(), c = s.ctx;
       const row = Math.floor((t * 22) % 32), u = (t * 9) % 1;
@@ -767,7 +767,7 @@ export function hud(): Built {
   fuse(root);
   return {
     root, inDark: 'glows', glow: 0x40ff70, view: [7, 4], surface: s.canvas,
-    views: { lens: { at: [0.45, 1.45, 0.6], to: [0, 0.88, -0.05], fov: 34, play: 0.1 }, seat: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], fov: 30, play: 0.05 } },
+    views: { lens: { at: [0.45, 1.45, 0.6], to: [0, 0.88, -0.05], fov: 34, play: 0.1 }, seat: { at: [eyeAt.x, eyeAt.y, eyeAt.z], to: [0, GY, GZ], fov: 30, play: 0.12 } },
     update: ({ t, lights }) => {
       const c = s.ctx, n = now();
       c.fillStyle = '#000'; c.fillRect(0, 0, 512, 400);

@@ -18,6 +18,22 @@ export const h6: Piece[] = [
     sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/ghosts-and-pantos-at-the-rpi'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
   },
   {
+    id: 'lancework', hall: 6, name: 'Firework set piece', aka: 'Lancework, fire picture',
+    year: 1879, yearText: 'portraits in fire from 1879', origin: "C. T. Brock & Co., at the Crystal Palace, London. Displays there from 1865, and portraits in fire from 1879 by the firm's own account",
+    status: 'niche', statusNote: 'Still made by hand for weddings, anniversaries and launches, mostly as names, messages and logos that burn for about a minute.',
+    principle: 'emits', needs: ['dark'],
+    lead: 'Hundreds of small fireworks fixed to a frame burn at once, and each flame is one dot of a word or a picture.',
+    how: [
+      'Each lance is a small paper tube of coloured firework composition, about the size of a stick of chalk, that burns with a steady flame for about a minute. Lances are pinned along strips of cane bent to the lines of the drawing, which are fixed to a wooden frame.',
+      'A fast-burning fuse runs from lance to lance, so the whole picture catches almost at once and burns together. Then it fades, and the frame is spent. Lances of different compositions and lengths let a picture change while it burns, one part going out as another catches.',
+      "C. T. Brock & Co. gave displays at the Crystal Palace in London from 1865 until the palace burned down in 1936. Alan St. H. Brock wrote in 1922 that portraits in fire were shown there for the first time in 1879. Set pieces at the palace grew to buildings, sea battles and pictures 200 feet long.",
+    ],
+    good: ['Can be seen by a whole crowd at night', 'Draws any line that a frame can hold', 'Needs no power and no screen'],
+    bad: ['Burns once, for about a minute', 'Every picture is built by hand', 'Its smoke can hide the picture'],
+    look: 'The fuse runs across the frame and the time lights up in flame. Switch the daylight off, and watch the smoke rise as the lances burn down.',
+    sources: [src('archive', 'Alan St. H. Brock, Pyrotechnics: The History and Art of Firework Making, 1922, Project Gutenberg', 'https://www.gutenberg.org/ebooks/64922'), src('archive', 'Sydney Higham, drawing of a firework display at the Crystal Palace, Victoria and Albert Museum', 'https://collections.vam.ac.uk/item/O1243844/drawing-sydney-higham'), src('maker', 'Lancework, Fireworks.co.uk', 'https://www.fireworks.co.uk/professional-firework-displays/lancework/'), src('maker', 'Fire writing and lancework, Frontier Fireworks', 'https://www.frontierfireworks.co.uk/professional-displays/fire-writing-and-lancework/'), src('maker', 'Fireworks set pieces, Pyro Innovations', 'https://www.pyroinnovations.com/fireworkstraining_fireworkssetpieces.html')],
+  },
+  {
     id: 'illusion-transmitter', hall: 6, name: 'Illusion transmitter', aka: 'Real-image mirror display',
     year: 1980, origin: 'Valerie Thomas, NASA Goddard Space Flight Center, USA. Patent granted on 21 October 1980',
     status: 'niche', statusNote: 'The optics society SPIE reports that it is still in use at NASA, and that it has been applied in television and in imaging for surgery.',

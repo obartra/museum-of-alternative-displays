@@ -2,6 +2,81 @@
 export interface PersonLink { url: string; label: string; kind: 'biography' | 'profile' | 'record' }
 
 export const personLinks: Record<string, PersonLink> = {
+  "Georges Claude": {
+    "url": "https://en.wikipedia.org/wiki/Georges_Claude",
+    "label": "Georges Claude, Wikipedia",
+    "kind": "biography"
+  },
+  "Jacques Fonsèque": {
+    "url": "https://www.americanheritage.com/content/neon",
+    "label": "Neon, American Heritage",
+    "kind": "record"
+  },
+  "Daniel McFarlan Moore": {
+    "url": "https://en.wikipedia.org/wiki/Daniel_McFarlan_Moore",
+    "label": "Daniel McFarlan Moore, Wikipedia",
+    "kind": "biography"
+  },
+  "Earle C. Anthony": {
+    "url": "https://en.wikipedia.org/wiki/Earle_C._Anthony",
+    "label": "Earle C. Anthony, Wikipedia",
+    "kind": "biography"
+  },
+  "Francis E. J. Wilde": {
+    "url": "https://scholarsarchive.byu.edu/facpub/2074",
+    "label": "Dale L. Cressman on the zipper, Journalism History, 2018",
+    "kind": "record"
+  },
+  "Frank C. Reilly": {
+    "url": "https://www.nytimes.com/1928/11/08/archives/huge-times-sign-will-flash-news-electric-bulletin-board-used-for.html",
+    "label": "Huge Times sign will flash news, The New York Times, 1928",
+    "kind": "record"
+  },
+  "Everett Bickley": {
+    "url": "https://scholarsarchive.byu.edu/facpub/2074",
+    "label": "Dale L. Cressman on the zipper, Journalism History, 2018",
+    "kind": "record"
+  },
+  "Christiaan Huygens": {
+    "url": "https://en.wikipedia.org/wiki/Christiaan_Huygens",
+    "label": "Christiaan Huygens, Wikipedia",
+    "kind": "biography"
+  },
+  "Thomas Rasmussen Walgensten": {
+    "url": "https://lucerna.exeter.ac.uk/location/index.php?id=1504870",
+    "label": "Walgensten, Thomas Rasmussen, Lucerna Magic Lantern Web Resource, University of Exeter",
+    "kind": "record"
+  },
+  "Athanasius Kircher": {
+    "url": "https://en.wikipedia.org/wiki/Athanasius_Kircher",
+    "label": "Athanasius Kircher, Wikipedia",
+    "kind": "biography"
+  },
+  "Eric J. Seibel": {
+    "url": "https://www.me.washington.edu/people/faculty/eric_seibel",
+    "label": "Eric Seibel, Mechanical Engineering, University of Washington",
+    "kind": "profile"
+  },
+  "Thomas A. Furness III": {
+    "url": "https://en.wikipedia.org/wiki/Thomas_A._Furness_III",
+    "label": "Thomas A. Furness III, Wikipedia",
+    "kind": "biography"
+  },
+  "Brian T. Schowengerdt": {
+    "url": "https://www.hitl.washington.edu/people/brian",
+    "label": "Brian T. Schowengerdt, Human Interface Technology Laboratory",
+    "kind": "profile"
+  },
+  "C. T. Brock": {
+    "url": "https://collections.vam.ac.uk/item/O1243844/drawing-sydney-higham",
+    "label": "Brock's Benefit at the Crystal Palace, drawing, Victoria and Albert Museum",
+    "kind": "record"
+  },
+  "Alan St. H. Brock": {
+    "url": "https://www.gutenberg.org/ebooks/64922",
+    "label": "Pyrotechnics: The History and Art of Firework Making, Project Gutenberg",
+    "kind": "record"
+  },
   "Gino Valle": {
     "url": "https://en.wikipedia.org/wiki/Gino_Valle",
     "label": "Gino Valle, Wikipedia",

@@ -29,6 +29,40 @@ export const people: Record<string, Credit> = {
     ],
   },
   'flip-disc': { people: [{ who: ['Kenyon Taylor'], did: 'Devised the flip-disc at Ferranti-Packard in Canada, as John Vardalas tells it in a history for IEEE Canada. His first patent on it claims a Canadian application of 1960.' }] },
+  'neon-sign': {
+    people: [
+      { who: ['Georges Claude'], did: 'Showed long red neon tubes at the Paris Motor Show in December 1910, after curing their dimming with larger, cooler electrodes.' },
+      { who: ['Jacques Fonsèque'], did: "Claude's associate, who saw a business in signs and sold one to a barbershop on the Boulevard Montmartre in 1912, by American Heritage's account." },
+      { who: ['Daniel McFarlan Moore'], did: 'Lit rooms in the late 1890s with long tubes of glowing nitrogen or carbon dioxide, which tungsten lamps displaced after 1910.' },
+      { who: ['Earle C. Anthony'], did: 'Los Angeles Packard dealer who bought two signs from Claude Neon, usually dated 1923. Signs of the Times found no permit for them before December 1924.', aside: true },
+    ],
+  },
+  'news-zipper': {
+    people: [
+      { who: ['Francis E. J. Wilde'], did: 'Engineer at the Motogram company who made the system of metal letters and brushes and filed patents for it in 1925, by the account of the historian Dale Cressman.' },
+      { who: ['Frank C. Reilly'], did: "Wilde's partner, who sold the sign to The New York Times in 1928 and was named as its inventor in the newspaper's accounts." },
+      { who: ['Everett Bickley'], did: 'Made the first motograph in 1911, a moving sign driven by rolls of punched paper, Cressman writes.' },
+    ],
+  },
+  'magic-lantern': {
+    people: [
+      { who: ['Christiaan Huygens'], did: 'Drew ten sketches of a skeleton for a lantern show among papers of 1659, and built lanterns on request in the next few years. He thought the device frivolous.' },
+      { who: ['Thomas Rasmussen Walgensten'], did: 'Danish mathematician who showed lanterns at courts across Europe in the 1660s, and the first known to call the device laterna magica, the Magic Lantern Society says.' },
+      { who: ['Athanasius Kircher'], did: 'Printed a picture of a projecting lantern in the second edition of his Ars Magna Lucis et Umbrae in 1671, and took credit for it.', aside: true },
+    ],
+  },
+  'scanning-fiber': {
+    people: [
+      { who: ['Eric J. Seibel', 'Thomas A. Furness III'], did: 'Applied in 1999 for a patent on a fibre that resonates to scan pictures, at the Human Interface Technology Laboratory of the University of Washington. Seibel built it into an endoscope.' },
+      { who: ['Brian T. Schowengerdt'], did: 'Worked at the same laboratory on displays that scan light into the eye, and with Seibel and others patented a fibre-scanning projector. He later filed many such patents for Magic Leap.' },
+    ],
+  },
+  'lancework': {
+    people: [
+      { who: ['C. T. Brock'], did: 'Staged the firework displays at the Crystal Palace from 1865, the Victoria and Albert Museum records. His family firm kept them going until the palace burned in 1936.' },
+      { who: ['Alan St. H. Brock'], did: "Wrote his family firm's history of the art in 1922. It dates the first portraits in fire to 1879.", aside: true },
+    ],
+  },
   'water-curtain': {
     people: [
       { who: ['Julius Popp'], did: 'Artist in Leipzig. He began bit.fall in 2001 with eight nozzles. The version shown in Paris in 2005 had 128 valves and spelled words taken from news websites.' },

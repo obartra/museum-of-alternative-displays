@@ -47,6 +47,7 @@ export class Stage {
   private eyePlay = 0.1;
   private eyeT0 = 0;
   private viewId: string | null = null;
+  private sway: { rate: number; reach: number; up?: number } | undefined;
   /** Set while the picture is drawn for red and cyan glasses. */
   private stereo?: Anaglyph;
   private drift = false;
@@ -260,7 +261,7 @@ export class Stage {
     const at = spot.room ? new THREE.Vector3(...spot.at) : root.localToWorld(new THREE.Vector3(...spot.at));
     const to = root.localToWorld(new THREE.Vector3(...spot.to));
     this.eyeAt = at; this.eyeTo = to; this.eyePlay = spot.play ?? (detail ? 0.5 : 0.1); this.eyeT0 = this.clock;
-    this.viewId = id; this.drift = !detail; this.owed = 3;
+    this.viewId = id; this.drift = !detail || !!spot.sway; this.sway = spot.sway; this.owed = 3;
     this.dragged = false;
     this.camera.fov = spot.fov ?? (detail ? 32 : 38); this.camera.near = 0.004;
     this.camera.updateProjectionMatrix();
@@ -353,9 +354,10 @@ export class Stage {
     const drifting = !!this.eyeAt && !!this.eyeTo && this.drift && !this.dragged && !this.paused && live;
     if (drifting) {
       // until the visitor takes over, the head drifts from side to side so that near things slide across far ones
-      const dir = this.eyeTo!.clone().sub(this.eyeAt!), reach = dir.length() * Math.sin(this.eyePlay) * 0.6;
-      const side = dir.cross(UP).normalize();
-      this.camera.position.copy(this.eyeAt!).addScaledVector(side, Math.sin((this.clock - this.eyeT0) * 1.2) * reach);
+      const dir = this.eyeTo!.clone().sub(this.eyeAt!), s = this.sway, reach = dir.length() * (s ? s.reach : Math.sin(this.eyePlay) * 0.6);
+      const side = dir.clone().cross(UP).normalize(), lift = side.clone().cross(dir).normalize(), ph = (this.clock - this.eyeT0) * (s ? s.rate : 1.2);
+      this.camera.position.copy(this.eyeAt!).addScaledVector(side, Math.sin(ph) * reach);
+      if (s?.up) this.camera.position.addScaledVector(lift, Math.sin(ph * 2) * reach * s.up);
       this.camera.lookAt(this.eyeTo!);
     }
     this.release();
@@ -368,7 +370,7 @@ export class Stage {
     this.room.seenFrom?.(this.camera);
     this.glow.intensity = this.piece?.glow ? (1 - L) * 9 * (this.room.glow?.gain ?? 1) : 0;
     (this.scene.background as THREE.Color).set(OUTSIDE).multiplyScalar(0.02 + 0.98 * L);
-    this.piece?.update?.({ t: at ?? this.clock, lights: L, camera: this.camera });
+    this.piece?.update?.({ t: at ?? this.clock, lights: L, camera: this.camera, view: this.viewId ?? undefined });
     if (this.stereo) {
       // whatever is being looked at sits on the glass of the screen: the room falls away behind it
       const focus = this.camera.position.distanceTo(this.controls?.target ?? new THREE.Vector3(0, this.room.targetY, 0));

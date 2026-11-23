@@ -377,7 +377,7 @@ export function flipDisc(): Built {
   let last = 0, first = true, stamp = '', d = dots('');
   return {
     root, inDark: 'vanishes', view: [20, 8], zoom: 1.06,
-    views: {
+    views: { night: { room: true, at: [-2.3, 0, 2.1], to: [-0.4, 0.15, 0], fov: 52 },
       kerb: { room: true, at: [-2.3, 0, 2.1], to: [-0.4, 0.15, 0], fov: 52 },
       discs: { at: [-1.5, -0.62, 0.62], to: [-1, -0.28, 0] },
     },
@@ -510,7 +510,7 @@ export function nipkow(): Built {
   let stamp = '', top = dots('00'), bottom = dots('00');
   return {
     root, inDark: 'glows', glow: 0xff5a1e, view: [30, 10], surface: img.canvas,
-    views: {
+    views: { sync: { at: [0.9, 1.9, -1.1], to: [0.34, 1.3, -0.15], fov: 34, play: 0.12 },
       eyepiece: { at: [LX, CY, 1.5], to: [LX, CY, 0.01], fov: 30, play: 0.04 },
       disc: { at: [-1.3, 1.7, 1.3], to: [-0.35, 1.4, 0] },
     },
@@ -851,7 +851,7 @@ export function braille(): Built {
   let settled = false;
   return {
     root, inDark: 'vanishes', view: [14, 32], zoom: 1.3,
-    views: {
+    views: { dark: { at: [0.84, 0.4, 0.46], to: [1.17, 0.14, -0.1], play: 0.4 },
       // low over the cells that count seconds, where a reading finger would be
       touch: { at: [0.84, 0.4, 0.46], to: [1.17, 0.14, -0.1], play: 0.4 },
       cell: { at: [1.95, 1.1, 0.3], to: [0.5, 0.4, -1.4] },
@@ -1013,7 +1013,7 @@ export function droneShow(): Built {
   bodies.done();
   return {
     root, inDark: 'better', glow: 0x8fb4ff, view: [10, 5],
-    views: {
+    views: { night: { at: [0, 0.12, 3.5], to: [0, 1.2, 0], fov: 56 },
       // at the edge of the field, a little above the grass
       field: { at: [0, 0.12, 3.5], to: [0, 1.2, 0], fov: 56 },
       // the colon of the time: there are always aircraft here while the figures are up

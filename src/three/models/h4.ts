@@ -1,5 +1,5 @@
 import { G, M, Swarm, beam, halo, screen, spline, voxels, THREE, type Built, type P2, type V3 } from '../kit';
-import { breadboard, screws, toggle, vents } from '../parts';
+import { breadboard, lens, screws, toggle, vents } from '../parts';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries, toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 import { bigTime, clockStrokes, dots, hsl, now, segClock } from '../../sims/draw';
@@ -522,7 +522,7 @@ export function eidophor(): Built {
   root.add(weld(...fixed), table, face, ripples, eb.obj, halo(0xeaf2ff, 0.4, [-0.88, 1.2, 0], 0.5));
   root.add(rays([[[-0.78, 1.2, 0], [0, 1.2, 0], 0xffffff], [[0, 1.2, 0], [0, level(0, 0) + 0.003, 0], 0xffffff], [[0.04, level(0.04, 0) + 0.003, 0], [0.04, 2.16, 0], 0xcfe0ff], [[0.04, 2.16, 0], [1.08, 2.16, 0.12], 0xcfe0ff]], 0.006, 0.6));
   return {
-    root, views: { machine: { at: [0, 1.6, 5.6], to: [0.1, 1.25, 0], fov: 34, play: 0.2 }, oil: { at: [0.5, 0.85, 1.2], to: [0, 0.3, 0], fov: 30 } }, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
+    root, views: { screen: { at: [0.25, 2.2, 1.25], to: [1.12, 2.16, 0.12], fov: 38, play: 0.1 }, oil: { at: [0.5, 0.85, 1.2], to: [0, 0.3, 0], fov: 30 } }, inDark: 'glows', glow: 0xdde8ff, view: [30, 8], surface: s.canvas,
     update: ({ t, lights }) => {
       table.rotation.y = t * 0.25;
       s.ctx.fillStyle = '#000'; s.ctx.fillRect(0, 0, 320, 240);
@@ -669,7 +669,7 @@ export function laserScan(): Built {
   const spot = halo(0xffffff, 0.12, [0, 1, WALL + 0.015]);
   root.add(base, weld(...fixed), rotor1, rotor2, figure, rays(still), up.obj, out.obj, hits.points, spot);
   return {
-    root, views: { front: { at: [0, 1.2, 4.3], to: [0, 1, 0], fov: 34, play: 0.2 }, galvos: { at: [0.01, 1.03, 1.11], to: [0.66, 0.54, 0.05], fov: 32 } }, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
+    root, views: { galvos: { at: [0.01, 1.03, 1.11], to: [0.66, 0.54, 0.05], fov: 32 } }, inDark: 'better', glow: 0x40ff70, view: [24, 12], surface: s.canvas,
     update: ({ t }) => {
       const strokes = clockStrokes(now());
       const c = s.ctx;
@@ -979,8 +979,7 @@ export function switchableGlass(): Built {
   let shown = '';
   return {
     root, views: {
-      front: { at: [0, 1.15, 3.1], to: [0, 1.05, 0], fov: 34, play: 0.2 },
-      close: { at: [1.2, 0.74, 1.05], to: [0.78, 0.34, 0.05], fov: 42, play: 0.1 },
+            close: { at: [1.2, 0.74, 1.05], to: [0.78, 0.34, 0.05], fov: 42, play: 0.1 },
     },
     inDark: 'vanishes', view: [-18, 4],
     update: (env) => {
@@ -996,6 +995,121 @@ export function switchableGlass(): Built {
         bigTime(c, 256, 256, hhmm, '#1c2024', 800, 0.36);
         face.tex.needsUpdate = true;
       }
+    },
+  };
+}
+
+/**
+ * Scanning fibre display, enlarged many times and slowed many thousand times. Laser light in three colours is
+ * joined into one fibre, which runs through a tube of piezoelectric ceramic and sticks out of its end. Driven at its
+ * resonance, the free end swings in growing circles. The spot leaving it goes through a lens to a screen, where it
+ * paints the time ring by ring; then the swinging is stopped and the tip comes back to the centre.
+ */
+export function scanningFiber(): Built {
+  const root = G.group();
+  const B = 0.08, Y = 0.62, dark = M.dark(), steel = M.steel(), brass = M.brass(), rubber = M.rubber();
+  const base = breadboard(2.2, 1.2, B); base.position.z = 0.1;
+  root.add(base);
+  // the three lasers at the back, their fibres joined in a coupler box and running on as one
+  const cols = [0xff3020, 0x30ff60, 0x3070ff];
+  cols.forEach((c, i) => {
+    const z = -0.3 + i * 0.16;
+    root.add(G.rbox(0.26, 0.1, 0.1, 0.012, dark, [-0.85, B + 0.05, z]), G.box(0.006, 0.03, 0.03, M.glow(c, 1.4), [-0.718, B + 0.05, z], 0));
+    root.add(G.wire([[-0.715, B + 0.05, z], [-0.6, B + 0.06, z], [-0.5, B + 0.06, -0.14], [-0.44, B + 0.06, -0.14]], 0.006, M.plastic(c, 0.5), false, 6));
+  });
+  root.add(G.rbox(0.12, 0.08, 0.1, 0.012, M.enamel(0x2a3a46), [-0.38, B + 0.06, -0.14]));
+  root.add(G.wire([[-0.32, B + 0.06, -0.14], [-0.2, B + 0.08, -0.14], [-0.1, Y - 0.1, 0], [-0.52, Y, 0.1]], 0.007, M.plastic(0xe0c020, 0.5), false, 6));
+  // the scanner: a clear housing on two posts, and inside it the ceramic tube with four gold electrodes
+  const AX = -0.5, TL = 0.5, FL = 0.32; // tube from AX to AX + TL along x; the fibre sticks out FL beyond it
+  root.add(G.cyl(0.085, TL + 0.1, M.glass(0xcfe0e0, 0.12, 0.6), [AX + TL / 2, Y, 0.1], 32).rotateZ(Math.PI / 2));
+  for (const x of [AX + 0.05, AX + TL - 0.05]) root.add(G.box(0.05, Y - B - 0.06, 0.05, steel, [x, (Y + B) / 2 - 0.03, 0.1], 0.004), G.cyl(0.095, 0.03, dark, [x, Y, 0.1], 32).rotateZ(Math.PI / 2));
+  root.add(G.cyl(0.04, TL, M.ceramic(), [AX + TL / 2, Y, 0.1], 24).rotateZ(Math.PI / 2));
+  for (let k = 0; k < 4; k++) { const a = (k * Math.PI) / 2; root.add(G.box(TL - 0.04, 0.004, 0.03, M.brass(0), [AX + TL / 2, Y + Math.cos(a) * 0.041, 0.1 + Math.sin(a) * 0.041], 0).rotateX(a)); }
+  // the leads that carry the drive to the electrodes
+  root.add(G.wire([[AX + 0.15, Y + 0.05, 0.1], [AX + 0.1, Y + 0.25, 0.25], [AX - 0.1, B + 0.1, 0.45], [-0.9, B + 0.05, 0.45]], 0.008, rubber, false, 5));
+  root.add(G.rbox(0.3, 0.12, 0.2, 0.012, M.enamel(0x3a4148), [-0.92, B + 0.06, 0.45]), vents(0.18, 0.06, 4, [-0.92, B + 0.06, 0.551]));
+  // the free end of the fibre: short pieces that bend as a beam held at one end bends
+  const SEGS = 28, fib = new Swarm(new THREE.CylinderGeometry(0.0055, 0.0055, (FL / SEGS) * 1.4, 8).rotateZ(Math.PI / 2), M.glass(0xe8f4f4, 0.5, 0.7), SEGS);
+  fib.mesh.userData.noShadow = true;
+  root.add(fib.mesh);
+  const tipGlow = halo(0xffffff, 0.08, [0, 0, 0], 0.9);
+  root.add(tipGlow);
+  // a lens in a ring on a post, and the screen it throws the picture on
+  const LX = AX + TL + FL + 0.12;
+  root.add(lens(0.1, [LX, Y, 0.1], 0.35, brass), G.cyl(0.014, Y - B - 0.1, steel, [LX, (Y + B) / 2 - 0.05, 0.1], 10), G.cyl(0.05, 0.02, dark, [LX, B + 0.01, 0.1], 16));
+  const SX = 0.85, SW = 0.7;
+  const screenGroup = G.group(G.box(0.03, SW + 0.06, SW + 0.06, dark, [0, 0, 0], 0.006), G.plane(SW, SW, M.plastic(0x1a1c1e, 0.9), [-0.016, 0, 0]).rotateY(-Math.PI / 2));
+  const paint = screen(256, 256), pc = paint.ctx;
+  pc.fillStyle = '#000'; pc.fillRect(0, 0, 256, 256); paint.tex.needsUpdate = true;
+  screenGroup.add(G.plane(SW, SW, M.add(paint, 0xffffff, 1), [-0.018, 0, 0]).rotateY(-Math.PI / 2));
+  screenGroup.position.set(SX, Y, 0.1);
+  root.add(screenGroup, G.box(0.05, Y - B - SW / 2, 0.05, steel, [SX + 0.03, (Y + B - SW / 2) / 2, 0.1], 0.004), G.rbox(0.3, 0.03, 0.3, 0.01, dark, [SX + 0.03, B + 0.015, 0.1]));
+  // the ray from the tip through the lens to the spot on the screen
+  const ray = beam(0xffffff, 0.8);
+  root.add(ray.line);
+  // what the spot is to draw: the time, read from a small canvas
+  const glyph = screen(96, 96), gc = glyph.ctx;
+  let shown = '', mask = new Uint8ClampedArray(0);
+  const FRAME = 9, OUT = 7.8, TURNS = 26, RMAX = 0.05;
+  /** Where the tip is at a moment of its frame: swinging outward in a spiral, then stopped and brought back to the centre. */
+  const swing = (ph: number): [number, number] => {
+    const r = ph < OUT ? ph / OUT : Math.max(0, 1 - ((ph - OUT) / (FRAME - OUT)) * 3);
+    const a = ph < OUT ? (ph / OUT) * TURNS * Math.PI * 2 : (ph - OUT) * 40;
+    return [Math.cos(a) * r, Math.sin(a) * r];
+  };
+  const lit = (u: number, v: number) => { const px = Math.round(48 - u * 46), py = Math.round(48 - v * 46); return mask.length > 0 && mask[(py * 96 + px) * 4] > 100; };
+  /** Paint the spot's path between two moments, in small steps, so that a slow frame does not cut across the spiral. */
+  const paintSpan = (p0: number, p1: number, alpha: number) => {
+    const X = (q: number) => 128 + q * 118;
+    pc.strokeStyle = `rgba(230,245,255,${alpha})`; pc.lineWidth = 3; pc.lineCap = 'round';
+    const steps = Math.max(1, Math.ceil((Math.min(p1, OUT) - p0) / 0.004));
+    let [pu, pv] = swing(p0);
+    for (let i = 1; i <= steps; i++) {
+      const ph = p0 + ((Math.min(p1, OUT) - p0) * i) / steps, [u, v] = swing(ph);
+      if (ph < OUT && lit(u, v)) { pc.beginPath(); pc.moveTo(X(-pu), X(-pv)); pc.lineTo(X(-u), X(-v)); pc.stroke(); }
+      pu = u; pv = v;
+    }
+  };
+  let last = -1;
+  return {
+    root, inDark: 'glows', glow: 0xd8f0ff, view: [20, 10], surface: paint.canvas,
+    views: {
+      tip: { at: [AX + TL + 0.45, Y + 0.3, 0.85], to: [AX + TL + FL * 0.5, Y, 0.1], fov: 32, play: 0.12 },
+      picture: { at: [-0.2, Y + 0.25, 1.4], to: [SX, Y, 0.1], fov: 34, play: 0.12 },
+    },
+    update: (env) => {
+      const n = now();
+      if (n.hhmm !== shown) {
+        shown = n.hhmm;
+        gc.fillStyle = '#000'; gc.fillRect(0, 0, 96, 96);
+        bigTime(gc, 96, 96, n.hhmm, '#fff', 800, 0.34);
+        mask = gc.getImageData(0, 0, 96, 96).data;
+      }
+      const ph = env.t % FRAME;
+      // the first time round, the trace of the last whole picture is already on the screen, fading
+      if (last < 0) { paintSpan(0, OUT, 0.45); last = env.t - Math.min(ph, 0.05); }
+      const dt = Math.min(0.1, Math.max(0, env.t - last)), ph0 = Math.max(0, ph - dt);
+      last = env.t;
+      const [u, v] = swing(ph);
+      // the fibre bends most near its free end, as a rod held at one end does
+      for (let i = 0; i < SEGS; i++) {
+        const s = (i + 0.5) / SEGS, k = s * s;
+        fib.put(i, AX + TL + s * FL, Y + v * RMAX * k, 0.1 + u * RMAX * k);
+      }
+      fib.done();
+      const tip: V3 = [AX + TL + FL, Y + v * RMAX, 0.1 + u * RMAX];
+      tipGlow.position.set(...tip);
+      // the lens turns the swing of the tip upside down and makes it larger on the screen
+      const hit: V3 = [SX - 0.02, Y - v * (SW * 0.46), 0.1 - u * (SW * 0.46)];
+      // the lasers are lit only where the spot is over a part of a figure, and the ring down is dark
+      const on = ph < OUT && lit(u, v);
+      ray.aim(tip, on ? hit : tip);
+      (ray.line.material as THREE.LineBasicMaterial).opacity = on ? 0.85 : 0;
+      tipGlow.material.opacity = on ? 0.9 : 0.25;
+      // the screen keeps a fading trace, as the eye would of a picture drawn faster than this
+      pc.fillStyle = `rgba(0,0,0,${1 - Math.exp(-dt * 0.22)})`; pc.fillRect(0, 0, 256, 256);
+      if (ph0 < ph) paintSpan(ph0, ph, 0.95);
+      paint.tex.needsUpdate = true;
     },
   };
 }

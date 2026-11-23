@@ -77,11 +77,15 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
   };
 
   /** Look from one of the piece's own places. The same button again, or null, goes back to the whole piece. */
+  let darkened = false;
   const setView = (id: string | null) => {
     const stage = lent?.stage;
     if (!stage || !live) return;
     const v = id && stage.inView !== id ? places().find((x) => x.id === id) : undefined;
     if (v) stage.goView(v.id, v.kind === 'detail'); else stage.goHome();
+    // a view meant for the dark switches the daylight off, and leaving it puts the daylight back if it took it away
+    const lit = (on: boolean) => document.dispatchEvent(new CustomEvent('museum:lights', { detail: on }));
+    if (v?.dark && o.lights()) { lit(false); darkened = true; } else if (!v?.dark && darkened) { darkened = false; if (!o.lights()) lit(true); }
     for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(b.dataset.view === v?.id));
     tell(v ? HINT[v.kind] : HINT.turn);
     say.textContent = v?.hint ?? '';

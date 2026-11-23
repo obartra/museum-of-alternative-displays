@@ -62,6 +62,8 @@ function setLights(on: boolean): void {
   for (const sw of document.querySelectorAll<HTMLElement>('[data-lights-switch]')) sw.setAttribute('aria-checked', String(on));
   for (const fn of lightListeners) fn(on);
 }
+// a place to look from that is meant to be seen in the dark asks for the daylight off, from here or from the walk
+document.addEventListener('museum:lights', (e) => setLights((e as CustomEvent<boolean>).detail));
 const switchHtml = () => `<button type="button" class="switch" role="switch" aria-checked="${lightsOn}" data-lights-switch><span class="switch__track"><span class="switch__knob"></span></span><span>${tx('switch.daylight')}</span></button>`;
 document.addEventListener('click', (e) => {
   const t = e.target as HTMLElement;
@@ -593,10 +595,13 @@ ${step === undefined ? '' : visitBand(step)}
     note.textContent = !on && d === 'vanishes' ? t('stage.note.vanishes') : on && d === 'better' ? t('stage.note.better') : '';
   };
   /** Look from one of the piece's own places. The same button again, or null, goes back to the whole piece. */
+  let darkened = false;
   const setView = (id: string | null) => {
     if (!stage || !live) return;
     const v = id && stage.inView !== id ? places.find((x) => x.id === id) : undefined;
     if (v) stage.goView(v.id, v.kind === 'detail'); else stage.goHome();
+    // a view meant for the dark switches the daylight off, and leaving it puts the daylight back if it took it away
+    if (v?.dark && lightsOn) { setLights(false); darkened = true; } else if (!v?.dark && darkened) { darkened = false; if (!lightsOn) setLights(true); }
     for (const b of views.querySelectorAll<HTMLElement>('[data-view]')) b.setAttribute('aria-pressed', String(b.dataset.view === v?.id));
     // how to move goes over the picture and fades at the first touch. What the view shows stays, under the buttons
     tell(v ? HINT[v.kind] : HINT.turn);
