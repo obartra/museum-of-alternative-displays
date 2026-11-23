@@ -799,37 +799,78 @@ export function hud(): Built {
 export function stereoGlasses(): Built {
   const root = G.group();
   const s = screen(512, 320);
-  const W = 1.7, H = 1.06, y = 1.0;
-  const dark = M.dark(), black = M.black();
-  // the screen: a plain panel on a stand, like a small cinema screen in its frame
+  const W = 1.7, H = 1.06, y = 1.02, T = Math.PI / 2;
+  const dark = M.dark(), black = M.black(), steel = M.steel(), shell = M.plastic(0x1d1f22, 0.5);
+  // the screen in its bezel, with a cover over the electronics behind, a lead and a lamp, as the other screens here have
   root.add(G.rbox(W + 0.12, H + 0.12, 0.06, 0.02, dark, [0, y, -0.04]), G.plane(W, H, M.lit(s, 1.2, 0.25), [0, y, 0]));
-  root.add(G.box(0.07, y - H / 2 + 0.02, 0.07, M.steel(1), [0, (y - H / 2) / 2, -0.06]), G.rbox(0.7, 0.04, 0.4, 0.015, dark, [0, 0.02, -0.06]));
-  // a low table in front, with the three pairs of glasses on it
-  const top = 0.38;
-  root.add(G.rbox(1.6, 0.04, 0.42, 0.015, M.wood(0x6b4a2e), [0, top - 0.02, 0.85]));
-  for (const sx of [-1, 1]) for (const sz of [-1, 1]) root.add(G.box(0.04, top - 0.04, 0.04, M.wood(0x6b4a2e, 1), [sx * 0.68, (top - 0.04) / 2, 0.85 + sz * 0.17]));
+  const louvres = vents(0.8, 0.28, 8, [0, y + 0.12, -0.1065]); louvres.userData.noShadow = true;
+  root.add(G.rbox(1.24, 0.74, 0.03, 0.012, shell, [0, y, -0.09]), louvres, backScrews([[-0.57, y + 0.32, -0.105], [0.57, y + 0.32, -0.105], [-0.57, y - 0.32, -0.105], [0.57, y - 0.32, -0.105]], 0.014));
+  root.add(hush(stub(0.024, 0.02, black, [0.48, y - 0.28, -0.113], 10).rotateX(T)), hush(G.wire([[0.48, y - 0.28, -0.12], [0.5, y - 0.34, -0.15], [0.74, 0.32, -0.1], [0.78, 0.2, -0.085], [0.78, 0.06, -0.085], [0.84, 0.06, -0.24], [0.88, 0.06, -0.3]], 0.011, M.rubber(), false, 5)));
+  root.add(pilot(0x40d070, 0.008, [W / 2 + 0.03, y - H / 2 - 0.025, -0.004]).rotateX(T));
+  // on top of the bezel, the box that tells the shutter glasses when to switch, its dark red window facing the room
+  const sync = M.glow(0xff3040, 0.1);
+  root.add(G.rbox(0.16, 0.05, 0.06, 0.01, shell, [0, y + H / 2 + 0.085, -0.03]), G.box(0.1, 0.026, 0.006, sync, [0, y + H / 2 + 0.085, 0.001], 0), G.box(0.05, 0.03, 0.04, dark, [0, y + H / 2 + 0.05, -0.04]));
+  // the stand: a slab on rubber feet, two uprights bolted to it and to the back of the panel
+  const up = y - H / 2 - 0.05;
+  root.add(G.rbox(W + 0.2, 0.05, 0.56, 0.02, dark, [0, 0.025, -0.06]));
+  for (const sx of [-1, 1]) {
+    root.add(G.box(0.06, up - 0.04, 0.06, M.steel(1), [sx * 0.62, 0.05 + (up - 0.04) / 2, -0.08]), G.box(0.16, 0.012, 0.16, steel, [sx * 0.62, 0.056, -0.08], 0));
+    root.add(hush(screws([[sx * 0.62 - 0.055, 0.062, -0.025], [sx * 0.62 + 0.055, 0.062, -0.025], [sx * 0.62 - 0.055, 0.062, -0.135], [sx * 0.62 + 0.055, 0.062, -0.135]], 0.011, 'y')));
+    for (const sz of [-1, 1]) root.add(hush(stub(0.04, 0.012, M.rubber(), [sx * 0.88, -0.006, -0.06 + sz * 0.2], 10)));
+  }
 
-  /** One pair of glasses lying folded open on the table, with a lens on each side; returns the lens meshes. */
-  const pair = (x: number, frame: THREE.Material, left: THREE.Material, right: THREE.Material): [THREE.Mesh, THREE.Mesh] => {
+  // a low table in front: a top on an apron, four tapered legs, and a felt mat under each pair
+  const top = 0.4, TZ = 0.9, oak = M.wood(0x7a5634), oakUp = M.wood(0x7a5634, 1);
+  root.add(G.rbox(1.64, 0.035, 0.5, 0.012, oak, [0, top - 0.0175, TZ]));
+  root.add(G.box(1.48, 0.07, 0.02, oak, [0, top - 0.07, TZ + 0.2]), G.box(1.48, 0.07, 0.02, oak, [0, top - 0.07, TZ - 0.2]));
+  for (const sx of [-1, 1]) root.add(G.box(0.02, 0.07, 0.38, oak, [sx * 0.74, top - 0.07, TZ]));
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) root.add(G.cyl(0.018, top - 0.035, oakUp, [sx * 0.74, (top - 0.035) / 2, TZ + sz * 0.2], 12, 0.026));
+  const felt = M.cloth(0x2b3136);
+  for (const x of [-0.5, 0, 0.5]) root.add(G.slab(0.42, 0.3, 0.02, 0.004, felt, [x, top + 0.002, TZ]).rotateX(-T));
+
+  /** A rounded rectangle as a path, centred on (cx, cy). */
+  const rr = <P extends THREE.Path>(p: P, cx: number, cy: number, w: number, h: number, r: number): P => {
+    const x = cx - w / 2, yy = cy - h / 2;
+    p.moveTo(x + r, yy); p.lineTo(x + w - r, yy); p.absarc(x + w - r, yy + r, r, -T, 0, false); p.lineTo(x + w, yy + h - r); p.absarc(x + w - r, yy + h - r, r, 0, T, false);
+    p.lineTo(x + r, yy + h); p.absarc(x + r, yy + h - r, r, T, Math.PI, false); p.lineTo(x, yy + r); p.absarc(x + r, yy + r, r, Math.PI, 1.5 * Math.PI, false);
+    return p;
+  };
+  // sizes of a real pair, in metres; each pair is shown at one and three quarter times life, so it reads from a seat
+  const FW = 0.146, FH = 0.05, LW = 0.052, LH = 0.036, LX = 0.035, LR = 0.012, ARM = 0.135, BIG = 1.75;
+  /**
+   * One pair standing on its open arms on the table, facing the room: a front with two lens openings and a bridge,
+   * hinges at the corners, arms running back with their ends bent down. Returns the two lens meshes.
+   */
+  const pair = (x: number, frame: THREE.Material, t: number, left: THREE.Material, right: THREE.Material, extra?: (g: THREE.Group) => void): [THREE.Mesh, THREE.Mesh] => {
     const g = G.group();
-    g.add(G.rbox(0.3, 0.07, 0.012, 0.01, frame, [0, 0, 0]));
-    const l = G.plane(0.115, 0.056, left, [-0.072, 0, 0.007]), r = G.plane(0.115, 0.056, right, [0.072, 0, 0.007]);
+    const front = rr(new THREE.Shape(), 0, 0, FW, FH, 0.016);
+    for (const sx of [-1, 1]) front.holes.push(rr(new THREE.Path(), sx * LX, 0.002, LW, LH, LR));
+    g.add(G.extruded(front, t, frame, [0, 0, 0], Math.min(0.0012, t * 0.3)));
+    const lensGeo = new THREE.ShapeGeometry(rr(new THREE.Shape(), 0, 0, LW + 0.002, LH + 0.002, LR), 8);
+    const l = new THREE.Mesh(lensGeo, left), r = new THREE.Mesh(lensGeo, right);
+    l.position.set(-LX, 0.002, 0); r.position.set(LX, 0.002, 0);
     g.add(l, r);
-    for (const sx of [-1, 1]) g.add(G.box(0.008, 0.012, 0.26, frame, [sx * 0.146, 0.02, -0.13]));
-    // each pair stands up on a small clear stand, facing the room, half again as large as life so it reads from a seat
-    g.position.set(x, top + 0.1, 0.86); g.rotation.x = -0.12; g.scale.setScalar(1.6);
-    root.add(G.pane(0.36, 0.012, 0.16, [x, top + 0.006, 0.86]));
+    for (const sx of [-1, 1]) {
+      const hx = sx * (FW / 2 - 0.003);
+      g.add(G.box(0.004, 0.009, ARM, frame, [hx, 0.012, -ARM / 2 - t / 2], 0), G.box(0.004, 0.009, 0.04, frame, [hx, -0.004, -ARM - t / 2 - 0.012], 0).rotateX(-0.9));
+      g.add(hush(stub(0.0022, 0.012, M.steel(), [hx, 0.012, -t / 2 - 0.002], 8)));
+    }
+    extra?.(g);
+    // the arms rest on the table and the lower rim of the front just touches it, so the pair leans back a little
+    g.rotation.x = -0.08; g.scale.setScalar(BIG);
+    g.position.set(x, top + 0.004 + (FH / 2) * BIG, TZ + 0.08);
     root.add(g);
     return [l, r];
   };
   const lens = (color: number, opacity = 0.75) => new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.25, transparent: true, opacity, roughness: 0.15, side: THREE.DoubleSide });
-  // colour: red for the left eye, cyan for the right, in card frames
-  const card = M.paper(0xf1ede2);
-  const colour = pair(-0.46, card, lens(0xff2a2a), lens(0x22e2ff));
-  // time: dark lenses that clear and close in turn, in a plastic frame with a small receiver on the bridge
+  // colour: red for the left eye, cyan for the right, in a frame of printed card
+  const colour = pair(-0.5, M.paper(0xf1ede2), 0.0016, lens(0xff2a2a), lens(0x22e2ff));
+  // time: dark lenses that clear and close in turn, in a heavier plastic frame with a receiver on the bridge and a battery in one arm
   const shutL = lens(0x111316, 0.92), shutR = lens(0x111316, 0.92);
-  const shutter = pair(0, M.plastic(0x202326, 0.4), shutL, shutR);
-  root.add(hush(G.box(0.08, 0.04, 0.03, black, [0, top + 0.17, 0.85])).rotateX(-0.12));
+  const shutter = pair(0, M.plastic(0x202326, 0.4), 0.007, shutL, shutR, (g) => {
+    g.add(G.rbox(0.03, 0.012, 0.012, 0.004, M.plastic(0x202326, 0.4), [0, FH / 2 + 0.001, -0.002]), G.box(0.016, 0.006, 0.002, M.plastic(0x3a0a0e, 0.1), [0, FH / 2 + 0.002, 0.0045], 0));
+    g.add(G.rbox(0.008, 0.016, 0.04, 0.003, M.plastic(0x202326, 0.4), [-(FW / 2 - 0.003), 0.012, -0.03]));
+  });
   // polarised: grey lenses whose filters stand at right angles, drawn as fine lines that cross
   const lines = (deg: number) => {
     const p = screen(64, 64), c = p.ctx;
@@ -837,11 +878,12 @@ export function stereoGlasses(): Built {
     c.translate(32, 32); c.rotate((deg * Math.PI) / 180);
     for (let i = -64; i < 64; i += 6) { c.beginPath(); c.moveTo(i, -64); c.lineTo(i, 64); c.stroke(); }
     p.tex.needsUpdate = true;
+    p.tex.repeat.set(1 / (LW + 0.002), 1 / (LH + 0.002));
     return new THREE.MeshStandardMaterial({ map: p.tex, transparent: true, opacity: 0.8, roughness: 0.2, side: THREE.DoubleSide });
   };
-  const polar = pair(0.46, M.plastic(0x2b2f33, 0.5), lines(45), lines(-45));
+  const polar = pair(0.5, M.plastic(0x2b2f33, 0.5), 0.004, lines(45), lines(-45));
   const pairs = [colour, shutter, polar];
-  fuse(root, pairs.flat());
+  fuse(root, [...pairs.flat()]);
 
   /** A cube in perspective, as one eye sees it: shifted left or right. */
   const cube = (c: CanvasRenderingContext2D, dx: number, stroke: string) => {
@@ -857,7 +899,7 @@ export function stereoGlasses(): Built {
   return {
     root, views: {
       front: { at: [0, 1.05, 3.2], to: [0, 0.95, 0], fov: 34, play: 0.2 },
-      table: { at: [0, 0.75, 1.9], to: [0, 0.48, 0.85], fov: 32, play: 0.15 },
+      table: { at: [0, 1.05, 2.3], to: [0, 0.42, 0.9], fov: 52, play: 0.15 },
     },
     inDark: 'glows', glow: 0xbfe8ff, view: [12, 6], surface: s.canvas,
     update: (env: Env) => {
@@ -867,6 +909,7 @@ export function stereoGlasses(): Built {
       // the shutters close in turn while their act plays, and stay dark otherwise
       shutL.opacity = act === 1 && flip === 0 ? 0.2 : 0.92;
       shutR.opacity = act === 1 && flip === 1 ? 0.2 : 0.92;
+      sync.emissiveIntensity = act === 1 ? 0.9 + 0.5 * flip : 0.08;
       const key = `${act}${act === 1 ? flip : ''}`;
       if (key === shown) return;
       shown = key;

@@ -1,5 +1,5 @@
 import { G, M, Swarm, beam, halo, screen, spline, voxels, THREE, type Built, type P2, type V3 } from '../kit';
-import { breadboard } from '../parts';
+import { breadboard, screws, toggle, vents } from '../parts';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries, toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 import { bigTime, clockStrokes, dots, hsl, now, segClock } from '../../sims/draw';
@@ -70,6 +70,8 @@ function dyed<T extends THREE.BufferGeometry>(geo: T, hex: number, gain = 1): T 
 }
 
 /** The stuff of small things that shine by themselves, each in the colour its shape was dyed: lamps, apertures, pilot lights. */
+/** A stock part shown smaller than it comes, scaled about its own base. */
+const small = <T extends THREE.Object3D>(o: T, k: number): T => { o.scale.setScalar(k); return o; };
 const shining = (): THREE.MeshBasicMaterial => new THREE.MeshBasicMaterial({ vertexColors: true });
 
 /** A post in its holder on a slotted base, the way a part stands on an optical table. `top` is where the part sits. */
@@ -865,26 +867,48 @@ export function projectionMapping(): Built {
  */
 export function hiddenLcd(): Built {
   const root = G.group();
-  const W = 1.5, H = 0.94, y = 1.02;
+  const W = 1.5, H = 0.94, y = 1.02, T = Math.PI / 2;
   const s = screen(512, 320), seen = screen(512, 320);
-  const dark = M.dark();
-  // the monitor: a thin panel in its bezel on a foot, its screen an even white
-  root.add(G.rbox(W + 0.1, H + 0.1, 0.05, 0.02, dark, [0, y, -0.03]), G.plane(W, H, M.lit(s, 1.05, 0.2), [0, y, 0]));
-  root.add(G.box(0.08, 0.5, 0.05, M.steel(1), [0, y - H / 2 - 0.2, -0.06]), G.rbox(0.5, 0.03, 0.32, 0.012, dark, [0, y - H / 2 - 0.44, -0.04]));
+  const dark = M.dark(), black = M.black(), steel = M.steel(), shell = M.plastic(0x1d1f22, 0.5);
+  // the monitor: a thin panel in its bezel, a deeper chin with a power lamp, its screen an even white
+  root.add(G.bezel(W + 0.07, H + 0.07, W, H, 0.006, 0.04, dark, [0, y, -0.012], 0.014, 0.006), G.plane(W, H, M.lit(s, 1.05, 0.2), [0, y, -0.008]));
+  root.add(G.rbox(W + 0.07, 0.07, 0.045, 0.012, dark, [0, y - H / 2 - 0.068, -0.02]), G.box(0.012, 0.006, 0.004, M.glow(0xf0f4ff, 1.4), [W / 2 - 0.06, y - H / 2 - 0.068, 0.003], 0));
   s.ctx.fillStyle = '#f4f6f6'; s.ctx.fillRect(0, 0, 512, 320); s.tex.needsUpdate = true;
-  // the filter: a disc of grey film in a ring, held on a post in front of the screen, turning about its centre
-  const R = 0.3, fx = 0, fy = y, fz = 0.04;
-  const disc = new THREE.Mesh(new THREE.CircleGeometry(R, 48), new THREE.MeshBasicMaterial({ map: seen.tex, transparent: true, opacity: 1 }));
+  // behind: the housing over the electronics, with louvres and screws, a neck down to a foot, and the lead along the neck
+  root.add(G.rbox(W - 0.2, H - 0.2, 0.05, 0.02, shell, [0, y, -0.06]), vents(0.7, 0.22, 8, [0, y + 0.18, -0.0855]));
+  const back = screws([[-0.6, y + 0.3, 0.0865], [0.6, y + 0.3, 0.0865], [-0.6, y - 0.3, 0.0865], [0.6, y - 0.3, 0.0865]], 0.012); back.rotation.y = Math.PI; root.add(back);
+  root.add(G.rbox(0.2, 0.2, 0.02, 0.008, steel, [0, y - 0.05, -0.09]), G.box(0.08, y - 0.04 - 0.08, 0.05, M.steel(1), [0, 0.04 + (y - 0.12) / 2, -0.13]));
+  root.add(G.rbox(0.56, 0.03, 0.34, 0.014, dark, [0, 0.015, -0.1]), G.cyl(0.05, 0.01, steel, [0, 0.035, -0.13], 24));
+  root.add(G.wire([[0.12, y - 0.3, -0.09], [0.08, y - 0.4, -0.16], [0.045, 0.6, -0.16], [0.045, 0.1, -0.16], [0.08, 0.03, -0.26], [0.2, 0.02, -0.34]], 0.009, M.rubber(), false, 5));
+  // the film that was peeled off the front of the panel, lying curled on the plinth beside the foot
+  const peel = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.5, 32, 1, true, 0, Math.PI * 1.6), new THREE.MeshStandardMaterial({ color: 0x3c4248, roughness: 0.25, metalness: 0.1, transparent: true, opacity: 0.55, side: THREE.DoubleSide, depthWrite: false }));
+  peel.rotation.set(0, 0.35, T); peel.position.set(-0.62, 0.06, 0.18);
+  root.add(peel);
+  // the filter: a disc of grey film in a ring that turns inside a fixed dial marked every fifteen degrees
+  const R = 0.3, fx = 0, fy = y, fz = 0.06;
+  const disc = new THREE.Mesh(new THREE.CircleGeometry(R, 64), new THREE.MeshBasicMaterial({ map: seen.tex, transparent: true, opacity: 1 }));
   disc.position.set(fx, fy, fz);
-  // the film's own tint, and the ring and post that hold it
-  const film = new THREE.Mesh(new THREE.CircleGeometry(R, 48), new THREE.MeshStandardMaterial({ color: 0x40464b, transparent: true, opacity: 0.18, roughness: 0.3 }));
+  const film = new THREE.Mesh(new THREE.CircleGeometry(R, 64), new THREE.MeshPhysicalMaterial({ color: 0x40464b, transparent: true, opacity: 0.16, roughness: 0.08, clearcoat: 1 }));
   film.position.set(fx, fy, fz + 0.002);
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(R + 0.01, 0.014, 8, 48), M.black());
-  ring.position.set(fx, fy, fz + 0.002);
-  root.add(disc, film, ring, G.box(0.03, fy - R - 0.0, 0.03, M.steel(1), [fx, (fy - R) / 2, fz + 0.02]), G.rbox(0.3, 0.03, 0.24, 0.012, dark, [fx, 0.015, fz + 0.02]));
-  // a mark on the ring shows the angle of the filter
-  const mark = G.box(0.012, 0.05, 0.01, M.glow(0xffd060, 1.2), [0, R + 0.02, 0]);
-  const turner = G.group(mark); turner.position.set(fx, fy, fz + 0.01); root.add(turner);
+  const annulus = (r0: number, r1: number) => { const sh = new THREE.Shape(); sh.absarc(0, 0, r1, 0, Math.PI * 2, false); const h = new THREE.Path(); h.absarc(0, 0, r0, 0, Math.PI * 2, true); sh.holes.push(h); return sh; };
+  const DIAL = R + 0.075;
+  root.add(disc, film, G.extruded(annulus(R + 0.03, DIAL), 0.02, black, [fx, fy, fz - 0.004], 0.004));
+  const ticks = new Swarm(new THREE.BoxGeometry(0.005, 1, 0.003), M.paper(0xe8e4da), 24);
+  for (let i = 0; i < 24; i++) { const a = (i / 24) * Math.PI * 2, long = i % 6 === 0 ? 0.03 : 0.016, rr = DIAL - 0.006 - long / 2; ticks.put(i, fx + Math.sin(a) * rr, fy + Math.cos(a) * rr, fz + 0.0075, 0, 0, -a, 1, long, 1); }
+  ticks.done(); ticks.mesh.userData.noShadow = true; root.add(ticks.mesh);
+  // the turning ring: knurled at its rim, with a lit mark that shows the angle of the filter against the dial
+  const turner = G.group(G.extruded(annulus(R - 0.004, R + 0.028), 0.024, M.plastic(0x16181a, 0.35), [0, 0, 0], 0.004));
+  const knurl = new Swarm(new THREE.BoxGeometry(0.008, 0.008, 0.02), M.plastic(0x16181a, 0.35), 72);
+  for (let i = 0; i < 72; i++) { const a = (i / 72) * Math.PI * 2; knurl.put(i, Math.sin(a) * (R + 0.03), Math.cos(a) * (R + 0.03), 0, 0, 0, -a); }
+  knurl.done(); turner.add(knurl.mesh, G.box(0.008, 0.026, 0.004, M.glow(0xffd060, 1.3), [0, R + 0.014, 0.013], 0));
+  turner.position.set(fx, fy, fz + 0.012); root.add(turner);
+  // what turns it: a small geared motor under the dial, its rubber wheel against the knurled rim
+  const my = fy - R - 0.1;
+  root.add(G.rbox(0.12, 0.08, 0.07, 0.01, M.enamel(0x2a3a46), [fx, my, fz - 0.03]), G.cyl(0.026, 0.026, M.rubber(), [fx, fy - R - 0.056, fz + 0.012], 20).rotateX(T));
+  root.add(G.box(0.05, 0.06, 0.02, steel, [fx - 0.07, fy - R - 0.05, fz - 0.01]), G.box(0.05, 0.06, 0.02, steel, [fx + 0.07, fy - R - 0.05, fz - 0.01]));
+  // the dial stands on a post in a heavy round foot, with a clamp where the two meet
+  root.add(G.cyl(0.016, my - 0.06, M.steel(1), [fx, 0.03 + (my - 0.06) / 2, fz - 0.03], 16), G.cyl(0.03, 0.05, dark, [fx, my - 0.065, fz - 0.03], 20));
+  root.add(G.cyl(0.15, 0.03, dark, [fx, 0.015, fz - 0.03], 40, 0.14), small(toggle([fx + 0.09, 0.03, fz - 0.03], true, 'y'), 0.6));
 
   /** The picture as the panel writes it, in the angle of its light: a clock on a coloured field. */
   const draw = (c: CanvasRenderingContext2D, flip: boolean) => {
@@ -899,8 +923,8 @@ export function hiddenLcd(): Built {
     },
     inDark: 'glows', glow: 0xf4f6f6, view: [16, 4],
     update: (env) => {
-      // a full turn every twenty seconds: the picture is darkest-on-light at 0° and 180°, and reversed at 90° and 270°
-      const a = (env.t / 20) * Math.PI * 2, c2 = Math.cos(a) ** 2;
+      // a full turn every twenty seconds: the picture is darkest-on-light at 0° and 180°, and reversed at 90° and 270° (set back a little, so a still taken at 2.8 seconds finds it nearly square)
+      const a = ((env.t - 2.25) / 20) * Math.PI * 2, c2 = Math.cos(a) ** 2;
       turner.rotation.z = -a;
       const key = `${now().hhmm}${c2 > 0.5}`;
       if (key !== shown) { shown = key; draw(seen.ctx, c2 < 0.5); seen.tex.needsUpdate = true; }
@@ -919,34 +943,49 @@ export function hiddenLcd(): Built {
  */
 export function switchableGlass(): Built {
   const root = G.group();
-  const W = 1.3, H = 1.5, y = 1.05;
-  const dark = M.dark(), metal = M.steel(1);
+  const W = 1.3, H = 1.5, y = 1.05, T = Math.PI / 2;
+  const dark = M.dark(), metal = M.steel(1), shell = M.plastic(0x2a2d31, 0.5), copper = M.copper();
   const face = screen(256, 256);
-  // the frame: an aluminium surround on two feet, a lead running down one side to a switch box
-  for (const [w, h, p] of [[W + 0.1, 0.05, [0, y + H / 2 + 0.025, 0]], [W + 0.1, 0.05, [0, y - H / 2 - 0.025, 0]], [0.05, H, [-W / 2 - 0.025, y, 0]], [0.05, H, [W / 2 + 0.025, y, 0]]] as [number, number, [number, number, number]][]) root.add(G.box(w, h, 0.06, metal, p));
-  for (const sx of [-1, 1]) root.add(G.box(0.08, y - H / 2 - 0.05, 0.08, metal, [sx * (W / 2 - 0.1), (y - H / 2 - 0.05) / 2, 0]), G.box(0.3, 0.03, 0.4, metal, [sx * (W / 2 - 0.1), 0.015, 0]));
-  root.add(G.rbox(0.16, 0.1, 0.06, 0.01, dark, [W / 2 + 0.2, 0.3, 0.05]), G.wire([[W / 2 + 0.05, y - 0.4, 0], [W / 2 + 0.12, y - 0.45, 0.03], [W / 2 + 0.2, 0.36, 0.05]], 0.008, M.rubber(), false, 5));
+  // the frame: an aluminium surround with a screw in each corner, on two uprights with long feet
+  root.add(G.bezel(W + 0.1, H + 0.1, W - 0.02, H - 0.02, 0.006, 0.05, metal, [0, y, 0], 0.01, 0.004));
+  root.add(screws([[-W / 2 - 0.025, y + H / 2 + 0.025, 0.026], [W / 2 + 0.025, y + H / 2 + 0.025, 0.026], [-W / 2 - 0.025, y - H / 2 - 0.025, 0.026], [W / 2 + 0.025, y - H / 2 - 0.025, 0.026]], 0.008));
+  const leg = y - H / 2 - 0.05;
+  for (const sx of [-1, 1]) {
+    root.add(G.box(0.06, leg, 0.05, metal, [sx * (W / 2 - 0.12), leg / 2 + 0.02, 0]), G.rbox(0.08, 0.03, 0.46, 0.01, dark, [sx * (W / 2 - 0.12), 0.035, 0]));
+    for (const sz of [-1, 1]) root.add(G.cyl(0.025, 0.02, M.rubber(), [sx * (W / 2 - 0.12), 0.01, sz * 0.19], 16));
+  }
+  // the pane: two sheets of glass with the liquid-crystal film between, and a copper bus bar along each side that feeds it
+  root.add(G.pane(W, H, 0.006, [0, y, 0.008]), G.pane(W, H, 0.006, [0, y, -0.008]));
+  for (const sx of [-1, 1]) root.add(G.box(0.012, H - 0.02, 0.002, copper, [sx * (W / 2 - 0.02), y, 0.001], 0));
+  // two leads leave the bottom corner through a gland and run to the driver on the plinth
+  const DX = W / 2 + 0.3, DY = 0.09;
+  root.add(G.cyl(0.016, 0.03, M.black(), [W / 2 - 0.05, y - H / 2 - 0.055, 0], 12));
+  root.add(G.wire([[W / 2 - 0.05, y - H / 2 - 0.07, 0], [W / 2 - 0.02, y - H / 2 - 0.2, 0.02], [W / 2 + 0.1, 0.3, 0.06], [DX - 0.1, DY + 0.02, 0.06]], 0.008, M.rubber(), false, 5));
+  // the driver: a box with louvres that turns mains into the alternating voltage the film needs, a switch, a pilot lamp
+  root.add(G.rbox(0.24, 0.12, 0.16, 0.014, shell, [DX, DY, 0.06]), vents(0.12, 0.06, 5, [DX + 0.03, DY, 0.1405]));
+  root.add(small(toggle([DX - 0.08, DY + 0.06, 0.06], true, 'y'), 0.6), screws([[DX - 0.105, DY + 0.045, 0.141], [DX + 0.105, DY + 0.045, 0.141], [DX - 0.105, DY - 0.045, 0.141], [DX + 0.105, DY - 0.045, 0.141]], 0.006));
   const lamp = M.glow(0x50e070, 1.6);
-  const pilot = G.box(0.02, 0.02, 0.01, lamp, [W / 2 + 0.2, 0.3, 0.082], 0);
-  root.add(pilot);
-  // behind the pane, a clock on a small easel, to be seen through it
-  const clock = G.plane(0.5, 0.5, M.lit(face, 1.0, 0.25), [0, y - 0.1, -0.55]);
-  root.add(clock, G.box(0.04, y - 0.35, 0.04, metal, [0, (y - 0.35) / 2, -0.6]), G.rbox(0.4, 0.03, 0.3, 0.012, dark, [0, 0.015, -0.6]));
-  // the pane: clear glass with a milky film whose haze rises and falls with the voltage
-  const glass = G.pane(W, H, 0.012, [0, y, 0]);
+  root.add(G.cyl(0.013, 0.008, M.chrome(), [DX - 0.07, DY, 0.142], 20).rotateX(T), G.sph(0.009, lamp, [DX - 0.07, DY, 0.147], 16));
+  root.add(G.wire([[DX + 0.1, DY - 0.02, -0.02], [DX + 0.14, 0.03, -0.12], [DX + 0.1, 0.02, -0.35]], 0.007, M.rubber(), false, 5));
+  // behind the pane, a small desk clock on its foot, to be seen through it
+  const cy = y - 0.1, cz = -0.55;
+  root.add(G.rbox(0.56, 0.56, 0.07, 0.02, dark, [0, cy, cz - 0.04]), G.plane(0.5, 0.5, M.lit(face, 1.0, 0.25), [0, cy, cz - 0.004]));
+  root.add(G.box(0.05, cy - 0.3, 0.04, metal, [0, (cy - 0.3) / 2 + 0.02, cz - 0.06]), G.rbox(0.36, 0.03, 0.26, 0.012, dark, [0, 0.015, cz - 0.06]));
+  // the film: milky with the power off, its haze falling away when the voltage lines up the crystals
   const haze = new THREE.MeshStandardMaterial({ color: 0xf3f4f2, roughness: 0.9, transparent: true, opacity: 0.95, side: THREE.DoubleSide });
-  const film = G.plane(W, H, haze, [0, y, 0.008]);
-  root.add(glass, film);
+  const film = G.plane(W - 0.01, H - 0.01, haze, [0, y, 0]);
+  root.add(film);
+  const pilot = { material: lamp };
   let shown = '';
   return {
     root, views: {
       front: { at: [0, 1.15, 3.1], to: [0, 1.05, 0], fov: 34, play: 0.2 },
-      close: { at: [0.25, 1.1, 0.75], to: [0, 1.05, 0], fov: 42, play: 0.1 },
+      close: { at: [1.2, 0.74, 1.05], to: [0.78, 0.34, 0.05], fov: 42, play: 0.1 },
     },
     inDark: 'vanishes', view: [-18, 4],
     update: (env) => {
-      // five seconds frosted, five clear, switching in a fifth of a second as the molecules turn
-      const at = env.t % 10, on = at >= 5, edge = Math.min(1, Math.abs(at - (on ? 5 : 0)) / 0.2);
+      // five seconds frosted, five clear, switching in a fifth of a second as the molecules turn (a still taken at 2.8 seconds finds it clear)
+      const at = (env.t + 3) % 10, on = at >= 5, edge = Math.min(1, Math.abs(at - (on ? 5 : 0)) / 0.2);
       haze.opacity = on ? 0.95 - 0.9 * edge : at < 0.2 ? 0.05 + 0.9 * edge : 0.95;
       (pilot.material as THREE.MeshStandardMaterial).emissiveIntensity = on ? 1.6 : 0.05;
       const hhmm = now().hhmm;

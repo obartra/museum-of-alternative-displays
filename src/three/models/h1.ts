@@ -1,6 +1,7 @@
 import { G, M, Swarm, glows, screen, THREE, type Built, type V3 } from '../kit';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 import { dots, now } from '../../sims/draw';
+import { jewel, screws, toggle, vents } from '../parts';
 
 const FONT = '"Sofia Sans Extra Condensed Variable", "Arial Narrow", sans-serif';
 
@@ -1040,32 +1041,71 @@ const DROP_FONT: Record<string, string[]> = {
  */
 export function waterCurtain(): Built {
   const root = G.group();
-  const COLS = 32, PITCH = 0.05, W = COLS * PITCH, TOP = 2.05, FLOOR = 0.16, ROWS = 7;
-  const metal = M.steel(1), dark = M.dark();
-  // the frame: two posts on feet and a beam across, with the bar of valves under it
-  for (const sx of [-1, 1]) root.add(G.box(0.07, TOP + 0.12, 0.07, metal, [sx * (W / 2 + 0.16), (TOP + 0.12) / 2, 0]), G.box(0.3, 0.03, 0.4, metal, [sx * (W / 2 + 0.16), 0.015, 0]));
-  root.add(G.box(W + 0.42, 0.08, 0.1, metal, [0, TOP + 0.16, 0]), G.rbox(W + 0.06, 0.07, 0.07, 0.015, dark, [0, TOP + 0.06, 0]));
-  // a valve on every nozzle: small black cylinders in a row, each with its brass tip
-  const valves = new Swarm(new THREE.CylinderGeometry(0.014, 0.014, 0.05, 8), M.black(), COLS);
-  const tips = new Swarm(new THREE.CylinderGeometry(0.006, 0.003, 0.02, 6), M.brass(), COLS);
-  for (let i = 0; i < COLS; i++) { const x = (i - (COLS - 1) / 2) * PITCH; valves.put(i, x, TOP + 0.005, 0); tips.put(i, x, TOP - 0.03, 0); }
-  valves.done(); tips.done();
-  root.add(valves.mesh, tips.mesh);
-  // the supply: a pipe from the basin's pump up one post to the bar
-  root.add(G.wire([[W / 2 + 0.05, 0.12, 0.2], [W / 2 + 0.24, 0.12, 0.08], [W / 2 + 0.24, TOP + 0.06, 0.06], [W / 2, TOP + 0.06, 0.04]], 0.016, M.rubber(), false, 6));
-  // the basin: a long shallow trough with water in it, and lamps under the water that light the drops
-  root.add(G.rbox(W + 0.3, 0.14, 0.5, 0.03, dark, [0, 0.07, 0]));
-  const pool = new THREE.MeshStandardMaterial({ color: 0x2c4c5c, roughness: 0.05, metalness: 0.2, transparent: true, opacity: 0.85 });
-  root.add(G.plane(W + 0.22, 0.42, pool, [0, FLOOR - 0.005, 0]).rotateX(-Math.PI / 2));
-  const glow = M.glow(0xbfe6ff, 1.2);
-  for (let i = 0; i < 6; i++) root.add(G.box(0.12, 0.01, 0.06, glow, [(i - 2.5) * (W / 6), FLOOR - 0.02, 0.12], 0));
+  const COLS = 32, PITCH = 0.05, W = COLS * PITCH, TOP = 2.05, FLOOR = 0.17, ROWS = 7, PX = W / 2 + 0.16, T = Math.PI / 2;
+  const metal = M.steel(1), steel = M.steel(), dark = M.dark(), black = M.black(), rubber = M.rubber();
+  // the frame: two square posts on base plates with levelling feet, a beam across, and a gusset in each top corner
+  for (const sx of [-1, 1]) {
+    const x = sx * PX;
+    root.add(G.box(0.07, TOP + 0.1, 0.07, metal, [x, 0.05 + (TOP + 0.1) / 2, 0]), G.box(0.26, 0.02, 0.36, steel, [x, 0.04, 0], 0));
+    for (const sz of [-1, 1]) root.add(G.cyl(0.022, 0.03, rubber, [x + sx * 0.09, 0.015, sz * 0.14], 16), G.cyl(0.006, 0.03, steel, [x + sx * 0.09, 0.05, sz * 0.14], 8));
+    root.add(screws([[x - 0.09, 0.052, 0.12], [x + 0.09, 0.052, 0.12], [x - 0.09, 0.052, -0.12], [x + 0.09, 0.052, -0.12]], 0.01, 'y'));
+    const gusset = new THREE.Shape([new THREE.Vector2(0, 0), new THREE.Vector2(0.18, 0), new THREE.Vector2(0, -0.18)]);
+    const gm = G.extruded(gusset, 0.012, metal, [x - sx * 0.035, TOP + 0.12, 0], 0.002);
+    if (sx > 0) gm.scale.x = -1;
+    root.add(gm);
+  }
+  root.add(G.box(2 * PX + 0.07, 0.08, 0.1, metal, [0, TOP + 0.16, 0]));
+  // under the beam, the manifold: a pipe that feeds every valve, held in clamps, with the valve bar below it
+  root.add(G.rod([-W / 2 - 0.04, TOP + 0.09, -0.035], [W / 2 + 0.06, TOP + 0.09, -0.035], 0.022, M.steel(0), 20));
+  for (const cx of [-0.6, 0, 0.6]) root.add(G.box(0.03, 0.06, 0.06, dark, [cx, TOP + 0.1, -0.035]));
+  for (const sx of [-1, 1]) root.add(G.cyl(0.026, 0.02, steel, [sx * (W / 2 + 0.05), TOP + 0.09, -0.035], 20).rotateZ(T));
+  root.add(G.rbox(W + 0.06, 0.05, 0.07, 0.012, dark, [0, TOP + 0.045, 0]));
+  // a solenoid valve on every nozzle: a black body with a copper coil band, a lead going up to the bus, and a brass tip
+  const valves = new Swarm(new THREE.CylinderGeometry(0.014, 0.014, 0.05, 10), black, COLS);
+  const coils = new Swarm(new THREE.CylinderGeometry(0.0155, 0.0155, 0.016, 10), M.copper(), COLS);
+  const tips = new Swarm(new THREE.CylinderGeometry(0.006, 0.003, 0.022, 8), M.brass(), COLS);
+  for (let i = 0; i < COLS; i++) { const x = (i - (COLS - 1) / 2) * PITCH; valves.put(i, x, TOP + 0.0, 0.0); coils.put(i, x, TOP + 0.004, 0); tips.put(i, x, TOP - 0.036, 0); }
+  valves.done(); coils.done(); tips.done();
+  for (const s of [valves.mesh, coils.mesh, tips.mesh]) s.userData.noShadow = true;
+  root.add(valves.mesh, coils.mesh, tips.mesh);
+  // the flat cable that switches the valves runs along the front of the bar to the controller on the right post
+  root.add(G.box(W, 0.016, 0.003, M.plastic(0x8a8f94, 0.6), [0, TOP + 0.05, 0.0365], 0));
+  const CY = 1.35;
+  root.add(G.rbox(0.2, 0.3, 0.1, 0.014, M.plastic(0x2a2d31, 0.5), [PX + 0.04, CY, 0.09]), vents(0.12, 0.08, 6, [PX + 0.04, CY - 0.07, 0.1405]));
+  root.add(jewel(0x40d070, 0.009, [PX + 0.0, CY + 0.09, 0.141]), jewel(0x3fa9ff, 0.009, [PX + 0.08, CY + 0.09, 0.141]), toggle([PX + 0.04, CY + 0.02, 0.14], true));
+  root.add(screws([[PX - 0.04, CY + 0.13, 0.141], [PX + 0.12, CY + 0.13, 0.141], [PX - 0.04, CY - 0.13, 0.141], [PX + 0.12, CY - 0.13, 0.141]], 0.007));
+  root.add(G.wire([[W / 2 + 0.03, TOP + 0.05, 0.04], [PX - 0.02, TOP + 0.02, 0.06], [PX + 0.0, CY + 0.6, 0.06], [PX + 0.02, CY + 0.16, 0.08]], 0.008, rubber, false, 5));
+  // the pump in a box at the end of the basin; its hose climbs the post to the manifold, its lead goes to the controller
+  const pumpX = PX + 0.02;
+  root.add(G.rbox(0.2, 0.2, 0.22, 0.016, M.enamel(0x2f4858), [pumpX + 0.06, 0.15, -0.2]), G.cyl(0.05, 0.04, steel, [pumpX + 0.06, 0.27, -0.2], 24));
+  root.add(G.wire([[pumpX + 0.06, 0.29, -0.2], [pumpX + 0.06, 0.4, -0.16], [PX + 0.02, 0.6, -0.06], [PX + 0.02, TOP - 0.1, -0.06], [PX - 0.02, TOP + 0.08, -0.05], [W / 2 + 0.06, TOP + 0.09, -0.035]], 0.017, rubber, false, 8));
+  for (const hy of [0.8, 1.6]) root.add(G.box(0.09, 0.025, 0.04, steel, [PX + 0.0, hy, -0.06]));
+  root.add(G.wire([[pumpX + 0.15, 0.2, -0.12], [pumpX + 0.17, 0.4, 0.0], [PX + 0.08, CY - 0.3, 0.09], [PX + 0.08, CY - 0.15, 0.09]], 0.007, rubber, false, 5));
+  // the basin: a stainless trough with a rolled rim, water in it, a grating to break the fall, and lamps under the water
+  const BW = W + 0.3, BD = 0.5;
+  root.add(G.rbox(BW, 0.13, BD, 0.02, dark, [0, 0.105, 0]));
+  root.add(G.box(BW + 0.02, 0.02, 0.025, steel, [0, FLOOR + 0.005, BD / 2]), G.box(BW + 0.02, 0.02, 0.025, steel, [0, FLOOR + 0.005, -BD / 2]));
+  for (const sx of [-1, 1]) root.add(G.box(0.025, 0.02, BD, steel, [sx * BW / 2, FLOOR + 0.005, 0]));
+  const pool = new THREE.MeshPhysicalMaterial({ color: 0x1f4152, roughness: 0.04, metalness: 0.1, clearcoat: 1, clearcoatRoughness: 0.02, transparent: true, opacity: 0.9 });
+  root.add(G.plane(BW - 0.04, BD - 0.04, pool, [0, FLOOR - 0.012, 0]).rotateX(-T));
+  const bars = new Swarm(new THREE.BoxGeometry(0.006, 0.012, BD - 0.06), steel, 60);
+  for (let i = 0; i < 60; i++) bars.put(i, -BW / 2 + 0.05 + i * ((BW - 0.1) / 59), FLOOR - 0.004, 0);
+  bars.done(); bars.mesh.userData.noShadow = true; root.add(bars.mesh);
+  const glow = M.glow(0xbfe6ff, 1.4);
+  for (let i = 0; i < 8; i++) root.add(G.box(0.1, 0.008, 0.05, glow, [(i - 3.5) * (W / 8), FLOOR - 0.03, 0.14], 0));
   fuse(root);
 
   // two pictures can be in the air at once: one falling, the next just leaving the valves
   const MAX = COLS * ROWS * 2;
-  const drops = new Swarm(new THREE.SphereGeometry(0.015, 8, 6), new THREE.MeshStandardMaterial({ color: 0xe6f6ff, emissive: 0x9fd6ff, emissiveIntensity: 0.5, roughness: 0.05, transparent: true, opacity: 0.9 }), MAX);
+  const drops = new Swarm(new THREE.SphereGeometry(0.019, 10, 8), new THREE.MeshPhysicalMaterial({ color: 0x6fb3dc, emissive: 0x4aa3e0, emissiveIntensity: 0.45, roughness: 0.02, clearcoat: 1, transparent: true, opacity: 0.92 }), MAX);
   drops.mesh.userData.noShadow = true;
   root.add(drops.mesh);
+  // where a drop lands on the water it leaves a ring that spreads and is gone
+  const RINGS = MAX;
+  const ringMat = new THREE.MeshBasicMaterial({ color: 0xcfeaff, transparent: true, opacity: 0.6, depthWrite: false, blending: THREE.AdditiveBlending });
+  const rings = new Swarm(new THREE.RingGeometry(0.8, 1, 24).rotateX(-T), ringMat, RINGS);
+  rings.mesh.userData.noShadow = true;
+  root.add(rings.mesh);
   /** The dots of the time, as columns and rows, centred on the bar. */
   const bitmap = (text: string): [number, number][] => {
     const glyphs = [...text].map((ch) => DROP_FONT[ch] ?? DROP_FONT['0']);
@@ -1075,7 +1115,7 @@ export function waterCurtain(): Built {
     for (const g of glyphs) { g.forEach((row, r) => [...row].forEach((b, c) => { if (b === '1') dots.push([x0 + c, r]); })); x0 += g[0].length + 1; }
     return dots;
   };
-  const EVERY = 2.5, FALL = 1.05, G2 = (2 * (TOP - FLOOR)) / (FALL * FALL);
+  const EVERY = 2.5, FALL = 1.05, G2 = (2 * (TOP - FLOOR)) / (FALL * FALL), LAND = Math.sqrt((2 * (TOP - 0.04 - FLOOR)) / G2), SPREAD = 0.7;
   const away = new THREE.Matrix4().makeTranslation(0, -10, 0);
   return {
     root, views: {
@@ -1084,22 +1124,26 @@ export function waterCurtain(): Built {
     },
     inDark: 'glows', glow: 0xbfe6ff, view: [-14, 4],
     update: (env) => {
-      let k = 0;
+      let k = 0, n = 0;
       for (const back of [0, 1]) {
-        const start = (Math.floor(env.t / EVERY) - back) * EVERY, age = env.t - start;
-        if (age < 0 || age > FALL + ROWS * 0.09) continue;
+        // shifted so that a still, which is taken at 2.8 seconds, catches a picture halfway down
+        const t = env.t + 0.65, start = (Math.floor(t / EVERY) - back) * EVERY, age = t - start;
+        if (age < 0 || age > LAND + SPREAD + ROWS * 0.09) continue;
         for (const [c, r] of bitmap(now().hhmm)) {
           // the bottom row leaves first; each row above leaves a moment later, so the picture keeps its shape
-          const tau = age - (ROWS - 1 - r) * 0.09;
+          const tau = age - (ROWS - 1 - r) * 0.09, x = (c - (COLS - 1) / 2) * PITCH;
           if (tau < 0) continue;
-          const yy = TOP - 0.04 - 0.5 * G2 * tau * tau;
-          if (yy < FLOOR) continue;
-          drops.put(k++, (c - (COLS - 1) / 2) * PITCH, yy, 0, 0, 0, 0, 1, 1 + Math.min(1.6, tau * 2.2), 1);
-          if (k >= MAX) break;
+          if (tau < LAND && k < MAX) drops.put(k++, x, TOP - 0.04 - 0.5 * G2 * tau * tau, 0, 0, 0, 0, 0.85, 1 + Math.min(1.6, tau * 2.2), 0.85);
+          else if (tau < LAND + SPREAD && n < RINGS) {
+            const f = (tau - LAND) / SPREAD, fade = (1 - f) * (1 - f);
+            rings.put(n, x, FLOOR - 0.008, 0, 0, 0, 0, 0.015 + 0.09 * f);
+            rings.tint(n++, fade, fade, fade);
+          }
         }
       }
       for (let i = k; i < MAX; i++) drops.mesh.setMatrixAt(i, away);
-      drops.done();
+      for (let i = n; i < RINGS; i++) rings.mesh.setMatrixAt(i, away);
+      drops.done(); rings.done();
     },
   };
 }
