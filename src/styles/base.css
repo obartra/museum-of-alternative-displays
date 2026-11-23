@@ -272,6 +272,9 @@ h1, h2, h3 { text-wrap: balance; }
 :root[data-lights="off"] .beyond { filter: brightness(6) saturate(1.5) blur(24px); }
 :root[data-lights="off"] .beyond.is-on { opacity: .17; }
 body:has(.stage.is-full) .beyond { display: none; }
+/* the same room as a still picture, behind a page that has no model to draw it */
+.beyond--still { top: 0; height: min(100vh, 860px); background: var(--day) center 30% / cover no-repeat; }
+:root[data-lights="off"] .beyond--still { background-image: var(--night); }
 .stage__box { position: relative; aspect-ratio: 1 / 1; max-height: 74vh; width: 100%; background: var(--wash-2); }
 .stage__poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; cursor: grab; user-select: none; -webkit-user-drag: none; }
 .stage__poster[hidden] { display: none; }

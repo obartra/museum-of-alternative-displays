@@ -149,7 +149,10 @@ function wants3d(): boolean {
 function shell(inner: string, hall?: number, current?: string): void {
   const tab = (n: number) => `<a href="${link(`hall-${n}`)}" data-hall="${n}"${hall === n ? ' aria-current="true"' : ''}><span class="vh">${tx('nav.hall', { n, name: said.hall(hallById(n)).name })}</span><span aria-hidden="true">${n}</span></a>`;
   const menu = langMenu();
-  app.innerHTML = `
+  // behind a page with no model of its own, the hall as a still picture, as faint and as out of focus as the room
+  // that a piece's stage draws behind its page. Not in low power, and not for a visitor saving data
+  const still = !/id="(stage|walk)"/.test(inner) && !lowPower() && !(navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+  app.innerHTML = `${still ? '<div class="beyond beyond--still is-on" aria-hidden="true" style="--day: url(./room-day-600.webp); --night: url(./room-night-600.webp)"></div>' : ''}
 <header class="top">
   <a class="top__name" href="${link('')}">${markSvg('top__mark')}<span>${tx('site.name')}</span></a>
   <div class="top__tools">${menu}${switchHtml()}</div>
