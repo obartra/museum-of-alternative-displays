@@ -1,4 +1,4 @@
-import { G, M, Swarm, glows, screen, THREE, type Built, type V3 } from '../kit';
+import { G, M, Swarm, pace, glows, screen, THREE, type Built, type V3 } from '../kit';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 import { dots, now } from '../../sims/draw';
 import { jewel, screws, toggle, vents } from '../parts';
@@ -617,6 +617,7 @@ export function kineticMirror(): Built {
   tiles.done();
   let first = true;
   const eye = new THREE.Vector3();
+  const pc = pace();
   return {
     root, inDark: 'vanishes', view: [18, 6],
     views: {
@@ -624,7 +625,7 @@ export function kineticMirror(): Built {
       stand: { at: [0, 0.3, 4.5], to: [0, 0, 0], play: 0.3 },
       tiles: { at: [0.85, -0.6, 0.7], to: [0.2, -0.1, 0] },
     },
-    update: ({ t, camera }) => {
+    update: (env) => { const { t, camera } = env; pc.at(env.t);
       // from across the room it shows a visitor passing. Stand close in front and the visitor is you
       root.worldToLocal(eye.copy(camera.position));
       const near = eye.z > 0 ? THREE.MathUtils.smoothstep(5.3 - Math.hypot(eye.x, eye.z), 0, 0.7) : 0;
@@ -634,7 +635,7 @@ export function kineticMirror(): Built {
         const head = Math.hypot(x - cx, y - 0.36) < 0.27;
         const body = ((x - cx) / 0.62) ** 2 + ((y + 0.62) / 0.56) ** 2 < 1;
         const want = head || body ? 0.62 : -0.5;
-        tilt[i] += (want - tilt[i]) * (first ? 1 : 0.14);
+        tilt[i] += (want - tilt[i]) * (first ? 1 : pc.k(0.14));
         put(i);
       }
       tiles.mesh.instanceMatrix.needsUpdate = true;
@@ -849,6 +850,7 @@ export function braille(): Built {
   root.add(cell);
   fuse(root);
   let settled = false;
+  const pc = pace();
   return {
     root, inDark: 'vanishes', view: [14, 32], zoom: 1.3,
     views: { dark: { at: [0.84, 0.4, 0.46], to: [1.17, 0.14, -0.1], play: 0.4 },
@@ -856,12 +858,12 @@ export function braille(): Built {
       touch: { at: [0.84, 0.4, 0.46], to: [1.17, 0.14, -0.1], play: 0.4 },
       cell: { at: [1.95, 1.1, 0.3], to: [0.5, 0.4, -1.4] },
     },
-    update: () => {
+    update: (env) => { pc.at(env.t);
       const n = now();
       const text = `#${n.hhmm.slice(0, 2)}:#${n.hhmm.slice(3)}:#${n.hhmmss.slice(6)}`;
       for (let c = 0; c < CELLS; c++) {
         const up = BRAILLE[text[c]] ?? [];
-        for (let d = 0; d < 8; d++) { const i = c * 8 + d; hgt[i] += ((up.includes(d + 1) ? 0.085 : 0.01) - hgt[i]) * (settled ? 0.3 : 1); }
+        for (let d = 0; d < 8; d++) { const i = c * 8 + d; hgt[i] += ((up.includes(d + 1) ? 0.085 : 0.01) - hgt[i]) * (settled ? pc.k(0.3) : 1); }
       }
       place(); pins.mesh.instanceMatrix.needsUpdate = true;
       work(); heads.mesh.instanceMatrix.needsUpdate = true; stems.mesh.instanceMatrix.needsUpdate = true; reeds.mesh.instanceMatrix.needsUpdate = true;

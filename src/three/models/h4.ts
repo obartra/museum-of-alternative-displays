@@ -1,4 +1,4 @@
-import { G, M, Swarm, beam, halo, screen, spline, voxels, THREE, type Built, type P2, type V3 } from '../kit';
+import { G, M, Swarm, pace, beam, halo, screen, spline, voxels, THREE, type Built, type P2, type V3 } from '../kit';
 import { breadboard, lens, screws, toggle, vents } from '../parts';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries, toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
@@ -321,9 +321,10 @@ export function dmd(): Built {
   root.add(weld(...fixed), win, lifted);
   const eye = new THREE.Vector3();
   let first = true;
+  const pc = pace();
   return {
     root, views: { chip: { at: [0.65, 0.75, 1.3], to: [0, 0.25, 0], fov: 32, play: 0.1 }, mirrors: { at: [0.6, 1.6, 1.1], to: [0, 1.1, 0.05], fov: 30 } }, inDark: 'vanishes', view: [24, 16],
-    update: ({ camera }) => {
+    update: (env) => { const { camera } = env; pc.at(env.t);
       const d = dots(now().hhmmss.slice(6));
       // from which side the patch is looked at, across its hinges. A mirror is bright when it tips towards the eye: from the far
       // side it is the other mirrors that tip that way, and the numeral turns into its negative
@@ -331,7 +332,7 @@ export function dmd(): Built {
       const side = THREE.MathUtils.smoothstep((eye.z - eye.x) * Math.SQRT1_2, -0.62, -0.22);
       for (let i = 0; i < N; i++) {
         const on = d.on((i % COLS) - 1, Math.floor(i / COLS));
-        tilt[i] += ((on ? 0.21 : -0.21) - tilt[i]) * (first ? 1 : 0.3);
+        tilt[i] += ((on ? 0.21 : -0.21) - tilt[i]) * (first ? 1 : pc.k(0.3));
         const [x, z] = at(i);
         mirrors.spin(i, x, 0, z, DIAG, tilt[i]);
         const v = 0.3 + 0.7 * (on ? side : 1 - side);

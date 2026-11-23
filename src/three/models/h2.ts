@@ -1,4 +1,4 @@
-import { G, M, Swarm, glows, halo, lamps, screen, spline, THREE, type Built, type P2, type V3 } from '../kit';
+import { G, M, Swarm, pace, glows, halo, lamps, screen, spline, THREE, type Built, type P2, type V3 } from '../kit';
 import { feet, jewel, meshMat, meshTexture, screws, vents } from '../parts';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { SEG, SEG_LINES, bigTime, clockStrokes, dotMatrix, dots, now, segClock } from '../../sims/draw';
@@ -1074,19 +1074,20 @@ export function eggcrate(): Built {
   const level = new Float32Array(N);
   // the pattern of each character, worked out again only when the minute changes
   let shown = '', shapes = [dots(' '), dots(' '), dots(' '), dots(' ')];
+  const pc = pace();
   return {
     root, inDark: 'glows', glow: 0xffc070, view: [18, 6], zoom: 1.08,
     views: {
       below: { room: true, at: [2.5, 0.25, 2.2], to: [0.5, 0, 0], fov: 50 },
       lamps: { at: [1, 0.25, 0.75], to: [0.62, 0.1, 0] },
     },
-    update: () => {
+    update: (env) => { pc.at(env.t);
       const n = now();
       if (n.hhmm !== shown) { shown = n.hhmm; shapes = [...n.hhmm.replace(':', '')].map((ch) => dots(ch)); }
       for (let i = 0; i < N; i++) {
         const lit = i >= 140 ? n.s % 2 === 0 : shapes[Math.floor(i / 35)].on(i % 5, Math.floor((i % 35) / 5));
         // filaments take a moment to heat and cool, which is the eggcrate's whole look
-        level[i] += ((lit ? 1 : 0) - level[i]) * (lit ? 0.16 : 0.09);
+        level[i] += ((lit ? 1 : 0) - level[i]) * pc.k(lit ? 0.16 : 0.09);
         const v = level[i], o = i * 3;
         light.tint(i, v, v * 0.74, v * 0.38);
         bloom.col[o] = v * 0.9; bloom.col[o + 1] = v * 0.6; bloom.col[o + 2] = v * 0.26;

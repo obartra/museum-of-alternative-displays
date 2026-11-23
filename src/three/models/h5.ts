@@ -1,4 +1,4 @@
-import { G, M, Swarm, screen, THREE, type Built, type V3 } from '../kit';
+import { G, M, Swarm, pace, screen, THREE, type Built, type V3 } from '../kit';
 import { block, can, flatLead, fused, groundEdge, heads, lead, patch, put, roundedRect, sheetOfGlass } from './h3';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { SEG, SEG_LINES, bigTime, dots, now } from '../../sims/draw';
@@ -44,16 +44,17 @@ export function gyricon(): Built {
   }
   root.add(fused(made));
   let first = true, sec = -1, d = dots('00');
+  const pc = pace();
   return {
     root, views: { beads: { at: [0.6, 1.05, 1.0], to: [0.1, 0.8, 0], fov: 28 } }, inDark: 'vanishes', view: [20, 6],
-    update: () => {
+    update: (env) => { pc.at(env.t);
       const n = now();
       if (n.s !== sec) { sec = n.s; d = dots(n.hhmmss.slice(6)); }
       let turned = false;
       for (let i = 0; i < N; i++) {
         const want = d.on((i % COLS) - 1, Math.floor(i / COLS)) ? Math.PI / 2 : -Math.PI / 2;
         if (Math.abs(want - ang[i]) < 0.001) continue;
-        ang[i] = first ? want : ang[i] + (want - ang[i]) * 0.14;
+        ang[i] = first ? want : ang[i] + (want - ang[i]) * pc.k(0.14);
         beads.put(i, ((i % COLS) - (COLS - 1) / 2) * P, y + ((ROWS - 1) / 2 - Math.floor(i / COLS)) * P, 0, ang[i], 0, 0);
         turned = true;
       }
@@ -333,12 +334,13 @@ export function electrowetting(): Built {
   made.add(lead([tag, [tag[0] + 0.03, tag[1] + 0.03, tag[2] - 0.05], [0.98, back[1] - 0.1, -0.8], [0.93, 0.9, -0.79], [0.92, 0.8, -0.745]], 0.011, M.plastic(0xb5281d, 0.5), 18));
   root.add(fused(made));
   let first = true;
+  const pc = pace();
   return {
     root, views: { oil: { at: [1.8, 0.95, 0.6], to: [0, 0.75, 0.1], fov: 32, play: 0.1 }, cells: { at: [0.5, 1.6, 1.2], to: [0, 0.85, 0.15], fov: 30 } }, inDark: 'vanishes', view: [22, 16],
-    update: ({ t }) => {
+    update: (env) => { const { t } = env; pc.at(env.t);
       for (let i = 0; i < N; i++) {
         const want = Math.sin(t * 1.3 + (i % COLS) * 1.1 + Math.floor(i / COLS) * 2.3) > 0.1 ? 1 : 0;
-        state[i] += (want - state[i]) * (first ? 1 : 0.25); // tens of milliseconds in the real thing: fast enough for video
+        state[i] += (want - state[i]) * (first ? 1 : pc.k(0.25)); // tens of milliseconds in the real thing: fast enough for video
       }
       first = false;
       gathered.needsUpdate = true;
@@ -413,14 +415,15 @@ export function imod(): Built {
   root.add(fused(made), hold);
   const palette = [[1, 1, 1], [1, 0, 0], [1, 1, 0], [0, 1, 0], [0, 1, 1], [0, 0, 1], [1, 0, 1], [0, 0, 0]], open = new Float32Array(N).fill(1);
   let first = true;
+  const pc = pace();
   return {
     // from above the top row: the eye goes in behind the glass and finds a mirror at a different depth behind each colour
     root, views: { gaps: { at: [1.08, 2.07, 0.59], to: [0.56, 1.12, -0.08], fov: 30 } }, inDark: 'vanishes', view: [40, 10],
-    update: ({ t }) => {
+    update: (env) => { const { t } = env; pc.at(env.t);
       for (let i = 0; i < N; i++) {
         const k = i % 3, pixel = Math.floor((i % COLS) / 3) + Math.floor(i / COLS) * 2;
         const want = palette[(Math.floor(t * 0.7) + pixel) % palette.length][k];
-        open[i] += (want - open[i]) * (first ? 1 : 0.3);
+        open[i] += (want - open[i]) * (first ? 1 : pc.k(0.3));
         const v = open[i];
         pull.value[i] = gaps[k] * (1 - v);
         colour.tint(i, 0.02 + rgb[k][0] * v, 0.02 + rgb[k][1] * v, 0.02 + rgb[k][2] * v);
@@ -489,9 +492,10 @@ export function electrochromic(): Built {
   let minute = -1, settled = false;
   // the words are printed again once their typeface has arrived
   void document.fonts?.ready.then(() => { printBlank(); settled = false; });
+  const pc = pace();
   return {
     root, views: { label: { at: [-0.1, 1.15, 1.75], to: [-0.38, 0.62, 0.32], fov: 30 } }, inDark: 'vanishes', view: [20, 12], surface: s.canvas,
-    update: ({ t }) => {
+    update: (env) => { const { t } = env; pc.at(env.t);
       tint.opacity = 0.42 + 0.36 * Math.sin(t * 0.5);
       const n = now();
       // nothing is drawn while no bar is changing: the label keeps its picture, as the real one does
@@ -504,7 +508,7 @@ export function electrochromic(): Built {
         for (let j = 0; j < 7; j++) {
           const i = k * 7 + j, want = SEG[digit].includes(BARS[j]) ? 1 : 0;
           // the film takes seconds to colour and to bleach, not milliseconds
-          level[i] = level[i] < 0 || Math.abs(want - level[i]) < 0.004 ? want : level[i] + (want - level[i]) * 0.012;
+          level[i] = level[i] < 0 || Math.abs(want - level[i]) < 0.004 ? want : level[i] + (want - level[i]) * pc.k(0.012);
           if (level[i] !== want) settled = false;
           c.globalAlpha = 0.07 + 0.93 * level[i];
           segment(c, 70 + k * 130, 34, 96, 170, BARS[j]);

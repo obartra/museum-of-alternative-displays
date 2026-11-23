@@ -17,6 +17,19 @@ export interface Env {
   view?: string;
 }
 
+/**
+ * Easing that closes a share of the gap to a target each frame, at the same speed whatever the frame rate. Call
+ * `at(t)` once at the top of an update; `k(r)` is then the share to close this frame, where `r` is the share per
+ * frame at 60 frames a second.
+ */
+export const pace = () => {
+  let last = Number.NaN, dt = 1 / 60;
+  return {
+    at(t: number) { dt = Number.isNaN(last) ? 1 / 60 : Math.min(0.25, Math.max(0, t - last)); last = t; },
+    k: (r: number) => 1 - Math.pow(1 - r, dt * 60),
+  };
+};
+
 /** How the piece behaves when the hall lights go off. */
 export type InDark = 'glows' | 'vanishes' | 'better';
 
