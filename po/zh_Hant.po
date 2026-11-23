@@ -1088,6 +1088,30 @@ msgstr "回到展廳"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.who"
+msgid "People of this piece"
+msgstr "這件展品的人物"
+
+#: interface
+#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+msgctxt "ui.walk.who.more"
+msgid "{n} more"
+msgstr "還有{n}人"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.who.back"
+msgid "Back to the list"
+msgstr "返回清單"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.who.page"
+msgid "Open the full page"
+msgstr "開啟完整頁面"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.go.forward"
 msgid "Walk forward"
 msgstr "向前走"

@@ -20,6 +20,7 @@ import { findKept, greet, hush, justAsked, keepTrail, preview, resumed, spokenMi
 import { goTo, langOfAddress, link, nameNow, settle, wirePlaces } from './place';
 import { viewsOf } from './data/views';
 import { archiveCount, archiveSection, creditsList, wireArchive } from './archive';
+import { elsewhereItem, lifeOf, portraitCredit, sourceItems } from './profile';
 import { appFoot, appHtml, wireApp } from './app';
 import { keepHtml, showKeep, wireKeep } from './keep';
 import { AUTHOR, LICENCE, REPO } from './site';
@@ -300,21 +301,9 @@ function hallView(n: number): void {
 
 // ---------- people ----------
 /**
- * A portrait, where one has been added by hand, with its credit. A drawing after a picture names the picture's
- * author and its licence, as the licence asks. A study names who published the photographs it was drawn from,
- * each as a link to the page. `named` puts the sitter's name under it: a line that credits several people needs
- * it, or a picture could be taken for the wrong one of them.
+ * A portrait, where one has been added by hand, with its credit (profile.ts). `named` puts the sitter's name under
+ * it: a line that credits several people needs it, or a picture could be taken for the wrong one of them.
  */
-const portraitCredit = (name: string): string => {
-  const pic = portraits[name];
-  if (!pic) return '';
-  if ('study' in pic) {
-    // each publisher once, with the first of its pages
-    const once = pic.study.filter((x, i) => pic.study.findIndex((y) => y.by === x.by) === i);
-    return tx('people.study', { by: '\u0001' }).replace('\u0001', once.map((x) => `<a href="${esc(x.source)}" rel="noopener">${esc(x.by)}</a>`).join(esc(comma())));
-  }
-  return `<a href="${esc(pic.source)}" rel="noopener">${pic.by ? tx('people.portrait', { by: pic.by, licence: pic.licence }) : tx('people.portrait.anon', { licence: pic.licence })}</a>`;
-};
 const portraitHtml = (name: string, named = false): string => {
   const pic = portraits[name];
   if (!pic) return '';
@@ -345,7 +334,7 @@ function personView(slug: string): void {
   // the account in the language in use or, where it is not translated yet, in English and marked as English
   const about = bio ? said.bio(who.slug, bio.about) : [], english = bio ? standIn.bio(who.slug, bio.about) : '';
   says(bio && !english ? about.join(' ') : lines[0]);
-  const life = bio?.born ? (bio.died ? tx('person.life', { born: bio.born, died: bio.died }) : tx('person.born', { born: bio.born })) : '';
+  const life = lifeOf(bio);
   const told = toursNow();
   // the guided tours that tell of this person, each on the card the entrance shows it on
   const lanes = trails.filter((tr) => who.on.some(({ entry }) => tr.who(entry).includes(who.name)))
@@ -369,8 +358,8 @@ function personView(slug: string): void {
     ${about.length ? `<p class="lead pers__lead"${english}>${esc(about[0])}</p>${about.length > 1 ? `<div class="prose"${english}>${about.slice(1).map((line) => `<p>${esc(line)}</p>`).join('')}</div>` : ''}` : ''}
     <section class="pers__sec"><h2 class="h-sec">${tx('person.in')}</h2><ul class="pers__list">${rows}</ul></section>
     ${lanes ? `<div class="pers__tours">${lanes}</div>` : ''}
-    ${sources.length ? `<section class="pers__sec"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sources.map((src) => `<li><span class="kind">${esc(said.sourceKind(src.kind))}</span><a href="${esc(src.url)}" rel="noopener">${esc(src.label)}</a></li>`).join('')}</ol></section>` : ''}
-    ${out ? `<section class="pers__sec"><h2 class="h-sec">${tx('person.elsewhere')}</h2><ol class="sources"><li><span class="kind">${tx(`person.kind.${out.kind}`)}</span><a href="${esc(out.url)}" rel="noopener">${esc(out.label)}</a></li></ol></section>` : ''}
+    ${sources.length ? `<section class="pers__sec"><h2 class="h-sec">${tx('piece.sources')}</h2><ol class="sources">${sourceItems(sources)}</ol></section>` : ''}
+    ${out ? `<section class="pers__sec"><h2 class="h-sec">${tx('person.elsewhere')}</h2><ol class="sources">${elsewhereItem(out)}</ol></section>` : ''}
     <nav class="pager" aria-label="${tx('nav.people')}">${prev ? `<a href="${link(`person-${prev.slug}`)}">${tx('pager.back', { name: prev.name })}</a>` : `<a href="${link('people')}">${tx('people.more')}</a>`}${next ? `<a href="${link(`person-${next.slug}`)}">${tx('pager.next', { name: next.name })}</a>` : ''}</nav>
   </div>
 </article>`, undefined, 'people');

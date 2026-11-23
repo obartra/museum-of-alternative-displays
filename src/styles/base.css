@@ -670,13 +670,15 @@ body:has(.stage.is-full) .beyond { display: none; }
 .walk__cc { position: absolute; left: 50%; bottom: calc(var(--lift, calc(var(--b) + 56px)) + 4px); translate: -50% 0; z-index: 2; width: max-content; max-width: min(calc(100% - var(--l) - var(--r) - 8px), 46ch); margin: 0; padding: 5px 10px 6px; border-radius: 4px; background: color-mix(in srgb, #0b0d0f 84%, transparent); color: #f4f4ee; font-size: var(--t-s); font-weight: 600; line-height: 1.3; text-align: center; text-wrap: balance; pointer-events: none; }
 .walk__cc[hidden] { display: none; }
 .walk__pad:not([hidden]) ~ .walk__cc { --lift: calc(var(--b) + 112px); }
-/* the plate is a link to the page of the piece: with a name and no portrait it is still tall enough for a finger */
-@media (pointer: coarse) { .walk__who { min-height: 44px; } }
-.walk__face { display: flex; align-items: center; gap: 7px; min-width: 0; }
+/* each name on the plate is a key that opens the profile of that person. With a name and no portrait it is still
+   tall enough for a finger */
+@media (pointer: coarse) { .walk__who { min-height: 44px; } .walk__face { min-height: 40px; } }
+.walk__face { display: flex; align-items: center; gap: 7px; min-width: 0; appearance: none; margin: 0; padding: 0; border: 0; border-radius: 2px; background: none; color: inherit; font: inherit; text-align: start; }
+button.walk__face { cursor: pointer; }
 .walk__face img { flex: none; width: 40px; height: 50px; border-radius: 2px; object-fit: cover; background: #fff; }
 .walk__face span { max-width: 8.5em; overflow-wrap: anywhere; }
 .walk__face > span:only-child { padding: 3px 0 3px 4px; }
-@media (hover: hover) { .walk__who:hover { background: var(--plate); } }
+@media (hover: hover) { button.walk__face:hover > span { text-decoration: underline; text-underline-offset: .15em; } }
 @media (min-width: 720px) { .walk__who { font-size: var(--t-s); } .walk__face img { width: 48px; height: 60px; } }
 /* What stands on the picture goes by the width of the picture, which it measures itself: 620px is a desk or a tablet.
    A phone has a narrower one whichever way it is held, since on its side the guide takes a column of the screen */
@@ -756,6 +758,72 @@ body:has(.stage.is-full) .beyond { display: none; }
   .walk__view:has(.walk__who:not([hidden])) .walk__look span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .walk__view:has(.walk__who:not([hidden])):has(.walk__fold[aria-expanded="true"]) .walk__look:not([hidden]) { display: inline-flex; }
 }
+/* Three people or more. On a narrow picture they stand one above the other, a size smaller, and the key keeps to
+   the left of them in the top row. On a wide one they stand two by two. The count of the others goes under them */
+@container view (max-width: 619px) {
+  .walk__who--many { flex-direction: column; gap: 2px; }
+  .walk__who--many .walk__face img { width: 32px; height: 40px; }
+  .walk__who--many .walk__face span { max-width: 7em; }
+  .walk__view:has(.walk__who--many:not([hidden]) .walk__face + .walk__face) :is(.walk__look, .near__back) { top: var(--t); }
+  .walk__view:has(.walk__who--many:not([hidden]) .walk__face + .walk__face) .near__hint { top: calc(var(--t) + 54px); max-width: calc(100% - var(--l) - var(--r) - 190px); }
+}
+@container view (max-width: 359px) { .walk__view:has(.walk__who--many:not([hidden])) .near__hint { display: none; } }
+@container view (min-width: 620px) {
+  .walk__who--many { display: grid; grid-template-columns: repeat(2, auto); gap: 6px 14px; }
+  .walk__who--many .walk__more { grid-column: 1 / -1; }
+  .walk__view:has(.walk__who--many:not([hidden])) .near__hint { max-width: calc(100% - var(--l) - var(--r) - 400px); }
+}
+.walk__more > span { text-decoration: underline; text-underline-offset: .15em; }
+
+/* The profile of a person, opened from the plate: a sheet that rises from the foot of a phone, and a panel at the
+   side of a wider window, with the picture of the hall dimmed behind it. Its body scrolls by itself */
+.sheet { width: 100%; max-width: 100%; max-height: min(88dvh, calc(100dvh - 32px)); margin: auto 0 0; padding: 0; border: 0; border-radius: 10px 10px 0 0; background: var(--wash); color: var(--ink); box-shadow: 0 0 0 1px var(--rim), 0 -18px 40px -24px rgba(20, 23, 26, .55); overflow: hidden; }
+.sheet[open] { display: flex; flex-direction: column; }
+.sheet::backdrop { background: color-mix(in srgb, #0b0d0f 34%, transparent); }
+.sheet__bar { flex: none; display: flex; align-items: center; gap: 10px; padding: 8px var(--side-r) 8px var(--side-l); border-bottom: 1px solid var(--line); }
+.sheet__back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.sheet__back svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+.sheet__close { margin-left: auto; width: 44px; height: 44px; }
+.sheet__body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; display: grid; gap: 18px; align-content: start; padding: 18px var(--side-r) calc(28px + var(--safe-b)) var(--side-l); }
+.sheet__body [tabindex="-1"]:focus { outline: none; }
+/* the portrait on its piece of wall, from edge to edge of the sheet, as on a phone the person page has it */
+.sheet .pers__fig { position: static; }
+.sheet .pers__wall { margin: -18px calc(var(--side-r) * -1) 0 calc(var(--side-l) * -1); border-radius: 0; padding: 26px; }
+.sheet .pers__portrait { min-width: 0; max-height: min(30dvh, 240px); }
+.sheet__plate { justify-self: start; max-width: 100%; }
+.sheet__plate .plate__title { font-size: clamp(1.9rem, 8vw, 2.6rem); overflow-wrap: anywhere; }
+.sheet__piece { display: flex; align-items: center; gap: 9px; margin: 0; font-size: var(--t-m); font-weight: 700; line-height: 1.2; }
+.sheet__here { display: grid; gap: 6px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.sheet__here p { font-size: var(--t-m); line-height: 1.45; }
+.sheet__about .prose { margin-top: .8em; }
+.sheet .pers__sec > h3 { margin: 0 0 10px; }
+.sheet__page { padding-top: 4px; }
+.sheet__title { font-size: var(--t-l); font-weight: 700; line-height: 1.2; }
+.sheet__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.sheet__person { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 0; appearance: none; margin: 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: inherit; font: inherit; text-align: start; }
+button.sheet__person { cursor: pointer; }
+.sheet__person img, .sheet__person i { flex: none; width: 40px; height: 50px; border-radius: 2px; object-fit: cover; background: #fff; filter: grayscale(1) contrast(1.06); box-shadow: 0 0 0 1px var(--rim); }
+.sheet__person i { background: var(--block); filter: none; }
+.sheet__person span { display: grid; gap: 2px; min-width: 0; }
+.sheet__person b { font-weight: 700; overflow-wrap: anywhere; }
+.sheet__person small { font-size: var(--t-xs); color: var(--ink-2); }
+@media (hover: hover) { button.sheet__person:hover b { text-decoration: underline; text-underline-offset: .15em; } }
+:root[data-lights="off"] .sheet__person img { filter: grayscale(1) contrast(1.06) brightness(.8); }
+@media (min-width: 760px) {
+  .sheet { width: min(440px, 44vw); height: 100dvh; max-height: 100dvh; margin: 0 0 0 auto; border-radius: 0; box-shadow: 0 0 0 1px var(--rim), -18px 0 40px -24px rgba(20, 23, 26, .55); }
+  .sheet__bar, .sheet__body { padding-left: 26px; padding-right: max(26px, var(--safe-r)); }
+  .sheet .pers__wall { margin: -18px calc(max(26px, var(--safe-r)) * -1) 0 -26px; }
+  .sheet .pers__portrait { max-height: min(34dvh, 300px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sheet[open] { animation: sheet-rise .24s ease-out; }
+  .sheet[open]::backdrop { animation: sheet-dim .24s ease-out; }
+  @media (min-width: 760px) { .sheet[open] { animation-name: sheet-slide; } }
+}
+@keyframes sheet-rise { from { translate: 0 100%; } }
+@keyframes sheet-slide { from { translate: 100% 0; } }
+@keyframes sheet-dim { from { opacity: 0; } }
+
 /* where the visitor stands, in words */
 .walk__where { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; min-height: 54px; padding: 10px var(--pr) 0 var(--pl); font-weight: 600; font-size: var(--t-s); line-height: 1.25; }
 .walk__open { margin-left: auto; text-decoration: none; background: var(--ink); color: var(--wash); box-shadow: inset 0 0 0 1.5px var(--ink), 0 var(--edge) 0 var(--ink-2); }

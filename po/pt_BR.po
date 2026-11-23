@@ -1094,6 +1094,30 @@ msgstr "Voltar à sala"
 
 #: interface
 #. The walk through the halls in 3D.
+msgctxt "ui.walk.who"
+msgid "People of this piece"
+msgstr "Pessoas desta peça"
+
+#: interface
+#. The walk through the halls in 3D. Keep the words in curly brackets as they are.
+msgctxt "ui.walk.who.more"
+msgid "{n} more"
+msgstr "Mais {n}"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.who.back"
+msgid "Back to the list"
+msgstr "Volte à lista"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.who.page"
+msgid "Open the full page"
+msgstr "Abra a página completa"
+
+#: interface
+#. The walk through the halls in 3D.
 msgctxt "ui.walk.go.forward"
 msgid "Walk forward"
 msgstr "Andar para a frente"

@@ -1,5 +1,4 @@
 import { pieceById } from './data/pieces';
-import { portraits } from './data/portraits';
 import { tourStops, type Stand, type Tour } from './data/tours';
 import { trailById } from './data/trails';
 import { esc } from './html';
@@ -17,7 +16,7 @@ import { captionAt, clipOf, hush, keepCaptions, keepVoice, ready, speak, toursNo
  * a visitor who strolls to another stop while she speaks hears her out, and she takes up that stop when she has
  * finished. With her voice switched off, or where a language has no recording, the tour is the same tour to read.
  *
- * The person a stop is about is shown in a corner of the picture, with their portrait where there is one.
+ * The walk shows the people a stop is about in a corner of the picture (who.ts), from the tour's `who`.
  *
  * While no tour is being taken and the language tells one, the band is a single quiet row that offers it.
  */
@@ -71,7 +70,7 @@ const WAIT = { soon: 4500, later: 20000 };
 /** The breath between arriving and her first word. */
 const BREATH = 400;
 
-export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks): Guide {
+export function openGuide(root: HTMLElement, hooks: GuideHooks): Guide {
   const a = voice();
   let tour: Tour | undefined, at = 'start', here = '', closed = false;
   /** The stop a key has just sent the visitor to. Until they are there, the pieces they pass are not arrivals. */
@@ -106,7 +105,6 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
       root.hidden = !offer;
       for (const name of ['data-playing', 'data-told', 'data-last', 'data-voice', 'data-voices']) root.removeAttribute(name);
       root.style.removeProperty('--trail');
-      who.hidden = true; who.innerHTML = '';
       root.innerHTML = offer
         ? `<div class="guide__invite"><p class="guide__name"><span>${tx('tour.label')}</span><b>${esc(said.tour(offer)!.title)}</b></p><button type="button" class="btn guide__start" data-guide="enter" data-tour="${offer.id}">${tx('tour.start')}</button></div>`
         : '';
@@ -114,7 +112,7 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     }
     const stops = tourStops(tour), any = tour.parts.some((p) => clipOf(tour!, p.id));
     root.hidden = false;
-    for (const el of [root, who]) el.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
+    root.style.setProperty('--trail', trailById(tour.id)?.colour ?? '#1f9d55');
     root.dataset.voices = any ? 'some' : 'none';
     // the line is told how many parts it has: a phone on its side folds it into two rows, and needs the number to do so
     root.innerHTML = `
@@ -150,12 +148,6 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
     $('.guide__title').textContent = part.title;
     $('.guide__place').innerHTML = piece ? `<a href="${link(`piece-${piece.id}`)}">${tx('tour.at', { piece: said.piece(piece).name, n: piece.hall })}</a>` : '';
     $('.guide__text').innerHTML = part.text.map((p) => `<p>${esc(p)}</p>`).join('');
-    // who this stop is about, in a corner of the picture: a face where there is a portrait, and always the name.
-    // It leads to the page of the piece, where the portrait has its credit
-    const names = tour.parts[i].who ?? [];
-    who.hidden = !piece || !names.length;
-    who.innerHTML = piece ? names.map((name) => { const pic = portraits[name]; return `<span class="walk__face">${pic ? `<img src="./people/${esc(pic.file)}" alt="" width="84" height="105" decoding="async">` : ''}<span>${esc(name)}</span></span>`; }).join('') : '';
-    if (piece) { who.setAttribute('href', link(`piece-${piece.id}`)); who.title = t('walk.open', { name: said.piece(piece).name }); }
     root.querySelectorAll<HTMLButtonElement>('.guide__dot').forEach((dot, k) => {
       dot.classList.toggle('is-past', k < i); dot.classList.toggle('is-now', k === i);
       if (k === i) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');
@@ -372,7 +364,6 @@ export function openGuide(root: HTMLElement, who: HTMLElement, hooks: GuideHooks
       closed = true;
       drop(); hush();
       window.clearTimeout(aimed);
-      who.hidden = true; who.innerHTML = '';
       caption('');
       root.removeEventListener('click', onClick);
       root.removeEventListener('toggle', onToggle, true);
