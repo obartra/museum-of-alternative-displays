@@ -303,6 +303,18 @@ export class Stage {
   /** Full view hands every gesture to the stage. Inline, vertical swipes belong to the page. */
   setFree(free: boolean): void { this.canvas.style.touchAction = free ? 'none' : 'pan-y'; }
 
+  /**
+   * Take over a press that began on the still picture, before the model was there to feel it. The controls are told
+   * of it as of a press on the canvas, there where the pointer is now, and the drag goes on from that place.
+   */
+  grab(held: { pointerId: number; pointerType: string; clientX: number; clientY: number }): void {
+    if (!this.controls) return;
+    const e = new PointerEvent('pointerdown', { ...held, button: 0, buttons: 1, isPrimary: true, bubbles: true, cancelable: true });
+    // the controls measure a finger from the top of the page, and a press made here does not know how far it is scrolled
+    Object.defineProperties(e, { pageX: { value: held.clientX + window.scrollX }, pageY: { value: held.clientY + window.scrollY } });
+    this.canvas.dispatchEvent(e);
+  }
+
   setLights(on: boolean, instant = false): void {
     this.lightsTarget = on ? 1 : 0;
     if (instant) this.lights = this.lightsTarget;

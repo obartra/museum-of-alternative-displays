@@ -323,6 +323,19 @@ export class Gallery {
       this.goTo({ x, z, yaw: far > 1.5 ? Math.atan2(this.x - x, this.z - z) : this.yaw }, 0);
     }
   };
+  /**
+   * Take over a press that began on the still picture, before the hall was there to feel it. It goes on as a drag
+   * from where the pointer is now, and is never a click on a piece, however short it turns out to be.
+   */
+  grab(held: { pointerId: number; pointerType: string; clientX: number; clientY: number }): void {
+    if (this.drag) return;
+    this.drag = { id: held.pointerId, x: held.clientX, y: held.clientY, x0: held.clientX, y0: held.clientY, t0: -Infinity, moved: false };
+    try { this.canvas.setPointerCapture(held.pointerId); } catch { /* the pointer has already gone */ }
+  }
+  /** A key pressed or let go elsewhere on the page, which nothing there had a use for. */
+  key(e: KeyboardEvent, down: boolean): void { if (down) this.onKey(e); else this.onKeyUp(e); }
+  /** No key is held any more: the window has lost the keyboard. */
+  letGo(): void { this.keys.clear(); }
   private onCancel = (e: PointerEvent): void => { if (e.pointerId === this.twin) this.twin = undefined; if (this.drag?.id === e.pointerId) this.drag = undefined; };
   /** In full view the wheel walks: forward as it turns away. Inline, the wheel belongs to the page. */
   private onWheel = (e: WheelEvent): void => {

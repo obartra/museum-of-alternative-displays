@@ -1,5 +1,6 @@
 import { pieceById } from './data/pieces';
 import { viewsOf } from './data/views';
+import { pageScrolls } from './hands';
 import { esc } from './html';
 import { said, standIn, t, tx } from './i18n';
 import type { Built } from './three/kit';
@@ -47,6 +48,8 @@ export interface Near {
   setFree(free: boolean): void;
   /** The page has gone out of sight, or come back. */
   rest(hidden: boolean): void;
+  /** A key pressed elsewhere on the page, which nothing there had a use for. */
+  key(e: KeyboardEvent): void;
   close(): void;
 }
 
@@ -141,12 +144,18 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
     else if (el.dataset.act === 'front') { setView(null); stage.goFront(); }
     else setView(null);
   };
-  // with the stand in focus the keys turn it, as on the page of a piece
-  const onKey = (e: KeyboardEvent) => {
+  // the keys turn the stand, as on the page of a piece: with the stand in focus, and from anywhere on the page that
+  // has no use of its own for them. Up and down stay with a page that scrolls, unless the stand has the focus
+  const onKey = (e: KeyboardEvent) => { if (e.target === lent?.canvas) turnBy(e, true); };
+  const turnBy = (e: KeyboardEvent, focused: boolean) => {
     const stage = lent?.stage;
-    if (!piece || !stage || !live || e.altKey || e.ctrlKey || e.metaKey || e.target !== lent?.canvas) return;
+    if (!piece || !stage || !live || e.altKey || e.ctrlKey || e.metaKey) return;
     const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
-    if (k[e.key]) { e.preventDefault(); e.stopPropagation(); return stage.nudge(...k[e.key]); }
+    if (k[e.key]) {
+      if (!focused && (e.key === 'ArrowUp' || e.key === 'ArrowDown') && pageScrolls()) return;
+      e.preventDefault(); e.stopPropagation();
+      return stage.nudge(...k[e.key]);
+    }
     const key = e.key.toLowerCase();
     if (key === 'r' || key === '0') { e.preventDefault(); return setView(null); }
     if (/^[1-9]$/.test(key)) { e.preventDefault(); [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled)[Number(key) - 1]?.click(); }
@@ -196,6 +205,7 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
       if (!live) return;
       if (away) lent?.stage.stop(); else lent?.stage.start();
     },
+    key(e) { turnBy(e, false); },
     close() {
       turn++; piece = ''; live = false;
       root.removeEventListener('click', onClick);
