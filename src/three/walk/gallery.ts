@@ -297,6 +297,8 @@ export class Gallery {
     // inline, an up and down swipe belongs to the page
     if (this.free || e.pointerType === 'mouse') this.pitch = THREE.MathUtils.clamp(this.pitch + (e.clientY - d.y) * per, -0.9, 0.9);
     d.x = e.clientX; d.y = e.clientY; this.owed = 4;
+    // the camera follows the hand at once, and so does the word on where the visitor stands: neither waits for a step
+    this.pose(); this.locate();
   };
   private onUp = (e: PointerEvent): void => {
     if (e.pointerId === this.twin) { this.twin = undefined; return; }
