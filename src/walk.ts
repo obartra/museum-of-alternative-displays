@@ -9,7 +9,7 @@ import { hush, tourName, toursNow, keepStop } from './tour';
 import { goTo, link, nameNow, placeOf, setAddress } from './place';
 import { bareKey, fullKey, nameFullKey } from './icons';
 import { openBare, onTap } from './bare';
-import { inWindow, keyTaken, onControl, pageScrolls, pressOn } from './hands';
+import { inWindow, keyTaken, pageScrolls, pressOn } from './hands';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -401,8 +401,9 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   };
 
   // The hall is the one thing on this page that keys can move. So its keys are the hall's wherever on the page they
-  // are pressed, with or without the focus, unless a field, a list or a button there has a use for them. Up and
-  // down stay with a page that scrolls. Before the hall is open, a key that would walk it asks for it.
+  // are pressed, with or without the focus, unless a field or a list there has a use for them. Up and down stay
+  // with a page that scrolls, and Enter opens a piece only with the focus on nothing at all, where it could mean
+  // nothing else. Before the hall is open, a key that would walk it asks for it.
   const HALL_KEY = /^(Arrow(Left|Right|Up|Down)|[wasdnp1-9]|Enter|Shift)$/;
   const onKeys = (e: KeyboardEvent) => {
     // the hall has heard this one itself
@@ -412,7 +413,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (closed || who.open || keyTaken(e) || !inWindow(view)) return;
     if (near.piece) return near.key(e);
     const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    if (!HALL_KEY.test(k) || (k === 'Enter' && onControl(e)) || ((k === 'ArrowUp' || k === 'ArrowDown') && pageScrolls())) return;
+    if (!HALL_KEY.test(k) || (k === 'Enter' && e.target !== document.body) || ((k === 'ArrowUp' || k === 'ArrowDown') && pageScrolls())) return;
     if (gallery) return gallery.key(e, true);
     if (k !== 'Shift' && k !== 'Enter' && !begun && !failed && !startBtn.hidden) { e.preventDefault(); startBtn.click(); }
   };

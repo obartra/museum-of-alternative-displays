@@ -301,7 +301,7 @@ function hallView(n: number): void {
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="${link(`hall-${prev.id}`)}">${tx('pager.backHall', named(prev))}</a>` : `<a href="${link('')}">${tx('pager.entrance')}</a>`}${next ? `<a href="${link(`hall-${next.id}`)}">${tx('pager.nextHall', named(next))}</a>` : `<a href="${link('index')}">${tx('pager.depot')}</a>`}</nav>
 </div>`, n);  const onKey = (e: KeyboardEvent) => {
-    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test((document.activeElement as HTMLElement | null)?.tagName ?? '')) return;
+    if (keyTaken(e)) return;
     const key = e.key.toLowerCase();
     const to = key === 'arrowleft' || key === 'p' ? prev : key === 'arrowright' || key === 'n' ? next : undefined;
     if (to) goTo(link(`hall-${to.id}`));
@@ -636,8 +636,8 @@ ${step === undefined ? '' : visitBand(step)}
     if (e.key === 'Escape' && wrap.classList.contains('is-full')) return setFull(false);
     if (keyTaken(e)) return;
     const key = e.key.toLowerCase();
-    // the piece before and the next one, as in the hall
-    if (key === 'p' || key === 'n') { const to = key === 'p' ? prev : next; if (to && !e.repeat) goTo(link(`piece-${to.id}`)); return; }
+    // the piece before and the next one, as in the hall. Not inside someone else's page, where there is only this one
+    if (key === 'p' || key === 'n') { const to = key === 'p' ? prev : next; if (to && !e.repeat && !document.documentElement.classList.contains('embedded')) goTo(link(`piece-${to.id}`)); return; }
     // the rest is for a picture that is in the window
     if (!seen) return;
     const turn = TURN[e.key];
@@ -646,7 +646,8 @@ ${step === undefined ? '' : visitBand(step)}
       if ((e.key === 'ArrowUp' || e.key === 'ArrowDown') && e.target !== stageCanvas && pageScrolls()) return;
       e.preventDefault();
       if (stage && live) return stage.nudge(...turn);
-      owedTurn = owedTurn ? [owedTurn[0] + turn[0], owedTurn[1] + turn[1], owedTurn[2] * turn[2]] : turn;
+      // each press counts once: a key held down while the model loads does not spin it round and round
+      if (!e.repeat) owedTurn = owedTurn ? [owedTurn[0] + turn[0], owedTurn[1] + turn[1], owedTurn[2] * turn[2]] : turn;
       return void go();
     }
     // one key does what its button does

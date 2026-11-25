@@ -10,16 +10,17 @@ export interface Held { pointerId: number; pointerType: string; clientX: number;
 
 /** Where keys have work of their own. `data-own-keys` marks a part of the page that reads them itself, as the list of languages reads letters. */
 const WANTS_KEYS = 'input, select, textarea, audio, video, [contenteditable]:not([contenteditable="false"]), [role="menu"], [role="listbox"], [role="slider"], [role="radiogroup"], [role="tablist"], [data-own-keys]';
-const PRESSED = 'a[href], button, summary, [role="button"]';
 
-/** Whether a key already has work to do where it was pressed: with a modifier, in a field or a list, or under an open dialog. */
+/**
+ * Whether a key already has work to do where it was pressed: with a modifier, in a field or a list, under an open
+ * dialog, or, for Shift and an arrow, on words the visitor has marked, which that key marks further.
+ */
 export function keyTaken(e: KeyboardEvent): boolean {
   if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.isComposing) return true;
+  if (e.shiftKey && e.key.startsWith('Arrow') && getSelection()?.isCollapsed === false) return true;
   const el = e.target instanceof Element ? e.target : null;
   return !!el?.closest(WANTS_KEYS) || !!document.querySelector('dialog[open]');
 }
-/** Whether Enter and Space are spoken for: the key was pressed on a link or a button. */
-export const onControl = (e: KeyboardEvent): boolean => e.target instanceof Element && !!e.target.closest(PRESSED);
 /** Up and down belong to a page that scrolls. They are the picture's where it has the focus, or where the page stands still. */
 export const pageScrolls = (): boolean => {
   const el = document.scrollingElement;
@@ -45,16 +46,20 @@ export function pressOn(el: HTMLElement, o: { skip?: (e: PointerEvent) => boolea
   };
   const move = (e: PointerEvent) => {
     if (!h || e.pointerId !== h.pointerId) return;
+    // a mouse that moves with no button down was let go where nothing told us: there is no press left to hand on
+    if (e.pointerType === 'mouse' && !(e.buttons & 1)) { h = undefined; return; }
     h.clientX = e.clientX; h.clientY = e.clientY;
     const dx = Math.abs(e.clientX - x0), dy = Math.abs(e.clientY - y0);
     if (!swiped && e.pointerType === 'touch' && dx > 10 && dx > dy * 1.5) { swiped = true; o.swipe?.(e); }
   };
   const up = (e: PointerEvent) => { if (h?.pointerId === e.pointerId) h = undefined; };
+  const away = () => { h = undefined; };
   el.addEventListener('pointerdown', down);
   // the pointer may leave the picture while it is held: it is followed wherever it goes
   window.addEventListener('pointermove', move, { passive: true });
   window.addEventListener('pointerup', up);
   window.addEventListener('pointercancel', up);
+  window.addEventListener('blur', away);
   return {
     held: () => h && { ...h },
     close() {
@@ -63,6 +68,7 @@ export function pressOn(el: HTMLElement, o: { skip?: (e: PointerEvent) => boolea
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', up);
       window.removeEventListener('pointercancel', up);
+      window.removeEventListener('blur', away);
     },
   };
 }
