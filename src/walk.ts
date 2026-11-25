@@ -9,6 +9,7 @@ import { hush, tourName, toursNow, keepStop } from './tour';
 import { goTo, link, nameNow, placeOf, setAddress } from './place';
 import { bareKey, fullKey, nameFullKey } from './icons';
 import { openBare, onTap } from './bare';
+import { arrowScrolls, inWindow, keyTaken, pressOn } from './hands';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -131,6 +132,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   stillImg.draggable = false;
   stillImg.addEventListener('click', wake);
   stillImg.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'touch') wake(e); });
+  // A finger that drags sideways across the picture asks as well. And whichever press it was, if it is still down
+  // when the hall comes up, the hall takes it over: the drag that asked for the hall is the first one in it.
+  // A tour is not begun this way: it speaks, and a browser lets a page speak only after a tap or a key.
+  const hand = pressOn(stillImg, { swipe: () => { if (!begun && !closed && !startBtn.hidden && !guide.tour) startBtn.click(); } });
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
   const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement, look = document.getElementById('walk-look') as HTMLButtonElement;
   let introFor = 0;
@@ -323,6 +328,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       tell(gallery.where);
       gallery.follow(trailNow);
       gallery.start();
+      const held = hand.held();
+      if (held) gallery.grab(held);
       track();
       requestAnimationFrame(() => { canvas!.classList.add('is-live'); window.setTimeout(() => { if (!closed) stillImg.hidden = true; }, 500); });
       for (const b of host.querySelectorAll<HTMLButtonElement>('[data-walk]')) b.disabled = false;
@@ -393,6 +400,26 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (near.piece) { e.preventDefault(); near.shut(); }
     else if (host.classList.contains('is-full') && document.activeElement !== canvas) setFull(false);
   };
+
+  // The hall is the one thing on this page that keys can move. So its keys are the hall's wherever on the page they
+  // are pressed, with or without the focus, unless a field or a list there has a use for them. An arrow that
+  // scrolls the page, or a part of it, goes on scrolling it, and Enter opens a piece only with the focus on nothing
+  // at all, where it could mean nothing else. Before the hall is open, a key that would walk it asks for it.
+  const HALL_KEY = /^(Arrow(Left|Right|Up|Down)|[wasdnp1-9]|Enter|Shift)$/;
+  const onKeys = (e: KeyboardEvent) => {
+    // the hall has heard this one itself
+    if (e.target === canvas) return;
+    // a key let go is let go, wherever the focus has gone since
+    if (e.type === 'keyup') return gallery?.key(e, false);
+    if (closed || who.open || keyTaken(e) || !inWindow(view)) return;
+    if (near.piece) return near.key(e);
+    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (!HALL_KEY.test(k) || (k === 'Enter' && e.target !== document.body) || arrowScrolls(e, false)) return;
+    if (gallery) return gallery.key(e, true);
+    // a tour is begun by its own key, which says what it will do: it takes the screen on a phone, and it speaks
+    if (k !== 'Shift' && k !== 'Enter' && !begun && !failed && !startBtn.hidden && !guide.tour) { e.preventDefault(); startBtn.click(); }
+  };
+  const onBlur = () => gallery?.letGo();
 
   const onClick = (e: MouseEvent) => {
     // a link to another page, followed out of full view
@@ -482,6 +509,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   pad.addEventListener('contextmenu', (e) => e.preventDefault());
   window.addEventListener('popstate', onPop);
   document.addEventListener('keydown', onKey);
+  document.addEventListener('keydown', onKeys); document.addEventListener('keyup', onKeys);
+  window.addEventListener('blur', onBlur);
   document.addEventListener('visibilitychange', onHide);
 
   tell({ hall: o.start ? pieceById(o.start)?.hall ?? 1 : 1 });
@@ -503,6 +532,9 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       host.removeEventListener('click', onClick);
       window.removeEventListener('popstate', onPop);
       document.removeEventListener('keydown', onKey);
+      document.removeEventListener('keydown', onKeys); document.removeEventListener('keyup', onKeys);
+      window.removeEventListener('blur', onBlur);
+      hand.close();
       document.removeEventListener('visibilitychange', onHide);
       guide.close();
       who.close();

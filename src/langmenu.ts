@@ -34,7 +34,7 @@ export function langMenu(): string {
   const rows = Math.ceil(langs.length / 2);
   return `<div class="lang">
 <button type="button" class="lang__now" id="lang" aria-expanded="false" aria-controls="lang-list">${GLOBE}<span class="vh">${tx('lang.label')}: </span><span class="lang__long" lang="${now.tag}">${esc(now.name)}</span>${now.short !== now.name ? `<span class="lang__short" lang="${now.tag}"> ${esc(now.short)}</span>` : ''}</button>
-<div class="lang__list" id="lang-list" hidden><p class="lang__title" id="lang-title">${tx('lang.label')}</p><ul aria-labelledby="lang-title" style="--rows:${rows}">${langs.map(row).join('')}</ul></div>
+<div class="lang__list" id="lang-list" data-own-keys hidden><p class="lang__title" id="lang-title">${tx('lang.label')}</p><ul aria-labelledby="lang-title" style="--rows:${rows}">${langs.map(row).join('')}</ul></div>
 </div>`;
 }
 

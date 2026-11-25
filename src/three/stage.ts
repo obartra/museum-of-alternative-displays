@@ -303,6 +303,33 @@ export class Stage {
   /** Full view hands every gesture to the stage. Inline, vertical swipes belong to the page. */
   setFree(free: boolean): void { this.canvas.style.touchAction = free ? 'none' : 'pan-y'; }
 
+  /**
+   * Take over a press that began on the still picture, before the model was there to feel it. The controls are told
+   * of it as of a press on the canvas, there where the pointer is now, and the drag goes on from that place.
+   */
+  grab(held: { pointerId: number; pointerType: string; clientX: number; clientY: number }): void {
+    if (!this.controls) return;
+    const c = this.canvas, doc = c.ownerDocument;
+    // a finger that has left the glass since cannot be taken hold of: then there is no press to take over
+    try { c.setPointerCapture(held.pointerId); } catch { return; }
+    const at = (type: string, x: number, y: number) => {
+      const e = new PointerEvent(type, { pointerId: held.pointerId, pointerType: held.pointerType, clientX: x, clientY: y, button: 0, buttons: type === 'pointerdown' ? 1 : 0, isPrimary: true, bubbles: true, cancelable: true });
+      // the controls measure a finger from the top of the page, and a press made here does not know how far it is scrolled
+      Object.defineProperties(e, { pageX: { value: x + window.scrollX }, pageY: { value: y + window.scrollY } });
+      return e;
+    };
+    // A mouse always can be, even when its button came up where the page did not see it. The first time it then
+    // moves with no button down, the drag is ended for it: the model must never be left following a free pointer.
+    const watch = (m: PointerEvent) => {
+      if (m.pointerId !== held.pointerId) return;
+      if (m.type === 'pointermove' && (m.pointerType !== 'mouse' || m.buttons & 1)) return;
+      for (const name of ['pointermove', 'pointerup', 'pointercancel']) doc.removeEventListener(name, watch as EventListener, true);
+      if (m.type === 'pointermove') c.dispatchEvent(at('pointerup', m.clientX, m.clientY));
+    };
+    for (const name of ['pointermove', 'pointerup', 'pointercancel']) doc.addEventListener(name, watch as EventListener, true);
+    c.dispatchEvent(at('pointerdown', held.clientX, held.clientY));
+  }
+
   setLights(on: boolean, instant = false): void {
     this.lightsTarget = on ? 1 : 0;
     if (instant) this.lights = this.lightsTarget;

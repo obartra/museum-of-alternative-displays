@@ -93,7 +93,7 @@ export class Gallery {
   private free = false;
   /** A tap on the hall, offered first to whoever opened it: true takes it, and the visitor does not walk. */
   tapped?: () => boolean;
-  private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean; two?: boolean };
+  private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean; two?: boolean; handed?: boolean };
   /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
   private twin?: number;
   private stops?: number[];
@@ -284,6 +284,9 @@ export class Gallery {
   private onMove = (e: PointerEvent): void => {
     const d = this.drag;
     if (!d || d.id !== e.pointerId) return;
+    // a press taken over from the still picture may be a mouse whose button came up where the page did not see it:
+    // once it moves with no button down the drag is over, and the hall is never left following a free pointer
+    if (d.handed && e.pointerType === 'mouse' && !(e.buttons & 1)) { this.drag = undefined; try { this.canvas.releasePointerCapture(e.pointerId); } catch { /* it was not held */ } return; }
     if (!d.moved && Math.hypot(e.clientX - d.x0, e.clientY - d.y0) < 6) return;
     if (!d.moved) { d.moved = true; this.glide = undefined; this.stir(); }
     // the hall is dragged like a picture: what was under the pointer stays under it
@@ -297,6 +300,8 @@ export class Gallery {
     // inline, an up and down swipe belongs to the page
     if (this.free || e.pointerType === 'mouse') this.pitch = THREE.MathUtils.clamp(this.pitch + (e.clientY - d.y) * per, -0.9, 0.9);
     d.x = e.clientX; d.y = e.clientY; this.owed = 4;
+    // the camera follows the hand at once, and so does the word on where the visitor stands: neither waits for a step
+    this.pose(); this.locate();
   };
   private onUp = (e: PointerEvent): void => {
     if (e.pointerId === this.twin) { this.twin = undefined; return; }
@@ -323,6 +328,20 @@ export class Gallery {
       this.goTo({ x, z, yaw: far > 1.5 ? Math.atan2(this.x - x, this.z - z) : this.yaw }, 0);
     }
   };
+  /**
+   * Take over a press that began on the still picture, before the hall was there to feel it. It goes on as a drag
+   * from where the pointer is now, and is never a click on a piece, however short it turns out to be.
+   */
+  grab(held: { pointerId: number; pointerType: string; clientX: number; clientY: number }): void {
+    if (this.drag) return;
+    // a finger that has left the glass since cannot be taken hold of: then there is no press to take over
+    try { this.canvas.setPointerCapture(held.pointerId); } catch { return; }
+    this.drag = { id: held.pointerId, x: held.clientX, y: held.clientY, x0: held.clientX, y0: held.clientY, t0: -Infinity, moved: false, handed: true };
+  }
+  /** A key pressed or let go elsewhere on the page, which nothing there had a use for. */
+  key(e: KeyboardEvent, down: boolean): void { if (down) this.onKey(e); else this.onKeyUp(e); }
+  /** No key is held any more: the window has lost the keyboard. */
+  letGo(): void { this.keys.clear(); }
   private onCancel = (e: PointerEvent): void => { if (e.pointerId === this.twin) this.twin = undefined; if (this.drag?.id === e.pointerId) this.drag = undefined; };
   /** In full view the wheel walks: forward as it turns away. Inline, the wheel belongs to the page. */
   private onWheel = (e: WheelEvent): void => {

@@ -30,6 +30,7 @@ import { AUTHOR, LICENCE, REPO } from './site';
 import { markSvg } from './mark';
 import { GLASSES, bareKey, daylightKey, fullKey, nameFullKey } from './icons';
 import { openBare, onTap } from './bare';
+import { arrowScrolls, keyTaken, pressOn } from './hands';
 import { calm as lowPower, setCalm, spread, wantsBeyond } from './beyond';
 import type { Stage } from './three/stage';
 
@@ -91,7 +92,7 @@ document.addEventListener('click', (e) => {
   box.className = 'keys';
   box.setAttribute('aria-labelledby', 'keys-h');
   box.innerHTML = `<div class="keys__head"><h2 class="h-sec" id="keys-h">${tx('keys.title')}</h2><button type="button" class="btn" autofocus>${tx('stage.close')}</button></div>
-<h3>${tx('keys.anywhere')}</h3><dl>${row(['\u2190', '\u2192'], tx('keys.step'))}${row(['Tab'], tx('keys.tab'))}${row(['Esc'], tx('keys.esc'))}</dl>
+<h3>${tx('keys.anywhere')}</h3><dl>${row(['P', 'N'], tx('keys.step'))}${row(['Tab'], tx('keys.tab'))}${row(['Esc'], tx('keys.esc'))}</dl>
 <h3>${tx('keys.model')}</h3><dl>${row(['\u2190', '\u2192', '\u2191', '\u2193'], tx('keys.turn'))}${row(['+', '-'], tx('keys.zoom'))}${row(['R'], tx('stage.home'))}${row(['1', '2', '3'], tx('keys.views'))}${row(['D'], tx('switch.daylight'))}${row(['G'], tx('stage.stereo'))}${row(['F'], tx('keys.full'))}</dl>`;
   document.body.append(box);
   box.addEventListener('click', (ev) => { if (ev.target === box || (ev.target as HTMLElement).closest('button')) box.close(); });
@@ -300,8 +301,9 @@ function hallView(n: number): void {
   <div class="pieces">${list.map((x, i) => tile(x, i)).join('')}</div>
   <nav class="pager" aria-label="${tx('pager.halls')}">${prev ? `<a href="${link(`hall-${prev.id}`)}">${tx('pager.backHall', named(prev))}</a>` : `<a href="${link('')}">${tx('pager.entrance')}</a>`}${next ? `<a href="${link(`hall-${next.id}`)}">${tx('pager.nextHall', named(next))}</a>` : `<a href="${link('index')}">${tx('pager.depot')}</a>`}</nav>
 </div>`, n);  const onKey = (e: KeyboardEvent) => {
-    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test((document.activeElement as HTMLElement | null)?.tagName ?? '')) return;
-    const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
+    if (keyTaken(e)) return;
+    const key = e.key.toLowerCase();
+    const to = key === 'arrowleft' || key === 'p' ? prev : key === 'arrowright' || key === 'n' ? next : undefined;
     if (to) goTo(link(`hall-${to.id}`));
   };
   document.addEventListener('keydown', onKey);
@@ -623,26 +625,41 @@ ${step === undefined ? '' : visitBand(step)}
     stage?.resize();
   };
   const press = (name: string) => { const b = wrap.querySelector<HTMLButtonElement>(`[data-act="${name}"]`); if (b && !b.disabled) b.click(); };
+  /** Turning asked for by a key before the model was running. It is taken up as soon as the model is. */
+  let owedTurn: [number, number, number] | null = null;
+  const TURN: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
+  // The model is the one thing on this page that keys can move. So a key is the model's wherever on the page it is
+  // pressed, with or without the focus, unless a field or a list there has a use for it. Before the model runs, a key
+  // that turns it starts it.
   const onKey = (e: KeyboardEvent) => {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('dialog[open]')) return;
     if (e.key === 'Escape' && wrap.classList.contains('is-full')) return setFull(false);
-    const on = document.activeElement as HTMLElement | null, inStage = !!on?.closest('#stage');
-    if (on === stageCanvas && stage && live) {
-      const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
-      if (k[e.key]) { e.preventDefault(); return stage.nudge(...k[e.key]); }
-    }
-    if (inStage) {
-      // with the stage in focus, one key does what its button does. Only there, so that typing elsewhere is never hijacked
-      const key = e.key.toLowerCase();
-      const act = ({ d: 'daylight', f: 'full', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
-      if (act === 'daylight') setLights(!lightsOn); else if (act) press(act);
-      else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled)[Number(key) - 1]?.click();
+    if (keyTaken(e)) return;
+    const key = e.key.toLowerCase();
+    // the piece before and the next one, as in the hall. Not out of full view, which has a step of its own in the
+    // history to take back first, and not inside someone else's page, where there is only this piece
+    if (key === 'p' || key === 'n') {
+      const to = key === 'p' ? prev : next;
+      if (to && !e.repeat && !wrap.classList.contains('is-full') && !document.documentElement.classList.contains('embedded')) goTo(link(`piece-${to.id}`));
       return;
     }
-    // anywhere else on the page, left and right step through the collection
-    if (/^(INPUT|SELECT|TEXTAREA)$/.test(on?.tagName ?? '')) return;
-    const to = e.key === 'ArrowLeft' ? prev : e.key === 'ArrowRight' ? next : undefined;
-    if (to) goTo(link(`piece-${to.id}`));
+    // the rest is for a picture that is in the window
+    if (!seen) return;
+    const turn = TURN[e.key];
+    if (turn) {
+      // an arrow that scrolls something is left to scroll it: up and down on a page that scrolls, unless the picture has the focus
+      if (arrowScrolls(e, e.target === stageCanvas)) return;
+      e.preventDefault();
+      if (stage && live) return stage.nudge(...turn);
+      // each press counts once: a key held down while the model loads does not spin it round and round
+      if (!e.repeat) owedTurn = owedTurn ? [owedTurn[0] + turn[0], owedTurn[1] + turn[1], owedTurn[2] * turn[2]] : turn;
+      return void go();
+    }
+    // one key does what its button does
+    const act = ({ d: 'daylight', f: 'full', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
+    if (act === 'daylight') setLights(!lightsOn); else if (act) press(act);
+    // a number is a key of the row as the visitor sees it: one that is put away, as the room view is without AR, is not counted
+    else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled && !b.hidden)[Number(key) - 1]?.click();
   };
   // without the model there is nowhere to look from, so the row of places goes too
   const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; views.hidden = true; caption.textContent = ''; };
@@ -695,6 +712,10 @@ ${step === undefined ? '' : visitBand(step)}
       say(lightsOn);
       if (askedFor === '@front') stage.goFront(); else if (askedFor && stage.hasView(askedFor)) setView(askedFor);
       askedFor = null;
+      if (owedTurn) { stage.nudge(...owedTurn); owedTurn = null; }
+      // a press that began on the still picture is still down: the drag it began turns the model from here on
+      const held = hand.held();
+      if (held) stage.grab(held);
       if (wantFocus) cv.focus();
       const surf = stage.surface;
       if (surf) {
@@ -758,6 +779,9 @@ ${step === undefined ? '' : visitBand(step)}
     void go();
   };
   still.draggable = false;
+  // A finger that drags sideways across the picture asks as well. And whichever press it was, if it is still down
+  // when the model comes up, the model takes it over.
+  const hand = pressOn(box, { skip: (e) => e.target === stageCanvas || !!(e.target as Element).closest('button'), swipe: () => { if (!begun && alive) void go(); } });
   box.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'touch') wake(e); });
   box.addEventListener('click', wake);
   box.addEventListener('pointerenter', (e) => {
@@ -794,7 +818,7 @@ ${step === undefined ? '' : visitBand(step)}
   const untap = onTap(box, () => { if (bare.on) bare.set(false); });
   leave = () => {
     alive = false; live = false;
-    unsound(); bare.close(); untap();
+    unsound(); bare.close(); untap(); hand.close();
     window.clearTimeout(resting);
     unwire();
     window.removeEventListener('popstate', onBack);
