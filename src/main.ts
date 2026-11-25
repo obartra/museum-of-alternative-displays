@@ -30,7 +30,7 @@ import { AUTHOR, LICENCE, REPO } from './site';
 import { markSvg } from './mark';
 import { GLASSES, bareKey, daylightKey, fullKey, nameFullKey } from './icons';
 import { openBare, onTap } from './bare';
-import { keyTaken, pageScrolls, pressOn } from './hands';
+import { arrowScrolls, keyTaken, pressOn } from './hands';
 import { calm as lowPower, setCalm, spread, wantsBeyond } from './beyond';
 import type { Stage } from './three/stage';
 
@@ -636,14 +636,19 @@ ${step === undefined ? '' : visitBand(step)}
     if (e.key === 'Escape' && wrap.classList.contains('is-full')) return setFull(false);
     if (keyTaken(e)) return;
     const key = e.key.toLowerCase();
-    // the piece before and the next one, as in the hall. Not inside someone else's page, where there is only this one
-    if (key === 'p' || key === 'n') { const to = key === 'p' ? prev : next; if (to && !e.repeat && !document.documentElement.classList.contains('embedded')) goTo(link(`piece-${to.id}`)); return; }
+    // the piece before and the next one, as in the hall. Not out of full view, which has a step of its own in the
+    // history to take back first, and not inside someone else's page, where there is only this piece
+    if (key === 'p' || key === 'n') {
+      const to = key === 'p' ? prev : next;
+      if (to && !e.repeat && !wrap.classList.contains('is-full') && !document.documentElement.classList.contains('embedded')) goTo(link(`piece-${to.id}`));
+      return;
+    }
     // the rest is for a picture that is in the window
     if (!seen) return;
     const turn = TURN[e.key];
     if (turn) {
-      // up and down belong to a page that scrolls, unless the picture has the focus
-      if ((e.key === 'ArrowUp' || e.key === 'ArrowDown') && e.target !== stageCanvas && pageScrolls()) return;
+      // an arrow that scrolls something is left to scroll it: up and down on a page that scrolls, unless the picture has the focus
+      if (arrowScrolls(e, e.target === stageCanvas)) return;
       e.preventDefault();
       if (stage && live) return stage.nudge(...turn);
       // each press counts once: a key held down while the model loads does not spin it round and round
@@ -653,7 +658,8 @@ ${step === undefined ? '' : visitBand(step)}
     // one key does what its button does
     const act = ({ d: 'daylight', f: 'full', g: 'stereo', r: 'home', '0': 'home' } as Record<string, string>)[key];
     if (act === 'daylight') setLights(!lightsOn); else if (act) press(act);
-    else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled)[Number(key) - 1]?.click();
+    // a number is a key of the row as the visitor sees it: one that is put away, as the room view is without AR, is not counted
+    else if (/^[1-9]$/.test(key)) [...views.querySelectorAll<HTMLButtonElement>('button')].filter((b) => !b.disabled && !b.hidden)[Number(key) - 1]?.click();
   };
   // without the model there is nowhere to look from, so the row of places goes too
   const fail = (why: string) => { hint.textContent = ''; note.textContent = why; startBtn.hidden = true; views.hidden = true; caption.textContent = ''; };

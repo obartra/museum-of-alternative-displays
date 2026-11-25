@@ -9,7 +9,7 @@ import { hush, tourName, toursNow, keepStop } from './tour';
 import { goTo, link, nameNow, placeOf, setAddress } from './place';
 import { bareKey, fullKey, nameFullKey } from './icons';
 import { openBare, onTap } from './bare';
-import { inWindow, keyTaken, pageScrolls, pressOn } from './hands';
+import { arrowScrolls, inWindow, keyTaken, pressOn } from './hands';
 import { pieceById, pieces } from './data/pieces';
 import { comma, said, t, tx } from './i18n';
 import * as plan from './three/walk/plan';
@@ -134,7 +134,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   stillImg.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'touch') wake(e); });
   // A finger that drags sideways across the picture asks as well. And whichever press it was, if it is still down
   // when the hall comes up, the hall takes it over: the drag that asked for the hall is the first one in it.
-  const hand = pressOn(stillImg, { swipe: () => { if (!begun && !closed && !startBtn.hidden) startBtn.click(); } });
+  // A tour is not begun this way: it speaks, and a browser lets a page speak only after a tap or a key.
+  const hand = pressOn(stillImg, { swipe: () => { if (!begun && !closed && !startBtn.hidden && !guide.tour) startBtn.click(); } });
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
   const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement, look = document.getElementById('walk-look') as HTMLButtonElement;
   let introFor = 0;
@@ -401,9 +402,9 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   };
 
   // The hall is the one thing on this page that keys can move. So its keys are the hall's wherever on the page they
-  // are pressed, with or without the focus, unless a field or a list there has a use for them. Up and down stay
-  // with a page that scrolls, and Enter opens a piece only with the focus on nothing at all, where it could mean
-  // nothing else. Before the hall is open, a key that would walk it asks for it.
+  // are pressed, with or without the focus, unless a field or a list there has a use for them. An arrow that
+  // scrolls the page, or a part of it, goes on scrolling it, and Enter opens a piece only with the focus on nothing
+  // at all, where it could mean nothing else. Before the hall is open, a key that would walk it asks for it.
   const HALL_KEY = /^(Arrow(Left|Right|Up|Down)|[wasdnp1-9]|Enter|Shift)$/;
   const onKeys = (e: KeyboardEvent) => {
     // the hall has heard this one itself
@@ -413,9 +414,10 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     if (closed || who.open || keyTaken(e) || !inWindow(view)) return;
     if (near.piece) return near.key(e);
     const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    if (!HALL_KEY.test(k) || (k === 'Enter' && e.target !== document.body) || ((k === 'ArrowUp' || k === 'ArrowDown') && pageScrolls())) return;
+    if (!HALL_KEY.test(k) || (k === 'Enter' && e.target !== document.body) || arrowScrolls(e, false)) return;
     if (gallery) return gallery.key(e, true);
-    if (k !== 'Shift' && k !== 'Enter' && !begun && !failed && !startBtn.hidden) { e.preventDefault(); startBtn.click(); }
+    // a tour is begun by its own key, which says what it will do: it takes the screen on a phone, and it speaks
+    if (k !== 'Shift' && k !== 'Enter' && !begun && !failed && !startBtn.hidden && !guide.tour) { e.preventDefault(); startBtn.click(); }
   };
   const onBlur = () => gallery?.letGo();
 

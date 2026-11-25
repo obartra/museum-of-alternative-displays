@@ -1,6 +1,6 @@
 import { pieceById } from './data/pieces';
 import { viewsOf } from './data/views';
-import { pageScrolls } from './hands';
+import { arrowScrolls } from './hands';
 import { esc } from './html';
 import { said, standIn, t, tx } from './i18n';
 import type { Built } from './three/kit';
@@ -152,7 +152,7 @@ export function openNear(root: HTMLElement, o: NearOptions): Near {
     if (!piece || !stage || !live || e.altKey || e.ctrlKey || e.metaKey) return;
     const k: Record<string, [number, number, number]> = { ArrowLeft: [-12, 0, 1], ArrowRight: [12, 0, 1], ArrowUp: [0, 8, 1], ArrowDown: [0, -8, 1], '+': [0, 0, 0.88], '=': [0, 0, 0.88], '-': [0, 0, 1.14] };
     if (k[e.key]) {
-      if (!focused && (e.key === 'ArrowUp' || e.key === 'ArrowDown') && pageScrolls()) return;
+      if (!focused && arrowScrolls(e, false)) return;
       e.preventDefault(); e.stopPropagation();
       return stage.nudge(...k[e.key]);
     }
