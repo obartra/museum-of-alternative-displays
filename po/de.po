@@ -1117,20 +1117,32 @@ msgstr "Die Säle des Museums, mit jedem Exponat auf seinem Block. Mit den Pfeil
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Ziehen, um am Saal entlangzugleiten. Die Pfeiltasten gehen und drehen. Klicken Sie ein Exponat an, um hinzugehen."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Ziehen, um sich umzusehen. Zum Zoomen scrollen. Klicken Sie ein Exponat an, um hinzugehen."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Ziehen, um am Saal entlangzugleiten, mit zwei Fingern drehen. Tippen Sie ein Exponat an, um hinzugehen, oder tippen Sie auf den Boden, um dorthin zu gehen."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Ziehen, um sich umzusehen, zum Zoomen zwei Finger spreizen. Tippen Sie ein Exponat an, um hinzugehen, oder tippen Sie auf den Boden, um dorthin zu gehen."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Mit den Pfeiltasten oder W, A, S und D gehen und drehen Sie. Mit der Umschalttaste gehen Sie schnell. N und P führen zum nächsten und zum vorherigen Exponat. Die Tasten 1 bis 7 führen zu einem Saal. Die Eingabetaste öffnet das Exponat vor Ihnen. Ein Klick auf ein Exponat oder auf den Boden bringt Sie dorthin."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Mit den Pfeiltasten oder W, A, S und D gehen und drehen Sie. Mit der Umschalttaste gehen Sie schnell. N und P führen zum nächsten und zum vorherigen Exponat. Die Tasten 1 bis 7 führen zu einem Saal. Die Eingabetaste öffnet das Exponat vor Ihnen. Ein Klick auf ein Exponat oder auf den Boden bringt Sie dorthin. Plus und Minus zoomen. Mit der Umschalttaste gleiten Sie beim Ziehen seitwärts."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Heranzoomen"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Herauszoomen"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

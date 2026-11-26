@@ -1114,20 +1114,32 @@ msgstr "Le sale del museo, con ogni pezzo sul suo blocco. I tasti freccia fanno 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Trascina per scorrere lungo la sala. I tasti freccia fanno camminare e girare. Fai clic su un pezzo per raggiungerlo."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Trascina per guardarti intorno. Scorri per lo zoom. Fai clic su un pezzo per raggiungerlo."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Trascina per scorrere lungo la sala, con due dita per girare. Tocca un pezzo per raggiungerlo, o tocca il pavimento per camminare fin lì."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Trascina per guardarti intorno, pizzica per lo zoom. Tocca un pezzo per raggiungerlo, o tocca il pavimento per camminare fin lì."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "I tasti freccia, oppure W, A, S e D, fanno camminare e girare. Maiusc fa camminare in fretta. N e P portano al pezzo successivo e a quello precedente. I tasti da 1 a 7 portano a una sala. Invio apre il pezzo che hai davanti. Un clic su un pezzo o sul pavimento ti porta lì."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "I tasti freccia, oppure W, A, S e D, fanno camminare e girare. Maiusc fa camminare in fretta. N e P portano al pezzo successivo e a quello precedente. I tasti da 1 a 7 portano a una sala. Invio apre il pezzo che hai davanti. Un clic su un pezzo o sul pavimento ti porta lì. Più e meno regolano lo zoom. Con Maiusc, trascinando scorri di lato."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Ingrandisci"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Riduci"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

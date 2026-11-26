@@ -1115,20 +1115,32 @@ msgstr "Залы музея, каждый экспонат на своем по�
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Тяните, чтобы скользить вдоль зала. Клавиши со стрелками ведут вперед и поворачивают. Нажмите на экспонат, чтобы подойти к нему."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Тяните, чтобы осмотреться. Прокрутите колесо, чтобы изменить масштаб. Нажмите на экспонат, чтобы подойти к нему."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Тяните одним пальцем, чтобы скользить вдоль зала, и двумя, чтобы поворачивать. Коснитесь экспоната, чтобы подойти к нему, или пола, чтобы пройти туда."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Тяните, чтобы осмотреться, и сведите или разведите пальцы, чтобы изменить масштаб. Коснитесь экспоната, чтобы подойти к нему, или пола, чтобы пройти туда."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Клавиши со стрелками или W, A, S и D ведут вперед и поворачивают. Shift ускоряет шаг. N и P переходят к следующему и предыдущему экспонату. Клавиши от 1 до 7 ведут в зал. Enter открывает экспонат перед вами. Щелчок по экспонату или по полу переносит вас туда."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Клавиши со стрелками или W, A, S и D ведут вперед и поворачивают. Shift ускоряет шаг. N и P переходят к следующему и предыдущему экспонату. Клавиши от 1 до 7 ведут в зал. Enter открывает экспонат перед вами. Щелчок по экспонату или по полу переносит вас туда. Плюс и минус меняют масштаб. Если тянуть, удерживая Shift, вы скользите вбок."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Приблизить"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Отдалить"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

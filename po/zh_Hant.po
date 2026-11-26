@@ -1113,20 +1113,32 @@ msgstr "博物館的各個展廳，每件展品都立在自己的台座上。方
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "拖曳可沿展廳平移。方向鍵用來行走和轉身。點一下展品就走到它面前。"
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "拖曳可環顧四周。捲動可縮放。點一下展品就走到它面前。"
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "拖曳可沿展廳平移，用兩指可轉身。點一下展品就走到它面前，點一下地面就走到那裡。"
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "拖曳可環顧四周，用兩指可縮放。點一下展品就走到它面前，點一下地面就走到那裡。"
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "方向鍵或W、A、S、D鍵用來行走和轉身。按住Shift鍵可快走。N和P鍵前往下一件和上一件展品。數字鍵1到7前往某個展廳。Enter鍵開啟你面前這件展品的頁面。點一下展品或地面，就會走到那裡。"
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "方向鍵或W、A、S、D鍵用來行走和轉身。按住Shift鍵可快走。N和P鍵前往下一件和上一件展品。數字鍵1到7前往某個展廳。Enter鍵開啟你面前這件展品的頁面。點一下展品或地面，就會走到那裡。加號和減號鍵用來縮放。按住Shift鍵拖曳可向側面平移。"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "放大"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "縮小"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

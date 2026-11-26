@@ -1114,20 +1114,32 @@ msgstr "De zalen van het museum, met elk object op zijn sokkel. Met de pijltjest
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Sleep om langs de zaal te glijden. Met de pijltjestoetsen loop en draai je. Klik op een object om erheen te gaan."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Sleep om rond te kijken. Scroll om te zoomen. Klik op een object om erheen te gaan."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Sleep om langs de zaal te glijden, met twee vingers om te draaien. Tik op een object om erheen te gaan, of tik op de vloer om daarheen te lopen."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Sleep om rond te kijken, knijp om te zoomen. Tik op een object om erheen te gaan, of tik op de vloer om daarheen te lopen."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Met de pijltjestoetsen of met W, A, S en D loop en draai je. Met Shift loop je snel. N en P gaan naar het volgende en het vorige object. De toetsen 1 tot en met 7 gaan naar een zaal. Enter opent het object voor je. Een klik op een object of op de vloer brengt je erheen."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Met de pijltjestoetsen of met W, A, S en D loop en draai je. Met Shift loop je snel. N en P gaan naar het volgende en het vorige object. De toetsen 1 tot en met 7 gaan naar een zaal. Enter opent het object voor je. Een klik op een object of op de vloer brengt je erheen. Met plus en min zoom je. Met Shift en slepen glijd je opzij."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Zoom in"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Zoom uit"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

@@ -1118,20 +1118,32 @@ msgstr "博物館の展示室。展示品はそれぞれ台座に載っていま
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "ドラッグで展示室を横に移動。矢印キーで歩き、向きを変えます。展示品をクリックすると、そこへ行きます。"
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "ドラッグで見回します。スクロールで拡大。展示品をクリックすると、そこへ行きます。"
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "ドラッグで展示室を横に移動、二本指で向きを変えます。展示品をタップするとそこへ行き、床をタップするとそこまで歩きます。"
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "ドラッグで見回し、ピンチで拡大します。展示品をタップするとそこへ行き、床をタップするとそこまで歩きます。"
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "矢印キーかW、A、S、Dで歩き、向きを変えます。Shiftで速く歩きます。NとPで次と前の展示品へ。1から7のキーで各展示室へ。Enterで目の前の展示品を開きます。展示品や床をクリックすると、そこへ移動します。"
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "矢印キーかW、A、S、Dで歩き、向きを変えます。Shiftで速く歩きます。NとPで次と前の展示品へ。1から7のキーで各展示室へ。Enterで目の前の展示品を開きます。展示品や床をクリックすると、そこへ移動します。プラスとマイナスで拡大、縮小。Shiftを押しながらドラッグすると横に移動します。"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "拡大"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "縮小"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.
