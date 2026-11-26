@@ -444,7 +444,7 @@ export const people: Record<string, Credit> = {
     sources: [
       src('archive', 'Carolina Cruz-Neira, ACM SIGGRAPH History Archives', 'https://history.siggraph.org/?p=47669'),
       src('lab', 'Acclaimed computer scientist and virtual reality pioneer joins UCF faculty, University of Central Florida (2020)', 'https://www.ucf.edu/news/acclaimed-computer-scientist-and-virtual-reality-pioneer-joins-ucf-faculty/'),
-      src('lab', 'Daniel J. Sandin, biography, Electronic Visualization Laboratory', 'https://www.evl.uic.edu/dan/bio.html'),
+      src('lab', 'Daniel J. Sandin, biography, Electronic Visualization Laboratory', 'https://web.archive.org/web/20231002042639/https://www.evl.uic.edu/dan/bio.html'),
       src('lab', 'Tom DeFanti, Electronic Visualization Laboratory', 'https://legacy.evl.uic.edu/tom/'),
       src('archive', 'Dan Sandin, biography, Electronic Arts Intermix', 'https://eai.org/artists/dan-sandin/biography'),
       src('paper', 'Johnson and others, Electronic Visualization Laboratory\'s 50th Anniversary Retrospective, PRESENCE (2024)', 'https://www.evl.uic.edu/documents/evl_50th.pdf'),

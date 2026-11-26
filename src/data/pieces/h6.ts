@@ -15,7 +15,7 @@ export const h6: Piece[] = [
     good: ['Shows a bright, full-colour figure that seems to stand in real space', 'Needs no special glasses, and a whole audience can see it', 'Mixes with real actors and scenery'],
     bad: ['Gives a flat reflection at one fixed depth, not a three-dimensional picture', 'Needs a dark stage, a hidden bright area and careful control of what the audience can see', 'Is not a hologram, although concerts that use it are advertised as holograms'],
     look: 'Press the Sit down button for a seat in the audience. A pale figure walks on the stage, and the chair shows through it. Move your head: the figure keeps its place, as a true mirror image does, and ends at the edge of the glass. Then press the Whole piece button and look into the pit in front of the stage. The real figure lies there in limelight, a bright stage lamp, under the leaning glass.',
-    sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://recordsandarchives.westminster.ac.uk/ghosts-and-pantos-at-the-rpi'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
+    sources: [wiki('Pepper%27s_ghost', 'Pepper\'s ghost'), src('archive', 'Ghosts and pantos at the Royal Polytechnic Institution, University of Westminster archive', 'https://web.archive.org/web/20240812140705/https://recordsandarchives.westminster.ac.uk/ghosts-and-pantos-at-the-rpi/'), src('archive', 'J. H. Pepper, The True History of the Ghost', 'https://archive.org/details/truehistoryofgho00pepp')],
   },
   {
     id: 'lancework', hall: 6, name: 'Firework set piece', aka: 'Lancework, fire picture',
