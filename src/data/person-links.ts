@@ -523,7 +523,7 @@ export const personLinks: Record<string, PersonLink> = {
     "kind": "profile"
   },
   "Daniel Sandin": {
-    "url": "https://www.evl.uic.edu/dan/bio.html",
+    "url": "https://web.archive.org/web/20231002042639/https://www.evl.uic.edu/dan/bio.html",
     "label": "Daniel J. Sandin, Electronic Visualization Laboratory",
     "kind": "biography"
   },

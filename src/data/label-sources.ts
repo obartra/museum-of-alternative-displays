@@ -121,12 +121,12 @@ export const auditSources: Record<string, Source[]> = {
   "swept-volume": [
     { kind: "press", label: "Students Get Sneak Preview of 3-D TV, The Harvard Crimson (1998)", url: "https://www.thecrimson.com/article/1998/4/23/students-get-sneak-preview-of-3-d/" },
     { kind: "press", label: "Gregg Favalora, Innovators Under 35, MIT Technology Review (1999)", url: "https://innovatorsunder35.com/the-list/gregg-favalora" },
-    { kind: "press", label: "Perspecta 3D display, optics.org (2002)", url: "https://optics.org/article/9126" },
+    { kind: "press", label: "Perspecta 3D display, optics.org (2002)", url: "https://web.archive.org/web/20231207000417/https://optics.org/article/9126" },
     { kind: "press", label: "NASA Buys Perspecta 3-D System, Photonics.com (2003)", url: "https://photonics.com/Articles/NASA_Buys_Perspecta_3-D_System/a14915" },
   ],
   "static-volume": [
     { kind: "paper", label: "Downing, Hesselink, Ralston and Macfarlane, A three-color, solid-state, three-dimensional display, Science (1996)", url: "https://research.ibm.com/publications/a-three-color-solid-state-three-dimensional-display" },
-    { kind: "press", label: "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", url: "https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm" },
+    { kind: "press", label: "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", url: "https://web.archive.org/web/20180524052259/https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm" },
   ],
   "acoustic-levitation": [
     { kind: "lab", label: "Research news, University of Sussex (2019)", url: "https://www.sussex.ac.uk/news/research?id=50264" },
@@ -153,7 +153,7 @@ export const auditSources: Record<string, Source[]> = {
   ],
   "scanned-laser": [
     { kind: "press", label: "Elsa Garmire: pioneering laser physicist helped launch laser light shows, SPIE Photonics Focus (2021)", url: "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows" },
-    { kind: "archive", label: "Ivan Dryer (1939 to 2017), IMERSA", url: "https://www.imersa.org/speakers/item/ivan-dryer" },
+    { kind: "archive", label: "Ivan Dryer (1939 to 2017), IMERSA", url: "https://web.archive.org/web/20240508073044/https://www.imersa.org/speakers/item/ivan-dryer" },
   ],
   "retinal-display": [
     { kind: "patent", label: "Kazuo Yoshinaka, Display device, Japanese patent application JPS61198892A, NEC (filed 1985, published 1986)", url: "https://patents.google.com/patent/JPS61198892A/en" },

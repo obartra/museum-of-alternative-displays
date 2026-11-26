@@ -645,7 +645,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("lab", "Hongxing Jiang, curriculum vitae, Texas Tech University (2023)", "https://www.depts.ttu.edu/ece/faculty/hongxing_jiang/hongxing_jiang_2023.pdf"),
-      s("lab", "MicroLED: Small Size, Big Impact, Texas Tech University (2018)", "https://www.depts.ttu.edu/research/discoveries/posts/fall-2018/LED.php"),
+      s("lab", "MicroLED: Small Size, Big Impact, Texas Tech University (2018)", "https://web.archive.org/web/20231005002405/https://www.depts.ttu.edu/research/discoveries/posts/fall-2018/LED.php"),
       s("paper", "Jiang and Lin, How we made the microLED, Nature Electronics (2023)", "https://www.depts.ttu.edu/ece/Nanophotonics/papers/2023How%20we%20made%20the%20microLED_Nature%20electronics.pdf"),
     ],
   },
@@ -659,7 +659,7 @@ export const bios: Record<string, Bio> = {
     sources: [
       s("lab", "Jingyu Lin, PhD, Department of Electrical and Computer Engineering, Texas Tech University", "https://www.depts.ttu.edu/ece/faculty/jingyu_lin/index.php"),
       s("lab", "Research Spotlight on Women Faculty: Su Shin and Jingyu Lin, Texas Tech University (2020)", "https://www.depts.ttu.edu/research/research-discoveries/posts/2020/03/6-shin-lin.php"),
-      s("lab", "MicroLED: Small Size, Big Impact, Texas Tech University (2018)", "https://www.depts.ttu.edu/research/discoveries/posts/fall-2018/LED.php"),
+      s("lab", "MicroLED: Small Size, Big Impact, Texas Tech University (2018)", "https://web.archive.org/web/20231005002405/https://www.depts.ttu.edu/research/discoveries/posts/fall-2018/LED.php"),
       s("paper", "Jiang and Lin, How we made the microLED, Nature Electronics (2023)", "https://www.depts.ttu.edu/ece/Nanophotonics/papers/2023How%20we%20made%20the%20microLED_Nature%20electronics.pdf"),
     ],
   },
@@ -979,7 +979,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("archive", "Larry Hornbeck, National Inventors Hall of Fame", "https://www.invent.org/inductees/larry-hornbeck"),
-      s("maker", "Texas Instruments Fellow Larry J. Hornbeck, PhD, Wins the Oscar, Texas Instruments (2015)", "https://www.ti.com/about-ti/newsroom/news-releases/2015/2015-02-09-texas-instruments-fellow-larry-j--hornbeck--phd--wins-the-oscar-.html"),
+      s("maker", "Texas Instruments Fellow Larry J. Hornbeck, PhD, Wins the Oscar, Texas Instruments (2015)", "https://web.archive.org/web/20260413140755/https://www.ti.com/about-ti/newsroom/news-releases/2015/2015-02-09-texas-instruments-fellow-larry-j--hornbeck--phd--wins-the-oscar-.html"),
       s("lab", "Larry Hornbeck, Materials Science and Engineering, University of Texas at Dallas", "https://mse.utdallas.edu/ourteam/faculty/hornbeck-l"),
     ],
   },
@@ -994,7 +994,7 @@ export const bios: Record<string, Bio> = {
       s("press", "Elsa Garmire: pioneering laser physicist helped launch laser light shows, SPIE Photonics Focus (2021)", "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows"),
       s("lab", "Elsa Garmire, Thayer School of Engineering, Dartmouth College", "https://engineering.dartmouth.edu/people/faculty/elsa-garmire"),
       s("archive", "Elsa Garmire, Optica History", "https://optica.org/history/biographies/bios/elsa-garmire"),
-      s("archive", "Ivan Dryer (1939 to 2017), IMERSA", "https://www.imersa.org/speakers/item/ivan-dryer"),
+      s("archive", "Ivan Dryer (1939 to 2017), IMERSA", "https://web.archive.org/web/20240508073044/https://www.imersa.org/speakers/item/ivan-dryer"),
     ],
   },
   "Ivan Dryer": {
@@ -1005,7 +1005,7 @@ export const bios: Record<string, Bio> = {
       "Laserium ran at Griffith until January 2002. His company took shows to 46 planetariums and other venues. According to Live Design, the International Laser Display Association gave him its first Career Achievement Award in 1989.",
     ],
     sources: [
-      s("archive", "Ivan Dryer (1939 to 2017), IMERSA", "https://www.imersa.org/speakers/item/ivan-dryer"),
+      s("archive", "Ivan Dryer (1939 to 2017), IMERSA", "https://web.archive.org/web/20240508073044/https://www.imersa.org/speakers/item/ivan-dryer"),
       s("press", "Ivan Dryer, Laserium Founder And Laser Show Pioneer, Dies At 78, Live Design (2017)", "https://www.livedesignonline.com/business-people-news/ivan-dryer-laserium-founder-and-laser-show-pioneer-dies-at-78"),
       s("press", "Elsa Garmire: pioneering laser physicist helped launch laser light shows, SPIE Photonics Focus (2021)", "https://lux.spie.org/news/photonics-focus/novdec-2021/elsa-garmire-pioneering-laser-physicist-helped-launch-laser-light-shows"),
     ],
@@ -1053,7 +1053,7 @@ export const bios: Record<string, Bio> = {
       "A 2026 article from the university says his patented work ranges from projection mapping, of the kind used on Cinderella Castle at Walt Disney World, to tactile telepresence for isolated patients.",
     ],
     sources: [
-      s("lab", "Gregory Welch, Institute for Simulation and Training, University of Central Florida", "https://www.ist.ucf.edu/faculty/gregory-welch/"),
+      s("lab", "Gregory Welch, Institute for Simulation and Training, University of Central Florida", "https://web.archive.org/web/20231220181923/https://www.ist.ucf.edu/faculty/gregory-welch/"),
       s("lab", "IEEE 2026 awardee Gregory Welch, UCF College of Nursing (2026)", "https://nursing.ucf.edu/news/ieee-2026-awardee-gregory-welch/"),
       s("paper", "Raskar, Welch, Low and Bandyopadhyay, Shader Lamps: Animating Real Objects With Image-Based Illumination, Eurographics Workshop on Rendering (2001)", "https://diglib.eg.org/handle/10.2312/EGWR.EGWR01.089-101"),
       s("paper", "Raskar, Welch, Low and Bandyopadhyay, Shader Lamps, author copy, MIT Media Lab (2001)", "https://web.media.mit.edu/~raskar/RaskarPapers/shaderlampsRaskar01.pdf"),
@@ -1349,7 +1349,7 @@ export const bios: Record<string, Bio> = {
     sources: [
       s("press", "Students Get Sneak Preview of 3-D TV, The Harvard Crimson (1998)", "https://www.thecrimson.com/article/1998/4/23/students-get-sneak-preview-of-3-d/"),
       s("press", "Gregg Favalora, Innovators Under 35, MIT Technology Review (1999)", "https://innovatorsunder35.com/the-list/gregg-favalora"),
-      s("press", "LED engineering firm adds display veteran Gregg Favalora, LEDs Magazine (2009)", "https://www.ledsmagazine.com/company-newsfeed/article/16688859/led-engineering-firm-adds-display-veteran-gregg-favalora"),
+      s("press", "LED engineering firm adds display veteran Gregg Favalora, LEDs Magazine (2009)", "https://web.archive.org/web/20240302102903/https://www.ledsmagazine.com/company-newsfeed/article/16688859/led-engineering-firm-adds-display-veteran-gregg-favalora"),
       s("press", "Optics inventor has eye for new, Boston.com (2011)", "https://www.boston.com/news/jobs/2011/01/18/optics_inventor_has_eye_for_ne/"),
     ],
   },
@@ -1362,7 +1362,7 @@ export const bios: Record<string, Bio> = {
     sources: [
       s("paper", "Downing, Hesselink, Ralston and Macfarlane, A three-color, solid-state, three-dimensional display, Science (1996)", "https://research.ibm.com/publications/a-three-color-solid-state-three-dimensional-display"),
       s("press", "John Drake, An added dimension in display technology, MIT Technology Review (1997)", "https://www.technologyreview.com/1997/05/01/237287/an-added-dimension-in-display-technology/amp/"),
-      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
+      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://web.archive.org/web/20180524052259/https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
     ],
   },
   "Lambertus Hesselink": {
@@ -1381,7 +1381,7 @@ export const bios: Record<string, Bio> = {
       "In 1996 he worked at SDL, a laser maker in San Jose, California, which supplied the small high power lasers used to draw points inside the glass. He was one of the four authors of the paper in Science.",
     ],
     sources: [
-      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
+      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://web.archive.org/web/20180524052259/https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
       s("paper", "Downing, Hesselink, Ralston and Macfarlane, A three-color, solid-state, three-dimensional display, Science (1996)", "https://research.ibm.com/publications/a-three-color-solid-state-three-dimensional-display"),
     ],
   },
@@ -1393,7 +1393,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("lab", "Applications of Laser Spectroscopy, What Physicists Do, Sonoma State University (1986)", "https://phys-astro.a7prd.sonoma.edu/public-events/what-physicists-do/1986-fall/applications-laser-spectroscopy"),
-      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
+      s("press", "Inside 3-D, Los Angeles Times in The Roanoke Times (1996)", "https://web.archive.org/web/20180524052259/https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1996/rt9608/960830/08300057.htm"),
       s("paper", "Winnacker, Shelby and Macfarlane, Photon-gated hole burning, Optics Letters (1985)", "https://research.ibm.com/publications/photon-gated-hole-burning-a-new-mechanism-using-two-step-photoionization"),
       s("paper", "Cone, Thiel, Sun, Böttger and Macfarlane, Quantum information, laser frequency stabilization, and optical signal processing with rare-earth doped materials, Frontiers in Optics (2013)", "https://research.ibm.com/publications/quantum-information-laser-frequency-stabilization-and-optical-signal-processing-with-rare-earth-doped-materials"),
       s("paper", "Downing, Hesselink, Ralston and Macfarlane, A three-color, solid-state, three-dimensional display, Science (1996)", "https://research.ibm.com/publications/a-three-color-solid-state-three-dimensional-display"),
@@ -1545,7 +1545,7 @@ export const bios: Record<string, Bio> = {
     sources: [
       s("archive", "Dennis Gabor, Facts, The Nobel Prize", "https://www.nobelprize.org/prizes/physics/1971/gabor/facts"),
       s("paper", "Dennis Gabor, Holography, 1948 to 1971, Nobel Lecture (1971)", "https://nobelprize.org/uploads/2018/06/gabor-lecture-1.pdf"),
-      s("archive", "Dennis Gabor, Physics History Network, American Institute of Physics", "https://history.aip.org/phn/11710001.html"),
+      s("archive", "Dennis Gabor, Physics History Network, American Institute of Physics", "https://web.archive.org/web/20221118080059/https://history.aip.org/phn/11710001.html"),
     ],
   },
   "Emmett Leith": {
@@ -1689,7 +1689,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("archive", "Dan Sandin, biography, Electronic Arts Intermix", "https://eai.org/artists/dan-sandin/biography"),
-      s("lab", "Daniel J. Sandin, biography, Electronic Visualization Laboratory", "https://www.evl.uic.edu/dan/bio.html"),
+      s("lab", "Daniel J. Sandin, biography, Electronic Visualization Laboratory", "https://web.archive.org/web/20231002042639/https://www.evl.uic.edu/dan/bio.html"),
       s("lab", "Tom DeFanti, Electronic Visualization Laboratory", "https://legacy.evl.uic.edu/tom/"),
       s("paper", "Cruz-Neira and others, Communications of the ACM (1992), About the Authors", "https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf"),
     ],
