@@ -668,6 +668,8 @@ body:has(.stage.is-full) .beyond { display: none; }
 .walk.is-full .walk__still { touch-action: none; }
 .walk__gl { cursor: grab; outline-offset: -3px; opacity: 0; transition: opacity .45s ease; }
 .walk__gl.is-live { opacity: 1; }
+/* over a piece or a portrait, a click leads somewhere */
+.walk__gl.is-aimed { cursor: pointer; }
 .walk__gl:active { cursor: grabbing; }
 .walk__start { position: absolute; left: 50%; bottom: calc(var(--b) + 8px); transform: translateX(-50%); padding: 5px 20px; font-size: var(--t-m); background: var(--ink); white-space: nowrap; min-height: 46px; color: var(--wash); box-shadow: inset 0 0 0 1.5px var(--ink), 0 var(--edge) 0 var(--ink-2); }
 .walk__hint { position: absolute; left: calc(var(--l) + 2px); top: var(--t); max-width: calc(100% - var(--l) - var(--r) - 4px); font-size: var(--t-xs); font-weight: 600; color: var(--ink-2); pointer-events: none; transition: opacity .6s; }
@@ -716,6 +718,17 @@ button.walk__face:focus-visible { outline: 2px solid var(--ink); outline-offset:
    the walking buttons and of the name plate on the block. The words on how to walk move down to make room for it */
 .walk__look { position: absolute; left: var(--l); top: var(--t); display: inline-flex; align-items: center; gap: 7px; max-width: calc(100% - var(--l) - var(--r)); height: 46px; padding: 0 14px 0 10px; font-weight: 700; font-size: var(--t-s); touch-action: manipulation; background: color-mix(in srgb, var(--plate) 92%, transparent); }
 .walk__look[hidden] { display: none; }
+/* On the picture itself: the lens, nearer and further, at the foot on the right, and the piece before and the next
+   one at mid height on either side. What a hand does on the picture, a key here does too. */
+.walk__zoom { position: absolute; right: var(--r); bottom: var(--b); display: grid; gap: 5px; }
+.walk__zoom .walk__key, .walk__key.walk__step { grid-area: auto; width: 44px; height: 44px; touch-action: manipulation; }
+.walk__key.walk__step { position: absolute; top: 50%; translate: 0 -50%; }
+.walk__step--prev { left: var(--l); } .walk__step--next { right: var(--r); }
+.walk__zoom .walk__key svg, .walk__step svg { fill: none; }
+.walk__zoom .walk__key:disabled, .walk__step:disabled { opacity: .4; cursor: default; }
+.walk__zoom[hidden], .walk__step[hidden] { display: none; }
+@media (hover: hover) { :is(.walk__zoom .walk__key, .walk__step):not(:disabled):hover { background: var(--ink); color: var(--wash); } }
+.walk.is-toured .walk__step { display: none; }
 .walk__view:has(.walk__look:not([hidden])) .walk__hint { top: calc(var(--t) + 54px); }
 @media (hover: hover) { :is(.walk__look, .walk__fold, .near__back):hover { background: var(--ink); color: var(--wash); } }
 /* a closer look: the piece on the stand of its own page, over the picture of the hall */
@@ -742,7 +755,7 @@ button.walk__face:focus-visible { outline: 2px solid var(--ink); outline-offset:
 .near__views .btn { flex: none; min-height: 44px; white-space: nowrap; }
 .near__views .near__start { padding-inline: 18px; background: var(--ink); color: var(--wash); box-shadow: inset 0 0 0 1.5px var(--ink), 0 var(--edge) 0 var(--ink-2); }
 /* while the piece is up close, what belongs to the hall stands down. The plate of the tour stays: the guide is still speaking */
-.walk.is-near :is(.walk__pad, .walk__fold, .walk__look, .walk__hint, .walk__note, .walk__start) { display: none; }
+.walk.is-near :is(.walk__pad, .walk__fold, .walk__look, .walk__hint, .walk__note, .walk__start, .walk__zoom, .walk__step) { display: none; }
 .walk__who { z-index: 2; }
 /* the plate is a row of faces no taller than the key beside it: under both, the words on how to move */
 .walk__view:has(.walk__who:not([hidden])) .near__hint { top: calc(var(--t) + 66px); }
@@ -1256,7 +1269,7 @@ details.tour__words > summary { cursor: pointer; font-weight: 600; margin-bottom
 .bare__hint { position: absolute; left: 50%; top: 50%; translate: -50% -50%; z-index: 4; width: max-content; max-width: calc(100% - 32px); margin: 0; padding: 6px 12px; border-radius: 4px; background: color-mix(in srgb, #0b0d0f 82%, transparent); color: #f4f4ee; font-size: var(--t-s); font-weight: 600; text-align: center; pointer-events: none; opacity: 0; transition: opacity .5s; }
 .bare__hint:empty { display: none; }
 .bare__hint.is-shown { opacity: 1; }
-.walk.is-bare .walk__view > :is(.walk__start, .walk__hint, .walk__note, .walk__who, .walk__fold, .walk__pad, .walk__look, .walk__cc) { display: none; }
+.walk.is-bare .walk__view > :is(.walk__start, .walk__hint, .walk__note, .walk__who, .walk__fold, .walk__pad, .walk__look, .walk__cc, .walk__zoom, .walk__step) { display: none; }
 .walk.is-bare .near > :not(.near__box) { display: none; }
 .walk.is-full.is-bare > :not(.walk__view) { display: none; }
 .stage.is-bare > :is(.stage__tools, .stage__views, .stage__say, .stage__hint, .stage__note), .stage.is-bare .stage__start { display: none; }

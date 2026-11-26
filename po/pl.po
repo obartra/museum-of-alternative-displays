@@ -1115,20 +1115,32 @@ msgstr "Sale muzeum, z każdym eksponatem na postumencie. Klawisze strzałek sł
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Przeciągnij, aby przesunąć się wzdłuż sali. Klawisze strzałek służą do chodzenia i obracania się. Kliknij eksponat, aby do niego przejść."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Przeciągnij, aby się rozejrzeć. Przewiń, aby przybliżyć lub oddalić. Kliknij eksponat, aby do niego przejść."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Przeciągnij, aby przesunąć się wzdłuż sali, a dwoma palcami, aby się obrócić. Stuknij eksponat, aby do niego przejść, albo stuknij podłogę, aby tam pójść."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Przeciągnij, aby się rozejrzeć, a zsuń lub rozsuń palce, aby przybliżyć lub oddalić. Stuknij eksponat, aby do niego przejść, albo stuknij podłogę, aby tam pójść."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Klawisze strzałek albo W, A, S i D służą do chodzenia i obracania się. Shift przyspiesza chód. N i P przenoszą do następnego i poprzedniego eksponatu. Klawisze od 1 do 7 przenoszą do sali. Enter otwiera eksponat przed tobą. Kliknięcie eksponatu lub podłogi przenosi cię tam."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Klawisze strzałek albo W, A, S i D służą do chodzenia i obracania się. Shift przyspiesza chód. N i P przenoszą do następnego i poprzedniego eksponatu. Klawisze od 1 do 7 przenoszą do sali. Enter otwiera eksponat przed tobą. Kliknięcie eksponatu lub podłogi przenosi cię tam. Plus i minus przybliżają i oddalają. Przeciąganie z klawiszem Shift przesuwa cię w bok."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Przybliż"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Oddal"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

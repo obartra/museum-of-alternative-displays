@@ -42,9 +42,13 @@ export interface GalleryOptions {
   onStep?: (by: 1 | -1) => boolean;
   /** The piece the visitor stands in front of was clicked or tapped: they want a closer look at it. */
   onLook?: (id: string) => void;
+  /** The lens was asked to bring things nearer or let them go: how near it will be, and how near it can be. */
+  onZoom?: (zoom: number, most: number) => void;
 }
 
 const WALK = 1.6, RUN = 4.3, TURN = 1.25;
+/** How many times nearer the lens can bring things than they stand. */
+const ZOOM = 4;
 const wrap = (a: number) => a - Math.round(a / (2 * Math.PI)) * 2 * Math.PI;
 const ease = (t: number) => t * t * t * (t * (t * 6 - 15) + 10);
 const KEYS: Record<string, [number, number]> = { ArrowUp: [1, 0], w: [1, 0], ArrowDown: [-1, 0], s: [-1, 0], ArrowLeft: [0, 1], a: [0, 1], ArrowRight: [0, -1], d: [0, -1] };
@@ -72,7 +76,12 @@ export class Gallery {
   private keys = new Set<string>();
   private held = { go: 0, turn: 0 };
   /** Metres still to walk for a turn of the wheel. */
-  private coast = 0;
+  /** The lens as the window gives it, in degrees, and how many times nearer than that things are brought and are asked to be. */
+  private baseFov = 50; private zoom = 1; private zoomWant = 1;
+  /** Fingers on the glass, by their number: where each one is. */
+  private at = new Map<number, [number, number]>();
+  /** When the page was last scrolled, and when the pointer was last looked under. */
+  private scrolledAt = -Infinity; private aimedAt = 0;
   private glide?: Glide;
   /** How far back from the middle of a block to stand, for this shape of window. */
   private back = 3.3;
@@ -146,6 +155,7 @@ export class Gallery {
     canvas.addEventListener('pointerup', this.onUp);
     canvas.addEventListener('pointercancel', this.onCancel);
     canvas.addEventListener('wheel', this.onWheel, { passive: false });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
     canvas.addEventListener('keydown', this.onKey);
     canvas.addEventListener('keyup', this.onKeyUp);
     canvas.addEventListener('blur', this.onBlur);
@@ -163,7 +173,7 @@ export class Gallery {
 
   private put(to: { x: number; z: number; yaw: number }, pitch = 0): void {
     this.x = to.x; this.z = to.z; this.yaw = to.yaw; this.pitch = pitch;
-    this.glide = undefined; this.speed = this.spin = this.coast = 0;
+    this.glide = undefined; this.speed = this.spin = 0;
   }
 
   /** Set the rig and the camera from the visitor's place and gaze. In a headset the head is the headset's to move. */
@@ -206,8 +216,10 @@ export class Gallery {
     const pts = soften(plan.route(this.x, this.z, to.x, to.z)), at = [0];
     for (let i = 1; i < pts.length; i++) at.push(at[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
     const len = at[at.length - 1], turn = wrap(to.yaw - this.yaw);
+    // going somewhere else, or turning to the piece across the aisle, the lens lets go of what it had brought near
+    if (len > 0.6 || Math.abs(turn) > 0.6) this.zoomTo(1, cut || this.o.calm);
     if (cut || this.o.calm || (len < 0.02 && Math.abs(turn) < 0.01 && Math.abs(pitch - this.pitch) < 0.01)) { this.put(to, pitch); this.pose(); this.locate(); return; }
-    this.speed = this.spin = this.coast = 0;
+    this.speed = this.spin = 0;
     this.glide = { pts, at, len, t: 0, T: Math.min(2.6, Math.max(0.55, 0.5 + len * 0.085, Math.abs(turn) * 0.45)), yaw0: this.yaw, yaw1: this.yaw + turn, pitch0: this.pitch, pitch1: pitch };
   }
 
@@ -220,7 +232,7 @@ export class Gallery {
     const p = plan.placeOf(id);
     if (!p) return;
     // how much is seen to either side of the middle of the picture, for each metre of distance
-    const reach = Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2)) * this.camera.aspect;
+    const reach = Math.tan(THREE.MathUtils.degToRad(this.baseFov / 2)) * this.camera.aspect;
     // never nearer than a body can stand to the block, and never further than the usual place
     const back = how?.wide ? Math.min(this.back, Math.max(plan.BLOCK / 2 + 0.65, 0.4 + how.wide / 2 / reach)) : this.back;
     this.goTo(plan.standing(p, back), how ? Math.atan2(TOP + (how.aim ?? 0.62) - (plan.FLOOR + plan.EYE), back) : this.tilt(), cut);
@@ -255,12 +267,31 @@ export class Gallery {
 
   private stir(): void { if (!this.touched) { this.touched = true; this.o.onTouch(); } }
 
+  // ---------- the lens ----------
+
+  /** Set the lens from the window's own and from how near things are brought. */
+  private lens(): void {
+    this.camera.fov = 2 * THREE.MathUtils.radToDeg(Math.atan(Math.tan(THREE.MathUtils.degToRad(this.baseFov / 2)) / this.zoom));
+    this.camera.updateProjectionMatrix();
+  }
+  /** Ask for things so many times nearer than they stand. It goes there smoothly, or `now` at once. */
+  private zoomTo(to: number, now = false): void {
+    const want = THREE.MathUtils.clamp(to, 1, ZOOM);
+    if (now && this.zoom !== want) { this.zoom = want; this.lens(); this.owed = 4; }
+    if (want === this.zoomWant) return;
+    this.zoomWant = want; this.owed = 4;
+    this.o.onZoom?.(want, ZOOM);
+  }
+  /** Bring things nearer, or let them go back, by a factor. For keys and buttons. */
+  zoomBy(by: number): void { this.stir(); this.zoomTo(this.zoomWant * by, this.o.calm); }
+
   // ---------- keys and pointers ----------
 
   private onKey = (e: KeyboardEvent): void => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
     if (KEYS[k] || k === 'Shift') { this.keys.add(k); this.owed = 4; if (KEYS[k]) { e.preventDefault(); this.stir(); } return; }
+    if (k === '+' || k === '=' || k === '-') { e.preventDefault(); this.zoomBy(k === '-' ? 0.8 : 1.25); return; }
     if (e.repeat) { if (k === 'PageDown' || k === 'PageUp') e.preventDefault(); return; }
     if (k === 'n' || k === 'PageDown') { if (!this.o.onStep?.(1)) this.next(1); }
     else if (k === 'p' || k === 'PageUp') { if (!this.o.onStep?.(-1)) this.next(-1); }
@@ -275,28 +306,54 @@ export class Gallery {
   private onLost = (e: Event): void => { e.preventDefault(); this.stop(); };
 
   private onDown = (e: PointerEvent): void => {
-    // a second finger makes it a two-finger gesture: it turns, and it is never a tap
-    if (this.drag) { this.drag.two = true; if (e.pointerType === 'touch' && this.twin === undefined) this.twin = e.pointerId; return; }
+    // a second finger makes it a pinch: it brings things nearer or lets them go, and it is never a tap
+    if (this.drag) {
+      this.drag.two = true;
+      if (e.pointerType === 'touch' && this.twin === undefined) { this.twin = e.pointerId; this.at.set(e.pointerId, [e.clientX, e.clientY]); }
+      return;
+    }
     if (e.pointerType === 'mouse' && e.button !== 0) return;
-    this.drag = { id: e.pointerId, x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t0: performance.now(), moved: false };
+    // the first finger down is the only one down: one that was let go where nothing said so is forgotten here
+    if (e.pointerType === 'touch' && e.isPrimary) { this.twin = undefined; this.at.clear(); }
+    this.at.set(e.pointerId, [e.clientX, e.clientY]);
+    this.canvas.classList.remove('is-aimed');
+    // the time is the press's own, not the time it was heard: on a slow machine a quick tap is still a tap
+    this.drag = { id: e.pointerId, x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY, t0: e.timeStamp, moved: false };
     try { this.canvas.setPointerCapture(e.pointerId); } catch { /* the pointer has already gone */ }
   };
   private onMove = (e: PointerEvent): void => {
     const d = this.drag;
-    if (!d || d.id !== e.pointerId) return;
+    if (!d) return this.point(e);
+    if (this.twin !== undefined && (e.pointerId === d.id || e.pointerId === this.twin)) {
+      // two fingers: as they part, things come nearer by as much
+      const span = () => { const a = this.at.get(d.id), b = this.at.get(this.twin!); return a && b ? Math.hypot(a[0] - b[0], a[1] - b[1]) : 0; };
+      const was = span();
+      this.at.set(e.pointerId, [e.clientX, e.clientY]);
+      const now = span();
+      if (was > 8 && now > 8) {
+        if (!d.moved) { d.moved = true; this.glide = undefined; this.stir(); }
+        this.zoomTo(this.zoom * (now / was), true);
+      }
+      // when one finger lifts, the other goes on looking round from where it is
+      if (e.pointerId === d.id) { d.x = e.clientX; d.y = e.clientY; }
+      return;
+    }
+    if (d.id !== e.pointerId) return;
     // a press taken over from the still picture may be a mouse whose button came up where the page did not see it:
     // once it moves with no button down the drag is over, and the hall is never left following a free pointer
     if (d.handed && e.pointerType === 'mouse' && !(e.buttons & 1)) { this.drag = undefined; try { this.canvas.releasePointerCapture(e.pointerId); } catch { /* it was not held */ } return; }
+    this.at.set(d.id, [e.clientX, e.clientY]);
     if (!d.moved && Math.hypot(e.clientX - d.x0, e.clientY - d.y0) < 6) return;
     if (!d.moved) { d.moved = true; this.glide = undefined; this.stir(); }
-    // the hall is dragged like a picture: what was under the pointer stays under it
+    // the hall is dragged like a picture: what was under the pointer stays under it, at any lens
     const per = THREE.MathUtils.degToRad(this.camera.fov) / Math.max(1, this.canvas.clientHeight);
-    if (this.twin !== undefined || e.shiftKey) this.yaw = wrap(this.yaw + (e.clientX - d.x) * per);
-    else {
-      // a sideways drag slides the visitor along the floor, by as much as moves the pieces across the aisle with the pointer
+    if (e.shiftKey) {
+      // with Shift held the visitor slides along the floor instead, by as much as moves the pieces across the aisle with the pointer
       const reach = 3.4, by = -(e.clientX - d.x) * per * reach;
       [this.x, this.z] = plan.step(this.x, this.z, Math.cos(this.yaw) * by, -Math.sin(this.yaw) * by);
     }
+    // a drag turns the visitor where they stand: they look round, as one does in a room
+    else this.yaw = wrap(this.yaw + (e.clientX - d.x) * per);
     // inline, an up and down swipe belongs to the page
     if (this.free || e.pointerType === 'mouse') this.pitch = THREE.MathUtils.clamp(this.pitch + (e.clientY - d.y) * per, -0.9, 0.9);
     d.x = e.clientX; d.y = e.clientY; this.owed = 4;
@@ -304,21 +361,16 @@ export class Gallery {
     this.pose(); this.locate();
   };
   private onUp = (e: PointerEvent): void => {
+    this.at.delete(e.pointerId);
     if (e.pointerId === this.twin) { this.twin = undefined; return; }
     const d = this.drag;
     if (!d || d.id !== e.pointerId) return;
     this.drag = undefined;
-    if (d.moved || d.two || performance.now() - d.t0 > 600) return;
+    if (d.moved || d.two || e.timeStamp - d.t0 > 600) return;
     if (this.tapped?.()) return;
     // a click or a tap: go to the piece under it, or walk to that place on the floor
-    const r = this.canvas.getBoundingClientRect();
-    this.camera.updateMatrixWorld();
-    this.aim.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, 1 - ((e.clientY - r.top) / r.height) * 2), this.camera);
-    const hit = landing(this.aim.ray.origin, this.aim.ray.direction);
+    const { hit, portrait } = this.under(e);
     this.stir();
-    // a portrait on the wall leads to the piece its sitter worked on, unless a piece is in the way of it
-    const behind = decalAt(this.hall.hung, this.aim.ray.origin, this.aim.ray.direction);
-    const portrait = behind && (!hit.piece || !this.stands.strikes(hit.piece.id, this.aim)) ? behind : undefined;
     if (portrait) this.goPiece(portrait.piece);
     // the piece one already stands in front of: a closer look. Any other: go and stand in front of it
     else if (hit.piece) { if (hit.piece.id === this.here.piece && !this.glide && this.o.onLook) this.o.onLook(hit.piece.id); else this.goPiece(hit.piece.id); }
@@ -328,6 +380,25 @@ export class Gallery {
       this.goTo({ x, z, yaw: far > 1.5 ? Math.atan2(this.x - x, this.z - z) : this.yaw }, 0);
     }
   };
+  /** What lies under the pointer: a piece on its block, a place on the floor, a portrait on the wall. */
+  private under(e: PointerEvent): { hit: ReturnType<typeof landing>; portrait?: ReturnType<typeof decalAt> } {
+    const r = this.canvas.getBoundingClientRect();
+    this.camera.updateMatrixWorld();
+    this.aim.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, 1 - ((e.clientY - r.top) / r.height) * 2), this.camera);
+    const hit = landing(this.aim.ray.origin, this.aim.ray.direction);
+    // a portrait on the wall leads to the piece its sitter worked on, unless a piece is in the way of it
+    const behind = decalAt(this.hall.hung, this.aim.ray.origin, this.aim.ray.direction);
+    return { hit, portrait: behind && (!hit.piece || !this.stands.strikes(hit.piece.id, this.aim)) ? behind : undefined };
+  }
+  /** A mouse that moves with no button down: the cursor says where a click would lead somewhere. A few times a second is enough. */
+  private point(e: PointerEvent): void {
+    if (e.pointerType !== 'mouse' || this.vr?.active) return;
+    const now = performance.now();
+    if (now - this.aimedAt < 70) return;
+    this.aimedAt = now;
+    const { hit, portrait } = this.under(e);
+    this.canvas.classList.toggle('is-aimed', !!hit.piece || !!portrait);
+  }
   /**
    * Take over a press that began on the still picture, before the hall was there to feel it. It goes on as a drag
    * from where the pointer is now, and is never a click on a piece, however short it turns out to be.
@@ -342,14 +413,20 @@ export class Gallery {
   key(e: KeyboardEvent, down: boolean): void { if (down) this.onKey(e); else this.onKeyUp(e); }
   /** No key is held any more: the window has lost the keyboard. */
   letGo(): void { this.keys.clear(); }
-  private onCancel = (e: PointerEvent): void => { if (e.pointerId === this.twin) this.twin = undefined; if (this.drag?.id === e.pointerId) this.drag = undefined; };
-  /** In full view the wheel walks: forward as it turns away. Inline, the wheel belongs to the page. */
+  private onCancel = (e: PointerEvent): void => { this.at.delete(e.pointerId); if (e.pointerId === this.twin) this.twin = undefined; if (this.drag?.id === e.pointerId) this.drag = undefined; };
+  private onScroll = (): void => { this.scrolledAt = performance.now(); };
+  /**
+   * The wheel brings things nearer as it turns away, and so does a pinch on a touchpad, which arrives as a wheel
+   * with Ctrl. Inline the page comes first: a wheel that is already scrolling the page goes on scrolling it across
+   * the hall, and at either end of the lens the wheel is the page's again, so the hall never holds a page fast.
+   */
   private onWheel = (e: WheelEvent): void => {
-    if (!this.free || e.ctrlKey || this.vr?.active) return;
-    e.preventDefault();
+    if (this.vr?.active) return;
     const lines = e.deltaMode === 1 ? e.deltaY * 32 : e.deltaMode === 2 ? e.deltaY * 600 : e.deltaY;
-    this.coast = Math.max(-7, Math.min(7, this.coast - lines * 0.006));
-    this.glide = undefined; this.owed = 4; this.stir();
+    const want = THREE.MathUtils.clamp(this.zoomWant * Math.exp(-lines * (e.ctrlKey ? 0.012 : 0.0016)), 1, ZOOM);
+    if (!this.free && !e.ctrlKey && (want === this.zoomWant || performance.now() - this.scrolledAt < 400)) return;
+    e.preventDefault();
+    this.stir(); this.zoomTo(want, this.o.calm);
   };
 
   // ---------- the loop ----------
@@ -368,7 +445,11 @@ export class Gallery {
       return moved;
     }
     if ((go || turn) && this.glide) this.glide = undefined;
-    const g = this.glide, x0 = this.x, z0 = this.z, yaw0 = this.yaw, pitch0 = this.pitch;
+    const g = this.glide, x0 = this.x, z0 = this.z, yaw0 = this.yaw, pitch0 = this.pitch, zoom0 = this.zoom;
+    if (this.zoom !== this.zoomWant) {
+      this.zoom = Math.abs(this.zoomWant - this.zoom) < 0.004 ? this.zoomWant : this.zoom + (this.zoomWant - this.zoom) * (1 - Math.exp(-dt * 14));
+      this.lens();
+    }
     if (g) {
       g.t = Math.min(g.T, g.t + dt);
       const k = ease(g.t / g.T), s = k * g.len;
@@ -385,15 +466,13 @@ export class Gallery {
       if (Math.abs(this.speed) < 0.004 && !go) this.speed = 0;
       if (Math.abs(this.spin) < 0.004 && !turn) this.spin = 0;
       this.yaw = wrap(this.yaw + this.spin * dt);
-      // what the wheel asked for is walked off quickly at first and then more slowly
-      const roll = this.coast * (1 - Math.exp(-dt * 6));
-      this.coast = Math.abs(this.coast - roll) < 0.004 ? 0 : this.coast - roll;
-      const by = this.speed * dt + roll;
+      const by = this.speed * dt;
       if (by) [this.x, this.z] = plan.step(this.x, this.z, -Math.sin(this.yaw) * by, -Math.cos(this.yaw) * by);
-      // walking levels the gaze again, slowly
+      // walking levels the gaze again, slowly, and lets go of what the lens had brought near
       if (by && !this.drag) this.pitch += (0 - this.pitch) * (1 - Math.exp(-dt * 1.2));
+      if (go) this.zoomTo(1);
     }
-    const moved = this.x !== x0 || this.z !== z0 || this.yaw !== yaw0 || this.pitch !== pitch0;
+    const moved = this.x !== x0 || this.z !== z0 || this.yaw !== yaw0 || this.pitch !== pitch0 || this.zoom !== zoom0;
     if (moved) { this.pose(); this.locate(); }
     return moved;
   }
@@ -460,7 +539,7 @@ export class Gallery {
     // a tall window is a narrow view: widen the lens, and stand further back from a piece
     // and a very wide window is not a wider lens, which would stretch what is at its edges: it shows less above and below
     const fov = Math.min(THREE.MathUtils.clamp(2 * THREE.MathUtils.radToDeg(Math.atan(0.5 / aspect)), 50, 74), 2 * THREE.MathUtils.radToDeg(Math.atan(1.11 / aspect)));
-    this.camera.fov = fov; this.camera.aspect = aspect; this.camera.updateProjectionMatrix();
+    this.baseFov = fov; this.camera.aspect = aspect; this.lens();
     const was = this.back;
     // far enough for the piece to fit across the window, and for the name plate on its block to be in the picture under it
     const half = THREE.MathUtils.degToRad(fov / 2);
@@ -514,6 +593,7 @@ export class Gallery {
     const c = this.canvas;
     c.removeEventListener('pointerdown', this.onDown); c.removeEventListener('pointermove', this.onMove); c.removeEventListener('pointerup', this.onUp); c.removeEventListener('pointercancel', this.onCancel);
     c.removeEventListener('wheel', this.onWheel);
+    window.removeEventListener('scroll', this.onScroll);
     c.removeEventListener('keydown', this.onKey); c.removeEventListener('keyup', this.onKeyUp); c.removeEventListener('blur', this.onBlur); c.removeEventListener('webglcontextlost', this.onLost);
     this.stands.dispose();
     this.hall.dispose();

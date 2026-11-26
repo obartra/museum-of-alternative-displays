@@ -1119,20 +1119,32 @@ msgstr "As salas do museu, com cada peça em seu bloco. As setas do teclado anda
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Arraste para deslizar pela sala. As setas andam e viram. Clique em uma peça para ir até ela."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Arraste para olhar ao redor. Use a rolagem para aproximar. Clique em uma peça para ir até ela."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Arraste para deslizar pela sala e use dois dedos para virar. Toque em uma peça para ir até ela, ou toque no chão para andar até lá."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Arraste para olhar ao redor e use dois dedos para aproximar. Toque em uma peça para ir até ela, ou toque no chão para andar até lá."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "As setas do teclado, ou W, A, S e D, andam e viram. Shift anda depressa. N e P vão para a peça seguinte e para a anterior. As teclas de 1 a 7 vão para uma sala. Enter abre a peça à sua frente. Um clique em uma peça ou no chão leva você até lá."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "As setas do teclado, ou W, A, S e D, andam e viram. Shift anda depressa. N e P vão para a peça seguinte e para a anterior. As teclas de 1 a 7 vão para uma sala. Enter abre a peça à sua frente. Um clique em uma peça ou no chão leva você até lá. Mais e menos aproximam e afastam. Com Shift, arrastar desliza você para o lado."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Aproximar"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Afastar"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

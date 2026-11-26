@@ -1118,20 +1118,32 @@ msgstr "Els àmbits del museu, amb cada peça sobre el seu bloc. Les tecles de f
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Arrossega per lliscar al llarg de l'àmbit. Les fletxes caminen i giren. Fes clic en una peça per anar-hi."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Arrossega per mirar al voltant. Desplaça't per fer zoom. Fes clic en una peça per anar-hi."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Arrossega per lliscar al llarg de l'àmbit, amb dos dits per girar. Toca una peça per anar-hi, o toca el terra per caminar-hi."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Arrossega per mirar al voltant, pessiga per fer zoom. Toca una peça per anar-hi, o toca el terra per caminar-hi."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Les tecles de fletxa, o W, A, S i D, serveixen per caminar i girar. Amb Maj es camina de pressa. N i P porten a la peça següent i a l'anterior. Les tecles de l'1 al 7 porten a un àmbit. Retorn obre la peça que tens al davant. Un clic en una peça o al terra t'hi porta."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Les tecles de fletxa, o W, A, S i D, serveixen per caminar i girar. Amb Maj es camina de pressa. N i P porten a la peça següent i a l'anterior. Les tecles de l'1 al 7 porten a un àmbit. Retorn obre la peça que tens al davant. Un clic en una peça o al terra t'hi porta. Més i menys fan zoom. Amb Maj, arrossegar et desplaça de costat."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Acosta"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Allunya"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

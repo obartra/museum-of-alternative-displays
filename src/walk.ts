@@ -79,6 +79,12 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   <p class="walk__hint" id="walk-hint"></p>
   <p class="walk__note" id="walk-note" role="status"></p>
   <div class="walk__who" id="walk-who" role="group" aria-label="${tx('walk.who')}" hidden></div>
+  <button type="button" class="walk__key walk__step walk__step--prev" data-step="-1" aria-label="${tx('walk.prev')}" title="${tx('walk.prev')}" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button type="button" class="walk__key walk__step walk__step--next" data-step="1" aria-label="${tx('walk.next')}" title="${tx('walk.next')}" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="walk__zoom" id="walk-zoom" role="group" aria-label="${tx('keys.zoom')}" hidden>
+    <button type="button" class="walk__key" data-zoom="1.5" aria-label="${tx('walk.zoom.in')}" title="${tx('walk.zoom.in')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+    <button type="button" class="walk__key" data-zoom="0.6667" aria-label="${tx('walk.zoom.out')}" title="${tx('walk.zoom.out')}" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button>
+  </div>
   <button type="button" class="walk__key walk__fold" id="walk-fold" aria-controls="walk-pad" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.5 4.5H13V11h4.5V8.5L22 12l-4.5 3.5V13H13v4.5h2.5L12 22l-3.5-4.5H11V13H6.5v2.5L2 12l4.5-3.5V11H11V6.5H8.5z"/></svg><span>${tx('walk.walk')}</span></button>
   <div class="walk__pad" id="walk-pad" role="group" aria-label="${tx('walk.pad')}" hidden>
     <button type="button" class="walk__key" data-go="1" data-turn="0" aria-label="${tx('walk.go.forward')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 9H5z"/></svg></button>
@@ -137,6 +143,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   // A tour is not begun this way: it speaks, and a browser lets a page speak only after a tap or a key.
   const hand = pressOn(stillImg, { swipe: () => { if (!begun && !closed && !startBtn.hidden && !guide.tour) startBtn.click(); } });
   const where = document.getElementById('walk-where')!, planEl = document.getElementById('walk-plan')!, me = document.getElementById('walk-me')!, pad = document.getElementById('walk-pad')!;
+  const zoomEl = document.getElementById('walk-zoom')!, steps = [...host.querySelectorAll<HTMLButtonElement>('[data-step]')];
   const intro = document.getElementById('walk-intro')!, fold = document.getElementById('walk-fold') as HTMLButtonElement, look = document.getElementById('walk-look') as HTMLButtonElement;
   let introFor = 0;
   const btn = (name: string) => host.querySelector<HTMLButtonElement>(`[data-walk="${name}"]`)!;
@@ -316,6 +323,8 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
           onTouch: () => { hint.style.opacity = '0'; },
           onStep: (by) => guide.step(by),
           onLook: (id) => lookAt(id),
+          // a key of the lens that has nowhere further to go is put out
+          onZoom: (zoom, most) => { for (const b of zoomEl.querySelectorAll<HTMLButtonElement>('button')) { const off = Number(b.dataset.zoom) > 1 ? zoom >= most : zoom <= 1; if (off && b === document.activeElement) canvas?.focus({ preventScroll: true }); b.disabled = off; } },
         });
         gallery.tapped = () => { if (!bare.on) return false; bare.set(false); return true; };
       } catch {
@@ -333,6 +342,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
       track();
       requestAnimationFrame(() => { canvas!.classList.add('is-live'); window.setTimeout(() => { if (!closed) stillImg.hidden = true; }, 500); });
       for (const b of host.querySelectorAll<HTMLButtonElement>('[data-walk]')) b.disabled = false;
+      zoomEl.hidden = false; for (const b of steps) b.hidden = false;
       layPad();
       hint.textContent = t(coarse ? 'walk.hint.touch' : 'walk.hint.keys');
       if (guide.tour) quiet(4500);
@@ -405,7 +415,7 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
   // are pressed, with or without the focus, unless a field or a list there has a use for them. An arrow that
   // scrolls the page, or a part of it, goes on scrolling it, and Enter opens a piece only with the focus on nothing
   // at all, where it could mean nothing else. Before the hall is open, a key that would walk it asks for it.
-  const HALL_KEY = /^(Arrow(Left|Right|Up|Down)|[wasdnp1-9]|Enter|Shift)$/;
+  const HALL_KEY = /^(Arrow(Left|Right|Up|Down)|[wasdnp1-9+=-]|Enter|Shift)$/;
   const onKeys = (e: KeyboardEvent) => {
     // the hall has heard this one itself
     if (e.target === canvas) return;
@@ -425,8 +435,11 @@ export function openWalk(host: HTMLElement, o: WalkOptions): Walk {
     // a link to another page, followed out of full view
     const out = (e.target as Element).closest<HTMLAnchorElement>('a[href]');
     if (out && placeOf(new URL(out.href)) && (host.classList.contains('is-full') || sheetStep) && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) { e.preventDefault(); return leaveTo(out.href); }
-    const el = (e.target as Element).closest<HTMLElement | SVGElement>('[data-walk], [data-bay], [data-piece], #walk-start, #walk-fold, #walk-look');
+    const el = (e.target as Element).closest<HTMLElement | SVGElement>('[data-walk], [data-bay], [data-piece], [data-step], [data-zoom], #walk-start, #walk-fold, #walk-look');
     if (!el) return;
+    if (el.dataset.zoom) return gallery?.zoomBy(Number(el.dataset.zoom));
+    // the arrows on the picture do what N and P do: in a tour the step is the guide's
+    if (el.dataset.step) { const by = Number(el.dataset.step) as 1 | -1; near.shut(); if (!guide.step(by)) gallery?.next(by); return; }
     if (el.id === 'walk-look') return lookAt(gallery?.where.piece);
     // the button on the picture: in a tour the guide begins once the visitor stands at the stop, and a phone gives the tour the whole screen
     if (el.id === 'walk-start') { if (guide.tour) { guide.begin(); if (small()) return setFull(true); } return void go(); }

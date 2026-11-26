@@ -1119,20 +1119,32 @@ msgstr "Les galeries du musée, avec chaque pièce sur son bloc. Les touches fl�
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Faites glisser pour longer la galerie. Les flèches font avancer et tourner. Cliquez sur une pièce pour y aller."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Faites glisser pour regarder autour de vous. Faites défiler pour zoomer. Cliquez sur une pièce pour y aller."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Faites glisser pour longer la galerie, à deux doigts pour tourner. Touchez une pièce pour y aller, ou touchez le sol pour vous y rendre."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Faites glisser pour regarder autour de vous, pincez pour zoomer. Touchez une pièce pour y aller, ou touchez le sol pour vous y rendre."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Les touches fléchées, ou W, A, S et D, font marcher et tourner. Maj fait marcher vite. N et P mènent à la pièce suivante et à la précédente. Les touches 1 à 7 mènent à une galerie. Entrée ouvre la pièce placée devant vous. Un clic sur une pièce ou sur le sol vous y emmène."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Les touches fléchées, ou W, A, S et D, font marcher et tourner. Maj fait marcher vite. N et P mènent à la pièce suivante et à la précédente. Les touches 1 à 7 mènent à une galerie. Entrée ouvre la pièce placée devant vous. Un clic sur une pièce ou sur le sol vous y emmène. Plus et moins zooment. Avec Maj, faire glisser vous déplace de côté."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Zoomer"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Dézoomer"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

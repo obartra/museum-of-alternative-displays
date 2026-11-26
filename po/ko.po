@@ -1118,20 +1118,32 @@ msgstr "박물관의 전시실들. 전시품은 저마다 받침대 위에 있�
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "드래그하면 전시실을 따라 옆으로 움직입니다. 화살표 키로 걷고 방향을 바꿉니다. 전시품을 클릭하면 그리로 갑니다."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "드래그하면 주위를 둘러봅니다. 스크롤해서 확대합니다. 전시품을 클릭하면 그리로 갑니다."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "드래그하면 전시실을 따라 옆으로 움직이고, 두 손가락으로 방향을 바꿉니다. 전시품을 탭하면 그리로 가고, 바닥을 탭하면 그곳까지 걸어갑니다."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "드래그하면 주위를 둘러보고, 두 손가락을 벌려 확대합니다. 전시품을 탭하면 그리로 가고, 바닥을 탭하면 그곳까지 걸어갑니다."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "화살표 키나 W, A, S, D로 걷고 방향을 바꿉니다. Shift를 누르면 빨리 걷습니다. N과 P는 다음 전시품과 이전 전시품으로 갑니다. 1부터 7까지의 키는 각 전시실로 갑니다. Enter는 앞에 있는 전시품을 엽니다. 전시품이나 바닥을 클릭하면 그곳으로 갑니다."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "화살표 키나 W, A, S, D로 걷고 방향을 바꿉니다. Shift를 누르면 빨리 걷습니다. N과 P는 다음 전시품과 이전 전시품으로 갑니다. 1부터 7까지의 키는 각 전시실로 갑니다. Enter는 앞에 있는 전시품을 엽니다. 전시품이나 바닥을 클릭하면 그곳으로 갑니다. 더하기와 빼기 키로 확대하고 축소합니다. Shift를 누른 채 드래그하면 옆으로 움직입니다."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "확대"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "축소"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

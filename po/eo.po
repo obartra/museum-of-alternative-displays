@@ -1120,20 +1120,32 @@ msgstr "La haloj de la muzeo, kun ĉiu eksponaĵo sur sia bloko. La sagoklavoj p
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Trenu por gliti laŭ la halo. La sagoklavoj paŝas kaj turnas. Alklaku eksponaĵon por iri al ĝi."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Trenu por ĉirkaŭrigardi. Rulumu por zomi. Alklaku eksponaĵon por iri al ĝi."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Trenu por gliti laŭ la halo, per du fingroj por turni. Tuŝetu eksponaĵon por iri al ĝi, aŭ tuŝetu la plankon por iri tien."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Trenu por ĉirkaŭrigardi, pinĉu por zomi. Tuŝetu eksponaĵon por iri al ĝi, aŭ tuŝetu la plankon por iri tien."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "La sagoklavoj, aŭ W, A, S kaj D, paŝas kaj turnas. Kun Shift vi iras rapide. N kaj P iras al la sekva eksponaĵo kaj al la antaŭa. La klavoj 1 ĝis 7 iras al halo. Enter malfermas la eksponaĵon antaŭ vi. Klako sur eksponaĵo aŭ sur la planko kondukas vin tien."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "La sagoklavoj, aŭ W, A, S kaj D, paŝas kaj turnas. Kun Shift vi iras rapide. N kaj P iras al la sekva eksponaĵo kaj al la antaŭa. La klavoj 1 ĝis 7 iras al halo. Enter malfermas la eksponaĵon antaŭ vi. Klako sur eksponaĵo aŭ sur la planko kondukas vin tien. Pluso kaj minuso zomas. Kun Shift, treno glitigas vin flanken."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Zomi enen"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Zomi eksteren"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.

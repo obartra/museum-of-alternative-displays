@@ -1120,20 +1120,32 @@ msgstr "Las salas del museo, con cada pieza sobre su bloque. Las teclas de flech
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.keys"
-msgid "Drag to slide along the hall. Arrow keys walk and turn. Click a piece to go to it."
-msgstr "Arrastra para deslizarte por la sala. Las flechas caminan y giran. Haz clic en una pieza para ir a ella."
+msgid "Drag to look around. Scroll to zoom. Click a piece to go to it."
+msgstr "Arrastra para mirar alrededor. Desplázate para hacer zoom. Haz clic en una pieza para ir a ella."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.hint.touch"
-msgid "Drag to slide along the hall, two fingers to turn. Tap a piece to go to it, or tap the floor to walk there."
-msgstr "Arrastra para deslizarte por la sala, con dos dedos para girar. Toca una pieza para ir a ella, o toca el suelo para caminar hasta allí."
+msgid "Drag to look around, pinch to zoom. Tap a piece to go to it, or tap the floor to walk there."
+msgstr "Arrastra para mirar alrededor, pellizca para hacer zoom. Toca una pieza para ir a ella, o toca el suelo para caminar hasta allí."
 
 #: interface
 #. The walk through the halls in 3D.
 msgctxt "ui.walk.keys"
-msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there."
-msgstr "Las teclas de flecha, o W, A, S y D, sirven para andar y girar. Con Mayús se anda deprisa. N y P llevan a la pieza siguiente y a la anterior. Las teclas del 1 al 7 llevan a una sala. Intro abre la pieza que tienes delante. Un clic en una pieza o en el suelo te lleva allí."
+msgid "Arrow keys, or W, A, S and D, walk and turn. Shift walks fast. N and P go to the next piece and the one before. The keys 1 to 7 go to a hall. Enter opens the piece in front of you. A click on a piece or on the floor takes you there. Plus and minus zoom. Shift and a drag slides you sideways."
+msgstr "Las teclas de flecha, o W, A, S y D, sirven para andar y girar. Con Mayús se anda deprisa. N y P llevan a la pieza siguiente y a la anterior. Las teclas del 1 al 7 llevan a una sala. Intro abre la pieza que tienes delante. Un clic en una pieza o en el suelo te lleva allí. Más y menos hacen zoom. Con Mayús, arrastrar te desliza de lado."
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.in"
+msgid "Zoom in"
+msgstr "Acercar"
+
+#: interface
+#. The walk through the halls in 3D.
+msgctxt "ui.walk.zoom.out"
+msgid "Zoom out"
+msgstr "Alejar"
 
 #: interface
 #. The walk through the halls in 3D. Keep the words in curly brackets as they are.
