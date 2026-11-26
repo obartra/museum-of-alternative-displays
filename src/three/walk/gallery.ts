@@ -103,7 +103,7 @@ export class Gallery {
   /** A tap on the hall, offered first to whoever opened it: true takes it, and the visitor does not walk. */
   tapped?: () => boolean;
   private drag?: { id: number; x: number; y: number; x0: number; y0: number; t0: number; moved: boolean; two?: boolean; handed?: boolean };
-  /** A second finger on the glass: while it is down, a drag turns the visitor and does not slide them. */
+  /** A second finger on the glass: while it is down, the two of them pinch, and nothing turns. */
   private twin?: number;
   private stops?: number[];
   /** How much smaller than asked the picture is drawn, when the device cannot keep up. */
