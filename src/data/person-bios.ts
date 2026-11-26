@@ -658,7 +658,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("lab", "Jingyu Lin, PhD, Department of Electrical and Computer Engineering, Texas Tech University", "https://www.depts.ttu.edu/ece/faculty/jingyu_lin/index.php"),
-      s("lab", "Research Spotlight on Women Faculty: Su Shin and Jingyu Lin, Texas Tech University (2020)", "https://www.depts.ttu.edu/research/research-discoveries/posts/2020/03/6-shin-lin.php"),
+      s("lab", "Jingyu Lin, curriculum vitae, Texas Tech University (2024)", "https://www.depts.ttu.edu/ece/faculty/jingyu_lin/Jingyu_Lin_CV-06-2024.pdf"),
       s("lab", "MicroLED: Small Size, Big Impact, Texas Tech University (2018)", "https://web.archive.org/web/20231005002405/https://www.depts.ttu.edu/research/discoveries/posts/fall-2018/LED.php"),
       s("paper", "Jiang and Lin, How we made the microLED, Nature Electronics (2023)", "https://www.depts.ttu.edu/ece/Nanophotonics/papers/2023How%20we%20made%20the%20microLED_Nature%20electronics.pdf"),
     ],
@@ -833,7 +833,7 @@ export const bios: Record<string, Bio> = {
     ],
     sources: [
       s("archive", "Johannes Kepler, biography, Museo Galileo, Florence", "https://catalogue.museogalileo.it/biography/JohannesKepler.html"),
-      s("archive", "Astronomiae pars optica, National Library of Scotland", "https://nls.uk/treasures/explore/astronomiae-pars-optica"),
+      s("archive", "Johannes Kepler: Astronomiae pars optica, University of Reading Special Collections (2016)", "https://collections.reading.ac.uk/special-collections/2016/03/17/johannes-kepler-astronomiae-pars-optica/"),
     ],
   },
   "Ibn Daniyal": {
@@ -881,7 +881,7 @@ export const bios: Record<string, Bio> = {
       s("archive", "Lotte Reiniger: Animation Innovator, Library of Congress, Inside Adams", "https://blogs.loc.gov/inside_adams/2025/04/lotte-reiniger/"),
       s("press", "Scissors make films: Lotte Reiniger on creating her magical animations (1936), BFI, Sight and Sound", "https://www.bfi.org.uk/news-opinion/sight-sound-magazine/archives/lotte-reiniger-scissors-make-films-cut-out-animation-process-description-1936"),
       s("archive", "Lotte Reiniger, Women Film Pioneers Project, Columbia University", "https://wfpp.columbia.edu/pioneer/lotte-reiniger"),
-      s("archive", "Figure from Die Abenteuer des Prinzen Achmed, Stadtmuseum Tübingen, museum-digital", "https://bawue.museum-digital.de/object/80236"),
+      s("archive", "Der erste Trickfilm: 100 Jahre Die Abenteuer des Prinzen Achmed, Stadtmuseum Tübingen", "https://www.stadtmuseum-tuebingen.de/ausstellungen/der-erste-trickfilm/"),
     ],
   },
   "Kara Walker": {
